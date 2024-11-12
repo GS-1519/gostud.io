@@ -5,7 +5,11 @@ import final_Logo from "@/public/new-logo.png";
 
 interface FooterColumnProps {
   title: string;
-  items: (string | JSX.Element)[];
+  items: {
+    text: string;
+    href?: string;
+    isEmail?: boolean;
+  }[];
 }
 
 const FooterColumn: React.FC<FooterColumnProps> = ({ title, items }) => (
@@ -14,14 +18,14 @@ const FooterColumn: React.FC<FooterColumnProps> = ({ title, items }) => (
     <ul className="space-y-2">
       {items.map((item, index) => (
         <li key={index}>
-          {typeof item === 'string' ? (
-            <Link href="/" className="text-sm text-gray-600 hover:text-gray-900">
-              {item}
-            </Link>
+          {item.isEmail ? (
+            <a href={`mailto:${item.href}`} className="text-sm text-gray-600 hover:text-gray-900">
+              {item.text}
+            </a>
           ) : (
-            <span className="text-sm text-gray-600 hover:text-gray-900">
-              {item}
-            </span>
+            <Link href={item.href || '/'} className="text-sm text-gray-600 hover:text-gray-900">
+              {item.text}
+            </Link>
           )}
         </li>
       ))}
@@ -33,21 +37,28 @@ const Footer: React.FC = () => {
   const columns: FooterColumnProps[] = [
     {
       title: 'Features',
-      items: ['AI Product Photos']
+      items: [
+        { text: 'AI Product Photos', href: '/' }
+      ]
     },
     {
       title: 'Resources',
-      items: ['Pricing']
+      items: [
+        { text: 'Pricing', href: '/#pricing' }
+      ]
     },
     {
       title: 'Company',
       items: [
-        <a href="mailto:hello@gostudio.ai">Contact Us</a>
+        { text: 'Contact Us', href: 'hello@gostudio.ai', isEmail: true }
       ]
     },
     {
       title: 'Legal',
-      items: ['Terms Policy', 'Privacy Policy']
+      items: [
+        { text: 'Terms Policy', href: '/terms' },
+        { text: 'Privacy Policy', href: '/privacy' }
+      ]
     }
   ];
 
