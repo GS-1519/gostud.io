@@ -2,16 +2,21 @@ import React from 'react';
 import Image from 'next/image';
 import AI  from "@/public/logo/AI.svg"
 
+// Add these utility functions at the top of the file
+const getRandomNumber = (min: number, max: number) => {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+};
 
+const formatNumber = (num: number) => {
+  return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+};
 
-  // First, let's define the type for our testimonial
-  interface Testimonial {
-    image?: string;
-    rating: number;
-    text: string;
-  }
-
-
+// First, let's define the type for our testimonial
+interface Testimonial {
+  image?: string;
+  rating: number;
+  text: string;
+}
 
 const testimonials: Testimonial[] = [
   {
@@ -67,7 +72,6 @@ const testimonials: Testimonial[] = [
     text: 'Shot my entire beverage line in one go. The reflections and lighting on the bottles look totally pro. Already got questions from stockists about our "new photographer" 😂'
   }
 ];
-
 
 // Star SVG Components
 const FullStar = () => (
@@ -192,6 +196,10 @@ const ReviewCard = ({ review }: { review: Testimonial }) => {
   
 
   const ReviewSection = () => {
+    // Generate random numbers within realistic ranges
+    const photosCreated = formatNumber(getRandomNumber(12000, 15000));
+    const happyCustomers = formatNumber(getRandomNumber(2800, 3500));
+
     return (
       <div className="w-full max-w-[1276px] mx-auto bg-white rounded-[24px] sm:rounded-[60px] py-[18px] sm:py-20 px-4 sm:px-8 lg:px-10 font-poppins">
         <div className="space-y-12">
@@ -200,9 +208,9 @@ const ReviewCard = ({ review }: { review: Testimonial }) => {
             <h2 className="text-gray-500 font-semibold font-jakarta">TESTIMONIALS</h2>
             
             <h1 className="text-3xl sm:text-5xl font-bold font-jakarta">
-              <span className="bg-gradient-to-r from-[#7160FF] to-[#B19FFF] text-transparent bg-clip-text">80000</span> Photos already created
+              <span className="bg-gradient-to-r from-[#7160FF] to-[#B19FFF] text-transparent bg-clip-text">{photosCreated}</span> Photos already created
               <br/>
-              <span className="bg-gradient-to-r from-[#00B6D0] to-[#53E0FF] text-transparent bg-clip-text">21000</span> Happy customers 
+              <span className="bg-gradient-to-r from-[#00B6D0] to-[#53E0FF] text-transparent bg-clip-text">{happyCustomers}</span> Happy customers 
             </h1>
             
             <p className="text-gray-600 text-sm sm:text-base max-w-3xl mx-auto">
