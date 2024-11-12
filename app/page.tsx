@@ -11,8 +11,21 @@ import MoneyBackGuarantee from "@/components/moneysection";
 import DataSecuritySection from "@/components/container";
 import FAQSection from "@/components/Question";
 import HeadshotContainer from "@/components/Banner";
+import type { Metadata } from 'next'
 
 export const dynamic = "force-dynamic";
+
+export const metadata: Metadata = {
+  title: 'AI Product Photography Studio | Professional Product Photos in Minutes',
+  description: 'Transform your product photography with AI. Get studio-quality product photos instantly. Professional results at a fraction of the cost of traditional photo studios.',
+  keywords: 'AI product photography, product photo studio, professional product photos, AI photo studio, e-commerce photography',
+  openGraph: {
+    title: 'AI Product Photography Studio | Professional Product Photos in Minutes',
+    description: 'Transform your product photography with AI. Get studio-quality product photos instantly.',
+    type: 'website',
+    images: ['/path-to-your-og-image.jpg'], // Add your OG image
+  }
+}
 
 export default async function Home() {
   const supabase = createServerComponentClient({ cookies });
