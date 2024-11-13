@@ -57,7 +57,8 @@ const Footer: React.FC = () => {
       title: 'Legal',
       items: [
         { text: 'Terms Policy', href: '/terms' },
-        { text: 'Privacy Policy', href: '/privacy' }
+        { text: 'Privacy Policy', href: '/privacy' },
+        { text: 'Refund Policy', href: '/refund' }
       ]
     }
   ];

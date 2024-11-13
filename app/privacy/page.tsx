@@ -151,7 +151,7 @@ const PrivacyPolicy: React.FC = () => {
             <h2 className="text-xl sm:text-2xl font-bold mb-4 font-jakarta">Contact Information</h2>
             <p className="text-gray-600 mb-4">For privacy-related inquiries:</p>
             <p className="text-gray-600 mb-2">Email: hello@gostudio.ai</p>
-            <p className="text-gray-600">Address: Bengaluru, India</p>
+            {/* <p className="text-gray-600">Address: Bengaluru, India</p> */}
           </section>
 
           <div className="text-sm text-gray-500 mt-12">
