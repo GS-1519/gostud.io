@@ -16,6 +16,18 @@ import HeadshotContainer from "@/components/Banner";
 
 export const dynamic = "force-dynamic";
 
+export const metadata = {
+  title: 'AI Product Photography | Professional Product Photos | GoStudio.ai',
+  description: 'Create stunning product photos with AI. Get professional, studio-quality product photography in minutes. Perfect for e-commerce and marketing.',
+  keywords: 'AI product photography, product photos, e-commerce photography, professional product shots, GoStudio.ai',
+  openGraph: {
+    title: 'AI Product Photography | Professional Product Photos | GoStudio.ai',
+    description: 'Create stunning product photos with AI. Get professional, studio-quality product photography in minutes.',
+    type: 'website',
+    images: ['/og.png'],
+  }
+}
+
 export default async function RealtorPage() {
   const supabase = createServerComponentClient({ cookies });
 

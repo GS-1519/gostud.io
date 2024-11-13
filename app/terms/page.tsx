@@ -1,4 +1,17 @@
 import React from 'react';
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Terms of Service | GoStudio.ai',
+  description: 'Terms and conditions for using GoStudio.ai AI product photography services. Learn about our service terms, user rights, and policies.',
+  keywords: 'terms of service, terms and conditions, GoStudio.ai terms, AI photography terms, user agreement',
+  openGraph: {
+    title: 'Terms of Service | GoStudio.ai',
+    description: 'Terms and conditions for using GoStudio.ai AI product photography services.',
+    type: 'website',
+    images: ['/og.png'],
+  }
+}
 
 const TermsOfService: React.FC = () => {
   return (

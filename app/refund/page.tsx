@@ -1,4 +1,17 @@
 import React from 'react';
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Refund Policy | GoStudio.ai',
+  description: 'Our simple, no-questions-asked 7-day refund policy. Learn about GoStudio.ai\'s money-back guarantee and refund process.',
+  keywords: 'refund policy, money back guarantee, GoStudio.ai refund, 7-day refund, satisfaction guarantee',
+  openGraph: {
+    title: 'Refund Policy | GoStudio.ai',
+    description: 'Our simple, no-questions-asked 7-day refund policy.',
+    type: 'website',
+    images: ['/og.png'],
+  }
+}
 
 const RefundPolicy: React.FC = () => {
   return (
