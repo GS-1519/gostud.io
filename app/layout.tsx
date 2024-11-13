@@ -9,7 +9,8 @@ import { CSPostHogProvider } from './providers'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import ClarityScript from "@/components/ClarityScript";
 
-export const metadata = {
+export const metadata: Metadata = {
+  metadataBase: new URL('https://gostudio.ai'),
   title: "Headshots AI",
   description: "Generate awesome headshots in minutes using AI",
 };
