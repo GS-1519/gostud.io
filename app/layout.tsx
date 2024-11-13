@@ -7,7 +7,7 @@ import { Analytics } from "@vercel/analytics/react";
 import FooterWrapper from "@/components/FooterWrapper";
 import { CSPostHogProvider } from './providers'
 import { SpeedInsights } from '@vercel/speed-insights/next'
-
+import ClarityScript from "@/components/ClarityScript";
 
 export const metadata = {
   title: "Headshots AI",
@@ -29,11 +29,12 @@ export default function RootLayout({ children }: any) {
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body className="flex flex-col bg-[#F4F7FA] min-h-screen w-full overflow-x-hidden font-[Poppins]">
+        <ClarityScript />
         <Navbar />
         <CSPostHogProvider>
-        <main className="flex-1 flex flex-col w-full">
-          {children}
-        </main>
+          <main className="flex-1 flex flex-col w-full">
+            {children}
+          </main>
         </CSPostHogProvider>
         <FooterWrapper />
         <Toaster />
