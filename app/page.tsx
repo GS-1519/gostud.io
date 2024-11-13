@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     title: 'AI Product Photography Studio | Professional Product Photos in Minutes',
     description: 'Transform your product photography with AI. Get studio-quality product photos instantly.',
     type: 'website',
-    images: ['/path-to-your-og-image.jpg'], // Add your OG image
+    images: ['/og.png'], // Add your OG image
   }
 }
 

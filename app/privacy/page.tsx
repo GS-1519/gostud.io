@@ -1,4 +1,17 @@
 import React from 'react';
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Privacy Policy | GoStudio.ai',
+  description: 'Learn how GoStudio.ai protects your privacy and handles your data. Our comprehensive privacy policy explains your rights and our data practices.',
+  keywords: 'privacy policy, data protection, privacy rights, GoStudio.ai privacy, data security',
+  openGraph: {
+    title: 'Privacy Policy | GoStudio.ai',
+    description: 'Learn how GoStudio.ai protects your privacy and handles your data.',
+    type: 'website',
+    images: ['/og.png'],
+  }
+}
 
 const PrivacyPolicy: React.FC = () => {
   return (
