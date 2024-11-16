@@ -37,7 +37,7 @@ const FAQSection = () => {
 
   const faqs = [
     {
-      question: "What is   How does it work?",
+      question: "What is GoStudio.ai? How does it work?",
       answer: "GoStudio.ai uses your own photos to train a custom AI model that represents your appearance and can generate your headshots in various styles and clothing. The quality of the generated headshots depends on the pictures you upload. You should try to have different perspectives of your face, eyes, and various angles. Each picture should represent something new about your appearance and facial features."
     },
     {
