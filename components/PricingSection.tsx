@@ -39,36 +39,36 @@ const PricingComponent: React.FC<PricingComponentProps> = ({ user }) => {
       price: '29',
       originalPrice: '$99',
       features: [
-        '📸 20 Product Shots',
+        '📸 15  Headshots',
         '⚡ Delivery within 2 hours',
-        '🎨 5 Backgrounds',
-        '✨ 5 Product Angles',
+        '🎨 5 Background Styles',
+        '✨ 3 Outfit Changes'
       ],
       buttonText: 'Get Started',
     },
     {
-      name: 'PROFESSIONAL',
+      name: 'PREMIUM',
       price: '49',
       originalPrice: '$199',
       features: [
-        '📸 60 Product Shots',
+        '📸 40  Headshots',
         '⚡ Priority Delivery (1 hour)',
-        '🎨 15 Backgrounds',
-        '✨ 15 Dynamic Angles',
+        '🎨 15 Background Styles',
+        '✨ 5 Outfit Changes'
       ],
       buttonText: 'Get Started',
       highlight: true,
       popularTag: 'Most Popular Choice',
     },
     {
-      name: 'ENTERPRISE',
+      name: 'EXECUTIVE',
       price: '79',
       originalPrice: '$299',
       features: [
-        '📸 100 Product Shots',
+        '📸 80  Headshots',
         '⚡ Express Delivery (30 min)',
-        '🎨 30 Premiums',
-        '✨ 25 Dynamic Angles',
+        '🎨 30 Premium Backgrounds',
+        '✨ 8 Outfit Changes'
       ],
       buttonText: 'Get Started',
       bestValueTag: 'Premium Package',
