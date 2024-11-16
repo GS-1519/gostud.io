@@ -1,7 +1,7 @@
 import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
-import AIHeadshotsLandingPage from "@/components/Hero";
+import HeroSection from "@/components/Hero";
 import AIToolSection from "@/components/AIToolSection";
 import AIBackgroundSection from '@/components/AIBackgroundSection';
 import ComparisonPage from "@/components/Comparison";
@@ -43,7 +43,7 @@ export default async function Home() {
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-[82px]">
         <div className="w-full max-w-[1276px] mx-auto space-y-12">
           <div id="ai-headshots">
-            <AIHeadshotsLandingPage />
+            <HeroSection />
           </div>
           <AIToolSection />
           <AIBackgroundSection />
@@ -60,7 +60,7 @@ export default async function Home() {
             <FAQSection />
           </div>
           <HeadshotContainer />
-        </div>
+          </div>
       </div>
     </div>
   );
