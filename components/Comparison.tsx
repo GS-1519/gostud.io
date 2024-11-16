@@ -21,8 +21,8 @@ const ComparisonPage = () => {
     { 
       label: 'Variety', 
       icon: Layers, 
-      goStudio: '20 product shots', 
-      studio: '5-8 shots', 
+      goStudio: '20 Headshots', 
+      studio: '5-8 Headshots', 
       color: 'bg-red-400' 
     },
     { 
