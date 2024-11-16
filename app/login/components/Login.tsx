@@ -4,11 +4,9 @@ import Image from 'next/image';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/components/ui/use-toast";
-import { Database } from '@/types/supabase';
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { ArrowRight } from "lucide-react";
-import logo from "/public/98.png";
 import login from "/public/login.svg";
 import { WaitingForMagicLink } from './WaitingForMagicLink';
 import { useRouter } from 'next/navigation';
@@ -117,14 +115,14 @@ const LoginPage: React.FC<LoginPageProps> = ({ host, searchParams, params }) => 
       <div className="w-full max-w-4xl h-screen lg:h-[90vh] bg-white rounded-none lg:rounded-xl shadow-lg overflow-hidden flex flex-col lg:flex-row">
         <div className="lg:w-1/2 relative hidden lg:block">
           <Image 
-            src="/reviews/skincare.png"
+            src={login}
             alt="Product Photo" 
             layout="fill"
             objectFit="cover"
           />
           <div className="absolute bottom-4 left-4 bg-white p-3 rounded-lg shadow-md max-w-[220px]">
             <div className="absolute -bottom-2 -left-2 text-indigo-500 text-xl">★</div>
-            <p className="text-sm font-bold mb-1 font-jakarta">"Great range of styles. I love how the platform gives several options after uploading a single image."</p>
+            <p className="text-sm font-bold mb-1 font-jakarta">"Photos came out better than some studios I've tried."</p>
             <p className="text-xs text-indigo-600">— Sarah Chen</p>
           </div>
         </div>
