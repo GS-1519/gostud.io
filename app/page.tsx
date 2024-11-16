@@ -2,28 +2,27 @@ import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import HeroSection from "@/components/Hero";
-import AIToolSection from "@/components/AIToolSection";
-import AIBackgroundSection from '@/components/AIBackgroundSection';
+import ExplainerSection from "@/components/ExplainerSection";
 import ComparisonPage from "@/components/Comparison";
-import ReviewSection from "@/components/ReviewSection";
+import HeadshotReviewSection from "@/components/HeadshotReviewSection";
 import PricingSection from "@/components/PricingSection";
-import MoneyBackGuarantee from "@/components/moneysection";
 import DataSecuritySection from "@/components/container";
 import FAQSection from "@/components/Question";
 import HeadshotContainer from "@/components/Banner";
 import type { Metadata } from 'next'
 
+
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: 'AI Product Photography Studio | Professional Product Photos in Minutes',
-  description: 'Transform your product photography with AI. Get studio-quality product photos instantly. Professional results at a fraction of the cost of traditional photo studios.',
-  keywords: 'AI product photography, product photo studio, professional product photos, AI photo studio, e-commerce photography',
+  title: 'AI Professional Headshots & Product Photography Studio | Photos in Minutes',
+  description: 'Transform your professional image with AI-powered headshots and product photography. Get studio-quality photos instantly. Professional results at a fraction of traditional studio costs.',
+  keywords: 'AI headshots, professional headshots, AI product photography, LinkedIn photos, business portraits, product photos, professional photos, AI photo studio, e-commerce photography',
   openGraph: {
-    title: 'AI Product Photography Studio | Professional Product Photos in Minutes',
-    description: 'Transform your product photography with AI. Get studio-quality product photos instantly.',
+    title: 'AI Professional Headshots & Product Photography Studio | Photos in Minutes',
+    description: 'Transform your professional image with AI-powered headshots and product photography. Get studio-quality photos instantly.',
     type: 'website',
-    images: ['/og.png'], // Add your OG image
+    images: ['/og.png'],
   }
 }
 
@@ -45,13 +44,11 @@ export default async function Home() {
           <div id="ai-headshots">
             <HeroSection />
           </div>
-          <AIToolSection />
-          <AIBackgroundSection />
+          <ExplainerSection />
           <ComparisonPage />
           <div id="testimonial">
-          <ReviewSection />
+            <HeadshotReviewSection />
           </div>
-          {/* <MoneyBackGuarantee /> */}
           <div id="pricing">
             <PricingSection user={user} />
           </div>
