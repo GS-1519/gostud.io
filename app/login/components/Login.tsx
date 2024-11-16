@@ -158,7 +158,7 @@ const LoginPage: React.FC<LoginPageProps> = ({ host, searchParams, params }) => 
                 )}
               </div>
               
-              {/* <Button
+              <Button
                 type="button"
                 onClick={handleGoogleSignIn}
                 className="w-[339.5px] h-[46px] px-[16.5px] py-[13px] bg-[#5B16FE] text-white font-medium rounded-[50px] border-t border-l hover:bg-[#4A12CC] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#5B16FE] flex items-center justify-center"
@@ -170,7 +170,7 @@ const LoginPage: React.FC<LoginPageProps> = ({ host, searchParams, params }) => 
                   <path d="M10.7019 3.95805C12.1276 3.936 13.5055 4.47247 14.538 5.45722L17.393 2.60218C15.5852 0.904587 13.1858 -0.0287217 10.7019 0.000673888C6.92087 0.000673888 3.46322 2.13185 1.76562 5.51234L5.08732 8.08813C5.87733 5.71811 8.09302 3.95805 10.7019 3.95805V3.95805Z" fill="#EA4335"/>
                 </svg>
                 Continue with Google
-              </Button> */}
+              </Button>
               
               <Button
                 type="submit"

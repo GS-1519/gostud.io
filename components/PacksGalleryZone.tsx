@@ -6,12 +6,49 @@ import Link from "next/link";
 import { Loader2 } from "lucide-react";
 import { useRouter } from 'next/navigation';
 
+interface Cost {
+  cost: number;
+  num_images: number;
+}
+
+interface Costs {
+  man?: Cost;
+  woman?: Cost;
+  boy?: Cost;
+  girl?: Cost;
+  dog?: Cost;
+  cat?: Cost;
+}
+
 interface Pack {
-  id: string;
+  id: number;
+  slug: string;
   title: string;
   cover_url: string;
-  slug: string;
+  costs: Costs;
 }
+
+const groupPacksByCategory = (packs: Pack[]) => {
+  const groups: { [key: string]: Pack[] } = {
+    adults: [],
+    children: [],
+    pets: []
+  };
+
+  packs.forEach(pack => {
+    if (pack.costs.man || pack.costs.woman) {
+      groups.adults.push(pack);
+    }
+    if (pack.costs.boy || pack.costs.girl) {
+      groups.children.push(pack);
+    }
+    if (pack.costs.dog || pack.costs.cat) {
+      groups.pets.push(pack);
+    }
+  });
+
+  return groups;
+};
 
 export default function PacksGalleryZone() {
   const [packs, setPacks] = useState<Pack[]>([]);
@@ -65,6 +102,8 @@ export default function PacksGalleryZone() {
     }
   };
 
+  const groupedPacks = groupPacksByCategory(packs);
+
   if (loading) {
     return (
       <div className="flex flex-col items-center justify-center h-64">
@@ -82,37 +121,49 @@ export default function PacksGalleryZone() {
     );
   }
 
+  const getCategoryTitle = (category: string) => {
+    switch (category) {
+      case 'adults':
+        return 'Professional & Lifestyle Packs';
+      case 'children':
+        return 'Children Packs';
+      case 'pets':
+        return 'Pet Packs';
+      default:
+        return `${category} Packs`;
+    }
+  };
+
   return (
-    <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-      {packs.map((pack) => (
-        <Link 
-          href={`/overview/models/train/${pack.slug}`} 
-          key={pack.id} 
-          className="w-full h-70 bg-black rounded-md overflow-hidden transition-transform duration-300 hover:scale-105"
-          onClick={(e) => handlePackSelect(e, pack)}
-        >
-          <img
-            src={pack.cover_url ?? "https://www.astria.ai/assets/logo-b4e21f646fb5879eb91113a70eae015a7413de8920960799acb72c60ad4eaa99.png"}
-            alt={pack.title}
-            className="w-full h-4/5 object-cover"
-          />
-          <div className="text-white w-full p-3 text-md font-bold text-center capitalize leading-tight">
-            {pack.title}
+    <div className="space-y-8">
+      {Object.entries(groupedPacks).map(([category, categoryPacks]) => 
+        categoryPacks.length > 0 && (
+          <div key={category} className="space-y-4">
+            <h2 className="text-xl font-bold">
+              {getCategoryTitle(category)}
+            </h2>
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+              {categoryPacks.map((pack) => (
+                <Link 
+                  href={`/overview/models/train/${pack.slug}`} 
+                  key={pack.id} 
+                  className="w-full h-70 bg-black rounded-md overflow-hidden transition-transform duration-300 hover:scale-105"
+                  onClick={(e) => handlePackSelect(e, pack)}
+                >
+                  <img
+                    src={pack.cover_url ?? "https://www.astria.ai/assets/logo-b4e21f646fb5879eb91113a70eae015a7413de8920960799acb72c60ad4eaa99.png"}
+                    alt={pack.title}
+                    className="w-full h-4/5 object-cover"
+                  />
+                  <div className="text-white w-full p-3 text-md font-bold text-center capitalize leading-tight">
+                    {pack.title}
+                  </div>
+                </Link>
+              ))}
+            </div>
           </div>
-        </Link>
-      ))}
-      {/* Coming Soon Card */}
-      <div className="w-full h-70 rounded-md overflow-hidden transition-transform duration-300 hover:scale-105"
-           style={{
-             background: 'linear-gradient(180deg, rgba(131, 113, 255, 0.1) 0%, rgba(1, 199, 228, 0.1) 100%)'
-           }}>
-        <div className="w-full h-full flex items-center justify-center">
-          <div className="text-[#8371FF] text-md font-bold text-center leading-tight">
-          <div>More Packs</div>
-          <div>Coming Soon</div>
-          </div>
-        </div>
-      </div>
+        )
+      )}
     </div>
   );
 }
