@@ -35,14 +35,14 @@ const testimonials: Testimonial[] = [
     name: "Priya Sharma",
     image: "/homepage-reviews/professional-woman-13.jpg",
     date: "August 2024",
-    rating: 5,
+    rating: 4.5,
     text: "As a media personality, I was skeptical about AI enhancement, but the results are stunning! Used it for my recent magazine feature and social media profiles. The consistency across platforms is exactly what I needed. ✨"
   },
   {
     name: "David Rosenberg",
     image: "/homepage-reviews/professional-man15.jpg",
     date: "August 2024",
-    rating: 5,
+    rating: 4.5,
     text: "Being in commercial real estate, my profile photo shows up everywhere - from business cards to building proposals. GoStudio helped me achieve that perfect balance of approachable yet professional. Great investment! 🏢"
   },
   {
@@ -63,7 +63,7 @@ const testimonials: Testimonial[] = [
     name: "Christina Mueller",
     image: "/homepage-reviews/professional-woman10.jpg",
     date: "October 2024",
-    rating: 5,
+    rating: 4.5,
     text: "Einfach fantastisch! As a business coach, my photo needs to convey trust and experience. GoStudio delivered exactly that - and so quickly! Now using it across all my marketing materials. Danke! ⭐"
   },
   {
@@ -77,7 +77,7 @@ const testimonials: Testimonial[] = [
     name: "Isabella Romano",
     image: "/homepage-reviews/professional-woman.jpg",
     date: "September 2024",
-    rating: 5,
+    rating: 4.5,
     text: "Come responsabile delle vendite internazionali, avevo bisogno di una foto che trasmettesse professionalità e affidabilità. GoStudio ha superato le mie aspettative. Perfetto per il mio personal branding! 🌍"
   },
   {
@@ -146,16 +146,20 @@ const FullStar = () => (
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
+      {/* Gray background star */}
       <path 
         d="M8.49751 1.44954C8.77008 0.877484 9.61123 0.877484 9.8838 1.44954L11.8264 5.53644C11.9265 5.74772 12.1282 5.89608 12.3617 5.92899L16.8859 6.61635C17.5235 6.71384 17.7835 7.50961 17.3197 7.95557L14.0497 11.1C13.8818 11.2616 13.8063 11.4974 13.8456 11.7298L14.6705 16.2301C14.7857 16.8641 14.1093 17.3537 13.5381 17.0486L9.49674 14.8991C9.28641 14.7863 9.03491 14.7863 8.82457 14.8991L4.78324 17.0486C4.21203 17.3537 3.53562 16.8641 3.65077 16.2301L4.47573 11.7298C4.51498 11.4974 4.43951 11.2616 4.27161 11.1L1.00163 7.95557C0.537826 7.50961 0.797863 6.71384 1.43544 6.61635L5.95959 5.92899C6.19312 5.89608 6.39483 5.74772 6.49494 5.53644L8.49751 1.44954Z" 
-        fill="url(#half-star)"
+        fill="#D9D9D9"
       />
-      <defs>
-        <linearGradient id="half-star" x1="0" x2="18" y1="0" y2="0">
-          <stop offset="50%" stopColor="#FFB800" />
-          <stop offset="50%" stopColor="#D9D9D9" />
-        </linearGradient>
-      </defs>
+      {/* Yellow half star overlay */}
+      <mask id="half-star-mask">
+        <rect x="0" y="0" width="9" height="18" fill="white"/>
+      </mask>
+      <path 
+        d="M8.49751 1.44954C8.77008 0.877484 9.61123 0.877484 9.8838 1.44954L11.8264 5.53644C11.9265 5.74772 12.1282 5.89608 12.3617 5.92899L16.8859 6.61635C17.5235 6.71384 17.7835 7.50961 17.3197 7.95557L14.0497 11.1C13.8818 11.2616 13.8063 11.4974 13.8456 11.7298L14.6705 16.2301C14.7857 16.8641 14.1093 17.3537 13.5381 17.0486L9.49674 14.8991C9.28641 14.7863 9.03491 14.7863 8.82457 14.8991L4.78324 17.0486C4.21203 17.3537 3.53562 16.8641 3.65077 16.2301L4.47573 11.7298C4.51498 11.4974 4.43951 11.2616 4.27161 11.1L1.00163 7.95557C0.537826 7.50961 0.797863 6.71384 1.43544 6.61635L5.95959 5.92899C6.19312 5.89608 6.39483 5.74772 6.49494 5.53644L8.49751 1.44954Z" 
+        fill="#FFB800"
+        mask="url(#half-star-mask)"
+      />
     </svg>
   );
   
@@ -175,29 +179,24 @@ const FullStar = () => (
   
   // Update the RatingStars component to ensure it handles the rating properly
 const RatingStars = ({ rating }: { rating: number }) => {
-    console.log('Rating received:', rating); // Add this for debugging
-    
-    const fullStars = Math.floor(rating);
-    const hasHalfStar = rating % 1 !== 0;
-    const emptyStars = 5 - Math.ceil(rating);
-  
     return (
-      <div className="flex gap-[2px]">
-        {/* Full stars */}
-        {Array.from({ length: fullStars }).map((_, i) => (
-          <FullStar key={`full-${i}`} />
-        ))}
-        
-        {/* Half star */}
-        {hasHalfStar && <HalfStar />}
-        
-        {/* Empty stars */}
-        {Array.from({ length: emptyStars }).map((_, i) => (
-          <EmptyStar key={`empty-${i}`} />
-        ))}
-      </div>
+        <div className="flex gap-[2px]">
+            {[...Array(5)].map((_, index) => {
+                const value = index + 1;
+                if (value <= rating) {
+                    // Full star for values less than or equal to rating
+                    return <FullStar key={`star-${index}`} />;
+                } else if (value - rating <= 0.5 && value - rating > 0) {
+                    // Half star when difference is 0.5 or less but greater than 0
+                    return <HalfStar key={`star-${index}`} />;
+                } else {
+                    // Empty star for all other cases
+                    return <EmptyStar key={`star-${index}`} />;
+                }
+            })}
+        </div>
     );
-  };
+};
   
   
   // Add this interface
@@ -259,14 +258,14 @@ const ReviewCard: React.FC<ReviewCardProps> = ({ review }) => {
             <h2 className="text-gray-500 font-semibold font-jakarta">TESTIMONIALS</h2>
             
             <h1 className="text-3xl sm:text-5xl font-bold font-jakarta">
-              <span className="bg-gradient-to-r from-[#7160FF] to-[#B19FFF] text-transparent bg-clip-text">{photosCreated}</span> Photos already created
+              <span className="bg-gradient-to-r from-[#7160FF] to-[#B19FFF] text-transparent bg-clip-text">{photosCreated}</span> headshots already created
               <br/>
-              <span className="bg-gradient-to-r from-[#00B6D0] to-[#53E0FF] text-transparent bg-clip-text">{happyCustomers}</span> Happy customers 
+              <span className="bg-gradient-to-r from-[#00B6D0] to-[#53E0FF] text-transparent bg-clip-text">{happyCustomers}</span> happy customers 
             </h1>
             
             <p className="text-gray-600 text-sm sm:text-base max-w-3xl mx-auto">
-              Not made in a studio. Created by AI. Don't just take our word for it. Our AI turns everyday
-              photos into professional headshots, that reflect your confidence & credibility.
+              Transform your photos into polished, professional headshots in minutes. Join thousands of professionals 
+              who trust our AI to create studio-quality portraits that enhance their personal brand and make the right first impression.
             </p>
           </div>
   
