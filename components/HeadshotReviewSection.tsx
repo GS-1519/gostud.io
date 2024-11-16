@@ -32,94 +32,96 @@ interface Testimonial {
 
 const testimonials: Testimonial[] = [
   {
-    name: "Sophie Laurent",
+    name: "Priya Sharma",
     image: "/homepage-reviews/professional-woman-13.jpg",
-    date: "March 2024",
+    date: "August 2024",
     rating: 5,
-    text: "En tant que directrice marketing, je cherchais une solution pour harmoniser les photos de notre équipe internationale. Résultat parfait, délai record ! 🌟"
+    text: "As a media personality, I was skeptical about AI enhancement, but the results are stunning! Used it for my recent magazine feature and social media profiles. The consistency across platforms is exactly what I needed. ✨"
   },
   {
-    name: "James Chen",
+    name: "David Rosenberg",
     image: "/homepage-reviews/professional-man15.jpg",
-    date: "March 2024",
+    date: "August 2024",
     rating: 5,
+    text: "Being in commercial real estate, my profile photo shows up everywhere - from business cards to building proposals. GoStudio helped me achieve that perfect balance of approachable yet professional. Great investment! 🏢"
   },
   {
-    name: "Maria Rodriguez",
+    name: "Maya Patel",
     image: "/homepage-reviews/professional-woman9.jpg",
-    date: "February 2024",
+    date: "September 2024",
     rating: 5,
-    text: "Perfect for my LinkedIn profile! The AI enhancement made my professional headshot look like it was taken in a studio. Amazing technology! ✨"
+    text: "Starting my career in investment banking, I needed to look polished yet approachable. GoStudio helped me strike that perfect balance. My headshot now looks like it belongs in the company's annual report! 📊"
   },
   {
-    name: "David Park",
+    name: "Alessandro Conti",
     image: "/homepage-reviews/professional-man19.jpg",
-    date: "March 2024",
+    date: "August 2024",
     rating: 5,
+    text: "Ho provato diversi servizi, ma GoStudio è stato il migliore. Perfetto per il mio profilo da docente universitario e per le conferenze internazionali. Eccezionale! 🎓"
   },
   {
-    name: "Emma Thompson",
+    name: "Christina Mueller",
     image: "/homepage-reviews/professional-woman10.jpg",
-    date: "March 2024",
+    date: "October 2024",
     rating: 5,
-    text: "As a real estate agent, my profile photo is crucial. GoStudio helped me achieve a polished, trustworthy look. Thank you! 🏠"
+    text: "Einfach fantastisch! As a business coach, my photo needs to convey trust and experience. GoStudio delivered exactly that - and so quickly! Now using it across all my marketing materials. Danke! ⭐"
   },
   {
-    name: "Michael O'Brien",
+    name: "Christopher Bennett",
     image: "/homepage-reviews/professional-man5.jpg",
-    date: "March 2024",
+    date: "October 2024",
     rating: 5,
-    text: "Quick, efficient, and professional. Transformed my casual photo into a perfect corporate headshot. Exactly what I needed! 🎯"
+    text: "Had been putting off getting a new headshot for years (who has the time?). My daughter suggested GoStudio - took me 5 minutes to upload and the results came back looking better than my last professional shoot from 2019. Brilliant service."
   },
   {
-    name: "Sarah Williams",
+    name: "Isabella Romano",
     image: "/homepage-reviews/professional-woman.jpg",
-    date: "February 2024",
+    date: "September 2024",
     rating: 5,
-    text: "I was skeptical about AI photo enhancement, but the results blew me away. My dating profile looks so much more professional now! 📸"
+    text: "Come responsabile delle vendite internazionali, avevo bisogno di una foto che trasmettesse professionalità e affidabilità. GoStudio ha superato le mie aspettative. Perfetto per il mio personal branding! 🌍"
   },
   {
-    name: "Thomas Anderson",
+    name: "Matthew Sullivan",
     image: "/homepage-reviews/professional-man1.jpg",
-    date: "March 2024",
+    date: "October 2024",
     rating: 5,
-    text: "Our entire sales team got their photos done through GoStudio. Consistent, professional, and incredibly cost-effective! 🚀"
+    text: "Working at Deloitte means every detail matters. Got this done for our team of 15 - the consistency in lighting and background made our 'Meet the Team' page look incredibly professional. No more mismatched headshots!"
   },
 //   {
-//     name: "Lisa Zhang",
+//     name: "Elena Petrova",
 //     image: "/homepage-reviews/dating-woman-1.jpg",
-//     date: "February 2024",
+//     date: "September 2024",
 //     rating: 5,
-//     text: "The photo enhancement is subtle yet impactful. Perfect for both professional and social media use. Love the natural look! ❤️"
+//     text: "Превосходное качество! Used the enhanced photos for both our Moscow and London offices' website. The consistency across all regional teams is exactly what our firm needed. Professional, elegant, and worth every penny. Спасибо! 🌟"
 //   },
   {
-    name: "Robert Martinez",
+    name: "Eric Schmidt",
     image: "/homepage-reviews/professional-man6.jpg",
-    date: "March 2024",
+    date: "November 2024",
     rating: 5,
-    text: "As a consultant, first impressions matter. GoStudio helped me nail that professional look for my business portraits. Exceptional service! 💼"
-  },
+    text: "As a startup founder, I needed something quick and professional for our pitch deck. GoStudio delivered exactly what I needed in minutes. Investors actually commented on how polished our team photos looked! 🚀"
+ },
   {
-    name: "Jennifer Kumar",
+    name: "Rachel Goldstein",
     image: "/homepage-reviews/photoshoot-women-fullshot.jpg",
-    date: "March 2024",
+    date: "November 2024",
     rating: 5,
-    text: "Used it for our company's about page. The whole process was seamless, and the results are stunning. Great investment! 🌟"
+    text: "Quick story - had a last-minute speaker bio needed for a tech conference in San Francisco. Got my photo enhanced during my Uber ride there. The organizers literally asked which studio I used! 😄"
   },
   {
-    name: "Alex Thompson",
+    name: "Emmanuel Okonjo",
     image: "/homepage-reviews/professional-man16.jpg",
-    date: "March 2024",
+    date: "November 2024",
     rating: 5,
-    text: "The AI enhancement made my headshot look like it was taken by a professional photographer. Amazing value for money! 📊"
+    text: "Running a tech consultancy means I'm always on video calls with clients. Really impressed with how GoStudio enhanced my headshot while keeping it natural. Even my LinkedIn connection requests increased! 💻"
   },
   {
-    name: "Daniel Lee",
+    name: "Amir Khoury",
     image: "/homepage-reviews/dating-man6.jpg",
-    date: "February 2024",
+    date: "September 2024",
     rating: 5,
-    text: "Finally found a solution that makes professional headshots accessible and affordable. Game-changer for freelancers like me! 🎯"
-  }
+    text: "As a wealth management advisor in Dubai, I needed photos that would resonate with international clients. GoStudio transformed my casual office photo into something that belongs on a Bloomberg terminal. Worth every dirham!"
+  },
 ];
 
 // Star SVG Components
@@ -225,7 +227,7 @@ const ReviewCard: React.FC<ReviewCardProps> = ({ review }) => {
         <div className="p-5 sm:p-6 space-y-3">
           <div className="flex justify-between items-center">
             <h3 className="font-medium text-base sm:text-lg text-gray-900">{review.name}</h3>
-            <span className="text-sm text-gray-500">{review.date}</span>
+            <span className="text-xs text-gray-500">{review.date}</span>
           </div>
           
           <div className="flex gap-[2px]">
