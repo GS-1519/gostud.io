@@ -1,15 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
 import AI from "@/public/logo/AI.svg";
-import old from "@/public/testimonial/old.svg";
-import oldmen from "@/public/testimonial/oldmen.svg";
-import wome from "@/public/testimonial/wome.svg";
-import girl from "@/public/testimonial/girl.svg";
-import boy from "@/public/testimonial/boy.svg";
-import young from "@/public/testimonial/young.svg";
-import Luke from "@/public/Luke.svg";
-import correct from "@/public/correct.svg";
-import Link from 'next/link';
 
 // Add these utility functions at the top of the file
 const getRandomNumber = (min: number, max: number) => {
