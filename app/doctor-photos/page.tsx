@@ -46,7 +46,7 @@ export default async function DoctorPhotos() {
             <DoctorHero />
           </div>
           <Works/>
-          <Why/>
+          <Why imageSet="doctor" />
           <div id="testimonial">
             <ReviewSection/>
           </div>
