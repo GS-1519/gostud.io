@@ -34,63 +34,63 @@ const testimonials: Testimonial[] = [
   {
     name: "Priya Sharma",
     image: "/homepage-reviews/professional-woman-13.jpg",
-    date: "August 2024",
+    date: "Aug 2024",
     rating: 4.5,
     text: "As a media personality, I was skeptical about AI enhancement, but the results are stunning! Used it for my recent magazine feature and social media profiles. The consistency across platforms is exactly what I needed. ✨"
   },
   {
     name: "David Rosenberg",
     image: "/homepage-reviews/professional-man15.jpg",
-    date: "August 2024",
+    date: "Aug 2024",
     rating: 4.5,
     text: "Being in commercial real estate, my profile photo shows up everywhere - from business cards to building proposals. GoStudio helped me achieve that perfect balance of approachable yet professional. Great investment! 🏢"
   },
   {
     name: "Maya Patel",
     image: "/homepage-reviews/professional-woman9.jpg",
-    date: "September 2024",
+    date: "Sept 2024",
     rating: 5,
     text: "Starting my career in investment banking, I needed to look polished yet approachable. GoStudio helped me strike that perfect balance. My headshot now looks like it belongs in the company's annual report! 📊"
   },
   {
     name: "Alessandro Conti",
     image: "/homepage-reviews/professional-man19.jpg",
-    date: "August 2024",
+    date: "Aug 2024",
     rating: 5,
     text: "Ho provato diversi servizi, ma GoStudio è stato il migliore. Perfetto per il mio profilo da docente universitario e per le conferenze internazionali. Eccezionale! 🎓"
   },
   {
     name: "Christina Mueller",
     image: "/homepage-reviews/professional-woman10.jpg",
-    date: "October 2024",
+    date: "Oct 2024",
     rating: 4.5,
-    text: "Einfach fantastisch! As a business coach, my photo needs to convey trust and experience. GoStudio delivered exactly that - and so quickly! Now using it across all my marketing materials. Danke! ⭐"
+    text: "Einfach fantastisch! As a business coach, my photo needs to convey tr and experience. GoStudio delivered exactly that - and so quickly! Now using it across all my marketing materials. Danke! ⭐"
   },
   {
     name: "Christopher Bennett",
     image: "/homepage-reviews/professional-man5.jpg",
-    date: "October 2024",
+    date: "Oct 2024",
     rating: 5,
     text: "Had been putting off getting a new headshot for years (who has the time?). My daughter suggested GoStudio - took me 5 minutes to upload and the results came back looking better than my last professional shoot from 2019. Brilliant service."
   },
   {
     name: "Isabella Romano",
     image: "/homepage-reviews/professional-woman.jpg",
-    date: "September 2024",
+    date: "Sept 2024",
     rating: 4.5,
     text: "Come responsabile delle vendite internazionali, avevo bisogno di una foto che trasmettesse professionalità e affidabilità. GoStudio ha superato le mie aspettative. Perfetto per il mio personal branding! 🌍"
   },
   {
     name: "Matthew Sullivan",
     image: "/homepage-reviews/professional-man1.jpg",
-    date: "October 2024",
+    date: "Oct 2024",
     rating: 5,
     text: "Working at Deloitte means every detail matters. Got this done for our team of 15 - the consistency in lighting and background made our 'Meet the Team' page look incredibly professional. No more mismatched headshots!"
   },
 //   {
 //     name: "Elena Petrova",
 //     image: "/homepage-reviews/dating-woman-1.jpg",
-//     date: "September 2024",
+//     date: "Sept 2024",
 //     rating: 5,
 //     text: "Превосходное качество! Used the enhanced photos for both our Moscow and London offices' website. The consistency across all regional teams is exactly what our firm needed. Professional, elegant, and worth every penny. Спасибо! 🌟"
 //   },
@@ -118,7 +118,7 @@ const testimonials: Testimonial[] = [
   {
     name: "Amir Khoury",
     image: "/homepage-reviews/dating-man6.jpg",
-    date: "September 2024",
+    date: "Sept 2024",
     rating: 5,
     text: "As a wealth management advisor in Dubai, I needed photos that would resonate with international clients. GoStudio transformed my casual office photo into something that belongs on a Bloomberg terminal. Worth every dirham!"
   },

@@ -38,7 +38,7 @@ const Footer: React.FC = () => {
     {
       title: 'Features',
       items: [
-        { text: 'AI Product Photos', href: '/' }
+        { text: 'AI Headshots', href: '/' }
       ]
     },
     {
@@ -73,9 +73,11 @@ const Footer: React.FC = () => {
                 <Image src={final_Logo} alt="Studio.ai logo" width={320} height={120} className="rounded-full" style={{ padding: '14.12px 11.3px', gap: '4.16px' }} />
               </div>
               <p className="text-xs text-gray-500 max-w-xs leading-tight">
-                Premium Product Photography, Simplified
+                Professional Headshots at the comfort of your home.
                 <br />
-                Transform your products with studio-quality professional photos without the studio price. Our AI delivers pristine 4K product shots within the hour, starting at just $29.
+                Your Personal Branding done your way. 
+                <br/>
+                No photographer needed - create the perfect professional image that truly represents you, in minutes, starting at just $10.
               </p>
             </div>
             <div className="col-span-1 lg:col-span-3">
