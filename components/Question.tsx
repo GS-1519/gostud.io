@@ -38,6 +38,41 @@ const FAQSection = () => {
   const faqs = [
     {
       question: "What is GoStudio.ai? How does it work?",
+      answer: "GoStudio.ai uses your own photos to train a custom AI model that represents your appearance and can generate your headshots in various styles and clothing. The quality of the generated headshots depends on the pictures you upload. You should try to have different perspectives of your face, eyes, and various angles. Each picture should represent something new about your appearance and facial features."
+    },
+    {
+      question: "What kind of photos do I need to upload?",
+      answer: "Make variety a priority. Varied facial expressions and varied backgrounds, taken at various times of the day, are the keys to high-quality input photos. Oh, and minimal makeup and accessories, please!"
+    },
+    {
+      question: "Who owns my AI photos?",
+      answer: "You do. We grant you full commercial license and ownership over your photos."
+    },
+    {
+      question: "How long does an AI headshot take?",
+      answer: "We don't cut corners when it comes to generating photorealistic AI headshots. We're not the fastest, but you'll always get same-day results with GoStud.io. Our Executive package is delivered in 1 hour or less."
+    },
+    {
+      question: "What if I don't like my photos?",
+      answer: "No problem. If you don't get a single profile-worthy headshot, we'll refund your entire purchase. It's our Profile-Worthy guarantee."
+    },
+    {
+      question: "Can I use AI headshots on LinkedIn?",
+      answer: "Yes, 25% of GoStudio.ai customers use their AI headshots on LinkedIn. It's totally okay to use AI headshots on LinkedIn."
+    },
+    {
+      question: "What AI should I use for headshots?",
+      answer: "The best AI headshot generators are using Flux to maximize realism. Right now, GoStud.io is the only major headshot AI powered by Flux. You can get up to 30+ professional AI headshots within 2 hours for just $29."
+    },
+    {
+      question: "Is GoStudio.ai safe for my data?",
+      answer: "GoStudio.ai respects your privacy and does not store or access your images beyond the minimum required for processing them. All model training data is automatically deleted after 30 days. Please reach out if you have any questions about this at hello@gostudio.ai"
+    }
+  ];
+
+  const productFaqs = [
+    {
+      question: "What is GoStudio.ai? How does it work?",
       answer: "GoStudio.ai uses your product photos to create stunning professional product shots in various styles and settings. The quality of the generated images depends on the pictures you upload. You should provide clear photos of your product from different angles, showing details and textures. Each picture should capture different aspects of your product's features."
     },
     {

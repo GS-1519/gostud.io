@@ -8,7 +8,7 @@ export default function NavItems({ isMobile = false }) {
   return (
     <>
       <Link href="/" className={linkClass}>
-        AI Product Photos
+        Headshots
       </Link>
       <Link href="/#testimonial" className={linkClass}>
         Testimonial

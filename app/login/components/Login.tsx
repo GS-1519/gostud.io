@@ -4,11 +4,9 @@ import Image from 'next/image';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/components/ui/use-toast";
-import { Database } from '@/types/supabase';
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { ArrowRight } from "lucide-react";
-import logo from "/public/98.png";
 import login from "/public/login.svg";
 import { WaitingForMagicLink } from './WaitingForMagicLink';
 import { useRouter } from 'next/navigation';
@@ -117,14 +115,14 @@ const LoginPage: React.FC<LoginPageProps> = ({ host, searchParams, params }) => 
       <div className="w-full max-w-4xl h-screen lg:h-[90vh] bg-white rounded-none lg:rounded-xl shadow-lg overflow-hidden flex flex-col lg:flex-row">
         <div className="lg:w-1/2 relative hidden lg:block">
           <Image 
-            src="/reviews/skincare.png"
+            src={login}
             alt="Product Photo" 
             layout="fill"
             objectFit="cover"
           />
           <div className="absolute bottom-4 left-4 bg-white p-3 rounded-lg shadow-md max-w-[220px]">
             <div className="absolute -bottom-2 -left-2 text-indigo-500 text-xl">★</div>
-            <p className="text-sm font-bold mb-1 font-jakarta">"Great range of styles. I love how the platform gives several options after uploading a single image."</p>
+            <p className="text-sm font-bold mb-1 font-jakarta">"Photos came out better than some studios I've tried."</p>
             <p className="text-xs text-indigo-600">— Sarah Chen</p>
           </div>
         </div>
@@ -160,7 +158,7 @@ const LoginPage: React.FC<LoginPageProps> = ({ host, searchParams, params }) => 
                 )}
               </div>
               
-              {/* <Button
+              <Button
                 type="button"
                 onClick={handleGoogleSignIn}
                 className="w-[339.5px] h-[46px] px-[16.5px] py-[13px] bg-[#5B16FE] text-white font-medium rounded-[50px] border-t border-l hover:bg-[#4A12CC] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#5B16FE] flex items-center justify-center"
@@ -172,7 +170,7 @@ const LoginPage: React.FC<LoginPageProps> = ({ host, searchParams, params }) => 
                   <path d="M10.7019 3.95805C12.1276 3.936 13.5055 4.47247 14.538 5.45722L17.393 2.60218C15.5852 0.904587 13.1858 -0.0287217 10.7019 0.000673888C6.92087 0.000673888 3.46322 2.13185 1.76562 5.51234L5.08732 8.08813C5.87733 5.71811 8.09302 3.95805 10.7019 3.95805V3.95805Z" fill="#EA4335"/>
                 </svg>
                 Continue with Google
-              </Button> */}
+              </Button>
               
               <Button
                 type="submit"

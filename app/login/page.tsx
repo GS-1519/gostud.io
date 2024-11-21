@@ -6,12 +6,12 @@ import LoginPage from "./components/Login";
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Login or Sign Up | GoStudio.ai',
-  description: 'Join GoStudio.ai to create stunning AI-powered product photos. Access your dashboard and transform your product photography today.',
-  keywords: 'login, sign up, register, GoStudio.ai account, AI photography, product photos',
+  title: 'Login or Sign Up | Professional Headshot AI',
+  description: 'Join our platform to create stunning AI-powered professional headshots and portraits. Access your dashboard and transform your professional photography today.',
+  keywords: 'login, sign up, register, professional headshots, AI photography, portrait photography, business photos',
   openGraph: {
-    title: 'Login or Sign Up | GoStudio.ai',
-    description: 'Join GoStudio.ai to create stunning AI-powered product photos.',
+    title: 'Login or Sign Up | Professional Headshot AI',
+    description: 'Create stunning AI-powered professional headshots and portraits.',
     type: 'website',
     images: ['/og.png'],
   }
