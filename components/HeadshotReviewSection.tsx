@@ -97,21 +97,21 @@ const testimonials: Testimonial[] = [
   {
     name: "Eric Schmidt",
     image: "/homepage-reviews/professional-man6.jpg",
-    date: "November 2024",
+    date: "Nov 2024",
     rating: 5,
     text: "As a startup founder, I needed something quick and professional for our pitch deck. GoStudio delivered exactly what I needed in minutes. Investors actually commented on how polished our team photos looked! 🚀"
  },
   {
     name: "Rachel Goldstein",
     image: "/homepage-reviews/photoshoot-women-fullshot.jpg",
-    date: "November 2024",
+    date: "Nov 2024",
     rating: 5,
     text: "Quick story - had a last-minute speaker bio needed for a tech conference in San Francisco. Got my photo enhanced during my Uber ride there. The organizers literally asked which studio I used! 😄"
   },
   {
     name: "Emmanuel Okonjo",
     image: "/homepage-reviews/professional-man16.jpg",
-    date: "November 2024",
+    date: "Nov 2024",
     rating: 5,
     text: "Running a tech consultancy means I'm always on video calls with clients. Really impressed with how GoStudio enhanced my headshot while keeping it natural. Even my LinkedIn connection requests increased! 💻"
   },
