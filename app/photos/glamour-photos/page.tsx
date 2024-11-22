@@ -10,7 +10,7 @@ import DataSecuritySection from "@/components/container";
 import FAQSection from "@/components/Question";
 import Footer from "@/components/Footer";
 import Banner from "@/components/Banner";
-import ColorHero from "@/components/ColorHero";
+import GlamourHero from "@/components/GlamourHero";
 
 export const dynamic = "force-dynamic";
 
@@ -42,10 +42,10 @@ export default async function DoctorPhotos() {
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-[82px]">
         <div className="w-full max-w-[1276px] mx-auto space-y-12">
           <div id="ai-headshots">
-            <ColorHero/>
+            <GlamourHero/>
           </div>
           <Works/>
-          <Why imageSet="ColorFram" />
+          <Why imageSet="GlmFram" />
           <div id="testimonial">
             <ReviewSection/>
           </div>
