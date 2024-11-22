@@ -1,52 +1,62 @@
 import React from 'react';
 import Image from 'next/image';
 
-const Works = () => {
+interface WorksProps {
+  image1?: string;
+  image2?: string;
+  image3?: string;
+}
+
+const Works = ({ image1 = '/Group.png', image2 = '/Group1.png', image3 = '/Group3.png' }: WorksProps) => {
   const steps = [
     {
       id: '01',
       title: 'Upload a few photos',
       description: 'Upload a few photos of yourself to let AI learn about you.',
       icon: '📁',
-      image: '/Group.png'
+      image: image1
     },
     {
       id: '02',
       title: 'AI trained personally for you',
       description: 'AI creates a private, personalized model just for you—ensuring headshots that reflect your unique style and identity.',
       icon: '🤖',
-      image: '/Group2.png'
+      image: image2
     },
     {
       id: '03',
       title: 'Download favorite Headshots',
       description: "You'll receive a variety of backgrounds, poses, and styles, giving you the perfect AI-crafted Headshots to elevate your business professional profile.",
       icon: '⬇️',
-      image: '/Group3.png'
+      image: image3
     }
   ];
 
   return (
-    <div className="flex justify-center items-center w-full bg-gray-100 py-8">
+    <div className="flex justify-center items-center w-full py-8">
       <section className="w-full sm:w-[1276px] min-h-[790.92px] rounded-[60px] bg-white p-4 sm:p-[72px]">
         {/* Header */}
-        <div className="text-center mb-[20px]">
-          <h2 className="text-2xl font-medium mb-4">HOW IT WORKS</h2>
-          <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold">
-            <span className="bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent">3 easy steps to get your</span>
+        <div className="text-center mb-[20px] px-4 sm:px-0">
+          <h2 className="text-xl sm:text-2xl font-medium mb-4 text-[#0A1727CC]">HOW IT WORKS</h2>
+          <h3 className="text-2xl sm:text-4xl md:text-5xl font-bold">
+            <span className="bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent">
+              3 easy steps to get your
+            </span>
             <br />
-            <span className="bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent">studio quality profile.</span>
+            <span className="bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent">
+              studio quality profile.
+            </span>
           </h3>
         </div>
 
         {/* Steps Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-[20px] mt-[20px]">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-[20px] mt-[20px] px-4 sm:px-0">
           {steps.map((step) => (
             <div key={step.id} className="relative">
               {/* Card */}
-              <div className="bg-gray-50 rounded-3xl p-6 hover:shadow-lg transition-shadow">
+              <div >
                 {/* Step Image Container */}
-                <div className="w-full sm:w-[358.86px] h-[266.92px] rounded-[11.86px] overflow-hidden relative mb-6">
+                <div className="w-full h-[376px] sm:h-[266.92px] rounded-[11.86px] overflow-hidden relative mb-4 sm:mb-6">
                   <Image
                     src={step.image}
                     alt={step.title}
@@ -86,8 +96,8 @@ const Works = () => {
         </div>
 
         {/* CTA Button */}
-        <div className="text-center mt-[40px]">
-          <button className="bg-[#5B16FE] text-white px-8 py-3 rounded-full hover:opacity-90 transition-opacity flex items-center justify-center mx-auto" style={{ width: '269px', height: '48px' }}>
+        <div className="text-center mt-[40px] px-4 sm:px-0">
+          <button className="w-full sm:w-[269px] h-[48px] bg-[#5B16FE] text-white px-8 py-3 rounded-full hover:opacity-90 transition-opacity flex items-center justify-center mx-auto">
             Get Started
             <span className="ml-2">→</span>
           </button>
