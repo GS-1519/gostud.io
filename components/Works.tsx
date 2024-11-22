@@ -87,7 +87,7 @@ const Works = () => {
 
         {/* CTA Button */}
         <div className="text-center mt-[40px]">
-          <button className="bg-[#5B16FE] text-white px-8 py-3 rounded-full hover:opacity-90 transition-opacity flex items-center justify-center mx-auto">
+          <button className="bg-[#5B16FE] text-white px-8 py-3 rounded-full hover:opacity-90 transition-opacity flex items-center justify-center mx-auto" style={{ width: '269px', height: '48px' }}>
             Get Started
             <span className="ml-2">→</span>
           </button>

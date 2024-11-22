@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 // Add a props interface
 interface WhyProps {
-  imageSet?: 'dating' | 'doctor';  // default will be 'dating'
+  imageSet?: 'dating' | 'doctor' | 'Jfram';  // default will be 'dating'
 }
 
 const Why = ({ imageSet = 'dating' }: WhyProps) => {
@@ -11,7 +11,7 @@ const Why = ({ imageSet = 'dating' }: WhyProps) => {
     {
       icon: "/why/camera.png",
       title: "SIMPLIFIED PROCESS",
-      description: "Skip the expensive photoshoot\nand the awkward poses.Get\n your professional headshots anytime, anywhere with just a\n few clear selfies or casual photos."
+      description: "Skip the expensive photoshoot and the awkward\n poses.Get your professional headshots anytime, anywhere with just a few clear selfies or casual\n photos."
     },
     {
       icon: "/why/dollor.png",
@@ -32,7 +32,8 @@ const Why = ({ imageSet = 'dating' }: WhyProps) => {
 
   const images = {
     dating: "/datingfram.png",
-    doctor: "/doctorfram.png"  // Add your doctor frame image
+    doctor: "/doctorfram.png" , // Add your doctor frame image
+    Jfram: "/Jfram.png",
   };
 
   return (

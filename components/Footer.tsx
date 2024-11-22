@@ -38,7 +38,7 @@ const Footer: React.FC = () => {
     {
       title: 'Features',
       items: [
-        { text: 'AI Product Photos', href: '/' }
+        { text: 'AI Headshots Photos', href: '/' }
       ]
     },
     {
