@@ -34,7 +34,7 @@ const Tools = ({ image1 = '/Group.png', image2 = '/Group1.png', image3 = '/Group
 
   return (
     <div className="flex justify-center items-center w-full py-8">
-      <section className="w-full sm:w-[1276px] min-h-[790.92px] rounded-[60px] bg-white p-4 sm:p-[72px]">
+      <section className="w-full sm:w-[1276px] min-h-[790.92px] rounded-[60px] bg-white p-4 sm:p-12">
         {/* Header */}
         <div className="text-center mb-[20px] px-4 sm:px-0">
           <h2 className="text-xl sm:text-2xl font-medium mb-4 text-[#0A1727CC]">HOW IT WORKS</h2>

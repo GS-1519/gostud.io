@@ -41,8 +41,8 @@ const backgrounds = [
 
 export default function LibraryHero() {
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center py-20">
-      <div className="w-[1274px] min-h-[1010px] bg-white rounded-[60px] py-20 mx-auto">
+    <div className="flex items-center justify-center mt-20">
+      <div className="w-[1274px] h-[1010px] bg-white rounded-[60px] py-20 mx-auto">
         {/* Hero Header */}
         <div className="text-center mb-[60px]">
           <h1 className="mx-auto max-w-[692px] text-[40px] leading-[60.48px] font-bold font-plus-jakarta-sans mb-4">
