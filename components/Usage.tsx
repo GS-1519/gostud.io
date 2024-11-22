@@ -1,14 +1,18 @@
 import Image from 'next/image';
 import React from 'react';
 
-const Usage = () => {
+interface UsageProps {
+  backgroundImage: string;
+}
+
+const Usage: React.FC<UsageProps> = ({ backgroundImage }) => {
   return (
     <div className="w-full max-w-[1274px] mx-auto">
       <div className="bg-white rounded-[60px] flex flex-col lg:flex-row items-start px-[97px] gap-12">
         {/* Left Image Section */}
         <div className="relative w-full lg:w-[500px] h-[500px] lg:h-[600px] rounded-r-[60px] overflow-hidden">
           <Image
-            src="/Background1.png"
+            src={backgroundImage}
             alt="Background showcase"
             fill
             className="object-contain"

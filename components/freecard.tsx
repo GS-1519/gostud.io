@@ -1,7 +1,11 @@
 import Image from 'next/image';
 import React from 'react';
 
-const FreeCard = () => {
+interface FreeCardProps {
+  backgroundImage: string;
+}
+
+const FreeCard: React.FC<FreeCardProps> = ({ backgroundImage }) => {
   return (
     <div className="w-full max-w-[1274px] mx-auto">
       <div className="bg-white rounded-[60px] flex flex-col lg:flex-row items-start px-[97px]">
@@ -39,7 +43,7 @@ const FreeCard = () => {
         {/* Right Image Section */}
         <div className="relative w-full lg:w-[500px] h-[500px] lg:h-[600px] rounded-r-[60px] overflow-hidden">
           <Image
-            src="/Background.png"
+            src={backgroundImage}
             alt="Background showcase"
             fill
             className="object-contain"
