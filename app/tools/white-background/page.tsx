@@ -14,6 +14,7 @@ import Tools from "@/components/Tools";
 import WhiteHero from "@/components/WhiteHero";
 import FreeCard from "@/components/freecard";
 import Usage from "@/components/Usage";
+import BlackHero from "@/components/BlackHero";
 
 export const dynamic = "force-dynamic";
 
@@ -48,10 +49,10 @@ export default async function DoctorPhotos() {
             <WhiteHero/>
           </div>
           <div id="ai-headshots">
-          <FreeCard/>
+            <FreeCard backgroundImage="/Background4.png" />
           </div>
           <div id="ai-headshots">
-          <Usage/>
+          <Usage backgroundImage="/Background5.png" />
           </div>
           <div id="ai-headshots">
           <Tools/>

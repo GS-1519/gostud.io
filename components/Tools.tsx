@@ -7,7 +7,7 @@ interface WorksProps {
   image3?: string;
 }
 
-const Tools = ({ image1 = '/Group.png', image2 = '/Group1.png', image3 = '/Group3.png' }: ToolsProps) => {
+const Tools = ({ image1 = '/Frame.png', image2 = '/Group1.png', image3 = '/Group3.png' }: ToolsProps) => {
   const steps = [
     {
       id: '01',

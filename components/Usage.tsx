@@ -8,7 +8,7 @@ interface UsageProps {
 const Usage: React.FC<UsageProps> = ({ backgroundImage }) => {
   return (
     <div className="w-full max-w-[1274px] mx-auto">
-      <div className="bg-white rounded-[60px] flex flex-col lg:flex-row items-start px-[97px] gap-12">
+      <div className="bg-white rounded-[60px] flex flex-col lg:flex-row items-start px-[97px] gap-20">
         {/* Left Image Section */}
         <div className="relative w-full lg:w-[500px] h-[500px] lg:h-[600px] rounded-r-[60px] overflow-hidden">
           <Image

@@ -8,7 +8,7 @@ interface FreeCardProps {
 const FreeCard: React.FC<FreeCardProps> = ({ backgroundImage }) => {
   return (
     <div className="w-full max-w-[1274px] mx-auto">
-      <div className="bg-white rounded-[60px] flex flex-col lg:flex-row items-start px-[97px]">
+      <div className="bg-white rounded-[60px] flex flex-col lg:flex-row items-start px-[97px] gap-20">
         {/* Left Content Section */}
         <div className="w-full lg:w-[515px]">
           <div className="flex flex-col gap-8 py-12">
