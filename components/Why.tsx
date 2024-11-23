@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 // Add a props interface
 interface WhyProps {
-  imageSet?: 'dating' | 'doctor' | 'Jfram' | 'ColorFram' | 'GlmFram' | 'FitFram' | 'tubefram'  | 'Group6' | 'Group7' | 'Group8';  // default will be 'dating'
+  imageSet?: 'dating' | 'doctor' | 'Jfram' | 'ColorFram' | 'GlmFram' | 'FitFram' | 'tubefram'  | 'Group6' | 'Group7' | 'Group8' | 'Group9';  // default will be 'dating'
 }
 
 const Why = ({ imageSet = 'dating' }: WhyProps) => {
@@ -41,6 +41,7 @@ const Why = ({ imageSet = 'dating' }: WhyProps) => {
     Group6:"/Group6.png",
     Group7:"/Group7.png",
     Group8:"/Group8.png",
+    Group9:"/Group9.png",
   };
 
   return (
