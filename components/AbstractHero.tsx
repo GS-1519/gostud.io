@@ -3,16 +3,16 @@ import Link from 'next/link';
 import { useState } from 'react';
 
 const AbstractHero = () => {
-  const [activeCategory, setActiveCategory] = useState('White');
+  const [activeCategory, setActiveCategory] = useState('Abstract');
 
   const categories = [
-    'Black',
-    'Grey',
-    'White',
-    'Red',
-    'Abstract',
-    'Halloween',
-    'Christmas'
+    { name: 'Black', path: '/tools/black-background' },
+    { name: 'Grey', path: '/tools/grey-background' },
+    { name: 'White', path: '/tools/white-background' },
+    { name: 'Red', path: '/tools/red-background' },
+    { name: 'Abstract', path: '/tools/abstract-background' },
+    { name: 'Halloween', path: '/tools/halloween-background' },
+    { name: 'Christmas', path: '/tools/christmas-background' }
   ];
 
   const backgrounds = [
@@ -42,23 +42,26 @@ const AbstractHero = () => {
           Creative Downloads Await! 🎨 Click to grab stunning abstract backgrounds and add a splash of art to your screens!        </p>
         </div>
 
-        {/* Category Navigation */}
+        {/* Updated Category Navigation */}
         <div className="flex justify-center mb-[60px]">
           <div className="inline-flex items-center bg-white rounded-full p-2 shadow-sm border">
             {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setActiveCategory(category)}
-                className={`
-                  px-8 py-3 rounded-full text-base font-medium transition-all duration-200
-                  ${activeCategory === category
-                    ? 'bg-violet-600 text-white shadow-md'
-                    : 'text-violet-600 hover:bg-gray-50'
-                  }
-                `}
+              <Link
+                key={category.name}
+                href={category.path}
               >
-                {category}
-              </button>
+                <button
+                  className={`
+                    px-8 py-3 rounded-full text-base font-medium transition-all duration-200
+                    ${activeCategory === category.name
+                      ? 'bg-violet-600 text-white shadow-md'
+                      : 'text-violet-600 hover:bg-gray-50'
+                    }
+                  `}
+                >
+                  {category.name}
+                </button>
+              </Link>
             ))}
           </div>
         </div>

@@ -5,43 +5,43 @@ const backgrounds = [
   {
     title: 'Black Background',
     image: '/backgrounds/black.png',
-    href: '/backgrounds/black'
+    href: '/tools/black-background'
   },
   {
     title: 'Red Background',
     image: '/backgrounds/red.png',
-    href: '/backgrounds/red'
+    href: '/tools/red-background'
   },
   {
     title: 'Halloween Background',
     image: '/backgrounds/hallo.png',
-    href: '/backgrounds/halloween'
+    href: '/tools/halloween-background'
   },
   {
     title: 'Christmas Background',
     image: '/backgrounds/xmax.png',
-    href: '/backgrounds/christmas'
+    href: '/tools/christmas-background'
   },
   {
     title: 'White Background',
     image: '/backgrounds/white.png',
-    href: '/backgrounds/white'
+    href: '/tools/white-background'
   },
   {
     title: 'Abstract Background',
     image: '/backgrounds/multy.png',
-    href: '/backgrounds/abstract'
+    href: '/tools/abstract-background'
   },
   {
     title: 'Grey Background',
     image: '/backgrounds/grey.png',
-    href: '/backgrounds/grey'
+    href: '/tools/grey-background'
   }
 ];
 
 export default function LibraryHero() {
   return (
-    <div className="flex items-center justify-center mt-20">
+    <div className="flex items-center justify-center">
       <div className="w-[1274px] h-[1010px] bg-white rounded-[60px] py-20 mx-auto">
         {/* Hero Header */}
         <div className="text-center mb-[60px]">
@@ -59,81 +59,53 @@ export default function LibraryHero() {
             <div className="flex gap-[14px]">
               {/* First Column */}
               <div className="space-y-[14px]">
-                {/* Black Background */}
-                <div className="w-[254px] h-[255px] bg-gray-200 rounded-[12px] overflow-hidden relative">
-                  <Image
-                    src="/backgrounds/black.png"
-                    alt="Black Background"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                {/* White Background */}
-                <div className="w-[254px] h-[380px] bg-gray-200 rounded-[12px] overflow-hidden relative">
-                  <Image
-                    src="/backgrounds/white.png"
-                    alt="White Background"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
+                <Link href="/tools/black-background" className="block">
+                  <div className="w-[254px] h-[255px] bg-gray-200 rounded-[12px] overflow-hidden relative cursor-pointer hover:opacity-90 transition-opacity">
+                    <Image src="/backgrounds/black.png" alt="Black Background" fill className="object-cover" />
+                  </div>
+                </Link>
+                <Link href="/tools/white-background" className="block">
+                  <div className="w-[254px] h-[380px] bg-gray-200 rounded-[12px] overflow-hidden relative cursor-pointer hover:opacity-90 transition-opacity">
+                    <Image src="/backgrounds/white.png" alt="White Background" fill className="object-cover" />
+                  </div>
+                </Link>
               </div>
 
               {/* Second Column */}
               <div className="space-y-[14px]">
-                {/* Red Background */}
-                <div className="w-[254.06px] h-[380px] bg-gray-200 rounded-[12px] overflow-hidden relative">
-                  <Image
-                    src="/backgrounds/red.png"
-                    alt="Red Background"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                {/* Abstract Background */}
-                <div className="w-[254.06px] h-[255px] bg-gray-200 rounded-[12px] overflow-hidden relative">
-                  <Image
-                    src="/backgrounds/multy.png"
-                    alt="Abstract Background"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
+                <Link href="/tools/red-background" className="block">
+                  <div className="w-[254.06px] h-[380px] bg-gray-200 rounded-[12px] overflow-hidden relative cursor-pointer hover:opacity-90 transition-opacity">
+                    <Image src="/backgrounds/red.png" alt="Red Background" fill className="object-cover" />
+                  </div>
+                </Link>
+                <Link href="/tools/abstract-background" className="block">
+                  <div className="w-[254.06px] h-[255px] bg-gray-200 rounded-[12px] overflow-hidden relative cursor-pointer hover:opacity-90 transition-opacity">
+                    <Image src="/backgrounds/multy.png" alt="Abstract Background" fill className="object-cover" />
+                  </div>
+                </Link>
               </div>
 
               {/* Third Column */}
               <div className="space-y-[14px]">
-                {/* Halloween Background */}
-                <div className="w-[254px] h-[255px] bg-gray-200 rounded-[12px] overflow-hidden relative">
-                  <Image
-                    src="/backgrounds/hallo.png"
-                    alt="Halloween Background"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                {/* Christmas Background */}
-                <div className="w-[254px] h-[380px] bg-gray-200 rounded-[12px] overflow-hidden relative">
-                  <Image
-                    src="/backgrounds/xmax.png"
-                    alt="Christmas Background"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
+                <Link href="/tools/halloween-background" className="block">
+                  <div className="w-[254px] h-[255px] bg-gray-200 rounded-[12px] overflow-hidden relative cursor-pointer hover:opacity-90 transition-opacity">
+                    <Image src="/backgrounds/hallo.png" alt="Halloween Background" fill className="object-cover" />
+                  </div>
+                </Link>
+                <Link href="/tools/grey-background" className="block">
+                  <div className="w-[254px] h-[380px] bg-gray-200 rounded-[12px] overflow-hidden relative cursor-pointer hover:opacity-90 transition-opacity">
+                    <Image src="/backgrounds/grey.png" alt="Grey Background" fill className="object-cover" />
+                  </div>
+                </Link>
               </div>
 
               {/* Fourth Column */}
               <div className="space-y-[14px]">
-                {/* Grey Background */}
-                <div className="w-[254px] h-[380px] bg-gray-200 rounded-[12px] overflow-hidden relative">
-                  <Image
-                    src="/backgrounds/grey.png"
-                    alt="Grey Background"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
+                <Link href="/tools/christmas-background" className="block">
+                  <div className="w-[254px] h-[380px] bg-gray-200 rounded-[12px] overflow-hidden relative cursor-pointer hover:opacity-90 transition-opacity">
+                    <Image src="/backgrounds/xmax.png" alt="Christmas Background" fill className="object-cover" />
+                  </div>
+                </Link>
               </div>
             </div>
           </div>

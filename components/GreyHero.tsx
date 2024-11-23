@@ -3,16 +3,17 @@ import Link from 'next/link';
 import { useState } from 'react';
 
 const GreyHero = () => {
-  const [activeCategory, setActiveCategory] = useState('White');
+  const [activeCategory, setActiveCategory] = useState('Grey');
+  const [showAll, setShowAll] = useState(false);
 
   const categories = [
-    'Black',
-    'Grey',
-    'White',
-    'Red',
-    'Abstract',
-    'Halloween',
-    'Christmas'
+    { name: 'Black', path: '/tools/black-background' },
+    { name: 'Grey', path: '/tools/grey-background' },
+    { name: 'White', path: '/tools/white-background' },
+    { name: 'Red', path: '/tools/red-background' },
+    { name: 'Abstract', path: '/tools/abstract-background' },
+    { name: 'Halloween', path: '/tools/halloween-background' },
+    { name: 'Christmas', path: '/tools/christmas-background' }
   ];
 
   const backgrounds = [
@@ -37,29 +38,33 @@ const GreyHero = () => {
         {/* Hero Section */}
         <div className="text-center mb-[60px]">
           <h1 className="text-[40px] font-bold text-gray-900 mb-6">
-          Grey Color Backgrounds
+            Grey Color Backgrounds
           </h1>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-          Stylish Downloads Await! 🌫️ Click to grab sleek grey backgrounds to elevate your screens with modern elegance!          </p>
+            Stylish Downloads Await! 🌫️ Click to grab sleek grey backgrounds to elevate your screens with modern elegance!
+          </p>
         </div>
 
-        {/* Category Navigation */}
+        {/* Updated Category Navigation */}
         <div className="flex justify-center mb-[60px]">
           <div className="inline-flex items-center bg-white rounded-full p-2 shadow-sm border">
             {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setActiveCategory(category)}
-                className={`
-                  px-8 py-3 rounded-full text-base font-medium transition-all duration-200
-                  ${activeCategory === category
-                    ? 'bg-violet-600 text-white shadow-md'
-                    : 'text-violet-600 hover:bg-gray-50'
-                  }
-                `}
+              <Link
+                key={category.name}
+                href={category.path}
               >
-                {category}
-              </button>
+                <button
+                  className={`
+                    px-8 py-3 rounded-full text-base font-medium transition-all duration-200
+                    ${activeCategory === category.name
+                      ? 'bg-violet-600 text-white shadow-md'
+                      : 'text-violet-600 hover:bg-gray-50'
+                    }
+                  `}
+                >
+                  {category.name}
+                </button>
+              </Link>
             ))}
           </div>
         </div>

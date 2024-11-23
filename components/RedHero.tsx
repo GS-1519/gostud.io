@@ -3,16 +3,17 @@ import Link from 'next/link';
 import { useState } from 'react';
 
 const RedHero = () => {
-  const [activeCategory, setActiveCategory] = useState('White');
+  const [activeCategory, setActiveCategory] = useState('Red');
+  const [showAll, setShowAll] = useState(false);
 
   const categories = [
-    'Black',
-    'Grey',
-    'White',
-    'Red',
-    'Abstract',
-    'Halloween',
-    'Christmas'
+    { name: 'Black', path: '/tools/black-background' },
+    { name: 'Grey', path: '/tools/grey-background' },
+    { name: 'White', path: '/tools/white-background' },
+    { name: 'Red', path: '/tools/red-background' },
+    { name: 'Abstract', path: '/tools/abstract-background' },
+    { name: 'Halloween', path: '/tools/halloween-background' },
+    { name: 'Christmas', path: '/tools/christmas-background' }
   ];
 
   const backgrounds = [
@@ -33,6 +34,8 @@ const RedHero = () => {
     { id: 15, src: '/white-backgrounds/geometric.jpg', alt: 'White geometric pattern' },
   ];
 
+  const visibleBackgrounds = showAll ? backgrounds : backgrounds.slice(0, 15);
+
   return (
     <div className="mt-12">
       <div className="mx-auto w-[1274px] min-h-[1122px] bg-white rounded-[60px] py-12">
@@ -42,36 +45,39 @@ const RedHero = () => {
             Red Color Backgrounds
           </h1>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-          Stylish Downloads Await! 🔴 Click to grab sleek red backgrounds
-          to elevate your screens with modern elegance!"
+            Stylish Downloads Await! 🔴 Click to grab sleek red backgrounds
+            to elevate your screens with modern elegance!
           </p>
         </div>
 
-        {/* Category Navigation */}
+        {/* Updated Category Navigation */}
         <div className="flex justify-center mb-[60px]">
           <div className="inline-flex items-center bg-white rounded-full p-2 shadow-sm border">
             {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setActiveCategory(category)}
-                className={`
-                  px-8 py-3 rounded-full text-base font-medium transition-all duration-200
-                  ${activeCategory === category
-                    ? 'bg-violet-600 text-white shadow-md'
-                    : 'text-violet-600 hover:bg-gray-50'
-                  }
-                `}
+              <Link
+                key={category.name}
+                href={category.path}
               >
-                {category}
-              </button>
+                <button
+                  className={`
+                    px-8 py-3 rounded-full text-base font-medium transition-all duration-200
+                    ${activeCategory === category.name
+                      ? 'bg-violet-600 text-white shadow-md'
+                      : 'text-violet-600 hover:bg-gray-50'
+                    }
+                  `}
+                >
+                  {category.name}
+                </button>
+              </Link>
             ))}
           </div>
         </div>
 
         {/* Image Grid */}
-        <div className="flex justify-center px-[97px]">
-          <div className="grid grid-cols-5 gap-[8px] w-[1080px] h-[640px] mx-auto">
-            {backgrounds.map((background) => (
+        <div className="flex flex-col items-center px-[97px]">
+          <div className="grid grid-cols-5 gap-[8px] w-[1080px] mx-auto">
+            {visibleBackgrounds.map((background) => (
               <div
                 key={background.id}
                 className="relative group cursor-pointer overflow-hidden rounded-[12px] w-[200px] h-[200px]"
@@ -87,6 +93,17 @@ const RedHero = () => {
               </div>
             ))}
           </div>
+          
+          {/* See All Button */}
+          {backgrounds.length > 15 && (
+            <button
+              onClick={() => setShowAll(!showAll)}
+              className="mt-8 inline-flex items-center px-6 py-3 rounded-full bg-[#5B16FE] text-white font-medium hover:bg-[#5B16FE] transition-colors duration-200"
+            >
+              {showAll ? 'Show Less' : 'See All'} 
+              {!showAll && <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>}
+            </button>
+          )}
         </div>
       </div>
     </div>

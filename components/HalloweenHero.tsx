@@ -2,8 +2,9 @@
 import Link from 'next/link';
 import { useState } from 'react';
 
-const WhiteHero = () => {
-  const [activeCategory, setActiveCategory] = useState('White');
+const HalloweenHero = () => {
+  const [activeCategory, setActiveCategory] = useState('Halloween');
+  const [showAll, setShowAll] = useState(false);
 
   const categories = [
     { name: 'Black', path: '/tools/black-background' },
@@ -31,7 +32,14 @@ const WhiteHero = () => {
     { id: 13, src: '/white-backgrounds/silk.jpg', alt: 'White silk texture' },
     { id: 14, src: '/white-backgrounds/curves.jpg', alt: 'White curved pattern' },
     { id: 15, src: '/white-backgrounds/geometric.jpg', alt: 'White geometric pattern' },
+    { id: 16, src: '/white-backgrounds/rough.jpg', alt: 'Rough white surface' },
+    { id: 17, src: '/white-backgrounds/paper.jpg', alt: 'White paper texture' },
+    { id: 18, src: '/white-backgrounds/silk.jpg', alt: 'White silk texture' },
+    { id: 19, src: '/white-backgrounds/curves.jpg', alt: 'White curved pattern' },
+    { id: 20, src: '/white-backgrounds/geometric.jpg', alt: 'White geometric pattern' },
   ];
+
+  const visibleBackgrounds = showAll ? backgrounds : backgrounds.slice(0, 15);
 
   return (
     <div className="mt-12">
@@ -39,11 +47,11 @@ const WhiteHero = () => {
         {/* Hero Section */}
         <div className="text-center mb-[60px]">
           <h1 className="text-[40px] font-bold text-gray-900 mb-6">
-            White Backgrounds
+            Halloween Backgrounds
           </h1>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Stylish Downloads Await! 🤍 Click to grab sleek white backgrounds
-            to elevate your screens with modern elegance!
+            Spooky Downloads Await! 🎃 Click to grab eerie Halloween backgrounds
+            and give your screens a festive fright!
           </p>
         </div>
 
@@ -72,9 +80,9 @@ const WhiteHero = () => {
         </div>
 
         {/* Image Grid */}
-        <div className="flex justify-center px-[97px]">
-          <div className="grid grid-cols-5 gap-[8px] w-[1080px] h-[640px] mx-auto">
-            {backgrounds.map((background) => (
+        <div className="flex flex-col items-center px-[97px]">
+          <div className="grid grid-cols-5 gap-[8px] w-[1080px] mx-auto">
+            {visibleBackgrounds.map((background) => (
               <div
                 key={background.id}
                 className="relative group cursor-pointer overflow-hidden rounded-[12px] w-[200px] h-[200px]"
@@ -90,10 +98,20 @@ const WhiteHero = () => {
               </div>
             ))}
           </div>
+          
+          {backgrounds.length > 15 && (
+            <button
+              onClick={() => setShowAll(!showAll)}
+              className="mt-8 inline-flex items-center px-6 py-3 rounded-full bg-[#5B16FE] text-white font-medium hover:bg-[#5B16FE] transition-colors duration-200"
+            >
+              {showAll ? 'Show Less' : 'See All'} 
+              {!showAll && <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>}
+            </button>
+          )}
         </div>
       </div>
     </div>
   );
 };
 
-export default WhiteHero;
+export default HalloweenHero;

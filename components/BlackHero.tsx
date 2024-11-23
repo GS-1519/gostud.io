@@ -3,16 +3,17 @@ import Link from 'next/link';
 import { useState } from 'react';
 
 const BlackHero = () => {
-  const [activeCategory, setActiveCategory] = useState('White');
+  const [activeCategory, setActiveCategory] = useState('Black');
+  const [showAll, setShowAll] = useState(false);
 
   const categories = [
-    'Black',
-    'Grey',
-    'White',
-    'Red',
-    'Abstract',
-    'Halloween',
-    'Christmas'
+    { name: 'Black', path: '/tools/black-background' },
+    { name: 'Grey', path: '/tools/grey-background' },
+    { name: 'White', path: '/tools/white-background' },
+    { name: 'Red', path: '/tools/red-background' },
+    { name: 'Abstract', path: '/tools/abstract-background' },
+    { name: 'Halloween', path: '/tools/halloween-background' },
+    { name: 'Christmas', path: '/tools/christmas-background' }
   ];
 
   const backgrounds = [
@@ -28,6 +29,9 @@ const BlackHero = () => {
     { id: 10, src: '/white-backgrounds/waves.jpg', alt: 'White waves pattern' },
     
   ];
+
+  // Get visible backgrounds based on showAll state
+  const visibleBackgrounds = showAll ? backgrounds : backgrounds.slice(0, 15);
 
   return (
     <div className="mt-12">
@@ -46,19 +50,22 @@ const BlackHero = () => {
         <div className="flex justify-center mb-[60px]">
           <div className="inline-flex items-center bg-white rounded-full p-2 shadow-sm border">
             {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setActiveCategory(category)}
-                className={`
-                  px-8 py-3 rounded-full text-base font-medium transition-all duration-200
-                  ${activeCategory === category
-                    ? 'bg-violet-600 text-white shadow-md'
-                    : 'text-violet-600 hover:bg-gray-50'
-                  }
-                `}
+              <Link
+                key={category.name}
+                href={category.path}
               >
-                {category}
-              </button>
+                <button
+                  className={`
+                    px-8 py-3 rounded-full text-base font-medium transition-all duration-200
+                    ${activeCategory === category.name
+                      ? 'bg-violet-600 text-white shadow-md'
+                      : 'text-violet-600 hover:bg-gray-50'
+                    }
+                  `}
+                >
+                  {category.name}
+                </button>
+              </Link>
             ))}
           </div>
         </div>
@@ -66,7 +73,7 @@ const BlackHero = () => {
         {/* Image Grid */}
         <div className="flex justify-center px-[97px]">
           <div className="grid grid-cols-5 gap-[8px] w-[1080px] h-[640px] mx-auto">
-            {backgrounds.map((background) => (
+            {visibleBackgrounds.map((background) => (
               <div
                 key={background.id}
                 className="relative group cursor-pointer overflow-hidden rounded-[12px] w-[200px] h-[200px]"
