@@ -1,3 +1,4 @@
+
 import Image from 'next/image'
 import Link from 'next/link'
 import lock from "@/public/logo/lock.svg"
@@ -123,4 +124,4 @@ const HalloweenHero = () => {
 }
 
 
-export default HalloweenHero
+export default HalloweenHero;

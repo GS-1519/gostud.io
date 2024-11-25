@@ -10,6 +10,7 @@ import DataSecuritySection from "@/components/container";
 import FAQSection from "@/components/Question";
 import HeadshotContainer from "@/components/Banner";
 import type { Metadata } from 'next'
+import Script from 'next/script'
 
 
 export const dynamic = "force-dynamic";
@@ -37,28 +38,53 @@ export default async function Home() {
     return redirect("/overview");
   }
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "GoStudio.ai",
+    "description": "AI-powered professional headshots and product photography studio",
+    "applicationCategory": "Photography",
+    "offers": {
+      "@type": "Offer",
+      "price": "29.00",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "ratingCount": "3500"
+    }
+  };
+
   return (
-    <div className="w-full bg-[#F4F7FA] min-h-screen font-poppins">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-[82px]">
-        <div className="w-full max-w-[1276px] mx-auto space-y-12">
-          <div id="ai-headshots">
-            <HeroSection />
-          </div>
-          <ExplainerSection />
-          <ComparisonPage />
-          <div id="testimonial">
-            <HeadshotReviewSection />
-          </div>
-          <div id="pricing">
-            <PricingSection user={user} />
-          </div>
-          <DataSecuritySection />
-          <div id="faq">
-            <FAQSection />
-          </div>
-          <HeadshotContainer />
-          </div>
+    <>
+      <Script
+        id="json-ld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <div className="w-full bg-[#F4F7FA] min-h-screen font-poppins">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-[82px]">
+          <div className="w-full max-w-[1276px] mx-auto space-y-12">
+            <div id="ai-headshots">
+              <HeroSection />
+            </div>
+            <ExplainerSection />
+            <ComparisonPage />
+            <div id="testimonial">
+              <HeadshotReviewSection />
+            </div>
+            <div id="pricing">
+              <PricingSection user={user} />
+            </div>
+            <DataSecuritySection />
+            <div id="faq">
+              <FAQSection />
+            </div>
+            <HeadshotContainer />
+            </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 }

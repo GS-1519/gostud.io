@@ -8,6 +8,7 @@ import FooterWrapper from "@/components/FooterWrapper";
 import { CSPostHogProvider } from './providers'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import ClarityScript from "@/components/ClarityScript";
+import GoogleTagManager from "@/components/GoogleTagManager";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://gostudio.ai'),
@@ -30,6 +31,7 @@ export default function RootLayout({ children }: any) {
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body className="flex flex-col bg-[#F4F7FA] min-h-screen w-full overflow-x-hidden font-[Poppins]">
+        <GoogleTagManager />
         <ClarityScript />
         <Navbar />
         <CSPostHogProvider>

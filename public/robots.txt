@@ -1,2 +1,7 @@
 User-agent: *
-Disallow: /
+Allow: /
+Disallow: /login
+Disallow: /overview
+Disallow: /dashboard
+
+Sitemap: https://gostudio.ai/sitemap.xml

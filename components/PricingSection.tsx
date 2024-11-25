@@ -36,25 +36,25 @@ const PricingComponent: React.FC<PricingComponentProps> = ({ user }) => {
   const pricingTiers = [
     {
       name: 'STARTER',
-      price: '29',
-      originalPrice: '$99',
+      price: '10',
+      originalPrice: '$29',
       features: [
-        '📸 15  Headshots',
+        '📸 10  Headshots',
         '⚡ Delivery within 2 hours',
         '🎨 5 Background Styles',
-        '✨ 3 Outfit Changes'
+        '✨ 3 Different Outfits'
       ],
       buttonText: 'Get Started',
     },
     {
       name: 'PREMIUM',
-      price: '49',
-      originalPrice: '$199',
+      price: '19',
+      originalPrice: '$79',
       features: [
-        '📸 40  Headshots',
+        '📸 30  Headshots',
         '⚡ Priority Delivery (1 hour)',
         '🎨 15 Background Styles',
-        '✨ 5 Outfit Changes'
+        '✨ 5 Different Outfits'
       ],
       buttonText: 'Get Started',
       highlight: true,
@@ -62,13 +62,13 @@ const PricingComponent: React.FC<PricingComponentProps> = ({ user }) => {
     },
     {
       name: 'EXECUTIVE',
-      price: '79',
-      originalPrice: '$299',
+      price: '29',
+      originalPrice: '$129',
       features: [
-        '📸 80  Headshots',
+        '📸 100  Headshots',
         '⚡ Express Delivery (30 min)',
         '🎨 30 Premium Backgrounds',
-        '✨ 8 Outfit Changes'
+        '✨ 12 Different Outfits'
       ],
       buttonText: 'Get Started',
       bestValueTag: 'Premium Package',
