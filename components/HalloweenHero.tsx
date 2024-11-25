@@ -1,117 +1,127 @@
-'use client'
-import Link from 'next/link';
-import { useState } from 'react';
 
+import Image from 'next/image'
+import Link from 'next/link'
+import lock from "@/public/logo/lock.svg"
+import circul from "@/public/logo/circul.svg"
+import mdi from "@/public/logo/mdi.svg"
+import tick from "@/public/logo/tick.svg"
 const HalloweenHero = () => {
-  const [activeCategory, setActiveCategory] = useState('Halloween');
-  const [showAll, setShowAll] = useState(false);
-
-  const categories = [
-    { name: 'Black', path: '/tools/black-background' },
-    { name: 'Grey', path: '/tools/grey-background' },
-    { name: 'White', path: '/tools/white-background' },
-    { name: 'Red', path: '/tools/red-background' },
-    { name: 'Abstract', path: '/tools/abstract-background' },
-    { name: 'Halloween', path: '/tools/halloween-background' },
-    { name: 'Christmas', path: '/tools/christmas-background' }
-  ];
-
-  const backgrounds = [
-    { id: 1, src: '/hallo/hbg1.jpg', alt: 'White texture background' },
-    { id: 2, src: '/hallo/hbg2.jpg', alt: 'Broken white surface' },
-    { id: 3, src: '/hallo/hbg3.jpg', alt: 'White wall texture' },
-    { id: 4, src: '/hallo/hbg4.jpg', alt: 'White brick wall' },
-    { id: 5, src: '/hallo/hbg5.jpg', alt: 'White gradient' },
-    { id: 6, src: '/hallo/hbg6.jpg', alt: 'White plaster texture' },
-    { id: 7, src: '/hallo/hbg7.jpg', alt: 'White room with wooden floor' },
-    { id: 8, src: '/hallo/hbg8.jpg', alt: 'White stucco texture' },
-    { id: 9, src: '/hallo/hbg9.jpg', alt: 'White fabric texture' },
-    { id: 10, src: '/hallo/hbg10.jpg', alt: 'White waves pattern' },
-    { id: 11, src: '/hallo/hbg11.jpg', alt: 'Rough white surface' },
-    { id: 12, src: '/hallo/hbg12.jpg', alt: 'White paper texture' },
-    { id: 13, src: '/hallo/hbg13.jpg', alt: 'White silk texture' },
-    { id: 14, src: '/hallo/hbg14.jpg', alt: 'White curved pattern' },
-    { id: 15, src: '/hallo/hbg15.jpg', alt: 'White geometric pattern' },
-    { id: 16, src: '/hallo/hbg16.jpg', alt: 'White texture background' },
-    { id: 17, src: '/hallo/hbg17.jpg', alt: 'Broken white surface' },
-    { id: 18, src: '/hallo/hbg18.jpg', alt: 'White wall texture' },
-    { id: 19, src: '/hallo/hbg19.jpg', alt: 'White brick wall' },
-    { id: 20, src: '/hallo/hbg20.jpg', alt: 'White texture background' },
-  ];
-
-  const visibleBackgrounds = showAll ? backgrounds : backgrounds.slice(0, 15);
-
   return (
-    <div className="mt-12">
-      <div className="mx-auto w-[1274px] min-h-[1122px] bg-white rounded-[60px] py-12">
-        {/* Hero Section */}
-        <div className="text-center mb-[60px]">
-          <h1 className="text-[40px] font-bold text-gray-900 mb-6">
-            Halloween Backgrounds
-          </h1>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Spooky Downloads Await! 🎃 Click to grab eerie Halloween backgrounds
-            and give your screens a festive fright!
-          </p>
-        </div>
-
-        {/* Updated Category Navigation */}
-        <div className="flex justify-center mb-[60px]">
-          <div className="inline-flex items-center bg-white rounded-full p-2 shadow-sm border">
-            {categories.map((category) => (
-              <Link
-                key={category.name}
-                href={category.path}
+    <div className="relative overflow-hidden">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center py-8 sm:py-12">
+          <div className="flex flex-col items-center lg:items-start">
+            {/* Notification banner - Made responsive */}
+            <div className="mb-8 w-full max-w-[408px] overflow-hidden">
+              <div 
+                className="relative h-[44px] rounded-[148px] w-full"
+                style={{
+                  background: 'linear-gradient(90deg, #8371FF -39.48%, #A077FE 32.07%, #01C7E4 100%)',
+                  padding: '1px'
+                }}
               >
-                <button
-                  className={`
-                    px-8 py-3 rounded-full text-base font-medium transition-all duration-200
-                    ${activeCategory === category.name
-                      ? 'bg-violet-600 text-white shadow-md'
-                      : 'text-violet-600 hover:bg-gray-50'
-                    }
-                  `}
-                >
-                  {category.name}
-                </button>
-              </Link>
-            ))}
-          </div>
-        </div>
-
-        {/* Image Grid */}
-        <div className="flex flex-col items-center px-[97px]">
-          <div className="grid grid-cols-5 gap-[8px] w-[1080px] mx-auto">
-            {visibleBackgrounds.map((background) => (
-              <div
-                key={background.id}
-                className="relative group cursor-pointer overflow-hidden rounded-[12px] w-[200px] h-[200px]"
-              >
-                <img
-                  src={background.src}
-                  alt={background.alt}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                />
-                <div 
-                  className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 rounded-[12px]" 
-                />
+                <div className="absolute inset-0 bg-[#ECF9FF] rounded-[148px] m-[1px]">
+                  <div className="flex items-center h-full px-[12px] py-[8px] gap-[10px]">
+                    <div className="flex-shrink-0 flex h-6 w-6 items-center justify-center rounded-full bg-white">
+                      <Image 
+                        src="/flex.png" 
+                        alt="sparkle" 
+                        width={20} 
+                        height={20} 
+                        className="text-blue-500" 
+                      />
+                    </div>
+                    <div className="w-[341px] h-[20px] overflow-hidden">
+                      <p className="text-[12px] leading-[20px] font-poppins font-medium whitespace-nowrap">
+                        <span className="bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4] bg-clip-text text-transparent">
+                          We just upgraded our Headshot Quality with
+                        </span>
+                        <span className="font-bold text-[#01C7E4]"> Flux Model!</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
-            ))}
+            </div>
+
+            {/* Main content - Made responsive */}
+            <div className="max-w-[733px] text-center lg:text-left">
+              <h1 className="text-[28px] sm:text-[32px] md:text-[36px] lg:text-[40px] font-bold leading-tight flex flex-col gap-2">
+                {/* First row */}
+                <div>
+                  <span className="bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4] bg-clip-text text-transparent">
+                  Spookify Your Look     
+                  </span>
+                  <span className="text-[#161C2D]"> Generate</span>
+                </div>
+                
+                {/* Second row */}
+                <div>
+                  <span className="text-[#161C2D] whitespace-nowrap"> AI-Powered </span>
+                  <span className="bg-gradient-to-r from-[#A077FE] to-[#01C7E4] bg-clip-text text-transparent whitespace-nowrap">  Halloween </span>
+                </div>
+                <div>
+                  <span className="text-[#8371FF] whitespace-nowrap"> Headshots  </span>
+                  <span className="text-[#161C2D] whitespace-nowrap"> Instantly! </span>
+
+                </div>
+                
+              </h1>
+
+              <p className="mt-6 text-[18px] text-[#4B5563]">
+              Capture the iconic, eerie charm of Wednesday Addams with a touch of AI magic.    
+              </p>
+                        {/* Features grid */}
+              <div className="mt-8 grid grid-cols-2 gap-2">
+                <div className="flex items-center">
+                  <div className="rounded-full p-2">
+                    <Image src={mdi} alt="mdi" width={20} height={20} />
+                  </div>
+                  <span className="text-[#4B5563] text-sm">Pick from 150+ styles</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="rounded-full  p-2">
+                    <Image src={circul} alt="clock" width={20} height={20} />
+                  </div>
+                  <span className="text-[#4B5563] text-sm">Done in less than 1 hour</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="rounded-full  p-2">
+                    <Image src={lock} alt="lock" width={20} height={20} />
+                  </div>
+                  <span className="text-[#4B5563] text-sm">Strict data protection</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="rounded-full  p-2">
+                    <Image src={tick} alt="tick" width={20} height={20} />
+                  </div>
+                  <span className="text-[#4B5563] text-sm">Guaranteed results</span>
+                </div>
+              </div>
+
+              {/* CTA Button */}
+              <button className="mt-8 rounded-full bg-[#5B16FE] px-6 py-3 text-white flex items-center gap-2 hover:bg-opacity-90 transition-all">
+                Get Started For Free
+                <span className="ml-2">→</span>
+              </button>
+            </div>
           </div>
-          
-          {backgrounds.length > 15 && (
-            <button
-              onClick={() => setShowAll(!showAll)}
-              className="mt-8 inline-flex items-center px-6 py-3 rounded-full bg-[#5B16FE] text-white font-medium hover:bg-[#5B16FE] transition-colors duration-200"
-            >
-              {showAll ? 'Show Less' : 'See All'} 
-              {!showAll && <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>}
-            </button>
-          )}
+
+          {/* Right side image - Made responsive */}
+          <div className="relative h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] w-full mt-8 lg:mt-0">
+            <Image
+              src="/hallo.png"
+              alt="Dating app screenshots"
+              fill
+              className="object-contain lg:object-right"
+              priority
+            />
+          </div>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
+
 
 export default HalloweenHero;

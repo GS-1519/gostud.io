@@ -38,7 +38,9 @@ const Footer: React.FC = () => {
     {
       title: 'Features',
       items: [
+
         { text: 'AI Headshots', href: '/' }
+
       ]
     },
     {
