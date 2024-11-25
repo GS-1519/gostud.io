@@ -7,6 +7,13 @@ const PUBLIC_ROUTES = ['/', '/login', '/auth', '/api/public'];
 const AUTH_ROUTES = ['/overview', '/summary', '/get-credits'];
 
 export async function middleware(request: NextRequest) {
+  if (!request.headers.get('host')?.startsWith('www.')) {
+    return NextResponse.redirect(
+      `https://www.${request.headers.get('host')}${request.nextUrl.pathname}${request.nextUrl.search}`,
+      301
+    );
+  }
+
   const res = NextResponse.next();
   const supabase = createMiddlewareClient({ req: request, res });
   const { data: { session } } = await supabase.auth.getSession();
