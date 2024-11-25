@@ -107,7 +107,7 @@ const HealthHero = () => {
           <div className="relative">
             <div className="relative h-[500px] w-[90%] ml-auto">
               <Image
-                src="/Fit.svg"
+                src="/Fit.png"
                 alt="Fitness photos"
                 fill
                 className="object-contain"
