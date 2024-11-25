@@ -17,23 +17,28 @@ const RedHero = () => {
   ];
 
   const backgrounds = [
-    { id: 1, src: '/white-backgrounds/texture-1.jpg', alt: 'White texture background' },
-    { id: 2, src: '/white-backgrounds/texture-2.jpg', alt: 'Broken white surface' },
-    { id: 3, src: '/white-backgrounds/texture-3.jpg', alt: 'White wall texture' },
-    { id: 4, src: '/white-backgrounds/brick-wall.jpg', alt: 'White brick wall' },
-    { id: 5, src: '/white-backgrounds/gradient.jpg', alt: 'White gradient' },
-    { id: 6, src: '/white-backgrounds/plaster.jpg', alt: 'White plaster texture' },
-    { id: 7, src: '/white-backgrounds/wooden-floor.jpg', alt: 'White room with wooden floor' },
-    { id: 8, src: '/white-backgrounds/stucco.jpg', alt: 'White stucco texture' },
-    { id: 9, src: '/white-backgrounds/fabric.jpg', alt: 'White fabric texture' },
-    { id: 10, src: '/white-backgrounds/waves.jpg', alt: 'White waves pattern' },
-    { id: 11, src: '/white-backgrounds/rough.jpg', alt: 'Rough white surface' },
-    { id: 12, src: '/white-backgrounds/paper.jpg', alt: 'White paper texture' },
-    { id: 13, src: '/white-backgrounds/silk.jpg', alt: 'White silk texture' },
-    { id: 14, src: '/white-backgrounds/curves.jpg', alt: 'White curved pattern' },
-    { id: 15, src: '/white-backgrounds/geometric.jpg', alt: 'White geometric pattern' },
+    { id: 1, src: '/red-bg/red1.jpg', alt: 'White texture background' },
+    { id: 2, src: '/red-bg/red2.jpg', alt: 'Broken white surface' },
+    { id: 3, src: '/red-bg/red3.jpg', alt: 'White wall texture' },
+    { id: 4, src: '/red-bg/red4.jpg', alt: 'White brick wall' },
+    { id: 5, src: '/red-bg/red5.jpg', alt: 'White gradient' },
+    { id: 6, src: '/red-bg/red6.jpg', alt: 'White plaster texture' },
+    { id: 7, src: '/red-bg/red7.jpg', alt: 'White room with wooden floor' },
+    { id: 8, src: '/red-bg/red8.jpg', alt: 'White stucco texture' },
+    { id: 9, src: '/red-bg/red9.jpg', alt: 'White fabric texture' },
+    { id: 10, src: '/red-bg/red10.jpg', alt: 'White waves pattern' },
+    { id: 11, src: '/red-bg/red11.jpg', alt: 'Rough white surface' },
+    { id: 12, src: '/red-bg/red12.jpg', alt: 'White paper texture' },
+    { id: 13, src: '/red-bg/red13.jpg', alt: 'White silk texture' },
+    { id: 14, src: '/red-bg/red14.jpg', alt: 'White curved pattern' },
+    { id: 15, src: '/red-bg/red15.jpg', alt: 'White geometric pattern' },
+    { id: 16, src: '/red-bg/red16.jpg', alt: 'White texture background' },
+    { id: 17, src: '/red-bg/red17.jpg', alt: 'Broken white surface' },
+    { id: 18, src: '/red-bg/red18.jpg', alt: 'White wall texture' },
+    { id: 19, src: '/red-bg/red19.jpg', alt: 'White brick wall' },
   ];
 
+  // Ensure all images are visible by setting the correct path
   const visibleBackgrounds = showAll ? backgrounds : backgrounds.slice(0, 15);
 
   return (

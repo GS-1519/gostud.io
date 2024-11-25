@@ -3,13 +3,9 @@ import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import type { Metadata } from 'next'
 
-import ReviewSection from "@/components/HeadshotReviewSection";
-import PricingSection from "@/components/PricingSection";
-import DataSecuritySection from "@/components/container";
 import FAQSection from "@/components/Question";
 import Footer from "@/components/Footer";
 import Banner from "@/components/Banner";
-
 import LibraryHero from "@/components/LibraryHero";
 import Tools from "@/components/Tools";
 
@@ -17,8 +13,7 @@ export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: 'AI Product Photography Studio | Professional Product Photos in Minutes',
-  description: 'Transform your product photography with AI. Get studio-quality product photos instantly. Professional results at a fraction of the cost of traditional photo studios.',
-  keywords: 'AI product photography, product photo studio, professional product photos, AI photo studio, e-commerce photography',
+  description: 'Transform your product photography with AI. Get studio-quality product photos instantly.',
   openGraph: {
     title: 'AI Product Photography Studio | Professional Product Photos in Minutes',
     description: 'Transform your product photography with AI. Get studio-quality product photos instantly.',
@@ -27,7 +22,7 @@ export const metadata: Metadata = {
   }
 }
 
-export default async function DoctorPhotos() {
+export default async function BackgroundLibrary() {
   const supabase = createServerComponentClient({ cookies });
 
   const {
@@ -42,24 +37,13 @@ export default async function DoctorPhotos() {
     <div className="w-full bg-[#F4F7FA] min-h-screen font-poppins">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-[82px]">
         <div className="w-full max-w-[1276px] mx-auto space-y-12">
-          <div id="ai-headshots">
-            <LibraryHero/>
-          </div>
-          <div id="ai-headshots">
-          <Tools/>
-          </div>
-       
-          
-          
-          <div id="faq">
-            <FAQSection />
-          </div>
-          <div>
-            <Banner/>
-          </div>
+          <LibraryHero />
+          <Tools />
+          <FAQSection />
+          <Banner />
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

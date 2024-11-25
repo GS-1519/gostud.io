@@ -17,16 +17,16 @@ const BlackHero = () => {
   ];
 
   const backgrounds = [
-    { id: 1, src: '/white-backgrounds/texture-1.jpg', alt: 'White texture background' },
-    { id: 2, src: '/white-backgrounds/texture-2.jpg', alt: 'Broken white surface' },
-    { id: 3, src: '/white-backgrounds/texture-3.jpg', alt: 'White wall texture' },
-    { id: 4, src: '/white-backgrounds/brick-wall.jpg', alt: 'White brick wall' },
-    { id: 5, src: '/white-backgrounds/gradient.jpg', alt: 'White gradient' },
-    { id: 6, src: '/white-backgrounds/plaster.jpg', alt: 'White plaster texture' },
-    { id: 7, src: '/white-backgrounds/wooden-floor.jpg', alt: 'White room with wooden floor' },
-    { id: 8, src: '/white-backgrounds/stucco.jpg', alt: 'White stucco texture' },
-    { id: 9, src: '/white-backgrounds/fabric.jpg', alt: 'White fabric texture' },
-    { id: 10, src: '/white-backgrounds/waves.jpg', alt: 'White waves pattern' },
+    { id: 1, src: '/black-bg/black1.jpg', alt: 'Black texture background' },
+    { id: 2, src: '/black-bg/black2.jpg', alt: 'Broken black surface' },
+    { id: 3, src: '/black-bg/black3.jpg', alt: 'Black wall texture' },
+    { id: 4, src: '/black-bg/black4.jpg', alt: 'Black brick wall' },
+    { id: 5, src: '/black-bg/black5.jpg', alt: 'Black gradient' },
+    { id: 6, src: '/black-bg/black6.jpg', alt: 'Black plaster texture' },
+    { id: 7, src: '/black-bg/black7.jpg', alt: 'Black room with wooden floor' },
+    { id: 8, src: '/black-bg/black8.jpg', alt: 'Black stucco texture' },
+    { id: 9, src: '/black-bg/black9.jpg', alt: 'Black fabric texture' },
+    { id: 10, src: '/black-bg/black10.jpg', alt: 'Black waves pattern' },
     
   ];
 

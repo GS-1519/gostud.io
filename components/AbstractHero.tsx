@@ -6,28 +6,26 @@ const AbstractHero = () => {
   const [activeCategory, setActiveCategory] = useState('Abstract');
 
   const categories = [
-    { name: 'Black', path: '/tools/black-background' },
-    { name: 'Grey', path: '/tools/grey-background' },
-    { name: 'White', path: '/tools/white-background' },
-    { name: 'Red', path: '/tools/red-background' },
-    { name: 'Abstract', path: '/tools/abstract-background' },
-    { name: 'Halloween', path: '/tools/halloween-background' },
-    { name: 'Christmas', path: '/tools/christmas-background' }
+    { name: 'Black', path: '/free-tools/background-library/black-background' },
+    { name: 'Grey', path: '/free-tools/background-library/grey-background' },
+    { name: 'White', path: '/free-tools/background-library/white-background' },
+    { name: 'Red', path: '/free-tools/background-library/red-background' },
+    { name: 'Abstract', path: '/free-tools/background-library/abstract-background' },
+    { name: 'Halloween', path: '/free-tools/background-library/halloween-background' },
+    { name: 'Christmas', path: '/free-tools/background-library/christmas-background' }
   ];
 
   const backgrounds = [
-    { id: 1, src: '/white-backgrounds/texture-1.jpg', alt: 'White texture background' },
-    { id: 2, src: '/white-backgrounds/texture-2.jpg', alt: 'Broken white surface' },
-    { id: 3, src: '/white-backgrounds/texture-3.jpg', alt: 'White wall texture' },
-    { id: 4, src: '/white-backgrounds/brick-wall.jpg', alt: 'White brick wall' },
-    { id: 5, src: '/white-backgrounds/gradient.jpg', alt: 'White gradient' },
-    { id: 6, src: '/white-backgrounds/plaster.jpg', alt: 'White plaster texture' },
-    { id: 7, src: '/white-backgrounds/wooden-floor.jpg', alt: 'White room with wooden floor' },
-    { id: 8, src: '/white-backgrounds/stucco.jpg', alt: 'White stucco texture' },
-    { id: 9, src: '/white-backgrounds/fabric.jpg', alt: 'White fabric texture' },
-    { id: 10, src: '/white-backgrounds/waves.jpg', alt: 'White waves pattern' },
-    
-    
+    { id: 1, src: '/abstract-bg/ab1.jpg', alt: 'White texture background' },
+    { id: 2, src: '/abstract-bg/ab2.jpg', alt: 'Broken white surface' },
+    { id: 3, src: '/abstract-bg/ab3.jpg', alt: 'White wall texture' },
+    { id: 4, src: '/abstract-bg/ab4.jpg', alt: 'White brick wall' },
+    { id: 5, src: '/abstract-bg/ab5.jpg', alt: 'White gradient' },
+    { id: 6, src: '/abstract-bg/ab6.jpg', alt: 'White plaster texture' },
+    { id: 7, src: '/abstract-bg/ab1.jpg', alt: 'White room with wooden floor' },
+    { id: 8, src: '/abstract-bg/ab2.jpg', alt: 'White stucco texture' },
+    { id: 9, src: '/abstract-bg/ab3.jpg', alt: 'White fabric texture' },
+    { id: 10, src: '/abstract-bg/ab6.jpg', alt: 'White waves pattern' },
   ];
 
   return (

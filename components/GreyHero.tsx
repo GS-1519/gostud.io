@@ -17,18 +17,18 @@ const GreyHero = () => {
   ];
 
   const backgrounds = [
-    { id: 1, src: '/white-backgrounds/texture-1.jpg', alt: 'White texture background' },
-    { id: 2, src: '/white-backgrounds/texture-2.jpg', alt: 'Broken white surface' },
-    { id: 3, src: '/white-backgrounds/texture-3.jpg', alt: 'White wall texture' },
-    { id: 4, src: '/white-backgrounds/brick-wall.jpg', alt: 'White brick wall' },
-    { id: 5, src: '/white-backgrounds/gradient.jpg', alt: 'White gradient' },
-    { id: 6, src: '/white-backgrounds/plaster.jpg', alt: 'White plaster texture' },
-    { id: 7, src: '/white-backgrounds/wooden-floor.jpg', alt: 'White room with wooden floor' },
-    { id: 8, src: '/white-backgrounds/stucco.jpg', alt: 'White stucco texture' },
-    { id: 9, src: '/white-backgrounds/fabric.jpg', alt: 'White fabric texture' },
-    { id: 10, src: '/white-backgrounds/waves.jpg', alt: 'White waves pattern' },
-    { id: 11, src: '/white-backgrounds/waves.jpg', alt: 'White waves pattern' },
-    { id: 12, src: '/white-backgrounds/waves.jpg', alt: 'White waves pattern' },
+    { id: 1, src: '/grey-bg/grey1.jpg', alt: 'White texture background' },
+    { id: 2, src: '/grey-bg/grey2.jpg', alt: 'Broken white surface' },
+    { id: 3, src: '/grey-bg/grey3.jpg', alt: 'White wall texture' },
+    { id: 4, src: '/grey-bg/grey4.jpg', alt: 'White brick wall' },
+    { id: 5, src: '/grey-bg/grey5.jpg', alt: 'White gradient' },
+    { id: 6, src: '/grey-bg/grey6.jpg', alt: 'White plaster texture' },
+    { id: 7, src: '/grey-bg/grey7.jpg', alt: 'White room with wooden floor' },
+    { id: 8, src: '/grey-bg/grey8.jpg', alt: 'White stucco texture' },
+    { id: 9, src: '/grey-bg/grey9.jpg', alt: 'White fabric texture' },
+    { id: 10, src: '/grey-bg/grey10.jpg', alt: 'White waves pattern' },
+    { id: 11, src: '/grey-bg/grey11.jpg', alt: 'White waves pattern' },
+    { id: 12, src: '/grey-bg/grey10.jpg', alt: 'White waves pattern' },
     
   ];
 

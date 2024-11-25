@@ -5,38 +5,48 @@ const backgrounds = [
   {
     title: 'Black Background',
     image: '/backgrounds/black.png',
-    href: '/tools/black-background'
+    href: '/free-tools/background-library/black-background'
   },
   {
     title: 'Red Background',
     image: '/backgrounds/red.png',
-    href: '/tools/red-background'
+    href: '/free-tools/background-library/red-background'
   },
   {
     title: 'Halloween Background',
     image: '/backgrounds/hallo.png',
-    href: '/tools/halloween-background'
+    href: '/free-tools/background-library/halloween-background'
   },
   {
     title: 'Christmas Background',
     image: '/backgrounds/xmax.png',
-    href: '/tools/christmas-background'
+    href: '/free-tools/background-library/christmas-background'
   },
   {
     title: 'White Background',
     image: '/backgrounds/white.png',
-    href: '/tools/white-background'
+    href: '/free-tools/background-library/white-background'
   },
   {
     title: 'Abstract Background',
     image: '/backgrounds/multy.png',
-    href: '/tools/abstract-background'
+    href: '/free-tools/background-library/abstract-background'
   },
   {
     title: 'Grey Background',
     image: '/backgrounds/grey.png',
-    href: '/tools/grey-background'
+    href: '/free-tools/background-library/grey-background'
   }
+];
+
+const categories = [
+  { name: 'Black', path: '/free-tools/background-library/black-background' },
+  { name: 'Grey', path: '/free-tools/background-library/grey-background' },
+  { name: 'White', path: '/free-tools/background-library/white-background' },
+  { name: 'Red', path: '/free-tools/background-library/red-background' },
+  { name: 'Abstract', path: '/free-tools/background-library/abstract-background' },
+  { name: 'Halloween', path: '/free-tools/background-library/halloween-background' },
+  { name: 'Christmas', path: '/free-tools/background-library/christmas-background' }
 ];
 
 export default function LibraryHero() {
@@ -59,12 +69,12 @@ export default function LibraryHero() {
             <div className="flex gap-[14px]">
               {/* First Column */}
               <div className="space-y-[14px]">
-                <Link href="/tools/black-background" className="block">
+                <Link href="/free-tools/background-library/black-background" className="block">
                   <div className="w-[254px] h-[255px] bg-gray-200 rounded-[12px] overflow-hidden relative cursor-pointer hover:opacity-90 transition-opacity">
                     <Image src="/backgrounds/black.png" alt="Black Background" fill className="object-cover" />
                   </div>
                 </Link>
-                <Link href="/tools/white-background" className="block">
+                <Link href="/free-tools/background-library/white-background" className="block">
                   <div className="w-[254px] h-[380px] bg-gray-200 rounded-[12px] overflow-hidden relative cursor-pointer hover:opacity-90 transition-opacity">
                     <Image src="/backgrounds/white.png" alt="White Background" fill className="object-cover" />
                   </div>
@@ -73,12 +83,12 @@ export default function LibraryHero() {
 
               {/* Second Column */}
               <div className="space-y-[14px]">
-                <Link href="/tools/red-background" className="block">
+                <Link href="/free-tools/background-library/red-background" className="block">
                   <div className="w-[254.06px] h-[380px] bg-gray-200 rounded-[12px] overflow-hidden relative cursor-pointer hover:opacity-90 transition-opacity">
                     <Image src="/backgrounds/red.png" alt="Red Background" fill className="object-cover" />
                   </div>
                 </Link>
-                <Link href="/tools/abstract-background" className="block">
+                <Link href="/free-tools/background-library/abstract-background" className="block">
                   <div className="w-[254.06px] h-[255px] bg-gray-200 rounded-[12px] overflow-hidden relative cursor-pointer hover:opacity-90 transition-opacity">
                     <Image src="/backgrounds/multy.png" alt="Abstract Background" fill className="object-cover" />
                   </div>
@@ -87,12 +97,12 @@ export default function LibraryHero() {
 
               {/* Third Column */}
               <div className="space-y-[14px]">
-                <Link href="/tools/halloween-background" className="block">
+                <Link href="/free-tools/background-library/halloween-background" className="block">
                   <div className="w-[254px] h-[255px] bg-gray-200 rounded-[12px] overflow-hidden relative cursor-pointer hover:opacity-90 transition-opacity">
                     <Image src="/backgrounds/hallo.png" alt="Halloween Background" fill className="object-cover" />
                   </div>
                 </Link>
-                <Link href="/tools/grey-background" className="block">
+                <Link href="/free-tools/background-library/grey-background" className="block">
                   <div className="w-[254px] h-[380px] bg-gray-200 rounded-[12px] overflow-hidden relative cursor-pointer hover:opacity-90 transition-opacity">
                     <Image src="/backgrounds/grey.png" alt="Grey Background" fill className="object-cover" />
                   </div>
@@ -101,7 +111,7 @@ export default function LibraryHero() {
 
               {/* Fourth Column */}
               <div className="space-y-[14px]">
-                <Link href="/tools/christmas-background" className="block">
+                <Link href="/free-tools/background-library/christmas-background" className="block">
                   <div className="w-[254px] h-[380px] bg-gray-200 rounded-[12px] overflow-hidden relative cursor-pointer hover:opacity-90 transition-opacity">
                     <Image src="/backgrounds/xmax.png" alt="Christmas Background" fill className="object-cover" />
                   </div>

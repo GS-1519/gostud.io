@@ -16,21 +16,22 @@ const WhiteHero = () => {
   ];
 
   const backgrounds = [
-    { id: 1, src: '/white-backgrounds/texture-1.jpg', alt: 'White texture background' },
-    { id: 2, src: '/white-backgrounds/texture-2.jpg', alt: 'Broken white surface' },
-    { id: 3, src: '/white-backgrounds/texture-3.jpg', alt: 'White wall texture' },
-    { id: 4, src: '/white-backgrounds/brick-wall.jpg', alt: 'White brick wall' },
-    { id: 5, src: '/white-backgrounds/gradient.jpg', alt: 'White gradient' },
-    { id: 6, src: '/white-backgrounds/plaster.jpg', alt: 'White plaster texture' },
-    { id: 7, src: '/white-backgrounds/wooden-floor.jpg', alt: 'White room with wooden floor' },
-    { id: 8, src: '/white-backgrounds/stucco.jpg', alt: 'White stucco texture' },
-    { id: 9, src: '/white-backgrounds/fabric.jpg', alt: 'White fabric texture' },
-    { id: 10, src: '/white-backgrounds/waves.jpg', alt: 'White waves pattern' },
-    { id: 11, src: '/white-backgrounds/rough.jpg', alt: 'Rough white surface' },
-    { id: 12, src: '/white-backgrounds/paper.jpg', alt: 'White paper texture' },
-    { id: 13, src: '/white-backgrounds/silk.jpg', alt: 'White silk texture' },
-    { id: 14, src: '/white-backgrounds/curves.jpg', alt: 'White curved pattern' },
-    { id: 15, src: '/white-backgrounds/geometric.jpg', alt: 'White geometric pattern' },
+    { id: 1, src: '/white-back/white1.jpg', alt: 'White texture background' },
+    { id: 2, src: '/white-back/white2.jpg', alt: 'Broken white surface' },
+    { id: 3, src: '/white-back/white3.jpg', alt: 'White wall texture' },
+    { id: 4, src: '/white-back/white4.jpg', alt: 'White brick wall' },
+    { id: 5, src: '/white-back/white5.jpg', alt: 'White gradient' },
+    { id: 6, src: '/white-back/white6.jpg', alt: 'White plaster texture' },
+    { id: 7, src: '/white-back/white7.jpg', alt: 'White room with wooden floor' },
+    { id: 8, src: '/white-back/white8.jpg', alt: 'White stucco texture' },
+    { id: 9, src: '/white-back/white9.jpg', alt: 'White fabric texture' },
+    { id: 10, src: '/white-back/white10.jpg', alt: 'White waves pattern' },
+    { id: 11, src: '/white-back/white11.jpg', alt: 'Rough white surface' },
+    { id: 12, src: '/white-back/white12.jpg', alt: 'White paper texture' },
+    { id: 13, src: '/white-back/white13.jpg', alt: 'White silk texture' },
+    { id: 14, src: '/white-back/white14.jpg', alt: 'White curved pattern' },
+    { id: 15, src: '/white-back/white15.jpg', alt: 'White geometric pattern' },
+    
   ];
 
   return (
