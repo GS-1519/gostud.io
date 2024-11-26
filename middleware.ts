@@ -1,15 +1,22 @@
 // middleware.ts
 import { createMiddlewareClient } from '@supabase/auth-helpers-nextjs';
-import { NextResponse } from 'next/server';
-import type { NextRequest } from 'next/server';
+import { NextResponse, NextRequest } from 'next/server';
 
 const PUBLIC_ROUTES = ['/', '/login', '/auth', '/api/public'];
 const AUTH_ROUTES = ['/overview', '/summary', '/get-credits'];
 
 export async function middleware(request: NextRequest) {
-  if (!request.headers.get('host')?.startsWith('www.')) {
+  const host = request.headers.get('host') || '';
+  
+  // Skip redirect for localhost or IP addresses
+  if (host.includes('localhost') || host.includes('[::1]')) {
+    return NextResponse.next();
+  }
+
+  // Only redirect if it's not a www domain
+  if (!host.startsWith('www.')) {
     return NextResponse.redirect(
-      `https://www.${request.headers.get('host')}${request.nextUrl.pathname}${request.nextUrl.search}`,
+      `https://www.${host}${request.nextUrl.pathname}${request.nextUrl.search}`,
       301
     );
   }

@@ -9,6 +9,7 @@ import { CSPostHogProvider } from './providers'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import ClarityScript from "@/components/ClarityScript";
 import GoogleTagManager from "@/components/GoogleTagManager";
+import 'react-tabs/style/react-tabs.css';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://gostudio.ai'),
