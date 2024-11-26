@@ -27,6 +27,11 @@ const BlackHero = () => {
     { id: 8, src: '/black-bg/black8.jpg', alt: 'Black stucco texture' },
     { id: 9, src: '/black-bg/black9.jpg', alt: 'Black fabric texture' },
     { id: 10, src: '/black-bg/black10.jpg', alt: 'Black waves pattern' },
+    { id: 3, src: '/black-bg/black3.jpg', alt: 'Black wall texture' },
+    { id: 4, src: '/black-bg/black4.jpg', alt: 'Black brick wall' },
+    { id: 5, src: '/black-bg/black5.jpg', alt: 'Black gradient' },
+    { id: 6, src: '/black-bg/black6.jpg', alt: 'Black plaster texture' },
+    { id: 7, src: '/black-bg/black7.jpg', alt: 'Black room with wooden floor' },
     
   ];
 

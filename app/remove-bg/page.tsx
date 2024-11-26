@@ -1,5 +1,6 @@
 import BackgroundHero from "@/components/BackgroundHero"
 import BackgroundRemove from "@/components/BackgroundRemove"
+import BackgroundRemoverNode from "@/components/BackgroundRemoverNode"
 
 
 
@@ -14,6 +15,7 @@ export default function Home() {
             <div>
                 <BackgroundHero/>
                 <BackgroundRemove/>
+                
             </div>
         </main>
     )

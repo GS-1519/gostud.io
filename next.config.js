@@ -23,7 +23,25 @@ const nextConfig = {
         permanent: true,
       }
     ]
-  }
+  },
+  webpack: (config, { isServer }) => {
+    // Add node-loader for .node files
+    config.module.rules.push({
+      test: /\.node$/,
+      use: 'node-loader',
+      type: 'javascript/auto',
+    });
+
+    // Handle binary files
+    config.resolve.fallback = {
+      ...config.resolve.fallback,
+      fs: false,
+      path: false,
+      crypto: false,
+    };
+
+    return config;
+  },
 }
 
 module.exports = nextConfig
