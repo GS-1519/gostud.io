@@ -18,6 +18,7 @@ import BlackHero from "@/components/BlackHero";
 import RedHero from "@/components/RedHero";
 import ChristmasHero from "@/components/ChristmasHero";
 import HalloweenHero from "@/components/HalloweenHero";
+import HalloColor from "@/components/HalloColor";
 
 export const dynamic = "force-dynamic";
 
@@ -49,7 +50,7 @@ export default async function DoctorPhotos() {
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-[82px]">
         <div className="w-full max-w-[1276px] mx-auto space-y-12">
           <div id="ai-headshots">
-            <HalloweenHero/>
+            <HalloColor/>
           </div>
           <div id="ai-headshots">
             <FreeCard backgroundImage="/Background14.png" />

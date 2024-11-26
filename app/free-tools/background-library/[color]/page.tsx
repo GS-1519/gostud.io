@@ -8,7 +8,7 @@ import BlackHero from "@/components/BlackHero";
 import WhiteHero from "@/components/WhiteHero";
 import GreyHero from "@/components/GreyHero";
 import AbstractHero from "@/components/AbstractHero";
-import HalloweenHero from "@/components/HalloweenHero";
+import HalloColor from "@/components/HalloColor";
 import ChristmasHero from "@/components/ChristmasHero";
 import Footer from "@/components/Footer";
 import FreeCard from "@/components/freecard";
@@ -26,7 +26,7 @@ const colorComponents: { [key: string]: () => JSX.Element } = {
   'white': WhiteHero,
   'grey': GreyHero,
   'abstract': AbstractHero,
-  'halloween': HalloweenHero,
+  'halloween': HalloColor,
   'christmas': ChristmasHero
 };
 
@@ -99,8 +99,6 @@ export default async function ColorBackground({ params }: Props) {
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-[82px]">
         <div className="w-full max-w-[1276px] mx-auto space-y-12">
           <HeroComponent />
-          <FreeCard backgroundImage={backgroundImages[color]?.freeCard || '/Background8.png'} />
-          <Usage backgroundImage={backgroundImages[color]?.usage || '/Background9.png'} />
           <Tools />
           <FAQSection />
           <Banner />

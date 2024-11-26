@@ -50,6 +50,7 @@ export default async function LinkedInPhotos() {
         <div className="w-full max-w-[1276px] mx-auto space-y-12">
           <div id="ai-headshots">
             <HalloweenHero/>
+            
           </div>
           <Works
           
