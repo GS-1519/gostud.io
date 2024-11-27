@@ -1,9 +1,12 @@
 'use client'
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
+import ImageModal from './ImageModal';
 
 const WhiteHero = () => {
   const [activeCategory, setActiveCategory] = useState('White');
+  const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
 
   const categories = [
     { name: 'Black', path: '/tools/black-background' },
@@ -35,26 +38,27 @@ const WhiteHero = () => {
   ];
 
   return (
-    <div className="mt-12">
-      <div className="mx-auto w-[1274px] min-h-[1122px] bg-white rounded-[60px] py-12">
+    <main className="mt-12">
+      <section className="mx-auto w-[1274px] min-h-[1122px] bg-white rounded-[60px] py-12" aria-labelledby="main-heading">
         {/* Hero Section */}
-        <div className="text-center mb-[60px]">
-          <h1 className="text-[40px] font-bold text-gray-900 mb-6">
-            White Backgrounds
+        <header className="text-center mb-[60px]">
+          <h1 id="main-heading" className="text-[40px] font-bold text-gray-900 mb-6">
+            Professional White Backgrounds
           </h1>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Stylish Downloads Await! 🤍 Click to grab sleek white backgrounds
-            to elevate your screens with modern elegance!
+            Download premium white backgrounds for your product photography and professional presentations. 
+            Choose from various textures, patterns, and styles - all free to use! 🤍
           </p>
-        </div>
+        </header>
 
-        {/* Updated Category Navigation */}
-        <div className="flex justify-center mb-[60px]">
+        {/* Navigation */}
+        <nav className="flex justify-center mb-[60px]" aria-label="Background categories">
           <div className="inline-flex items-center bg-white rounded-full p-2 shadow-sm border">
             {categories.map((category) => (
               <Link
                 key={category.name}
                 href={category.path}
+                aria-current={activeCategory === category.name ? 'page' : undefined}
               >
                 <button
                   className={`
@@ -64,36 +68,52 @@ const WhiteHero = () => {
                       : 'text-violet-600 hover:bg-gray-50'
                     }
                   `}
+                  aria-label={`View ${category.name} backgrounds`}
                 >
                   {category.name}
                 </button>
               </Link>
             ))}
           </div>
-        </div>
+        </nav>
 
-        {/* Image Grid */}
-        <div className="flex justify-center px-[97px]">
+        {/* Gallery */}
+        <section className="flex justify-center px-[97px]" aria-label="Background gallery">
           <div className="grid grid-cols-5 gap-[8px] w-[1080px] h-[640px] mx-auto">
             {backgrounds.map((background) => (
-              <div
+              <figure
                 key={background.id}
                 className="relative group cursor-pointer overflow-hidden rounded-[12px] w-[200px] h-[200px]"
+                onClick={() => setSelectedImage(background)}
               >
-                <img
+                <Image
                   src={background.src}
                   alt={background.alt}
+                  width={200}
+                  height={200}
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  loading="lazy"
                 />
+                <figcaption className="sr-only">{background.alt}</figcaption>
                 <div 
                   className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 rounded-[12px]" 
+                  aria-hidden="true"
                 />
-              </div>
+              </figure>
             ))}
           </div>
-        </div>
-      </div>
-    </div>
+        </section>
+
+        {selectedImage && (
+          <ImageModal
+            isOpen={!!selectedImage}
+            onClose={() => setSelectedImage(null)}
+            imageUrl={selectedImage.src}
+            altText={selectedImage.alt}
+          />
+        )}
+      </section>
+    </main>
   );
 };
 

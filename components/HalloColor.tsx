@@ -1,10 +1,12 @@
 'use client'
 import Link from 'next/link';
 import { useState } from 'react';
+import ImageModal from './ImageModal';
 
 const HalloColor = () => {
   const [activeCategory, setActiveCategory] = useState('Halloween');
   const [showAll, setShowAll] = useState(false);
+  const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
 
   const categories = [
     { name: 'Black', path: '/free-tools/background-library/black-background' },
@@ -82,19 +84,22 @@ const HalloColor = () => {
         <div className="flex flex-col items-center px-[97px]">
           <div className="grid grid-cols-5 gap-[8px] w-[1080px] mx-auto">
             {visibleBackgrounds.map((background) => (
-              <div
+              <figure
                 key={background.id}
                 className="relative group cursor-pointer overflow-hidden rounded-[12px] w-[200px] h-[200px]"
+                onClick={() => setSelectedImage(background)}
               >
                 <img
                   src={background.src}
                   alt={background.alt}
                   className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                 />
+                <figcaption className="sr-only">{background.alt}</figcaption>
                 <div 
                   className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 rounded-[12px]" 
+                  aria-hidden="true"
                 />
-              </div>
+              </figure>
             ))}
           </div>
           
@@ -109,6 +114,16 @@ const HalloColor = () => {
           )}
         </div>
       </div>
+
+      {/* Add modal */}
+      {selectedImage && (
+        <ImageModal
+          isOpen={!!selectedImage}
+          onClose={() => setSelectedImage(null)}
+          imageUrl={selectedImage.src}
+          altText={selectedImage.alt}
+        />
+      )}
     </div>
   );
 };
