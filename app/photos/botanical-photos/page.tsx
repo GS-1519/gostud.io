@@ -16,14 +16,22 @@ import BotanicalHero from "@/components/BotanicalHero";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: 'AI Product Photography Studio | Professional Product Photos in Minutes',
-  description: 'Transform your product photography with AI. Get studio-quality product photos instantly. Professional results at a fraction of the cost of traditional photo studios.',
-  keywords: 'AI product photography, product photo studio, professional product photos, AI photo studio, e-commerce photography',
+  title: 'Botanical Portrait Photography | Nature-Inspired Professional Photos',
+  description: 'Create elegant portraits with botanical and natural elements using AI photography. Perfect for organic, natural-looking professional photos.',
+  keywords: 'botanical photography, nature portraits, garden photos, floral photography, natural headshots, organic portraits',
   openGraph: {
-    title: 'AI Product Photography Studio | Professional Product Photos in Minutes',
-    description: 'Transform your product photography with AI. Get studio-quality product photos instantly.',
+    title: 'Botanical Portrait Photography | Nature-Inspired Professional Photos',
+    description: 'Create elegant botanical portraits with our AI photography studio',
     type: 'website',
-    images: ['/og.png'],
+    images: [{
+      url: '/og/botanical-photos.jpg',
+      width: 1200,
+      height: 630,
+      alt: 'Botanical Portrait Photography'
+    }],
+  },
+  alternates: {
+    canonical: 'https://www.gostudio.ai/photos/botanical-photos'
   }
 }
 

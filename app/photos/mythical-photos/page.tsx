@@ -28,14 +28,22 @@ import MythHero from "@/components/MythHero";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: 'AI Product Photography Studio | Professional Product Photos in Minutes',
-  description: 'Transform your product photography with AI. Get studio-quality product photos instantly. Professional results at a fraction of the cost of traditional photo studios.',
-  keywords: 'AI product photography, product photo studio, professional product photos, AI photo studio, e-commerce photography',
+  title: 'Fantasy & Mythical Portrait Photography | Creative Character Photos',
+  description: 'Create enchanting fantasy and mythical portraits with AI photography. Perfect for character portraits, cosplay, and creative storytelling.',
+  keywords: 'fantasy photography, mythical portraits, character photos, cosplay photography, creative portraits, fantasy headshots',
   openGraph: {
-    title: 'AI Product Photography Studio | Professional Product Photos in Minutes',
-    description: 'Transform your product photography with AI. Get studio-quality product photos instantly.',
+    title: 'Fantasy & Mythical Portrait Photography | Creative Character Photos',
+    description: 'Create enchanting fantasy portraits with our AI photography studio',
     type: 'website',
-    images: ['/og.png'],
+    images: [{
+      url: '/og/mythical-photos.jpg',
+      width: 1200,
+      height: 630,
+      alt: 'Fantasy Portrait Photography'
+    }],
+  },
+  alternates: {
+    canonical: 'https://www.gostudio.ai/photos/mythical-photos'
   }
 }
 

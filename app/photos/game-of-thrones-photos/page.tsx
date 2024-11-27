@@ -11,33 +11,28 @@ import DataSecuritySection from "@/components/container";
 import FAQSection from "@/components/Question";
 import Footer from "@/components/Footer";
 import Banner from "@/components/Banner";
-import DoctorHero from "@/components/DoctorHero";
-import JcrewHero from "@/components/JcrewHero";
-import HealthHero from "@/components/HealthHero";
-import LinkedlnHero from "@/components/LinkedlnHero";
-import TattoHero from "@/components/TattoHero";
-import CarpetHero from "@/components/CarpetHero";
-import BirthdayHero from "@/components/BirthdayHero";
-import GlamourHero from "@/components/GlamourHero";
-import BarbieHero from "@/components/BarbieHero";
-import AnnieHero from "@/components/AnnieHero";
-import NewtonHero from "@/components/NewtonHero";
-import VikingsHero from "@/components/VikingsHero";
-import MythHero from "@/components/MythHero";
-import ArtisticHero from "@/components/ArtisticHero";
+
 import GamesHero from "@/components/GamesHero";
 
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: 'AI Product Photography Studio | Professional Product Photos in Minutes',
-  description: 'Transform your product photography with AI. Get studio-quality product photos instantly. Professional results at a fraction of the cost of traditional photo studios.',
-  keywords: 'AI product photography, product photo studio, professional product photos, AI photo studio, e-commerce photography',
+  title: 'Game of Thrones Style Portrait Photography | Fantasy Photos',
+  description: 'Create epic Game of Thrones inspired portraits with AI photography. Perfect for fantasy themes, character portraits, and dramatic photos.',
+  keywords: 'game of thrones style, fantasy portraits, medieval photos, character photography, dramatic portraits, themed photography',
   openGraph: {
-    title: 'AI Product Photography Studio | Professional Product Photos in Minutes',
-    description: 'Transform your product photography with AI. Get studio-quality product photos instantly.',
+    title: 'Game of Thrones Style Portrait Photography | Fantasy Photos',
+    description: 'Create epic Game of Thrones inspired portraits with our AI studio',
     type: 'website',
-    images: ['/og.png'],
+    images: [{
+      url: '/og/got-photos.jpg',
+      width: 1200,
+      height: 630,
+      alt: 'Game of Thrones Style Photography'
+    }],
+  },
+  alternates: {
+    canonical: 'https://www.gostudio.ai/photos/game-of-thrones-photos'
   }
 }
 

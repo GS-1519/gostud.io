@@ -19,7 +19,7 @@ const RedHero = () => {
   ];
 
   const backgrounds = [
-    { id: 1, src: '/red-bg/red1.jpg', alt: 'White texture background' },
+    { id: 1, src: '/red-bg/red18.jpg', alt: 'White texture background' },
     { id: 2, src: '/red-bg/red2.jpg', alt: 'Broken white surface' },
     { id: 3, src: '/red-bg/red3.jpg', alt: 'White wall texture' },
     { id: 4, src: '/red-bg/red4.jpg', alt: 'White brick wall' },

@@ -17,14 +17,22 @@ import JcrewHero from "@/components/JcrewHero";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: 'AI Product Photography Studio | Professional Product Photos in Minutes',
-  description: 'Transform your product photography with AI. Get studio-quality product photos instantly. Professional results at a fraction of the cost of traditional photo studios.',
-  keywords: 'AI product photography, product photo studio, professional product photos, AI photo studio, e-commerce photography',
+  title: 'J.Crew Style Portrait Photography | Classic Fashion Photos',
+  description: 'Create timeless portraits with J.Crew-inspired styling using AI photography. Perfect for professional, preppy, and classic fashion looks.',
+  keywords: 'J.Crew style photos, preppy portraits, classic photography, fashion headshots, professional portraits, lifestyle photos',
   openGraph: {
-    title: 'AI Product Photography Studio | Professional Product Photos in Minutes',
-    description: 'Transform your product photography with AI. Get studio-quality product photos instantly.',
+    title: 'J.Crew Style Portrait Photography | Classic Fashion Photos',
+    description: 'Create timeless J.Crew-inspired portraits with our AI photography studio',
     type: 'website',
-    images: ['/og.png'],
+    images: [{
+      url: '/og/jcrew-style-photos.jpg',
+      width: 1200,
+      height: 630,
+      alt: 'J.Crew Style Photography'
+    }],
+  },
+  alternates: {
+    canonical: 'https://www.gostudio.ai/photos/jcrew-photos'
   }
 }
 

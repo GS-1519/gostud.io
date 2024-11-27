@@ -18,14 +18,22 @@ import SpeakerHero from "@/components/SpeakerHero";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: 'AI Product Photography Studio | Professional Product Photos in Minutes',
-  description: 'Transform your product photography with AI. Get studio-quality product photos instantly. Professional results at a fraction of the cost of traditional photo studios.',
-  keywords: 'AI product photography, product photo studio, professional product photos, AI photo studio, e-commerce photography',
+  title: 'Professional Speaker Photography | Public Speaking Portraits',
+  description: 'Create impactful speaker portraits with AI photography. Perfect for keynote speakers, presenters, and public speaking professionals.',
+  keywords: 'speaker photos, public speaking portraits, keynote speaker photography, professional headshots, presentation photos, speaker headshots',
   openGraph: {
-    title: 'AI Product Photography Studio | Professional Product Photos in Minutes',
-    description: 'Transform your product photography with AI. Get studio-quality product photos instantly.',
+    title: 'Professional Speaker Photography | Public Speaking Portraits',
+    description: 'Create impactful speaker portraits with our AI photography studio',
     type: 'website',
-    images: ['/og.png'],
+    images: [{
+      url: '/og/speaker-photos.jpg',
+      width: 1200,
+      height: 630,
+      alt: 'Professional Speaker Photography'
+    }],
+  },
+  alternates: {
+    canonical: 'https://www.gostudio.ai/photos/speaker-photos'
   }
 }
 

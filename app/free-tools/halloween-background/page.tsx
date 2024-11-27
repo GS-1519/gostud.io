@@ -2,35 +2,39 @@ import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import type { Metadata } from 'next'
-
-import ReviewSection from "@/components/HeadshotReviewSection";
-import PricingSection from "@/components/PricingSection";
-import DataSecuritySection from "@/components/container";
 import FAQSection from "@/components/Question";
 import Footer from "@/components/Footer";
 import Banner from "@/components/Banner";
-import LibraryHero from "@/components/LibraryHero";
 import Tools from "@/components/Tools";
-import WhiteHero from "@/components/WhiteHero";
 import FreeCard from "@/components/freecard";
 import Usage from "@/components/Usage";
-import BlackHero from "@/components/BlackHero";
-import RedHero from "@/components/RedHero";
-import ChristmasHero from "@/components/ChristmasHero";
-import HalloweenHero from "@/components/HalloweenHero";
+
 import HalloColor from "@/components/HalloColor";
 
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: 'AI Product Photography Studio | Professional Product Photos in Minutes',
-  description: 'Transform your product photography with AI. Get studio-quality product photos instantly.',
-  keywords: 'AI product photography, product photo studio, professional product photos, AI photo studio, e-commerce photography',
+  title: 'Free Halloween Background Generator | Spooky Photography Backgrounds',
+  description: 'Create spooky Halloween backgrounds for seasonal photography. Download high-quality Halloween-themed backgrounds and patterns.',
+  keywords: 'halloween background, spooky background, halloween photography, seasonal background, holiday photos',
   openGraph: {
-    title: 'AI Product Photography Studio | Professional Product Photos in Minutes',
-    description: 'Transform your product photography with AI. Get studio-quality product photos instantly.',
-    type: 'website',
-    images: ['/og.png'],
+    title: 'Free Halloween Background Generator',
+    description: 'Create spooky Halloween backgrounds for seasonal photography',
+    images: [{
+      url: '/og/halloween-background.jpg',
+      width: 1200,
+      height: 630,
+      alt: 'Halloween Background Generator'
+    }]
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Free Halloween Background Generator',
+    description: 'Create spooky Halloween backgrounds for seasonal photography',
+    images: ['/og/halloween-background.jpg']
+  },
+  alternates: {
+    canonical: '/free-tools/halloween-background'
   }
 }
 

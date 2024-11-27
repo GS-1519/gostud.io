@@ -68,11 +68,30 @@ interface Props {
   }
 }
 
-export function generateMetadata({ params }: Props): Metadata {
-  const colorName = params.color.split('-')[0];
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const color = params.color.replace('-background', '')
+  const capitalizedColor = color.charAt(0).toUpperCase() + color.slice(1)
+
   return {
-    title: `${colorName.charAt(0).toUpperCase() + colorName.slice(1)} Background | AI Product Photography Studio`,
-    description: `Download free ${colorName} backgrounds for your product photography.`,
+    title: `Free ${capitalizedColor} Background Generator | Professional Backgrounds`,
+    description: `Create perfect ${color} backgrounds for your photography. Generate professional ${color} backgrounds instantly.`,
+    keywords: `${color} background, ${color} photography background, professional background, AI background tool`,
+    openGraph: {
+      title: `Free ${capitalizedColor} Background Generator`,
+      description: `Create perfect ${color} backgrounds for your photography`,
+      images: [{
+        url: `/og/${color}-background.jpg`,
+        width: 1200,
+        height: 630,
+        alt: `${capitalizedColor} Background Generator`
+      }]
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `Free ${capitalizedColor} Background Generator`,
+      description: `Create perfect ${color} backgrounds for your photography`,
+      images: [`/og/${color}-background.jpg`]
+    }
   }
 }
 

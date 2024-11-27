@@ -20,14 +20,22 @@ import DateHero from "@/components/DateHero";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: 'AI Product Photography Studio | Professional Product Photos in Minutes',
-  description: 'Transform your product photography with AI. Get studio-quality product photos instantly. Professional results at a fraction of the cost of traditional photo studios.',
-  keywords: 'AI product photography, product photo studio, professional product photos, AI photo studio, e-commerce photography',
+  title: 'Professional Date Night Photography | Romantic Portrait Sessions',
+  description: 'Create perfect date night portraits with AI photography. Capture romantic, natural moments for couples and special occasions.',
+  keywords: 'date night photos, couple photography, romantic portraits, relationship photos, special occasion pictures, couples photoshoot',
   openGraph: {
-    title: 'AI Product Photography Studio | Professional Product Photos in Minutes',
-    description: 'Transform your product photography with AI. Get studio-quality product photos instantly.',
+    title: 'Professional Date Night Photography | Romantic Portrait Sessions',
+    description: 'Create perfect date night portraits with our AI photography studio',
     type: 'website',
-    images: ['/og.png'],
+    images: [{
+      url: '/og/date-night-photos.jpg',
+      width: 1200,
+      height: 630,
+      alt: 'Date Night Photography'
+    }],
+  },
+  alternates: {
+    canonical: 'https://www.gostudio.ai/photos/date-photos'
   }
 }
 

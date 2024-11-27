@@ -15,14 +15,22 @@ import Banner from "@/components/Banner";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: 'AI Product Photography Studio | Professional Product Photos in Minutes',
-  description: 'Transform your product photography with AI. Get studio-quality product photos instantly. Professional results at a fraction of the cost of traditional photo studios.',
-  keywords: 'AI product photography, product photo studio, professional product photos, AI photo studio, e-commerce photography',
+  title: 'Professional Dating Profile Photography | Natural Portrait Sessions',
+  description: 'Create authentic dating profile photos with AI photography. Perfect for dating apps, online profiles, and natural professional portraits.',
+  keywords: 'dating profile photos, online dating photography, profile pictures, natural portraits, dating app photos, authentic headshots',
   openGraph: {
-    title: 'AI Product Photography Studio | Professional Product Photos in Minutes',
-    description: 'Transform your product photography with AI. Get studio-quality product photos instantly.',
+    title: 'Professional Dating Profile Photography | Natural Portrait Sessions',
+    description: 'Create authentic dating profile photos with our AI photography studio',
     type: 'website',
-    images: ['/og.png'],
+    images: [{
+      url: '/og/dating-photos.jpg',
+      width: 1200,
+      height: 630,
+      alt: 'Professional Dating Profile Photography'
+    }],
+  },
+  alternates: {
+    canonical: 'https://www.gostudio.ai/photos/dating-photos'
   }
 }
 

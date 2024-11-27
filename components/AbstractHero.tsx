@@ -18,20 +18,20 @@ const AbstractHero = () => {
   ];
 
   const backgrounds = [
-    { id: 1, src: '/abstract-bg/ab1.jpg', alt: 'White texture background' },
+    { id: 1, src: '/abstract-bg/ab6.jpg', alt: 'White texture background' },
     { id: 2, src: '/abstract-bg/ab2.jpg', alt: 'Broken white surface' },
     { id: 3, src: '/abstract-bg/ab3.jpg', alt: 'White wall texture' },
     { id: 4, src: '/abstract-bg/ab4.jpg', alt: 'White brick wall' },
     { id: 5, src: '/abstract-bg/ab5.jpg', alt: 'White gradient' },
     { id: 6, src: '/abstract-bg/ab6.jpg', alt: 'White plaster texture' },
-    { id: 7, src: '/abstract-bg/ab1.jpg', alt: 'White room with wooden floor' },
+    { id: 7, src: '/abstract-bg/ab3.jpg', alt: 'White room with wooden floor' },
     { id: 8, src: '/abstract-bg/ab2.jpg', alt: 'White stucco texture' },
     { id: 9, src: '/abstract-bg/ab3.jpg', alt: 'White fabric texture' },
     { id: 10, src: '/abstract-bg/ab6.jpg', alt: 'White waves pattern' },
     { id: 4, src: '/abstract-bg/ab4.jpg', alt: 'White brick wall' },
     { id: 5, src: '/abstract-bg/ab5.jpg', alt: 'White gradient' },
     { id: 6, src: '/abstract-bg/ab6.jpg', alt: 'White plaster texture' },
-    { id: 7, src: '/abstract-bg/ab1.jpg', alt: 'White room with wooden floor' },
+    { id: 7, src: '/abstract-bg/ab4.jpg', alt: 'White room with wooden floor' },
     { id: 8, src: '/abstract-bg/ab2.jpg', alt: 'White stucco texture' },
   ];
 

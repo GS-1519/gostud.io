@@ -21,14 +21,22 @@ import WednesdayHero from "@/components/WednesdayHero";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: 'AI Product Photography Studio | Professional Product Photos in Minutes',
-  description: 'Transform your product photography with AI. Get studio-quality product photos instantly. Professional results at a fraction of the cost of traditional photo studios.',
-  keywords: 'AI product photography, product photo studio, professional product photos, AI photo studio, e-commerce photography',
+  title: 'Wednesday Addams Style Portrait Photography | Gothic Photos',
+  description: 'Create mysterious and gothic portraits inspired by Wednesday Addams with AI photography. Perfect for dark aesthetic and character portraits.',
+  keywords: 'wednesday addams style, gothic portraits, dark photography, character photos, mysterious portraits, themed photography',
   openGraph: {
-    title: 'AI Product Photography Studio | Professional Product Photos in Minutes',
-    description: 'Transform your product photography with AI. Get studio-quality product photos instantly.',
+    title: 'Wednesday Addams Style Portrait Photography | Gothic Photos',
+    description: 'Create mysterious Wednesday Addams-inspired portraits with our AI studio',
     type: 'website',
-    images: ['/og.png'],
+    images: [{
+      url: '/og/wednesday-addams-photos.jpg',
+      width: 1200,
+      height: 630,
+      alt: 'Wednesday Addams Style Photography'
+    }],
+  },
+  alternates: {
+    canonical: 'https://www.gostudio.ai/photos/wednesday-addams-photos'
   }
 }
 

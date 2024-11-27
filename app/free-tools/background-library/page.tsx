@@ -12,13 +12,24 @@ import Tools from "@/components/Tools";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: 'AI Product Photography Studio | Professional Product Photos in Minutes',
-  description: 'Transform your product photography with AI. Get studio-quality product photos instantly.',
+  title: 'Free Background Library | Professional Photography Backgrounds',
+  description: 'Access our library of professional photography backgrounds. Choose from various colors and styles for perfect product photos.',
+  keywords: 'background library, photography backgrounds, product photography, photo backgrounds',
   openGraph: {
-    title: 'AI Product Photography Studio | Professional Product Photos in Minutes',
-    description: 'Transform your product photography with AI. Get studio-quality product photos instantly.',
-    type: 'website',
-    images: ['/og.png'],
+    title: 'Free Background Library | Professional Photography Backgrounds',
+    description: 'Access our library of professional photography backgrounds',
+    images: [{
+      url: '/og/background-library.jpg',
+      width: 1200,
+      height: 630,
+      alt: 'Background Library'
+    }]
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Free Background Library',
+    description: 'Access our library of professional photography backgrounds',
+    images: ['/og/background-library.jpg']
   }
 }
 

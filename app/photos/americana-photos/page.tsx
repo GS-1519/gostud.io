@@ -17,14 +17,22 @@ import AmericanaHero from "@/components/AmericanaHero";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: 'AI Product Photography Studio | Professional Product Photos in Minutes',
-  description: 'Transform your product photography with AI. Get studio-quality product photos instantly. Professional results at a fraction of the cost of traditional photo studios.',
-  keywords: 'AI product photography, product photo studio, professional product photos, AI photo studio, e-commerce photography',
+  title: 'Americana Style Portrait Photography | Classic American Photos',
+  description: 'Create authentic Americana-style portraits with AI photography. Capture the classic American spirit in professional, timeless photos.',
+  keywords: 'americana photography, american style photos, classic portraits, vintage americana, traditional headshots, patriotic photos',
   openGraph: {
-    title: 'AI Product Photography Studio | Professional Product Photos in Minutes',
-    description: 'Transform your product photography with AI. Get studio-quality product photos instantly.',
+    title: 'Americana Style Portrait Photography | Classic American Photos',
+    description: 'Create authentic Americana-style portraits with our AI photography studio',
     type: 'website',
-    images: ['/og.png'],
+    images: [{
+      url: '/og/americana-photos.jpg',
+      width: 1200,
+      height: 630,
+      alt: 'Americana Style Photography'
+    }],
+  },
+  alternates: {
+    canonical: 'https://www.gostudio.ai/photos/americana-photos'
   }
 }
 

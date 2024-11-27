@@ -19,14 +19,22 @@ import YoutubeHero from "@/components/YoutubeHero";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: 'AI Product Photography Studio | Professional Product Photos in Minutes',
-  description: 'Transform your product photography with AI. Get studio-quality product photos instantly. Professional results at a fraction of the cost of traditional photo studios.',
-  keywords: 'AI product photography, product photo studio, professional product photos, AI photo studio, e-commerce photography',
+  title: 'YouTube Thumbnail & Reaction Photos | Content Creator Photography',
+  description: 'Create engaging YouTube thumbnail and reaction photos with AI photography. Perfect for content creators, vloggers, and social media influencers.',
+  keywords: 'youtube thumbnails, reaction photos, content creator photography, vlogger photos, social media portraits, influencer photography',
   openGraph: {
-    title: 'AI Product Photography Studio | Professional Product Photos in Minutes',
-    description: 'Transform your product photography with AI. Get studio-quality product photos instantly.',
+    title: 'YouTube Thumbnail & Reaction Photos | Content Creator Photography',
+    description: 'Create engaging YouTube photos with our AI photography studio',
     type: 'website',
-    images: ['/og.png'],
+    images: [{
+      url: '/og/youtube-reaction-photos.jpg',
+      width: 1200,
+      height: 630,
+      alt: 'YouTube Content Creator Photography'
+    }],
+  },
+  alternates: {
+    canonical: 'https://www.gostudio.ai/photos/youtube-reaction-photos'
   }
 }
 

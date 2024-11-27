@@ -16,14 +16,22 @@ import DoctorHero from "@/components/DoctorHero";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: 'AI Product Photography Studio | Professional Product Photos in Minutes',
-  description: 'Transform your product photography with AI. Get studio-quality product photos instantly. Professional results at a fraction of the cost of traditional photo studios.',
-  keywords: 'AI product photography, product photo studio, professional product photos, AI photo studio, e-commerce photography',
+  title: 'Professional Medical Photography | Doctor Headshots',
+  description: 'Create professional medical portraits with AI photography. Perfect for healthcare professionals, doctors, and medical practices.',
+  keywords: 'doctor photos, medical headshots, healthcare photography, physician portraits, professional medical photos, hospital photography',
   openGraph: {
-    title: 'AI Product Photography Studio | Professional Product Photos in Minutes',
-    description: 'Transform your product photography with AI. Get studio-quality product photos instantly.',
+    title: 'Professional Medical Photography | Doctor Headshots',
+    description: 'Create professional medical portraits with our AI photography studio',
     type: 'website',
-    images: ['/og.png'],
+    images: [{
+      url: '/og/doctor-photos.jpg',
+      width: 1200,
+      height: 630,
+      alt: 'Professional Medical Photography'
+    }],
+  },
+  alternates: {
+    canonical: 'https://www.gostudio.ai/photos/doctor-photos'
   }
 }
 

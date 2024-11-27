@@ -14,20 +14,32 @@ import Banner from "@/components/Banner";
 import DoctorHero from "@/components/DoctorHero";
 import JcrewHero from "@/components/JcrewHero";
 import TypesHero from "@/components/TypesHero";
-
 export const dynamic = "force-dynamic";
 
+
 export const metadata: Metadata = {
-  title: 'AI Product Photography Studio | Professional Product Photos in Minutes',
-  description: 'Transform your product photography with AI. Get studio-quality product photos instantly. Professional results at a fraction of the cost of traditional photo studios.',
-  keywords: 'AI product photography, product photo studio, professional product photos, AI photo studio, e-commerce photography',
+  title: '[Style] Portrait Photography | Professional AI Photos',
+  description: 'Create stunning [style] portraits with AI photography. Perfect for [specific use case] and professional photos.',
+  keywords: '[style] photos, professional portraits, AI photography, [style] photography, custom portraits, professional headshots',
   openGraph: {
-    title: 'AI Product Photography Studio | Professional Product Photos in Minutes',
-    description: 'Transform your product photography with AI. Get studio-quality product photos instantly.',
+    title: '[Style] Portrait Photography | Professional AI Photos',
+    description: 'Create stunning [style] portraits with our AI photography studio',
     type: 'website',
-    images: ['/og.png'],
+    images: [{
+      url: '/og/[style]-photos.jpg',
+      width: 1200,
+      height: 630,
+      alt: '[Style] Portrait Photography'
+    }],
+  },
+  alternates: {
+    canonical: 'https://www.gostudio.ai/photos/[style]-photos'
   }
 }
+
+
+
+// Rest of your page component code...
 
 export default async function DoctorPhotos() {
   const supabase = createServerComponentClient({ cookies });

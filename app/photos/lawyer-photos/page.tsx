@@ -20,14 +20,22 @@ import LawyerHero from "@/components/LawyerHero";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: 'AI Product Photography Studio | Professional Product Photos in Minutes',
-  description: 'Transform your product photography with AI. Get studio-quality product photos instantly. Professional results at a fraction of the cost of traditional photo studios.',
-  keywords: 'AI product photography, product photo studio, professional product photos, AI photo studio, e-commerce photography',
+  title: 'Professional Attorney Headshots | Legal Professional Photography',
+  description: 'Create professional lawyer headshots that convey trust and expertise. AI-powered photos perfect for law firm websites, legal directories, and professional profiles.',
+  keywords: 'lawyer headshots, attorney photos, legal professional pictures, law firm photography, professional lawyer portraits',
   openGraph: {
-    title: 'AI Product Photography Studio | Professional Product Photos in Minutes',
-    description: 'Transform your product photography with AI. Get studio-quality product photos instantly.',
+    title: 'Professional Attorney Headshots | Legal Professional Photography',
+    description: 'Create professional lawyer headshots that convey trust and expertise',
     type: 'website',
-    images: ['/og.png'],
+    images: [{
+      url: '/og/lawyer-photos.jpg',
+      width: 1200,
+      height: 630,
+      alt: 'Professional Lawyer Headshots'
+    }],
+  },
+  alternates: {
+    canonical: 'https://www.gostudio.ai/photos/lawyer-photos'
   }
 }
 

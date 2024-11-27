@@ -21,14 +21,24 @@ import ChristmasHero from "@/components/ChristmasHero";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: 'AI Product Photography Studio | Professional Product Photos in Minutes',
-  description: 'Transform your product photography with AI. Get studio-quality product photos instantly.',
-  keywords: 'AI product photography, product photo studio, professional product photos, AI photo studio, e-commerce photography',
+  title: 'Free Christmas Background Generator | Holiday Photography Backgrounds',
+  description: 'Create festive Christmas backgrounds for holiday photography. Download high-quality Christmas-themed backgrounds and patterns.',
+  keywords: 'christmas background, holiday background, festive background, christmas photography, holiday photos',
   openGraph: {
-    title: 'AI Product Photography Studio | Professional Product Photos in Minutes',
-    description: 'Transform your product photography with AI. Get studio-quality product photos instantly.',
-    type: 'website',
-    images: ['/og.png'],
+    title: 'Free Christmas Background Generator',
+    description: 'Create festive Christmas backgrounds for holiday photography',
+    images: [{
+      url: '/og/christmas-background.jpg',
+      width: 1200,
+      height: 630,
+      alt: 'Christmas Background Generator'
+    }]
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Free Christmas Background Generator',
+    description: 'Create festive Christmas backgrounds for holiday photography',
+    images: ['/og/christmas-background.jpg']
   }
 }
 

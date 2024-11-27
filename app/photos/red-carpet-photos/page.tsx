@@ -21,14 +21,22 @@ import CarpetHero from "@/components/CarpetHero";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: 'AI Product Photography Studio | Professional Product Photos in Minutes',
-  description: 'Transform your product photography with AI. Get studio-quality product photos instantly. Professional results at a fraction of the cost of traditional photo studios.',
-  keywords: 'AI product photography, product photo studio, professional product photos, AI photo studio, e-commerce photography',
+  title: 'Glamorous Red Carpet Photography | Celebrity-Style Portraits',
+  description: 'Create stunning red carpet-worthy photos with our AI photography. Get professional, celebrity-style portraits perfect for special events and formal occasions.',
+  keywords: 'red carpet photos, celebrity style photography, formal portraits, event photography, glamour shots, professional headshots',
   openGraph: {
-    title: 'AI Product Photography Studio | Professional Product Photos in Minutes',
-    description: 'Transform your product photography with AI. Get studio-quality product photos instantly.',
+    title: 'Glamorous Red Carpet Photography | Celebrity-Style Portraits',
+    description: 'Create stunning red carpet-worthy photos with our AI photography studio',
     type: 'website',
-    images: ['/og.png'],
+    images: [{
+      url: '/og/red-carpet-photos.jpg',
+      width: 1200,
+      height: 630,
+      alt: 'Red Carpet Photography'
+    }],
+  },
+  alternates: {
+    canonical: 'https://www.gostudio.ai/photos/red-carpet-photos'
   }
 }
 

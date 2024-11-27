@@ -19,14 +19,22 @@ import LinkedlnHero from "@/components/LinkedlnHero";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: 'AI Product Photography Studio | Professional Product Photos in Minutes',
-  description: 'Transform your product photography with AI. Get studio-quality product photos instantly. Professional results at a fraction of the cost of traditional photo studios.',
-  keywords: 'AI product photography, product photo studio, professional product photos, AI photo studio, e-commerce photography',
+  title: 'Professional LinkedIn Headshots | AI-Powered Business Portraits',
+  description: 'Create professional LinkedIn profile photos in minutes. Get AI-powered business headshots that make you stand out. Perfect for executives, entrepreneurs, and professionals.',
+  keywords: 'linkedin headshots, professional profile picture, business portrait, corporate headshot, AI headshot, professional photo',
   openGraph: {
-    title: 'AI Product Photography Studio | Professional Product Photos in Minutes',
-    description: 'Transform your product photography with AI. Get studio-quality product photos instantly.',
+    title: 'Professional LinkedIn Headshots | AI-Powered Business Portraits',
+    description: 'Create professional LinkedIn profile photos that make you stand out',
     type: 'website',
-    images: ['/og.png'],
+    images: [{
+      url: '/og/linkedin-headshots.jpg',
+      width: 1200,
+      height: 630,
+      alt: 'Professional LinkedIn Headshots'
+    }],
+  },
+  alternates: {
+    canonical: 'https://www.gostudio.ai/photos/linkedin-photos'
   }
 }
 

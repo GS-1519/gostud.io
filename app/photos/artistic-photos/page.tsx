@@ -29,14 +29,22 @@ import ArtisticHero from "@/components/ArtisticHero";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: 'AI Product Photography Studio | Professional Product Photos in Minutes',
-  description: 'Transform your product photography with AI. Get studio-quality product photos instantly. Professional results at a fraction of the cost of traditional photo studios.',
-  keywords: 'AI product photography, product photo studio, professional product photos, AI photo studio, e-commerce photography',
+  title: 'Creative Artistic Portrait Photography | Fine Art Photos',
+  description: 'Transform your portraits into stunning fine art photography with AI. Create unique, artistic photos that capture emotion and creativity.',
+  keywords: 'artistic photography, fine art portraits, creative photos, artistic headshots, contemporary portraits, artistic style photos',
   openGraph: {
-    title: 'AI Product Photography Studio | Professional Product Photos in Minutes',
-    description: 'Transform your product photography with AI. Get studio-quality product photos instantly.',
+    title: 'Creative Artistic Portrait Photography | Fine Art Photos',
+    description: 'Create unique artistic portraits with our AI photography studio',
     type: 'website',
-    images: ['/og.png'],
+    images: [{
+      url: '/og/artistic-photos.jpg',
+      width: 1200,
+      height: 630,
+      alt: 'Artistic Portrait Photography'
+    }],
+  },
+  alternates: {
+    canonical: 'https://www.gostudio.ai/photos/artistic-photos'
   }
 }
 

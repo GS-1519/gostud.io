@@ -15,14 +15,22 @@ import GlamourHero from "@/components/GlamourHero";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: 'AI Product Photography Studio | Professional Product Photos in Minutes',
-  description: 'Transform your product photography with AI. Get studio-quality product photos instantly. Professional results at a fraction of the cost of traditional photo studios.',
-  keywords: 'AI product photography, product photo studio, professional product photos, AI photo studio, e-commerce photography',
+  title: 'Professional Glamour Photography | Elegant Portrait Sessions',
+  description: 'Create stunning glamour portraits with AI photography. Perfect for fashion, beauty, and professional modeling portfolios.',
+  keywords: 'glamour photography, fashion portraits, beauty photos, model photography, professional portraits, elegant headshots',
   openGraph: {
-    title: 'AI Product Photography Studio | Professional Product Photos in Minutes',
-    description: 'Transform your product photography with AI. Get studio-quality product photos instantly.',
+    title: 'Professional Glamour Photography | Elegant Portrait Sessions',
+    description: 'Create stunning glamour portraits with our AI photography studio',
     type: 'website',
-    images: ['/og.png'],
+    images: [{
+      url: '/og/glamour-photos.jpg',
+      width: 1200,
+      height: 630,
+      alt: 'Professional Glamour Photography'
+    }],
+  },
+  alternates: {
+    canonical: 'https://www.gostudio.ai/photos/glamour-photos'
   }
 }
 

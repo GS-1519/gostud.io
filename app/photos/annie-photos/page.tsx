@@ -25,14 +25,22 @@ import AnnieHero from "@/components/AnnieHero";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: 'AI Product Photography Studio | Professional Product Photos in Minutes',
-  description: 'Transform your product photography with AI. Get studio-quality product photos instantly. Professional results at a fraction of the cost of traditional photo studios.',
-  keywords: 'AI product photography, product photo studio, professional product photos, AI photo studio, e-commerce photography',
+  title: 'Annie Leibovitz Style Portrait Photography | Dramatic Professional Photos',
+  description: 'Create stunning portraits inspired by Annie Leibovitz\'s iconic style. AI-powered photography that captures dramatic, editorial-quality images.',
+  keywords: 'Annie Leibovitz style, editorial photography, dramatic portraits, professional photos, celebrity style photography, artistic headshots',
   openGraph: {
-    title: 'AI Product Photography Studio | Professional Product Photos in Minutes',
-    description: 'Transform your product photography with AI. Get studio-quality product photos instantly.',
+    title: 'Annie Leibovitz Style Portrait Photography | Dramatic Professional Photos',
+    description: 'Create stunning Leibovitz-inspired portraits with our AI photography studio',
     type: 'website',
-    images: ['/og.png'],
+    images: [{
+      url: '/og/annie-style-photos.jpg',
+      width: 1200,
+      height: 630,
+      alt: 'Annie Leibovitz Style Photography'
+    }],
+  },
+  alternates: {
+    canonical: 'https://www.gostudio.ai/photos/annie-photos'
   }
 }
 

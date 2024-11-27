@@ -19,14 +19,24 @@ import BlackHero from "@/components/BlackHero";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: 'AI Product Photography Studio | Professional Product Photos in Minutes',
-  description: 'Transform your product photography with AI. Get studio-quality product photos instantly.',
-  keywords: 'AI product photography, product photo studio, professional product photos, AI photo studio, e-commerce photography',
+  title: 'Free Black Background Generator | Professional Dark Backgrounds',
+  description: 'Create stunning black backgrounds for professional photography. Generate dark backgrounds with our AI tool.',
+  keywords: 'black background, dark background, photography background, AI background tool',
   openGraph: {
-    title: 'AI Product Photography Studio | Professional Product Photos in Minutes',
-    description: 'Transform your product photography with AI. Get studio-quality product photos instantly.',
-    type: 'website',
-    images: ['/og.png'],
+    title: 'Free Black Background Generator',
+    description: 'Create stunning black backgrounds for professional photography',
+    images: [{
+      url: '/og/black-background.jpg',
+      width: 1200,
+      height: 630,
+      alt: 'Black Background Generator'
+    }]
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Free Black Background Generator',
+    description: 'Create stunning black backgrounds for professional photography',
+    images: ['/og/black-background.jpg']
   }
 }
 

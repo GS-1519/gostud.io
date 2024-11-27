@@ -20,14 +20,24 @@ import AbstractHero from "@/components/AbstractHero";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: 'AI Product Photography Studio | Professional Product Photos in Minutes',
-  description: 'Transform your product photography with AI. Get studio-quality product photos instantly.',
-  keywords: 'AI product photography, product photo studio, professional product photos, AI photo studio, e-commerce photography',
+  title: 'Free Abstract Background Generator | Creative Photography Backgrounds',
+  description: 'Create stunning abstract backgrounds for creative photography. Generate unique patterns and textures with our AI-powered tool.',
+  keywords: 'abstract background, creative background, artistic background, photography background, AI background generator',
   openGraph: {
-    title: 'AI Product Photography Studio | Professional Product Photos in Minutes',
-    description: 'Transform your product photography with AI. Get studio-quality product photos instantly.',
-    type: 'website',
-    images: ['/og.png'],
+    title: 'Free Abstract Background Generator',
+    description: 'Create stunning abstract backgrounds for creative photography',
+    images: [{
+      url: '/og/abstract-background.jpg',
+      width: 1200,
+      height: 630,
+      alt: 'Abstract Background Generator'
+    }]
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Free Abstract Background Generator',
+    description: 'Create stunning abstract backgrounds for creative photography',
+    images: ['/og/abstract-background.jpg']
   }
 }
 

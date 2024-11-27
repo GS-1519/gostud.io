@@ -22,14 +22,22 @@ import HalloweenHero from "@/components/HalloweenHero";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: 'AI Product Photography Studio | Professional Product Photos in Minutes',
-  description: 'Transform your product photography with AI. Get studio-quality product photos instantly. Professional results at a fraction of the cost of traditional photo studios.',
-  keywords: 'AI product photography, product photo studio, professional product photos, AI photo studio, e-commerce photography',
+  title: 'Creative Halloween Portrait Photography | Spooky Photo Sessions',
+  description: 'Create unique Halloween-themed portraits with AI photography. Perfect for costumes, parties, and seasonal social media content.',
+  keywords: 'halloween photos, costume photography, spooky portraits, themed photoshoot, halloween headshots, seasonal photos',
   openGraph: {
-    title: 'AI Product Photography Studio | Professional Product Photos in Minutes',
-    description: 'Transform your product photography with AI. Get studio-quality product photos instantly.',
+    title: 'Creative Halloween Portrait Photography | Spooky Photo Sessions',
+    description: 'Create unique Halloween-themed portraits with our AI photography studio',
     type: 'website',
-    images: ['/og.png'],
+    images: [{
+      url: '/og/halloween-photos.jpg',
+      width: 1200,
+      height: 630,
+      alt: 'Halloween Portrait Photography'
+    }],
+  },
+  alternates: {
+    canonical: 'https://www.gostudio.ai/photos/halloween-photos'
   }
 }
 
