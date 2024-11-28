@@ -24,7 +24,12 @@ const nextConfig = {
       }
     ]
   },
-  webpack: (config, { isServer }) => {
+  swcMinify: true,
+  i18n: {
+    locales: ['en'],
+    defaultLocale: 'en',
+  },
+  webpack: (config, { isServer, dev }) => {
     config.resolve.alias = {
       ...config.resolve.alias,
       'onnxruntime-web': require.resolve('onnxruntime-web'),
@@ -33,7 +38,24 @@ const nextConfig = {
       ...config.resolve.fallback,
       'onnxruntime-web': false,
     };
+    if (!dev) {
+      config.cache = true;
+    }
+    if (!isServer) {
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: false,
+        path: false,
+        crypto: false,
+      };
+    }
+
+    config.externals = [...(config.externals || []), { canvas: "canvas" }];
+
     return config;
+  },
+  experimental: {
+    esmExternals: 'loose',
   },
 }
 
