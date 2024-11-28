@@ -37,6 +37,9 @@ const nextConfig = {
     config.resolve.fallback = {
       ...config.resolve.fallback,
       'onnxruntime-web': false,
+      fs: false,
+      os: false,
+      path: false,
     };
     if (!dev) {
       config.cache = true;
