@@ -1,14 +1,18 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   webpack: (config, { isServer }) => {
-    // Add fallbacks for node modules
+    // Add a fallback for the 'fs' module
     config.resolve.fallback = {
       ...config.resolve.fallback,
       fs: false,
-      'fs/promises': false,
-      os: false,
     };
-    
+
+    // Handle the webgpu module
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      './webgpu': false,
+    };
+
     return config;
   },
 };
