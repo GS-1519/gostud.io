@@ -63,13 +63,9 @@ export default async function DoctorPhotos() {
           <div id="testimonial">
             <ReviewSection/>
           </div>
-          <div id="pricing">
-            <PricingSection user={user} />
-          </div>
+          
           <DataSecuritySection />
-          <div id="faq">
-            <FAQSection />
-          </div>
+          
           <div>
             <Banner/>
           </div>
