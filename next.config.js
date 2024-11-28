@@ -1,26 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   webpack: (config, { isServer }) => {
-    // Add a fallback for the 'fs' module
+    // Add fallbacks for node modules
     config.resolve.fallback = {
       ...config.resolve.fallback,
       fs: false,
+      'fs/promises': false,
+      os: false,
     };
-
-    // Handle the webgpu module
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      './webgpu': false,
-    };
-
-    // Properly handle externals
-    config.externals = [
-      ...(Array.isArray(config.externals) ? config.externals : []),
-      {
-        "onnxruntime-web/webgpu": "commonjs onnxruntime-web/webgpu"
-      }
-    ];
-
+    
     return config;
   },
 };
