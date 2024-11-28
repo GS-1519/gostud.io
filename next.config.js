@@ -13,6 +13,14 @@ const nextConfig = {
       './webgpu': false,
     };
 
+    // Properly handle externals
+    config.externals = [
+      ...(Array.isArray(config.externals) ? config.externals : []),
+      {
+        "onnxruntime-web/webgpu": "commonjs onnxruntime-web/webgpu"
+      }
+    ];
+
     return config;
   },
 };
