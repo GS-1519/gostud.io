@@ -52,3 +52,58 @@
 .sentence-case:first-letter {
   text-transform: uppercase;
 }
+
+.react-tabs__tab {
+    cursor: pointer;
+}
+
+.react-tabs__tab--selected {
+    background-color: #3b82f6 !important;
+    color: white;
+}
+
+.react-colorful {
+    width: 100% !important;
+    height: 200px;
+}
+
+img-comparison-slider {
+    transition: outline 0.2s ease;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+img-comparison-slider:focus-within {
+    outline: 2px solid #5B16FE;
+    outline-offset: 2px;
+}
+
+img-comparison-slider img {
+    user-select: none;
+    max-height: 300px;
+    margin: 0 auto;
+}
+
+img-comparison-slider:hover {
+    outline: 1px solid rgba(91, 22, 254, 0.5);
+    outline-offset: 2px;
+}
+
+img-comparison-slider {
+    visibility: hidden;
+    max-width: 100%;
+    margin: 0 auto;
+    --divider-width: 2px;
+    --divider-color: #5B16FE;
+    --default-handle-color: #5B16FE;
+}
+
+img-comparison-slider [slot='first'], 
+img-comparison-slider [slot='second'] {
+    object-fit: cover;
+    object-position: center;
+}
+
+img-comparison-slider.rendered {
+    visibility: visible;
+}

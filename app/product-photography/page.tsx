@@ -44,7 +44,7 @@ export default async function ProductPhotography() {
             <ProductHero />
           </div>
           <AIToolSection />
-          <AIBackgroundSection />
+          <AIBackgroundSection />-+
           <ComparisonPage />
           <div id="testimonial">
             <ReviewSection />

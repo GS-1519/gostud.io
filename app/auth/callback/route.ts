@@ -8,7 +8,7 @@ export async function GET(req: NextRequest) {
   const requestUrl = new URL(req.url);
   const code = requestUrl.searchParams.get("code");
   const error = requestUrl.searchParams.get("error");
-  const next = requestUrl.searchParams.get("next") || "/";
+  const next = requestUrl.searchParams.get("next") || "/overview";
   const error_description = requestUrl.searchParams.get("error_description");
 
   if (error) {
@@ -38,6 +38,9 @@ export async function GET(req: NextRequest) {
           `${requestUrl.origin}/login/failed?err=500`
         );
       }
+
+      // Successful authentication, redirect to overview
+      return NextResponse.redirect(new URL('/overview', req.url));
     } catch (error) {
       if (isAuthApiError(error)) {
         console.error(

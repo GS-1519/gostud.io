@@ -1,15 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-  typescript: {
-    ignoreBuildErrors: true
+  webpack: (config, { isServer }) => {
+    // Add fallbacks for node modules
+    config.resolve.fallback = {
+      ...config.resolve.fallback,
+      fs: false,
+      'fs/promises': false,
+      os: false,
+    };
+    
+    return config;
   },
-  staticPageGenerationTimeout: 3000,
-  images: {
-    domains: [
-      'x3rkl8tapynlmqus.public.blob.vercel-storage.com'
-    ],
-  }
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
