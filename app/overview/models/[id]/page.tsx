@@ -19,7 +19,7 @@ export default async function Index({ params }: { params: { id: string } }) {
   } = await supabase.auth.getUser();
 
   if (!user) {
-    return <Login params={{ slug: params.id }} />;
+    return <Login searchParams={{ id: params.id }} />;
   }
 
   const { data: model } = await supabase

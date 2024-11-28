@@ -154,7 +154,7 @@ export async function POST(request: Request) {
     await Promise.all(
       allHeadshots.map(async (image) => {
         const { error: imageError } = await supabase.from("images").insert({
-          modelId: Number(model.id),
+          modelid: Number(model.id),
           uri: image,
         });
         if (imageError) {
