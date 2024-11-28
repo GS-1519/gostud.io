@@ -24,22 +24,11 @@ const nextConfig = {
       }
     ]
   },
-  webpack: (config, { isServer }) => {
-    // Add node-loader for .node files
-    config.module.rules.push({
-      test: /\.node$/,
-      use: 'node-loader',
-      type: 'javascript/auto',
-    });
-
-    // Handle binary files
-    config.resolve.fallback = {
-      ...config.resolve.fallback,
-      fs: false,
-      path: false,
-      crypto: false,
+  webpack: (config) => {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      'onnxruntime-web': require.resolve('onnxruntime-web'),
     };
-
     return config;
   },
 }
