@@ -1,7 +1,7 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
 import { Upload, Image as ImageIcon, Download } from "lucide-react";
-import { removeBackground } from "@imgly/background-removal";
+import { removeBackground } from '@imgly/background-removal'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { HexColorPicker } from "react-colorful";
 import { ImgComparisonSlider } from '@img-comparison-slider/react';

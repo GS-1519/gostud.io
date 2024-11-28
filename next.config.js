@@ -24,10 +24,14 @@ const nextConfig = {
       }
     ]
   },
-  webpack: (config) => {
+  webpack: (config, { isServer }) => {
     config.resolve.alias = {
       ...config.resolve.alias,
       'onnxruntime-web': require.resolve('onnxruntime-web'),
+    };
+    config.resolve.fallback = {
+      ...config.resolve.fallback,
+      'onnxruntime-web': false,
     };
     return config;
   },
