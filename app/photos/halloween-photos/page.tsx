@@ -18,6 +18,7 @@ import OnesieHero from "@/components/OnesieHero";
 import DateHero from "@/components/DateHero";
 import WednesdayHero from "@/components/WednesdayHero";
 import HalloweenHero from "@/components/HalloweenHero";
+import HalloweenHeadshotHero from "@/components/Halloween-Headshots";
 
 export const dynamic = "force-dynamic";
 
@@ -67,6 +68,9 @@ export default async function LinkedInPhotos() {
           image3="/Frame28.png"
           />
           <Why imageSet="Group28" />
+          <div id="testimonial">
+            <HalloweenHeadshotHero/>
+          </div>
           <div id="testimonial">
             <ReviewSection/>
           </div>

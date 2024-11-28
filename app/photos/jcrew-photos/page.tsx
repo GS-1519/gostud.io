@@ -13,6 +13,7 @@ import Footer from "@/components/Footer";
 import Banner from "@/components/Banner";
 import DoctorHero from "@/components/DoctorHero";
 import JcrewHero from "@/components/JcrewHero";
+import JcrewHeadshotHero from "@/components/Jcrew-HeadshotsHero";
 
 export const dynamic = "force-dynamic";
 
@@ -56,6 +57,9 @@ export default async function DoctorPhotos() {
           </div>
           <Works/>
           <Why imageSet="Jfram" />
+          <div id="testimonial">
+            <JcrewHeadshotHero/>
+          </div>
           <div id="testimonial">
             <ReviewSection/>
           </div>

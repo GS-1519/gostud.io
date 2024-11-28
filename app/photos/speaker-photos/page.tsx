@@ -14,6 +14,7 @@ import Banner from "@/components/Banner";
 import DoctorHero from "@/components/DoctorHero";
 import JcrewHero from "@/components/JcrewHero";
 import SpeakerHero from "@/components/SpeakerHero";
+import SpeakerHeadshotHero from "@/components/Speaker-Headshots";
 
 export const dynamic = "force-dynamic";
 
@@ -60,6 +61,9 @@ export default async function DoctorPhotos() {
           image2="/ted.png"
           />
           <Why imageSet="Group6" />
+          <div id="testimonial">
+            <SpeakerHeadshotHero/>
+          </div>
           <div id="testimonial">
             <ReviewSection/>
           </div>

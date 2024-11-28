@@ -13,6 +13,7 @@ import Footer from "@/components/Footer";
 import Banner from "@/components/Banner";
 
 import GamesHero from "@/components/GamesHero";
+import GameOfThronesHeadshotHero from "@/components/Games-Of-Thrones-Headshots";
 
 export const dynamic = "force-dynamic";
 
@@ -59,6 +60,9 @@ export default async function LinkedInPhotos() {
           image3="/Frame17.png"
           />
           <Why imageSet="Group20" />
+          <div id="testimonial">
+            <GameOfThronesHeadshotHero/>
+          </div>
           <div id="testimonial">
             <ReviewSection/>
           </div>

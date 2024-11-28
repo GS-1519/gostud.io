@@ -1,11 +1,11 @@
 "use client";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Upload, Image as ImageIcon, Download } from "lucide-react";
 import { removeBackground } from "@imgly/background-removal";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { HexColorPicker } from "react-colorful";
+import { ImgComparisonSlider } from '@img-comparison-slider/react';
 import 'react-tabs/style/react-tabs.css';
-
 // First, define the background images with proper paths
 const backgroundImages = [
     {
@@ -180,8 +180,63 @@ export default function BackgroundRemove() {
         );
     };
 
+    // Add new function for handling focus
+    const handleImageFocus = (e: React.MouseEvent<HTMLImageElement>) => {
+        const element = e.currentTarget;
+        const comparisonSlider = element.closest('img-comparison-slider');
+        
+        if (comparisonSlider) {
+            comparisonSlider.setAttribute('style', 'outline: 2px solid #5B16FE; outline-offset: 2px;');
+            
+            document.addEventListener('click', (event) => {
+                if (!comparisonSlider.contains(event.target as Node)) {
+                    comparisonSlider.setAttribute('style', 'outline: none; outline-offset: 0;');
+                }
+            }, { once: true });
+        }
+    };
+
+    // Add keyboard navigation handler
+    const handleKeyboardNavigation = (e: React.KeyboardEvent<HTMLDivElement>) => {
+        const slider = e.currentTarget.querySelector('img-comparison-slider');
+        if (!slider) return;
+
+        switch (e.key) {
+            case 'ArrowLeft':
+                slider.setAttribute('value', Math.max(0, parseFloat(slider.getAttribute('value') || '50') - 5).toString());
+                break;
+            case 'ArrowRight':
+                slider.setAttribute('value', Math.min(100, parseFloat(slider.getAttribute('value') || '50') + 5).toString());
+                break;
+        }
+    };
+
+    // Update your existing comparison slider render function
+    const renderComparisonResult = () => {
+        if (!outputFileURL) return null;
+        
+        return (
+            <div className="mt-4">
+                <ImgComparisonSlider className="rounded-lg">
+                    <img
+                        slot="first"
+                        src={previewUrl}
+                        alt="Original"
+                        className="max-h-96 shadow-sm rounded-lg"
+                    />
+                    <img
+                        slot="second"
+                        src={outputFileURL}
+                        alt="Processed"
+                        className="max-h-96 shadow-sm rounded-lg"
+                    />
+                </ImgComparisonSlider>
+            </div>
+        );
+    };
+
     return (
-        <div className="w-full max-w-4xl mx-auto p-4">
+        <div className="w-full max-w-3xl mx-auto p-4">
             {!showEditor ? (
                 <div 
                     className="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center hover:border-blue-500 transition-colors"
@@ -285,6 +340,20 @@ export default function BackgroundRemove() {
                     <p className="text-center mt-2 text-gray-600">
                         Processing... {progress}%
                     </p>
+                </div>
+            )}
+
+            {outputFileURL && (
+                <div className="space-y-4">
+                    {renderComparisonResult()}
+                    <a
+                        href={outputFileURL}
+                        download="removed-background.png"
+                        className="block w-full text-center bg-green-500 text-white py-2 rounded-lg hover:bg-green-600"
+                    >
+                        <Download className="w-4 h-4 inline mr-2" />
+                        Download Result
+                    </a>
                 </div>
             )}
         </div>

@@ -11,6 +11,7 @@ import FAQSection from "@/components/Question";
 import Footer from "@/components/Footer";
 import Banner from "@/components/Banner";
 import ColorHero from "@/components/ColorHero";
+import BoldHeadshotHero from "@/components/Bold-Headshots";
 
 export const dynamic = "force-dynamic";
 
@@ -54,6 +55,9 @@ export default async function DoctorPhotos() {
           </div>
           <Works/>
           <Why imageSet="ColorFram" />
+          <div id="testimonial">
+            <BoldHeadshotHero/>
+          </div>
           <div id="testimonial">
             <ReviewSection/>
           </div>

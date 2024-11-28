@@ -11,6 +11,7 @@ import DataSecuritySection from "@/components/container";
 import FAQSection from "@/components/Question";
 import Footer from "@/components/Footer";
 import Banner from "@/components/Banner";
+import DatingHeadshotHero from "@/components/Dating-Headshots";
 
 export const dynamic = "force-dynamic";
 
@@ -54,6 +55,9 @@ export default async function DatingPhotos() {
           </div>
           <Works/>
           <Why/>
+          <div id="testimonial">
+            <DatingHeadshotHero/>
+          </div>
           <div id="testimonial">
             <ReviewSection/>
           </div>

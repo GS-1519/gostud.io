@@ -12,6 +12,7 @@ import FAQSection from "@/components/Question";
 import Footer from "@/components/Footer";
 import Banner from "@/components/Banner";
 import DoctorHero from "@/components/DoctorHero";
+import DoctorHeadshotHero from "@/components/Doctor-Headshots";
 
 export const dynamic = "force-dynamic";
 
@@ -55,6 +56,9 @@ export default async function DoctorPhotos() {
           </div>
           <Works/>
           <Why imageSet="doctor" />
+          <div id="testimonial">
+            <DoctorHeadshotHero/>
+          </div>
           <div id="testimonial">
             <ReviewSection/>
           </div>

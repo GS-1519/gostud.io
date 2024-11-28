@@ -15,6 +15,7 @@ import DoctorHero from "@/components/DoctorHero";
 import JcrewHero from "@/components/JcrewHero";
 import HealthHero from "@/components/HealthHero";
 import YoutubeHero from "@/components/YoutubeHero";
+import YoutubeHeadshotHero from "@/components/Youtube-Headshots";
 
 export const dynamic = "force-dynamic";
 
@@ -61,6 +62,9 @@ export default async function DoctorPhotos() {
             image2="/Group5.png"
           />
           <Why imageSet="tubefram" />
+          <div id="testimonial">
+            <YoutubeHeadshotHero/>
+          </div>
           <div id="testimonial">
             <ReviewSection/>
           </div>

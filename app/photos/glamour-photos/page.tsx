@@ -11,6 +11,7 @@ import FAQSection from "@/components/Question";
 import Footer from "@/components/Footer";
 import Banner from "@/components/Banner";
 import GlamourHero from "@/components/GlamourHero";
+import GlamourHeadshotHero from "@/components/Glamour-Headshots";
 
 export const dynamic = "force-dynamic";
 
@@ -54,6 +55,9 @@ export default async function DoctorPhotos() {
           </div>
           <Works/>
           <Why imageSet="GlmFram" />
+          <div id="testimonial">
+            <GlamourHeadshotHero/>
+          </div>
           <div id="testimonial">
             <ReviewSection/>
           </div>

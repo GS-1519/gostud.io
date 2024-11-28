@@ -15,6 +15,7 @@ import DoctorHero from "@/components/DoctorHero";
 import JcrewHero from "@/components/JcrewHero";
 import SpeakerHero from "@/components/SpeakerHero";
 import RealtorHero from "@/components/RealtorHero";
+import RealtorHeadshotHero from "@/components/Realtor-Headshots";
 
 export const dynamic = "force-dynamic";
 
@@ -61,6 +62,9 @@ export default async function DoctorPhotos() {
           image2="/ted.png"
           />
           <Why imageSet="Group8" />
+          <div id="testimonial">
+            <RealtorHeadshotHero/>
+          </div>
           <div id="testimonial">
             <ReviewSection/>
           </div>

@@ -16,6 +16,7 @@ import JcrewHero from "@/components/JcrewHero";
 import HealthHero from "@/components/HealthHero";
 import LinkedlnHero from "@/components/LinkedlnHero";
 import LawyerHero from "@/components/LawyerHero";
+import LawyerHeadshotHero from "@/components/LawyerHeadshotHero";
 
 export const dynamic = "force-dynamic";
 
@@ -61,6 +62,9 @@ export default async function LinkedInPhotos() {
           
           />
           <Why imageSet="Group9" />
+          <div id="testimonial">
+            <LawyerHeadshotHero/>
+          </div>
           <div id="testimonial">
             <ReviewSection/>
           </div>

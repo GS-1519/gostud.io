@@ -14,6 +14,7 @@ import Banner from "@/components/Banner";
 import DoctorHero from "@/components/DoctorHero";
 import JcrewHero from "@/components/JcrewHero";
 import HealthHero from "@/components/HealthHero";
+import FitnessHeadshotHero from "@/components/Fitness-Headshots";
 
 export const dynamic = "force-dynamic";
 
@@ -59,6 +60,9 @@ export default async function DoctorPhotos() {
           image3="/Group2.png"
           />
           <Why imageSet="FitFram" />
+          <div id="testimonial">
+            <FitnessHeadshotHero/>
+          </div>
           <div id="testimonial">
             <ReviewSection/>
           </div>

@@ -25,6 +25,7 @@ import NewtonHero from "@/components/NewtonHero";
 import VikingsHero from "@/components/VikingsHero";
 import MythHero from "@/components/MythHero";
 import ArtisticHero from "@/components/ArtisticHero";
+import ArtisticHeadshotHero from "@/components/Artistic-Headshots";
 
 export const dynamic = "force-dynamic";
 
@@ -70,6 +71,9 @@ export default async function LinkedInPhotos() {
           image3="/Frame15.png"
           />
           <Why imageSet="Group19" />
+          <div id="testimonial">
+            <ArtisticHeadshotHero/>
+          </div>
           <div id="testimonial">
             <ReviewSection/>
           </div>
