@@ -38,6 +38,7 @@ const nextConfig = {
       ...config.resolve.fallback,
       'onnxruntime-web': false,
       fs: false,
+      'fs/promises': false,
       os: false,
       path: false,
     };
@@ -48,6 +49,7 @@ const nextConfig = {
       config.resolve.fallback = {
         ...config.resolve.fallback,
         fs: false,
+        'fs/promises': false,
         path: false,
         crypto: false,
       };
