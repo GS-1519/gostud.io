@@ -64,24 +64,24 @@ const Footer: React.FC = () => {
     {
       title: 'AI Headshots',
       items: [
-        { text: 'LinkedIn Headshots', href: '/photos/linkedin-photos' },
         { text: 'J.Crew Style', href: '/photos/jcrew-photos' },
         { text: 'Health & Fitness', href: '/photos/health-inspiration-photos' },
         { text: 'Artistic Photos', href: '/photos/artistic-photos' },
-        { text: 'Americana Style', href: '/photos/americana-photos' },
-        { text: 'Annie Style', href: '/photos/annie-photos' },
-        { text: 'Barbie Style', href: '/photos/barbie-photos' },
-        { text: 'Botanical Style', href: '/photos/botanical-photos' },
-        { text: 'Dating Photos', href: '/photos/date-photos' },
-        { text: 'Glamour Shots', href: '/photos/glamour-shots-photos' },
+        { text: 'Americana Photos', href: '/photos/americana-photos' },
+        { text: 'Annie Photos', href: '/photos/annie-photos' },
+        { text: 'Barbie Photos', href: '/photos/barbie-photos' },
+        { text: 'Botanical Photos', href: '/photos/botanical-photos' },
+        { text: 'Dating Photos', href: '/photos/dating-photos' },
+        { text: 'Save-The-HBD-Photos', href: '/photos/date-photos' },
+        { text: 'Glamour Photos', href: '/photos/glamour-photos' },
         { text: 'Lawyer Photos', href: '/photos/lawyer-photos' },
-        { text: 'Helmut Newton', href: '/photos/helmut-newton-photos' },
+        { text: 'Helmut Newton Style', href: '/photos/helmut-newton-photos' },
         { text: 'Wednesday Addams', href: '/photos/wednesday-addams-photos' },
-        { text: 'Youtube Headshots', href: '/photos/youtube' },
-        { text: 'Redcarpet Headshots', href: '/photos/redcarpet' },
-        { text: 'Speaker Headshots', href: '/photos/speaker' },
-        { text: 'Tattoo Headshots', href: '/photos/tattos' },
-        { text: 'Vikings Headshots', href: '/photos/vikings' }
+        { text: 'Youtube Photos', href: '/photos/youtube-reaction-photos' },
+        { text: 'Red Carpet Photos', href: '/photos/red-carpet-photos' },
+        { text: 'Speaker Photos', href: '/photos/speaker-photos' },
+        { text: 'Tattoo Photos', href: '/photos/tattoos-photos' },
+        { text: 'Vikings Photos', href: '/photos/viking-photos' }
       ]
     },
     {

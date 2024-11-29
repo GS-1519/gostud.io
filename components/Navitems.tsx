@@ -21,23 +21,23 @@ export default function NavItems({ isMobile = false }) {
     { href: '/photos/annie-photos', label: 'Annie Photos' },
     { href: '/photos/artistic-photos', label: 'Artistic Photos' },
     { href: '/photos/barbie-photos', label: 'Barbie Photos' },
-    { href: '/photos/birthday-photos', label: 'Birthday Photos' },
+    { href: '/photos/kids-birthday-photos', label: 'Birthday Photos' },
     { href: '/photos/bold-color-photos', label: 'Bold Color Photos' },
     { href: '/photos/botanical-photos', label: 'Botanical Photos' },
-    { href: '/photos/date-photos', label: 'Dating Photos' },
+    { href: '/photos/dating-photos', label: 'Dating Photos' },
+    { href: '/photos/date-photos', label: 'Save HBD Photos' },
     { href: '/photos/doctor-photos', label: 'Doctor Photos' },
-    { href: '/photos/glamour-shots-photos', label: 'Glamour Photos' },
+    { href: '/photos/glamour-photos', label: 'Glamour Photos' },
     { href: '/photos/health-inspiration-photos', label: 'Health & Fitness' },
     { href: '/photos/helmut-newton-photos', label: 'Helmut Newton Style' },
     { href: '/photos/jcrew-photos', label: 'J.Crew Style' },
     { href: '/photos/lawyer-photos', label: 'Lawyer Photos' },
-    { href: '/photos/linkedin-photos', label: 'LinkedIn Photos' },
-    { href: '/photos/redcarpet', label: 'Red Carpet Photos' },
-    { href: '/photos/speaker', label: 'Speaker Photos' },
-    { href: '/photos/tattos', label: 'Tattoo Photos' },
-    { href: '/photos/vikings', label: 'Vikings Photos' },
+    { href: '/photos/red-carpet-photos', label: 'Red Carpet Photos' },
+    { href: '/photos/speaker-photos', label: 'Speaker Photos' },
+    { href: '/photos/tattoos-photos', label: 'Tattoo Photos' },
+    { href: '/photos/viking-photos', label: 'Vikings Photos' },
     { href: '/photos/wednesday-addams-photos', label: 'Wednesday Addams' },
-    { href: '/photos/youtube', label: 'Youtube Photos' }
+    { href: '/photos/youtube-reaction-photos', label: 'Youtube Photos' }
   ];
 
   const toolPages = [
@@ -90,7 +90,7 @@ export default function NavItems({ isMobile = false }) {
               {photoPages.map((page) => (
                 <Link 
                   key={page.href} 
-                  href={page.href} 
+                  href={page.href || '/'} 
                   className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600"
                 >
                   {page.label}
