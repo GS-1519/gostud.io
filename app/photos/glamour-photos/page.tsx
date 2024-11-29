@@ -5,9 +5,7 @@ import type { Metadata } from 'next'
 import Works from "@/components/Works";
 import Why from "@/components/Why";
 import ReviewSection from "@/components/HeadshotReviewSection";
-import PricingSection from "@/components/PricingSection";
-import DataSecuritySection from "@/components/container";
-import FAQSection from "@/components/Question";
+
 import Footer from "@/components/Footer";
 import Banner from "@/components/Banner";
 import GlamourHero from "@/components/GlamourHero";
@@ -62,7 +60,7 @@ export default async function DoctorPhotos() {
             <ReviewSection/>
           </div>
           
-          <DataSecuritySection />
+          
           
           <div>
             <Banner/>

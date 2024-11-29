@@ -6,22 +6,10 @@ import type { Metadata } from 'next'
 import Works from "@/components/Works";
 import Why from "@/components/Why";
 import ReviewSection from "@/components/HeadshotReviewSection";
-import PricingSection from "@/components/PricingSection";
-import DataSecuritySection from "@/components/container";
-import FAQSection from "@/components/Question";
+
 import Footer from "@/components/Footer";
 import Banner from "@/components/Banner";
-import DoctorHero from "@/components/DoctorHero";
-import JcrewHero from "@/components/JcrewHero";
-import HealthHero from "@/components/HealthHero";
-import LinkedlnHero from "@/components/LinkedlnHero";
-import TattoHero from "@/components/TattoHero";
-import CarpetHero from "@/components/CarpetHero";
-import BirthdayHero from "@/components/BirthdayHero";
-import GlamourHero from "@/components/GlamourHero";
-import BarbieHero from "@/components/BarbieHero";
-import AnnieHero from "@/components/AnnieHero";
-import NewtonHero from "@/components/NewtonHero";
+
 import VikingsHero from "@/components/VikingsHero";
 import VikingHeadshotHero from "@/components/Viking-Headshots";
 
@@ -80,7 +68,7 @@ export default async function LinkedInPhotos() {
             <ReviewSection/>
           </div>
          
-          <DataSecuritySection />
+          
           
           <div>
             <Banner/>
