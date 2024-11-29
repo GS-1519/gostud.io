@@ -37,7 +37,7 @@ const PricingComponent: React.FC<PricingComponentProps> = ({ user }) => {
     {
       name: 'STARTER',
       price: '10',
-      originalPrice: '$29',
+      originalPrice: '19',
       features: [
         '📸 10  Headshots',
         '⚡ Delivery within 2 hours',
@@ -49,7 +49,7 @@ const PricingComponent: React.FC<PricingComponentProps> = ({ user }) => {
     {
       name: 'PREMIUM',
       price: '19',
-      originalPrice: '$79',
+      originalPrice: '39',
       features: [
         '📸 30  Headshots',
         '⚡ Priority Delivery (1 hour)',
@@ -63,7 +63,7 @@ const PricingComponent: React.FC<PricingComponentProps> = ({ user }) => {
     {
       name: 'EXECUTIVE',
       price: '29',
-      originalPrice: '$129',
+      originalPrice: '59',
       features: [
         '📸 100  Headshots',
         '⚡ Express Delivery (30 min)',
@@ -157,9 +157,33 @@ const PricingComponent: React.FC<PricingComponentProps> = ({ user }) => {
   return (
     <div className="w-full bg-gray-50">
       <div className="max-w-[1274px] mx-auto bg-white rounded-[60px] py-20 px-8">
+        {/* Black Friday Banner for Pricing */}
+        <div className="mb-12 w-full max-w-[600px] mx-auto">
+          <div 
+            className="relative h-[52px] rounded-[148px] w-full"
+            style={{
+              background: 'linear-gradient(90deg, #8371FF -39.48%, #A077FE 32.07%, #01C7E4 100%)',
+              padding: '1px'
+            }}
+          >
+            <div className="absolute inset-0 bg-black rounded-[148px] m-[1px]">
+              <div className="flex items-center justify-center h-full px-4 py-2 gap-3">
+                <span className="text-white">🎉</span>
+                <p className="text-sm sm:text-base font-medium text-white">
+                  <span className="hidden sm:inline">Black Friday Sale! </span>
+                  <span className="text-violet-400 font-bold">50% OFF</span>
+                  <span className="hidden sm:inline"> on all plans</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="flex flex-col gap-[10px]">
           <h2 className="text-center text-gray-500 font-semibold font-jakarta">PRICING</h2>
-          <h1 className="text-center text-4xl sm:text-5xl lg:text-5xl font-bold font-jakarta">Premium Quality at 10 times less price</h1>
+          <h1 className="text-center text-4xl sm:text-5xl lg:text-5xl font-bold font-jakarta">
+            Premium Quality at 10 times less price
+          </h1>
           <p className="text-center text-gray-600 max-w-3xl mx-auto font-poppins">
             No studio visits. No $200+ photoshoot fees. No waiting for appointments. Achieve stunning, 
             professional-grade headshots in just 30 minutes—all from the comfort of your home.
@@ -168,28 +192,31 @@ const PricingComponent: React.FC<PricingComponentProps> = ({ user }) => {
           <div className="flex flex-col lg:flex-row lg:justify-center space-y-8 lg:space-y-0 lg:space-x-8 mt-12">
             {pricingTiers.map((tier, index) => (
               <div key={tier.name} className="flex-1 max-w-[362px] mx-auto lg:mx-0 relative pt-6">
-                {(tier.popularTag || tier.bestValueTag) && (
-                  <div className="absolute -top-1 left-1/2 transform -translate-x-1/2">
-                    <div className="relative w-[184px] h-[42px]">
-                      <div className="absolute inset-0 bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4] rounded-full"></div>
-                      <div className="absolute inset-[1.5px] bg-white rounded-full"></div>
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <span className={`text-sm font-semibold ${tier.bestValueTag ? 'text-[#5B16FE]' : 'bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4] bg-clip-text text-transparent'}`}>
-                          {tier.popularTag || tier.bestValueTag}
-                        </span>
-                      </div>
+                {/* Black Friday Tag */}
+                <div className="absolute -top-1 left-1/2 transform -translate-x-1/2">
+                  <div className="relative w-[184px] h-[42px]">
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4] rounded-full"></div>
+                    <div className="absolute inset-[1.5px] bg-black rounded-full"></div>
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <span className="text-sm font-bold text-violet-400">
+                        Save 50% Today!
+                      </span>
                     </div>
                   </div>
-                )}
+                </div>
+
                 <div className={`bg-white rounded-3xl p-8 h-full flex flex-col ${
                   tier.highlight ? 'shadow-2xl' : 'border border-gray-200'
                 }`}>
-                  <h2 className={`text-xl font-semibold mb-4 text-[#473BF0] font-jakarta`}>
+                  <h2 className="text-xl font-semibold mb-4 text-[#473BF0] font-jakarta">
                     {tier.name}
                   </h2>
-                  <div className="mb-2">
+                  <div className="mb-2 flex items-center">
                     <span className="text-4xl font-bold font-jakarta">${tier.price}</span>
-                    <span className="text-lg text-gray-400 line-through ml-2 font-poppins">{tier.originalPrice}</span>
+                    <div className="ml-2 flex flex-col">
+                      <span className="text-lg text-gray-400 line-through font-poppins">${tier.originalPrice}</span>
+                      <span className="text-xs text-violet-400">50% OFF</span>
+                    </div>
                   </div>
                   <p className="text-gray-600 mb-6 font-poppins">One Time Payment</p>
                   <ul className="mb-8 space-y-4 flex-grow">
