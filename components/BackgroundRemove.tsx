@@ -1,11 +1,17 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
 import { Upload, Image as ImageIcon, Download } from "lucide-react";
-import { removeBackground } from "@imgly/background-removal";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { HexColorPicker } from "react-colorful";
 import { ImgComparisonSlider } from '@img-comparison-slider/react';
 import 'react-tabs/style/react-tabs.css';
+import dynamic from 'next/dynamic';
+
+const BackgroundRemoval = dynamic(
+  () => import('@imgly/background-removal'),
+  { ssr: false }
+);
+
 // First, define the background images with proper paths
 const backgroundImages = [
     {
@@ -61,7 +67,8 @@ export default function BackgroundRemove() {
         setProcessing(true);
         try {
             const imageData = await new Response(file).blob();
-            const blob = await removeBackground(imageData, {
+            const BackgroundRemoval = (await import('@imgly/background-removal')).default;
+            const blob = await BackgroundRemoval(imageData, {
                 progress: (key: string, current: number, total: number) => {
                     setProgress(Math.round((current / total) * 100));
                 }
