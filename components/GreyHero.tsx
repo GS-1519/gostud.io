@@ -9,13 +9,13 @@ const GreyHero = () => {
   const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
 
   const categories = [
-    { name: 'Black', path: '/tools/black-background' },
-    { name: 'Grey', path: '/tools/grey-background' },
-    { name: 'White', path: '/tools/white-background' },
-    { name: 'Red', path: '/tools/red-background' },
-    { name: 'Abstract', path: '/tools/abstract-background' },
-    { name: 'Halloween', path: '/tools/halloween-background' },
-    { name: 'Christmas', path: '/tools/christmas-background' }
+    { name: 'Black', path: '/free-tools/background-library/black-background' },
+    { name: 'Grey', path: '/free-tools/background-library/grey-background' },
+    { name: 'White', path: '/free-tools/background-library/white-background' },
+    { name: 'Red', path: '/free-tools/background-library/red-background' },
+    { name: 'Abstract', path: '/free-tools/background-library/abstract-background' },
+    { name: 'Halloween', path: '/free-tools/background-library/halloween-background' },
+    { name: 'Christmas', path: '/free-tools/background-library/christmas-background' }
   ];
 
   const backgrounds = [

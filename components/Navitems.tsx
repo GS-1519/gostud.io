@@ -17,27 +17,27 @@ export default function NavItems({ isMobile = false }) {
   }`;
 
   const photoPages = [
-    { href: '/photos/americana-photos', label: 'Americana Photos' },
-    { href: '/photos/annie-photos', label: 'Annie Photos' },
-    { href: '/photos/artistic-photos', label: 'Artistic Photos' },
-    { href: '/photos/barbie-photos', label: 'Barbie Photos' },
-    { href: '/photos/birthday-photos', label: 'Birthday Photos' },
-    { href: '/photos/bold-color-photos', label: 'Bold Color Photos' },
-    { href: '/photos/botanical-photos', label: 'Botanical Photos' },
-    { href: '/photos/date-photos', label: 'Dating Photos' },
-    { href: '/photos/doctor-photos', label: 'Doctor Photos' },
-    { href: '/photos/glamour-shots-photos', label: 'Glamour Photos' },
-    { href: '/photos/health-inspiration-photos', label: 'Health & Fitness' },
-    { href: '/photos/helmut-newton-photos', label: 'Helmut Newton Style' },
-    { href: '/photos/jcrew-photos', label: 'J.Crew Style' },
-    { href: '/photos/lawyer-photos', label: 'Lawyer Photos' },
-    { href: '/photos/linkedin-photos', label: 'LinkedIn Photos' },
-    { href: '/photos/redcarpet', label: 'Red Carpet Photos' },
-    { href: '/photos/speaker', label: 'Speaker Photos' },
-    { href: '/photos/tattos', label: 'Tattoo Photos' },
-    { href: '/photos/vikings', label: 'Vikings Photos' },
-    { href: '/photos/wednesday-addams-photos', label: 'Wednesday Addams' },
-    { href: '/photos/youtube', label: 'Youtube Photos' }
+    // { href: '/photos/americana-photos', label: 'Americana Photos' },
+    // { href: '/photos/annie-photos', label: 'Annie Photos' },
+    // { href: '/photos/artistic-photos', label: 'Artistic Photos' },
+    // { href: '/photos/barbie-photos', label: 'Barbie Photos' },
+    // { href: '/photos/birthday-photos', label: 'Birthday Photos' },
+    // { href: '/photos/bold-color-photos', label: 'Bold Color Photos' },
+    // { href: '/photos/botanical-photos', label: 'Botanical Photos' },
+    // { href: '/photos/date-photos', label: 'Dating Photos' },
+    // { href: '/photos/doctor-photos', label: 'Doctor Headshots' },
+    // { href: '/photos/glamour-shots-photos', label: 'Glamour Photos' },
+    // { href: '/photos/health-inspiration-photos', label: 'Health & Fitness' },
+    // { href: '/photos/helmut-newton-photos', label: 'Helmut Newton Style' },
+    // { href: '/photos/jcrew-photos', label: 'J.Crew Style' },
+    // { href: '/photos/lawyer-photos', label: 'Lawyer Photos' },
+    // { href: '/photos/linkedin-photos', label: 'LinkedIn Photos' },
+    // { href: '/photos/redcarpet', label: 'Red Carpet Photos' },
+    // { href: '/photos/speaker', label: 'Speaker Photos' },
+    // { href: '/photos/tattos', label: 'Tattoo Photos' },
+    // { href: '/photos/vikings', label: 'Vikings Photos' },
+    // { href: '/photos/wednesday-addams-photos', label: 'Wednesday Addams' },
+    // { href: '/photos/youtube', label: 'Youtube Photos' }
   ];
 
   const toolPages = [
@@ -68,7 +68,10 @@ export default function NavItems({ isMobile = false }) {
 
   return (
     <div className={`${isMobile ? 'flex flex-col w-full' : 'flex items-center space-x-4'}`}>
-      <div 
+      <Link href="/" className={linkClass}>
+        AI Headshots
+      </Link>
+      {/* <div 
         className="relative"
         onMouseEnter={() => handleMouseEnter(setShowPhotosDropdown)}
         onMouseLeave={() => handleMouseLeave(setShowPhotosDropdown)}
@@ -77,7 +80,7 @@ export default function NavItems({ isMobile = false }) {
           className={linkClass}
           onClick={() => handleClick(setShowPhotosDropdown, showPhotosDropdown)}
         >
-          Photos {isMobile ? (showPhotosDropdown ? '▼' : '▶') : ''}
+          AI {isMobile ? (showPhotosDropdown ? '▼' : '▶') : ''}
         </button>
         <AnimatePresence>
           {showPhotosDropdown && (
@@ -99,9 +102,9 @@ export default function NavItems({ isMobile = false }) {
             </motion.div>
           )}
         </AnimatePresence>
-      </div>
+      </div> */}
 
-      <div 
+      {/* <div 
         className="relative"
         onMouseEnter={() => handleMouseEnter(setShowToolsDropdown)}
         onMouseLeave={() => handleMouseLeave(setShowToolsDropdown)}
@@ -132,7 +135,7 @@ export default function NavItems({ isMobile = false }) {
             </motion.div>
           )}
         </AnimatePresence>
-      </div>
+      </div> */}
 
       <Link href="/#testimonial" className={linkClass}>
         Testimonial

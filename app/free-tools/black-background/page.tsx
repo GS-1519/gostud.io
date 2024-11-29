@@ -64,9 +64,9 @@ export default async function DoctorPhotos() {
           <div id="ai-headshots">
           <Usage backgroundImage="/Background3.png" />
           </div>
-          <div id="ai-headshots">
+          {/* <div id="ai-headshots">
           <Tools/>
-          </div>
+          </div> */}
        
           
           
