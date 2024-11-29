@@ -10,46 +10,13 @@ const AmericanaHero = () => {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center py-8 sm:py-12">
           <div className="flex flex-col items-center lg:items-start">
-            {/* Notification banner - Made responsive */}
-            <div className="mb-8 w-full max-w-[408px] overflow-hidden">
-              <div 
-                className="relative h-[44px] rounded-[148px] w-full"
-                style={{
-                  background: 'linear-gradient(90deg, #8371FF -39.48%, #A077FE 32.07%, #01C7E4 100%)',
-                  padding: '1px'
-                }}
-              >
-                <div className="absolute inset-0 bg-[#ECF9FF] rounded-[148px] m-[1px]">
-                  <div className="flex items-center h-full px-[12px] py-[8px] gap-[10px]">
-                    <div className="flex-shrink-0 flex h-6 w-6 items-center justify-center rounded-full bg-white">
-                      <Image 
-                        src="/flex.png" 
-                        alt="sparkle" 
-                        width={20} 
-                        height={20} 
-                        className="text-blue-500" 
-                      />
-                    </div>
-                    <div className="w-[341px] h-[20px] overflow-hidden">
-                      <p className="text-[12px] leading-[20px] font-poppins font-medium whitespace-nowrap">
-                        <span className="bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4] bg-clip-text text-transparent">
-                          We just upgraded our Headshot Quality with
-                        </span>
-                        <span className="font-bold text-[#01C7E4]"> Flux Model!</span>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
             {/* Main content - Made responsive */}
             <div className="max-w-[733px] text-center lg:text-left">
               <h1 className="text-[28px] sm:text-[32px] md:text-[36px] lg:text-[40px] font-bold leading-tight flex flex-col gap-2">
                 {/* First row */}
                 <div>
                   <span className="bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4] bg-clip-text text-transparent">
-                  Classic Americana
+                    Classic Americana
                   </span>
                   <span className="text-[#161C2D]"> AI-</span>
                 </div>
@@ -64,7 +31,7 @@ const AmericanaHero = () => {
               </h1>
 
               <p className="mt-6 text-[18px] text-[#4B5563]">
-              Embrace the fierce, timeless look of Viking heritage with AI headshots that channel strength, adventure, and bold tradition.
+                Embrace the fierce, timeless look of Viking heritage with AI headshots that channel strength, adventure, and bold tradition.
               </p>
               {/* Features grid */}
               <div className="mt-8 grid grid-cols-2 gap-2">
