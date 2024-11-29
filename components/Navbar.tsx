@@ -63,7 +63,7 @@ const Navbar: React.FC = () => {
 
   return (
     <div className="mt-1">
-      <nav className="bg-white shadow-sm font-poppins mx-auto px-4 flex flex-col sm:flex-row items-center justify-between" 
+      <nav className="fixed top-0 left-0 right-0 w-full bg-white shadow-sm font-poppins mx-auto px-4 flex flex-col sm:flex-row items-center justify-between mt-[40px] z-50" 
         style={{
           maxWidth: '1276px',
           minHeight: '61px',
