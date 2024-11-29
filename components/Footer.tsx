@@ -61,33 +61,32 @@ const FooterColumn: React.FC<FooterColumnProps> = ({ title, items }) => (
 
 const Footer: React.FC = () => {
   const columns: FooterColumnProps[] = [
-    {
-      title: 'AI Headshots',
-      items: [
-        { text: 'LinkedIn Headshots', href: '/photos/linkedin-photos' },
-        { text: 'J.Crew Style', href: '/photos/jcrew-photos' },
-        { text: 'Health & Fitness', href: '/photos/health-inspiration-photos' },
-        { text: 'Artistic Photos', href: '/photos/artistic-photos' },
-        { text: 'Americana Style', href: '/photos/americana-photos' },
-        { text: 'Annie Style', href: '/photos/annie-photos' },
-        { text: 'Barbie Style', href: '/photos/barbie-photos' },
-        { text: 'Botanical Style', href: '/photos/botanical-photos' },
-        { text: 'Dating Photos', href: '/photos/date-photos' },
-        { text: 'Glamour Shots', href: '/photos/glamour-shots-photos' },
-        { text: 'Lawyer Photos', href: '/photos/lawyer-photos' },
-        { text: 'Helmut Newton', href: '/photos/helmut-newton-photos' },
-        { text: 'Wednesday Addams', href: '/photos/wednesday-addams-photos' },
-        { text: 'Youtube Headshots', href: '/photos/youtube' },
-        { text: 'Redcarpet Headshots', href: '/photos/redcarpet' },
-        { text: 'Speaker Headshots', href: '/photos/speaker' },
-        { text: 'Tattoo Headshots', href: '/photos/tattos' },
-        { text: 'Vikings Headshots', href: '/photos/vikings' }
-      ]
-    },
+    // {
+    //   title: 'AI Headshots',
+    //   items: [
+    //     { text: 'LinkedIn Headshots', href: '/photos/linkedin-photos' },
+    //     { text: 'J.Crew Style', href: '/photos/jcrew-photos' },
+    //     { text: 'Health & Fitness', href: '/photos/health-inspiration-photos' },
+    //     { text: 'Artistic Photos', href: '/photos/artistic-photos' },
+    //     { text: 'Americana Style', href: '/photos/americana-photos' },
+    //     { text: 'Annie Style', href: '/photos/annie-photos' },
+    //     { text: 'Barbie Style', href: '/photos/barbie-photos' },
+    //     { text: 'Botanical Style', href: '/photos/botanical-photos' },
+    //     { text: 'Dating Photos', href: '/photos/date-photos' },
+    //     { text: 'Glamour Shots', href: '/photos/glamour-shots-photos' },
+    //     { text: 'Lawyer Photos', href: '/photos/lawyer-photos' },
+    //     { text: 'Helmut Newton', href: '/photos/helmut-newton-photos' },
+    //     { text: 'Wednesday Addams', href: '/photos/wednesday-addams-photos' },
+    //     { text: 'Youtube Headshots', href: '/photos/youtube' },
+    //     { text: 'Redcarpet Headshots', href: '/photos/redcarpet' },
+    //     { text: 'Speaker Headshots', href: '/photos/speaker' },
+    //     { text: 'Tattoo Headshots', href: '/photos/tattos' },
+    //     { text: 'Vikings Headshots', href: '/photos/vikings' }
+    //   ]
+    // },
     {
       title: 'Background Library',
       items: [
-        { text: 'Background Library', href: '/free-tools/background-library' },
         { text: 'Christmas Background', href: '/free-tools/christmas-background' },
         { text: 'Halloween Background', href: '/free-tools/halloween-background' },
         { text: 'Abstract Background', href: '/free-tools/abstract-background' },

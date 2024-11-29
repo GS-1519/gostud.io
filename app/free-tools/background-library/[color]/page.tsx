@@ -118,7 +118,7 @@ export default async function ColorBackground({ params }: Props) {
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-[82px]">
         <div className="w-full max-w-[1276px] mx-auto space-y-12">
           <HeroComponent />
-          <Tools />
+          {/* <Tools /> */}
           <FAQSection />
           <Banner />
         </div>
