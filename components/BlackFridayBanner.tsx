@@ -9,9 +9,9 @@ const BlackFridayBanner = () => {
   if (!isVisible) return null
 
   return (
-    <div className="fixed top-0 left-0 w-full z-50 bg-black text-white">
+    <div className="fixed top-0 left-0 right-0 w-full bg-black text-white z-[60]">
       <div className="max-w-7xl mx-auto px-3 py-2 flex items-center justify-between">
-        <div className="flex-1" /> {/* Spacer */}
+        <div className="flex-1" />
         <div className="text-center flex items-center space-x-2">
           <span className="hidden sm:inline">🎉</span>
           <p className="text-sm sm:text-base font-medium">
@@ -32,9 +32,9 @@ const BlackFridayBanner = () => {
             className="text-gray-400 hover:text-white p-1"
             aria-label="Close banner"
           >
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            {/* <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
+            </svg> */}
           </button>
         </div>
       </div>
