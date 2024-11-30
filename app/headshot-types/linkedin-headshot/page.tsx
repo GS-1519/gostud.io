@@ -5,19 +5,16 @@ import type { Metadata } from 'next'
 import Works from "@/components/Works";
 import Why from "@/components/Why";
 import ReviewSection from "@/components/HeadshotReviewSection";
-import PricingSection from "@/components/PricingSection";
-import FAQSection from "@/components/Question";
 import Footer from "@/components/Footer";
 import Banner from "@/components/Banner";
-
 import LinkedlnHero from "@/components/LinkedlnHero";
 
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
   title: 'Professional LinkedIn Headshots | AI-Powered Business Portraits',
-  description: 'Create professional LinkedIn profile photos in minutes. Get AI-powered business headshots that make you stand out. Perfect for executives, entrepreneurs, and professionals.',
-  keywords: 'linkedin headshots, professional profile picture, business portrait, corporate headshot, AI headshot, professional photo',
+  description: 'Create professional LinkedIn profile photos in minutes. Get AI-powered business headshots that make you stand out.',
+  keywords: 'linkedin headshots, professional profile picture, business portrait, corporate headshot',
   openGraph: {
     title: 'Professional LinkedIn Headshots | AI-Powered Business Portraits',
     description: 'Create professional LinkedIn profile photos that make you stand out',
@@ -30,7 +27,7 @@ export const metadata: Metadata = {
     }],
   },
   alternates: {
-    canonical: 'https://www.gostudio.ai/photos/linkedin-photos'
+    canonical: 'https://www.gostudio.ai/headshot-types/linkedin-headshot'
   }
 }
 
@@ -59,13 +56,7 @@ export default async function LinkedInPhotos() {
           <div id="testimonial">
             <ReviewSection/>
           </div>
-          <div id="pricing">
-            <PricingSection user={user} />
-          </div>
-        
-          <div id="faq">
-            <FAQSection />
-          </div>
+         
           <div>
             <Banner/>
           </div>

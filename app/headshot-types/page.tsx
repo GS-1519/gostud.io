@@ -13,32 +13,27 @@ import Banner from "@/components/Banner";
 import TypesHero from "@/components/TypesHero";
 export const dynamic = "force-dynamic";
 
-
 export const metadata: Metadata = {
-  title: '[Style] Portrait Photography | Professional AI Photos',
-  description: 'Create stunning [style] portraits with AI photography. Perfect for [specific use case] and professional photos.',
-  keywords: '[style] photos, professional portraits, AI photography, [style] photography, custom portraits, professional headshots',
+  title: 'Professional AI Headshot Types | Choose Your Perfect Style',
+  description: 'Explore our diverse collection of AI-powered headshot styles. From business professional to creative portraits, find the perfect look for your needs.',
+  keywords: 'AI headshots, professional portraits, headshot styles, business photos, professional photography, portrait types',
   openGraph: {
-    title: '[Style] Portrait Photography | Professional AI Photos',
-    description: 'Create stunning [style] portraits with our AI photography studio',
+    title: 'Professional AI Headshot Types | Choose Your Perfect Style',
+    description: 'Explore our diverse collection of AI-powered headshot styles',
     type: 'website',
     images: [{
-      url: '/og/[style]-photos.jpg',
+      url: '/og/headshot-types.jpg',
       width: 1200,
       height: 630,
-      alt: '[Style] Portrait Photography'
+      alt: 'Professional AI Headshot Types'
     }],
   },
   alternates: {
-    canonical: 'https://www.gostudio.ai/photos/[style]-photos'
+    canonical: 'https://www.gostudio.ai/headshot-types'
   }
 }
 
-
-
-// Rest of your page component code...
-
-export default async function DoctorPhotos() {
+export default async function HeadshotTypes() {
   const supabase = createServerComponentClient({ cookies });
 
   const {
@@ -64,7 +59,6 @@ export default async function DoctorPhotos() {
           <div id="pricing">
             <PricingSection user={user} />
           </div>
-         
           <div id="faq">
             <FAQSection />
           </div>
