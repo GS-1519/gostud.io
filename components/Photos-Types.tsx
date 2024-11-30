@@ -13,28 +13,28 @@ const PhotosHero = () => {
       link: '/photos/americana-photos'
     },
     {
-      title: 'Doctor Photos',
-      description: 'Professional portraits for healthcare professionals and medical practices',
-      image: '/Packs/Types/doctor.jpg',
-      link: '/photos/doctor-photos'
+      title: 'Onesie Photos',
+      description: 'Adorable portraits for babies and toddlers',
+      image: '/Packs/Types/onesis.jpg',
+      link: '/photos/everyday-onesie-photos'
     },
     {
-      title: 'Lawyer Photos',
-      description: 'Professional portraits for legal professionals and law firms',
-      image: '/Packs/Types/lawyer.jpg',
-      link: '/photos/lawyer-photos'
+      title: 'Halloween Photos',
+      description: 'Spooky and fun portraits for Halloween enthusiasts',
+      image: '/Packs/Types/halloween.jpg',
+      link: '/photos/halloween-photos'
     },
     {
-      title: 'Glamour Photos',
-      description: 'Stunning portraits for fashion and beauty portfolios',
-      image: '/Packs/Types/glamour.jpg',
-      link: '/photos/glamour-photos'
+      title: 'Helmut Newton Photos',
+      description: 'Sleek and provocative portraits inspired by Helmut Newton\'s style',
+      image: '/Packs/Types/helmut.jpg',
+      link: '/photos/helmut-newton-photos'
     },
     {
-      title: 'Bold Color Photos',
-      description: 'Vibrant portraits with bold, striking colors',
-      image: '/Packs/Types/bold.jpg',
-      link: '/photos/bold-color-photos'
+      title: 'J.Crew Photos',
+      description: 'Classic and stylish portraits inspired by J.Crew\'s aesthetic',
+      image: '/Packs/Types/jcrew.jpg',
+      link: '/photos/jcrew-photos'
     },
     {
       title: 'Dating Profile Photos',
@@ -67,12 +67,7 @@ const PhotosHero = () => {
       link: '/photos/red-carpet-photos'
     },
    
-    {
-      title: 'Helmut Newton Photos',
-      description: 'Sleek and provocative portraits inspired by Helmut Newton\'s style',
-      image: '/Packs/Types/helmut.jpg',
-      link: '/photos/helmut-newton-photos'
-    }
+  
   ];
 
   const [showAll, setShowAll] = useState(false);

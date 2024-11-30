@@ -62,51 +62,51 @@ const FooterColumn: React.FC<FooterColumnProps> = ({ title, items }) => (
 const Footer: React.FC = () => {
   const columns: FooterColumnProps[] = [
     {
-      title: 'AI Headshots',
+      title: 'Photos',
       items: [
-        { text: 'J.Crew Style', href: '/photos/jcrew-photos' },
-        { text: 'Health & Fitness', href: '/photos/health-inspiration-photos' },
-        { text: 'Artistic Photos', href: '/photos/artistic-photos' },
         { text: 'Americana Photos', href: '/photos/americana-photos' },
-        { text: 'Annie Photos', href: '/photos/annie-photos' },
-        { text: 'Barbie Photos', href: '/photos/barbie-photos' },
-        { text: 'Botanical Photos', href: '/photos/botanical-photos' },
-        { text: 'Dating Photos', href: '/photos/dating-photos' },
-        { text: 'Save-The-HBD-Photos', href: '/photos/date-photos' },
-        { text: 'Glamour Photos', href: '/photos/glamour-photos' },
-        { text: 'Lawyer Photos', href: '/photos/lawyer-photos' },
-        { text: 'Helmut Newton Style', href: '/photos/helmut-newton-photos' },
-        { text: 'Wednesday Addams', href: '/photos/wednesday-addams-photos' },
-        { text: 'Youtube Photos', href: '/photos/youtube-reaction-photos' },
-        { text: 'Red Carpet Photos', href: '/photos/red-carpet-photos' },
-        { text: 'Speaker Photos', href: '/photos/speaker-photos' },
-        { text: 'Tattoo Photos', href: '/photos/tattoos-photos' },
-        { text: 'Vikings Photos', href: '/photos/viking-photos' }
+        { text: 'Onesie Photos', href: '/photos/everyday-onesie-photos' },
+        { text: 'Halloween Photos', href: '/photos/halloween-photos' },
+        { text: 'Helmut Newton Photos', href: '/photos/helmut-newton-photos' },
+        { text: 'J.Crew Photos', href: '/photos/jcrew-photos' },
+        { text: 'Dating Profile Photos', href: '/photos/dating-photos' },
+        { text: 'Realtor Photos', href: '/photos/realtor-photos' },
+        { text: 'Artistic Photos', href: '/photos/artistic-photos' },
+        { text: 'Wrestlemania Photos', href: '/photos/wrestlemania-photos' },
+        { text: 'Red Carpet Photos', href: '/photos/red-carpet-photos' }
       ]
     },
     {
-      title: 'Background Library',
+      title: 'AI Headshots',
+      items: [
+        { text: 'LinkedIn Headshots', href: '/headshot-types/linkedin-headshot' },
+        { text: 'Doctor Headshots', href: '/headshot-types/doctor-headshot' },
+        { text: 'Lawyer Headshots', href: '/headshot-types/lawyer-headshot' },
+        { text: 'Glamour Headshots', href: '/headshot-types/glamour-headshot' },
+        { text: 'Bold Color Headshots', href: '/headshot-types/bold-color-headshot' },
+        { text: 'Tattoo Headshots', href: '/headshot-types/tattoos-headshot' },
+        { text: 'Annie Leibovitz Style', href: '/headshot-types/annie-headshot' },
+        { text: 'Barbie Style', href: '/headshot-types/barbie-headshot' },
+        { text: 'Viking Style', href: '/headshot-types/viking-headshot' }
+      ]
+    },
+    {
+      title: 'Free Tools',
       items: [
         { text: 'Background Library', href: '/free-tools/background-library' },
-        { text: 'Christmas Background', href: '/free-tools/christmas-background' },
-        { text: 'Halloween Background', href: '/free-tools/halloween-background' },
-        { text: 'Abstract Background', href: '/free-tools/abstract-background' },
+        { text: 'Black Background', href: '/free-tools/black-background' },
+        { text: 'Grey Background', href: '/free-tools/grey-background' },
         { text: 'Red Background', href: '/free-tools/red-background' },
-        { text: 'Grey Background', href: '/free-tools/grey-background' }
+        { text: 'White Background', href: '/free-tools/white-background' }
       ]
     },
     {
       title: 'Company',
       items: [
-        { text: 'Contact Us', href: 'hello@gostudio.ai', isEmail: true }
-      ]
-    },
-    {
-      title: 'Legal',
-      items: [
-        { text: 'Terms Policy', href: '/terms' },
-        { text: 'Privacy Policy', href: '/privacy' },
-        { text: 'Refund Policy', href: '/refund' }
+        { text: 'About Us', href: '/about' },
+        { text: 'Contact', href: '/contact', isEmail: true },
+        { text: 'Privacy Policy', href: '/privacy-policy' },
+        { text: 'Terms of Service', href: '/terms-of-service' }
       ]
     }
   ];
