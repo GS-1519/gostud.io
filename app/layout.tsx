@@ -10,6 +10,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next'
 import ClarityScript from "@/components/ClarityScript";
 import GoogleTagManager from "@/components/GoogleTagManager";
 import 'react-tabs/style/react-tabs.css';
+import BlackFridayBanner from '@/components/BlackFridayBanner'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://gostudio.ai'),
@@ -30,6 +31,7 @@ export default function RootLayout({ children }: any) {
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <meta name="apple-mobile-web-app-title" content="GoStudio" />
         <link rel="manifest" href="/site.webmanifest" />
+        <meta name="msvalidate.01" content="1EBFA7B1A8C0B11490CBE5476B33271C" />
       </head>
       <body className="flex flex-col bg-[#F4F7FA] min-h-screen w-full overflow-x-hidden font-[Poppins]">
         <GoogleTagManager />
@@ -37,7 +39,10 @@ export default function RootLayout({ children }: any) {
         <Navbar />
         <CSPostHogProvider>
           <main className="flex-1 flex flex-col w-full">
-            {children}
+            <BlackFridayBanner />
+            <div className="pt-[32px] sm:pt-[36px]">
+              {children}
+            </div>
           </main>
         </CSPostHogProvider>
         <FooterWrapper />

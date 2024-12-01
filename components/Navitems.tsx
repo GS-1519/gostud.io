@@ -66,7 +66,10 @@ export default function NavItems({ isMobile = false }) {
 
   return (
     <div className={`${isMobile ? 'flex flex-col w-full' : 'flex items-center space-x-4'}`}>
-      <div 
+      <Link href="/" className={linkClass}>
+        AI Headshots
+      </Link>
+      {/* <div 
         className="relative"
         onMouseEnter={() => handleMouseEnter(setShowPhotosDropdown)}
         onMouseLeave={() => handleMouseLeave(setShowPhotosDropdown)}
@@ -75,7 +78,7 @@ export default function NavItems({ isMobile = false }) {
           className={linkClass}
           onClick={() => handleClick(setShowPhotosDropdown, showPhotosDropdown)}
         >
-          Photos {isMobile ? (showPhotosDropdown ? '▼' : '▶') : ''}
+          AI {isMobile ? (showPhotosDropdown ? '▼' : '▶') : ''}
         </button>
         <AnimatePresence>
           {showPhotosDropdown && (
@@ -163,7 +166,7 @@ export default function NavItems({ isMobile = false }) {
             </motion.div>
           )}
         </AnimatePresence>
-      </div>
+      </div> */}
 
       <Link href="/#testimonial" className={linkClass}>
         Testimonial
