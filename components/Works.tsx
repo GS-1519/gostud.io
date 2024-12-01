@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface WorksProps {
   image1?: string;
@@ -95,11 +96,13 @@ const Works = ({ image1 = '/Frame.png', image2 = '/Group1.png', image3 = '/Group
         </div>
 
         {/* CTA Button */}
-        <div className="text-center mt-6 sm:mt-8 md:mt-10">
-          <button className="w-full sm:w-auto px-6 sm:px-8 py-2.5 sm:py-3 bg-[#5B16FE] text-white rounded-full hover:bg-opacity-90 transition-all text-sm sm:text-base flex items-center justify-center mx-auto">
-            Get Started
-            <span className="ml-2">→</span>
-          </button>
+        <div className="text-center mt-8 sm:mt-12 lg:mt-16">
+          <Link 
+            href="/get-started" 
+            className="inline-block bg-[#5B16FE] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg hover:bg-opacity-90 transition-all"
+          >
+            Get Your Headshot now →
+          </Link>
         </div>
       </section>
     </div>

@@ -7,19 +7,19 @@ import tick from "@/public/logo/tick.svg"
 
 const BotanicalHero = () => {
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative overflow-hidden pt-16 lg:pt- sm:pt-15">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-center py-6 sm:py-8 md:py-12">
-          <div className="flex flex-col items-center lg:items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-center py-6 sm:py-8 md:py-12 lg:py-8">
+      <div className="flex flex-col items-center lg:items-start">
             <div className="max-w-[733px] text-center lg:text-left px-2 sm:px-0">
               <h1 className="text-[24px] sm:text-[28px] md:text-[36px] lg:text-[40px] font-bold leading-tight flex flex-col gap-2 sm:gap-3">
-                <div className="flex flex-wrap justify-center lg:justify-start items-center gap-x-1">
-                  <span className="text-[#161C2D] break-words sm:whitespace-nowrap">
-                    Nature's Beauty AI Headshots
-                  </span>
+                <div className="flex flex-wrap justify-center lg:justify-start items-center">
+                  <span className="text-[#161C2D]">Nature's Beauty AI</span>
                 </div>
-                <div className="flex flex-wrap justify-center lg:justify-start items-center gap-x-1">
-                  <span className="text-[#161C2D]">with </span>
+                <div className="flex flex-wrap justify-center lg:justify-start items-center">
+                  <span className="text-[#161C2D]">Headshots with</span>
+                </div>
+                <div className="flex flex-wrap justify-center lg:justify-start">
                   <span className="bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4] bg-clip-text text-transparent">
                     Botanical Illustrations
                   </span>
@@ -30,28 +30,28 @@ const BotanicalHero = () => {
                 Embrace the elegance of nature with AI-generated portraits enhanced by delicate, botanical illustration elements.
               </p>
 
-              <div className="mt-6 sm:mt-8 grid grid-cols-2 gap-3 sm:gap-4 max-w-[600px] mx-auto lg:mx-0">
-                <div className="flex items-center gap-2">
-                  <div className="rounded-full bg-[#F3E8FF] p-1.5 sm:p-2 flex-shrink-0">
-                    <Image src={mdi} alt="mdi" width={16} height={16} className="sm:w-5 sm:h-5" />
+              <div className="mt-6 sm:mt-8 grid grid-cols-2 gap-2 sm:gap-3 max-w-[600px] mx-auto lg:mx-0">
+                <div className="flex items-center gap-1.5">
+                  <div className="rounded-full p-1 sm:p-1.5 flex-shrink-0">
+                    <Image src={mdi} alt="mdi" width={20} height={20} className="w-6 h-6 sm:w-7 sm:h-7" />
                   </div>
                   <span className="text-[#4B5563] text-xs sm:text-sm">Pick from 150+ styles</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <div className="rounded-full bg-[#F3E8FF] p-1.5 sm:p-2 flex-shrink-0">
-                    <Image src={circul} alt="clock" width={16} height={16} className="sm:w-5 sm:h-5" />
+                <div className="flex items-center gap-1.5">
+                  <div className="rounded-full p-1 sm:p-1.5 flex-shrink-0">
+                    <Image src={circul} alt="clock" width={20} height={20} className="w-6 h-6 sm:w-7 sm:h-7" />
                   </div>
                   <span className="text-[#4B5563] text-xs sm:text-sm">Done in less than 1hr</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <div className="rounded-full bg-[#F3E8FF] p-1.5 sm:p-2 flex-shrink-0">
-                    <Image src={lock} alt="lock" width={16} height={16} className="sm:w-5 sm:h-5" />
+                <div className="flex items-center gap-1.5">
+                  <div className="rounded-full p-1 sm:p-1.5 flex-shrink-0">
+                    <Image src={lock} alt="lock" width={20} height={20} className="w-6 h-6 sm:w-7 sm:h-7" />
                   </div>
-                  <span className="text-[#4B5563] text-xs sm:text-sm">Strict data protection</span>
+                  <span className="text-[#4B5563] text-xs sm:text-sm whitespace-nowrap">Strict data protection</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <div className="rounded-full bg-[#F3E8FF] p-1.5 sm:p-2 flex-shrink-0">
-                    <Image src={tick} alt="tick" width={16} height={16} className="sm:w-5 sm:h-5" />
+                <div className="flex items-center gap-1.5">
+                  <div className="rounded-full p-1 sm:p-1.5 flex-shrink-0">
+                    <Image src={tick} alt="tick" width={20} height={20} className="w-6 h-6 sm:w-7 sm:h-7" />
                   </div>
                   <span className="text-[#4B5563] text-xs sm:text-sm">Guaranteed results</span>
                 </div>
@@ -72,7 +72,7 @@ const BotanicalHero = () => {
               alt="Botanical AI Portrait Examples"
               fill
               className="object-contain lg:object-right"
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 30vw"
               priority
             />
           </div>

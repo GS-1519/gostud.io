@@ -7,9 +7,9 @@ import tick from "@/public/logo/tick.svg"
 
 const AnnieHero = () => {
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative pt-20 sm:pt-12">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 items-center py-4 sm:py-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-5 items-center py-8 sm:py-8">
           <div className="flex flex-col items-center lg:items-start">
             <div className="max-w-[733px] text-center lg:text-left px-2 sm:px-0">
               <h1 className="text-[24px] sm:text-[32px] md:text-[36px] lg:text-[40px] font-bold leading-tight">
@@ -27,26 +27,26 @@ const AnnieHero = () => {
               
               <div className="mt-6 sm:mt-8 grid grid-cols-2 gap-3 sm:gap-4 max-w-[600px] mx-auto lg:mx-0">
                 <div className="flex items-center gap-2">
-                  <div className="rounded-full bg-[#F3E8FF] p-1.5 sm:p-2 flex-shrink-0">
-                    <Image src={mdi} alt="mdi" width={16} height={16} className="sm:w-5 sm:h-5" />
+                  <div className="rounded-full  p-1.5 sm:p-2 flex-shrink-0">
+                    <Image src={mdi} alt="mdi" width={20} height={20} className="sm:w-5 sm:h-5" />
                   </div>
-                  <span className="text-[#4B5563] text-xs sm:text-sm">Pick from 150+ styles</span>
+                  <span className="text-[#4B5563] text-xs sm:text-sm whitespace-nowrap">Pick from 150+ styles</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <div className="rounded-full bg-[#F3E8FF] p-1.5 sm:p-2 flex-shrink-0">
-                    <Image src={circul} alt="clock" width={16} height={16} className="sm:w-5 sm:h-5" />
+                  <div className="rounded-full  p-1.5 sm:p-2 flex-shrink-0">
+                    <Image src={circul} alt="clock" width={20} height={20} className="sm:w-5 sm:h-5" />
                   </div>
-                  <span className="text-[#4B5563] text-xs sm:text-sm">Done in less than 1hr</span>
+                  <span className="text-[#4B5563] text-xs sm:text-sm whitespace-nowrap">Done in less than 1hr</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <div className="rounded-full bg-[#F3E8FF] p-1.5 sm:p-2 flex-shrink-0">
-                    <Image src={lock} alt="lock" width={16} height={16} className="sm:w-5 sm:h-5" />
+                  <div className="rounded-full  p-1.5 sm:p-2 flex-shrink-0">
+                    <Image src={lock} alt="lock" width={20} height={20} className="sm:w-5 sm:h-5" />
                   </div>
-                  <span className="text-[#4B5563] text-xs sm:text-sm">Strict data protection</span>
+                  <span className="text-[#4B5563] text-xs sm:text-sm whitespace-nowrap">Strict data protection</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <div className="rounded-full bg-[#F3E8FF] p-1.5 sm:p-2 flex-shrink-0">
-                    <Image src={tick} alt="tick" width={16} height={16} className="sm:w-5 sm:h-5" />
+                  <div className="rounded-full  p-1.5 sm:p-2 flex-shrink-0">
+                    <Image src={tick} alt="tick" width={20} height={20} className="sm:w-5 sm:h-5" />
                   </div>
                   <span className="text-[#4B5563] text-xs sm:text-sm">Guaranteed results</span>
                 </div>
@@ -61,7 +61,7 @@ const AnnieHero = () => {
             </div>
           </div>
 
-          <div className="relative h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px] w-full mt-4 lg:mt-0">
+          <div className="relative h-[300px] sm:h-[300px] md:h-[400px] lg:h-[500px] w-full mt-8 lg:mt-0">
             <Image
               src="/annie.png"
               alt="Birthday portraits showcase"

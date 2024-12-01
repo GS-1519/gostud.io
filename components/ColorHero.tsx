@@ -7,114 +7,77 @@ import tick from "@/public/logo/tick.svg"
 
 const ColorHero = () => {
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative overflow-hidden pt-16 lg:pt- sm:pt-15">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center py-8 sm:py-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-center py-6 sm:py-8 md:py-12 lg:py-8">
           <div className="flex flex-col items-center lg:items-start">
-            {/* Notification banner */}
-            <div className="mb-8 w-full max-w-[408px] overflow-hidden">
-              <div 
-                className="relative h-[44px] rounded-[148px] w-full"
-                style={{
-                  background: 'linear-gradient(90deg, #8371FF -39.48%, #A077FE 32.07%, #01C7E4 100%)',
-                  padding: '1px'
-                }}
-              >
-                <div className="absolute inset-0 bg-[#ECF9FF] rounded-[148px] m-[1px]">
-                  <div className="flex items-center h-full px-[12px] py-[8px] gap-[10px]">
-                    <div className="flex-shrink-0 flex h-6 w-6 items-center justify-center rounded-full bg-white">
-                      <Image 
-                        src="/flex.png" 
-                        alt="sparkle" 
-                        width={20} 
-                        height={20} 
-                        className="text-blue-500" 
-                      />
-                    </div>
-                    <div className="w-[341px] h-[20px] overflow-hidden">
-                      <p className="text-[12px] leading-[20px] font-poppins font-medium whitespace-nowrap">
-                        <span className="bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4] bg-clip-text text-transparent">
-                          We just upgraded our Headshot Quality with
-                        </span>
-                        <span className="font-bold text-[#01C7E4]"> Flux Model!</span>
-                      </p>
-                    </div>
-                  </div>
+            <div className="max-w-[733px] text-center lg:text-left px-2 sm:px-0">
+              {/* Updated heading structure */}
+              <h1 className="text-[24px] sm:text-[28px] md:text-[36px] lg:text-[40px] font-bold leading-tight flex flex-col gap-2 sm:gap-3">
+                <div className="flex flex-wrap justify-center lg:justify-start items-center">
+                  <span className="bg-[linear-gradient(90deg,_#8371FF_-39.48%,_#A077FE_32.07%)] bg-clip-text text-transparent">
+                    Vibrant and Bold
+                  </span>
+                  <span className="text-[#111827] ml-2">AI-</span>
                 </div>
-              </div>
-            </div>
-
-            {/* Main content */}
-            <div className="max-w-[733px] text-center lg:text-left">
-              <h1 className="text-[28px] sm:text-[32px] md:text-[36px] lg:text-[40px] font-bold leading-tight">
-                <span className="bg-[linear-gradient(90deg,_#8371FF_-39.48%,_#A077FE_32.07%)] bg-clip-text text-transparent">
-                  Vibrant and Bold
-                </span>
-                {' '}
-                <span className="text-[#111827]">
-                  AI-Enhanced Headshots
-                </span>
-                {' '}
-                <span className="text-[#111827]">
-                  in Bold Color
-                </span>
+                <div className="flex flex-wrap justify-center lg:justify-start items-center">
+                  <span className="text-[#111827]">Enhanced Headshots</span>
+                </div>
+                <div className="flex flex-wrap justify-center lg:justify-start">
+                  <span className="text-[#111827]">in Bold Color</span>
+                </div>
               </h1>
 
-              <p className="mt-4 text-base sm:text-lg text-[#4B5563]">
+              <p className="mt-4 sm:mt-6 text-base sm:text-lg text-[#4B5563] max-w-[600px] mx-auto lg:mx-0">
                 Stand out with AI-generated headshots that embrace striking, vibrant hues to make a bold statement.
               </p>
 
-              {/* Features grid */}
-              <div className="mt-8 flex flex-col gap-4 max-w-[600px] mx-auto lg:mx-0">
-                <div className="grid grid-cols-2 gap-4 sm:gap-[16px]">
-                  <div className="flex items-center gap-2">
-                    <div className="rounded-full bg-[#F3E8FF] p-2">
-                      <Image src={mdi} alt="mdi" width={16} height={16} className="text-[#8B5CF6]" />
-                    </div>
-                    <span className="text-[#4B5563] text-sm">Pick from 150+ styles</span>
+              {/* Updated features grid */}
+              <div className="mt-6 sm:mt-8 grid grid-cols-2 gap-2 sm:gap-3 max-w-[600px] mx-auto lg:mx-0">
+                <div className="flex items-center gap-1.5">
+                  <div className="rounded-full p-1 sm:p-1.5 flex-shrink-0">
+                    <Image src={mdi} alt="mdi" width={20} height={20} className="w-6 h-6 sm:w-7 sm:h-7" />
                   </div>
-                  <div className="flex items-center gap-2">
-                    <div className="rounded-full bg-[#F3E8FF] p-2">
-                      <Image src={circul} alt="circul" width={16} height={16} className="text-[#8B5CF6]" />
-                    </div>
-                    <span className="text-[#4B5563] text-sm">Done in less than 1 hr</span>
-                  </div>
+                  <span className="text-[#4B5563] text-xs sm:text-sm">Pick from 150+ styles</span>
                 </div>
-                
-                <div className="grid grid-cols-2 gap-4 sm:gap-[16px]">
-                  <div className="flex items-center gap-2">
-                    <div className="rounded-full bg-[#F3E8FF] p-2">
-                      <Image src={lock} alt="lock" width={16} height={16} className="text-[#8B5CF6]" />
-                    </div>
-                    <span className="text-[#4B5563] text-sm">Strict data protection</span>
+                <div className="flex items-center gap-1.5">
+                  <div className="rounded-full p-1 sm:p-1.5 flex-shrink-0">
+                    <Image src={circul} alt="clock" width={20} height={20} className="w-6 h-6 sm:w-7 sm:h-7" />
                   </div>
-                  <div className="flex items-center gap-2">
-                    <div className="rounded-full bg-[#F3E8FF] p-2">
-                      <Image src={tick} alt="tick" width={16} height={16} className="text-[#8B5CF6]" />
-                    </div>
-                    <span className="text-[#4B5563] text-sm">Guaranteed results</span>
+                  <span className="text-[#4B5563] text-xs sm:text-sm">Done in less than 1hr</span>
+                </div>
+                <div className="flex items-center gap-1.5">
+                  <div className="rounded-full p-1 sm:p-1.5 flex-shrink-0">
+                    <Image src={lock} alt="lock" width={20} height={20} className="w-6 h-6 sm:w-7 sm:h-7" />
                   </div>
+                  <span className="text-[#4B5563] text-xs sm:text-sm whitespace-nowrap">Strict data protection</span>
+                </div>
+                <div className="flex items-center gap-1.5">
+                  <div className="rounded-full p-1 sm:p-1.5 flex-shrink-0">
+                    <Image src={tick} alt="tick" width={20} height={20} className="w-6 h-6 sm:w-7 sm:h-7" />
+                  </div>
+                  <span className="text-[#4B5563] text-xs sm:text-sm">Guaranteed results</span>
                 </div>
               </div>
 
-              {/* Button */}
-              <button className="mt-8 rounded-full bg-[#5B16FE] px-6 py-3 text-white flex items-center gap-2 mx-auto lg:mx-0">
-                Get Started For Free
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M4.16666 10H15.8333" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                  <path d="M10 4.16666L15.8333 10L10 15.8333" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </button>
+              {/* Updated button */}
+              <div className="mt-6 sm:mt-8 flex justify-center lg:justify-start">
+                <button className="w-fit rounded-full bg-[#5B16FE] px-2.5 py-1.5 sm:px-4 sm:py-2.5 lg:px-6 lg:py-3 text-xs sm:text-sm lg:text-base text-white flex items-center justify-center sm:inline-flex gap-2 hover:bg-opacity-90 transition-all">
+                  Get Started For Free
+                  <span className="ml-1 sm:ml-2">→</span>
+                </button>
+              </div>
             </div>
           </div>
 
-          {/* Right side image */}
-          <div className="relative h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] w-full mt-8 lg:mt-0">
+          {/* Updated image container */}
+          <div className="relative h-[250px] sm:h-[350px] md:h-[450px] lg:h-[600px] w-full mt-6 lg:mt-0 lg:translate-x-18">
             <Image
               src="/Bold.svg"
               alt="Dating app screenshots"
               fill
               className="object-contain lg:object-right"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 30vw"
               priority
             />
           </div>
