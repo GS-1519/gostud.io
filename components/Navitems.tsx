@@ -66,42 +66,6 @@ export default function NavItems({ isMobile = false }) {
 
   return (
     <div className={`${isMobile ? 'flex flex-col w-full' : 'flex items-center space-x-4'}`}>
-      <Link href="/" className={linkClass}>
-        AI Headshots
-      </Link>
-      {/* <div 
-        className="relative"
-        onMouseEnter={() => handleMouseEnter(setShowPhotosDropdown)}
-        onMouseLeave={() => handleMouseLeave(setShowPhotosDropdown)}
-      >
-        <button 
-          className={linkClass}
-          onClick={() => handleClick(setShowPhotosDropdown, showPhotosDropdown)}
-        >
-          AI {isMobile ? (showPhotosDropdown ? '▼' : '▶') : ''}
-        </button>
-        <AnimatePresence>
-          {showPhotosDropdown && (
-            <motion.div 
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              className={dropdownClass}
-            >
-              {photoPages.map((page) => (
-                <Link 
-                  key={page.href} 
-                  href={page.href} 
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600"
-                >
-                  {page.label}
-                </Link>
-              ))}
-            </motion.div>
-          )}
-        </AnimatePresence>
-      </div>
-
       <div 
         className="relative"
         onMouseEnter={() => handleMouseEnter(setShowHeadshotsDropdown)}
@@ -122,6 +86,39 @@ export default function NavItems({ isMobile = false }) {
               className={dropdownClass}
             >
               {headshotPages.map((page) => (
+                <Link 
+                  key={page.href} 
+                  href={page.href} 
+                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 hover:text-purple-600"
+                >
+                  {page.label}
+                </Link>
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+
+      <div 
+        className="relative"
+        onMouseEnter={() => handleMouseEnter(setShowPhotosDropdown)}
+        onMouseLeave={() => handleMouseLeave(setShowPhotosDropdown)}
+      >
+        <button 
+          className={linkClass}
+          onClick={() => handleClick(setShowPhotosDropdown, showPhotosDropdown)}
+        >
+          AI Photos {isMobile ? (showPhotosDropdown ? '▼' : '▶') : ''}
+        </button>
+        <AnimatePresence>
+          {showPhotosDropdown && (
+            <motion.div 
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              className={dropdownClass}
+            >
+              {photoPages.map((page) => (
                 <Link 
                   key={page.href} 
                   href={page.href} 
@@ -166,7 +163,7 @@ export default function NavItems({ isMobile = false }) {
             </motion.div>
           )}
         </AnimatePresence>
-      </div> */}
+      </div>
 
       <Link href="/#testimonial" className={linkClass}>
         Testimonial

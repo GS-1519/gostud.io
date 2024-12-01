@@ -60,55 +60,6 @@ const TypesHero = () => {
       image: '/Packs/Types/vings.jpg',
       link: '/headshot-types/viking-headshot'
     },
-    {
-      title: 'Botanical-headshot',
-      description: 'Elegant portraits with botanical and natural elements for a fresh, organic look.',
-      image: '/Packs/Types/botnical.jpg',
-      link: '/headshot-types/botanical-headshot'
-    },
-    {
-      title: 'Halloween-headshot',
-      description: 'Spooky and creative Halloween-themed portraits perfect for seasonal content.',
-      image: '/Packs/Types/halloween.jpg',
-      link: '/headshot-types/halloween-headshot'
-    },
-    {
-      title: 'Wrestlemania Style',
-      description: 'Dynamic wrestling-inspired portraits capturing strength and character.',
-      image: '/Packs/Types/wresmania.jpg',
-      link: '/headshot-types/wrestlemania-headshot'
-    },
-    {
-      title: 'Wednesday Addams Style',
-      description: 'Gothic and mysterious portraits inspired by Wednesday Addams.',
-      image: '/Packs/Types/wednesday.jpg',
-      link: '/headshot-types/wednesday-addams-headshot'
-    },
-    {
-      title: 'J.Crew Style',
-      description: 'Classic and preppy portraits with J.Crew-inspired styling.',
-      image: '/Packs/Types/jcrew.jpg',
-      link: '/headshot-types/jcrew-headshot'
-    },
-   
-    {
-      title: 'Kids Birthday-headshot',
-      description: 'Magical birthday portraits for children\'s celebrations and memories.',
-      image: '/Packs/Types/birthday.jpg',
-      link: '/headshot-types/kids-birthday-headshot'
-    },
-    {
-      title: 'Americana Style',
-      description: 'Classic American-inspired portraits with a timeless feel.',
-      image: '/Packs/Types/americana.jpg',
-      link: '/headshot-types/americana-headshot'
-    },
-    {
-      title: 'Onesie-headshot',
-      description: 'Fun and comfortable portraits in your favorite onesie.',
-      image: '/Packs/Types/onesis.jpg',
-      link: '/headshot-types/everyday-onesie-headshot'
-    }
   ];
 
   const [showAll, setShowAll] = useState(false);

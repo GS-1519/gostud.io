@@ -76,11 +76,26 @@ const Footer: React.FC = () => {
       ]
     },
     {
+      title: 'AI Photos',
+      items: [
+        { text: 'Americana Photos', href: '/photos/americana-photos' },
+        { text: 'Onesie Photos', href: '/photos/everyday-onesie-photos' },
+        { text: 'Halloween Photos', href: '/photos/halloween-photos' },
+        { text: 'Helmut Newton Photos', href: '/photos/helmut-newton-photos' },
+        { text: 'J.Crew Photos', href: '/photos/jcrew-photos' },
+        { text: 'Dating Profile Photos', href: '/photos/dating-photos' },
+        { text: 'Realtor Photos', href: '/photos/realtor-photos' },
+        { text: 'Artistic Photos', href: '/photos/artistic-photos' },
+        { text: 'Wrestlemania Photos', href: '/photos/wrestlemania-photos' },
+        { text: 'Red Carpet Photos', href: '/photos/red-carpet-photos' }
+      ]
+    },
+    {
       title: 'Free Tools',
       items: [
-        { text: 'Christmas Background', href: '/free-tools/christmas-background' },
-        { text: 'Halloween Background', href: '/free-tools/halloween-background' },
-        { text: 'Abstract Background', href: '/free-tools/abstract-background' },
+        { text: 'Background Library', href: '/free-tools/background-library' },
+        { text: 'Black Background', href: '/free-tools/black-background' },
+        { text: 'Grey Background', href: '/free-tools/grey-background' },
         { text: 'Red Background', href: '/free-tools/red-background' },
         { text: 'White Background', href: '/free-tools/white-background' }
       ]
@@ -88,8 +103,9 @@ const Footer: React.FC = () => {
     {
       title: 'Company',
       items: [
-        { text: 'About Us', href: '/about' },
-        { text: 'Contact', href: '/contact', isEmail: true },
+        { text: 'Testimonial', href: '/#testimonial' },
+        { text: 'Pricing', href: '/#pricing' },
+        { text: 'FAQ', href: '/#faq' },
         { text: 'Privacy Policy', href: '/privacy-policy' },
         { text: 'Terms of Service', href: '/terms-of-service' }
       ]
