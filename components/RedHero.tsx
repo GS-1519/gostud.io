@@ -44,50 +44,52 @@ const RedHero = () => {
   const visibleBackgrounds = showAll ? backgrounds : backgrounds.slice(0, 15);
 
   return (
-    <div className="mt-12">
-      <div className="mx-auto w-[1274px] min-h-[1122px] bg-white rounded-[60px] py-12">
-        {/* Hero Section */}
-        <div className="text-center mb-[60px]">
-          <h1 className="text-[40px] font-bold text-gray-900 mb-6">
-            Red Color Backgrounds
-          </h1>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Stylish Downloads Await! 🔴 Click to grab sleek red backgrounds
-            to elevate your screens with modern elegance!
-          </p>
-        </div>
-
-        {/* Updated Category Navigation */}
-        <div className="flex justify-center mb-[60px]">
-          <div className="inline-flex items-center bg-white rounded-full p-2 shadow-sm border">
-            {categories.map((category) => (
-              <Link
-                key={category.name}
-                href={category.path}
-              >
-                <button
-                  className={`
-                    px-8 py-3 rounded-full text-base font-medium transition-all duration-200
-                    ${activeCategory === category.name
-                      ? 'bg-violet-600 text-white shadow-md'
-                      : 'text-violet-600 hover:bg-gray-50'
-                    }
-                  `}
-                >
-                  {category.name}
-                </button>
-              </Link>
-            ))}
+    <div className="mt-[100px] w-full min-h-screen bg-white rounded-[30px] sm:rounded-[60px] p-8 sm:p-12">
+      <div className="max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Hero Section */}
+          <div className="text-center mb-8 sm:mb-12">
+            <h1 className="text-[32px] sm:text-[40px] font-bold text-gray-900 mb-4">
+              Red Color Backgrounds
+            </h1>
+            <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">
+              Stylish Downloads Await! 🔴 Click to grab sleek red backgrounds
+              to elevate your screens with modern elegance!
+            </p>
           </div>
-        </div>
 
-        {/* Image Grid */}
-        <div className="flex flex-col items-center px-[97px]">
-          <div className="grid grid-cols-5 gap-[8px] w-[1080px] mx-auto">
+          {/* Category Navigation */}
+          <div className="mb-8 sm:mb-12">
+            <div className="flex justify-start sm:justify-center overflow-x-auto no-scrollbar">
+              <div className="inline-flex items-center bg-white rounded-full p-1.5 shadow-sm border">
+                {categories.map((category) => (
+                  <Link
+                    key={category.name}
+                    href={category.path}
+                    className="shrink-0"
+                  >
+                    <button
+                      className={`
+                        px-4 sm:px-8 py-2 sm:py-3 rounded-full text-sm sm:text-base font-medium transition-all duration-200 whitespace-nowrap
+                        ${activeCategory === category.name
+                          ? 'bg-violet-600 text-white shadow-md'
+                          : 'text-violet-600 hover:bg-gray-50'
+                        }
+                      `}
+                    >
+                      {category.name}
+                    </button>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Image Grid */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6">
             {visibleBackgrounds.map((background) => (
               <figure
                 key={background.id}
-                className="relative group cursor-pointer overflow-hidden rounded-[12px] w-[200px] h-[200px]"
+                className="relative group cursor-pointer overflow-hidden rounded-[20px] w-full aspect-[4/3]"
                 onClick={() => setSelectedImage(background)}
               >
                 <img
@@ -97,26 +99,28 @@ const RedHero = () => {
                 />
                 <figcaption className="sr-only">{background.alt}</figcaption>
                 <div 
-                  className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 rounded-[12px]" 
+                  className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 rounded-[20px]" 
                   aria-hidden="true"
                 />
               </figure>
             ))}
           </div>
-          
+
           {/* See All Button */}
-          {backgrounds.length > 15 && (
+          <div className="flex justify-center mt-12">
             <button
               onClick={() => setShowAll(!showAll)}
-              className="mt-8 inline-flex items-center px-6 py-3 rounded-full bg-[#5B16FE] text-white font-medium hover:bg-[#5B16FE] transition-colors duration-200"
+              className="inline-flex items-center px-8 py-4 rounded-full bg-[#6C27FF] text-white font-semibold text-lg hover:opacity-90 transition-all duration-200"
             >
-              {showAll ? 'Show Less' : 'See All'} 
-              {!showAll && <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>}
+              See All
+              <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5-5 5" />
+              </svg>
             </button>
-          )}
+          </div>
         </div>
 
-        {/* Add modal */}
+        {/* Modal */}
         {selectedImage && (
           <ImageModal
             isOpen={!!selectedImage}
@@ -126,7 +130,7 @@ const RedHero = () => {
           />
         )}
       </div>
-    </div>
+    
   );
 };
 

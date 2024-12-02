@@ -11,7 +11,6 @@ import final_Logo from "@/public/new-logo.png";
 import { User } from '@supabase/auth-helpers-nextjs';
 import { Database } from '@/types/supabase';
 
-// Add this interface to match what UserMenu expects
 interface UserMenuProps {
   user: {
     email: string;
@@ -24,17 +23,13 @@ const Navbar: React.FC = () => {
   const [credits, setCredits] = useState<number | null>(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const router = useRouter();
-  const pathname = usePathname();
   const supabase = createClientComponentClient<Database>();
-
-  const isHomePage = pathname === '/';
 
   useEffect(() => {
     const checkUser = async () => {
       const { data: { user } } = await supabase.auth.getUser();
       setUser(user);
       
-      // Only fetch credits if user exists
       if (user) {
         const { data: creditsData, error } = await supabase
           .from('credits')
@@ -85,7 +80,7 @@ const Navbar: React.FC = () => {
         </div>
         
         <div className="hidden sm:flex items-center space-x-6">
-          {isHomePage && <NavItems />}
+          <NavItems />
         </div>
 
         <div className="hidden sm:flex items-center space-x-4">
@@ -106,7 +101,7 @@ const Navbar: React.FC = () => {
 
       {isMenuOpen && (
         <div className="sm:hidden bg-white shadow-md mt-2 py-4 px-6 rounded-b-[24px]">
-          {isHomePage && <NavItems isMobile />}
+          <NavItems isMobile />
           {user ? (
             (() => {
               const userMenuProps = getUserMenuProps(user, credits);

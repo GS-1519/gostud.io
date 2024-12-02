@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface WorksProps {
   image1?: string;
@@ -33,13 +34,15 @@ const Works = ({ image1 = '/Frame.png', image2 = '/Group1.png', image3 = '/Group
   ];
 
   return (
-    <div className="flex justify-center items-center w-full py-8">
-      <section className="w-full sm:w-[1276px] min-h-[790.92px] rounded-[60px] bg-white p-4 sm:p-12">
-        {/* Updated Header to match Tools.tsx */}
-        <div className="text-center mb-[20px] px-4 sm:px-0">
-          <h2 className="text-xl sm:text-2xl font-medium mb-4 text-[#0A1727CC]">HOW IT WORKS</h2>
+    <div className="flex justify-center items-center w-full py-4 sm:py-6 md:py-8">
+      <section className="w-full max-w-[1276px] min-h-[600px] sm:min-h-[790.92px] rounded-[20px] sm:rounded-[30px] md:rounded-[60px] bg-white p-4 sm:p-6 md:p-8 lg:p-12">
+        {/* Header Section */}
+        <div className="text-center mb-6 sm:mb-8 md:mb-10 px-3 sm:px-4 md:px-6">
+          <h2 className="text-base sm:text-lg md:text-xl font-medium mb-3 sm:mb-4 text-[#0A1727CC]">
+            HOW IT WORKS
+          </h2>
           <div className="max-w-[1000px] mx-auto">
-            <h3 className="text-2xl sm:text-4xl md:text-[48px] font-bold flex flex-col gap-4">
+            <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-[48px] font-bold flex flex-col gap-2 sm:gap-3">
               <div>
                 <span className="bg-gradient-to-r from-[#837FFF] to-[#4AC2F5] bg-clip-text text-transparent">
                   3 easy steps to get your
@@ -47,60 +50,59 @@ const Works = ({ image1 = '/Frame.png', image2 = '/Group1.png', image3 = '/Group
               </div>
               <div>
                 <span className="bg-gradient-to-r from-[#837FFF] to-[#4AC2F5] bg-clip-text text-transparent">
-                studio quality profile
+                  studio quality profile
                 </span>
               </div>
-             
             </h3>
           </div>
-          <p className="text-gray-600 mt-6 text-lg max-w-[800px] mx-auto">
+          <p className="text-gray-600 mt-4 sm:mt-5 text-sm sm:text-base md:text-lg max-w-[800px] mx-auto px-2">
             3 easy step to get your professional photo ready to elevate your brand.
           </p>
         </div>
 
-          {/* Steps Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-[20px] mt-[20px] px-4 sm:px-0">
+        {/* Steps Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6 mt-6 sm:mt-8 px-3 sm:px-4 md:px-6">
           {steps.map((step) => (
-            <div key={step.id} className="relative">
-              <div>
-                {/* Step Image Container */}
-                <div className="w-full h-[376px] sm:h-[266.92px] rounded-[11.86px] overflow-hidden relative mb-4 sm:mb-6">
-                  <Image
-                    src={step.image}
-                    alt={step.title}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-
-                {/* Step Title and Icon */}
-                <div className="flex items-center gap-2 mb-2">
-                  <div className="flex items-center">
-                    <Image 
-                      src={step.icon}
-                      alt=""
-                      width={30}
-                      height={30}
-                      className="mr-2"
-                    />
-                    <span className="text-black font-semibold">{step.id}/</span>
-                  </div>
-                  <h4 className="font-bold text-lg">{step.title}</h4>
-                </div>
-
-                {/* Step Description */}
-                <p className="text-gray-600 text-base">{step.description}</p>
+            <div key={step.id} className="bg-white rounded-lg p-3 sm:p-4">
+              <div className="w-full h-[200px] sm:h-[220px] md:h-[250px] rounded-lg overflow-hidden relative mb-4">
+                <Image
+                  src={step.image}
+                  alt={step.title}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
               </div>
+
+              <div className="flex items-center gap-2 mb-2">
+                <div className="flex items-center">
+                  <Image 
+                    src={step.icon}
+                    alt=""
+                    width={20}
+                    height={20}
+                    className="mr-2"
+                  />
+                  <span className="text-black font-semibold text-sm">{step.id}/</span>
+                </div>
+                <h4 className="font-bold text-sm sm:text-base">{step.title}</h4>
+              </div>
+
+              <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
+                {step.description}
+              </p>
             </div>
           ))}
         </div>
 
         {/* CTA Button */}
-        <div className="text-center mt-[40px] px-4 sm:px-0">
-          <button className="w-full sm:w-[269px] h-[48px] bg-[#5B16FE] text-white px-8 py-3 rounded-full hover:opacity-90 transition-opacity flex items-center justify-center mx-auto">
-            Get Started
-            <span className="ml-2">→</span>
-          </button>
+        <div className="text-center mt-8 sm:mt-12 lg:mt-16">
+          <Link 
+            href="/get-started" 
+            className="inline-block bg-[#5B16FE] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg hover:bg-opacity-90 transition-all"
+          >
+            Get Your Headshot now →
+          </Link>
         </div>
       </section>
     </div>

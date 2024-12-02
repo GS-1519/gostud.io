@@ -1,19 +1,15 @@
 import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
-import DatingHero  from "@/components/DatingHero";
 import type { Metadata } from 'next'
 import Works from "@/components/Works";
 import Why from "@/components/Why";
 import ReviewSection from "@/components/HeadshotReviewSection";
-import PricingSection from "@/components/PricingSection";
-import DataSecuritySection from "@/components/container";
-import FAQSection from "@/components/Question";
+
+
 import Footer from "@/components/Footer";
 import Banner from "@/components/Banner";
-import DoctorHero from "@/components/DoctorHero";
-import JcrewHero from "@/components/JcrewHero";
-import SpeakerHero from "@/components/SpeakerHero";
+
 import RealtorHero from "@/components/RealtorHero";
 import RealtorHeadshotHero from "@/components/Realtor-Headshots";
 
@@ -69,7 +65,7 @@ export default async function DoctorPhotos() {
             <ReviewSection/>
           </div>
           
-          <DataSecuritySection />
+        
           
           <div>
             <Banner/>

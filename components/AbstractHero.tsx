@@ -36,48 +36,63 @@ const AbstractHero = () => {
   ];
 
   return (
-    <div className="mt-12">
-      <div className="mx-auto w-[1274px] min-h-[1122px] bg-white rounded-[60px] py-12">
+    <div className="mt-[100px] w-full min-h-screen bg-white rounded-[30px] sm:rounded-[60px] p-8 sm:p-12">
+      <div className="max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
-        <div className="text-center mb-[60px]">
-          <h1 className="text-[40px] font-bold text-gray-900 mb-6">
-          Abstract Color Backgrounds
+        <div className="text-center mb-8 sm:mb-[60px] px-4">
+          <h1 className="text-[32px] sm:text-[40px] font-bold text-gray-900 mb-4 sm:mb-6">
+            Abstract Color Backgrounds
           </h1>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-          Creative Downloads Await! 🎨 Click to grab stunning abstract backgrounds and add a splash of art to your screens!        </p>
+          <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">
+            Creative Downloads Await! 🎨 Click to grab stunning abstract backgrounds and add a splash of art to your screens!
+          </p>
         </div>
 
-        {/* Updated Category Navigation */}
-        <div className="flex justify-center mb-[60px]">
-          <div className="inline-flex items-center bg-white rounded-full p-2 shadow-sm border">
-            {categories.map((category) => (
-              <Link
-                key={category.name}
-                href={category.path}
-              >
-                <button
-                  className={`
-                    px-8 py-3 rounded-full text-base font-medium transition-all duration-200
-                    ${activeCategory === category.name
-                      ? 'bg-violet-600 text-white shadow-md'
-                      : 'text-violet-600 hover:bg-gray-50'
-                    }
-                  `}
+        {/* Category Navigation - Fixed Scrollable Version */}
+        <div className="mb-8 sm:mb-12">
+            <div className="flex justify-start sm:justify-center overflow-x-auto no-scrollbar">
+              <div className="inline-flex items-center bg-white rounded-full p-1.5 shadow-sm border">
+              {categories.map((category) => (
+                <Link
+                  key={category.name}
+                  href={category.path}
+                  className="shrink-0" // Prevent shrinking
                 >
-                  {category.name}
-                </button>
-              </Link>
-            ))}
+                  <button
+                    className={`
+                      px-4 sm:px-8 py-2 sm:py-3 rounded-full text-sm sm:text-base font-medium transition-all duration-200 whitespace-nowrap
+                      ${activeCategory === category.name
+                        ? 'bg-violet-600 text-white shadow-md'
+                        : 'text-violet-600 hover:bg-gray-50'
+                      }
+                    `}
+                  >
+                    {category.name}
+                  </button>
+                </Link>
+              ))}
+            </div>
           </div>
+          
+          {/* Add these styles to your global CSS file */}
+          <style jsx global>{`
+            .no-scrollbar::-webkit-scrollbar {
+              display: none;
+            }
+            .no-scrollbar {
+              -ms-overflow-style: none;
+              scrollbar-width: none;
+            }
+          `}</style>
         </div>
 
-        {/* Image Grid */}
-        <div className="flex justify-center px-[97px]">
-          <div className="grid grid-cols-5 gap-[8px] w-[1080px] h-[640px] mx-auto">
-            {backgrounds.map((background) => (
+        {/* Responsive Image Grid */}
+       
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6">
+        {backgrounds.map((background) => (
               <figure
                 key={background.id}
-                className="relative group cursor-pointer overflow-hidden rounded-[12px] w-[200px] h-[200px]"
+                className="relative group cursor-pointer overflow-hidden rounded-[12px] w-full aspect-square"
                 onClick={() => setSelectedImage(background)}
               >
                 <img
@@ -105,7 +120,7 @@ const AbstractHero = () => {
           />
         )}
       </div>
-    </div>
+   
   );
 };
 
