@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import Union from '/public/Union.png'
 import Link from 'next/link';
 
 const Banner = () => {
@@ -12,7 +11,7 @@ const Banner = () => {
           {/* Logo - hidden on small screens */}
           <div className="hidden sm:block sm:w-2/5 relative overflow-hidden">
             <Image
-              src={Union}
+              src="/Union.png"
               alt="Go logo"
               layout="fill"
               objectFit="cover"

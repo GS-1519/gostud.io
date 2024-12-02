@@ -64,7 +64,6 @@ const Footer: React.FC = () => {
     {
       title: 'AI Headshots',
       items: [
-        { text: 'LinkedIn Headshots', href: '/headshot-types/linkedin-headshot' },
         { text: 'Doctor Headshots', href: '/headshot-types/doctor-headshot' },
         { text: 'Lawyer Headshots', href: '/headshot-types/lawyer-headshot' },
         { text: 'Glamour Headshots', href: '/headshot-types/glamour-headshot' },

@@ -23,7 +23,6 @@ export default function NavItems({ isMobile = false }) {
   ];
 
   const headshotPages = [
-    { href: '/headshot-types/linkedin-headshot', label: 'LinkedIn Headshots' },
     { href: '/headshot-types/doctor-headshot', label: 'Doctor Headshots' },
     { href: '/headshot-types/lawyer-headshot', label: 'Lawyer Headshots' },
     { href: '/headshot-types/glamour-headshot', label: 'Glamour Headshots' },
