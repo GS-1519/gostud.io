@@ -1,16 +1,16 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  webpack: (config, { isServer }) => {
-    // Add fallbacks for node modules
-    config.resolve.fallback = {
-      ...config.resolve.fallback,
-      fs: false,
-      'fs/promises': false,
-      os: false,
-    };
-    
-    return config;
+  images: {
+    unoptimized: true,
   },
-};
+  // Ensure static files are handled correctly
+  webpack: (config) => {
+    config.module.rules.push({
+      test: /\.(png|jpg|gif|svg)$/i,
+      type: 'asset/resource'
+    })
+    return config
+  }
+}
 
-module.exports = nextConfig;
+module.exports = nextConfig
