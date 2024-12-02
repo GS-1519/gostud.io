@@ -17,18 +17,18 @@ const YoutubeHeadshotHero = () => {
 
   const images = {
     woman: [
-      { src: '/Packs/Youtube-photos/Women/Women1.jpg', alt: 'Professional YouTuber woman portrait' },
-      { src: '/Packs/Youtube-photos/Women/Women2.jpg', alt: 'Engaging content creator headshot' },
-      { src: '/Packs/Youtube-photos/Women/Women3.jpg', alt: 'Modern YouTuber woman portrait' },
-      { src: '/Packs/Youtube-photos/Women/Women4.jpg', alt: 'Professional female vlogger photo' },
-      { src: '/Packs/Youtube-photos/Women/Women5.jpg', alt: 'Charismatic creator portrait' },
-      { src: '/Packs/Youtube-photos/Women/Women1.jpg', alt: 'Professional YouTuber woman portrait' },
-      { src: '/Packs/Youtube-photos/Women/Women2.jpg', alt: 'Engaging content creator headshot' },
+      { src: '/Packs/Youtube-photos/Women/women1.jpg', alt: 'Professional YouTuber woman portrait' },
+      { src: '/Packs/Youtube-photos/Women/women2.jpg', alt: 'Engaging content creator headshot' },
+      { src: '/Packs/Youtube-photos/Women/women3.jpg', alt: 'Modern YouTuber woman portrait' },
+      { src: '/Packs/Youtube-photos/Women/women4.jpg', alt: 'Professional female vlogger photo' },
+      { src: '/Packs/Youtube-photos/Women/women5.jpg', alt: 'Charismatic creator portrait' },
+      { src: '/Packs/Youtube-photos/Women/women1.jpg', alt: 'Professional YouTuber woman portrait' },
+      { src: '/Packs/Youtube-photos/Women/women2.jpg', alt: 'Engaging content creator headshot' },
 
     ],
     man: [
       { src: '/Packs/Youtube-photos/Man/man.jpg', alt: 'Professional YouTuber man portrait' },
-      { src: '/Packs/Youtube-photos/Man/Man1.jpg', alt: 'Engaging content creator headshot' },
+      { src: '/Packs/Youtube-photos/Man/man1.jpg', alt: 'Engaging content creator headshot' },
       
     ]
   };

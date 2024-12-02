@@ -17,24 +17,24 @@ const AmericanoHeadshotHero = () => {
 
   const images = {
     woman: [
-      { src: '/Packs/Americana-photos/Women/Women1.jpg', alt: 'Classic American style woman portrait' },
-      { src: '/Packs/Americana-photos/Women/Women2.jpg', alt: 'Vintage Americana female headshot' },
-      { src: '/Packs/Americana-photos/Women/Women3.jpg', alt: 'Retro American style woman portrait' },
-      { src: '/Packs/Americana-photos/Women/Women4.jpg', alt: 'Classic 50s inspired female photo' },
-      { src: '/Packs/Americana-photos/Women/Women5.jpg', alt: 'Vintage style woman portrait' },
-      { src: '/Packs/Americana-photos/Women/Women6.jpg', alt: 'American classic female headshot' },
-      { src: '/Packs/Americana-photos/Women/Women7.jpg', alt: 'Retro style woman portrait' },
-      { src: '/Packs/Americana-photos/Women/Women8.jpg', alt: 'Classic Americana female photo' },
+      { src: '/Packs/Americana-photos/Women/women1.jpg', alt: 'Classic American style woman portrait' },
+      { src: '/Packs/Americana-photos/Women/women2.jpg', alt: 'Vintage Americana female headshot' },
+      { src: '/Packs/Americana-photos/Women/women3.jpg', alt: 'Retro American style woman portrait' },
+      { src: '/Packs/Americana-photos/Women/women4.jpg', alt: 'Classic 50s inspired female photo' },
+      { src: '/Packs/Americana-photos/Women/women5.jpg', alt: 'Vintage style woman portrait' },
+      { src: '/Packs/Americana-photos/Women/women6.jpg', alt: 'American classic female headshot' },
+      { src: '/Packs/Americana-photos/Women/women7.jpg', alt: 'Retro style woman portrait' },
+      { src: '/Packs/Americana-photos/Women/women8.jpg', alt: 'Classic Americana female photo' },
     ],
     man: [
-      { src: '/Packs/Americana-photos/Man/Man1.jpg', alt: 'Classic American style man portrait' },
-      { src: '/Packs/Americana-photos/Man/Man2.jpg', alt: 'Vintage Americana male headshot' },
-      { src: '/Packs/Americana-photos/Man/Man3.jpg', alt: 'Retro American style man portrait' },
-      { src: '/Packs/Americana-photos/Man/Man4.jpg', alt: 'Classic 50s inspired male photo' },
-      { src: '/Packs/Americana-photos/Man/Man5.jpg', alt: 'Vintage style man portrait' },
-      { src: '/Packs/Americana-photos/Man/Man6.jpg', alt: 'American classic male headshot' },
-      { src: '/Packs/Americana-photos/Man/Man7.jpg', alt: 'Retro style man portrait' },
-      { src: '/Packs/Americana-photos/Man/Man8.jpg', alt: 'Classic Americana male photo' },
+      { src: '/Packs/Americana-photos/Man/man1.jpg', alt: 'Classic American style man portrait' },
+      { src: '/Packs/Americana-photos/Man/man2.jpg', alt: 'Vintage Americana male headshot' },
+      { src: '/Packs/Americana-photos/Man/man3.jpg', alt: 'Retro American style man portrait' },
+      { src: '/Packs/Americana-photos/Man/man4.jpg', alt: 'Classic 50s inspired male photo' },
+      { src: '/Packs/Americana-photos/Man/man5.jpg', alt: 'Vintage style man portrait' },
+      { src: '/Packs/Americana-photos/Man/man6.jpg', alt: 'American classic male headshot' },
+      { src: '/Packs/Americana-photos/Man/man7.jpg', alt: 'Retro style man portrait' },
+      { src: '/Packs/Americana-photos/Man/man8.jpg', alt: 'Classic Americana male photo' },
     ]
   };
 

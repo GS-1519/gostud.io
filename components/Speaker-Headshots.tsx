@@ -17,24 +17,24 @@ const SpeakerHeadshotHero = () => {
 
   const images = {
     woman: [
-      { src: '/Packs/Speaker-photos/Women/Women1.jpg', alt: 'Professional speaker woman portrait' },
-      { src: '/Packs/Speaker-photos/Women/Women2.jpg', alt: 'Confident keynote speaker headshot' },
-      { src: '/Packs/Speaker-photos/Women/Women3.jpg', alt: 'Inspiring business speaker portrait' },
-      { src: '/Packs/Speaker-photos/Women/Women4.jpg', alt: 'Professional leadership photo' },
-      { src: '/Packs/Speaker-photos/Women/Women5.jpg', alt: 'Executive speaker portrait' },
-      { src: '/Packs/Speaker-photos/Women/Women6.jpg', alt: 'Motivational speaker headshot' },
-      { src: '/Packs/Speaker-photos/Women/Women7.jpg', alt: 'Professional conference speaker' },
-      { src: '/Packs/Speaker-photos/Women/Women8.jpg', alt: 'Business keynote portrait' },
+      { src: '/Packs/Speaker-photos/Women/women1.jpg', alt: 'Professional speaker woman portrait' },
+      { src: '/Packs/Speaker-photos/Women/women2.jpg', alt: 'Confident keynote speaker headshot' },
+      { src: '/Packs/Speaker-photos/Women/women3.jpg', alt: 'Inspiring business speaker portrait' },
+      { src: '/Packs/Speaker-photos/Women/women4.jpg', alt: 'Professional leadership photo' },
+      { src: '/Packs/Speaker-photos/Women/women5.jpg', alt: 'Executive speaker portrait' },
+      { src: '/Packs/Speaker-photos/Women/women6.jpg', alt: 'Motivational speaker headshot' },
+      { src: '/Packs/Speaker-photos/Women/women7.jpg', alt: 'Professional conference speaker' },
+      { src: '/Packs/Speaker-photos/Women/women8.jpg', alt: 'Business keynote portrait' },
     ],
     man: [
-      { src: '/Packs/Speaker-photos/Man/Man1.jpg', alt: 'Professional speaker man portrait' },
-      { src: '/Packs/Speaker-photos/Man/Man2.jpg', alt: 'Confident keynote speaker headshot' },
-      { src: '/Packs/Speaker-photos/Man/Man3.jpg', alt: 'Inspiring business speaker portrait' },
-      { src: '/Packs/Speaker-photos/Man/Man4.jpg', alt: 'Professional leadership photo' },
-      { src: '/Packs/Speaker-photos/Man/Man5.jpg', alt: 'Executive speaker portrait' },
-      { src: '/Packs/Speaker-photos/Man/Man6.jpg', alt: 'Motivational speaker headshot' },
-      { src: '/Packs/Speaker-photos/Man/Man7.jpg', alt: 'Professional conference speaker' },
-      { src: '/Packs/Speaker-photos/Man/Man8.jpg', alt: 'Business keynote portrait' },
+      { src: '/Packs/Speaker-photos/Man/man1.jpg', alt: 'Professional speaker man portrait' },
+      { src: '/Packs/Speaker-photos/Man/man2.jpg', alt: 'Confident keynote speaker headshot' },
+      { src: '/Packs/Speaker-photos/Man/man3.jpg', alt: 'Inspiring business speaker portrait' },
+      { src: '/Packs/Speaker-photos/Man/man4.jpg', alt: 'Professional leadership photo' },
+      { src: '/Packs/Speaker-photos/Man/man5.jpg', alt: 'Executive speaker portrait' },
+      { src: '/Packs/Speaker-photos/Man/man6.jpg', alt: 'Motivational speaker headshot' },
+      { src: '/Packs/Speaker-photos/Man/man7.jpg', alt: 'Professional conference speaker' },
+      { src: '/Packs/Speaker-photos/Man/man8.jpg', alt: 'Business keynote portrait' },
     ]
   };
 
