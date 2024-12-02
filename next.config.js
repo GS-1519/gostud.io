@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
+    domains: ['gostudio.ai', 'www.gostudio.ai'],
     unoptimized: true,
   },
   // Ensure static files are handled correctly
