@@ -33,7 +33,7 @@ const PhotosHero = () => {
     {
       title: 'J.Crew Photos',
       description: 'Classic and stylish portraits inspired by J.Crew\'s aesthetic',
-      image: '/Packs/Types/jcrew.jpg',
+      image: '/Packs/Types/Jcrew.jpg',
       link: '/photos/jcrew-photos'
     },
     {

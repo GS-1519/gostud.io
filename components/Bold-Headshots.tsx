@@ -17,27 +17,26 @@ const BoldHeadshotHero = () => {
 
   const images = {
     woman: [
-      { src: '/Packs/Bold-color/Women/Women1.jpg', alt: 'Bold color woman portrait' },
-      { src: '/Packs/Bold-color/Women/Women2.jpg', alt: 'Vibrant female headshot' },
-      { src: '/Packs/Bold-color/Women/Women3.jpg', alt: 'Dynamic woman portrait' },
-      { src: '/Packs/Bold-color/Women/Women4.jpg', alt: 'Colorful female portrait' },
-      { src: '/Packs/Bold-color/Women/Women5.jpg', alt: 'Bold style woman portrait' },
-      { src: '/Packs/Bold-color/Women/Women6.jpg', alt: 'Vivid female headshot' },
-      { src: '/Packs/Bold-color/Women/Women7.jpg', alt: 'Striking woman portrait' },
-      { src: '/Packs/Bold-color/Women/Women8.jpg', alt: 'Bold fashion female photo' },
+      { src: '/Packs/Bold-color/Women/women1.jpg', alt: 'Bold color woman portrait' },
+      { src: '/Packs/Bold-color/Women/women2.jpg', alt: 'Vibrant female headshot' },
+      { src: '/Packs/Bold-color/Women/women3.jpg', alt: 'Dynamic woman portrait' },
+      { src: '/Packs/Bold-color/Women/women4.jpg', alt: 'Colorful female portrait' },
+      { src: '/Packs/Bold-color/Women/women5.jpg', alt: 'Bold style woman portrait' },
+      { src: '/Packs/Bold-color/Women/women6.jpg', alt: 'Vivid female headshot' },
+      { src: '/Packs/Bold-color/Women/women7.jpg', alt: 'Striking woman portrait' },
+      { src: '/Packs/Bold-color/Women/women8.jpg', alt: 'Bold fashion female photo' },
     ],
     man: [
-      { src: '/Packs/Bold-color/Man/Man.jpg', alt: 'Bold color man portrait' },
-      { src: '/Packs/Bold-color/Man/Man1.jpg', alt: 'Bold color man portrait' },
-      { src: '/Packs/Bold-color/Man/Man2.jpg', alt: 'Vibrant male headshot' },
-      { src: '/Packs/Bold-color/Man/Man3.jpg', alt: 'Dynamic man portrait' },
-      { src: '/Packs/Bold-color/Man/Man4.jpg', alt: 'Colorful male portrait' },
-      { src: '/Packs/Bold-color/Man/Man5.jpg', alt: 'Bold style man portrait' },
-      { src: '/Packs/Bold-color/Man/Man6.jpg', alt: 'Vivid male headshot' },
-      { src: '/Packs/Bold-color/Man/Man7.jpg', alt: 'Vivid male headshot' },
-      { src: '/Packs/Bold-color/Man/Man8.jpg', alt: 'Vivid male headshot' },
-      { src: '/Packs/Bold-color/Man/Man9.jpg', alt: 'Vivid male headshot' },
-
+      { src: '/Packs/Bold-color/Man/man.jpg', alt: 'Bold color man portrait' },
+      { src: '/Packs/Bold-color/Man/man1.jpg', alt: 'Bold color man portrait' },
+      { src: '/Packs/Bold-color/Man/man2.jpg', alt: 'Vibrant male headshot' },
+      { src: '/Packs/Bold-color/Man/man3.jpg', alt: 'Dynamic man portrait' },
+      { src: '/Packs/Bold-color/Man/man4.jpg', alt: 'Colorful male portrait' },
+      { src: '/Packs/Bold-color/Man/man5.jpg', alt: 'Bold style man portrait' },
+      { src: '/Packs/Bold-color/Man/man6.jpg', alt: 'Vivid male headshot' },
+      { src: '/Packs/Bold-color/Man/man7.jpg', alt: 'Vivid male headshot' },
+      { src: '/Packs/Bold-color/Man/man8.jpg', alt: 'Vivid male headshot' },
+      { src: '/Packs/Bold-color/Man/man9.jpg', alt: 'Vivid male headshot' },
     ]
   };
 
