@@ -6,13 +6,7 @@ import { useState } from 'react';
 
 const TypesHero = () => {
   const headshots = [
-    {
-      title: 'LinkedIn Headshots',
-      description: 'Professional AI-generated headshots perfect for LinkedIn profiles and business networking.',
-      image: '/Packs/Types/linkdin.jpg',
-      link: '/headshot-types/linkedin-headshot'
-    },
-    {
+   {
       title: 'Doctor Headshots',
       description: 'Professional medical portraits for healthcare professionals, doctors, and medical practices.',
       image: '/Packs/Types/doctor.jpg',

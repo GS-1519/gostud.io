@@ -48,7 +48,7 @@ export default function NavItems({ isMobile = false }) {
 
   const dropdownClass = `${
     isMobile 
-      ? 'w-full bg-white py-2' 
+      ? 'w-full bg-white py-2 relative'
       : 'absolute top-full left-0 bg-white shadow-lg rounded-lg py-2 mt-1 z-50 min-w-[200px]'
   }`;
 
@@ -65,14 +65,14 @@ export default function NavItems({ isMobile = false }) {
   };
 
   return (
-    <div className={`${isMobile ? 'flex flex-col w-full' : 'flex items-center space-x-4'}`}>
+    <div className={`${isMobile ? 'flex flex-col w-full space-y-2' : 'flex items-center space-x-4'}`}>
       <div 
-        className="relative"
+        className={`relative ${isMobile ? 'w-full' : ''}`}
         onMouseEnter={() => handleMouseEnter(setShowHeadshotsDropdown)}
         onMouseLeave={() => handleMouseLeave(setShowHeadshotsDropdown)}
       >
         <button 
-          className={linkClass}
+          className={`${linkClass} ${isMobile ? 'w-full text-left' : ''}`}
           onClick={() => handleClick(setShowHeadshotsDropdown, showHeadshotsDropdown)}
         >
           AI Headshots {isMobile ? (showHeadshotsDropdown ? '▼' : '▶') : ''}
@@ -80,9 +80,9 @@ export default function NavItems({ isMobile = false }) {
         <AnimatePresence>
           {showHeadshotsDropdown && (
             <motion.div 
-              initial={{ opacity: 0, y: -10 }}
+              initial={{ opacity: 0, y: isMobile ? 0 : -10 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
+              exit={{ opacity: 0, y: isMobile ? 0 : -10 }}
               className={dropdownClass}
             >
               {headshotPages.map((page) => (

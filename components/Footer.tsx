@@ -4,7 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import final_Logo from "@/public/new-logo.png";
+import final_Logo from '@/public/final_Logo.svg';
 
 interface FooterColumnProps {
   title: string;
@@ -64,7 +64,6 @@ const Footer: React.FC = () => {
     {
       title: 'AI Headshots',
       items: [
-        { text: 'LinkedIn Headshots', href: '/headshot-types/linkedin-headshot' },
         { text: 'Doctor Headshots', href: '/headshot-types/doctor-headshot' },
         { text: 'Lawyer Headshots', href: '/headshot-types/lawyer-headshot' },
         { text: 'Glamour Headshots', href: '/headshot-types/glamour-headshot' },
@@ -123,25 +122,17 @@ const Footer: React.FC = () => {
           className="py-12 lg:py-16"
         >
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12">
-            <motion.div 
-              whileHover={{ scale: 1.02 }}
-              transition={{ type: "spring", stiffness: 300 }}
-              className="col-span-1 lg:col-span-2"
-            >
-              <motion.div 
-                whileHover={{ rotate: [0, -5, 5, -5, 0] }}
-                transition={{ duration: 0.5 }}
-                className="flex items-center mb-4"
-              >
+            <div className="col-span-1 lg:col-span-2">
+              <div className="flex items-center mb-4">
                 <Image 
                   src={final_Logo} 
                   alt="Studio.ai logo" 
                   width={320} 
                   height={120} 
-                  className="rounded-full hover:shadow-lg transition-shadow duration-300" 
+                  className="rounded-full" 
                   style={{ padding: '14.12px 11.3px', gap: '4.16px' }} 
                 />
-              </motion.div>
+              </div>
               <motion.p 
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
@@ -154,7 +145,7 @@ const Footer: React.FC = () => {
                 <br/>
                 No photographer needed - create the perfect professional image that truly represents you, in minutes, starting at just $10.
               </motion.p>
-            </motion.div>
+            </div>
             <div className="col-span-1 lg:col-span-3">
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
                 {columns.map((column, index) => (
