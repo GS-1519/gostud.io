@@ -17,25 +17,23 @@ const OnesiesHeadshotHero = () => {
 
   const images = {
     woman: [
-      { src: '/Packs/Onesise-phots/Women/Women1.jpg', alt: 'Cozy onesie woman portrait' },
-      { src: '/Packs/Onesise-phots/Women/Women2.jpg', alt: 'Playful onesie female headshot' },
-      { src: '/Packs/Onesise-phots/Women/Women3.jpg', alt: 'Fun onesie woman portrait' },
-      { src: '/Packs/Onesise-phots/Women/Women4.jpg', alt: 'Cute onesie female photo' },
-      { src: '/Packs/Onesise-phots/Women/Women5.jpg', alt: 'Cute onesie female photo' },
-      { src: '/Packs/Onesise-phots/Women/Women6.jpg', alt: 'Cute onesie female photo' },
-      { src: '/Packs/Onesise-phots/Women/Women7.jpg', alt: 'Cute onesie female photo' },
-      { src: '/Packs/Onesise-phots/Women/Women8.jpg', alt: 'Cute onesie female photo' },
-      { src: '/Packs/Onesise-phots/Women/Women9.jpg', alt: 'Cute onesie female photo' },
-      { src: '/Packs/Onesise-phots/Women/Women10.jpg', alt: 'Cute onesie female photo' },
-      { src: '/Packs/Onesise-phots/Women/Women11.jpg', alt: 'Cute onesie female photo' },
-
+      { src: '/Packs/Onesise-phots/Women/women1.jpg', alt: 'Cozy onesie woman portrait' },
+      { src: '/Packs/Onesise-phots/Women/women2.jpg', alt: 'Playful onesie female headshot' },
+      { src: '/Packs/Onesise-phots/Women/women3.jpg', alt: 'Fun onesie woman portrait' },
+      { src: '/Packs/Onesise-phots/Women/women4.jpg', alt: 'Cute onesie female photo' },
+      { src: '/Packs/Onesise-phots/Women/women5.jpg', alt: 'Cute onesie female photo' },
+      { src: '/Packs/Onesise-phots/Women/women6.jpg', alt: 'Cute onesie female photo' },
+      { src: '/Packs/Onesise-phots/Women/women7.jpg', alt: 'Cute onesie female photo' },
+      { src: '/Packs/Onesise-phots/Women/women8.jpg', alt: 'Cute onesie female photo' },
+      { src: '/Packs/Onesise-phots/Women/women9.jpg', alt: 'Cute onesie female photo' },
+      { src: '/Packs/Onesise-phots/Women/women10.jpg', alt: 'Cute onesie female photo' },
+      { src: '/Packs/Onesise-phots/Women/women11.jpg', alt: 'Cute onesie female photo' },
     ],
     man: [
-      { src: '/Packs/Onesise-phots/Man/Man1.jpg', alt: 'Cozy onesie man portrait' },
-      { src: '/Packs/Onesise-phots/Man/Man2.jpg', alt: 'Playful onesie male headshot' },
-      { src: '/Packs/Onesise-phots/Man/Man3.jpg', alt: 'Fun onesie man portrait' },
-      { src: '/Packs/Onesise-phots/Man/Man4.jpg', alt: 'Cool onesie male photo' },
-
+      { src: '/Packs/Onesise-phots/Man/man1.jpg', alt: 'Cozy onesie man portrait' },
+      { src: '/Packs/Onesise-phots/Man/man2.jpg', alt: 'Playful onesie male headshot' },
+      { src: '/Packs/Onesise-phots/Man/man3.jpg', alt: 'Fun onesie man portrait' },
+      { src: '/Packs/Onesise-phots/Man/man4.jpg', alt: 'Cool onesie male photo' },
     ]
   };
 

@@ -17,24 +17,24 @@ const RealtorHeadshotHero = () => {
 
   const images = {
     woman: [
-      { src: '/Packs/Realtor-photos/Women/Women1.jpg', alt: 'Professional realtor woman portrait' },
-      { src: '/Packs/Realtor-photos/Women/Women2.jpg', alt: 'Confident real estate agent headshot' },
-      { src: '/Packs/Realtor-photos/Women/Women3.jpg', alt: 'Modern realtor woman portrait' },
-      { src: '/Packs/Realtor-photos/Women/Women4.jpg', alt: 'Professional female agent photo' },
-      { src: '/Packs/Realtor-photos/Women/Women5.jpg', alt: 'Trustworthy realtor portrait' },
-      { src: '/Packs/Realtor-photos/Women/Women6.jpg', alt: 'Expert real estate headshot' },
-      { src: '/Packs/Realtor-photos/Women/Women7.jpg', alt: 'Approachable agent portrait' },
-      { src: '/Packs/Realtor-photos/Women/Women8.jpg', alt: 'Professional broker photo' },
+      { src: '/Packs/Realtor-photos/Women/women1.jpg', alt: 'Professional realtor woman portrait' },
+      { src: '/Packs/Realtor-photos/Women/women2.jpg', alt: 'Confident real estate agent headshot' },
+      { src: '/Packs/Realtor-photos/Women/women3.jpg', alt: 'Modern realtor woman portrait' },
+      { src: '/Packs/Realtor-photos/Women/women4.jpg', alt: 'Professional female agent photo' },
+      { src: '/Packs/Realtor-photos/Women/women5.jpg', alt: 'Trustworthy realtor portrait' },
+      { src: '/Packs/Realtor-photos/Women/women6.jpg', alt: 'Expert real estate headshot' },
+      { src: '/Packs/Realtor-photos/Women/women7.jpg', alt: 'Approachable agent portrait' },
+      { src: '/Packs/Realtor-photos/Women/women8.jpg', alt: 'Professional broker photo' },
     ],
     man: [
-      { src: '/Packs/Realtor-photos/Man/Man1.jpg', alt: 'Professional realtor man portrait' },
-      { src: '/Packs/Realtor-photos/Man/Man2.jpg', alt: 'Confident real estate agent headshot' },
-      { src: '/Packs/Realtor-photos/Man/Man3.jpg', alt: 'Modern realtor man portrait' },
-      { src: '/Packs/Realtor-photos/Man/Man4.jpg', alt: 'Professional male agent photo' },
-      { src: '/Packs/Realtor-photos/Man/Man5.jpg', alt: 'Trustworthy realtor portrait' },
-      { src: '/Packs/Realtor-photos/Man/Man6.jpg', alt: 'Expert real estate headshot' },
-      { src: '/Packs/Realtor-photos/Man/Man7.jpg', alt: 'Approachable agent portrait' },
-      { src: '/Packs/Realtor-photos/Man/Man8.jpg', alt: 'Professional broker photo' },
+      { src: '/Packs/Realtor-photos/Man/man1.jpg', alt: 'Professional realtor man portrait' },
+      { src: '/Packs/Realtor-photos/Man/man2.jpg', alt: 'Confident real estate agent headshot' },
+      { src: '/Packs/Realtor-photos/Man/man3.jpg', alt: 'Modern realtor man portrait' },
+      { src: '/Packs/Realtor-photos/Man/man4.jpg', alt: 'Professional male agent photo' },
+      { src: '/Packs/Realtor-photos/Man/man5.jpg', alt: 'Trustworthy realtor portrait' },
+      { src: '/Packs/Realtor-photos/Man/man6.jpg', alt: 'Expert real estate headshot' },
+      { src: '/Packs/Realtor-photos/Man/man7.jpg', alt: 'Approachable agent portrait' },
+      { src: '/Packs/Realtor-photos/Man/man8.jpg', alt: 'Professional broker photo' },
     ]
   };
 

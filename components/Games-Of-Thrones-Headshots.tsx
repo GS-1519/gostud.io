@@ -17,25 +17,25 @@ const GameOfThronesHeadshotHero = () => {
 
   const images = {
     woman: [
-      { src: '/Packs/Gamesofthrones-photos/Women/Women1.jpg', alt: 'Medieval fantasy style portrait - woman' },
-      { src: '/Packs/Gamesofthrones-photos/Women/Women2.jpg', alt: 'Game of Thrones inspired female portrait' },
-      { src: '/Packs/Gamesofthrones-photos/Women/Women3.jpg', alt: 'Fantasy medieval woman headshot' },
-      { src: '/Packs/Gamesofthrones-photos/Women/Women4.jpg', alt: 'Westeros style female portrait' },
-      { src: '/Packs/Gamesofthrones-photos/Women/Women5.jpg', alt: 'Fantasy realm woman portrait' },
-      { src: '/Packs/Gamesofthrones-photos/Women/Women6.jpg', alt: 'Medieval fantasy female headshot' },
-      { src: '/Packs/Gamesofthrones-photos/Women/Women7.jpg', alt: 'Game of Thrones themed woman portrait' },
-      { src: '/Packs/Gamesofthrones-photos/Women/Women8.jpg', alt: 'Fantasy style female character photo' },
-      { src: '/Packs/Gamesofthrones-photos/Women/Women9.jpg', alt: 'Medieval inspired woman portrait' },
+      { src: '/Packs/Gamesofthrones-photos/Women/women1.jpg', alt: 'Medieval fantasy style portrait - woman' },
+      { src: '/Packs/Gamesofthrones-photos/Women/women2.jpg', alt: 'Game of Thrones inspired female portrait' },
+      { src: '/Packs/Gamesofthrones-photos/Women/women3.jpg', alt: 'Fantasy medieval woman headshot' },
+      { src: '/Packs/Gamesofthrones-photos/Women/women4.jpg', alt: 'Westeros style female portrait' },
+      { src: '/Packs/Gamesofthrones-photos/Women/women5.jpg', alt: 'Fantasy realm woman portrait' },
+      { src: '/Packs/Gamesofthrones-photos/Women/women6.jpg', alt: 'Medieval fantasy female headshot' },
+      { src: '/Packs/Gamesofthrones-photos/Women/women7.jpg', alt: 'Game of Thrones themed woman portrait' },
+      { src: '/Packs/Gamesofthrones-photos/Women/women8.jpg', alt: 'Fantasy style female character photo' },
+      { src: '/Packs/Gamesofthrones-photos/Women/women9.jpg', alt: 'Medieval inspired woman portrait' },
     ],
     man: [
-      { src: '/Packs/Gamesofthrones-photos/Man/Man1.jpg', alt: 'Medieval fantasy style portrait - man' },
-      { src: '/Packs/Gamesofthrones-photos/Man/Man2.jpg', alt: 'Game of Thrones inspired male portrait' },
-      { src: '/Packs/Gamesofthrones-photos/Man/Man3.jpg', alt: 'Fantasy medieval man headshot' },
-      { src: '/Packs/Gamesofthrones-photos/Man/Man4.jpg', alt: 'Westeros style male portrait' },
-      { src: '/Packs/Gamesofthrones-photos/Man/Man5.jpg', alt: 'Fantasy realm man portrait' },
-      { src: '/Packs/Gamesofthrones-photos/Man/Man6.jpg', alt: 'Medieval fantasy male headshot' },
-      { src: '/Packs/Gamesofthrones-photos/Man/Man7.jpg', alt: 'Game of Thrones themed man portrait' },
-      { src: '/Packs/Gamesofthrones-photos/Man/Man8.jpg', alt: 'Fantasy style male character photo' },
+      { src: '/Packs/Gamesofthrones-photos/Man/man1.jpg', alt: 'Medieval fantasy style portrait - man' },
+      { src: '/Packs/Gamesofthrones-photos/Man/man2.jpg', alt: 'Game of Thrones inspired male portrait' },
+      { src: '/Packs/Gamesofthrones-photos/Man/man3.jpg', alt: 'Fantasy medieval man headshot' },
+      { src: '/Packs/Gamesofthrones-photos/Man/man4.jpg', alt: 'Westeros style male portrait' },
+      { src: '/Packs/Gamesofthrones-photos/Man/man5.jpg', alt: 'Fantasy realm man portrait' },
+      { src: '/Packs/Gamesofthrones-photos/Man/man6.jpg', alt: 'Medieval fantasy male headshot' },
+      { src: '/Packs/Gamesofthrones-photos/Man/man7.jpg', alt: 'Game of Thrones themed man portrait' },
+      { src: '/Packs/Gamesofthrones-photos/Man/man8.jpg', alt: 'Fantasy style male character photo' },
     ]
   };
 

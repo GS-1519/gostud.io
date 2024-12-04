@@ -17,27 +17,26 @@ const BotanicalHeadshotHero = () => {
 
   const images = {
     woman: [
-      { src: '/Packs/Botnical-photos/Women/Women1.jpg', alt: 'Natural botanical woman portrait' },
-      { src: '/Packs/Botnical-photos/Women/Women2.jpg', alt: 'Garden-inspired female headshot' },
-      { src: '/Packs/Botnical-photos/Women/Women3.jpg', alt: 'Floral woman portrait' },
-      { src: '/Packs/Botnical-photos/Women/Women4.jpg', alt: 'Nature-themed female portrait' },
-      { src: '/Packs/Botnical-photos/Women/Women5.jpg', alt: 'Botanical style woman portrait' },
-      { src: '/Packs/Botnical-photos/Women/Women6.jpg', alt: 'Garden beauty female headshot' },
-      { src: '/Packs/Botnical-photos/Women/Women7.jpg', alt: 'Natural elegance woman portrait' },
-      { src: '/Packs/Botnical-photos/Women/Women8.jpg', alt: 'Floral inspired female photo' },
-      { src: '/Packs/Botnical-photos/Women/Women9.jpg', alt: 'Botanical garden portrait' },
-      { src: '/Packs/Botnical-photos/Women/Women10.jpg', alt: 'Botanical garden portrait' },
-      { src: '/Packs/Botnical-photos/Women/Women11.jpg', alt: 'Botanical garden portrait' },
-      { src: '/Packs/Botnical-photos/Women/Women12.jpg', alt: 'Botanical garden portrait' },
+      { src: '/Packs/Botnical-photos/Women/women1.jpg', alt: 'Natural botanical woman portrait' },
+      { src: '/Packs/Botnical-photos/Women/women2.jpg', alt: 'Garden-inspired female headshot' },
+      { src: '/Packs/Botnical-photos/Women/women3.jpg', alt: 'Floral woman portrait' },
+      { src: '/Packs/Botnical-photos/Women/women4.jpg', alt: 'Nature-themed female portrait' },
+      { src: '/Packs/Botnical-photos/Women/women5.jpg', alt: 'Botanical style woman portrait' },
+      { src: '/Packs/Botnical-photos/Women/women6.jpg', alt: 'Garden beauty female headshot' },
+      { src: '/Packs/Botnical-photos/Women/women7.jpg', alt: 'Natural elegance woman portrait' },
+      { src: '/Packs/Botnical-photos/Women/women8.jpg', alt: 'Floral inspired female photo' },
+      { src: '/Packs/Botnical-photos/Women/women9.jpg', alt: 'Botanical garden portrait' },
+      { src: '/Packs/Botnical-photos/Women/women10.jpg', alt: 'Botanical garden portrait' },
+      { src: '/Packs/Botnical-photos/Women/women11.jpg', alt: 'Botanical garden portrait' },
+      { src: '/Packs/Botnical-photos/Women/women12.jpg', alt: 'Botanical garden portrait' },
     ],
     man: [
-      { src: '/Packs/Botnical-photos/Man/Man1.jpg', alt: 'Natural botanical man portrait' },
-      { src: '/Packs/Botnical-photos/Man/Man2.jpg', alt: 'Garden-inspired male headshot' },
-      { src: '/Packs/Botnical-photos/Man/Man3.jpg', alt: 'Nature man portrait' },
-      { src: '/Packs/Botnical-photos/Man/Man4.jpg', alt: 'Botanical themed male portrait' },
-      { src: '/Packs/Botnical-photos/Man/Man5.jpg', alt: 'Garden style man portrait' },
-      { src: '/Packs/Botnical-photos/Man/Man6.jpg', alt: 'Natural male headshot' },
-      
+      { src: '/Packs/Botnical-photos/Man/man1.jpg', alt: 'Natural botanical man portrait' },
+      { src: '/Packs/Botnical-photos/Man/man2.jpg', alt: 'Garden-inspired male headshot' },
+      { src: '/Packs/Botnical-photos/Man/man3.jpg', alt: 'Nature man portrait' },
+      { src: '/Packs/Botnical-photos/Man/man4.jpg', alt: 'Botanical themed male portrait' },
+      { src: '/Packs/Botnical-photos/Man/man5.jpg', alt: 'Garden style man portrait' },
+      { src: '/Packs/Botnical-photos/Man/man6.jpg', alt: 'Natural male headshot' },
     ]
   };
 
