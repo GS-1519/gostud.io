@@ -11,7 +11,8 @@ const nextConfig = {
       type: 'asset/resource'
     })
     return config
-  }
+  },
+  transpilePackages: ['react-tabs']
 }
 
 module.exports = nextConfig

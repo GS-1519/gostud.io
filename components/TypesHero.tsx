@@ -6,8 +6,6 @@ import { useState } from 'react';
 
 const TypesHero = () => {
   const headshots = [
-  
-    {
       title: 'Doctor Headshots',
       description: 'Professional medical portraits for healthcare professionals, doctors, and medical practices.',
       image: '/Packs/Types/doctor.jpg',
