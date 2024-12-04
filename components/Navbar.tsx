@@ -7,11 +7,11 @@ import Link from "next/link";
 import Image from "next/image";
 import NavItems from "./Navitems";
 import UserMenu from "./UserMenu";
-import final_Logo from "@/public/new-logo.png";
+import final_Logo from '@/public/final_Logo.svg';
 import { User } from '@supabase/auth-helpers-nextjs';
 import { Database } from '@/types/supabase';
+import final_Logo from '@/public/final_Logo.svg';
 
-// Add this interface to match what UserMenu expects
 interface UserMenuProps {
   user: {
     email: string;
@@ -24,17 +24,13 @@ const Navbar: React.FC = () => {
   const [credits, setCredits] = useState<number | null>(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const router = useRouter();
-  const pathname = usePathname();
   const supabase = createClientComponentClient<Database>();
-
-  const isHomePage = pathname === '/';
 
   useEffect(() => {
     const checkUser = async () => {
       const { data: { user } } = await supabase.auth.getUser();
       setUser(user);
       
-      // Only fetch credits if user exists
       if (user) {
         const { data: creditsData, error } = await supabase
           .from('credits')
@@ -62,72 +58,77 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <div className="mt-1">
-      <nav className="fixed top-0 left-0 right-0 w-full bg-white shadow-sm font-poppins mx-auto px-4 flex flex-col sm:flex-row items-center justify-between mt-[40px] z-50" 
-        style={{
-          maxWidth: '1276px',
-          minHeight: '61px',
-          borderRadius: '64px',
-        }}>
-        <div className="flex items-center justify-between w-full sm:w-auto">
-          <Link href={user ? '/overview' : '/'} className="flex-shrink-0">
-            <div className="mr-2">
-              <Image src={final_Logo} alt="Studio.ai logo" width={120} height={80} className="rounded-sm" />
-            </div>
-          </Link>
-          
-          <button 
-            className="sm:hidden"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? 'Close' : 'Menu'}
-          </button>
-        </div>
-        
-        <div className="hidden sm:flex items-center space-x-6">
-          {isHomePage && <NavItems />}
-        </div>
-
-        <div className="hidden sm:flex items-center space-x-4">
-          {user ? (
-            (() => {
-              const userMenuProps = getUserMenuProps(user, credits);
-              return userMenuProps ? <UserMenu {...userMenuProps} /> : null;
-            })()
-          ) : (
-            <Link href="/login">
-              <button className="bg-[#5B16FE] text-white font-bold text-lg py-2 px-6 rounded-full font-jakarta hover:bg-[#5B16FE]/90 transition duration-300">
-                Login / Sign Up
-              </button>
+    <>
+      <div className="fixed top-[40px] left-0 right-0 w-full z-40">
+        <nav className="bg-white shadow-sm font-poppins mx-auto px-4 flex flex-col sm:flex-row items-center justify-between" 
+          style={{
+            maxWidth: '1276px',
+            minHeight: '61px',
+            borderRadius: '64px',
+          }}>
+          <div className="flex items-center justify-between w-full sm:w-auto">
+            <Link href={user ? '/overview' : '/'} className="flex-shrink-0">
+              <div className="mr-2">
+                <Image src={final_Logo} alt="Studio.ai logo" width={120} height={80} className="rounded-sm" />
+              </div>
             </Link>
-          )}
-        </div>
-      </nav>
+            
+            <button 
+              className="sm:hidden"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              {isMenuOpen ? 'Close' : 'Menu'}
+            </button>
+          </div>
+          
+          <div className="hidden sm:flex items-center space-x-6">
+            <NavItems />
+          </div>
 
-      {isMenuOpen && (
-        <div className="sm:hidden bg-white shadow-md mt-2 py-4 px-6 rounded-b-[24px]">
-          {isHomePage && <NavItems isMobile />}
-          {user ? (
-            (() => {
-              const userMenuProps = getUserMenuProps(user, credits);
-              return userMenuProps ? (
-                <div className="mt-4">
-                  <UserMenu {...userMenuProps} />
-                </div>
-              ) : null;
-            })()
-          ) : (
-            <div className="mt-4 flex justify-center">
+          <div className="hidden sm:flex items-center space-x-4">
+            {user ? (
+              (() => {
+                const userMenuProps = getUserMenuProps(user, credits);
+                return userMenuProps ? <UserMenu {...userMenuProps} /> : null;
+              })()
+            ) : (
               <Link href="/login">
-                <button className="w-full bg-[#5B16FE] text-white font-bold text-lg py-2 px-6 rounded-full font-jakarta hover:bg-[#5B16FE]/90 transition duration-300">
+                <button className="bg-[#5B16FE] text-white font-bold text-lg py-2 px-6 rounded-full font-jakarta hover:bg-[#5B16FE]/90 transition duration-300">
                   Login / Sign Up
                 </button>
               </Link>
-            </div>
-          )}
-        </div>
-      )}
-    </div>
+            )}
+          </div>
+        </nav>
+
+        {isMenuOpen && (
+          <div className="sm:hidden bg-white shadow-md py-2 px-6 rounded-b-[24px] w-full mx-auto"
+            style={{
+              maxWidth: '1276px',
+            }}>
+            <NavItems isMobile />
+            {user ? (
+              (() => {
+                const userMenuProps = getUserMenuProps(user, credits);
+                return userMenuProps ? (
+                  <div className="mt-4">
+                    <UserMenu {...userMenuProps} />
+                  </div>
+                ) : null;
+              })()
+            ) : (
+              <div className="mt-4 flex justify-center">
+                <Link href="/login">
+                  <button className="w-full bg-[#5B16FE] text-white font-bold text-lg py-2 px-6 rounded-full font-jakarta hover:bg-[#5B16FE]/90 transition duration-300">
+                    Login / Sign Up
+                  </button>
+                </Link>
+              </div>
+            )}
+          </div>
+        )}
+      </div>
+    </>
   );
 }
 

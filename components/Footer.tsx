@@ -4,7 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import final_Logo from "@/public/new-logo.png";
+import final_Logo from '@/public/final_Logo.svg';
 
 interface FooterColumnProps {
   title: string;
@@ -61,51 +61,52 @@ const FooterColumn: React.FC<FooterColumnProps> = ({ title, items }) => (
 
 const Footer: React.FC = () => {
   const columns: FooterColumnProps[] = [
-    // {
-    //   title: 'AI Headshots',
-    //   items: [
-    //     { text: 'LinkedIn Headshots', href: '/photos/linkedin-photos' },
-    //     { text: 'J.Crew Style', href: '/photos/jcrew-photos' },
-    //     { text: 'Health & Fitness', href: '/photos/health-inspiration-photos' },
-    //     { text: 'Artistic Photos', href: '/photos/artistic-photos' },
-    //     { text: 'Americana Style', href: '/photos/americana-photos' },
-    //     { text: 'Annie Style', href: '/photos/annie-photos' },
-    //     { text: 'Barbie Style', href: '/photos/barbie-photos' },
-    //     { text: 'Botanical Style', href: '/photos/botanical-photos' },
-    //     { text: 'Dating Photos', href: '/photos/date-photos' },
-    //     { text: 'Glamour Shots', href: '/photos/glamour-shots-photos' },
-    //     { text: 'Lawyer Photos', href: '/photos/lawyer-photos' },
-    //     { text: 'Helmut Newton', href: '/photos/helmut-newton-photos' },
-    //     { text: 'Wednesday Addams', href: '/photos/wednesday-addams-photos' },
-    //     { text: 'Youtube Headshots', href: '/photos/youtube' },
-    //     { text: 'Redcarpet Headshots', href: '/photos/redcarpet' },
-    //     { text: 'Speaker Headshots', href: '/photos/speaker' },
-    //     { text: 'Tattoo Headshots', href: '/photos/tattos' },
-    //     { text: 'Vikings Headshots', href: '/photos/vikings' }
-    //   ]
-    // },
     {
-      title: 'Background Library',
+      title: 'AI Headshots',
       items: [
-        { text: 'Christmas Background', href: '/free-tools/christmas-background' },
-        { text: 'Halloween Background', href: '/free-tools/halloween-background' },
-        { text: 'Abstract Background', href: '/free-tools/abstract-background' },
+        { text: 'Doctor Headshots', href: '/headshot-types/doctor-headshot' },
+        { text: 'Lawyer Headshots', href: '/headshot-types/lawyer-headshot' },
+        { text: 'Glamour Headshots', href: '/headshot-types/glamour-headshot' },
+        { text: 'Bold Color Headshots', href: '/headshot-types/bold-color-headshot' },
+        { text: 'Tattoo Headshots', href: '/headshot-types/tattoos-headshot' },
+        { text: 'Annie Leibovitz Style', href: '/headshot-types/annie-headshot' },
+        { text: 'Barbie Style', href: '/headshot-types/barbie-headshot' },
+        { text: 'Viking Style', href: '/headshot-types/viking-headshot' }
+      ]
+    },
+    {
+      title: 'AI Photos',
+      items: [
+        { text: 'Americana Photos', href: '/photos/americana-photos' },
+        { text: 'Onesie Photos', href: '/photos/everyday-onesie-photos' },
+        { text: 'Halloween Photos', href: '/photos/halloween-photos' },
+        { text: 'Helmut Newton Photos', href: '/photos/helmut-newton-photos' },
+        { text: 'J.Crew Photos', href: '/photos/jcrew-photos' },
+        { text: 'Dating Profile Photos', href: '/photos/dating-photos' },
+        { text: 'Realtor Photos', href: '/photos/realtor-photos' },
+        { text: 'Artistic Photos', href: '/photos/artistic-photos' },
+        { text: 'Wrestlemania Photos', href: '/photos/wrestlemania-photos' },
+        { text: 'Red Carpet Photos', href: '/photos/red-carpet-photos' }
+      ]
+    },
+    {
+      title: 'Free Tools',
+      items: [
+        { text: 'Background Library', href: '/free-tools/background-library' },
+        { text: 'Black Background', href: '/free-tools/black-background' },
+        { text: 'Grey Background', href: '/free-tools/grey-background' },
         { text: 'Red Background', href: '/free-tools/red-background' },
-        { text: 'Grey Background', href: '/free-tools/grey-background' }
+        { text: 'White Background', href: '/free-tools/white-background' }
       ]
     },
     {
       title: 'Company',
       items: [
-        { text: 'Contact Us', href: 'hello@gostudio.ai', isEmail: true }
-      ]
-    },
-    {
-      title: 'Legal',
-      items: [
-        { text: 'Terms Policy', href: '/terms' },
-        { text: 'Privacy Policy', href: '/privacy' },
-        { text: 'Refund Policy', href: '/refund' }
+        { text: 'Testimonial', href: '/#testimonial' },
+        { text: 'Pricing', href: '/#pricing' },
+        { text: 'FAQ', href: '/#faq' },
+        { text: 'Privacy Policy', href: '/privacy-policy' },
+        { text: 'Terms of Service', href: '/terms-of-service' }
       ]
     }
   ];
@@ -121,25 +122,17 @@ const Footer: React.FC = () => {
           className="py-12 lg:py-16"
         >
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12">
-            <motion.div 
-              whileHover={{ scale: 1.02 }}
-              transition={{ type: "spring", stiffness: 300 }}
-              className="col-span-1 lg:col-span-2"
-            >
-              <motion.div 
-                whileHover={{ rotate: [0, -5, 5, -5, 0] }}
-                transition={{ duration: 0.5 }}
-                className="flex items-center mb-4"
-              >
+            <div className="col-span-1 lg:col-span-2">
+              <div className="flex items-center mb-4">
                 <Image 
                   src={final_Logo} 
                   alt="Studio.ai logo" 
                   width={320} 
                   height={120} 
-                  className="rounded-full hover:shadow-lg transition-shadow duration-300" 
+                  className="rounded-full" 
                   style={{ padding: '14.12px 11.3px', gap: '4.16px' }} 
                 />
-              </motion.div>
+              </div>
               <motion.p 
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
@@ -152,7 +145,7 @@ const Footer: React.FC = () => {
                 <br/>
                 No photographer needed - create the perfect professional image that truly represents you, in minutes, starting at just $10.
               </motion.p>
-            </motion.div>
+            </div>
             <div className="col-span-1 lg:col-span-3">
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
                 {columns.map((column, index) => (

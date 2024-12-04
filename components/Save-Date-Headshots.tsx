@@ -30,14 +30,14 @@ const SaveDateHeadshotHero = () => {
       { src: '/Packs/HBD-Date-Save/Girls/women10.jpg', alt: 'Birthday celebration portrait' },
     ],
     man: [
-      { src: '/Packs/HBD-Date-Save/Boys/man1.jpg', alt: 'Elegant save the date man portrait' },
-      { src: '/Packs/HBD-Date-Save/Boys/man2.jpg', alt: 'Romantic male celebration photo' },
-      { src: '/Packs/HBD-Date-Save/Boys/man3.jpg', alt: 'Birthday celebration man portrait' },
-      { src: '/Packs/HBD-Date-Save/Boys/man4.jpg', alt: 'Special occasion male photo' },
-      { src: '/Packs/HBD-Date-Save/Boys/man5.jpg', alt: 'Celebration style man portrait' },
-      { src: '/Packs/HBD-Date-Save/Boys/man6.jpg', alt: 'Birthday party male headshot' },
-      { src: '/Packs/HBD-Date-Save/Boys/man7.jpg', alt: 'Festive man portrait' },
-      { src: '/Packs/HBD-Date-Save/Boys/man8.jpg', alt: 'Celebration moment male photo' },
+      { src: '/Packs/HBD-Date-Save/boys/man1.jpg', alt: 'Elegant save the date man portrait' },
+      { src: '/Packs/HBD-Date-Save/boys/man2.jpg', alt: 'Romantic male celebration photo' },
+      { src: '/Packs/HBD-Date-Save/boys/man3.jpg', alt: 'Birthday celebration man portrait' },
+      { src: '/Packs/HBD-Date-Save/boys/man4.jpg', alt: 'Special occasion male photo' },
+      { src: '/Packs/HBD-Date-Save/boys/man5.jpg', alt: 'Celebration style man portrait' },
+      { src: '/Packs/HBD-Date-Save/boys/man6.jpg', alt: 'Birthday party male headshot' },
+      { src: '/Packs/HBD-Date-Save/boys/man7.jpg', alt: 'Festive man portrait' },
+      { src: '/Packs/HBD-Date-Save/boys/man8.jpg', alt: 'Celebration moment male photo' },
     ]
   };
 

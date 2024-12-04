@@ -17,26 +17,25 @@ const JcrewHeadshotHero = () => {
 
   const images = {
     woman: [
-      { src: '/Packs/Jcrew-photos/Women/Women1.jpg', alt: 'Professional J.Crew style woman portrait' },
-      { src: '/Packs/Jcrew-photos/Women/Women2.jpg', alt: 'Fashion-forward woman headshot' },
-      { src: '/Packs/Jcrew-photos/Women/Women3.jpg', alt: 'Stylish casual woman portrait' },
-      { src: '/Packs/Jcrew-photos/Women/Women4.jpg', alt: 'Modern preppy woman photo' },
-      { src: '/Packs/Jcrew-photos/Women/Women5.jpg', alt: 'Contemporary casual woman portrait' },
-      { src: '/Packs/Jcrew-photos/Women/Women6.jpg', alt: 'Classic style woman headshot' },
-      { src: '/Packs/Jcrew-photos/Women/Women7.jpg', alt: 'Elegant casual woman portrait' },
-      { src: '/Packs/Jcrew-photos/Women/Women8.jpg', alt: 'Refined casual woman photo' },
-      { src: '/Packs/Jcrew-photos/Women/Women9.jpg', alt: 'Modern classic woman portrait' },
-      
+      { src: '/Packs/Jcrew-photos/Women/women1.jpg', alt: 'Professional J.Crew style woman portrait' },
+      { src: '/Packs/Jcrew-photos/Women/women2.jpg', alt: 'Fashion-forward woman headshot' },
+      { src: '/Packs/Jcrew-photos/Women/women3.jpg', alt: 'Stylish casual woman portrait' },
+      { src: '/Packs/Jcrew-photos/Women/women4.jpg', alt: 'Modern preppy woman photo' },
+      { src: '/Packs/Jcrew-photos/Women/women5.jpg', alt: 'Contemporary casual woman portrait' },
+      { src: '/Packs/Jcrew-photos/Women/women6.jpg', alt: 'Classic style woman headshot' },
+      { src: '/Packs/Jcrew-photos/Women/women7.jpg', alt: 'Elegant casual woman portrait' },
+      { src: '/Packs/Jcrew-photos/Women/women8.jpg', alt: 'Refined casual woman photo' },
+      { src: '/Packs/Jcrew-photos/Women/women9.jpg', alt: 'Modern classic woman portrait' },
     ],
     man: [
-      { src: '/Packs/Jcrew-photos/Man/Man1.jpg', alt: 'Professional J.Crew style man portrait' },
-      { src: '/Packs/Jcrew-photos/Man/Man2.jpg', alt: 'Fashion-forward man headshot' },
-      { src: '/Packs/Jcrew-photos/Man/Man3.jpg', alt: 'Stylish casual man portrait' },
-      { src: '/Packs/Jcrew-photos/Man/Man4.jpg', alt: 'Modern preppy man photo' },
-      { src: '/Packs/Jcrew-photos/Man/Man5.jpg', alt: 'Contemporary casual man portrait' },
-      { src: '/Packs/Jcrew-photos/Man/Man6.jpg', alt: 'Classic style man headshot' },
-      { src: '/Packs/Jcrew-photos/Man/Man7.jpg', alt: 'Elegant casual man portrait' },
-      { src: '/Packs/Jcrew-photos/Man/Man8.jpg', alt: 'Refined casual man photo' },
+      { src: '/Packs/Jcrew-photos/Man/man1.jpg', alt: 'Professional J.Crew style man portrait' },
+      { src: '/Packs/Jcrew-photos/Man/man2.jpg', alt: 'Fashion-forward man headshot' },
+      { src: '/Packs/Jcrew-photos/Man/man3.jpg', alt: 'Stylish casual man portrait' },
+      { src: '/Packs/Jcrew-photos/Man/man4.jpg', alt: 'Modern preppy man photo' },
+      { src: '/Packs/Jcrew-photos/Man/man5.jpg', alt: 'Contemporary casual man portrait' },
+      { src: '/Packs/Jcrew-photos/Man/man6.jpg', alt: 'Classic style man headshot' },
+      { src: '/Packs/Jcrew-photos/Man/man7.jpg', alt: 'Elegant casual man portrait' },
+      { src: '/Packs/Jcrew-photos/Man/man8.jpg', alt: 'Refined casual man photo' },
     ]
   };
 

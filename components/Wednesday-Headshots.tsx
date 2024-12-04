@@ -15,16 +15,16 @@ const WednesdayHeadshotHero = () => {
   ];
   const images = {
     woman: [
-      { src: '/Packs/Wednesday-photos/Women/Women1.jpg', alt: 'Mysterious Wednesday woman portrait' },
-      { src: '/Packs/Wednesday-photos/Women/Women2.jpg', alt: 'Gothic style headshot' },
-      { src: '/Packs/Wednesday-photos/Women/Women3.jpg', alt: 'Dark elegant portrait' },
-      { src: '/Packs/Wednesday-photos/Women/Women4.jpg', alt: 'Wednesday inspired photo' },
-      { src: '/Packs/Wednesday-photos/Women/Women5.jpg', alt: 'Gothic fashion portrait' },
-      { src: '/Packs/Wednesday-photos/Women/Women6.jpg', alt: 'Dark aesthetic headshot' },
-      { src: '/Packs/Wednesday-photos/Women/Women7.jpg', alt: 'Mysterious gothic portrait' },
-      { src: '/Packs/Wednesday-photos/Women/Women8.jpg', alt: 'Wednesday style photo' },
-      { src: '/Packs/Wednesday-photos/Women/Women9.jpg', alt: 'Wednesday style photo' },
-      { src: '/Packs/Wednesday-photos/Women/Women10.jpg', alt: 'Wednesday style photo' }
+      { src: '/Packs/Wednesday-photos/Women/women1.jpg', alt: 'Mysterious Wednesday woman portrait' },
+      { src: '/Packs/Wednesday-photos/Women/women2.jpg', alt: 'Gothic style headshot' },
+      { src: '/Packs/Wednesday-photos/Women/women3.jpg', alt: 'Dark elegant portrait' },
+      { src: '/Packs/Wednesday-photos/Women/women4.jpg', alt: 'Wednesday inspired photo' },
+      { src: '/Packs/Wednesday-photos/Women/women5.jpg', alt: 'Gothic fashion portrait' },
+      { src: '/Packs/Wednesday-photos/Women/women6.jpg', alt: 'Dark aesthetic headshot' },
+      { src: '/Packs/Wednesday-photos/Women/women7.jpg', alt: 'Mysterious gothic portrait' },
+      { src: '/Packs/Wednesday-photos/Women/women8.jpg', alt: 'Wednesday style photo' },
+      { src: '/Packs/Wednesday-photos/Women/women9.jpg', alt: 'Wednesday style photo' },
+      { src: '/Packs/Wednesday-photos/Women/women10.jpg', alt: 'Wednesday style photo' }
     ]
   };
 

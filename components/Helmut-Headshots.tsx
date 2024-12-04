@@ -17,25 +17,25 @@ const HelmutHeadshotHero = () => {
 
   const images = {
     woman: [
-      { src: '/Packs/helmut-photos/Women/Women1.jpg', alt: 'Iconic black & white woman portrait' },
-      { src: '/Packs/helmut-photos/Women/Women2.jpg', alt: 'Dramatic female headshot' },
-      { src: '/Packs/helmut-photos/Women/Women3.jpg', alt: 'Artistic woman portrait' },
-      { src: '/Packs/helmut-photos/Women/Women4.jpg', alt: 'High contrast female photo' },
-      { src: '/Packs/helmut-photos/Women/Women5.jpg', alt: 'Bold woman portrait' },
-      { src: '/Packs/helmut-photos/Women/Women6.jpg', alt: 'Striking female headshot' },
-      { src: '/Packs/helmut-photos/Women/Women7.jpg', alt: 'Powerful woman portrait' },
-      { src: '/Packs/helmut-photos/Women/Women8.jpg', alt: 'Monochrome female photo' },
-      { src: '/Packs/helmut-photos/Women/Women9.jpg', alt: 'Monochrome female photo' },
-      { src: '/Packs/helmut-photos/Women/Women10.jpg', alt: 'Monochrome female photo' },
+      { src: '/Packs/helmut-photos/Women/women1.jpg', alt: 'Iconic black & white woman portrait' },
+      { src: '/Packs/helmut-photos/Women/women2.jpg', alt: 'Dramatic female headshot' },
+      { src: '/Packs/helmut-photos/Women/women3.jpg', alt: 'Artistic woman portrait' },
+      { src: '/Packs/helmut-photos/Women/women4.jpg', alt: 'High contrast female photo' },
+      { src: '/Packs/helmut-photos/Women/women5.jpg', alt: 'Bold woman portrait' },
+      { src: '/Packs/helmut-photos/Women/women6.jpg', alt: 'Striking female headshot' },
+      { src: '/Packs/helmut-photos/Women/women7.jpg', alt: 'Powerful woman portrait' },
+      { src: '/Packs/helmut-photos/Women/women8.jpg', alt: 'Monochrome female photo' },
+      { src: '/Packs/helmut-photos/Women/women9.jpg', alt: 'Monochrome female photo' },
+      { src: '/Packs/helmut-photos/Women/women10.jpg', alt: 'Monochrome female photo' },
     ],
     man: [
-      { src: '/Packs/helmut-photos/Man/Man1.jpg', alt: 'Iconic black & white man portrait' },
-      { src: '/Packs/helmut-photos/Man/Man2.jpg', alt: 'Dramatic male headshot' },
-      { src: '/Packs/helmut-photos/Man/Man3.jpg', alt: 'Artistic man portrait' },
-      { src: '/Packs/helmut-photos/Man/Man4.jpg', alt: 'High contrast male photo' },
-      { src: '/Packs/helmut-photos/Man/Man5.jpg', alt: 'Bold man portrait' },
-      { src: '/Packs/helmut-photos/Man/Man6.jpg', alt: 'Striking male headshot' },
-      { src: '/Packs/helmut-photos/Man/Man7.jpg', alt: 'Powerful man portrait' },
+      { src: '/Packs/helmut-photos/Man/man1.jpg', alt: 'Iconic black & white man portrait' },
+      { src: '/Packs/helmut-photos/Man/man2.jpg', alt: 'Dramatic male headshot' },
+      { src: '/Packs/helmut-photos/Man/man3.jpg', alt: 'Artistic man portrait' },
+      { src: '/Packs/helmut-photos/Man/man4.jpg', alt: 'High contrast male photo' },
+      { src: '/Packs/helmut-photos/Man/man5.jpg', alt: 'Bold man portrait' },
+      { src: '/Packs/helmut-photos/Man/man6.jpg', alt: 'Striking male headshot' },
+      { src: '/Packs/helmut-photos/Man/man7.jpg', alt: 'Powerful man portrait' },
     ]
   };
 

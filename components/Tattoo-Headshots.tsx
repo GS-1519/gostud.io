@@ -17,28 +17,26 @@ const TattooHeadshotHero = () => {
 
   const images = {
     woman: [
-      { src: '/Packs/Tattos-photos/Women/Women1.jpg', alt: 'Artistic tattooed woman portrait' },
-      { src: '/Packs/Tattos-photos/Women/Women2.jpg', alt: 'Creative tattoo style headshot' },
-      { src: '/Packs/Tattos-photos/Women/Women3.jpg', alt: 'Modern tattooed portrait' },
-      { src: '/Packs/Tattos-photos/Women/Women4.jpg', alt: 'Artistic tattoo design photo' },
-      { src: '/Packs/Tattos-photos/Women/Women5.jpg', alt: 'Unique tattoo portrait' },
-      { src: '/Packs/Tattos-photos/Women/Women6.jpg', alt: 'Stylish tattoo headshot' },
-      { src: '/Packs/Tattos-photos/Women/Women7.jpg', alt: 'Creative ink portrait' },
-      { src: '/Packs/Tattos-photos/Women/Women8.jpg', alt: 'Artistic tattoo photo' },
-      { src: '/Packs/Tattos-photos/Women/Women9.jpg', alt: 'Artistic tattoo photo' },
-      { src: '/Packs/Tattos-photos/Women/Women10.jpg', alt: 'Artistic tattoo photo' },
-      { src: '/Packs/Tattos-photos/Women/Women11.jpg', alt: 'Artistic tattoo photo' },
-      { src: '/Packs/Tattos-photos/Women/Women1.jpg', alt: 'Artistic tattoo photo' },
-      { src: '/Packs/Tattos-photos/Women/Women12.jpg', alt: 'Artistic tattoo photo' },
+      { src: '/Packs/Tattos-photos/Women/women1.jpg', alt: 'Artistic tattooed woman portrait' },
+      { src: '/Packs/Tattos-photos/Women/women2.jpg', alt: 'Creative tattoo style headshot' },
+      { src: '/Packs/Tattos-photos/Women/women3.jpg', alt: 'Modern tattooed portrait' },
+      { src: '/Packs/Tattos-photos/Women/women4.jpg', alt: 'Artistic tattoo design photo' },
+      { src: '/Packs/Tattos-photos/Women/women5.jpg', alt: 'Unique tattoo portrait' },
+      { src: '/Packs/Tattos-photos/Women/women6.jpg', alt: 'Stylish tattoo headshot' },
+      { src: '/Packs/Tattos-photos/Women/women7.jpg', alt: 'Creative ink portrait' },
+      { src: '/Packs/Tattos-photos/Women/women8.jpg', alt: 'Artistic tattoo photo' },
+      { src: '/Packs/Tattos-photos/Women/women9.jpg', alt: 'Artistic tattoo photo' },
+      { src: '/Packs/Tattos-photos/Women/women10.jpg', alt: 'Artistic tattoo photo' },
+      { src: '/Packs/Tattos-photos/Women/women11.jpg', alt: 'Artistic tattoo photo' },
+      { src: '/Packs/Tattos-photos/Women/women12.jpg', alt: 'Artistic tattoo photo' },
     ],
     man: [
-      { src: '/Packs/Tattos-photos/Man/Man1.jpg', alt: 'Artistic tattooed man portrait' },
-      { src: '/Packs/Tattos-photos/Man/Man2.jpg', alt: 'Creative tattoo style headshot' },
-      { src: '/Packs/Tattos-photos/Man/Man3.jpg', alt: 'Modern tattooed portrait' },
-      { src: '/Packs/Tattos-photos/Man/Man4.jpg', alt: 'Artistic tattoo design photo' },
-      { src: '/Packs/Tattos-photos/Man/Man5.jpg', alt: 'Unique tattoo portrait' },
-      { src: '/Packs/Tattos-photos/Man/Man6.jpg', alt: 'Stylish tattoo headshot' },
-     
+      { src: '/Packs/Tattos-photos/Man/man1.jpg', alt: 'Artistic tattooed man portrait' },
+      { src: '/Packs/Tattos-photos/Man/man2.jpg', alt: 'Creative tattoo style headshot' },
+      { src: '/Packs/Tattos-photos/Man/man3.jpg', alt: 'Modern tattooed portrait' },
+      { src: '/Packs/Tattos-photos/Man/man4.jpg', alt: 'Artistic tattoo design photo' },
+      { src: '/Packs/Tattos-photos/Man/man5.jpg', alt: 'Unique tattoo portrait' },
+      { src: '/Packs/Tattos-photos/Man/man6.jpg', alt: 'Stylish tattoo headshot' },
     ]
   };
 

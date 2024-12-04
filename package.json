@@ -13,6 +13,8 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.1",
+    "@img-comparison-slider/react": "^8.0.2",
+    "@imgly/background-removal": "^1.5.3",
     "@paddle/paddle-js": "^1.2.1",
     "@paypal/checkout-server-sdk": "^1.0.3",
     "@paypal/react-paypal-js": "^8.7.0",
@@ -60,6 +62,7 @@
     "postcss": "8.4.24",
     "posthog-js": "^1.187.2",
     "react": "^18.2.0",
+    "react-color": "^2.19.3",
     "react-colorful": "^5.6.1",
     "react-dom": "^18.2.0",
     "react-dropzone": "^14.2.3",
@@ -83,6 +86,7 @@
     "@types/node": "^20.17.9",
     "@types/paypal__checkout-server-sdk": "^1.0.8",
     "@types/react": "^18.2.12",
+    "@types/react-color": "^3.0.12",
     "@types/react-dom": "18.2.5",
     "encoding": "^0.1.13",
     "node-loader": "^2.1.0"

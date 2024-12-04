@@ -17,19 +17,19 @@ const AnnieHeadshotHero = () => {
 
   const images = {
     woman: [
-      { src: '/Packs/Annie-Photos/Women/Women1.jpg', alt: 'Modern artistic woman portrait' },
-      { src: '/Packs/Annie-Photos/Women/Women2.jpg', alt: 'Contemporary female headshot' },
-      { src: '/Packs/Annie-Photos/Women/Women3.jpg', alt: 'Creative portrait photography - woman' },
-      { src: '/Packs/Annie-Photos/Women/Women4.jpg', alt: 'Artistic female portrait' },
-      { src: '/Packs/Annie-Photos/Women/Women5.jpg', alt: 'Modern style woman portrait' },
-      { src: '/Packs/Annie-Photos/Women/Women6.jpg', alt: 'Contemporary female portrait' },
-      { src: '/Packs/Annie-Photos/Women/Women7.jpg', alt: 'Creative style woman headshot' },
-      { src: '/Packs/Annie-Photos/Women/Women8.jpg', alt: 'Modern female portrait' },
+      { src: '/Packs/Annie-Photos/Women/women1.jpg', alt: 'Modern artistic woman portrait' },
+      { src: '/Packs/Annie-Photos/Women/women2.jpg', alt: 'Contemporary female headshot' },
+      { src: '/Packs/Annie-Photos/Women/women3.jpg', alt: 'Creative portrait photography - woman' },
+      { src: '/Packs/Annie-Photos/Women/women4.jpg', alt: 'Artistic female portrait' },
+      { src: '/Packs/Annie-Photos/Women/women5.jpg', alt: 'Modern style woman portrait' },
+      { src: '/Packs/Annie-Photos/Women/women6.jpg', alt: 'Contemporary female portrait' },
+      { src: '/Packs/Annie-Photos/Women/women7.jpg', alt: 'Creative style woman headshot' },
+      { src: '/Packs/Annie-Photos/Women/women8.jpg', alt: 'Modern female portrait' },
     ],
     man: [
-      { src: '/Packs/Annie-Photos/Man/Man1.jpg', alt: 'Modern artistic man portrait' },
-      { src: '/Packs/Annie-Photos/Man/Man2.jpg', alt: 'Contemporary male headshot' },
-      { src: '/Packs/Annie-Photos/Man/Man3.jpg', alt: 'Creative portrait photography - man' },
+      { src: '/Packs/Annie-Photos/Man/man1.jpg', alt: 'Modern artistic man portrait' },
+      { src: '/Packs/Annie-Photos/Man/man2.jpg', alt: 'Contemporary male headshot' },
+      { src: '/Packs/Annie-Photos/Man/man3.jpg', alt: 'Creative portrait photography - man' },
       
     ]
   };

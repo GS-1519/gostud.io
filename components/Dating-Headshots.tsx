@@ -17,29 +17,31 @@ const DatingHeadshotHero = () => {
 
   const images = {
     woman: [
-      { src: '/Packs/Dating-photos/Women/Women1.jpg', alt: 'Professional dating profile photo for women' },
-      { src: '/Packs/Dating-photos/Women/Women2.jpg', alt: 'Natural dating profile photo for women' },
-      { src: '/Packs/Dating-photos/Women/Women3.jpg', alt: 'Casual dating profile photo for women' },
-      { src: '/Packs/Dating-photos/Women/Women4.jpg', alt: 'Authentic dating profile photo for women' },
-      { src: '/Packs/Dating-photos/Women/Women5.jpg', alt: 'Modern dating profile photo for women' },
-      { src: '/Packs/Dating-photos/Women/Women6.jpg', alt: 'Stylish dating profile photo for women' },
-      { src: '/Packs/Dating-photos/Women/Women7.jpg', alt: 'Contemporary dating profile photo for women' },
-      { src: '/Packs/Dating-photos/Women/Women8.jpg', alt: 'Elegant dating profile photo for women' },
-      { src: '/Packs/Dating-photos/Women/Women9.jpg', alt: 'Charming dating profile photo for women' },
-      { src: '/Packs/Dating-photos/Women/Women10.jpg', alt: 'Attractive dating profile photo for women' },
-      { src: '/Packs/Dating-photos/Women/Women11.jpg', alt: 'Engaging dating profile photo for women' },
+      { src: '/Packs/Dating-photo/Women/women1.jpg', alt: 'Professional dating profile photo for women' },
+      { src: '/Packs/Dating-photo/Women/women2.jpg', alt: 'Natural dating profile photo for women' },
+      { src: '/Packs/Dating-photo/Women/women3.jpg', alt: 'Casual dating profile photo for women' },
+      { src: '/Packs/Dating-photo/Women/women4.jpg', alt: 'Authentic dating profile photo for women' },
+      { src: '/Packs/Dating-photo/Women/women5.jpg', alt: 'Modern dating profile photo for women' },
+      { src: '/Packs/Dating-photo/Women/women6.jpg', alt: 'Stylish dating profile photo for women' },
+      { src: '/Packs/Dating-photo/Women/women12.jpg', alt: 'Contemporary dating profile photo for women' },
+      { src: '/Packs/Dating-photo/Women/women8.jpg', alt: 'Elegant dating profile photo for women' },
+      { src: '/Packs/Dating-photo/Women/women9.jpg', alt: 'Charming dating profile photo for women' },
+      { src: '/Packs/Dating-photo/Women/women10.jpg', alt: 'Attractive dating profile photo for women' },
+      { src: '/Packs/Dating-photo/Women/women11.jpg', alt: 'Engaging dating profile photo for women' },
     ],
     man: [
-      { src: '/Packs/Dating-photos/Man/Men1.jpg', alt: 'Professional dating profile photo for men' },
-      { src: '/Packs/Dating-photos/Man/Men2.jpg', alt: 'Natural dating profile photo for men' },
-      { src: '/Packs/Dating-photos/Man/Men11.jpg', alt: 'Casual dating profile photo for men' },
-      { src: '/Packs/Dating-photos/Man/Men4.jpg', alt: 'Authentic dating profile photo for men' },
-      { src: '/Packs/Dating-photos/Man/Men5.jpg', alt: 'Modern dating profile photo for men' },
-      { src: '/Packs/Dating-photos/Man/Men6.jpg', alt: 'Stylish dating profile photo for men' },
-      { src: '/Packs/Dating-photos/Man/Men7.jpg', alt: 'Contemporary dating profile photo for men' },
-      { src: '/Packs/Dating-photos/Man/Men8.jpg', alt: 'Elegant dating profile photo for men' },
-      { src: '/Packs/Dating-photos/Man/Men9.jpg', alt: 'Contemporary dating profile photo for men' },
-      { src: '/Packs/Dating-photos/Man/Men10.jpg', alt: 'Elegant dating profile photo for men' },
+      { src: '/Packs/Dating-photo/Man/man1.jpg', alt: 'Professional dating profile photo for man' },
+      { src: '/Packs/Dating-photo/Man/man2.jpg', alt: 'Natural dating profile photo for man' },
+      { src: '/Packs/Dating-photo/Man/man3.jpg', alt: 'Casual dating profile photo for man' },
+      { src: '/Packs/Dating-photo/Man/man4.jpg', alt: 'Authentic dating profile photo for man' },
+      { src: '/Packs/Dating-photo/Man/man5.jpg', alt: 'Modern dating profile photo for man' },
+      { src: '/Packs/Dating-photo/Man/man6.jpg', alt: 'Stylish dating profile photo for man' },
+      { src: '/Packs/Dating-photo/Man/man7.jpg', alt: 'Contemporary dating profile photo for man' },
+      { src: '/Packs/Dating-photo/Man/man8.jpg', alt: 'Elegant dating profile photo for man' },
+      { src: '/Packs/Dating-photo/Man/man9.jpg', alt: 'Contemporary dating profile photo for man' },
+      { src: '/Packs/Dating-photo/Man/man11.jpg', alt: 'Elegant dating profile photo for man' },
+      { src: '/Packs/Dating-photo/Man/man12.jpg', alt: 'Elegant dating profile photo for man' },
+      { src: '/Packs/Dating-photo/Man/man13.jpg', alt: 'Elegant dating profile photo for man' },
     ]
   };
 
@@ -105,6 +107,7 @@ const DatingHeadshotHero = () => {
                     width={400}
                     height={500}
                     className="object-cover transform transition-transform group-hover:scale-105"
+                    layout="responsive"
                   />
                 </div>
               </div>
@@ -159,6 +162,7 @@ const DatingHeadshotHero = () => {
                 width={1200}
                 height={1500}
                 className="w-full h-auto object-contain max-h-[90vh] rounded-lg"
+                layout="responsive"
                 priority
               />
               <button

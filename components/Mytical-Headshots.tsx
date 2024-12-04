@@ -17,24 +17,24 @@ const MythicalHeadshotHero = () => {
 
   const images = {
     woman: [
-      { src: '/Packs/Mythical-photos/Women/Women1.jpg', alt: 'Enchanting mythical woman portrait' },
-      { src: '/Packs/Mythical-photos/Women/Women2.jpg', alt: 'Magical female headshot' },
-      { src: '/Packs/Mythical-photos/Women/Women3.jpg', alt: 'Fantasy woman portrait' },
-      { src: '/Packs/Mythical-photos/Women/Women4.jpg', alt: 'Ethereal female photo' },
-      { src: '/Packs/Mythical-photos/Women/Women5.jpg', alt: 'Mystical woman portrait' },
-      { src: '/Packs/Mythical-photos/Women/Women6.jpg', alt: 'Legendary female headshot' },
-      { src: '/Packs/Mythical-photos/Women/Women7.jpg', alt: 'Mythological woman portrait' },
-      { src: '/Packs/Mythical-photos/Women/Women8.jpg', alt: 'Fantasy realm female photo' },
+      { src: '/Packs/Mythical-photos/Women/women1.jpg', alt: 'Enchanting mythical woman portrait' },
+      { src: '/Packs/Mythical-photos/Women/women2.jpg', alt: 'Magical female headshot' },
+      { src: '/Packs/Mythical-photos/Women/women3.jpg', alt: 'Fantasy woman portrait' },
+      { src: '/Packs/Mythical-photos/Women/women4.jpg', alt: 'Ethereal female photo' },
+      { src: '/Packs/Mythical-photos/Women/women5.jpg', alt: 'Mystical woman portrait' },
+      { src: '/Packs/Mythical-photos/Women/women6.jpg', alt: 'Legendary female headshot' },
+      { src: '/Packs/Mythical-photos/Women/women7.jpg', alt: 'Mythological woman portrait' },
+      { src: '/Packs/Mythical-photos/Women/women8.jpg', alt: 'Fantasy realm female photo' },
     ],
     man: [
-      { src: '/Packs/Mythical-photos/Man/Man1.jpg', alt: 'Enchanting mythical man portrait' },
-      { src: '/Packs/Mythical-photos/Man/Man2.jpg', alt: 'Magical male headshot' },
-      { src: '/Packs/Mythical-photos/Man/Man3.jpg', alt: 'Fantasy man portrait' },
-      { src: '/Packs/Mythical-photos/Man/Man4.jpg', alt: 'Ethereal male photo' },
-      { src: '/Packs/Mythical-photos/Man/Man5.jpg', alt: 'Mystical man portrait' },
-      { src: '/Packs/Mythical-photos/Man/Man6.jpg', alt: 'Legendary male headshot' },
-      { src: '/Packs/Mythical-photos/Man/Man7.jpg', alt: 'Mythological man portrait' },
-      { src: '/Packs/Mythical-photos/Man/Man8.jpg', alt: 'Fantasy realm male photo' },
+      { src: '/Packs/Mythical-photos/Man/man1.jpg', alt: 'Enchanting mythical man portrait' },
+      { src: '/Packs/Mythical-photos/Man/man2.jpg', alt: 'Magical male headshot' },
+      { src: '/Packs/Mythical-photos/Man/man3.jpg', alt: 'Fantasy man portrait' },
+      { src: '/Packs/Mythical-photos/Man/man4.jpg', alt: 'Ethereal male photo' },
+      { src: '/Packs/Mythical-photos/Man/man5.jpg', alt: 'Mystical man portrait' },
+      { src: '/Packs/Mythical-photos/Man/man6.jpg', alt: 'Legendary male headshot' },
+      { src: '/Packs/Mythical-photos/Man/man7.jpg', alt: 'Mythological man portrait' },
+      { src: '/Packs/Mythical-photos/Man/man8.jpg', alt: 'Fantasy realm male photo' },
     ]
   };
 

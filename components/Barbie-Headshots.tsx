@@ -16,16 +16,16 @@ const BarbieHeadshotHero = () => {
 
   const images = {
     woman: [
-      { src: '/Packs/Barbie-photos/Women/Women1.jpg', alt: 'Barbie inspired glamour portrait' },
-      { src: '/Packs/Barbie-photos/Women/Women2.jpg', alt: 'Pink fantasy female headshot' },
-      { src: '/Packs/Barbie-photos/Women/Women3.jpg', alt: 'Barbie style woman portrait' },
-      { src: '/Packs/Barbie-photos/Women/Women4.jpg', alt: 'Dreamy pink female portrait' },
-      { src: '/Packs/Barbie-photos/Women/Women5.jpg', alt: 'Barbie world woman portrait' },
-      { src: '/Packs/Barbie-photos/Women/Women6.jpg', alt: 'Pink fantasy female portrait' },
-      { src: '/Packs/Barbie-photos/Women/Women7.jpg', alt: 'Barbie inspired woman headshot' },
-      { src: '/Packs/Barbie-photos/Women/Women8.jpg', alt: 'Glamorous pink portrait' },
-      { src: '/Packs/Barbie-photos/Women/Women9.jpg', alt: 'Barbie style female photo' },
-      { src: '/Packs/Barbie-photos/Women/Women10.jpg', alt: 'Pink fantasy portrait' },
+      { src: '/Packs/Barbie-photos/Women/women1.jpg', alt: 'Barbie inspired glamour portrait' },
+      { src: '/Packs/Barbie-photos/Women/women2.jpg', alt: 'Pink fantasy female headshot' },
+      { src: '/Packs/Barbie-photos/Women/women3.jpg', alt: 'Barbie style woman portrait' },
+      { src: '/Packs/Barbie-photos/Women/women4.jpg', alt: 'Dreamy pink female portrait' },
+      { src: '/Packs/Barbie-photos/Women/women5.jpg', alt: 'Barbie world woman portrait' },
+      { src: '/Packs/Barbie-photos/Women/women6.jpg', alt: 'Pink fantasy female portrait' },
+      { src: '/Packs/Barbie-photos/Women/women7.jpg', alt: 'Barbie inspired woman headshot' },
+      { src: '/Packs/Barbie-photos/Women/women8.jpg', alt: 'Glamorous pink portrait' },
+      { src: '/Packs/Barbie-photos/Women/women9.jpg', alt: 'Barbie style female photo' },
+      { src: '/Packs/Barbie-photos/Women/women10.jpg', alt: 'Pink fantasy portrait' },
     ]
   };
 
