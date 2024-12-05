@@ -17,17 +17,17 @@ const GlamourHeadshotHero = () => {
 
   const images = {
     woman: [
-      { src: '/Packs/Glamour-photos/Women/women1.jpg', alt: 'Elegant glamour woman portrait' },
-      { src: '/Packs/Glamour-photos/Women/women2.jpg', alt: 'Sophisticated female headshot' },
-      { src: '/Packs/Glamour-photos/Women/women3.jpg', alt: 'Luxurious woman portrait' },
-      { src: '/Packs/Glamour-photos/Women/women4.jpg', alt: 'High-fashion female photo' },
-      { src: '/Packs/Glamour-photos/Women/women5.jpg', alt: 'Glamorous style woman portrait' },
-      { src: '/Packs/Glamour-photos/Women/women6.jpg', alt: 'Chic female headshot' },
-      { src: '/Packs/Glamour-photos/Women/women7.jpg', alt: 'Stunning woman portrait' },
-      { src: '/Packs/Glamour-photos/Women/women8.jpg', alt: 'Fashion-forward female photo' },
-      { src: '/Packs/Glamour-photos/Women/women9.jpg', alt: 'Fashion-forward female photo' },
-      { src: '/Packs/Glamour-photos/Women/women10.jpg', alt: 'Fashion-forward female photo' },
-      { src: '/Packs/Glamour-photos/Women/women11.jpg', alt: 'Fashion-forward female photo' },
+      { src: '/Packs/Glamour-photos/women/women1.jpg', alt: 'Elegant glamour woman portrait' },
+      { src: '/Packs/Glamour-photos/women/women2.jpg', alt: 'Sophisticated female headshot' },
+      { src: '/Packs/Glamour-photos/women/women3.jpg', alt: 'Luxurious woman portrait' },
+      { src: '/Packs/Glamour-photos/women/women4.jpg', alt: 'High-fashion female photo' },
+      { src: '/Packs/Glamour-photos/women/women5.jpg', alt: 'Glamorous style woman portrait' },
+      { src: '/Packs/Glamour-photos/women/women6.jpg', alt: 'Chic female headshot' },
+      { src: '/Packs/Glamour-photos/women/women7.jpg', alt: 'Stunning woman portrait' },
+      { src: '/Packs/Glamour-photos/women/women8.jpg', alt: 'Fashion-forward female photo' },
+      { src: '/Packs/Glamour-photos/women/women9.jpg', alt: 'Fashion-forward female photo' },
+      { src: '/Packs/Glamour-photos/women/women10.jpg', alt: 'Fashion-forward female photo' },
+      { src: '/Packs/Glamour-photos/women/women11.jpg', alt: 'Fashion-forward female photo' },
     ],
     man: [
       { src: '/Packs/Glamour-photos/Man/man1.jpg', alt: 'Elegant glamour man portrait' },

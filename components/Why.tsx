@@ -11,7 +11,7 @@ interface WhyProps {
 const Why = ({ imageSet = 'dating' }: WhyProps) => {
   const features = [
     {
-      icon: "/why/camera.png",
+      icon: "/why/Camera.png",
       title: "SIMPLIFIED PROCESS",
       description: "Skip the expensive photoshoot and the awkward\n poses.Get your professional headshots anytime, anywhere with just a few clear selfies or casual\n photos."
     },
