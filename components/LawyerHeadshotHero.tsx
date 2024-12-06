@@ -20,7 +20,7 @@ const LawyerHeadshotHero = () => {
       { src: '/Packs/Lawyer-photos/Women/women1.jpg', alt: 'Professional woman headshot' },
       { src: '/Packs/Lawyer-photos/Women/women2.jpg', alt: 'Professional woman headshot' },
       { src: '/Packs/Lawyer-photos/Women/women3.jpg', alt: 'Professional woman headshot' },
-      { src: '/Packs/Lawyer-photos/Women/women10.jpg', alt: 'Professional woman headshot' },
+      { src: '/Packs/Lawyer-photos/Women/women4.jpg', alt: 'Professional woman headshot' },
       { src: '/Packs/Lawyer-photos/Women/women5.jpg', alt: 'Professional woman headshot' },
       { src: '/Packs/Lawyer-photos/Women/women6.jpg', alt: 'Professional woman headshot' },
       { src: '/Packs/Lawyer-photos/Women/women7.jpg', alt: 'Professional woman headshot' },
@@ -28,6 +28,20 @@ const LawyerHeadshotHero = () => {
       { src: '/Packs/Lawyer-photos/Women/women9.jpg', alt: 'Professional woman headshot' },
       { src: '/Packs/Lawyer-photos/Women/women10.jpg', alt: 'Professional woman headshot' },
       { src: '/Packs/Lawyer-photos/Women/women11.jpg', alt: 'Professional woman headshot' },
+      { src: '/Packs/Lawyer-photos/Women/women12.jpg', alt: 'Professional woman headshot' },
+      { src: '/Packs/Lawyer-photos/Women/women13.jpg', alt: 'Professional woman headshot' },
+      { src: '/Packs/Lawyer-photos/Women/women14.jpg', alt: 'Professional woman headshot' },
+      { src: '/Packs/Lawyer-photos/Women/women25.jpg', alt: 'Professional woman headshot' },
+      { src: '/Packs/Lawyer-photos/Women/women16.jpg', alt: 'Professional woman headshot' },
+      { src: '/Packs/Lawyer-photos/Women/women17.jpg', alt: 'Professional woman headshot' },
+      { src: '/Packs/Lawyer-photos/Women/women18.jpg', alt: 'Professional woman headshot' },
+      { src: '/Packs/Lawyer-photos/Women/women19.jpg', alt: 'Professional woman headshot' },
+      { src: '/Packs/Lawyer-photos/Women/women20.jpg', alt: 'Professional woman headshot' },
+      { src: '/Packs/Lawyer-photos/Women/women21.jpg', alt: 'Professional woman headshot' },
+      { src: '/Packs/Lawyer-photos/Women/women22.jpg', alt: 'Professional woman headshot' },
+      { src: '/Packs/Lawyer-photos/Women/women23.jpg', alt: 'Professional woman headshot' },
+      { src: '/Packs/Lawyer-photos/Women/women24.jpg', alt: 'Professional woman headshot' },
+      { src: '/Packs/Lawyer-photos/Women/women25.jpg', alt: 'Professional woman headshot' },
     ],
     man: [
       { src: '/Packs/Lawyer-photos/Man/man1.jpg', alt: 'Professional man headshot' },
@@ -38,15 +52,47 @@ const LawyerHeadshotHero = () => {
       { src: '/Packs/Lawyer-photos/Man/man6.jpg', alt: 'Professional man headshot' },
       { src: '/Packs/Lawyer-photos/Man/man7.jpg', alt: 'Professional man headshot' },
       { src: '/Packs/Lawyer-photos/Man/man8.jpg', alt: 'Professional man headshot' },
+      { src: '/Packs/Lawyer-photos/Man/man9.jpg', alt: 'Professional man headshot' },
+      { src: '/Packs/Lawyer-photos/Man/man10.jpg', alt: 'Professional man headshot' },
+      { src: '/Packs/Lawyer-photos/Man/man11.jpg', alt: 'Professional man headshot' },
+      { src: '/Packs/Lawyer-photos/Man/man12.jpg', alt: 'Professional man headshot' },
+      { src: '/Packs/Lawyer-photos/Man/man13.jpg', alt: 'Professional man headshot' },
+      { src: '/Packs/Lawyer-photos/Man/man14.jpg', alt: 'Professional man headshot' },
+      { src: '/Packs/Lawyer-photos/Man/man20.jpg', alt: 'Professional man headshot' },
+      { src: '/Packs/Lawyer-photos/Man/man16.jpg', alt: 'Professional man headshot' },
+      { src: '/Packs/Lawyer-photos/Man/man17.jpg', alt: 'Professional man headshot' },
+      { src: '/Packs/Lawyer-photos/Man/man18.jpg', alt: 'Professional man headshot' },
+      { src: '/Packs/Lawyer-photos/Man/man19.jpg', alt: 'Professional man headshot' },
+      { src: '/Packs/Lawyer-photos/Man/man20.jpg', alt: 'Professional man headshot' },
+      { src: '/Packs/Lawyer-photos/Man/man21.jpg', alt: 'Professional man headshot' },
+      { src: '/Packs/Lawyer-photos/Man/man22.jpg', alt: 'Professional man headshot' },
     ]
   };
 
   const getDisplayImages = () => {
-    const filteredImages = activeCategory === 'all' 
-      ? [...images.woman, ...images.man]
-      : images[activeCategory as keyof typeof images] || [];
+    if (activeCategory === 'all') {
+      // Combine and alternate between women and men images
+      const maxLength = Math.max(images.woman.length, images.man.length);
+      const alternatingImages = [];
+      
+      for (let i = 0; i < maxLength; i++) {
+        // Add woman image if available
+        if (images.woman[i]) {
+          alternatingImages.push(images.woman[i]);
+        }
+        // Add man image if available
+        if (images.man[i]) {
+          alternatingImages.push(images.man[i]);
+        }
+      }
+      
+      return showAll ? alternatingImages : alternatingImages.slice(0, 8);
+    }
     
-    return showAll ? filteredImages : filteredImages.slice(0, 8);
+    // For woman or man category, return filtered images
+    return showAll 
+      ? images[activeCategory as keyof typeof images] || []
+      : (images[activeCategory as keyof typeof images] || []).slice(0, 8);
   };
 
   const displayImages = getDisplayImages();
