@@ -28,9 +28,6 @@ export const metadata: Metadata = {
       height: 630,
       alt: 'Fitness and Wellness Photography'
     }],
-  },
-  alternates: {
-    canonical: 'https://www.gostudio.ai/photos/health-inspiration-photos'
   }
 }
 

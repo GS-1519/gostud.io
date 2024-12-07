@@ -27,9 +27,6 @@ export const metadata: Metadata = {
       height: 630,
       alt: 'Botanical Portrait Photography'
     }],
-  },
-  alternates: {
-    canonical: 'https://www.gostudio.ai/photos/botanical-photos'
   }
 }
 

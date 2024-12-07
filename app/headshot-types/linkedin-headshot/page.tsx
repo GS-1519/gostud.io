@@ -25,9 +25,6 @@ export const metadata: Metadata = {
       height: 630,
       alt: 'Professional LinkedIn Headshots'
     }],
-  },
-  alternates: {
-    canonical: 'https://www.gostudio.ai/headshot-types/linkedin-headshot'
   }
 }
 

@@ -28,9 +28,6 @@ export const metadata: Metadata = {
       height: 630,
       alt: 'Helmut Newton Style Photography'
     }],
-  },
-  alternates: {
-    canonical: 'https://www.gostudio.ai/photos/helmut-newton-photos'
   }
 }
 
