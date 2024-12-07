@@ -10,27 +10,36 @@ export default function NavItems({ isMobile = false }) {
   const [showToolsDropdown, setShowToolsDropdown] = useState(false);
 
   const photoPages = [
-    { href: '/photos/americana-photos', label: 'Americana Photos' },
-    { href: '/photos/everyday-onesie-photos', label: 'Onesie Photos' },
+    { href: '/photos/vintage-americana-photos', label: 'Americana Photos' },
+    { href: '/photos/onesie-portraits', label: 'Onesie Photos' },
     { href: '/photos/halloween-photos', label: 'Halloween Photos' },
     { href: '/photos/helmut-newton-photos', label: 'Helmut Newton Photos' },
     { href: '/photos/jcrew-photos', label: 'J.Crew Photos' },
-    { href: '/photos/dating-photos', label: 'Dating Profile Photos' },
-    { href: '/photos/realtor-photos', label: 'Realtor Photos' },
-    { href: '/photos/artistic-photos', label: 'Artistic Photos' },
+    { href: '/photos/birthday-party-save-the-date-photoshoot', label: 'Dating Profile Photos' },
+    { href: '/photos/artistic-portraits', label: 'Artistic Photos' },
     { href: '/photos/wrestlemania-photos', label: 'Wrestlemania Photos' },
-    { href: '/photos/red-carpet-photos', label: 'Red Carpet Photos' }
+    { href: '/photos/actor-red-carpet-photos', label: 'Red Carpet Photos' },
+    { href: '/photos/game-of-thrones-portraits', label: 'game-of-thrones' },
+    { href: '/photos/kids-birthday-portraits', label: 'kids-birthday-portraits' },
+    { href: '/photos/mythical-creatures-portaits', label: 'mythical-creatures-portaits' },
+    { href: '/photos/online-dating-profile-photos', label: 'online-dating-profile' },
+    { href: '/photos/pet-photography-dog', label: 'pet-photography' },
+    { href: '/photos/pop-color-photos', label: 'pop-color-photos' },
+    { href: '/photos/youtube-thumbnail-photos', label: 'youtube-thumbnail-photos' },
+
   ];
 
   const headshotPages = [
     { href: '/headshot-types/doctor-headshot', label: 'Doctor Headshots' },
     { href: '/headshot-types/lawyer-headshot', label: 'Lawyer Headshots' },
-    { href: '/headshot-types/glamour-headshot', label: 'Glamour Headshots' },
-    { href: '/headshot-types/bold-color-headshot', label: 'Bold Color Headshots' },
-    { href: '/headshot-types/tattoos-headshot', label: 'Tattoo Headshots' },
+    { href: '/headshot-types/Actor-headshot', label: 'Glamour Headshots' },
+    { href: '/headshot-types/professional-tattoos-portraits', label: 'Tattoo Headshots' },
     { href: '/headshot-types/annie-headshot', label: 'Annie Leibovitz Style' },
     { href: '/headshot-types/barbie-headshot', label: 'Barbie Style' },
-    { href: '/headshot-types/viking-headshot', label: 'Viking Style' }
+    { href: '/headshot-types/viking-portraits', label: 'Viking Style' },
+    { href: '/headshot-types/realtor-headshot', label: 'realtor Style' },
+    { href: '/headshot-types/TED-speaker-headshot', label: 'speaker Style' },
+
   ];
 
   const toolPages = [
@@ -39,6 +48,8 @@ export default function NavItems({ isMobile = false }) {
     { href: '/free-tools/grey-background', label: 'Grey Background' },
     { href: '/free-tools/red-background', label: 'Red Background' },
     { href: '/free-tools/white-background', label: 'White Background' },
+    { href: '/free-tools/abstract-background', label: 'abstract Background' },
+    { href: '/free-tools/christmas-background', label: 'christmas Background' },
   ];
 
   const linkClass = `text-gray-700 font-semibold text-sm px-3 font-jakarta hover:text-purple-600 transition duration-300 ${

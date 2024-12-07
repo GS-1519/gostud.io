@@ -49,27 +49,34 @@ const Footer: React.FC = () => {
       items: [
         { text: 'Doctor Headshots', href: '/headshot-types/doctor-headshot' },
         { text: 'Lawyer Headshots', href: '/headshot-types/lawyer-headshot' },
-        { text: 'Glamour Headshots', href: '/headshot-types/glamour-headshot' },
-        { text: 'Bold Color Headshots', href: '/headshot-types/bold-color-headshot' },
-        { text: 'Tattoo Headshots', href: '/headshot-types/tattoos-headshot' },
+        { text: 'Glamour Headshots', href: '/headshot-types/Actor-headshot' },
+        { text: 'Tattoo Headshots', href: '/headshot-types/professional-tattoos-portraits' },
         { text: 'Annie Leibovitz Style', href: '/headshot-types/annie-headshot' },
         { text: 'Barbie Style', href: '/headshot-types/barbie-headshot' },
-        { text: 'Viking Style', href: '/headshot-types/viking-headshot' }
+        { text: 'Viking Style', href: '/headshot-types/viking-portraits' },
+        { text: 'Realtor Style', href: '/headshot-types/realtor-headshot' },
+        { text: 'Speaker Style', href: '/headshot-types/TED-speaker-headshot' }
       ]
     },
     {
       title: 'AI Photos',
       items: [
-        { text: 'Americana Photos', href: '/photos/americana-photos' },
-        { text: 'Onesie Photos', href: '/photos/everyday-onesie-photos' },
+        { text: 'Americana Photos', href: '/photos/vintage-americana-photos' },
+        { text: 'Onesie Photos', href: '/photos/onesie-portraits' },
         { text: 'Halloween Photos', href: '/photos/halloween-photos' },
         { text: 'Helmut Newton Photos', href: '/photos/helmut-newton-photos' },
         { text: 'J.Crew Photos', href: '/photos/jcrew-photos' },
-        { text: 'Dating Profile Photos', href: '/photos/dating-photos' },
-        { text: 'Realtor Photos', href: '/photos/realtor-photos' },
-        { text: 'Artistic Photos', href: '/photos/artistic-photos' },
+        { text: 'Dating Profile Photos', href: '/photos/birthday-party-save-the-date-photoshoot' },
+        { text: 'Artistic Photos', href: '/photos/artistic-portraits' },
         { text: 'Wrestlemania Photos', href: '/photos/wrestlemania-photos' },
-        { text: 'Red Carpet Photos', href: '/photos/red-carpet-photos' }
+        { text: 'Red Carpet Photos', href: '/photos/actor-red-carpet-photos' },
+        { text: 'Game of Thrones', href: '/photos/game-of-thrones-portraits' },
+        { text: 'Kids Birthday', href: '/photos/kids-birthday-portraits' },
+        { text: 'Mythical Creatures', href: '/photos/mythical-creatures-portaits' },
+        { text: 'Online Dating', href: '/photos/online-dating-profile-photos' },
+        { text: 'Pet Photography', href: '/photos/pet-photography-dog' },
+        { text: 'Pop Color Photos', href: '/photos/pop-color-photos' },
+        { text: 'YouTube Thumbnail', href: '/photos/youtube-thumbnail-photos' }
       ]
     },
     {
@@ -79,7 +86,9 @@ const Footer: React.FC = () => {
         { text: 'Black Background', href: '/free-tools/black-background' },
         { text: 'Grey Background', href: '/free-tools/grey-background' },
         { text: 'Red Background', href: '/free-tools/red-background' },
-        { text: 'White Background', href: '/free-tools/white-background' }
+        { text: 'White Background', href: '/free-tools/white-background' },
+        { text: 'Abstract Background', href: '/free-tools/abstract-background' },
+        { text: 'Christmas Background', href: '/free-tools/christmas-background' }
       ]
     },
     {
