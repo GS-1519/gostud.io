@@ -29,9 +29,6 @@ export const metadata: Metadata = {
       height: 630,
       alt: 'Tattoo Style Portrait Photography'
     }],
-  },
-  alternates: {
-    canonical: 'https://www.gostudio.ai/photos/tattoos-photos'
   }
 }
 

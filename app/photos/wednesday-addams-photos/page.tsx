@@ -34,9 +34,6 @@ export const metadata: Metadata = {
       height: 630,
       alt: 'Wednesday Addams Style Photography'
     }],
-  },
-  alternates: {
-    canonical: 'https://www.gostudio.ai/photos/wednesday-addams-photos'
   }
 }
 

@@ -27,9 +27,6 @@ export const metadata: Metadata = {
       height: 630,
       alt: 'J.Crew Style Photography'
     }],
-  },
-  alternates: {
-    canonical: 'https://www.gostudio.ai/photos/jcrew-photos'
   }
 }
 

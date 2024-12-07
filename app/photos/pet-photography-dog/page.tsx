@@ -28,9 +28,6 @@ export const metadata: Metadata = {
       height: 630,
       alt: 'Professional Dog Photography'
     }],
-  },
-  alternates: {
-    canonical: 'https://www.gostudio.ai/photos/dog-photos'
   }
 }
 

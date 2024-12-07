@@ -29,9 +29,6 @@ export const metadata: Metadata = {
       height: 630,
       alt: 'Viking Style Photography'
     }],
-  },
-  alternates: {
-    canonical: 'https://www.gostudio.ai/photos/viking-photos'
   }
 }
 

@@ -27,9 +27,6 @@ export const metadata: Metadata = {
       height: 630,
       alt: 'Professional Dating Profile Photography'
     }],
-  },
-  alternates: {
-    canonical: 'https://www.gostudio.ai/photos/dating-photos'
   }
 }
 
