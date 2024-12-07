@@ -4,4 +4,6 @@ Disallow: /login
 Disallow: /overview
 Disallow: /dashboard
 
-Sitemap: https://gostudio.ai/sitemap.xml
+# Specify canonical domain
+Host: https://www.gostudio.ai
+Sitemap: https://www.gostudio.ai/sitemap.xml
