@@ -10,67 +10,67 @@ const TypesHero = () => {
       title: 'Doctor Headshots',
       description: 'Professional medical portraits for healthcare professionals, doctors, and medical practices.',
       image: '/Packs/Types/doctor.jpg',
-      link: '/headshot-types/doctor-headshot'
+      link: '/headshot-packs/doctor-headshot'
     },
     {
       title: 'Lawyer Headshots',
       description: 'Professional portraits for legal professionals and law firms.',
       image: '/Packs/Types/lawyer.jpg',
-      link: '/headshot-types/lawyer-headshot'
+      link: '/headshot-packs/lawyer-headshot'
     },
     {
       title: 'Actor Headshots',
       description: 'Create stunning glamour portraits perfect for fashion, beauty, and professional modeling portfolios.',
       image: '/Packs/Types/glamour.jpg',
-      link: '/headshot-types/Actor-headshot'
+      link: '/headshot-packs/actor-headshot'
     },
     {
       title: 'Professional Tattoo Portraits',
       description: 'Showcase your tattoos with professional portraits that highlight your artistic expression.',
       image: '/Packs/Types/tattos.jpg',
-      link: '/headshot-types/professional-tattoos-portraits'
+      link: '/headshot-packs/professional-tattoos-portraits'
     },
     {
       title: 'Annie Leibovitz Style',
       description: 'Dramatic portraits inspired by Annie Leibovitz\'s iconic photography style.',
       image: '/Packs/Types/annie.jpg',
-      link: '/headshot-types/annie-headshot'
+      link: '/headshot-packs/annie-headshot'
     },
     {
       title: 'Barbie Style',
       description: 'Fun and stylish Barbie-inspired portrait photography.',
       image: '/Packs/Types/barbie.jpg',
-      link: '/headshot-types/barbie-headshot'
+      link: '/headshot-packs/barbie-headshot'
     },
     {
       title: 'Viking Portraits',
       description: 'Powerful Viking-inspired portraits perfect for historical themes and fantasy shoots.',
       image: '/Packs/Types/vings.jpg',
-      link: '/headshot-types/viking-portraits'
+      link: '/headshot-packs/viking-portraits'
     },
     {
       title: 'Realtor Style',
       description: 'Professional portraits for real estate professionals.',
       image: '/Packs/Types/realtro.jpg',
-      link: '/headshot-types/realtor-headshot'
+      link: '/headshot-packs/realtor-headshot'
     },
     {
       title: 'TED Speaker Style',
       description: 'Professional portraits for speakers and presenters.',
       image: '/Packs/Types/speaker.jpg',
-      link: '/headshot-types/TED-speaker-headshot'
+      link: '/headshot-packs/ted-speaker-headshot'
     },
     {
       title: 'Business Casual Headshots',
       description: 'Classic and stylish portraits inspired by J.Crew\'s aesthetic',
       image: '/Packs/Types/Jcrew.jpg',
-      link: '/headshot-types/business-casual-headshots'
+      link: '/headshot-packs/business-casual-headshots'
     },
     {
       title: 'Model Headshots',
       description: 'Sleek and provocative portraits inspired by Helmut Newton\'s style',
       image: '/Packs/Types/helmut.jpg',
-      link: '/headshot-types/model-headshots'
+      link: '/headshot-packs/model-headshots'
     },
   ];
 

@@ -10,92 +10,92 @@ const PhotosHero = () => {
       title: 'Vintage Americana Photos',
       description: 'Professional headshots with an Americana twist, ideal for LinkedIn and business networking',
       image: '/Packs/Types/americana.jpg',
-      link: '/photos/vintage-americana-photos'
+      link: '/photoshoot-packs/vintage-americana-photos'
     },
     {
       title: 'Onesie Portraits',
       description: 'Adorable portraits for babies and toddlers',
       image: '/Packs/Types/onesis.jpg',
-      link: '/photos/onesie-portraits'
+      link: '/photoshoot-packs/onesie-portraits'
     },
     {
       title: 'Halloween Photos',
       description: 'Spooky and fun portraits for Halloween enthusiasts',
       image: '/Packs/Types/halloween.jpg',
-      link: '/photos/halloween-photos'
+      link: '/photoshoot-packs/halloween-photos'
     },
    
     {
       title: 'Birthday Party Save The Date',
       description: 'Natural, authentic portraits for dating profiles',
       image: '/Packs/Types/save.jpg',
-      link: '/photos/birthday-party-save-the-date-photoshoot'
+      link: '/photoshoot-packs/birthday-party-save-the-date-photoshoot'
     },
     {
       title: 'Artistic Portraits',
       description: 'Creative and artistic portrait photography',
       image: '/Packs/Types/articis.jpg',
-      link: '/photos/artistic-portraits'
+      link: '/photoshoot-packs/artistic-portraits'
     },
     {
       title: 'Wrestlemania Photos',
       description: 'Dynamic wrestling-inspired portraits capturing strength and character',
       image: '/Packs/Types/wresmania.jpg',
-      link: '/photos/wrestlemania-photos'
+      link: '/photoshoot-packs/wrestlemania-photos'
     },
     {
       title: 'Actor Red Carpet Photos',
       description: 'Glamorous and sophisticated portraits inspired by the red carpet',
       image: '/Packs/Types/red-carpet.jpg',
-      link: '/photos/actor-red-carpet-photos'
+      link: '/photoshoot-packs/actor-red-carpet-photos'
     },
     {
       title: 'Game of Thrones Portraits',
       description: 'Fantasy-inspired portraits in the style of Game of Thrones',
       image: '/Packs/Types/game-of-thoran.jpg',
-      link: '/photos/game-of-thrones-portraits'
+      link: '/photoshoot-packs/game-of-thrones-portraits'
     },
     {
       title: 'Kids Birthday Portraits',
       description: 'Capturing special moments for children\'s birthdays',
       image: '/Packs/Types/birthday.jpg',
-      link: '/photos/kids-birthday-portraits'
+      link: '/photoshoot-packs/kids-birthday-portraits'
     },
     {
       title: 'Mythical Creatures Portraits',
       description: 'Fantasy-inspired portraits featuring mythical creatures',
       image: '/Packs/Types/myth.jpg',
-      link: '/photos/mythical-creatures-portaits'
+      link: '/photoshoot-packs/mythical-creatures-portaits'
     },
     {
       title: 'Online Dating Profile Photos',
       description: 'Perfect portraits for online dating profiles',
       image: '/Packs/Types/dating.jpg',
-      link: '/photos/online-dating-profile-photos'
+      link: '/photoshoot-packs/online-dating-profile-photos'
     },
     {
       title: 'Pet Photography',
       description: 'Professional portraits for pets',
       image: '/Packs/Types/dog.jpg',
-      link: '/photos/pet-photography-dog'
+      link: '/photoshoot-packs/pet-photography-dog'
     },
     {
       title: 'Pop Color Photos',
       description: 'Vibrant portraits with pop art influence',
       image: '/Packs/Types/bold.jpg',
-      link: '/photos/pop-color-photos'
+      link: '/photoshoot-packs/pop-color-photos'
     },
     {
       title: 'YouTube Thumbnail Photos',
       description: 'Eye-catching portraits perfect for YouTube thumbnails',
       image: '/Packs/Types/youtube.jpg',
-      link: '/photos/youtube-thumbnail-photos'
+      link: '/photoshoot-packs/youtube-thumbnail-photos'
     },
    {
     title: 'Actress Portraits',
     description: 'Vibrant and detailed photographs of plants and flowers',
     image: '/Packs/Types/botnical.jpg',
-    link: '/photos/botanical-photos'
+    link: '/photoshoot-packs/botanical-photos'
   },
   ];
 

@@ -10,7 +10,7 @@ import { ArrowRight } from "lucide-react";
 import login from "/public/login.svg";
 import { WaitingForMagicLink } from './WaitingForMagicLink';
 import { useRouter } from 'next/navigation';
-import final_Logo from "/public/new-logo.png";
+import final_Logo from '@/public/final_Logo.svg';
 
 interface LoginPageProps {
   host?: string | null;  // Make host optional
