@@ -59,12 +59,13 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <div className="fixed top-[40px] left-0 right-0 w-full z-40">
+      <div className="fixed top-0 left-0 right-0 w-full z-40">
         <nav className="bg-white shadow-sm font-poppins mx-auto px-4 flex flex-col sm:flex-row items-center justify-between" 
           style={{
             maxWidth: '1276px',
             minHeight: '61px',
             borderRadius: '64px',
+            margin: '1px auto',
           }}>
           <div className="flex items-center justify-between w-full sm:w-auto">
             <Link href={user ? '/overview' : '/'} className="flex-shrink-0">
@@ -128,6 +129,7 @@ const Navbar: React.FC = () => {
           </div>
         )}
       </div>
+      <div className="h-[77px]" />
     </>
   );
 }

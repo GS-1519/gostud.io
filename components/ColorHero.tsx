@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import Link from 'next/link'
 import lock from "@/public/logo/lock.svg"
 import circul from "@/public/logo/circul.svg"
 import mdi from "@/public/logo/mdi.svg"

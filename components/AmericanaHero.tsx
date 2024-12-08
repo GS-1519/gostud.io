@@ -6,9 +6,9 @@ import mdi from "@/public/logo/mdi.svg"
 import tick from "@/public/logo/tick.svg"
 const AmericanaHero = () => {
   return (
-    <div className="relative overflow-hidden pt-16 sm:pt-15">
+    <div className="relative overflow-hidden pt-4 sm:pt-6">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-center py-6 sm:py-8 md:py-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-center py-2 sm:py-3 md:py-4">
           <div className="flex flex-col items-center lg:items-start">
             <div className="max-w-[733px] text-center lg:text-left px-2 sm:px-0">
               <h1 className="text-[24px] sm:text-[28px] md:text-[36px] lg:text-[40px] font-bold leading-tight flex flex-col">
