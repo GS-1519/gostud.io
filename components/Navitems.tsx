@@ -15,13 +15,7 @@ export default function NavItems({ isMobile = false }) {
   const toolPages = [
     { href: '/free-tools/background-library', label: 'Background Library' },
     { href: '/free-tools/background-remover', label: 'Background Remover' },
-    { href: '/free-tools/black-background', label: 'Black Background' },
-    { href: '/free-tools/grey-background', label: 'Grey Background' },
-    { href: '/free-tools/red-background', label: 'Red Background' },
-    { href: '/free-tools/white-background', label: 'White Background' },
-    { href: '/free-tools/abstract-background', label: 'Abstract Background' },
-    { href: '/free-tools/christmas-background', label: 'Christmas Background' },
-    { href: '/free-tools/halloween-background', label: 'Halloween Background' },
+    
   ];
 
   const handleMouseEnter = () => {
@@ -41,11 +35,11 @@ export default function NavItems({ isMobile = false }) {
   if (isMobile) {
     return (
       <div className="flex flex-col w-full space-y-2">
-        <Link href="/headshot-types" className={linkClass}>
+        <Link href="/headshot-packs" className={linkClass}>
           Headshot Packs
         </Link>
 
-        <Link href="/photos" className={linkClass}>
+        <Link href="/photoshoot-packs" className={linkClass}>
           Photoshoot Packs
         </Link>
 
@@ -80,11 +74,11 @@ export default function NavItems({ isMobile = false }) {
   // Desktop menu
   return (
     <div className="flex items-center space-x-4">
-      <Link href="/headshot-types" className={linkClass}>
+      <Link href="/headshot-packs" className={linkClass}>
         Headshot Packs
       </Link>
 
-      <Link href="/photos" className={linkClass}>
+      <Link href="/photoshoot-packs" className={linkClass}>
         Photoshoot Packs
       </Link>
 

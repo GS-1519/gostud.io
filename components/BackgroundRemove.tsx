@@ -164,32 +164,80 @@ export default function BackgroundRemove() {
         }
     };
 
+    const handleReset = () => {
+        setInputFile(null);
+        setOutputFileURL('');
+        setProgress(0);
+        setProcessing(false);
+        setErrorMsg('');
+    };
+
+    const handleImageUpload = async (file: File) => {
+        setInputFile(file);
+        setProcessing(true);
+        setProgress(0);
+        
+        try {
+            const result = await removeBackground(file, {
+                progress: (progress) => {
+                    setProgress(Math.round(Number(progress) * 100));
+                },
+            });
+            
+            const url = URL.createObjectURL(result);
+            setOutputFileURL(url);
+        } catch (error) {
+            setErrorMsg('Error processing image. Please try again.');
+            console.error('Error:', error);
+        } finally {
+            setProcessing(false);
+        }
+    };
+
     return (
         <div className="w-full max-w-[1400px] mx-auto p-8">
             {!outputFileURL ? (
-                <div className="max-w-2xl mx-auto text-center space-y-6">
-                    
-                    <div className="bg-gray-50 rounded-xl p-6 border-2 border-dashed border-gray-200">
-                        <label className="cursor-pointer block">
-                            <div className="flex flex-col items-center justify-center p-10">
-                                <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center mb-4">
-                                    <Upload className="w-8 h-8 text-blue-500" />
+                <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 relative">
+                    <div className="max-w-xl mx-auto text-center">
+                        <div className="bg-gray-50 rounded-xl p-6 border-2 border-dashed border-gray-200">
+                            <label className="cursor-pointer block">
+                                <div className="flex flex-col items-center justify-center p-10">
+                                    <div className="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center mb-4">
+                                        <Upload className="w-8 h-8 text-blue-500" />
+                                    </div>
+                                    <p className="text-lg font-semibold text-gray-700 mb-2">
+                                        Click to Select or Drag and Drop
+                                    </p>
+                                    <p className="text-sm text-gray-500">
+                                        Supported formats: PNG, JPG, JPEG
+                                    </p>
+                                    <input
+                                        ref={fileInputRef}
+                                        type="file"
+                                        accept="image/*"
+                                        onChange={handleFileChange}
+                                        className="hidden"
+                                    />
                                 </div>
-                                <p className="text-lg font-semibold text-gray-700 mb-2">
-                                    Click to Select or Drag and Drop
-                                </p>
-                                <p className="text-sm text-gray-500">
-                                    Supported formats: PNG, JPG, JPEG
-                                </p>
-                                <input
-                                    ref={fileInputRef}
-                                    type="file"
-                                    accept="image/*"
-                                    onChange={handleFileChange}
-                                    className="hidden"
-                                />
+                            </label>
+                        </div>
+
+                        {processing && (
+                            <div className="mt-8 max-w-md mx-auto">
+                                <div className="space-y-4">
+                                    <div className="flex justify-between text-base font-medium text-gray-700">
+                                        <span>Processing image...</span>
+                                        <span>{progress}%</span>
+                                    </div>
+                                    <div className="w-full bg-gray-100 rounded-full h-2">
+                                        <div 
+                                            className="bg-blue-600 h-2 rounded-full transition-all duration-300"
+                                            style={{ width: `${progress}%` }}
+                                        />
+                                    </div>
+                                </div>
                             </div>
-                        </label>
+                        )}
                     </div>
                 </div>
             ) : (
@@ -258,66 +306,62 @@ export default function BackgroundRemove() {
                         </div>
 
                         <div className="lg:w-[70%] p-6">
-                            <div className="border-b border-gray-100 mb-6">
-                                <div className="flex gap-8">
-                                    <button className="px-1 py-3 text-blue-600 border-b-2 border-blue-600 font-medium">
-                                        Original
-                                    </button>
-                                    <button className="px-1 py-3 text-gray-400 border-b-2 border-transparent">
-                                        Background Removed
-                                    </button>
-                                </div>
+                           
+                            <div className="bg-[#f8fafc] rounded-xl flex items-center justify-center min-h-[500px] p-4 relative">
+                                {processing ? (
+                                    <div className="max-w-md w-full p-6">
+                                        <div className="space-y-4">
+                                            <div className="flex justify-between text-base font-medium text-gray-700">
+                                                <span>Processing image...</span>
+                                                <span>{progress}%</span>
+                                            </div>
+                                            <div className="w-full bg-gray-100 rounded-full h-2">
+                                                <div 
+                                                    className="bg-blue-600 h-2 rounded-full transition-all duration-300"
+                                                    style={{ width: `${progress}%` }}
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                ) : (
+                                    <ImgComparisonSlider
+                                        className="max-w-[600px] w-full rounded-lg shadow-sm"
+                                        hover={true}
+                                        direction="horizontal"
+                                    >
+                                        <img
+                                            slot="first"
+                                            src={inputFile ? URL.createObjectURL(inputFile) : ''}
+                                            alt="Original"
+                                            className="max-h-[600px] w-full object-contain bg-white"
+                                            style={{ objectFit: 'contain', width: '100%', height: '100%' }}
+                                        />
+                                        <img
+                                            slot="second"
+                                            src={outputFileURL}
+                                            alt="Background Removed"
+                                            className="max-h-[600px] w-full object-contain bg-white"
+                                            style={{ objectFit: 'contain', width: '100%', height: '100%' }}
+                                        />
+                                    </ImgComparisonSlider>
+                                )}
                             </div>
 
-                            <div className="bg-[#f8fafc] rounded-xl flex items-center justify-center min-h-[500px] p-4">
-                                <ImgComparisonSlider
-                                    className="max-w-[600px] w-full rounded-lg shadow-sm"
-                                    hover={true}
-                                    direction="horizontal"
-                                >
-                                    <img
-                                        slot="first"
-                                        src={inputFile ? URL.createObjectURL(inputFile) : ''}
-                                        alt="Original"
-                                        className="max-h-[450px] w-full object-contain bg-white"
-                                    />
-                                    <img
-                                        slot="second"
-                                        src={outputFileURL}
-                                        alt="Background Removed"
-                                        className="max-h-[450px] w-full object-contain bg-white"
-                                    />
-                                </ImgComparisonSlider>
-                            </div>
-
-                            <div className="mt-6 flex justify-center">
+                            <div className="mt-6 flex justify-center gap-4">
                                 <a
                                     href={outputFileURL}
                                     download="removed-background.png"
-                                    className="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-2.5 rounded-lg font-medium transition-all w-full max-w-xs"
+                                    className="flex items-center justify-center gap-2 bg-[#00A693] hover:bg-[#008577] text-white px-8 py-2.5 rounded-lg font-medium transition-all w-full max-w-xs"
                                 >
                                     <Download size={18} />
-                                    Save Photo
+                                    Download
                                 </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            )}
-
-            {processing && (
-                <div className="absolute inset-0 bg-white/80 flex items-center justify-center z-50">
-                    <div className="max-w-md w-full p-6">
-                        <div className="space-y-4">
-                            <div className="flex justify-between text-base font-medium text-gray-700">
-                                <span>Processing image...</span>
-                                <span>{progress}%</span>
-                            </div>
-                            <div className="w-full bg-gray-100 rounded-full h-2">
-                                <div 
-                                    className="bg-blue-600 h-2 rounded-full transition-all duration-300"
-                                    style={{ width: `${progress}%` }}
-                                />
+                                <button
+                                    onClick={handleReset}
+                                    className="flex items-center justify-center gap-2 bg-black hover:bg-gray-800 text-white px-8 py-2.5 rounded-lg font-medium transition-all w-full max-w-xs"
+                                >
+                                    Remove Another
+                                </button>
                             </div>
                         </div>
                     </div>
