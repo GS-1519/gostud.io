@@ -28,9 +28,6 @@ export const metadata: Metadata = {
       height: 630,
       alt: 'Professional Lawyer Headshots'
     }],
-  },
-  alternates: {
-    canonical: 'https://www.gostudio.ai/photos/lawyer-photos'
   }
 }
 

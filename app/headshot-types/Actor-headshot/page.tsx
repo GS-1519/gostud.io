@@ -27,9 +27,6 @@ export const metadata: Metadata = {
       height: 630,
       alt: 'Professional Glamour Photography'
     }],
-  },
-  alternates: {
-    canonical: 'https://www.gostudio.ai/photos/glamour-photos'
   }
 }
 

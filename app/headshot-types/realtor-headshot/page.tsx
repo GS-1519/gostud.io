@@ -29,9 +29,6 @@ export const metadata: Metadata = {
       height: 630,
       alt: 'Professional Realtor Headshots'
     }],
-  },
-  alternates: {
-    canonical: 'https://www.gostudio.ai/photos/realtor-photos'
   }
 }
 

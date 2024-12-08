@@ -32,9 +32,6 @@ export const metadata: Metadata = {
     title: 'Free Halloween Background Generator',
     description: 'Create spooky Halloween backgrounds for seasonal photography',
     images: ['/og/halloween-background.jpg']
-  },
-  alternates: {
-    canonical: '/free-tools/halloween-background'
   }
 }
 

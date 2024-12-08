@@ -28,9 +28,6 @@ export const metadata: Metadata = {
       height: 630,
       alt: 'Game of Thrones Style Photography'
     }],
-  },
-  alternates: {
-    canonical: 'https://www.gostudio.ai/photos/game-of-thrones-photos'
   }
 }
 

@@ -28,9 +28,6 @@ export const metadata: Metadata = {
       height: 630,
       alt: 'Kids Birthday Photography'
     }],
-  },
-  alternates: {
-    canonical: 'https://www.gostudio.ai/photos/kids-birthday-photos'
   }
 }
 

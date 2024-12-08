@@ -28,9 +28,6 @@ export const metadata: Metadata = {
       height: 630,
       alt: 'YouTube Content Creator Photography'
     }],
-  },
-  alternates: {
-    canonical: 'https://www.gostudio.ai/photos/youtube-reaction-photos'
   }
 }
 

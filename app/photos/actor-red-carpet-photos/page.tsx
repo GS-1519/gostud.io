@@ -29,9 +29,6 @@ export const metadata: Metadata = {
       height: 630,
       alt: 'Red Carpet Photography'
     }],
-  },
-  alternates: {
-    canonical: 'https://www.gostudio.ai/photos/red-carpet-photos'
   }
 }
 

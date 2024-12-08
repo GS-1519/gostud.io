@@ -28,9 +28,6 @@ export const metadata: Metadata = {
       height: 630,
       alt: 'Onesie Portrait Photography'
     }],
-  },
-  alternates: {
-    canonical: 'https://www.gostudio.ai/photos/everyday-onesie-photos'
   }
 }
 
