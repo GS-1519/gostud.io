@@ -119,7 +119,7 @@ const Why = ({ imageSet = 'dating' }: WhyProps) => {
 
         <div className="text-center mt-8 sm:mt-12 lg:mt-16">
           <Link 
-            href="/get-started" 
+            href="/login" 
             className="inline-block bg-[#5B16FE] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg hover:bg-opacity-90 transition-all"
           >
             Get Your Headshot now →
