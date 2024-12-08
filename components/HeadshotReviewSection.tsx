@@ -253,16 +253,13 @@ const ReviewCard: React.FC<ReviewCardProps> = ({ review }) => {
     return (
       <div className="w-full max-w-[1276px] mx-auto bg-white rounded-[24px] sm:rounded-[60px] py-[18px] sm:py-20 px-4 sm:px-8 lg:px-10 font-poppins">
         <div className="space-y-8">
-          {/* Header */}
           <div className="text-center space-y-6">
             <h2 className="text-gray-500 font-semibold font-jakarta">TESTIMONIALS</h2>
-            
-            <h1 className="text-3xl sm:text-5xl font-bold font-jakarta">
+            <h3 className="text-3xl sm:text-5xl font-bold font-jakarta">
               <span className="bg-gradient-to-r from-[#7160FF] to-[#B19FFF] text-transparent bg-clip-text">{photosCreated}</span> headshots already created
               <br/>
               <span className="bg-gradient-to-r from-[#00B6D0] to-[#53E0FF] text-transparent bg-clip-text">{happyCustomers}</span> happy customers 
-            </h1>
-            
+            </h3>
             <p className="text-gray-600 text-sm sm:text-base max-w-3xl mx-auto">
               Transform your photos into polished, professional headshots in minutes. Join thousands of professionals 
               who trust our AI to create studio-quality portraits that enhance their personal brand and make the right first impression.

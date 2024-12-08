@@ -44,15 +44,16 @@ const BlackHero = () => {
       <div className="max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <div className="text-center mb-8 sm:mb-[60px] px-4">
-          <h1 className="text-[32px] sm:text-[40px] font-bold text-gray-900 mb-4 sm:mb-6">
+          <h2 className="text-[32px] sm:text-[40px] font-bold text-gray-900 mb-4 sm:mb-6">
             Black Color Backgrounds
-          </h1>
+          </h2>
           <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">
             Stylish Downloads Await! ⚫ Click to grab sleek black backgrounds to elevate your screens with modern elegance!
           </p>
         </div>
 
         {/* Category Navigation */}
+        <h3 className="sr-only">Background Categories</h3>
         <div className="mb-8 sm:mb-12">
           <div className="flex justify-start sm:justify-center overflow-x-auto no-scrollbar">
             <div className="inline-flex items-center bg-white rounded-full p-1.5 shadow-sm border">

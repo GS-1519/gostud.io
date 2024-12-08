@@ -40,7 +40,7 @@ const PricingComponent: React.FC<PricingComponentProps> = ({ user }) => {
       originalPrice: '19',
       features: [
         '📸 10  Headshots',
-        '⚡ Delivery within 2 hours',
+        ' Delivery within 2 hours',
         '🎨 5 Background Styles',
         '✨ 3 Different Outfits'
       ],
@@ -181,9 +181,9 @@ const PricingComponent: React.FC<PricingComponentProps> = ({ user }) => {
 
         <div className="flex flex-col gap-[10px]">
           <h2 className="text-center text-gray-500 font-semibold font-jakarta">PRICING</h2>
-          <h1 className="text-center text-4xl sm:text-5xl lg:text-5xl font-bold font-jakarta">
+          <h3 className="text-center text-4xl sm:text-5xl lg:text-5xl font-bold font-jakarta">
             Premium Quality at 10 times less price
-          </h1>
+          </h3>
           <p className="text-center text-gray-600 max-w-3xl mx-auto font-poppins">
             No studio visits. No $200+ photoshoot fees. No waiting for appointments. Achieve stunning, 
             professional-grade headshots in just 30 minutes—all from the comfort of your home.
@@ -208,9 +208,9 @@ const PricingComponent: React.FC<PricingComponentProps> = ({ user }) => {
                 <div className={`bg-white rounded-3xl p-8 h-full flex flex-col ${
                   tier.highlight ? 'shadow-2xl' : 'border border-gray-200'
                 }`}>
-                  <h2 className="text-xl font-semibold mb-4 text-[#473BF0] font-jakarta">
+                  <h3 className="text-xl font-semibold mb-4 text-[#473BF0] font-jakarta">
                     {tier.name}
-                  </h2>
+                  </h3>
                   <div className="mb-2 flex items-center">
                     <span className="text-4xl font-bold font-jakarta">${tier.price}</span>
                     <div className="ml-2 flex flex-col">

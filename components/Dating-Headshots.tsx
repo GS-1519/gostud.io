@@ -60,14 +60,14 @@ const DatingHeadshotHero = () => {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-8 py-12">
           <div className="space-y-4">
-            <h1 
+            <h2 
               className="text-4xl sm:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4] leading-tight tracking-tight"
               style={{
                 backgroundImage: 'linear-gradient(90deg, #8371FF -39.48%, #A077FE 15.54%, #01C7E4 100%)'
               }}
             >
               Dating Profile Photos That Make the Perfect First Impression
-            </h1>
+            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed font-light">
               Stand out on dating apps with our AI-powered professional photos.
               <span className="font-medium text-gray-800"> Natural, authentic, and totally you.</span>

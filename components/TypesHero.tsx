@@ -70,7 +70,7 @@ const TypesHero = () => {
       title: 'Model Headshots',
       description: 'Sleek and provocative portraits inspired by Helmut Newton\'s style',
       image: '/Packs/Types/helmut.jpg',
-      link: '/photos/model-headshots'
+      link: '/headshot-types/model-headshots'
     },
   ];
 

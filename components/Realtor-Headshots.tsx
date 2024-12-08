@@ -63,14 +63,14 @@ const RealtorHeadshotHero = () => {
   const displayImages = getDisplayImages();
 
   return (
-    <div className="w-full max-w-[1276px] mx-auto bg-white rounded-[24px] sm:rounded-[60px] py-[18px] sm:py-20 px-4 sm:px-8 lg:px-10">
+    <div className="w-full max-w-[1276px] mx-auto">
       <div className="text-center space-y-8">
         <div className="space-y-4">
-          <h1 className="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-400 leading-tight tracking-tight">
-            Professional Realtor Portrait Collection
-          </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Transform your photos into polished, professional portraits that inspire trust and confidence in your real estate expertise
+          <h2 className="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-violet-500 to-cyan-400">
+            Professional Real Estate Agent Portraits
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Build trust with professional realtor headshots
           </p>
         </div>
 

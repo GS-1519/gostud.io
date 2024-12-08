@@ -12,29 +12,19 @@ const WrestlemaniaHero = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-center py-6 sm:py-8 md:py-12">
           <div className="flex flex-col items-center lg:items-start">
             <div className="max-w-[733px] text-center lg:text-left px-2 sm:px-0">
-              <h1 className="text-[24px] sm:text-[28px] md:text-[36px] lg:text-[40px] font-bold leading-tight flex flex-col gap-2 sm:gap-3">
-                <div className="flex flex-wrap justify-center lg:justify-start items-center gap-x-1">
+              <h1 className="text-[24px] sm:text-[28px] md:text-[36px] lg:text-[40px] font-bold leading-tight flex flex-col">
+                <div className="flex flex-wrap justify-center lg:justify-start items-center">
                   <span className="bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4] bg-clip-text text-transparent">
-                    Unleash the Champion
-                  </span>
-                  <span className="text-[#161C2D]">AI-</span>
-                </div>
-                
-                <div className="flex flex-wrap justify-center lg:justify-start">
-                  <span className="text-[#161C2D] break-words sm:whitespace-nowrap">
-                    Headshots Inspired by
+                    Champion Portraits
                   </span>
                 </div>
-
                 <div className="flex flex-wrap justify-center lg:justify-start">
-                  <span className="text-[#161C2D] break-words sm:whitespace-nowrap">
-                    Wrestlemania
-                  </span>
+                  <span className="text-[#161C2D]">With Wrestling Spirit</span>
                 </div>
               </h1>
 
               <p className="mt-4 sm:mt-6 text-base sm:text-lg text-[#4B5563] max-w-[600px] mx-auto lg:mx-0">
-                Capture the fierce energy and power of Wrestlemania with AI portraits that showcase your bold, competitive spirit.
+                Transform into a wrestling legend with portraits that capture strength and charisma. Perfect for fans, athletes, and anyone who wants to showcase their inner champion.
               </p>
 
               <div className="mt-6 sm:mt-8 grid grid-cols-2 gap-2 sm:gap-3 max-w-[600px] mx-auto lg:mx-0">
@@ -66,7 +56,7 @@ const WrestlemaniaHero = () => {
 
               <div className="mt-6 sm:mt-8 flex justify-center lg:justify-start">
                 <button className="w-fit rounded-full bg-[#5B16FE] px-2.5 py-1.5 sm:px-4 sm:py-2.5 lg:px-6 lg:py-3 text-xs sm:text-sm lg:text-base text-white flex items-center justify-center sm:inline-flex gap-2 hover:bg-opacity-90 transition-all">
-                  Get Started For Free
+                  Become a Legend
                   <span className="ml-1 sm:ml-2">→</span>
                 </button>
               </div>

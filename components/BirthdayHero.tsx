@@ -12,19 +12,19 @@ const BirthdayHero = () => {
           <div className="flex flex-col items-center lg:items-start">
             {/* Main content - Updated to match Americana styling */}
             <div className="max-w-[733px] text-center lg:text-left px-2 sm:px-0">
-              <h1 className="text-[24px] sm:text-[28px] md:text-[36px] lg:text-[40px] font-bold leading-tight flex flex-col gap-2 sm:gap-3">
-                <div className="flex flex-wrap justify-center lg:justify-start items-center gap-x-1">
-                  <span className="text-[#161C2D]">Fun and Playful</span>
+              <h1 className="text-[24px] sm:text-[28px] md:text-[36px] lg:text-[40px] font-bold leading-tight flex flex-col">
+                <div className="flex flex-wrap justify-center lg:justify-start items-center">
+                  <span className="bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4] bg-clip-text text-transparent">
+                    Magical Birthday
+                  </span>
                 </div>
                 <div className="flex flex-wrap justify-center lg:justify-start">
-                  <span className="bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4] bg-clip-text text-transparent">
-                    Kids' Birthday Portraits
-                  </span>
+                  <span className="text-[#161C2D]">Portrait Experience</span>
                 </div>
               </h1>
 
               <p className="mt-4 sm:mt-6 text-base sm:text-lg text-[#4B5563] max-w-[600px] mx-auto lg:mx-0">
-                Capture the joy and excitement of a birthday celebration with vibrant, cheerful headshots, perfect for any occasion.
+                Create unforgettable birthday memories with vibrant, personalized portraits that capture the joy and excitement of your special day.
               </p>
 
               {/* Features grid - Updated styling */}
@@ -58,7 +58,7 @@ const BirthdayHero = () => {
               {/* CTA Button - Updated styling */}
               <div className="mt-6 sm:mt-8 flex justify-center lg:justify-start">
                 <button className="w-fit rounded-full bg-[#5B16FE] px-2.5 py-1.5 sm:px-4 sm:py-2.5 lg:px-6 lg:py-3 text-xs sm:text-sm lg:text-base text-white flex items-center justify-center sm:inline-flex gap-2 hover:bg-opacity-90 transition-all">
-                  Get Started For Free
+                  Make It Special
                   <span className="ml-1 sm:ml-2">→</span>
                 </button>
               </div>

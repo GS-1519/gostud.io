@@ -31,9 +31,9 @@ const DataSecuritySection: React.FC = () => {
     <div className="w-full max-w-[1276px] mx-auto bg-[#1E1E1E] rounded-3xl overflow-hidden relative p-6 sm:p-12 font-poppins">
       <div className="flex flex-col items-center">
         <h2 className="text-sm sm:text-base uppercase text-gray-400 mb-2 sm:mb-4 tracking-wider w-full text-center font-jakarta">PRIVACY</h2>
-        <h1 className="text-2xl sm:text-5xl font-bold mb-3 sm:mb-6 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent text-center font-jakarta">
+        <h3 className="text-2xl sm:text-5xl font-bold mb-3 sm:mb-6 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent text-center font-jakarta">
           We value Data Privacy
-        </h1>
+        </h3>
         <p className="text-gray-400 text-sm sm:text-lg mb-8 sm:mb-12 text-center max-w-2xl">
           Trusted by Fortune 500 Leaders and Top professionals.<br className="hidden sm:inline" />
           Reputed enterprise organisations and teams trust us with their data.

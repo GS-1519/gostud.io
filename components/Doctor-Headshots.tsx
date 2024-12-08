@@ -52,94 +52,87 @@ const DoctorHeadshotHero = () => {
   const displayImages = getDisplayImages();
 
   return (
-    <div className="relative overflow-hidden bg-white">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center space-y-8 py-12">
-          <div className="space-y-4">
-            <h1 
-              className="text-4xl sm:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4] leading-tight tracking-tight"
-              style={{
-                backgroundImage: 'linear-gradient(90deg, #8371FF -39.48%, #A077FE 15.54%, #01C7E4 100%)'
+    <div className="w-full max-w-[1276px] mx-auto">
+      <div className="text-center space-y-8">
+        <div className="space-y-4">
+          <h2 className="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-violet-500 to-cyan-400">
+            Professional Medical Doctor AI Headshots
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Elevate your medical practice with professional headshots
+          </p>
+        </div>
+
+        <div className="flex justify-center gap-4">
+          {categories.map((category) => (
+            <button
+              key={category.value}
+              onClick={() => {
+                setActiveCategory(category.value);
+                setShowAll(false);
               }}
+              className={`px-6 py-2 rounded-full transition-all duration-300 ${
+                activeCategory === category.value
+                  ? 'bg-[#5B16FE] text-white hover:opacity-90'
+                  : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+              }`}
             >
-              Professional Medical Headshots That Inspire Trust
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Elevate your medical practice with professional headshots that convey expertise and compassion
-            </p>
-          </div>
+              {category.name}
+            </button>
+          ))}
+        </div>
 
-          <div className="flex justify-center gap-4">
-            {categories.map((category) => (
-              <button
-                key={category.value}
-                onClick={() => {
-                  setActiveCategory(category.value);
-                  setShowAll(false);
-                }}
-                className={`px-6 py-2 rounded-full transition-all duration-300 ${
-                  activeCategory === category.value
-                    ? 'bg-[#5B16FE] text-white hover:opacity-90'
-                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-                }`}
-              >
-                {category.name}
-              </button>
-            ))}
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {displayImages.map((image, index) => (
-              <div 
-                key={index}
-                className="relative group cursor-pointer"
-                onClick={() => setSelectedImage(image)}
-              >
-                <div className="aspect-w-4 aspect-h-5 rounded-lg overflow-hidden">
-                  <Image
-                    src={image.src}
-                    alt={image.alt}
-                    width={400}
-                    height={500}
-                    className="object-cover transform transition-transform group-hover:scale-105"
-                  />
-                </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {displayImages.map((image, index) => (
+            <div 
+              key={index}
+              className="relative group cursor-pointer"
+              onClick={() => setSelectedImage(image)}
+            >
+              <div className="aspect-w-4 aspect-h-5 rounded-lg overflow-hidden">
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  width={400}
+                  height={500}
+                  className="object-cover transform transition-transform group-hover:scale-105"
+                />
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
+        </div>
 
-          <div className="flex flex-col items-center gap-4">
-            {activeCategory === 'all' ? (
-              <button
-                onClick={() => setShowAll(!showAll)}
-                className="group flex items-center gap-2 px-6 py-3 bg-[#5B16FE] text-white rounded-full hover:opacity-90 transition-all duration-300 transform hover:scale-105"
+        <div className="flex flex-col items-center gap-4">
+          {activeCategory === 'all' ? (
+            <button
+              onClick={() => setShowAll(!showAll)}
+              className="group flex items-center gap-2 px-6 py-3 bg-[#5B16FE] text-white rounded-full hover:opacity-90 transition-all duration-300 transform hover:scale-105"
+            >
+              {showAll ? (
+                <>
+                  Show Less
+                  <ChevronUp className="w-5 h-5 group-hover:-translate-y-1 transition-transform" />
+                </>
+              ) : (
+                <>
+                  Explore More
+                  <ChevronDown className="w-5 h-5 group-hover:translate-y-1 transition-transform" />
+                </>
+              )}
+            </button>
+          ) : (
+            <Link href="/login">
+              <button 
+                className="group flex items-center gap-2 px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105 text-white"
+                style={{
+                  background: 'linear-gradient(90deg, #8371FF -39.48%, #A077FE 15.54%, #01C7E4 100%)'
+                }}
               >
-                {showAll ? (
-                  <>
-                    Show Less
-                    <ChevronUp className="w-5 h-5 group-hover:-translate-y-1 transition-transform" />
-                  </>
-                ) : (
-                  <>
-                    Explore More
-                    <ChevronDown className="w-5 h-5 group-hover:translate-y-1 transition-transform" />
-                  </>
-                )}
+                Generate More
+                <Wand2 className="w-5 h-5 group-hover:rotate-45 transition-transform" />
               </button>
-            ) : (
-              <Link href="/login">
-                <button 
-                  className="group flex items-center gap-2 px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105 text-white"
-                  style={{
-                    background: 'linear-gradient(90deg, #8371FF -39.48%, #A077FE 15.54%, #01C7E4 100%)'
-                  }}
-                >
-                  Generate More
-                  <Wand2 className="w-5 h-5 group-hover:rotate-45 transition-transform" />
-                </button>
-              </Link>
-            )}
-          </div>
+            </Link>
+          )}
         </div>
       </div>
 
