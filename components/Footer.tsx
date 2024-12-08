@@ -47,35 +47,35 @@ const Footer: React.FC = () => {
     {
       title: 'AI Headshots',
       items: [
-        { text: 'Doctor Headshot', href: '/headshot-types/doctor-headshot' },
-        { text: 'Lawyer Headshot', href: '/headshot-types/lawyer-headshot' },
-        { text: 'Actor Headshot', href: '/headshot-types/Actor-headshot' },
-        { text: 'Professional Tattoos Portraits', href: '/headshot-types/professional-tattoos-portraits' },
-        { text: 'Annie Headshot', href: '/headshot-types/annie-headshot' },
-        { text: 'Barbie Headshot', href: '/headshot-types/barbie-headshot' },
-        { text: 'Viking Portraits', href: '/headshot-types/viking-portraits' },
-        { text: 'Realtor Headshot', href: '/headshot-types/realtor-headshot' },
-        { text: 'TED Speaker Headshot', href: '/headshot-types/TED-speaker-headshot' }
+        { text: 'Doctor Headshot', href: '/headshot-packs/doctor-headshot' },
+        { text: 'Lawyer Headshot', href: '/headshot-packs/lawyer-headshot' },
+        { text: 'Actor Headshot', href: '/headshot-packs/actor-headshot' },
+        { text: 'Professional Tattoos Portraits', href: '/headshot-packs/professional-tattoos-portraits' },
+        { text: 'Annie Headshot', href: '/headshot-packs/annie-headshot' },
+        { text: 'Barbie Headshot', href: '/headshot-packs/barbie-headshot' },
+        { text: 'Viking Portraits', href: '/headshot-packs/viking-portraits' },
+        { text: 'Realtor Headshot', href: '/headshot-packs/realtor-headshot' },
+        { text: 'TED Speaker Headshot', href: '/headshot-packs/ted-speaker-headshot' }
       ]
     },
     {
       title: 'AI Photos',
       items: [
-        { text: 'Vintage Americana Photos', href: '/photos/vintage-americana-photos' },
-        { text: 'Onesie Portraits', href: '/photos/onesie-portraits' },
-        { text: 'Halloween Photos', href: '/photos/halloween-photos' },
-        { text: 'Actress Portraits', href: '/photos/actress-portraits' },
-        { text: 'Birthday Party Save The Date', href: '/photos/birthday-party-save-the-date-photoshoot' },
-        { text: 'Artistic Portraits', href: '/photos/artistic-portraits' },
-        { text: 'Wrestlemania Photos', href: '/photos/wrestlemania-photos' },
-        { text: 'Actor Red Carpet Photos', href: '/photos/actor-red-carpet-photos' },
-        { text: 'Game Of Thrones Portraits', href: '/photos/game-of-thrones-portraits' },
-        { text: 'Kids Birthday Portraits', href: '/photos/kids-birthday-portraits' },
-        { text: 'Mythical Creatures Portraits', href: '/photos/mythical-creatures-portaits' },
-        { text: 'Online Dating Profile Photos', href: '/photos/online-dating-profile-photos' },
-        { text: 'Pet Photography Dog', href: '/photos/pet-photography-dog' },
-        { text: 'Pop Color Photos', href: '/photos/pop-color-photos' },
-        { text: 'YouTube Thumbnail Photos', href: '/photos/youtube-thumbnail-photos' }
+        { text: 'Vintage Americana Photos', href: '/photoshoot-packs/vintage-americana-photos' },
+        { text: 'Onesie Portraits', href: '/photoshoot-packs/onesie-portraits' },
+        { text: 'Halloween Photos', href: '/photoshoot-packs/halloween-photos' },
+        { text: 'Actress Portraits', href: '/photoshoot-packs/actress-portraits' },
+        { text: 'Birthday Party Save The Date', href: '/photoshoot-packs/birthday-party-save-the-date-photoshoot' },
+        { text: 'Artistic Portraits', href: '/photoshoot-packs/artistic-portraits' },
+        { text: 'Wrestlemania Photos', href: '/photoshoot-packs/wrestlemania-photos' },
+        { text: 'Actor Red Carpet Photos', href: '/photoshoot-packs/actor-red-carpet-photos' },
+        { text: 'Game Of Thrones Portraits', href: '/photoshoot-packs/game-of-thrones-portraits' },
+        { text: 'Kids Birthday Portraits', href: '/photoshoot-packs/kids-birthday-portraits' },
+        { text: 'Mythical Creatures Portraits', href: '/photoshoot-packs/mythical-creatures-portaits' },
+        { text: 'Online Dating Profile Photos', href: '/photoshoot-packs/online-dating-profile-photos' },
+        { text: 'Pet Photography Dog', href: '/photoshoot-packs/pet-photography-dog' },
+        { text: 'Pop Color Photos', href: '/photoshoot-packs/pop-color-photos' },
+        { text: 'YouTube Thumbnail Photos', href: '/photoshoot-packs/youtube-thumbnail-photos' }
       ]
     },
     {
