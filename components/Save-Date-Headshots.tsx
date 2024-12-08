@@ -73,9 +73,9 @@ const SaveDateHeadshotHero = () => {
     <div className="w-full max-w-[1276px] mx-auto bg-white rounded-[24px] sm:rounded-[60px] py-[18px] sm:py-20 px-4 sm:px-8 lg:px-10">
       <div className="text-center space-y-8">
         <div className="space-y-4">
-          <h1 className="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 leading-tight tracking-tight">
+          <h2 className="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 leading-tight tracking-tight">
             Celebration & Save The Date Portraits
-          </h1>
+          </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Create stunning portraits perfect for birthdays, save-the-dates, and special celebrations that capture your joyful moments
           </p>

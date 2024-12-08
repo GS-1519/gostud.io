@@ -10,7 +10,6 @@ import { SpeedInsights } from '@vercel/speed-insights/next'
 import ClarityScript from "@/components/ClarityScript";
 import GoogleTagManager from "@/components/GoogleTagManager";
 import 'react-tabs/style/react-tabs.css';
-import BlackFridayBanner from '@/components/BlackFridayBanner'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.gostudio.ai'),
@@ -42,7 +41,6 @@ export default function RootLayout({ children }: any) {
         <Navbar />
         <CSPostHogProvider>
           <main className="flex-1 flex flex-col w-full">
-            <BlackFridayBanner />
             <div className="pt-[32px] sm:pt-[36px]">
               {children}
             </div>

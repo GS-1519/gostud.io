@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import Link from 'next/link'
 import lock from "@/public/logo/lock.svg"
 import circul from "@/public/logo/circul.svg"
 import mdi from "@/public/logo/mdi.svg"
@@ -12,24 +11,21 @@ const ColorHero = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-center py-6 sm:py-8 md:py-12 lg:py-8">
           <div className="flex flex-col items-center lg:items-start">
             <div className="max-w-[733px] text-center lg:text-left px-2 sm:px-0">
-              {/* Updated heading structure */}
-              <h1 className="text-[24px] sm:text-[28px] md:text-[36px] lg:text-[40px] font-bold leading-tight flex flex-col gap-2 sm:gap-3">
+              {/* Updated Headline */}
+              <h1 className="text-[24px] sm:text-[28px] md:text-[36px] lg:text-[40px] font-bold leading-tight flex flex-col">
                 <div className="flex flex-wrap justify-center lg:justify-start items-center">
-                  <span className="bg-[linear-gradient(90deg,_#8371FF_-39.48%,_#A077FE_32.07%)] bg-clip-text text-transparent">
-                    Vibrant and Bold
+                  <span className="bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4] bg-clip-text text-transparent">
+                    Bold Color Portraits
                   </span>
-                  <span className="text-[#111827] ml-2">AI-</span>
-                </div>
-                <div className="flex flex-wrap justify-center lg:justify-start items-center">
-                  <span className="text-[#111827]">Enhanced Headshots</span>
                 </div>
                 <div className="flex flex-wrap justify-center lg:justify-start">
-                  <span className="text-[#111827]">in Bold Color</span>
+                  <span className="text-[#161C2D]">That Make Impact</span>
                 </div>
               </h1>
 
+              {/* Updated Subheadline */}
               <p className="mt-4 sm:mt-6 text-base sm:text-lg text-[#4B5563] max-w-[600px] mx-auto lg:mx-0">
-                Stand out with AI-generated headshots that embrace striking, vibrant hues to make a bold statement.
+                Transform your photos into vibrant, eye-catching portraits with striking color palettes. Perfect for personal branding, social media, and anyone wanting to make a bold statement.
               </p>
 
               {/* Updated features grid */}
@@ -60,10 +56,10 @@ const ColorHero = () => {
                 </div>
               </div>
 
-              {/* Updated button */}
+              {/* Updated CTA */}
               <div className="mt-6 sm:mt-8 flex justify-center lg:justify-start">
                 <button className="w-fit rounded-full bg-[#5B16FE] px-2.5 py-1.5 sm:px-4 sm:py-2.5 lg:px-6 lg:py-3 text-xs sm:text-sm lg:text-base text-white flex items-center justify-center sm:inline-flex gap-2 hover:bg-opacity-90 transition-all">
-                  Get Started For Free
+                  Add Some Color
                   <span className="ml-1 sm:ml-2">→</span>
                 </button>
               </div>

@@ -75,9 +75,9 @@ const BirthdayHeadshotHero = () => {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-8 py-12">
           <div className="space-y-4">
-            <h1 className="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-yellow-400 to-blue-500 leading-tight tracking-tight">
+            <h2 className="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-yellow-400 to-blue-500 leading-tight tracking-tight">
               Magical Kids Birthday Portrait Collection
-            </h1>
+            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Transform your children's photos into enchanting birthday portraits that capture the joy, fun, and magic of their special celebration
             </p>

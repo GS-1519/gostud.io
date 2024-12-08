@@ -206,12 +206,11 @@ const ReviewCard = ({ review }: { review: Testimonial }) => {
           {/* Header */}
           <div className="text-center space-y-6">
             <h2 className="text-gray-500 font-semibold font-jakarta">TESTIMONIALS</h2>
-            
-            <h1 className="text-3xl sm:text-5xl font-bold font-jakarta">
+            <h3 className="text-3xl sm:text-5xl font-bold font-jakarta">
               <span className="bg-gradient-to-r from-[#7160FF] to-[#B19FFF] text-transparent bg-clip-text">{photosCreated}</span> Photos already created
               <br/>
               <span className="bg-gradient-to-r from-[#00B6D0] to-[#53E0FF] text-transparent bg-clip-text">{happyCustomers}</span> Happy customers 
-            </h1>
+            </h3>
             
             <p className="text-gray-600 text-sm sm:text-base max-w-3xl mx-auto">
               Not made in a studio. Created by AI. Don't just take our word for it. Our AI turns everyday

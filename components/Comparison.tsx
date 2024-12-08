@@ -37,10 +37,10 @@ const ComparisonPage = () => {
   return (
     <div className="w-full max-w-[1276px] mx-auto bg-white rounded-[24px] sm:rounded-[60px] py-8 sm:py-20 px-4 sm:px-6 lg:px-8 flex items-center justify-center font-poppins">
       <div className="w-full sm:w-[992px] flex flex-col gap-4 sm:gap-6 max-w-full sm:max-w-none py-[18px] sm:py-0">
-      <h2 className="text-center text-gray-500 font-semibold font-jakarta">COMPARE</h2>
-        <h1 className="text-2xl sm:text-4xl font-bold text-center font-jakarta mb-2 sm:mb-2">
+        <h2 className="text-center text-gray-500 font-semibold font-jakarta">COMPARE</h2>
+        <h3 className="text-2xl sm:text-4xl font-bold text-center font-jakarta mb-2 sm:mb-2">
           Save Money and Time
-        </h1>
+        </h3>
         <p className="text-center text-gray-600 text-sm sm:text-lg mb-4 sm:mb-8 font-poppins">
           Choose the smarter way — save time and money without compromising on quality
         </p>

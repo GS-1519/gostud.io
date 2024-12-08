@@ -72,9 +72,9 @@ const JcrewHeadshotHero = () => {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-8 py-12">
           <div className="space-y-4">
-            <h1 className="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-violet-500 to-cyan-400 leading-tight tracking-tight">
+            <h2 className="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-violet-500 to-cyan-400 leading-tight tracking-tight">
               Classic American Style Profile Photos
-            </h1>
+            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Capture your timeless style with professional photos inspired by J.Crew's signature aesthetic
             </p>

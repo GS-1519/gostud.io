@@ -41,9 +41,9 @@ const WednesdayHeadshotHero = () => {
     <div className="w-full max-w-[1276px] mx-auto bg-white rounded-[24px] sm:rounded-[60px] py-[18px] sm:py-20 px-4 sm:px-8 lg:px-10">
       <div className="text-center space-y-8">
         <div className="space-y-4">
-          <h1 className="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gray-800 via-gray-700 to-black leading-tight tracking-tight">
+          <h2 className="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-gray-800 via-gray-700 to-black leading-tight tracking-tight">
             Mysterious Wednesday Portrait Collection
-          </h1>
+          </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Transform your photos into enigmatic portraits that capture the essence of gothic elegance
           </p>

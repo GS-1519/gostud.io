@@ -14,20 +14,20 @@ import JcrewHeadshotHero from "@/components/Jcrew-HeadshotsHero";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: 'J.Crew Style Portrait Photography | Classic Fashion Photos',
-  description: 'Create timeless portraits with J.Crew-inspired styling using AI photography. Perfect for professional, preppy, and classic fashion looks.',
-  keywords: 'J.Crew style photos, preppy portraits, classic photography, fashion headshots, professional portraits, lifestyle photos',
+  title: 'Business Casual Headshots | Professional Corporate Photography',
+  description: 'Get perfect business casual headshots with our AI photography studio. Ideal for modern professionals seeking approachable yet professional corporate photos.',
+  keywords: 'business casual headshots, corporate photography, professional headshots, casual professional photos, corporate portraits, business photography',
   openGraph: {
-    title: 'J.Crew Style Portrait Photography | Classic Fashion Photos',
-    description: 'Create timeless J.Crew-inspired portraits with our AI photography studio',
+    title: 'Business Casual Headshots | Professional Corporate Photography',
+    description: 'Get perfect business casual headshots with our AI photography studio',
     type: 'website',
     images: [{
-      url: '/og/jcrew-style-photos.jpg',
+      url: '/og/business-casual-headshots.jpg',
       width: 1200,
       height: 630,
-      alt: 'J.Crew Style Photography'
+      alt: 'Business Casual Headshot Examples'
     }],
-  }
+  },
 }
 
 export default async function DoctorPhotos() {

@@ -41,23 +41,18 @@ const Works = ({ image1 = '/Frame.png', image2 = '/Group1.png', image3 = '/Group
           <h2 className="text-base sm:text-lg md:text-xl font-medium mb-3 sm:mb-4 text-[#0A1727CC]">
             HOW IT WORKS
           </h2>
-          <div className="max-w-[1000px] mx-auto">
-            <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-[48px] font-bold flex flex-col gap-2 sm:gap-3">
-              <div>
-                <span className="bg-gradient-to-r from-[#837FFF] to-[#4AC2F5] bg-clip-text text-transparent">
-                  3 easy steps to get your
-                </span>
-              </div>
-              <div>
-                <span className="bg-gradient-to-r from-[#837FFF] to-[#4AC2F5] bg-clip-text text-transparent">
-                  studio quality profile
-                </span>
-              </div>
-            </h3>
-          </div>
-          <p className="text-gray-600 mt-4 sm:mt-5 text-sm sm:text-base md:text-lg max-w-[800px] mx-auto px-2">
-            3 easy step to get your professional photo ready to elevate your brand.
-          </p>
+          <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-[48px] font-bold flex flex-col gap-2 sm:gap-3">
+            <div>
+              <span className="bg-gradient-to-r from-[#837FFF] to-[#4AC2F5] bg-clip-text text-transparent">
+                3 easy steps to get your
+              </span>
+            </div>
+            <div>
+              <span className="bg-gradient-to-r from-[#837FFF] to-[#4AC2F5] bg-clip-text text-transparent">
+                studio quality profile
+              </span>
+            </div>
+          </h3>
         </div>
 
         {/* Steps Grid */}

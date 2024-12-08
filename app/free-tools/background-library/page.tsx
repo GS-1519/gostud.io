@@ -7,7 +7,6 @@ import FAQSection from "@/components/Question";
 import Footer from "@/components/Footer";
 import Banner from "@/components/Banner";
 import LibraryHero from "@/components/LibraryHero";
-import Tools from "@/components/Tools";
 
 export const dynamic = "force-dynamic";
 

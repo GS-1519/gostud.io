@@ -5,28 +5,26 @@ import type { Metadata } from 'next'
 import Works from "@/components/Works";
 import Why from "@/components/Why";
 import ReviewSection from "@/components/HeadshotReviewSection";
-
 import Footer from "@/components/Footer";
 import Banner from "@/components/Banner";
-
-import NewtonHero from "@/components/NewtonHero";
-import HelmutHeadshotHero from "@/components/Helmut-Headshots";
+import WednesdayHero from "@/components/WednesdayHero";
+import WednesdayHeadshotHero from "@/components/Wednesday-Headshots";
 
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: 'Helmut Newton Style Photography | Bold Fashion Portraits',
-  description: 'Create powerful portraits inspired by Helmut Newton\'s iconic style. AI-powered photography that captures bold, dramatic, and sophisticated images.',
-  keywords: 'Helmut Newton style, fashion photography, black and white portraits, dramatic photos, editorial photography, artistic portraits',
+  title: 'Wednesday Addams Style Portrait Photography | Gothic Photos',
+  description: 'Create mysterious and gothic portraits inspired by Wednesday Addams with AI photography. Perfect for dark aesthetic and character portraits.',
+  keywords: 'wednesday addams style, gothic portraits, dark photography, character photos, mysterious portraits, themed photography',
   openGraph: {
-    title: 'Helmut Newton Style Photography | Bold Fashion Portraits',
-    description: 'Create powerful Newton-inspired portraits with our AI photography studio',
+    title: 'Wednesday Addams Style Portrait Photography | Gothic Photos',
+    description: 'Create mysterious Wednesday Addams-inspired portraits with our AI studio',
     type: 'website',
     images: [{
-      url: '/og/newton-style-photos.jpg',
+      url: '/og/wednesday-addams-photos.jpg',
       width: 1200,
       height: 630,
-      alt: 'Helmut Newton Style Photography'
+      alt: 'Wednesday Addams Style Photography'
     }],
   }
 }
@@ -47,24 +45,25 @@ export default async function LinkedInPhotos() {
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-[82px]">
         <div className="w-full max-w-[1276px] mx-auto space-y-12">
           <div id="ai-headshots">
-            <NewtonHero/>
+            <WednesdayHero/>
           </div>
           <Works
           
           
-          image3="/Frame11.png"
           image2="/Frame8.png"
+          image3="/Frame26.png"
           />
-          <Why imageSet="Group16" />
+          <Why imageSet="Group27" />
           <div id="testimonial">
-            <HelmutHeadshotHero/>
+            <WednesdayHeadshotHero/>
           </div>
           <div id="testimonial">
+
             <ReviewSection/>
           </div>
           
-       
-         
+          
+          
           <div>
             <Banner/>
           </div>

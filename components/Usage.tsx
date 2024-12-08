@@ -26,19 +26,13 @@ const Usage: React.FC<UsageProps> = ({ backgroundImage }) => {
           <div className="flex flex-col gap-6 lg:gap-8 py-6 lg:py-12">
             {/* Heading Section */}
             <div className="w-full lg:w-[497px]">
-              <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4]
-                            uppercase text-sm md:text-base font-medium tracking-wide mb-3"
-                  style={{
-                    backgroundImage: 'linear-gradient(90deg, #8371FF -39.48%, #A077FE 15.54%, #01C7E4 100%)'
-                  }}>
+              <h3 className="text-transparent bg-clip-text bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4]
+                            uppercase text-sm md:text-base font-medium tracking-wide mb-3">
                 USAGE
-              </h2>
-              <h1 className="font-jakarta text-[32px] sm:text-[40px] lg:text-[48px] leading-tight lg:leading-[60.48px] font-bold text-transparent bg-clip-text"
-                  style={{
-                    backgroundImage: 'linear-gradient(90deg, #8371FF -39.48%, #A077FE 15.54%, #01C7E4 100%)'
-                  }}>
+              </h3>
+              <h2 className="font-jakarta text-[32px] sm:text-[40px] lg:text-[48px] leading-tight lg:leading-[60.48px] font-bold text-transparent bg-clip-text">
                 Create your own beautiful Images.
-              </h1>
+              </h2>
             </div>
             
             {/* Paragraph Section */}

@@ -79,12 +79,13 @@ export default function Hero() {
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text'
           }}>
-          AI Headshot Generator
+            AI Headshot Generator
           </span>
         </h1>
         <p className="text-sm sm:text-base lg:text-xl text-gray-600 leading-relaxed max-w-[800px] px-4">
           Professional Headshots are essential for your success. 
-          Turn your smartphone photos into studio-quality headshots. Save time and money.</p>
+          Turn your smartphone photos into studio-quality headshots. Save time and money.
+        </p>
       </div>
       
       <div className="flex flex-wrap justify-center gap-4 sm:gap-8 w-full max-w-[967px] mt-6 sm:mt-8 px-4">

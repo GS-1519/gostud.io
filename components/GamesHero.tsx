@@ -12,23 +12,19 @@ const GamesHero = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-center py-6 sm:py-8">
           <div className="flex flex-col items-center lg:items-start">
             <div className="max-w-[733px] text-center lg:text-left px-2 sm:px-0">
-              <h1 className="text-[24px] sm:text-[28px] md:text-[36px] lg:text-[40px] font-bold leading-tight flex flex-col gap-1">
-                <div className="flex flex-wrap justify-center lg:justify-start items-center gap-x-1">
-                  <span className="text-[#161C2D]">Step Into Westeros</span>
-                  <span className="text-[#01C7E4]">AI</span>
+              <h1 className="text-[24px] sm:text-[28px] md:text-[36px] lg:text-[40px] font-bold leading-tight flex flex-col">
+                <div className="flex flex-wrap justify-center lg:justify-start items-center">
+                  <span className="text-[#161C2D]">Step Into Westeros with</span>
                 </div>
                 <div className="flex flex-wrap justify-center lg:justify-start">
                   <span className="bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4] bg-clip-text text-transparent">
-                    Headshots Inspired by
+                    Epic Fantasy Portraits
                   </span>
-                </div>
-                <div className="flex flex-wrap justify-center lg:justify-start">
-                  <span className="text-[#8371FF]">Game of Thrones</span>
                 </div>
               </h1>
 
-              <p className="mt-4 text-[18px] text-[#4B5563] max-w-[600px] mx-auto lg:mx-0">
-                Bring the intrigue, drama, and nobility of Westeros to life with AI headshots inspired by the epic style of Game of Thrones.
+              <p className="mt-4 sm:mt-6 text-base sm:text-lg text-[#4B5563] max-w-[600px] mx-auto lg:mx-0">
+                Transform your photos into stunning medieval fantasy portraits inspired by Game of Thrones. Perfect for fans, cosplayers, and fantasy enthusiasts.
               </p>
 
               <div className="mt-6 sm:mt-8 grid grid-cols-2 gap-2 sm:gap-3 max-w-[600px] mx-auto lg:mx-0">
@@ -61,7 +57,7 @@ const GamesHero = () => {
 
               <div className="mt-6 sm:mt-8 flex justify-center lg:justify-start">
                 <button className="w-fit rounded-full bg-[#5B16FE] px-2.5 py-1.5 sm:px-4 sm:py-2.5 lg:px-6 lg:py-3 text-xs sm:text-sm lg:text-base text-white flex items-center justify-center sm:inline-flex gap-2 hover:bg-opacity-90 transition-all">
-                  Get Started For Free
+                  Claim Your Throne
                   <span className="ml-1 sm:ml-2">→</span>
                 </button>
               </div>
