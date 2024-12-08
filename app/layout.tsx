@@ -13,9 +13,6 @@ import 'react-tabs/style/react-tabs.css';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.gostudio.ai'),
-  alternates: {
-    canonical: '/'
-  },
   title: "Headshots AI",
   description: "Generate awesome headshots in minutes using AI",
 };
