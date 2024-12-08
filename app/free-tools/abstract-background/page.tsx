@@ -2,19 +2,11 @@ import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import type { Metadata } from 'next'
-
-import ReviewSection from "@/components/HeadshotReviewSection";
-import PricingSection from "@/components/PricingSection";
-import DataSecuritySection from "@/components/container";
 import FAQSection from "@/components/Question";
 import Footer from "@/components/Footer";
 import Banner from "@/components/Banner";
-import LibraryHero from "@/components/LibraryHero";
-import Tools from "@/components/Tools";
-import WhiteHero from "@/components/WhiteHero";
 import FreeCard from "@/components/freecard";
 import Usage from "@/components/Usage";
-import BlackHero from "@/components/BlackHero";
 import AbstractHero from "@/components/AbstractHero";
 
 export const dynamic = "force-dynamic";

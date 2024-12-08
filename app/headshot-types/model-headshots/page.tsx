@@ -15,20 +15,20 @@ import HelmutHeadshotHero from "@/components/Helmut-Headshots";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: 'Helmut Newton Style Photography | Bold Fashion Portraits',
-  description: 'Create powerful portraits inspired by Helmut Newton\'s iconic style. AI-powered photography that captures bold, dramatic, and sophisticated images.',
-  keywords: 'Helmut Newton style, fashion photography, black and white portraits, dramatic photos, editorial photography, artistic portraits',
+  title: 'Professional Model Headshots | Fashion & Portfolio Photography',
+  description: 'Create stunning model headshots and portfolio images with our AI photography studio. Perfect for aspiring models, actors, and fashion professionals.',
+  keywords: 'model headshots, fashion photography, portfolio photos, modeling photography, professional model photos, fashion portraits, model portfolio',
   openGraph: {
-    title: 'Helmut Newton Style Photography | Bold Fashion Portraits',
-    description: 'Create powerful Newton-inspired portraits with our AI photography studio',
+    title: 'Professional Model Headshots | Fashion & Portfolio Photography',
+    description: 'Create stunning model headshots and portfolio images with our AI photography studio',
     type: 'website',
     images: [{
-      url: '/og/newton-style-photos.jpg',
+      url: '/og/model-headshots.jpg',
       width: 1200,
       height: 630,
-      alt: 'Helmut Newton Style Photography'
+      alt: 'Professional Model Headshot Examples'
     }],
-  }
+  },
 }
 
 export default async function LinkedInPhotos() {
