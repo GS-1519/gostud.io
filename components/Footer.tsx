@@ -47,48 +47,49 @@ const Footer: React.FC = () => {
     {
       title: 'AI Headshots',
       items: [
-        { text: 'Doctor Headshots', href: '/headshot-types/doctor-headshot' },
-        { text: 'Lawyer Headshots', href: '/headshot-types/lawyer-headshot' },
-        { text: 'Glamour Headshots', href: '/headshot-types/Actor-headshot' },
-        { text: 'Tattoo Headshots', href: '/headshot-types/professional-tattoos-portraits' },
-        { text: 'Annie Leibovitz Style', href: '/headshot-types/annie-headshot' },
-        { text: 'Barbie Style', href: '/headshot-types/barbie-headshot' },
-        { text: 'Viking Style', href: '/headshot-types/viking-portraits' },
-        { text: 'Realtor Style', href: '/headshot-types/realtor-headshot' },
-        { text: 'Speaker Style', href: '/headshot-types/TED-speaker-headshot' }
+        { text: 'Doctor Headshot', href: '/headshot-types/doctor-headshot' },
+        { text: 'Lawyer Headshot', href: '/headshot-types/lawyer-headshot' },
+        { text: 'Actor Headshot', href: '/headshot-types/Actor-headshot' },
+        { text: 'Professional Tattoos Portraits', href: '/headshot-types/professional-tattoos-portraits' },
+        { text: 'Annie Headshot', href: '/headshot-types/annie-headshot' },
+        { text: 'Barbie Headshot', href: '/headshot-types/barbie-headshot' },
+        { text: 'Viking Portraits', href: '/headshot-types/viking-portraits' },
+        { text: 'Realtor Headshot', href: '/headshot-types/realtor-headshot' },
+        { text: 'TED Speaker Headshot', href: '/headshot-types/TED-speaker-headshot' }
       ]
     },
     {
       title: 'AI Photos',
       items: [
-        { text: 'Americana Photos', href: '/photos/vintage-americana-photos' },
-        { text: 'Onesie Photos', href: '/photos/onesie-portraits' },
+        { text: 'Vintage Americana Photos', href: '/photos/vintage-americana-photos' },
+        { text: 'Onesie Portraits', href: '/photos/onesie-portraits' },
         { text: 'Halloween Photos', href: '/photos/halloween-photos' },
-        { text: 'Helmut Newton Photos', href: '/photos/helmut-newton-photos' },
-        { text: 'J.Crew Photos', href: '/photos/jcrew-photos' },
-        { text: 'Dating Profile Photos', href: '/photos/birthday-party-save-the-date-photoshoot' },
-        { text: 'Artistic Photos', href: '/photos/artistic-portraits' },
+        { text: 'Actress Portraits', href: '/photos/actress-portraits' },
+        { text: 'Birthday Party Save The Date', href: '/photos/birthday-party-save-the-date-photoshoot' },
+        { text: 'Artistic Portraits', href: '/photos/artistic-portraits' },
         { text: 'Wrestlemania Photos', href: '/photos/wrestlemania-photos' },
-        { text: 'Red Carpet Photos', href: '/photos/actor-red-carpet-photos' },
-        { text: 'Game of Thrones', href: '/photos/game-of-thrones-portraits' },
-        { text: 'Kids Birthday', href: '/photos/kids-birthday-portraits' },
-        { text: 'Mythical Creatures', href: '/photos/mythical-creatures-portaits' },
-        { text: 'Online Dating', href: '/photos/online-dating-profile-photos' },
-        { text: 'Pet Photography', href: '/photos/pet-photography-dog' },
+        { text: 'Actor Red Carpet Photos', href: '/photos/actor-red-carpet-photos' },
+        { text: 'Game Of Thrones Portraits', href: '/photos/game-of-thrones-portraits' },
+        { text: 'Kids Birthday Portraits', href: '/photos/kids-birthday-portraits' },
+        { text: 'Mythical Creatures Portraits', href: '/photos/mythical-creatures-portaits' },
+        { text: 'Online Dating Profile Photos', href: '/photos/online-dating-profile-photos' },
+        { text: 'Pet Photography Dog', href: '/photos/pet-photography-dog' },
         { text: 'Pop Color Photos', href: '/photos/pop-color-photos' },
-        { text: 'YouTube Thumbnail', href: '/photos/youtube-thumbnail-photos' }
+        { text: 'YouTube Thumbnail Photos', href: '/photos/youtube-thumbnail-photos' }
       ]
     },
     {
       title: 'Free Tools',
       items: [
         { text: 'Background Library', href: '/free-tools/background-library' },
+        { text: 'Background Remover', href: '/free-tools/background-remover' },
         { text: 'Black Background', href: '/free-tools/black-background' },
         { text: 'Grey Background', href: '/free-tools/grey-background' },
         { text: 'Red Background', href: '/free-tools/red-background' },
         { text: 'White Background', href: '/free-tools/white-background' },
         { text: 'Abstract Background', href: '/free-tools/abstract-background' },
-        { text: 'Christmas Background', href: '/free-tools/christmas-background' }
+        { text: 'Christmas Background', href: '/free-tools/christmas-background' },
+        { text: 'Halloween Background', href: '/free-tools/halloween-background' },
       ]
     },
     {

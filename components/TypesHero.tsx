@@ -19,22 +19,16 @@ const TypesHero = () => {
       link: '/headshot-types/lawyer-headshot'
     },
     {
-      title: 'Glamour-headshot',
+      title: 'Actor Headshots',
       description: 'Create stunning glamour portraits perfect for fashion, beauty, and professional modeling portfolios.',
       image: '/Packs/Types/glamour.jpg',
-      link: '/headshot-types/glamour-headshot'
+      link: '/headshot-types/Actor-headshot'
     },
     {
-      title: 'Bold Color-headshot',
-      description: 'Striking portraits with bold, vibrant colors for modern professionals and creatives.',
-      image: '/Packs/Types/bold.jpg',
-      link: '/headshot-types/bold-color-headshot'
-    },
-    {
-      title: 'Tattoo-headshot',
+      title: 'Professional Tattoo Portraits',
       description: 'Showcase your tattoos with professional portraits that highlight your artistic expression.',
       image: '/Packs/Types/tattos.jpg',
-      link: '/headshot-types/tattoos-headshot'
+      link: '/headshot-types/professional-tattoos-portraits'
     },
     {
       title: 'Annie Leibovitz Style',
@@ -49,10 +43,34 @@ const TypesHero = () => {
       link: '/headshot-types/barbie-headshot'
     },
     {
-      title: 'Viking Style',
+      title: 'Viking Portraits',
       description: 'Powerful Viking-inspired portraits perfect for historical themes and fantasy shoots.',
       image: '/Packs/Types/vings.jpg',
-      link: '/headshot-types/viking-headshot'
+      link: '/headshot-types/viking-portraits'
+    },
+    {
+      title: 'Realtor Style',
+      description: 'Professional portraits for real estate professionals.',
+      image: '/Packs/Types/realtro.jpg',
+      link: '/headshot-types/realtor-headshot'
+    },
+    {
+      title: 'TED Speaker Style',
+      description: 'Professional portraits for speakers and presenters.',
+      image: '/Packs/Types/speaker.jpg',
+      link: '/headshot-types/TED-speaker-headshot'
+    },
+    {
+      title: 'Business Casual Headshots',
+      description: 'Classic and stylish portraits inspired by J.Crew\'s aesthetic',
+      image: '/Packs/Types/Jcrew.jpg',
+      link: '/headshot-types/business-casual-headshots'
+    },
+    {
+      title: 'Model Headshots',
+      description: 'Sleek and provocative portraits inspired by Helmut Newton\'s style',
+      image: '/Packs/Types/helmut.jpg',
+      link: '/photos/model-headshots'
     },
   ];
 
