@@ -11,7 +11,6 @@ import final_Logo from '@/public/final_Logo.svg';
 import { User } from '@supabase/auth-helpers-nextjs';
 import { Database } from '@/types/supabase';
 
-
 interface UserMenuProps {
   user: {
     email: string;
@@ -24,6 +23,9 @@ const Navbar: React.FC = () => {
   const [credits, setCredits] = useState<number | null>(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const router = useRouter();
+  const pathname = usePathname();
+  const isHomePage = pathname === '/';
+
   const supabase = createClientComponentClient<Database>();
 
   useEffect(() => {
@@ -60,76 +62,95 @@ const Navbar: React.FC = () => {
   return (
     <>
       <div className="fixed top-0 left-0 right-0 w-full z-40">
-        <nav className="bg-white shadow-sm font-poppins mx-auto px-4 flex flex-col sm:flex-row items-center justify-between" 
+        <nav 
+          className="bg-white backdrop-blur-lg bg-opacity-80 shadow-lg font-poppins mx-auto rounded-b-[24px] border-b border-x border-gray-100"
           style={{
             maxWidth: '1276px',
-            minHeight: '61px',
-            borderRadius: '64px',
-            margin: '1px auto',
-          }}>
-          <div className="flex items-center justify-between w-full sm:w-auto">
-            <Link href={user ? '/overview' : '/'} className="flex-shrink-0">
-              <div className="mr-2">
-                <Image src={final_Logo} alt="Studio.ai logo" width={120} height={80} className="rounded-sm" />
-              </div>
-            </Link>
-            
-            <button 
-              className="sm:hidden"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-            >
-              {isMenuOpen ? 'Close' : 'Menu'}
-            </button>
-          </div>
-          
-          <div className="hidden sm:flex items-center space-x-6">
-            <NavItems />
-          </div>
-
-          <div className="hidden sm:flex items-center space-x-4">
-            {user ? (
-              (() => {
-                const userMenuProps = getUserMenuProps(user, credits);
-                return userMenuProps ? <UserMenu {...userMenuProps} /> : null;
-              })()
-            ) : (
-              <Link href="/login">
-                <button className="bg-[#5B16FE] text-white font-bold text-lg py-2 px-6 rounded-full font-jakarta hover:bg-[#5B16FE]/90 transition duration-300">
-                  Login / Sign Up
-                </button>
+          }}
+        >
+          <div className="flex items-center justify-between h-16 px-4 sm:px-6 lg:px-8">
+            {/* Logo Section */}
+            <div className="flex-shrink-0">
+              <Link href={user ? '/overview' : '/'} className="flex items-center">
+                <Image 
+                  src={final_Logo} 
+                  alt="Studio.ai logo" 
+                  width={100} 
+                  height={40} 
+                  className="w-[100px] sm:w-[120px] h-auto" 
+                  priority
+                />
               </Link>
+            </div>
+
+            {/* Desktop Navigation - Center */}
+            {!user && (
+              <div className="hidden lg:flex items-center justify-center flex-1 ml-8">
+                <div className="flex space-x-8">
+                  <NavItems />
+                </div>
+              </div>
             )}
+
+            {/* Right Section - Auth/Menu */}
+            <div className="flex items-center gap-3 sm:gap-4">
+              {user ? (
+                // User Menu
+                (() => {
+                  const userMenuProps = getUserMenuProps(user, credits);
+                  return userMenuProps ? (
+                    <div className="flex items-center">
+                      <UserMenu {...userMenuProps} />
+                    </div>
+                  ) : null;
+                })()
+              ) : (
+                // Login Button & Mobile Menu
+                <div className="flex items-center gap-2 sm:gap-4">
+                  <Link href="/login">
+                    <button className="bg-[#5B16FE] text-white font-semibold text-sm sm:text-base py-2 px-4 sm:px-6 rounded-full hover:bg-[#4c12d3] transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                      Login / Sign Up
+                    </button>
+                  </Link>
+                  
+                  {/* Mobile Menu Button */}
+                  <button
+                    onClick={() => setIsMenuOpen(!isMenuOpen)}
+                    className="lg:hidden inline-flex items-center justify-center p-2 rounded-full text-gray-600 hover:text-[#5B16FE] hover:bg-gray-50 focus:outline-none transition-all duration-300"
+                    aria-expanded="false"
+                  >
+                    <span className="sr-only">Open main menu</span>
+                    {isMenuOpen ? (
+                      <svg className="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                    ) : (
+                      <svg className="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+                      </svg>
+                    )}
+                  </button>
+                </div>
+              )}
+            </div>
           </div>
         </nav>
 
-        {isMenuOpen && (
-          <div className="sm:hidden bg-white shadow-md py-2 px-6 rounded-b-[24px] w-full mx-auto"
-            style={{
-              maxWidth: '1276px',
-            }}>
-            <NavItems isMobile />
-            {user ? (
-              (() => {
-                const userMenuProps = getUserMenuProps(user, credits);
-                return userMenuProps ? (
-                  <div className="mt-4">
-                    <UserMenu {...userMenuProps} />
-                  </div>
-                ) : null;
-              })()
-            ) : (
-              <div className="mt-4 flex justify-center">
-                <Link href="/login">
-                  <button className="w-full bg-[#5B16FE] text-white font-bold text-lg py-2 px-6 rounded-full font-jakarta hover:bg-[#5B16FE]/90 transition duration-300">
-                    Login / Sign Up
-                  </button>
-                </Link>
+        {/* Mobile Navigation Menu */}
+        {!user && isMenuOpen && (
+          <div 
+            className="lg:hidden mt-2 mx-auto overflow-hidden"
+            style={{ maxWidth: '1276px' }}
+          >
+            <div className="bg-white backdrop-blur-lg bg-opacity-80 shadow-lg rounded-[24px] border border-gray-100 py-3">
+              <div className="px-4 pt-2 pb-3 space-y-1">
+                <NavItems isMobile />
               </div>
-            )}
+            </div>
           </div>
         )}
       </div>
-      <div className="h-[77px]" />
+      <div className="h-[64px]" />
     </>
   );
 }
