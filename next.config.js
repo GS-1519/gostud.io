@@ -30,7 +30,7 @@ const nextConfig = {
         source: '/photoshoot-packs/model-headshots',
         destination: '/headshot-packs/model-headshots',
         permanent: true,
-      }
+      },  // Added missing comma here
       {
         source: '/photos/realtor-photos',
         destination: '/headshot-packs/realtor-headshot',
@@ -82,4 +82,4 @@ const nextConfig = {
   },
 }
 
-module.exports = nextConfig
+module.exports = nextConfigs
