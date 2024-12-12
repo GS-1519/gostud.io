@@ -15,31 +15,40 @@ const nextConfig = {
   transpilePackages: ['react-tabs'],
   async redirects() {
     return [
-      // Redirect from non-www to www
+      // Redirect from old headshot-types to new headshot-packs
       {
-        source: '/:path*',
-        has: [
-          {
-            type: 'host',
-            value: 'gostudio.ai',
-          },
-        ],
-        destination: 'https://www.gostudio.ai/:path*',
+        source: '/headshot-types/:slug',
+        destination: '/headshot-packs/:slug',
         permanent: true,
       },
-      // Redirect from http to https
+      // Redirect from old photos to new photoshoot-packs
       {
-        source: '/:path*',
-        has: [
-          {
-            type: 'header',
-            key: 'x-forwarded-proto',
-            value: 'http',
-          },
-        ],
-        destination: 'https://www.gostudio.ai/:path*',
+        source: '/photos/:slug',
+        destination: '/photoshoot-packs/:slug',
         permanent: true,
       },
+      // Redirect old root paths
+      {
+        source: '/headshot-types',
+        destination: '/headshot-packs',
+        permanent: true,
+      },
+      {
+        source: '/photos',
+        destination: '/photoshoot-packs',
+        permanent: true,
+      },
+      // Handle any old URLs that might be indexed
+      {
+        source: '/headshots/:slug',
+        destination: '/headshot-packs/:slug',
+        permanent: true,
+      },
+      {
+        source: '/photoshoot/:slug',
+        destination: '/photoshoot-packs/:slug',
+        permanent: true,
+      }
     ]
   },
 }
