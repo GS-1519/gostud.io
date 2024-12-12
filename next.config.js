@@ -15,32 +15,51 @@ const nextConfig = {
   transpilePackages: ['react-tabs'],
   async redirects() {
     return [
-      // Redirect from old headshot-types to new headshot-packs
+      // Specific redirects based on your CSV data
       {
-        source: '/headshot-types/:slug',
-        destination: '/headshot-packs/:slug',
+        source: '/photos/red-carpet-photos',
+        destination: '/photoshoot-packs/actor-red-carpet-photos',
         permanent: true,
       },
-      // Redirect from old photos to new photoshoot-packs
       {
-        source: '/photos/:slug',
-        destination: '/photoshoot-packs/:slug',
+        source: '/photos/helmut-newton-photos',
+        destination: '/photoshoot-packs/model-headshots',
         permanent: true,
       },
-      // Redirect old root paths
+      {
+        source: '/photos/realtor-photos',
+        destination: '/headshot-packs/realtor-headshot',
+        permanent: true,
+      },
       {
         source: '/headshot-types',
         destination: '/headshot-packs',
         permanent: true,
       },
       {
-        source: '/photos',
-        destination: '/photoshoot-packs',
+        source: '/photos/birthday-party-save-the-date-photoshoot',
+        destination: '/photoshoot-packs/birthday-party-save-the-date-photoshoot',
         permanent: true,
       },
-      // Handle any old URLs that might be indexed
       {
-        source: '/headshots/:slug',
+        source: '/photos/artistic-portraits',
+        destination: '/photoshoot-packs/artistic-portraits',
+        permanent: true,
+      },
+      {
+        source: '/photoshoot-packs/pop-color-photos',
+        destination: '/photoshoot-packs/pop-color-photos',
+        permanent: true,
+      },
+
+      // Generic redirects to catch any other cases
+      {
+        source: '/photos/:slug',
+        destination: '/photoshoot-packs/:slug',
+        permanent: true,
+      },
+      {
+        source: '/headshot-types/:slug',
         destination: '/headshot-packs/:slug',
         permanent: true,
       },
