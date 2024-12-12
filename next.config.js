@@ -23,9 +23,14 @@ const nextConfig = {
       },
       {
         source: '/photos/helmut-newton-photos',
-        destination: '/photoshoot-packs/model-headshots',
+        destination: '/headshot-packs/model-headshots',
         permanent: true,
       },
+      {
+        source: '/photoshoot-packs/model-headshots',
+        destination: '/headshot-packs/model-headshots',
+        permanent: true,
+      }
       {
         source: '/photos/realtor-photos',
         destination: '/headshot-packs/realtor-headshot',
