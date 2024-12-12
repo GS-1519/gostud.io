@@ -67,6 +67,11 @@ const nextConfig = {
         source: '/photoshoot/:slug',
         destination: '/photoshoot-packs/:slug',
         permanent: true,
+      },
+      {
+        source: '/headshot-packs/model-headshots',
+        destination: '/photoshoot-packs/model-headshots',
+        permanent: true,
       }
     ]
   },
