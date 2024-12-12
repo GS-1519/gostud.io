@@ -15,61 +15,68 @@ const nextConfig = {
   transpilePackages: ['react-tabs'],
   async redirects() {
     return [
-      // Specific redirects based on your CSV data
       {
         source: '/photos/red-carpet-photos',
         destination: '/photoshoot-packs/actor-red-carpet-photos',
-        permanent: true,
+        permanent: true
       },
       {
         source: '/photos/helmut-newton-photos',
-        destination: '/photoshoot-packs/model-headshots',
-        permanent: true,
+        destination: '/headshot-packs/model-headshots',
+        permanent: true
+      },
+      {
+        source: '/photoshoot-packs/model-headshots',
+        destination: '/headshot-packs/model-headshots',
+        permanent: true
       },
       {
         source: '/photos/realtor-photos',
         destination: '/headshot-packs/realtor-headshot',
-        permanent: true,
+        permanent: true
       },
       {
         source: '/headshot-types',
         destination: '/headshot-packs',
-        permanent: true,
+        permanent: true
       },
       {
         source: '/photos/birthday-party-save-the-date-photoshoot',
         destination: '/photoshoot-packs/birthday-party-save-the-date-photoshoot',
-        permanent: true,
+        permanent: true
       },
       {
         source: '/photos/artistic-portraits',
         destination: '/photoshoot-packs/artistic-portraits',
-        permanent: true,
+        permanent: true
       },
       {
         source: '/photoshoot-packs/pop-color-photos',
         destination: '/photoshoot-packs/pop-color-photos',
-        permanent: true,
+        permanent: true
       },
-
-      // Generic redirects to catch any other cases
       {
         source: '/photos/:slug',
         destination: '/photoshoot-packs/:slug',
-        permanent: true,
+        permanent: true
       },
       {
         source: '/headshot-types/:slug',
         destination: '/headshot-packs/:slug',
-        permanent: true,
+        permanent: true
       },
       {
         source: '/photoshoot/:slug',
         destination: '/photoshoot-packs/:slug',
-        permanent: true,
+        permanent: true
+      },
+      {
+        source: '/headshot-packs/model-headshots',
+        destination: '/photoshoot-packs/model-headshots',
+        permanent: true
       }
     ]
-  },
+  }
 }
 
 module.exports = nextConfig

@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   },
 }
 
-export default async function LinkedInPhotos() {
+export default async function ModelHeadshots() {
   const supabase = createServerComponentClient({ cookies });
 
   const {
