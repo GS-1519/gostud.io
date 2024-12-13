@@ -49,7 +49,23 @@ const Navbar: React.FC = () => {
     };
   
     checkUser();
-  }, [supabase]);
+
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(
+      async (event, session) => {
+        if (event === 'SIGNED_IN') {
+          setUser(session?.user ?? null);
+          router.refresh();
+        } else if (event === 'SIGNED_OUT') {
+          setUser(null);
+          setCredits(null);
+          router.push('/');
+          router.refresh();
+        }
+      }
+    );
+
+    return () => subscription.unsubscribe();
+  }, [supabase, router]);
 
   const getUserMenuProps = (user: User | null, credits: number | null): UserMenuProps | null => {
     if (!user || !user.email) return null;
@@ -84,13 +100,11 @@ const Navbar: React.FC = () => {
             </div>
 
             {/* Desktop Navigation - Center */}
-            {!user && (
-              <div className="hidden lg:flex items-center justify-center flex-1 ml-8">
-                <div className="flex space-x-8">
-                  <NavItems />
-                </div>
+            <div className="hidden lg:flex items-center justify-center flex-1 ml-8">
+              <div className="flex space-x-8">
+                <NavItems user={user} />
               </div>
-            )}
+            </div>
 
             {/* Right Section - Auth/Menu */}
             <div className="flex items-center gap-3 sm:gap-4">
@@ -137,14 +151,14 @@ const Navbar: React.FC = () => {
         </nav>
 
         {/* Mobile Navigation Menu */}
-        {!user && isMenuOpen && (
+        {isMenuOpen && (
           <div 
             className="lg:hidden mt-2 mx-auto overflow-hidden"
             style={{ maxWidth: '1276px' }}
           >
             <div className="bg-white backdrop-blur-lg bg-opacity-80 shadow-lg rounded-[24px] border border-gray-100 py-3">
               <div className="px-4 pt-2 pb-3 space-y-1">
-                <NavItems isMobile />
+                <NavItems isMobile user={user} />
               </div>
             </div>
           </div>

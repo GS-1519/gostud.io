@@ -31,16 +31,12 @@ export const metadata: Metadata = {
   }
 }
 
-export default async function HeadshotTypes() {
+export default async function PhotoshootTypes() {
   const supabase = createServerComponentClient({ cookies });
 
   const {
     data: { user },
   } = await supabase.auth.getUser();
-
-  if (user) {
-    return redirect("/overview");
-  }
 
   return (
     <div className="w-full bg-[#F4F7FA] min-h-screen font-poppins">

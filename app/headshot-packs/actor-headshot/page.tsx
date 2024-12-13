@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   }
 }
 
-export default async function DoctorPhotos() {
+export default async function ActorHeadshotPage() {
   const supabase = createServerComponentClient({ cookies });
 
   const {

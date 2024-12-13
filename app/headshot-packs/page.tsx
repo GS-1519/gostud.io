@@ -37,10 +37,6 @@ export default async function HeadshotTypes() {
     data: { user },
   } = await supabase.auth.getUser();
 
-  if (user) {
-    return redirect("/overview");
-  }
-
   return (
     <div className="w-full bg-[#F4F7FA] min-h-screen font-poppins">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-[82px]">
