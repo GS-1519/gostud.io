@@ -11,6 +11,7 @@ import FAQSection from "@/components/Question";
 import HeadshotContainer from "@/components/Banner";
 import type { Metadata } from 'next'
 import Script from 'next/script'
+import PhotographyGrid from "@/components/PhotographyGrid";
 
 
 export const dynamic = "force-dynamic";
@@ -64,13 +65,16 @@ export default async function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <div className="w-full bg-[#F4F7FA] min-h-screen font-poppins">
-        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-[82px]">
-          <div className="w-full max-w-[1276px] mx-auto space-y-12">
-            <div id="ai-headshots">
-              <HeroSection />
-            </div>
+        <div>
+          <div id="ai-headshots" className="w-full">
+            <HeroSection />
+          </div>
+          <div>
             <ExplainerSection />
             <ComparisonPage />
+          </div>
+          <PhotographyGrid/>
+          <div className="px-4 sm:px-6 lg:px-[82px] space-y-12 max-w-[1440px] mx-auto">
             <div id="testimonial">
               <HeadshotReviewSection />
             </div>
@@ -82,7 +86,7 @@ export default async function Home() {
               <FAQSection />
             </div>
             <HeadshotContainer />
-            </div>
+          </div>
         </div>
       </div>
     </>

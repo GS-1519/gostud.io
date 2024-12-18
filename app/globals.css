@@ -118,3 +118,37 @@ img-comparison-slider.rendered {
     scrollbar-width: none;  /* Firefox */
   }
 }
+
+/* Reset default margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* If you're using a layout component, add this */
+main {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Remove any margin/padding from main elements */
+main {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100%;
+}
