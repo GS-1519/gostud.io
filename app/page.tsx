@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 }
 
 export default async function Home() {
-  const supabase = createServerComponentClient({ cookies });
+  const supabase = await createServerComponentClient({ cookies });
 
   const {
     data: { user },
