@@ -285,18 +285,19 @@ export default function BackgroundRemove() {
 
                                     <div>
                                         <h4 className="text-sm text-gray-500 mb-3">Background Images</h4>
-                                        <div className="grid grid-cols-2 gap-2 max-h-[500px] overflow-y-auto pr-2">
+                                        <div className="grid grid-cols-4 gap-2 max-h-[500px] overflow-y-auto pr-2">
                                             {backgroundImages.map((bg, index) => (
                                                 <div
                                                     key={`bg-${index}`}
                                                     onClick={() => !processing && applyBackground(bg.src)}
-                                                    className="aspect-square rounded-lg overflow-hidden cursor-pointer hover:ring-2 hover:ring-blue-600 transition-all"
+                                                    className="aspect-square rounded-lg overflow-hidden cursor-pointer hover:ring-2 hover:ring-blue-600 transition-all relative group"
                                                 >
                                                     <img
                                                         src={bg.src}
                                                         alt={bg.alt}
-                                                        className="w-full h-full object-cover"
+                                                        className="w-full h-full object-cover absolute inset-0"
                                                     />
+                                                    <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-200" />
                                                 </div>
                                             ))}
                                         </div>
