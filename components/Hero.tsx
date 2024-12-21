@@ -19,17 +19,17 @@ interface FeatureItemProps {
 }
 
 const FeatureItem = ({ Icon, text }: FeatureItemProps) => (
-  <div className="flex items-center gap-2">
-    <div className="w-5 h-5 md:w-6 md:h-6 flex items-center justify-center text-gray-600">
+  <div className="flex items-center gap-3">
+    <div className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center text-gray-600 md:text-white">
       <Image 
         src={Icon} 
         alt="feature icon" 
-        width={20}
-        height={20}
-        className="text-gray-600" // Adding gray color to match paragraph
+        width={32}
+        height={32}
+        className="text-gray-600 md:text-white w-8 h-8 md:w-10 md:h-10"
       />
     </div>
-    <span className="text-gray-600 text-sm md:text-base font-poppins">{text}</span>
+    <span className="text-gray-600 md:text-white text-sm md:text-base font-poppins">{text}</span>
   </div>
 );
 
@@ -173,9 +173,9 @@ export default function Hero() {
 
         {/* Desktop Content */}
         <div className="absolute inset-0">
-          <div className="mx-auto pl-[82px] w-[1440px] h-[362px] mt-[446px] ml-[0.02px]">
-            <div className="flex flex-col items-start text-left space-y-6">
-              <h1 className="font-poppins font-semibold text-white whitespace-nowrap text-[48px] leading-[52px] w-[1012px] h-[52px]">
+          <div className="mx-auto pl-[82px] w-[1440px] mt-[390px] ml-[0.02px]">
+            <div className="flex flex-col items-start text-left gap-6">
+              <h1 className="font-poppins font-semibold text-white whitespace-nowrap text-[48px] leading-[52px] w-[1012px]">
                 Professional Headshots using your Selfies
               </h1>
               
@@ -184,7 +184,7 @@ export default function Hero() {
                 hundreds of professional headshots all from your favorite AI photographer "Aaria".
               </p>
               
-              <div className="grid grid-cols-4 gap-x-6 w-full max-w-[1012px] mt-6">
+              <div className="grid grid-cols-4 gap-x-6 w-full max-w-[1012px]">
                 <FeatureItem Icon={lock} text="150+ styles and outfits" />
                 <FeatureItem Icon={mdi} text="Results within 1 hour" />
                 <FeatureItem Icon={circul} text="Strict Data Protection" />
@@ -192,8 +192,8 @@ export default function Hero() {
               </div>
 
               <Link href="/get-started">
-                <button className="bg-[#7C3AED] hover:bg-[#6D28D9] text-white rounded-full px-6 py-3 font-poppins text-base leading-6 transition-colors mb-10">
-                  Get Started →
+                <button className="bg-[#5B16FE] hover:bg-[#4F46E5] text-white rounded-full px-8 py-4 font-poppins text-base leading-6 transition-colors">
+                  Get Started Now →
                 </button>
               </Link>
             </div>

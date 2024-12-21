@@ -12,6 +12,9 @@ import HeadshotContainer from "@/components/Banner";
 import type { Metadata } from 'next'
 import Script from 'next/script'
 import PhotographyGrid from "@/components/PhotographyGrid";
+import WhySection from "@/components/Why";
+import CreationGallery from "@/components/CreationLibaray";
+import BrandsPage from "@/components/BrandPage";
 
 
 export const dynamic = "force-dynamic";
@@ -71,11 +74,14 @@ export default async function Home() {
           </div>
           <div>
             <ExplainerSection />
+            <PhotographyGrid/>
             <ComparisonPage />
+            <WhySection/>
+            <BrandsPage/>
+            <CreationGallery/>
           </div>
-          <PhotographyGrid/>
-          <div className="px-4 sm:px-6 lg:px-[82px] space-y-12 max-w-[1440px] mx-auto">
-            <div id="testimonial">
+          <div className="space-y-12">
+            <div id="testimonial" className="w-full">
               <HeadshotReviewSection />
             </div>
             <div id="pricing">

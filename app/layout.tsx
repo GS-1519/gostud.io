@@ -35,7 +35,7 @@ export default function RootLayout({ children }: any) {
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="msvalidate.01" content="1EBFA7B1A8C0B11490CBE5476B33271C" />
       </head>
-      <body className="flex flex-col bg-[#F4F7FA] min-h-screen font-[Poppins]">
+      <body className="flex flex-col bg-white min-h-screen font-[Poppins]">
         <GoogleTagManager />
         <ClarityScript />
         <Navbar />
