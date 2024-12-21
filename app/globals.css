@@ -46,6 +46,7 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 224.3 76.3% 48%;
+    
   }
 }
 
@@ -117,4 +118,13 @@ img-comparison-slider.rendered {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
   }
+}
+:root {
+  --sds-size-depth-0: 0px;
+  --sds-size-depth-100: 8px;
+  --sds-size-depth-400: 16px;
+  --sds-size-depth-800: 24px;
+  --sds-size-depth-negative-100: -2px;
+  --sds-color-black-100: rgba(0, 0, 0, 0.1);
+  --sds-color-black-200: rgba(0, 0, 0, 0.2);
 }

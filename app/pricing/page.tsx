@@ -1,6 +1,4 @@
 'use client';
-
-import { HeroSection } from '@/components/home/hero-section/hero-section';
 import { Pricing } from '@/components/home/pricing/pricing';
 import { useUserInfo } from '@/components/hooks/useUserInfo';
 import { createClient } from '@supabase/supabase-js';
@@ -27,7 +25,7 @@ export default function PricingPage() {
   return (
     <div className="flex flex-col min-h-screen">
       <main>
-        <HeroSection />
+        
         <Pricing onPaymentClick={handlePaymentClick} />
       </main>
     </div>

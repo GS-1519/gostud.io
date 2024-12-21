@@ -36,15 +36,18 @@ export const Pricing: React.FC<PricingProps> = ({ onPaymentClick }) => {
   }, []);
 
   return (
-    <div className="mx-auto max-w-7xl relative px-[32px] flex flex-col items-center justify-between">
-      <Toggle frequency={frequency} setFrequency={setFrequency} />
-      <PriceCards frequency={frequency} loading={loading} priceMap={prices || {}} />
-      <button 
-        onClick={onPaymentClick}
-        className="..."
-      >
-        Subscribe Now
-      </button>
+    <div className="py-12 bg-white">
+      <div className="max-w-7xl mx-auto px-4">
+       
+        
+        <PriceCards 
+          frequency={frequency} 
+          loading={loading} 
+          priceMap={prices || {}} 
+        />
+        
+       
+      </div>
     </div>
   );
 };
