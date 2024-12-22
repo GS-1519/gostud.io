@@ -15,6 +15,8 @@ import PhotographyGrid from "@/components/PhotographyGrid";
 import WhySection from "@/components/Why";
 import CreationGallery from "@/components/CreationLibaray";
 import BrandsPage from "@/components/BrandPage";
+import TeamSection from "@/components/TeamSection";
+import Ariaa from "@/components/Ariaa";
 
 
 export const dynamic = "force-dynamic";
@@ -78,16 +80,14 @@ export default async function Home() {
             <ComparisonPage />
             <WhySection/>
             <BrandsPage/>
-            <CreationGallery/>
-          </div>
-          <div className="space-y-12">
-            <div id="testimonial" className="w-full">
-              <HeadshotReviewSection />
-            </div>
+            <HeadshotReviewSection />
             <div id="pricing">
               <PricingSection user={user} />
             </div>
             <DataSecuritySection />
+            <Ariaa/>
+            <TeamSection/>
+            <CreationGallery/>
             <div id="faq">
               <FAQSection />
             </div>

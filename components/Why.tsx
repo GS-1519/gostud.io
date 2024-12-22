@@ -10,27 +10,32 @@ const WhySection = () => {
     {
       title: 'Stand Out on LinkedIn',
       description: 'Make a powerful first impression with a professional headshot that boosts your profile views and credibility.',
-      isActive: true
+      isActive: true,
+      image:'/logos/img1.png' 
     },
     {
       title: 'Make Resumes Shine',
       description: 'Elevate your application with a polished headshot that adds a personal touch and professionalism.',
-      isActive: false
+      isActive: false,
+      image:'/logos/img2.png'
     },
     {
       title: 'Events and Conferences',
       description: 'Represent you best self. Use professional headshots for speaker profiles, event directories, or badges.',
-      isActive: false
+      isActive: false,
+      image:'/logos/img3.png'
     },
     {
       title: 'Personalize Your Business Cards',
       description: 'Leave a lasting impression with a crisp, professional headshot that reflects your brand.',
-      isActive: false
+      isActive: false,
+      image:'/logos/img4.png' 
     },
     {
       title: 'Boost Your Online Presence',
       description: 'Use eye-catching photos for platforms like Instagram, Facebook, Twitter even for your dating profiles.',
-      isActive: false
+      isActive: false,
+      image:'/logos/img5.png'
     }
   ];
 
@@ -46,23 +51,62 @@ const WhySection = () => {
           Aaria ensures you're ready for every professional moment. From resumes to LinkedIn, we make your headshots shine effortlessly.
         </p>
 
-        <div className="bg-[#F8F7FF] rounded-2xl p-6 mb-6 relative h-[300px] shadow-[16.3px_14.13px_4.35px_0px_#E6DBFF]">
+        <div className="bg-[#F8F7FF] rounded-2xl p-6 mb-6 relative h-[300px]">
           <Image 
-            src="/whyfram.png" 
-            alt="Why GoStudio.ai" 
+            src={features[activeFeature].image}
+            alt={features[activeFeature].title}
             fill
-            className="rounded-lg object-contain"
+            className="rounded-lg object-contain transition-opacity duration-500"
             priority
           />
         </div>
 
         <h2 className="text-[#5B16FE] text-xl font-semibold mb-3">
-          {features[0].title}
+          {features[activeFeature].title}
         </h2>
         
         <p className="text-gray-600 mb-6">
-          {features[0].description}
+          {features[activeFeature].description}
         </p>
+
+        {/* Carousel Navigation */}
+        <div className="flex justify-between items-center mb-6">
+          <button 
+            onClick={() => setActiveFeature((prev) => (prev > 0 ? prev - 1 : features.length - 1))}
+            className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition-colors"
+            aria-label="Previous feature"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M15 19l-7-7 7-7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </button>
+
+          {/* Dots Indicator */}
+          <div className="flex gap-2">
+            {features.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setActiveFeature(index)}
+                className={`w-2 h-2 rounded-full transition-all ${
+                  index === activeFeature 
+                    ? 'bg-[#5B16FE] w-4' 
+                    : 'bg-gray-300'
+                }`}
+                aria-label={`Go to feature ${index + 1}`}
+              />
+            ))}
+          </div>
+
+          <button 
+            onClick={() => setActiveFeature((prev) => (prev < features.length - 1 ? prev + 1 : 0))}
+            className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition-colors"
+            aria-label="Next feature"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path d="M9 5l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </button>
+        </div>
 
         <button className="w-full bg-[#7C3AED] text-white rounded-full py-3 flex items-center justify-center gap-2">
           Try Now
@@ -98,14 +142,14 @@ const WhySection = () => {
             />
 
             {/* Features */}
-            <div className="space-y-8">
+            <div className="space-y-6">
               {features.map((feature, index) => (
                 <div 
                   key={index}
-                  className="pl-12 cursor-pointer py-4"
+                  className="pl-12 cursor-pointer py-3"
                   onClick={() => setActiveFeature(index)}
                 >
-                  <h3 className={`text-xl font-semibold mb-2 transition-colors duration-300 ${
+                  <h3 className={`text-xl font-semibold mb-1 transition-colors duration-300 ${
                     index === activeFeature ? 'text-[#5B16FE]' : 'text-gray-400'
                   }`}>
                     {feature.title}
@@ -124,15 +168,12 @@ const WhySection = () => {
           <div className="w-[634px] relative mt-[100px]">
             <div 
               className="w-full h-[472.15px] bg-[#F8F7FF] rounded-[13.04px] p-8 relative"
-              style={{
-                boxShadow: '16.3px 14.13px 4.35px 0px #E6DBFF'
-              }}
             >
               <Image 
-                src="/whyfram.png" 
-                alt="Why GoStudio.ai" 
+                src={features[activeFeature].image}
+                alt={features[activeFeature].title}
                 fill
-                className="rounded-[13.04px] object-contain"
+                className="rounded-[13.04px] object-contain transition-opacity duration-500"
                 priority
               />
             </div>

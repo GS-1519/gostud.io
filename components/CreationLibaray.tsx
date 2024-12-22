@@ -1,101 +1,88 @@
 import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
 
-const CreationGallery = () => {
+const Gallery = () => {
+  // Gallery images data
   const images = [
-    { src: "/api/placeholder/400/500", alt: "Doctor in white coat" },
-    { src: "/api/placeholder/400/500", alt: "Woman with flowers" },
-    { src: "/api/placeholder/400/500", alt: "Smiling woman" },
-    { src: "/api/placeholder/400/500", alt: "Man with food" },
-    { src: "/api/placeholder/400/500", alt: "Man in suit" },
-    { src: "/api/placeholder/400/500", alt: "Pop art portrait" },
-    { src: "/api/placeholder/400/500", alt: "Woman in garden" },
-    { src: "/api/placeholder/400/500", alt: "Woman in blazer" },
-    { src: "/api/placeholder/400/500", alt: "Dog in field" },
-    { src: "/api/placeholder/400/500", alt: "Woman in red dress" },
-    { src: "/api/placeholder/400/500", alt: "Professional headshot" },
-    { src: "/api/placeholder/400/500", alt: "Woman in suit" },
-    { src: "/api/placeholder/400/500", alt: "Woman in office" },
-    { src: "/api/placeholder/400/500", alt: "Doctor portrait" },
-    { src: "/api/placeholder/400/500", alt: "Executive portrait" },
-    { src: "/api/placeholder/400/500", alt: "Swimming portrait" }
+    { src: '/api/placeholder/400/400', isLarge: false, alt: 'Doctor portrait' },
+    { src: '/api/placeholder/400/400', isLarge: false, alt: 'Woman with flowers' },
+    { src: '/api/placeholder/400/600', isLarge: true, alt: 'Business man' },
+    { src: '/api/placeholder/400/400', isLarge: false, alt: 'Pop art portrait' },
+    { src: '/api/placeholder/400/400', isLarge: false, alt: 'Dog outdoors' },
+    { src: '/api/placeholder/400/600', isLarge: true, alt: 'Evening portrait' },
+    { src: '/api/placeholder/400/400', isLarge: false, alt: 'Professional woman' },
+    { src: '/api/placeholder/400/600', isLarge: true, alt: 'Doctor consultation' }
   ];
 
+  // Function to organize images into columns
+  const getColumnImages = (columnCount) => {
+    const columns = Array.from({ length: columnCount }, () => []);
+    images.forEach((image, index) => {
+      columns[index % columnCount].push(image);
+    });
+    return columns;
+  };
+
   return (
-    <div className="w-full bg-white py-12 px-4 md:py-16">
-      <div className="max-w-[1440px] mx-auto">
-        {/* Header */}
-        <div className="text-center mb-8 md:mb-12">
-          <h2 className="text-2xl md:text-4xl font-bold mb-3 bg-gradient-to-r from-[#8371FF] to-[#99E6FF] bg-clip-text text-transparent">
+    <div className="bg-white min-h-screen">
+      <div className="max-w-7xl mx-auto px-4">
+        {/* Header Section */}
+        <div className="text-center mb-8 sm:mb-12 pt-8 sm:pt-12">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent mb-4">
             TAKE A SNEAK PEEK INTO MY CREATIONS
-          </h2>
-          <p className="text-gray-600">
+          </h1>
+          <p className="text-gray-600 text-sm sm:text-base">
             I'm excited to share a glimpse of my work with you.
           </p>
         </div>
 
-        {/* Mobile Gallery */}
-        <div className="md:hidden space-y-4">
-          {images.slice(0, 8).map((image, index) => (
-            <div key={index} className="w-full rounded-2xl overflow-hidden">
-              <div className="relative aspect-[4/5]">
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                />
-              </div>
+        {/* Desktop Layout (4 columns) */}
+        <div className="hidden md:flex gap-4">
+          {getColumnImages(4).map((column, columnIndex) => (
+            <div key={`desktop-${columnIndex}`} className="flex-1 flex flex-col gap-4">
+              {column.map((image, imageIndex) => (
+                <div 
+                  key={`desktop-${columnIndex}-${imageIndex}`} 
+                  className={`w-full rounded-xl overflow-hidden group relative transition-transform duration-200 hover:scale-[1.02] ${
+                    image.isLarge ? 'h-[375px]' : 'h-[300px]'
+                  }`}
+                >
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-300" />
+                </div>
+              ))}
             </div>
           ))}
         </div>
 
-        {/* Desktop Gallery */}
-        <div className="hidden md:grid grid-cols-4 gap-4">
-          {images.map((image, index) => (
-            <div 
-              key={index} 
-              className={`rounded-2xl overflow-hidden ${
-                index === 3 || index === 7 || index === 11 || index === 15 
-                  ? 'col-span-1 row-span-2' 
-                  : 'col-span-1'
-              }`}
-            >
-              <div className="relative aspect-[4/5]">
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 25vw"
-                />
-              </div>
+        {/* Mobile Layout (2 columns) */}
+        <div className="md:hidden flex gap-4">
+          {getColumnImages(2).map((column, columnIndex) => (
+            <div key={`mobile-${columnIndex}`} className="flex-1 flex flex-col gap-4">
+              {column.map((image, imageIndex) => (
+                <div 
+                  key={`mobile-${columnIndex}-${imageIndex}`} 
+                  className={`w-full rounded-xl overflow-hidden group relative transition-transform duration-200 hover:scale-[1.02] ${
+                    image.isLarge ? 'h-[375px]' : 'h-[300px]'
+                  }`}
+                >
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-300" />
+                </div>
+              ))}
             </div>
           ))}
-        </div>
-
-        {/* See All Button */}
-        <div className="flex justify-center mt-8 md:mt-12">
-          <Link href="/gallery">
-            <button className="bg-[#7C3AED] text-white px-8 py-3 rounded-full flex items-center gap-2 hover:bg-[#6D28D9] transition-colors">
-              See All
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                <path 
-                  d="M5 12H19M19 12L12 5M19 12L12 19" 
-                  stroke="currentColor" 
-                  strokeWidth="2" 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
-          </Link>
         </div>
       </div>
     </div>
   );
 };
 
-export default CreationGallery;
+export default Gallery;

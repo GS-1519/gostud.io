@@ -39,35 +39,7 @@ const CurvedArrow = ({ rotation, style }: { rotation: number; style: React.CSSPr
 };
 
 const HeadshotSteps = () => {
-  const imageBoxStyle = "w-[90px] h-[90px] rounded-[16px] border border-gray-100 overflow-hidden flex items-center justify-center bg-white shadow-sm";
-
-  // First section images
-  const firstSectionImages = [
-    "/Step-icons/img1.png",
-    "/Step-icons/img2.png",
-    "/Step-icons/img3.png",
-    "/Step-icons/img4.png",
-    "/Step-icons/img5.png",
-    "/Step-icons/img6.png",
-    "/Step-icons/img7.png",
-    "/Step-icons/img8.png",
-    "/Step-icons/img9.png",
-    "/Step-icons/img10.png",
-  ];
-
-  // Third section images
-  const thirdSectionImages = [
-    "/Step-icons/img11.png",
-    "/Step-icons/img12.png",
-    "/Step-icons/img13.png",
-    "/Step-icons/img14.png",
-    "/Step-icons/img15.png",
-    "/Step-icons/img16.png",
-    "/Step-icons/img17.png",
-    "/Step-icons/img18.png",
-    "/Step-icons/img19.png",
-    "/Step-icons/img20.png",
-  ];
+  const imageBoxStyle = "w-[90px] h-[90px] rounded-[16px] border border-gray-100 overflow-hidden flex items-center justify-center bg-white shadow-sm relative";
 
   return (
     <div className="w-full bg-white">
@@ -76,31 +48,16 @@ const HeadshotSteps = () => {
           3 EASY STEPS TO GET YOUR STUDIO QUALITY PROFILE.
         </h1>
 
-        <div className="flex flex-col md:flex-row justify-between items-start gap-[52px] relative px-4 md:px-[82px]">
+        <div className="flex flex-col md:flex-row justify-between items-start gap-[24px] relative px-4 md:px-[82px]">
           {/* Step 1 */}
           <div className="w-full md:w-[424px]">
-            <div className="grid grid-cols-5 gap-2 mb-8">
-              {firstSectionImages.map((imgPath, index) => (
-                <div key={index} className={imageBoxStyle}>
-                  {index === 6 ? (
-                    <Image 
-                      src="/instagram-icon.png"
-                      alt="Instagram"
-                      width={85}
-                      height={85}
-                      className="w-[85px] h-[85px]"
-                    />
-                  ) : (
-                    <Image 
-                      src={imgPath}
-                      alt={`Step 1 image ${index + 1}`}
-                      width={85}
-                      height={85}
-                      className="w-[85px] h-[85px] object-cover"
-                    />
-                  )}
-                </div>
-              ))}
+            <div className="relative w-full aspect-[2/1] mb-8">
+              <Image 
+                src="/team/Frame2.png"
+                alt="First set of profile images"
+                fill
+                className="object-contain"
+              />
             </div>
 
             <div className="space-y-4">
@@ -120,50 +77,52 @@ const HeadshotSteps = () => {
 
           {/* Step 2 */}
           <div className="w-full md:w-[424px]">
-            <div className="bg-[#F8FAFC] rounded-2xl p-12 h-[459px] flex flex-col justify-center">
-              <h2 className="font-poppins text-[28.27px] leading-[24.74px] font-medium w-[330.08px] h-[25px]">02</h2>
-              <h3 className="text-2xl font-semibold mb-4">
-                Our AI Photographer "Aaria" get to work
-              </h3>
-              <p className="text-gray-600 text-base leading-relaxed">
-                Aaria creates a private, personalized model just for you—ensuring headshots
-                that reflect your unique style and identity.
-              </p>
+            <div 
+              className="bg-[#F8FAFC] rounded-2xl p-12 h-[459px] flex flex-col justify-center relative overflow-hidden"
+              style={{
+                backgroundImage: 'url(/step.png)',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat'
+              }}
+            >
+              <div className="relative z-10">
+                <h2 className="font-poppins text-[28.27px] leading-[24.74px] font-medium w-[330.08px] h-[25px] text-white mb-6">02</h2>
+                <h3 
+                  className="font-poppins text-[21.2px] leading-[24.74px] font-medium w-[330.08px] h-[50px] text-white mb-4"
+                  style={{
+                    fontFamily: 'Poppins',
+                    fontWeight: '500'
+                  }}
+                >
+                  Our AI Photographer "Aaria"
+                  get to work
+                </h3>
+                <p 
+                  className="w-[330.08px] h-[72px] text-white"
+                  style={{
+                    fontFamily: 'Poppins',
+                    fontSize: '15.9px',
+                    lineHeight: '23.85px',
+                    fontWeight: '400'
+                  }}
+                >
+                  Aaria creates a private, personalized model just for you—ensuring headshots
+                  that reflect your unique style and identity.
+                </p>
+              </div>
             </div>
           </div>
 
           {/* Step 3 */}
           <div className="w-full md:w-[424px]">
-            <div className="grid grid-cols-5 gap-2 mb-8">
-              {thirdSectionImages.map((imgPath, index) => (
-                <div key={index} className={imageBoxStyle}>
-                  {index === 9 ? (
-                    <Image 
-                      src="/google-photos-icon.png"
-                      alt="Google Photos"
-                      width={85}
-                      height={85}
-                      className="w-[85px] h-[85px]"
-                    />
-                  ) : index === 8 ? (
-                    <Image 
-                      src="/instagram-icon.png"
-                      alt="Instagram"
-                      width={85}
-                      height={85}
-                      className="w-[85px] h-[85px]"
-                    />
-                  ) : (
-                    <Image 
-                      src={imgPath}
-                      alt={`Step 3 image ${index + 1}`}
-                      width={85}
-                      height={85}
-                      className="w-[85px] h-[85px] object-cover"
-                    />
-                  )}
-                </div>
-              ))}
+            <div className="relative w-full aspect-[2/1] mb-8">
+              <Image 
+                src="/team/Frame1.png"
+                alt="Second set of profile images"
+                fill
+                className="object-contain"
+              />
             </div>
 
             <div className="space-y-4">

@@ -7,70 +7,53 @@ interface Brand {
   name: string;
   logo: string;
   width: number;
+  height: number;
 }
 
 const BrandingPage = () => {
-  // Brand data with specified widths for each logo
+  // Brand data with specified dimensions for each logo
   const brands: Brand[] = [
     {
       id: 1,
       name: 'Shopify',
-      logo: '/shopify.svg',
-      width: 160
+      logo: '/logo/AI.svg',
+      width: 307,
+      height: 83
     },
     {
       id: 2,
       name: 'eBay',
-      logo: '/ebay.svg',
-      width: 140
-    },
-    {
-      id: 3,
-      name: 'Stack Overflow',
-      logo: '/stackoverflow.svg',
-      width: 200
+      logo: '/logo/ebay.svg',
+      width: 307,
+      height: 83
     },
     {
       id: 4,
       name: 'Box',
-      logo: '/box.svg',
-      width: 120
+      logo: '/logo/Ber.svg',
+      width: 307,
+      height: 83
     },
     {
       id: 5,
       name: 'Berkeley',
-      logo: '/berkeley.svg',
-      width: 180
+      logo: '/logo/Box.svg',
+      width: 307,
+      height: 83
     },
     {
       id: 6,
       name: 'Printify',
-      logo: '/printify.svg',
-      width: 140
-    },
-    {
-      id: 7,
-      name: 'Garanty',
-      logo: '/garanty.svg',
-      width: 150
-    },
-    {
-      id: 8,
-      name: 'Mixtiles',
-      logo: '/mixtiles.svg',
-      width: 140
-    },
-    {
-      id: 9,
-      name: 'Vistoprint',
-      logo: '/vistoprint.svg',
-      width: 150
+      logo: '/logo/Dell.svg',
+      width: 307,
+      height: 83
     },
     {
       id: 10,
       name: 'Rappi',
-      logo: '/rappi.svg',
-      width: 130
+      logo: '/logo/Ncr.svg',
+      width: 307,
+      height: 83
     }
   ];
 
@@ -86,7 +69,7 @@ const BrandingPage = () => {
 
         {/* Brand Logo Slider Container */}
         <div className="w-full bg-[#F6F2FF] overflow-hidden">
-          <div className="relative w-[1440px] h-[185px] mx-auto">
+          <div className="relative w-[1440px] h-[250px] mx-auto"> {/* Increased height to accommodate larger logos */}
             {/* Main Scrolling Container */}
             <div className="absolute top-0 left-0 w-full h-full flex items-center">
               {/* First set of brands */}
@@ -95,12 +78,17 @@ const BrandingPage = () => {
                   <div 
                     key={brand.id}
                     className="flex-shrink-0 flex items-center justify-center"
-                    style={{ width: `${brand.width}px` }}
+                    style={{ 
+                      width: `${brand.width}px`,
+                      height: `${brand.height}px`
+                    }}
                   >
                     <img
                       src={brand.logo}
                       alt={`${brand.name} logo`}
-                      className="h-8 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                      className="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                      width={brand.width}
+                      height={brand.height}
                     />
                   </div>
                 ))}
@@ -112,12 +100,17 @@ const BrandingPage = () => {
                   <div 
                     key={`${brand.id}-duplicate`}
                     className="flex-shrink-0 flex items-center justify-center"
-                    style={{ width: `${brand.width}px` }}
+                    style={{ 
+                      width: `${brand.width}px`,
+                      height: `${brand.height}px`
+                    }}
                   >
                     <img
                       src={brand.logo}
                       alt={`${brand.name} logo`}
-                      className="h-8 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                      className="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                      width={brand.width}
+                      height={brand.height}
                     />
                   </div>
                 ))}

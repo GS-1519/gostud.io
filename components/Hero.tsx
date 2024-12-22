@@ -34,10 +34,10 @@ const FeatureItem = ({ Icon, text }: FeatureItemProps) => (
 );
 
 const TwoImageSection = ({ leftImage, rightImage }: TwoImageSectionProps) => (
-  <div className="flex-shrink-0 w-full flex">
+  <div className="flex-shrink-0 w-full flex h-screen overflow-hidden">
     {/* Mobile and Desktop left image */}
-    <div className="relative w-full md:w-1/2">
-      <div className="relative w-full aspect-square md:h-screen">
+    <div className="relative w-full md:w-1/2 h-full">
+      <div className="relative w-full h-full -mr-[1px]">
         <Image 
           src={leftImage} 
           alt="AI Generated Headshot"
@@ -45,6 +45,7 @@ const TwoImageSection = ({ leftImage, rightImage }: TwoImageSectionProps) => (
           quality={100}
           priority
           className="object-cover"
+          sizes="(max-width: 768px) 100vw, 50vw"
         />
         {/* Title overlay for mobile */}
         <div className="absolute bottom-8 left-4 right-4 md:hidden z-10">
@@ -57,7 +58,7 @@ const TwoImageSection = ({ leftImage, rightImage }: TwoImageSectionProps) => (
     </div>
 
     {/* Desktop-only right image */}
-    <div className="relative hidden md:block w-1/2 h-screen">
+    <div className="relative w-1/2 h-full hidden md:block -ml-[1px]">
       <Image 
         src={rightImage} 
         alt="AI Generated Headshot"
@@ -65,42 +66,72 @@ const TwoImageSection = ({ leftImage, rightImage }: TwoImageSectionProps) => (
         quality={100}
         priority
         className="object-cover"
+        sizes="50vw"
       />
     </div>
   </div>
 );
 
+// Small preview images at the bottom
+const SmallPreviewImages = ({ slides, activeIndex }: { slides: any[], activeIndex: number }) => (
+  <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex items-center gap-2 z-20">
+    {slides.map((_, index) => (
+      <div
+        key={index}
+        className={`h-2 rounded-full transition-all duration-300 ${
+          index === activeIndex ? 'w-8 bg-white' : 'w-2 bg-white/50'
+        }`}
+      />
+    ))}
+  </div>
+);
+
 export default function Hero() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
   const slideRef = useRef<HTMLDivElement>(null);
 
   const slides = [
     {
       left: "/slider/Image1.png",
-      right: "/slider/Image2.png"
+      right: "/slider/Image2.png",
+      smallLeft: "/slider/small1.png",
+      smallRight: "/slider/small2.png"
     },
     {
       left: "/slider/Image3.png",
-      right: "/slider/Image4.png"
+      right: "/slider/Image4.png",
+      smallLeft: "/slider/small3.png",
+      smallRight: "/slider/small4.png"
     },
     {
       left: "/slider/Image5.png",
-      right: "/slider/Image6.png"
+      right: "/slider/Image6.png",
+      smallLeft: "/slider/small5.png",
+      smallRight: "/slider/small6.png"
     },
     {
       left: "/slider/Image7.png",
-      right: "/slider/Image8.png"
+      right: "/slider/Image8.png",
+      smallLeft: "/slider/small7.png",
+      smallRight: "/slider/small8.png"
     },
     {
       left: "/slider/Image9.png",
-      right: "/slider/Image10.png"
+      right: "/slider/Image10.png",
+      smallLeft: "/slider/small9.png",
+      smallRight: "/slider/small10.png"
     }
   ];
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setActiveIndex(prev => (prev + 1) % slides.length);
-    }, 3000);
+      setIsTransitioning(true);
+      setTimeout(() => {
+        setActiveIndex(prev => (prev + 1) % slides.length);
+        setIsTransitioning(false);
+      }, 1000);
+    }, 7000);
 
     return () => clearInterval(timer);
   }, [slides.length]);
@@ -110,64 +141,72 @@ export default function Hero() {
       {/* Mobile View */}
       <div className="md:hidden">
         {/* Carousel */}
-        <div 
-          ref={slideRef}
-          className="flex transition-transform duration-700 ease-in-out"
-          style={{
-            transform: `translateX(-${activeIndex * 100}%)`
-          }}
-        >
+        <div ref={slideRef} className="relative w-full h-screen">
           {slides.map((slide, index) => (
-            <TwoImageSection
+            <div
               key={index}
-              leftImage={slide.left}
-              rightImage={slide.right}
-            />
+              className={`absolute top-0 left-0 w-full h-full transition-all duration-1000 ease-in-out ${
+                index === activeIndex ? 'opacity-100 visible' : 'opacity-0 invisible'
+              }`}
+              style={{
+                transform: 'translate3d(0, 0, 0)',
+                backfaceVisibility: 'hidden',
+                willChange: 'opacity'
+              }}
+            >
+              <TwoImageSection
+                leftImage={slide.left}
+                rightImage={slide.right}
+              />
+            </div>
           ))}
         </div>
 
         {/* Mobile Content Section */}
-     {/* Mobile Content Section */}
-{/* Mobile Content Section */}
-<div className="bg-white">
-  <div className="px-4 py-6 space-y-6">
-    <p className="text-gray-600 text-base leading-[24px]">
-      Stand out on LinkedIn, Twitter, with recruiters. Upload your selfies and receive 
-      hundreds of professional headshots all from your favorite AI photographer "Aaria".
-    </p>
+        <div className="bg-white">
+          <div className="px-4 py-6 space-y-6">
+            <p className="text-gray-600 text-base leading-[24px]">
+              Stand out on LinkedIn, Twitter, with recruiters. Upload your selfies and receive 
+              hundreds of professional headshots all from your favorite AI photographer "Aaria".
+            </p>
 
-    <div className="grid grid-cols-2 gap-4 text-gray-600">
-      <FeatureItem Icon={lock} text="150+ styles" />
-      <FeatureItem Icon={mdi} text="1 hour delivery" />
-      <FeatureItem Icon={circul} text="Data Protection" />
-      <FeatureItem Icon={tick} text="Money-back" />
-    </div>
+            <div className="grid grid-cols-2 gap-4 text-gray-600">
+              <FeatureItem Icon={lock} text="150+ styles" />
+              <FeatureItem Icon={mdi} text="1 hour delivery" />
+              <FeatureItem Icon={circul} text="Data Protection" />
+              <FeatureItem Icon={tick} text="Money-back" />
+            </div>
 
-    <Link href="/get-started" className="block">
-      <button className="w-full bg-[#7C3AED] hover:bg-[#6D28D9] text-white rounded-full py-3.5 font-poppins text-base transition-colors">
-        Try Now →
-      </button>
-    </Link>
-  </div>
-</div>
+            <Link href="/get-started" className="block">
+              <button className="w-full bg-[#7C3AED] hover:bg-[#6D28D9] text-white rounded-full py-3.5 font-poppins text-base transition-colors">
+                Try Now →
+              </button>
+            </Link>
+          </div>
+        </div>
       </div>
 
       {/* Desktop View */}
       <div className="hidden md:block">
         {/* Carousel */}
-        <div 
-          ref={slideRef}
-          className="flex transition-transform duration-700 ease-in-out"
-          style={{
-            transform: `translateX(-${activeIndex * 100}%)`
-          }}
-        >
+        <div ref={slideRef} className="relative w-full h-screen">
           {slides.map((slide, index) => (
-            <TwoImageSection
+            <div
               key={index}
-              leftImage={slide.left}
-              rightImage={slide.right}
-            />
+              className={`absolute top-0 left-0 w-full h-full transition-all duration-1000 ease-in-out ${
+                index === activeIndex ? 'opacity-100 visible' : 'opacity-0 invisible'
+              }`}
+              style={{
+                transform: 'translate3d(0, 0, 0)',
+                backfaceVisibility: 'hidden',
+                willChange: 'opacity'
+              }}
+            >
+              <TwoImageSection
+                leftImage={slide.left}
+                rightImage={slide.right}
+              />
+            </div>
           ))}
         </div>
 
@@ -201,16 +240,7 @@ export default function Hero() {
         </div>
 
         {/* Progress Indicators */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 space-x-2 z-20">
-          {slides.map((_, index) => (
-            <div
-              key={index}
-              className={`h-2 rounded-full transition-all duration-300 ${
-                index === activeIndex ? 'w-8 bg-white' : 'w-2 bg-white/50'
-              }`}
-            />
-          ))}
-        </div>
+        <SmallPreviewImages slides={slides} activeIndex={activeIndex} />
       </div>
     </div>
   );
