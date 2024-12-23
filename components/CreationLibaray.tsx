@@ -1,57 +1,71 @@
 import React from 'react';
+import Image from 'next/image';
+
+// Define the interface for image data
+interface GalleryImage {
+  src: string;
+  isLarge: boolean;
+  alt: string;
+}
 
 const Gallery = () => {
-  // Gallery images data
-  const images = [
-    { src: '/api/placeholder/400/400', isLarge: false, alt: 'Doctor portrait' },
-    { src: '/api/placeholder/400/400', isLarge: false, alt: 'Woman with flowers' },
-    { src: '/api/placeholder/400/600', isLarge: true, alt: 'Business man' },
-    { src: '/api/placeholder/400/400', isLarge: false, alt: 'Pop art portrait' },
-    { src: '/api/placeholder/400/400', isLarge: false, alt: 'Dog outdoors' },
-    { src: '/api/placeholder/400/600', isLarge: true, alt: 'Evening portrait' },
-    { src: '/api/placeholder/400/400', isLarge: false, alt: 'Professional woman' },
-    { src: '/api/placeholder/400/600', isLarge: true, alt: 'Doctor consultation' }
+  // Gallery images data with proper paths
+  const images: GalleryImage[] = [
+    { src: '/team/img1.png', isLarge: false, alt: 'Professional headshot 1' },
+    { src: '/team/img2.png', isLarge: false, alt: 'Professional headshot 2' },
+    { src: '/team/img3.png', isLarge: true, alt: 'Professional headshot 3' },
+    { src: '/team/img4.png', isLarge: false, alt: 'Professional headshot 4' },
+    { src: '/team/img5.png', isLarge: false, alt: 'Professional headshot 5' },
+    { src: '/team/img6.png', isLarge: true, alt: 'Professional headshot 6' },
+    { src: '/team/img7.png', isLarge: false, alt: 'Professional headshot 7' },
+    { src: '/team/img8.png', isLarge: true, alt: 'Professional headshot 8' }
   ];
 
-  // Function to organize images into columns
-  const getColumnImages = (columnCount) => {
-    const columns = Array.from({ length: columnCount }, () => []);
-    images.forEach((image, index) => {
-      columns[index % columnCount].push(image);
+  // Function to organize images into columns with proper typing
+  const getColumnImages = (columnCount: number): GalleryImage[][] => {
+    const columns: GalleryImage[][] = Array.from({ length: columnCount }, () => []);
+    let currentCol = 0;
+
+    images.forEach((image) => {
+      columns[currentCol].push(image);
+      currentCol = (currentCol + 1) % columnCount;
     });
+
     return columns;
   };
 
   return (
     <div className="bg-white min-h-screen">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8">
         {/* Header Section */}
         <div className="text-center mb-8 sm:mb-12 pt-8 sm:pt-12">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent mb-4">
+          <h1 className="text-[32px] leading-[48px] font-medium text-center mb-4">
             TAKE A SNEAK PEEK INTO MY CREATIONS
           </h1>
-          <p className="text-gray-600 text-sm sm:text-base">
+          <p className="text-[#161C2D]/60 text-[16px] leading-[24px] max-w-[790px] mx-auto">
             I'm excited to share a glimpse of my work with you.
           </p>
         </div>
 
         {/* Desktop Layout (4 columns) */}
-        <div className="hidden md:flex gap-4">
+        <div className="hidden md:flex gap-[24px]">
           {getColumnImages(4).map((column, columnIndex) => (
-            <div key={`desktop-${columnIndex}`} className="flex-1 flex flex-col gap-4">
+            <div key={`desktop-${columnIndex}`} className="flex-1 flex flex-col gap-[24px]">
               {column.map((image, imageIndex) => (
                 <div 
                   key={`desktop-${columnIndex}-${imageIndex}`} 
-                  className={`w-full rounded-xl overflow-hidden group relative transition-transform duration-200 hover:scale-[1.02] ${
+                  className={`relative w-full overflow-hidden rounded-[16px] ${
                     image.isLarge ? 'h-[375px]' : 'h-[300px]'
                   }`}
                 >
-                  <img
+                  <Image
                     src={image.src}
                     alt={image.alt}
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover transition-transform duration-300 hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1440px) 25vw"
                   />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/20 opacity-0 hover:opacity-100 transition-opacity duration-300" />
                 </div>
               ))}
             </div>
@@ -59,22 +73,24 @@ const Gallery = () => {
         </div>
 
         {/* Mobile Layout (2 columns) */}
-        <div className="md:hidden flex gap-4">
+        <div className="md:hidden flex gap-[16px]">
           {getColumnImages(2).map((column, columnIndex) => (
-            <div key={`mobile-${columnIndex}`} className="flex-1 flex flex-col gap-4">
+            <div key={`mobile-${columnIndex}`} className="flex-1 flex flex-col gap-[16px]">
               {column.map((image, imageIndex) => (
                 <div 
                   key={`mobile-${columnIndex}-${imageIndex}`} 
-                  className={`w-full rounded-xl overflow-hidden group relative transition-transform duration-200 hover:scale-[1.02] ${
-                    image.isLarge ? 'h-[375px]' : 'h-[300px]'
+                  className={`relative w-full overflow-hidden rounded-[16px] ${
+                    image.isLarge ? 'h-[280px]' : 'h-[200px]'
                   }`}
                 >
-                  <img
+                  <Image
                     src={image.src}
                     alt={image.alt}
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover transition-transform duration-300 hover:scale-105"
+                    sizes="(max-width: 768px) 50vw"
                   />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/20 opacity-0 hover:opacity-100 transition-opacity duration-300" />
                 </div>
               ))}
             </div>
