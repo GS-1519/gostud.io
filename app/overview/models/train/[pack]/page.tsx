@@ -1,17 +1,16 @@
 'use client'
 
 import React, { useState, useEffect, useCallback } from 'react';
-import { useSearchParams } from 'next/navigation';
+import { useSearchParams, useParams } from 'next/navigation';
 import ModelTypeSelector from "@/components/ModelTypeSelector";
 import TrainModelZone from "@/components/TrainModelZone";
+import InstructionsPage from '@/components/Instructions';
 
-interface PageProps {
-  params: { pack: string }
-}
-
-export default function TrainModelPage({ params }: PageProps) {
+export default function TrainModelPage() {
   const [currentStep, setCurrentStep] = useState('');
   const searchParams = useSearchParams();
+  const params = useParams();
+  const pack = params?.pack as string;
 
   const getStep = useCallback(() => {
     const step = searchParams?.get('step');
@@ -25,18 +24,17 @@ export default function TrainModelPage({ params }: PageProps) {
   }, [getStep]);
 
   const handleContinue = () => {
-    // Add your logic here for what should happen when continue is clicked
-    console.log('Continuing to next step');
-    // For example, you might want to update the current step:
     setCurrentStep('img-upload');
   };
 
   const renderStep = () => {
     switch (currentStep) {
       case 'img-upload':
-        return <TrainModelZone packSlug={params.pack} onContinue={handleContinue} />;
-      default:
+        return <TrainModelZone packSlug={pack} onContinue={handleContinue} />;
+      case 'model-type':
         return <ModelTypeSelector onContinue={handleContinue} />;
+      default:
+        return <InstructionsPage />;
     }
   };
 

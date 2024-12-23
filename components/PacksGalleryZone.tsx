@@ -148,48 +148,61 @@ export default function PacksGalleryZone() {
   };
 
   return (
-    <div className="space-y-8">
-      {Object.entries(groupedPacks).map(([category, categoryPacks]) => 
-        categoryPacks.length > 0 && (
-          <div key={category} className="space-y-4">
-            <button 
-              onClick={() => toggleSection(category)}
-              className="w-full flex items-center justify-between text-xl font-bold py-2 hover:bg-gray-50 rounded-lg transition-colors duration-200"
-            >
-              <h2>{getCategoryTitle(category)}</h2>
-              <span className="text-gray-500">
-                {expandedSections[category] ? (
-                  <ChevronUp className="w-6 h-6" />
-                ) : (
-                  <ChevronDown className="w-6 h-6" />
-                )}
-              </span>
-            </button>
-            
-            {expandedSections[category] && (
-              <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 transition-all duration-300">
-                {categoryPacks.map((pack) => (
-                  <Link 
-                    href={`/overview/models/train/${pack.slug}`} 
-                    key={pack.id} 
-                    className="w-full h-70 bg-black rounded-md overflow-hidden transition-transform duration-300 hover:scale-105"
-                    onClick={(e) => handlePackSelect(e, pack)}
-                  >
-                    <img
-                      src={pack.cover_url ?? "https://www.astria.ai/assets/logo-b4e21f646fb5879eb91113a70eae015a7413de8920960799acb72c60ad4eaa99.png"}
-                      alt={pack.title}
-                      className="w-full h-4/5 object-cover"
-                    />
-                    <div className="text-white w-full p-3 text-md font-bold text-center capitalize leading-tight">
-                      {pack.title}
-                    </div>
-                  </Link>
-                ))}
-              </div>
-            )}
-          </div>
-        )
-      )}
+    <div className="w-full">
+    
+
+      <div className="space-y-8">
+        {Object.entries(groupedPacks).map(([category, categoryPacks]) => 
+          categoryPacks.length > 0 && (
+            <div key={category} className="space-y-4">
+              <button 
+                onClick={() => toggleSection(category)}
+                className="w-full flex items-center justify-between text-xl font-semibold text-[#161C2D] py-2"
+              >
+                <h2>{getCategoryTitle(category)}</h2>
+                <span className="text-[#64748B]">
+                  {expandedSections[category] ? (
+                    <ChevronUp className="w-5 h-5" />
+                  ) : (
+                    <ChevronDown className="w-5 h-5" />
+                  )}
+                </span>
+              </button>
+              
+              {expandedSections[category] && (
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-[17px]">
+                  {categoryPacks.map((pack) => (
+                    <Link 
+                      href={`/overview/models/train/${pack.slug}`} 
+                      key={pack.id} 
+                      onClick={(e) => handlePackSelect(e, pack)}
+                      className="group relative rounded-[11.34px] overflow-hidden transition-all duration-300 hover:scale-[1.02]"
+                      style={{
+                        width: '184.33px',
+                        height: '259.95px'
+                      }}
+                    >
+                      <div className="relative h-full">
+                        <img
+                          src={pack.cover_url ?? "https://www.astria.ai/assets/logo-b4e21f646fb5879eb91113a70eae015a7413de8920960799acb72c60ad4eaa99.png"}
+                          alt={pack.title}
+                          className="w-full h-full object-cover"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/60" />
+                        <div className="absolute bottom-0 left-0 right-0 p-4">
+                          <h3 className="text-white text-lg font-medium capitalize">
+                            {pack.title}
+                          </h3>
+                        </div>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+          )
+        )}
+      </div>
     </div>
   );
 }

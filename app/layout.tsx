@@ -10,6 +10,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next'
 import ClarityScript from "@/components/ClarityScript";
 import GoogleTagManager from "@/components/GoogleTagManager";
 import 'react-tabs/style/react-tabs.css';
+import { StepBar } from "@/components/ui/step-bar";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.gostudio.ai'),
@@ -40,7 +41,8 @@ export default function RootLayout({ children }: any) {
         <ClarityScript />
         <Navbar />
         <CSPostHogProvider>
-          <main className="flex-1 flex flex-col">
+          <main className="flex-1 flex flex-col pt-16">
+            <StepBar />
             {children}
           </main>
         </CSPostHogProvider>

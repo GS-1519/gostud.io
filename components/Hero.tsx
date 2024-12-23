@@ -34,9 +34,9 @@ const FeatureItem = ({ Icon, text }: FeatureItemProps) => (
 );
 
 const TwoImageSection = ({ leftImage, rightImage }: TwoImageSectionProps) => (
-  <div className="flex-shrink-0 w-full flex h-screen overflow-hidden">
+  <div className="flex-shrink-0 w-full flex h-[50vh] md:h-screen overflow-hidden">
     {/* Mobile and Desktop left image */}
-    <div className="relative w-full md:w-1/2 h-full">
+    <div className="relative w-[100vw] md:w-1/2 h-full">
       <div className="relative w-full h-full -mr-[1px]">
         <Image 
           src={leftImage} 
@@ -44,12 +44,12 @@ const TwoImageSection = ({ leftImage, rightImage }: TwoImageSectionProps) => (
           fill
           quality={100}
           priority
-          className="object-cover"
+          className="object-cover object-center w-full scale-100 md:scale-108"
           sizes="(max-width: 768px) 100vw, 50vw"
         />
         {/* Title overlay for mobile */}
-        <div className="absolute bottom-8 left-4 right-4 md:hidden z-10">
-          <h1 className="font-poppins font-semibold text-white text-[32px] leading-[40px]">
+        <div className="absolute bottom-3 left-4 right-4 md:hidden z-10">
+          <h1 className="font-poppins font-semibold text-white text-[26px] leading-[34px] xs:text-[30px] xs:leading-[38px]">
             Professional Headshots<br />
             using your Selfies.
           </h1>
@@ -141,7 +141,7 @@ export default function Hero() {
       {/* Mobile View */}
       <div className="md:hidden">
         {/* Carousel */}
-        <div ref={slideRef} className="relative w-full h-screen">
+        <div ref={slideRef} className="relative w-full h-[50vh]">
           {slides.map((slide, index) => (
             <div
               key={index}
@@ -164,8 +164,8 @@ export default function Hero() {
 
         {/* Mobile Content Section */}
         <div className="bg-white">
-          <div className="px-4 py-6 space-y-6">
-            <p className="text-gray-600 text-base leading-[24px]">
+          <div className="px-4 py-3 space-y-4 xs:space-y-5">
+            <p className="text-gray-600 text-sm xs:text-base leading-[22px]">
               Stand out on LinkedIn, Twitter, with recruiters. Upload your selfies and receive 
               hundreds of professional headshots all from your favorite AI photographer "Aaria".
             </p>
