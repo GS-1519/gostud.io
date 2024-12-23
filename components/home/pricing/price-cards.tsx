@@ -14,55 +14,73 @@ interface Props {
 }
 
 export function PriceCards({ loading, frequency, priceMap }: Props) {
-  const [selectedTier, setSelectedTier] = useState('STANDARD');
+  const [activeTier, setActiveTier] = useState<string>('STANDARD');
 
   return (
     <div className="bg-white w-full py-16">
       {/* Heading Section */}
-      <div className="text-center mb-12">
-        <h1 className="text-[32px] font-Poppins font-medium tracking-[-0.04em] text-[#161C2D] mb-4">
+      <div className="text-center mb-16">
+        <h1 className="w-[1134px] h-[48px] mx-auto
+                     font-poppins font-medium text-[32px] 
+                     leading-[48px] tracking-[-0.04em] text-center
+                     text-[#161C2D] whitespace-nowrap">
           PREMIUM QUALITY AT 10 TIMES LESS PRICE
         </h1>
-        <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+        
+        <p className="w-[1077.84px] h-[54px] mx-auto mt-4
+                    font-poppins font-[500] text-[18px]
+                    leading-[27px] text-center
+                    text-[#161C2D]/70">
           No studio visits. No $200+ photoshoot fees. No waiting for appointments. Achieve stunning, professional-grade
           headshots in just 30 minutes—all from the comfort of your home.
         </p>
       </div>
 
-      {/* Cards Grid */}
-      <div className="flex justify-center items-start gap-8 max-w-7xl mx-auto px-4">
+      {/* Pricing Cards Grid */}
+      <div className="flex justify-center items-stretch gap-6 max-w-6xl mx-auto px-4">
         {PricingTier.map((tier) => {
           const isStandard = tier.name === 'STANDARD';
           const isPremium = tier.name === 'PREMIUM';
-          const isSelected = selectedTier === tier.name;
+          const isActive = activeTier === tier.name;
           
           return (
             <div 
               key={tier.id} 
               className={cn(
-                'w-[370px] rounded-lg bg-[#F8F9FA] p-8 cursor-pointer transition-all duration-300 relative',
+                'w-[394px] min-h-[549px] rounded-[12px] p-[42px]',
+                'flex flex-col gap-8',
+                'transition-all duration-300 ease-in-out',
+                'relative cursor-pointer outline-none',
                 {
-                  'shadow-[0_var(--sds-size-depth-100)_var(--sds-size-depth-100)_var(--sds-size-depth-negative-100)_var(--sds-color-black-100)]': isStandard && !isSelected,
-                  'shadow-[0_var(--sds-size-depth-400)_var(--sds-size-depth-800)_var(--sds-size-depth-negative-100)_var(--sds-color-black-200)]': isSelected,
-                  'shadow-none': !isSelected && !isStandard
+                  'shadow-[0_var(--sds-size-depth-400)_var(--sds-size-depth-800)_var(--sds-size-depth-negative-100)_var(--sds-color-black-200)] scale-105':
+                    isActive,
+                  'shadow-none scale-100': !isActive,
+                  'bg-white': isActive,
+                  'bg-[#F8F9FA]': !isActive,
                 }
               )}
-              onClick={() => setSelectedTier(tier.name)}
+              onMouseEnter={() => setActiveTier(tier.name)}
+              onMouseLeave={() => setActiveTier('STANDARD')}
+              onFocus={() => setActiveTier(tier.name)}
+              onBlur={() => setActiveTier('STANDARD')}
+              tabIndex={0}
             >
               {/* Badge */}
               {(isStandard || isPremium) && (
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                   {isStandard ? (
-                    // 82% pick this plan badge
-                    <div className="relative rounded-[50px] px-6 py-2.5 text-sm font-medium whitespace-nowrap bg-white before:absolute before:inset-0 before:rounded-[50px] before:p-[1px] before:bg-gradient-to-r before:from-[#8371FF] before:via-[#A077FE] before:to-[#01C7E4] before:-z-10">
-                      <span className="bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4] bg-clip-text text-transparent">
+                    <div className="gradient-border px-4 py-1.5">
+                      <span className="text-sm font-medium" style={{
+                        background: 'linear-gradient(90deg, #8371FF -39.48%, #A077FE 15.54%, #01C7E4 100%)',
+                        WebkitBackgroundClip: 'text',
+                        WebkitTextFillColor: 'transparent'
+                      }}>
                         82% pick this plan
                       </span>
                     </div>
                   ) : (
-                    // Best Value badge
-                    <div className="rounded-[50px] px-6 py-2.5 text-sm font-medium whitespace-nowrap bg-white border border-[#5B16FE]">
-                      <span className="text-[#5B16FE]">
+                    <div className="px-4 py-1.5 rounded-[20px] bg-transparent border-[1.5px] border-[#5B16FE]">
+                      <span className="text-sm font-medium text-[#5B16FE]">
                         Best Value
                       </span>
                     </div>
@@ -70,81 +88,128 @@ export function PriceCards({ loading, frequency, priceMap }: Props) {
                 </div>
               )}
               
-              {/* Title */}
-              <h3 className="text-[#5B16FE] text-xl font-semibold mb-8">
-                {tier.name}
-              </h3>
+              {/* Title Section */}
+              <div>
+                <h3 className="text-[#5B16FE] text-xl font-semibold">
+                  {tier.name}
+                </h3>
+              </div>
               
-              {/* Price */}
+              {/* Price Section */}
               <div className="mb-8">
                 <div className="flex items-baseline gap-1">
-                  <span className={cn(
-                    "text-2xl font-bold",
-                    {
-                      'text-[#8371FF]': isSelected && isStandard,
-                      'text-[#161C2D]': !isSelected || !isStandard
-                    }
-                  )}>$</span>
-                  <span className={cn(
-                    "text-5xl font-bold mr-2",
-                    {
-                      'text-[#01C7E4]': isSelected && isStandard,
-                      'text-[#161C2D]': !isSelected || !isStandard
-                    }
-                  )}>
-                    {tier.name === 'BASIC' ? '10' : tier.name === 'STANDARD' ? '19' : '29'}
-                  </span>
-                  <span className={cn(
-                    "line-through",
-                    {
-                      'text-[#01C7E4] opacity-50': isStandard,
-                      'text-gray-400': !isStandard
-                    }
-                  )}>
-                    ${tier.name === 'BASIC' ? '29' : tier.name === 'STANDARD' ? '45' : '75'}
-                  </span>
+                  {isStandard ? (
+                    // Standard tier with specific colors
+                    <div className="flex items-baseline">
+                      <span className="text-3xl font-bold text-[#8371FF]">$</span>
+                      <span className="text-5xl font-bold ml-1 text-[#01C7E4]">19</span>
+                      <span className="text-gray-400 line-through ml-2 flex items-baseline">
+                        <span className="text-[#8371FF]">$</span>
+                        <span className="text-[#01C7E4]">45</span>
+                      </span>
+                    </div>
+                  ) : (
+                    // Regular price for other tiers
+                    <>
+                      <span className="text-3xl font-bold text-[#161C2D]">$</span>
+                      <span className="text-5xl font-bold text-[#161C2D] mr-2">
+                        {tier.name === 'BASIC' ? '10' : '29'}
+                      </span>
+                      <span className="text-[#161C2D] line-through">
+                        ${tier.name === 'BASIC' ? '29' : '75'}
+                      </span>
+                    </>
+                  )}
                 </div>
-                <p className="text-gray-600 mt-2">One Time Payment</p>
+                <p className="text-gray-500 mt-2">One Time Payment</p>
               </div>
 
-              {/* Features */}
-              <div className="space-y-6 mb-8">
-                {tier.features.map((feature) => (
-                  <div key={feature.text} className="flex items-start gap-3">
-                    <span className="mt-1">{feature.icon}</span>
-                    <span className="text-gray-600">{feature.text}</span>
-                  </div>
-                ))}
+              {/* Features Section */}
+              <div className="space-y-4 mb-8">
+                {tier.features.map((feature, idx) => {
+                  const getIconColor = () => {
+                    if (isStandard) {
+                      switch (idx) {
+                        case 0: return "text-[#5B16FE]"; // Camera icon - purple
+                        case 1: return "text-[#01C7E4]"; // Clock icon - blue
+                        case 2: return "text-[#8371FF]"; // Image/outfit icon - light purple
+                        case 3: return "text-[#A077FE]"; // Users/poses icon - medium purple
+                        default: return "text-[#5B16FE]";
+                      }
+                    }
+                    return "text-gray-600"; // Default color for non-standard tiers
+                  };
+
+                  const getIconStyle = () => {
+                    const baseStyle = "w-5 h-5"; // Slightly larger icons
+                    return cn(baseStyle, getIconColor());
+                  };
+
+                  return (
+                    <div 
+                      key={`${tier.name}-feature-${idx}`}
+                      className="flex items-center gap-3"
+                    >
+                      <div className="flex-shrink-0">
+                        <feature.icon className={getIconStyle()} />
+                      </div>
+                      <span className="text-[15px] text-[#64748B]">
+                        {feature.text}
+                      </span>
+                    </div>
+                  );
+                })}
               </div>
 
-              {/* Button */}
-              <Button 
-                className={cn(
-                  'w-full rounded-full py-6 text-base font-medium',
-                  {
-                    'bg-[#5B16FE] hover:bg-[#5B16FE]/90 text-white': isStandard,
-                    'bg-white border-2 border-[#5B16FE] text-[#5B16FE] hover:bg-gray-50': !isStandard
-                  }
-                )}
-                asChild
-              >
-                <Link href={`/checkout/${tier.priceId[frequency.value]}`} className="flex items-center justify-center">
-                  Try Now
-                  <svg className="w-5 h-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
-                    <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                  </svg>
-                </Link>
-              </Button>
-              
-              <p className="text-xs text-center text-gray-500 mt-4">
-                No subscription required
-              </p>
+              {/* Button Section */}
+              <div className="mt-auto">
+                <Button 
+                  className={cn(
+                    'w-[310px] h-[48px] rounded-[46px] px-[25px] py-[12px]',
+                    'flex items-center justify-center gap-[10px]',
+                    'text-base font-medium transition-all duration-300',
+                    'focus:outline-none focus:ring-2 focus:ring-[#5B16FE] focus:ring-offset-2',
+                    {
+                      'bg-[#5B16FE] text-white hover:bg-[#4B0FD9] transform hover:scale-105': 
+                        isActive,
+                      'bg-white border border-[#5B16FE] text-[#5B16FE] hover:bg-[#5B16FE]/5': 
+                        !isActive
+                    }
+                  )}
+                  asChild
+                >
+                  <Link 
+                    href={`/checkout/${tier.priceId[frequency.value as keyof typeof tier.priceId]}`} 
+                    className="flex items-center justify-center gap-[10px]"
+                    onFocus={() => setActiveTier(tier.name)}
+                    onBlur={() => setActiveTier('STANDARD')}
+                  >
+                    Try Now
+                    <svg 
+                      className={cn(
+                        "w-5 h-5 transition-transform duration-300",
+                        { "transform translate-x-1": isActive }
+                      )} 
+                      viewBox="0 0 20 20" 
+                      fill="currentColor"
+                    >
+                      <path 
+                        fillRule="evenodd" 
+                        d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" 
+                        clipRule="evenodd" 
+                      />
+                    </svg>
+                  </Link>
+                </Button>
+                
+                <p className="text-xs text-center text-gray-500 mt-4">
+                  No subscription required
+                </p>
+              </div>
             </div>
           );
         })}
       </div>
-
-      
     </div>
   );
 }

@@ -6,28 +6,30 @@ interface Props {
   handleQuantityChange: (quantity: number) => void;
 }
 
-export function QuantityField({ handleQuantityChange, quantity }: Props) {
+export function QuantityField({ quantity, handleQuantityChange }: Props) {
   return (
-    <div className={'mt-3 bg-background gap-1 w-fit flex items-center rounded-sm border border-border p-[6px]'}>
+    <div className="flex items-center gap-1 bg-white border border-[#E2E8F0] rounded-[8px] p-1">
       <Button
-        disabled={quantity === 1}
-        variant={'secondary'}
-        className={
-          'h-[32px] bg-[#182222] disabled:bg-transparent text-muted-foreground border-border w-[32px] p-0 rounded-[4px]'
-        }
-        onClick={() => handleQuantityChange(quantity - 1)}
+        onClick={() => handleQuantityChange(Math.max(1, quantity - 1))}
+        disabled={quantity <= 1}
+        variant="ghost"
+        size="icon"
+        className="h-8 w-8 rounded-[4px] hover:bg-[#F1F5F9] disabled:opacity-50"
       >
-        <Minus />
+        <Minus className="h-4 w-4 text-[#64748B]" />
       </Button>
-      <span className={'text-center leading-[24px] bg-[#182222] rounded-[4px] w-[56px] px-2 py-1 text-xs'}>
-        {quantity}
-      </span>
+
+      <div className="w-12 text-center">
+        <span className="text-sm font-medium text-[#161C2D]">{quantity}</span>
+      </div>
+
       <Button
-        variant={'secondary'}
-        className={'h-[32px] bg-[#182222] text-muted-foreground border-border w-[32px] p-0 rounded-[4px]'}
         onClick={() => handleQuantityChange(quantity + 1)}
+        variant="ghost"
+        size="icon"
+        className="h-8 w-8 rounded-[4px] hover:bg-[#F1F5F9]"
       >
-        <Plus />
+        <Plus className="h-4 w-4 text-[#64748B]" />
       </Button>
     </div>
   );

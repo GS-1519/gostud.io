@@ -1,41 +1,76 @@
+import { Camera, Clock, Shirt, Users } from 'lucide-react';
+
 export interface Tier {
   name: string;
-  id: 'starter' | 'pro' | 'advanced';
-  description: string;
-  features: string[];
-  featured: boolean;
-  priceId: Record<string, string>;
+  id: 'basic' | 'standard' | 'premium';
+  badge?: string;
+  price: number;
+  originalPrice: number;
+  features: Array<{
+    icon: typeof Camera | typeof Clock | typeof Shirt | typeof Users;
+    text: string;
+  }>;
+  priceId: {
+    month: string;
+    year: string;
+  };
+  featured?: boolean;
 }
 
 export const PricingTier: Tier[] = [
   {
-    name: 'Starter',
-    id: 'starter',
-    description: 'Ideal for individuals who want to get started with simple design tasks.',
-    features: ['1 workspace', 'Limited collaboration', 'Export to PNG and SVG'],
-    featured: false,
-    priceId: { month: 'pri_01j6wfs9rsv8xcbgcz9jwtx146', year: 'pri_01j6wfs9rsv8xcbgcz9jwtx146' },
-  },
-  {
-    name: 'Pro',
-    id: 'pro',
-    description: 'Enhanced design tools for scaling teams who need more flexibility.',
-    features: ['Integrations', 'Unlimited workspaces', 'Advanced editing tools', 'Everything in Starter'],
-    featured: true,
-    priceId: { month: 'pri_01j6wfjbgevsc47sv22ja6qq60', year: 'pri_01j6wfjbgevsc47sv22ja6qq60' },
-  },
-  {
-    name: 'Advanced',
-    id: 'advanced',
-    description: 'Powerful tools designed for extensive collaboration and customization.',
+    name: 'BASIC',
+    id: 'basic',
+    price: 10,
+    originalPrice: 29,
     features: [
-      'Single sign on (SSO)',
-      'Advanced version control',
-      'Assets library',
-      'Guest accounts',
-      'Everything in Pro',
+      { icon: Camera, text: '20 high-quality headshots' },
+      { icon: Clock, text: '2-hour processing time' },
+      { icon: Shirt, text: '5 outfits and backgrounds' },
+      { icon: Users, text: '5 poses' }
+    ],
+    priceId: {
+      month: 'pri_01j6wfjbgevsc47sv22ja6qq60',
+      year: 'pri_01j6wfjbgevsc47sv22ja6qq60'
+    }
+  },
+  {
+    name: 'STANDARD',
+    id: 'standard',
+    badge: '82% pick this plan',
+    price: 19,
+    originalPrice: 45,
+    features: [
+      { icon: Camera, text: '60 high-quality headshots' },
+      { icon: Clock, text: '1-hour processing time' },
+      { icon: Shirt, text: '20 outfits and backgrounds' },
+      { icon: Users, text: '20 poses' }
+    ],
+    priceId: {
+      month: 'pri_01j6w1gr39da9p41rymadfde5q',
+      year: 'pri_01j6w1gr39da9p41rymadfde5q'
+    }
+  },
+  {
+    name: 'PREMIUM',
+    id: 'premium',
+    badge: 'Best Value',
+    price: 29,
+    originalPrice: 75,
+    features: [
+      { icon: Camera, text: '100 high-quality headshots' },
+      { icon: Clock, text: '30-min processing time' },
+      { icon: Shirt, text: '40 outfits and backgrounds' },
+      { icon: Users, text: '40 poses' }
     ],
     featured: false,
-    priceId: { month: 'pri_01j6w1gr39da9p41rymadfde5q', year: 'pri_01j6w1gr39da9p41rymadfde5q' },
-  },
+    priceId: {
+             month: 'pri_01j6wfs9rsv8xcbgcz9jwtx146',
+              year: 'pri_01j6wfs9rsv8xcbgcz9jwtx146'
+
+
+
+      
+    }
+  }
 ];
