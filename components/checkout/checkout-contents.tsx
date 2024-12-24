@@ -83,7 +83,7 @@ export function CheckoutContents({ userEmail }: Props) {
         checkout: {
           settings: {
             displayMode: 'inline',
-            theme: 'dark',
+            theme: 'light',
             allowLogout: !userEmail,
             frameTarget: 'paddle-checkout-frame',
             frameInitialHeight: 450,
