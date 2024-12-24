@@ -12,114 +12,74 @@ interface Step {
 const steps: Step[] = [
   { number: "01", title: "Select Pack", path: "/overview/packs" },
   { number: "02", title: "Instructions", path: "/overview/models/train" },
-  { number: "03", title: "Upload Photos", path: "step=img-upload" },
-  { number: "04", title: "Select GoStudio Package", path: "/overview/package" },
-  { number: "05", title: "Check Out", path: "/overview/checkout" },
-  { number: "06", title: "Order Details", path: "/overview/order-details" },
+  { number: "03", title: "Model Type", path: "step=model-type" },
+  { number: "04", title: "Upload Photos", path: "step=img-upload" },
+  { number: "05", title: "Get Credits", path: "step=get-credits" },
+  { number: "06", title: "Summary", path: "step=summary" },
 ];
 
 export function StepBar() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   
-  if (!pathname?.includes('/overview')) {
+  if (!pathname?.includes('/overview/packs') && !pathname?.includes('/overview/models/train')) {
     return null;
   }
 
   const getCurrentStepIndex = () => {
+    if (pathname?.includes('/overview/packs')) return 0;
     const step = searchParams?.get('step');
+    if (!step) return 1;
     
-    if (step === 'img-upload') {
-      return 2;
+    switch (step) {
+      case 'model-type': return 2;
+      case 'img-upload': return 3;
+      case 'get-credits': return 4;
+      case 'summary': return 5;
+      default: return 1;
     }
-
-    return steps.findIndex(s => 
-      pathname.includes(s.path) && s.path !== "step=img-upload"
-    );
   };
 
   const currentStepIndex = getCurrentStepIndex();
   
   return (
-    <div className="sticky top-[64px] left-0 right-0 z-40 bg-white pb-4 px-4">
-      <div className="max-w-[1200px] mx-auto">
-        {/* Desktop Steps */}
-        <div className="hidden md:flex items-center justify-between mb-2">
-          {steps.map((step, index) => {
-            const isActive = index <= currentStepIndex;
-            const isCurrent = index === currentStepIndex;
-
-            return (
-              <div 
-                key={step.number}
-                className="relative flex flex-col items-center"
-              >
-                <div 
-                  className={cn(
-                    "text-sm font-medium mb-1",
-                    isActive ? "text-[#0066FF]" : "text-[#666666]"
-                  )}
-                >
-                  {step.number}
-                </div>
-                <span 
-                  className={cn(
-                    "text-sm whitespace-nowrap",
-                    isCurrent ? "text-black" : "text-[#666666]"
-                  )}
-                >
-                  {step.title}
-                </span>
-              </div>
-            );
-          })}
+    <div className="sticky top-0 left-0 right-0 z-50 bg-white px-4">
+      <div className="max-w-[1200px] mx-auto py-6">
+        {/* Mobile View - Top */}
+        <div className="md:hidden mb-4">
+          <div className="text-[24px] font-medium text-gray-900">
+            {steps[currentStepIndex].number}/{steps.length.toString().padStart(2, '0')} {steps[currentStepIndex].title}
+          </div>
         </div>
 
-        {/* Progress Line and Dots */}
+        {/* Desktop Steps - Hidden on Mobile */}
+        <div className="hidden md:flex justify-between mt-2 text-sm">
+          {steps.map((step, index) => (
+            <div 
+              key={step.number}
+              className={cn(
+                "text-xs font-medium transition-colors",
+                index === currentStepIndex ? "text-[#8371FF]" :
+                index < currentStepIndex ? "text-[#6366F1]" :
+                "text-gray-400"
+              )}
+            >
+              {step.number}/ {step.title}
+            </div>
+          ))}
+        </div>
+
+        {/* Progress Line */}
         <div className="relative h-[2px]">
-          {/* Background Line */}
-          <div className="absolute h-full bg-[#E5E7EB] left-0 right-0" />
-          
-          {/* Active Progress Line */}
+          <div className="absolute h-full bg-gray-200 left-0 right-0" />
           <div 
-            className="absolute h-full bg-[#0066FF] left-0 transition-all duration-500"
+            className="absolute h-full bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4] left-0 transition-all duration-500"
             style={{ 
               width: `${((currentStepIndex + 1) / steps.length) * 100}%`
             }}
           >
-            {/* Dot at the end of blue line */}
-            <div 
-              className={cn(
-                "absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2",
-                "w-3 h-3 rounded-full bg-[#0066FF] border-2 border-[#0066FF]",
-                "ring-2 ring-[#0066FF] ring-offset-2"
-              )}
-            />
+            <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 w-3 h-3 rounded-full bg-white border-2 border-[#8371FF] shadow-md" />
           </div>
-
-          {/* Static Dots */}
-          <div className="absolute top-1/2 left-0 right-0 -translate-y-1/2 flex justify-between">
-            {steps.map((_, index) => {
-              const isActive = index < currentStepIndex; // Changed condition to not include current
-
-              return (
-                <div
-                  key={index}
-                  className={cn(
-                    "w-3 h-3 rounded-full transition-all duration-300",
-                    isActive 
-                      ? "bg-[#0066FF] border-2 border-[#0066FF]" 
-                      : "bg-white border-2 border-[#E5E7EB]"
-                  )}
-                />
-              );
-            })}
-          </div>
-        </div>
-
-        {/* Mobile View */}
-        <div className="md:hidden text-sm font-medium mt-2">
-          {currentStepIndex + 1}/{steps.length} {steps[currentStepIndex]?.title}
         </div>
       </div>
     </div>

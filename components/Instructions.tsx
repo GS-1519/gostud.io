@@ -221,28 +221,8 @@ const InstructionsPage = () => {
     }
   ];
 
-  const steps = ['Select Pack', 'Instructions', 'Upload Photos', 'Select Package', 'Check Out', 'Order Details'];
-
   return (
     <div className="w-full min-h-screen bg-white">
-      {/* Progress Steps */}
-      <div className="w-full border-b border-gray-200">
-        <div className="max-w-[1440px] mx-auto px-4 py-6">
-          <div className="flex justify-between max-w-4xl mx-auto overflow-x-auto">
-            {steps.map((step, index) => (
-              <div key={index} className="flex flex-col items-center shrink-0 px-2">
-                <div className={`w-6 h-6 rounded-full ${
-                  index === 1 ? 'bg-blue-500' : 'bg-gray-200'
-                } flex items-center justify-center text-white text-sm`}>
-                  {index + 1}
-                </div>
-                <span className="text-xs mt-1 hidden sm:block whitespace-nowrap">{step}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
       {/* Main Content */}
       <div className="max-w-[1440px] mx-auto px-4 py-8 pb-32">
         {/* Header */}

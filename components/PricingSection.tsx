@@ -16,10 +16,11 @@ const PayPalButtons = dynamic(
 );
 
 interface PricingComponentProps {
-  user: User | null;
+  user: User;
+  onSuccess?: () => void;
 }
 
-const PricingComponent: React.FC<PricingComponentProps> = ({ user }) => {
+const PricingComponent: React.FC<PricingComponentProps> = ({ user, onSuccess }) => {
   const [isClient, setIsClient] = useState(false);
   const router = useRouter();
   const pathname = usePathname();
@@ -151,6 +152,12 @@ const PricingComponent: React.FC<PricingComponentProps> = ({ user }) => {
     } catch (error) {
       console.error('Error capturing payment:', error instanceof Error ? error : new Error(String(error)));
       toast.error(`Failed to process payment: ${error instanceof Error ? error.message : 'Unknown error'}`);
+    }
+  };
+
+  const handlePurchaseSuccess = () => {
+    if (onSuccess) {
+      onSuccess();
     }
   };
 
