@@ -93,8 +93,12 @@ const PhotoGuideSection = ({ title, icon, iconColor, images }: PhotoGuideProps) 
   );
 };
 
+interface InstructionsPageProps {
+  onContinue: () => void;
+}
+
 // Main Instructions Page Component
-const InstructionsPage = () => {
+const InstructionsPage: React.FC<InstructionsPageProps> = ({ onContinue }) => {
   const [countdown, setCountdown] = useState(5);
   const [isCountdownComplete, setIsCountdownComplete] = useState(false);
   const router = useRouter();
@@ -107,9 +111,9 @@ const InstructionsPage = () => {
   };
 
   const handleUploadClick = () => {
-    const pack = getPack();
-    // Redirect to the model type selector with the correct parameters
-    router.push(`/overview/models/train/${pack}?step=img-upload`);
+    if (isCountdownComplete && onContinue) {
+      onContinue();
+    }
   };
 
   // Countdown effect

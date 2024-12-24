@@ -15,8 +15,12 @@ const PayPalButtons = dynamic(
   { ssr: false }
 );
 
+interface ExtendedUser extends User {
+  credits?: number;
+}
+
 interface PricingComponentProps {
-  user: User;
+  user: ExtendedUser | null;
   onSuccess?: () => void;
 }
 
