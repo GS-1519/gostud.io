@@ -6,6 +6,7 @@ export interface Tier {
   badge?: string;
   price: number;
   originalPrice: number;
+  credits: number;
   features: Array<{
     icon: typeof Camera | typeof Clock | typeof Shirt | typeof Users;
     text: string;
@@ -23,6 +24,7 @@ export const PricingTier: Tier[] = [
     id: 'basic',
     price: 10,
     originalPrice: 29,
+    credits: 10,
     features: [
       { icon: Camera, text: '20 high-quality headshots' },
       { icon: Clock, text: '2-hour processing time' },
@@ -40,6 +42,7 @@ export const PricingTier: Tier[] = [
     badge: '82% pick this plan',
     price: 19,
     originalPrice: 45,
+    credits: 30,
     features: [
       { icon: Camera, text: '60 high-quality headshots' },
       { icon: Clock, text: '1-hour processing time' },
@@ -57,6 +60,7 @@ export const PricingTier: Tier[] = [
     badge: 'Best Value',
     price: 29,
     originalPrice: 75,
+    credits: 100,
     features: [
       { icon: Camera, text: '100 high-quality headshots' },
       { icon: Clock, text: '30-min processing time' },
@@ -65,12 +69,8 @@ export const PricingTier: Tier[] = [
     ],
     featured: false,
     priceId: {
-             month: 'pri_01j6wfs9rsv8xcbgcz9jwtx146',
-              year: 'pri_01j6wfs9rsv8xcbgcz9jwtx146'
-
-
-
-      
+      month: 'pri_01j6wfs9rsv8xcbgcz9jwtx146',
+      year: 'pri_01j6wfs9rsv8xcbgcz9jwtx146'
     }
   }
 ];

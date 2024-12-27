@@ -1,11 +1,15 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { PricingTier } from '@/components/constants/pricing-tier';
 import { IBillingFrequency } from '@/components/constants/billing-frequency';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
+import { useUserInfo } from '@/components/hooks/useUserInfo';
+import { toast } from 'react-hot-toast';
 
 interface Props {
   loading: boolean;
@@ -14,7 +18,49 @@ interface Props {
 }
 
 export function PriceCards({ loading, frequency, priceMap }: Props) {
+  const router = useRouter();
+  const supabase = createClientComponentClient();
   const [activeTier, setActiveTier] = useState<string>('STANDARD');
+  const [isLoading, setIsLoading] = useState(true);
+  const { user } = useUserInfo(supabase);
+
+  useEffect(() => {
+    // Check auth session on component mount
+    const checkSession = async () => {
+      try {
+        const { data: { session }, error } = await supabase.auth.getSession();
+        if (error) throw error;
+        setIsLoading(false);
+      } catch (error) {
+        console.error('Error checking session:', error);
+        setIsLoading(false);
+      }
+    };
+
+    checkSession();
+  }, [supabase]);
+
+  const handlePriceClick = async (priceId: string) => {
+    try {
+      const { data: { session }, error } = await supabase.auth.getSession();
+      
+      if (error || !session) {
+        toast.error('Please login to continue');
+        router.push('/login');
+        return;
+      }
+
+      router.push(`/checkout/${priceId}`);
+    } catch (error) {
+      console.error('Error checking session:', error);
+      toast.error('Please login to continue');
+      router.push('/login');
+    }
+  };
+
+  if (isLoading) {
+    return <div>Loading...</div>; // Or your loading component
+  }
 
   return (
     <div className="bg-white w-full py-16">

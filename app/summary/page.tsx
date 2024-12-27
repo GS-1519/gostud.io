@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import { toast } from 'react-hot-toast';
 import Image from 'next/image';
 import { redirect } from "next/navigation";
+import { cn } from '@/lib/utils';
 
 // Define the PricingTier interface
 interface PricingTier {
@@ -39,37 +40,66 @@ interface ModelData {
   };
 }
 
+// Add this type for the feature icon
+interface Feature {
+  text: string;
+}
+
+// Add PricingCardDetails interface
+interface PricingCardDetails {
+  name: string;
+  price: number;
+  originalPrice?: number;
+  features: Feature[];  // Simplified features without icon
+  badge?: string;
+  priceId: {
+    [key: string]: string;
+  };
+}
+
 const SummaryPage: React.FC = () => {
   const [modelData, setModelData] = useState<ModelData | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [selectedCard, setSelectedCard] = useState<PricingCardDetails | null>(null);
   const router = useRouter();
 
+  // Combine both useEffects and handle errors properly
   useEffect(() => {
-    try {
-      const storedTrainData = localStorage.getItem('trainModelData');
-      const storedPackData = localStorage.getItem('selectedPack');
-      
-      if (storedTrainData && storedPackData) {
-        const trainData = JSON.parse(storedTrainData);
-        const packData = JSON.parse(storedPackData);
+    const loadData = () => {
+      try {
+        // Load model data
+        const storedTrainData = localStorage.getItem('trainModelData');
+        const storedPackData = localStorage.getItem('selectedPack');
+        const storedCard = localStorage.getItem('selectedPricingCard');
         
-        setModelData({
-          ...trainData,
-          selectedPack: packData
-        });
+        if (storedTrainData && storedPackData) {
+          const trainData = JSON.parse(storedTrainData);
+          const packData = JSON.parse(storedPackData);
+          
+          setModelData({
+            ...trainData,
+            selectedPack: packData
+          });
+        }
+
+        // Load card data
+        if (storedCard) {
+          setSelectedCard(JSON.parse(storedCard));
+        }
+      } catch (error) {
+        console.error('Error loading stored data:', error);
+        toast.error('Failed to load data');
+      } finally {
+        setIsLoading(false);
       }
-    } catch (error) {
-      console.error('Error loading stored data:', error);
-      toast.error('Failed to load model data');
-    }
-    setIsLoading(false);
+    };
+
+    loadData();
   }, []);
 
   const handleSubmit = async () => {
-    if (!modelData || isSubmitting) {
-      return;
-    }
+    if (!modelData || isSubmitting) return;
 
     setIsSubmitting(true);
     try {
@@ -81,14 +111,11 @@ const SummaryPage: React.FC = () => {
         body: JSON.stringify(modelData),
       });
 
-      if (!response.ok) {
-        throw new Error('Failed to submit model data');
-      }
+      if (!response.ok) throw new Error('Failed to submit model data');
 
       const result = await response.json();
-      console.log('Model training initiated:', result);
-
-      // Clean up all stored data
+      
+      // Clear localStorage
       localStorage.removeItem('trainModelData');
       localStorage.removeItem('modelInfo');
       localStorage.removeItem('selectedPack');
@@ -97,11 +124,10 @@ const SummaryPage: React.FC = () => {
       toast.success('Model data submitted successfully');
       router.refresh();
       router.push('/overview');
-      // redirect('/overview');
-      
     } catch (error) {
       console.error('Error submitting model data:', error);
       toast.error('Failed to submit model data');
+    } finally {
       setIsSubmitting(false);
     }
   };
@@ -233,6 +259,109 @@ const SummaryPage: React.FC = () => {
           </button>
         </div>
       </div>
+      
+      {selectedCard && (
+        <div 
+          className={cn(
+            'w-[394px] min-h-[549px] rounded-[12px] p-[42px]',
+            'flex flex-col gap-8',
+            'bg-white',
+            'shadow-[0_var(--sds-size-depth-400)_var(--sds-size-depth-800)_var(--sds-size-depth-negative-100)_var(--sds-color-black-200)]'
+          )}
+        >
+          {/* Badge */}
+          {selectedCard.badge && (
+            <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+              {selectedCard.name === 'STANDARD' ? (
+                <div className="gradient-border px-4 py-1.5">
+                  <span className="text-sm font-medium" style={{
+                    background: 'linear-gradient(90deg, #8371FF -39.48%, #A077FE 15.54%, #01C7E4 100%)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent'
+                  }}>
+                    82% pick this plan
+                  </span>
+                </div>
+              ) : (
+                <div className="px-4 py-1.5 rounded-[20px] bg-transparent border-[1.5px] border-[#5B16FE]">
+                  <span className="text-sm font-medium text-[#5B16FE]">
+                    Best Value
+                  </span>
+                </div>
+              )}
+            </div>
+          )}
+
+          {/* Title Section */}
+          <div>
+            <h3 className="text-[#5B16FE] text-xl font-semibold">
+              {selectedCard.name}
+            </h3>
+          </div>
+
+          {/* Price Section */}
+          <div className="mb-8">
+            <div className="flex items-baseline gap-1">
+              {selectedCard.name === 'STANDARD' ? (
+                <div className="flex items-baseline">
+                  <span className="text-3xl font-bold text-[#8371FF]">$</span>
+                  <span className="text-5xl font-bold ml-1 text-[#01C7E4]">19</span>
+                  <span className="text-gray-400 line-through ml-2 flex items-baseline">
+                    <span className="text-[#8371FF]">$</span>
+                    <span className="text-[#01C7E4]">45</span>
+                  </span>
+                </div>
+              ) : (
+                <>
+                  <span className="text-3xl font-bold text-[#161C2D]">$</span>
+                  <span className="text-5xl font-bold text-[#161C2D] mr-2">
+                    {selectedCard.price}
+                  </span>
+                  {selectedCard.originalPrice && (
+                    <span className="text-[#161C2D] line-through">
+                      ${selectedCard.originalPrice}
+                    </span>
+                  )}
+                </>
+              )}
+            </div>
+            <p className="text-gray-500 mt-2">One Time Payment</p>
+          </div>
+
+          {/* Features Section */}
+          <div className="space-y-4 mb-8">
+            {selectedCard.features.map((feature, idx) => (
+              <div 
+                key={`feature-${idx}`}
+                className="flex items-center gap-3"
+              >
+                <div className={cn(
+                  "w-5 h-5",
+                  selectedCard.name === 'STANDARD' 
+                    ? [
+                        "text-[#5B16FE]",
+                        "text-[#01C7E4]",
+                        "text-[#8371FF]",
+                        "text-[#A077FE]"
+                      ][idx] || "text-[#5B16FE]"
+                    : "text-gray-600"
+                )}>
+                  ✓
+                </div>
+                <span className="text-[15px] text-[#64748B]">
+                  {feature.text}
+                </span>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-auto">
+            <p className="text-xs text-center text-gray-500 mt-4">
+              No subscription required
+            </p>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

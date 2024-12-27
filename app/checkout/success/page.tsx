@@ -1,35 +1,109 @@
-import Link from 'next/link';
-import { Button } from '@/components/ui/button';
+'use client';
+
+import { useEffect, useState } from 'react';
+import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
+import { useRouter } from 'next/navigation';
+import { toast } from 'react-hot-toast';
 
 export default function SuccessPage() {
-  return (
-    <main className="relative min-h-screen overflow-hidden bg-gradient-to-br from-purple-600 via-violet-800 to-purple-900">
-      {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-      
-      {/* Animated gradient orbs */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -left-[10%] top-[20%] h-[400px] w-[400px] rounded-full bg-purple-500/30 blur-[128px] animate-pulse" />
-        <div className="absolute -right-[10%] top-[30%] h-[500px] w-[500px] rounded-full bg-violet-500/30 blur-[128px] animate-pulse delay-1000" />
-      </div>
+  const [credits, setCredits] = useState<number>(0);
+  const [loading, setLoading] = useState(true);
+  const router = useRouter();
+  const supabase = createClientComponentClient();
 
-      {/* Content */}
-      <div className="relative z-10 flex items-center justify-center min-h-screen px-6">
-        <div className="flex flex-col items-center text-center text-white">
-          <div className="mb-8 text-6xl font-bold animate-fade-in">
-            Payment successful
-          </div>
-          <p className="mb-12 text-xl text-gray-200">
-            Success! Your payment is complete, and you're all set.
-          </p>
-          <Button 
-            className="bg-white text-purple-900 hover:bg-gray-100 transition-all duration-200"
-            asChild
-          >
-            <Link href="/">Back to Home</Link>
-          </Button>
+  useEffect(() => {
+    let pollInterval: NodeJS.Timeout;
+    
+    const checkCredits = async () => {
+      try {
+        const { data: { user } } = await supabase.auth.getUser();
+        
+        if (!user) {
+          toast.error('User not found');
+          router.push('/login');
+          return;
+        }
+
+        // Get initial credits
+        const { data: initialData } = await supabase
+          .from('credits')
+          .select('credits')
+          .eq('user_id', user.id)
+          .single();
+
+        const initialCredits = initialData?.credits || 0;
+        setCredits(initialCredits);
+
+        // Start polling for updates
+        let attempts = 0;
+        pollInterval = setInterval(async () => {
+          const { data: newData } = await supabase
+            .from('credits')
+            .select('credits')
+            .eq('user_id', user.id)
+            .single();
+
+          const newCredits = newData?.credits || 0;
+          
+          if (newCredits > initialCredits) {
+            setCredits(newCredits);
+            setLoading(false);
+            clearInterval(pollInterval);
+            toast.success('Credits updated successfully!');
+          }
+
+          attempts++;
+          if (attempts >= 15) { // Stop after 30 seconds
+            clearInterval(pollInterval);
+            setLoading(false);
+            if (newCredits === initialCredits) {
+              toast.error('Credit update taking longer than expected');
+            }
+          }
+        }, 2000);
+      } catch (error) {
+        console.error('Error checking credits:', error);
+        setLoading(false);
+        toast.error('Failed to check credits');
+      }
+    };
+
+    checkCredits();
+
+    return () => {
+      if (pollInterval) clearInterval(pollInterval);
+    };
+  }, []);
+
+  return (
+    <div className="min-h-screen bg-white flex items-center justify-center">
+      <div className="text-center">
+        <h1 className="text-4xl font-bold text-[#22C55E] mb-4">
+          Payment Successful!
+        </h1>
+        <p className="text-xl text-[#64748B] mb-8">
+          {loading ? 'Updating your credits...' : 'Your credits have been updated.'}
+        </p>
+        <div className="mb-8">
+          {loading ? (
+            <div className="flex items-center justify-center space-x-2">
+              <div className="w-4 h-4 bg-[#5B16FE] rounded-full animate-bounce" />
+              <div className="w-4 h-4 bg-[#5B16FE] rounded-full animate-bounce [animation-delay:-.3s]" />
+              <div className="w-4 h-4 bg-[#5B16FE] rounded-full animate-bounce [animation-delay:-.5s]" />
+            </div>
+          ) : (
+            <p className="text-2xl font-semibold text-[#1E293B]">
+              Current Credits: {credits}
+            </p>
+          )}
         </div>
+        <button
+          onClick={() => router.push('/dashboard')}
+          className="px-6 py-3 bg-[#5B16FE] text-white rounded-lg hover:bg-[#4B0FD9] transition-colors"
+        >
+          Go to Dashboard
+        </button>
       </div>
-    </main>
+    </div>
   );
 }

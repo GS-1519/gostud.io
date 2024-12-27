@@ -1,7 +1,6 @@
 import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies, headers } from "next/headers";
 import { redirect } from "next/navigation";
-import { Database } from "@/types/supabase"; 
 import LoginPage from "./components/Login";
 import type { Metadata } from 'next'
 
@@ -19,12 +18,38 @@ export const metadata: Metadata = {
 
 export const dynamic = "force-dynamic";
 
-export default function LoginSignupPage({ searchParams }: { searchParams?: { [key: string]: string | string[] | undefined } }) {
-  const host = headers().get("host");
+export default async function LoginSignupPage({ 
+  searchParams 
+}: { 
+  searchParams?: { [key: string]: string | string[] | undefined } 
+}) {
+  // Get all async resources
+  const cookieStore = cookies();
+  const headersList = await headers();
+  
+  // Create supabase client
+  const supabase = createServerComponentClient({ 
+    cookies: () => cookieStore 
+  });
+
+  // Check if user is already logged in
+  const { data: { session } } = await supabase.auth.getSession();
+  if (session) {
+    redirect('/overview');
+  }
+
+  // Get host after session check
+  const host = headersList.get('host');
+
+  // Await searchParams
+  const resolvedSearchParams = await Promise.resolve(searchParams || {});
 
   return (
     <div className="flex flex-col flex-1 w-full h-[calc(100vh-73px)]">
-      <LoginPage host={host} searchParams={searchParams} />
+      <LoginPage 
+        host={host} 
+        searchParams={resolvedSearchParams}
+      />
     </div>
   );
 }

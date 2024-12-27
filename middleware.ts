@@ -8,9 +8,21 @@ const AUTH_ROUTES = ['/overview', '/summary', '/get-credits'];
 export async function middleware(request: NextRequest) {
   const host = request.headers.get('host') || '';
   
+  // Create a response early we can use it for the supabase client
+  const res = NextResponse.next();
+  
+  // Create supabase client and refresh the session
+  const supabase = createMiddlewareClient({ req: request, res });
+  const { data: { session } } = await supabase.auth.getSession();
+
   // Skip redirect for localhost or IP addresses
   if (host.includes('localhost') || host.includes('[::1]')) {
-    return NextResponse.next();
+    // Still check auth for protected routes
+    const isAuthRoute = request.nextUrl.pathname.startsWith('/overview');
+    if (!session && isAuthRoute) {
+      return NextResponse.redirect(new URL('/login', request.url));
+    }
+    return res;
   }
 
   // Only redirect if it's not a www domain
@@ -20,10 +32,6 @@ export async function middleware(request: NextRequest) {
       301
     );
   }
-
-  const res = NextResponse.next();
-  const supabase = createMiddlewareClient({ req: request, res });
-  const { data: { session } } = await supabase.auth.getSession();
 
   const isPublicRoute = PUBLIC_ROUTES.some(route => 
     request.nextUrl.pathname.startsWith(route)
