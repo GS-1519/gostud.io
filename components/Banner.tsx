@@ -4,46 +4,57 @@ import Link from 'next/link';
 
 const Banner = () => {
   return (
-    <div className="w-full max-w-[1276px] mx-auto rounded-[13.64px] sm:rounded-[48px] overflow-hidden mb-4 sm:mb-8 font-poppins">
-      <div className="w-full h-[149px] sm:h-[459px] relative" style={{background: 'linear-gradient(90deg, #8371FF -39.48%, #A077FE 15.54%, #01C7E4 100%)'}}>
-        <div className="absolute inset-0 backdrop-blur-sm"></div>
-        <div className="flex flex-row h-full relative z-10">
-          {/* Logo - hidden on small screens */}
-          <div className="hidden sm:block sm:w-2/5 relative overflow-hidden">
-            <Image
-              src="/Union.png"
-              alt="Go logo"
-              layout="fill"
-              objectFit="cover"
-              className="object-center"
-            />
-          </div>
-          {/* Content */}
-          <div className="w-full sm:w-3/5 p-4 sm:p-12 flex flex-col justify-center">
-            <h2 className="text-lg sm:text-4xl font-bold text-white leading-tight mb-2 sm:mb-6 font-jakarta">
-              PhotoStudio Replacement.
-              <br className="hidden sm:inline" />
-              Your personal AI Studio.
-            </h2>
-            <div className="relative mb-2 sm:mb-6">
-              {/* <span className="bg-white text-[#8371FF] text-[10px] sm:text-xs px-2 sm:px-3 py-0.5 sm:py-1 rounded-full absolute -top-3 sm:-top-6 right-0 sm:right-12 whitespace-nowrap">on average</span> */}
-            </div>
-            <p className="text-xs sm:text-xl text-white mb-3 sm:mb-8">
-              Get Hyper Realistic studio-quality photos in less than an hour.
-            </p>
-            <Link href="/login">
-            <button className="w-[140px] sm:w-[200px] md:w-[318px] h-[36px] sm:h-[40px] md:h-[48px] bg-[#5B16FE] text-white text-[10px] sm:text-sm md:text-lg font-semibold rounded-full sm:rounded-[50px] px-2 sm:px-4 md:px-[25px] py-1 sm:py-2 md:py-[12px] hover:bg-[#5B16FE] transition duration-300 flex items-center justify-center gap-1 sm:gap-2 md:gap-[10px]">
-            <span className="whitespace-nowrap">Get your Photoshoot Now</span>
-            <svg className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-            </button>
+    <div className="relative w-full min-h-[200px] xs:min-h-[250px] sm:min-h-[300px] md:h-[459px]">
+      {/* Background Image - Enhanced responsive handling */}
+      <Image
+        src="/Top.png"
+        alt="Banner background"
+        fill
+        className="object-cover object-center"
+        sizes="(max-width: 480px) 100vw,
+               (max-width: 768px) 100vw,
+               100vw"
+        priority
+      />
+
+      {/* Button Container - Improved mobile positioning */}
+      <div className="absolute inset-0 flex items-center justify-center px-3 xs:px-4 sm:px-6 md:px-0">
+        <div className="mt-[80px] xs:mt-[100px] sm:mt-[150px] md:mt-[251px] 
+                      w-full max-w-[260px] xs:max-w-[280px] sm:max-w-[318px]
+                      transition-all duration-300 ease-in-out">
+          <Link
+            href="/login"
+            className="flex items-center justify-center 
+                     w-full h-[36px] xs:h-[40px] sm:h-[48px]
+                     px-[15px] xs:px-[20px] sm:px-[25px] 
+                     py-1.5 xs:py-2 sm:py-3
+                     bg-[#5B16FE] text-white 
+                     rounded-[52px] 
+                     transition-all duration-300
+                     hover:bg-[#4910d0] hover:scale-[1.02] 
+                     active:scale-[0.98]
+                     text-[13px] xs:text-[14px] sm:text-[15px] md:text-[16px] 
+                     font-medium
+                     shadow-lg hover:shadow-xl 
+                     text-center
+                     whitespace-nowrap
+                     touch-manipulation"
+          >
+            Get your Headshot Now
           </Link>
-          </div>
         </div>
       </div>
+
+      {/* Gradient Overlay - Optimized for all screen sizes */}
+      <div className="absolute inset-0 bg-gradient-to-b 
+                      from-transparent 
+                      via-[#0B0B0F]/40 xs:via-[#0B0B0F]/30 
+                      to-[#0B0B0F]/70 xs:to-[#0B0B0F]/60" 
+      />
     </div>
   );
 };
+
+
 
 export default Banner;

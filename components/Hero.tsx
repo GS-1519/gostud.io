@@ -1,123 +1,246 @@
 'use client'
-import React, { useRef, useEffect } from 'react';
+
+import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import lock from "@/public/logo/lock.svg"
 import circul from "@/public/logo/circul.svg"
 import mdi from "@/public/logo/mdi.svg"
 import tick from "@/public/logo/tick.svg"
-import AI from "@/public/logo/AI.svg"
-import Link from 'next/link';
 
-interface HeadshotCardProps {
-  imageUrl: string;
+interface TwoImageSectionProps {
+  leftImage: string;
+  rightImage: string;
 }
 
-const HeadshotCard: React.FC<HeadshotCardProps> = ({ imageUrl }) => (
-  <div className="w-[100px] h-[150px] xs:w-[120px] xs:h-[180px] sm:w-[162px] sm:h-[246px] rounded-[12px] sm:rounded-[18.69px] overflow-hidden flex-shrink-0 relative">
-    <Image src={imageUrl} alt="AI Headshot" layout="fill" objectFit="cover" />
-    <div className="absolute top-2 sm:top-3 left-2 sm:left-3">
-      <Image src={AI} alt="AI Logo" width={60} height={16} className="w-[40px] h-[12px] xs:w-[60px] xs:h-[16px] sm:w-[90px] sm:h-[25px]" />
+interface FeatureItemProps {
+  Icon: any;
+  text: string;
+}
+
+const FeatureItem = ({ Icon, text }: FeatureItemProps) => (
+  <div className="flex items-center gap-3">
+    <div className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center text-gray-600 md:text-white">
+      <Image 
+        src={Icon} 
+        alt="feature icon" 
+        width={32}
+        height={32}
+        className="text-gray-600 md:text-white w-8 h-8 md:w-10 md:h-10"
+      />
+    </div>
+    <span className="text-gray-600 md:text-white text-sm md:text-base font-poppins">{text}</span>
+  </div>
+);
+
+const TwoImageSection = ({ leftImage, rightImage }: TwoImageSectionProps) => (
+  <div className="flex-shrink-0 w-full flex h-[50vh] md:h-screen overflow-hidden">
+    {/* Mobile and Desktop left image */}
+    <div className="relative w-[100vw] md:w-1/2 h-full">
+      <div className="relative w-full h-full -mr-[1px]">
+        <Image 
+          src={leftImage} 
+          alt="AI Generated Headshot"
+          fill
+          quality={100}
+          priority
+          className="object-cover object-center w-full scale-100 md:scale-108"
+          sizes="(max-width: 768px) 100vw, 50vw"
+        />
+        {/* Title overlay for mobile */}
+        <div className="absolute bottom-3 left-4 right-4 md:hidden z-10">
+          <h1 className="font-poppins font-semibold text-white text-[26px] leading-[34px] xs:text-[30px] xs:leading-[38px]">
+            Professional Headshots<br />
+            using your Selfies.
+          </h1>
+        </div>
+      </div>
+    </div>
+
+    {/* Desktop-only right image */}
+    <div className="relative w-1/2 h-full hidden md:block -ml-[1px]">
+      <Image 
+        src={rightImage} 
+        alt="AI Generated Headshot"
+        fill
+        quality={100}
+        priority
+        className="object-cover"
+        sizes="50vw"
+      />
     </div>
   </div>
 );
 
-interface FeatureItemProps {
-  Icon: string;
-  text: string;
-}
-
-const FeatureItem: React.FC<FeatureItemProps> = ({ Icon, text }) => (
-  <div className="flex items-center space-x-2">
-    <Image src={Icon} alt="Feature icon" width={20} height={20} className="w-5 h-5 sm:w-6 sm:h-6" />
-    <span className="text-xs sm:text-sm text-gray-700 font-poppins">{text}</span>
+// Small preview images at the bottom
+const SmallPreviewImages = ({ slides, activeIndex }: { slides: any[], activeIndex: number }) => (
+  <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex items-center gap-2 z-20">
+    {slides.map((_, index) => (
+      <div
+        key={index}
+        className={`h-2 rounded-full transition-all duration-300 ${
+          index === activeIndex ? 'w-8 bg-white' : 'w-2 bg-white/50'
+        }`}
+      />
+    ))}
   </div>
 );
 
 export default function Hero() {
-  const headshots = [
-    "/Carosal/image1.svg",
-    "/Carosal/image2.svg",
-    "/Carosal/image3.svg",
-    "/Carosal/image4.svg",
-    "/Carosal/image5.svg",
-    "/Carosal/image6.svg",
-    "/Carosal/image7.svg",
-    "/Carosal/image8.svg",
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  const slideRef = useRef<HTMLDivElement>(null);
+
+  const slides = [
+    {
+      left: "/slider/Image1.png",
+      right: "/slider/Image2.png",
+      smallLeft: "/slider/small1.png",
+      smallRight: "/slider/small2.png"
+    },
+    {
+      left: "/slider/Image3.png",
+      right: "/slider/Image4.png",
+      smallLeft: "/slider/small3.png",
+      smallRight: "/slider/small4.png"
+    },
+    {
+      left: "/slider/Image5.png",
+      right: "/slider/Image6.png",
+      smallLeft: "/slider/small5.png",
+      smallRight: "/slider/small6.png"
+    },
+    {
+      left: "/slider/Image7.png",
+      right: "/slider/Image8.png",
+      smallLeft: "/slider/small7.png",
+      smallRight: "/slider/small8.png"
+    },
+    {
+      left: "/slider/Image9.png",
+      right: "/slider/Image10.png",
+      smallLeft: "/slider/small9.png",
+      smallRight: "/slider/small10.png"
+    }
   ];
 
-  const carouselRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
-    const carousel = carouselRef.current;
-    if (!carousel) return;
+    const timer = setInterval(() => {
+      setIsTransitioning(true);
+      setTimeout(() => {
+        setActiveIndex(prev => (prev + 1) % slides.length);
+        setIsTransitioning(false);
+      }, 1000);
+    }, 7000);
 
-    const scrollWidth = carousel.scrollWidth;
-    let scrollPosition = 0;
-
-    const scroll = () => {
-      scrollPosition += 3;
-      if (scrollPosition >= scrollWidth / 2) {
-        scrollPosition = 0;
-        carousel.scrollLeft = 0;
-      } else {
-        carousel.scrollLeft = scrollPosition;
-      }
-    };
-
-    const intervalId = setInterval(scroll, 30);
-    return () => clearInterval(intervalId);
-  }, []);
+    return () => clearInterval(timer);
+  }, [slides.length]);
 
   return (
-    <div className="w-screen relative left-1/2 right-1/2 -mx-[50vw] flex flex-col items-center justify-between bg-gray-100 px-2 xs:px-4 py-4 xs:py-8 sm:px-6 lg:px-8 font-poppins">
-      <div className="text-center w-full max-w-[982px] flex flex-col justify-center items-center gap-3 xs:gap-4 sm:gap-6 mt-4 xs:mt-6 sm:mt-8">
-        <h1 className="text-xl xs:text-2xl sm:text-3xl lg:text-5xl font-bold leading-tight font-jakarta px-2 xs:px-4">
-          Professional {' '}
-          <span style={{
-            background: 'linear-gradient(90deg, #4C6FFF 0%, #62CDFF 100%)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            backgroundClip: 'text'
-          }}>
-            AI Headshot Generator
-          </span>
-        </h1>
-        <p className="text-xs xs:text-sm sm:text-base lg:text-xl text-gray-600 leading-relaxed max-w-[800px] px-2 xs:px-4">
-          Professional Headshots are essential for your success. 
-          Turn your smartphone photos into studio-quality headshots. Save time and money.
-        </p>
-      </div>
-      
-      <div className="flex flex-wrap justify-center gap-2 xs:gap-4 sm:gap-8 w-full max-w-[967px] mt-4 xs:mt-6 sm:mt-8 px-2 xs:px-4">
-        <FeatureItem Icon={mdi} text="50+ professional styles" />
-        <FeatureItem Icon={circul} text="Results in 30 minutes" />
-        <FeatureItem Icon={lock} text="100% Private & Secure" />
-        <FeatureItem Icon={tick} text="Money-back Guarantee" />
-      </div>
-      
-      <div className="flex flex-col sm:flex-row justify-center space-y-3 xs:space-y-4 sm:space-y-0 sm:space-x-4 w-full mt-4 xs:mt-6 sm:mt-8 px-2 xs:px-4">
-        <Link href="/login">
-          <button className="w-full sm:w-[269px] h-[40px] xs:h-[48px] rounded-[50px] bg-[#5B16FE] text-white font-semibold hover:bg-opacity-90 transition-colors duration-300 px-4 xs:px-6 sm:px-[25px] py-2 xs:py-3 sm:py-[12px] flex items-center justify-center gap-2 sm:gap-[10px] text-xs xs:text-sm sm:text-base">
-            Get Started
-            <svg className="w-4 h-4 xs:w-5 xs:h-5" viewBox="0 0 20 20" fill="currentColor">
-              <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
-            </svg>
-          </button>
-        </Link>
-      </div>
-      
-      <div className="relative w-screen overflow-hidden mt-6 xs:mt-8 sm:mt-12">
-        <div 
-          ref={carouselRef} 
-          className="flex w-full h-[150px] xs:h-[180px] sm:h-[246px] gap-[8px] xs:gap-[12px] sm:gap-[24px] overflow-x-hidden"
-          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-        >
-          {[...headshots, ...headshots].map((url, index) => (
-            <HeadshotCard key={index} imageUrl={url} />
+    <div className="relative w-full overflow-hidden">
+      {/* Mobile View */}
+      <div className="md:hidden">
+        {/* Carousel */}
+        <div ref={slideRef} className="relative w-full h-[50vh]">
+          {slides.map((slide, index) => (
+            <div
+              key={index}
+              className={`absolute top-0 left-0 w-full h-full transition-all duration-1000 ease-in-out ${
+                index === activeIndex ? 'opacity-100 visible' : 'opacity-0 invisible'
+              }`}
+              style={{
+                transform: 'translate3d(0, 0, 0)',
+                backfaceVisibility: 'hidden',
+                willChange: 'opacity'
+              }}
+            >
+              <TwoImageSection
+                leftImage={slide.left}
+                rightImage={slide.right}
+              />
+            </div>
           ))}
         </div>
-        <div className="absolute top-0 left-0 w-[30px] xs:w-[50px] sm:w-[100px] h-full bg-gradient-to-r from-blue-50 to-transparent pointer-events-none"></div>
-        <div className="absolute top-0 right-0 w-[30px] xs:w-[50px] sm:w-[100px] h-full bg-gradient-to-l from-blue-50 to-transparent pointer-events-none"></div>
+
+        {/* Mobile Content Section */}
+        <div className="bg-white">
+          <div className="px-4 py-3 space-y-4 xs:space-y-5">
+            <p className="text-gray-600 text-sm xs:text-base leading-[22px]">
+              Stand out on LinkedIn, Twitter, with recruiters. Upload your selfies and receive 
+              hundreds of professional headshots all from your favorite AI photographer "Aaria".
+            </p>
+
+            <div className="grid grid-cols-2 gap-4 text-gray-600">
+              <FeatureItem Icon={lock} text="150+ styles" />
+              <FeatureItem Icon={mdi} text="1 hour delivery" />
+              <FeatureItem Icon={circul} text="Data Protection" />
+              <FeatureItem Icon={tick} text="Money-back" />
+            </div>
+
+            <Link href="/get-started" className="block">
+              <button className="w-full bg-[#7C3AED] hover:bg-[#6D28D9] text-white rounded-full py-3.5 font-poppins text-base transition-colors">
+                Try Now →
+              </button>
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      {/* Desktop View */}
+      <div className="hidden md:block">
+        {/* Carousel */}
+        <div ref={slideRef} className="relative w-full h-screen">
+          {slides.map((slide, index) => (
+            <div
+              key={index}
+              className={`absolute top-0 left-0 w-full h-full transition-all duration-1000 ease-in-out ${
+                index === activeIndex ? 'opacity-100 visible' : 'opacity-0 invisible'
+              }`}
+              style={{
+                transform: 'translate3d(0, 0, 0)',
+                backfaceVisibility: 'hidden',
+                willChange: 'opacity'
+              }}
+            >
+              <TwoImageSection
+                leftImage={slide.left}
+                rightImage={slide.right}
+              />
+            </div>
+          ))}
+        </div>
+
+        {/* Desktop Content */}
+        <div className="absolute inset-0">
+          <div className="mx-auto pl-[82px] w-[1440px] mt-[390px] ml-[0.02px]">
+            <div className="flex flex-col items-start text-left gap-6">
+              <h1 className="font-poppins font-semibold text-white whitespace-nowrap text-[48px] leading-[52px] w-[1012px]">
+                Professional Headshots using your Selfies
+              </h1>
+              
+              <p className="text-white/90 font-poppins text-lg leading-7 w-[1012px]">
+                Stand out on LinkedIn, Twitter, with recruiters. Upload your selfies and receive 
+                hundreds of professional headshots all from your favorite AI photographer "Aaria".
+              </p>
+              
+              <div className="grid grid-cols-4 gap-x-6 w-full max-w-[1012px]">
+                <FeatureItem Icon={lock} text="150+ styles and outfits" />
+                <FeatureItem Icon={mdi} text="Results within 1 hour" />
+                <FeatureItem Icon={circul} text="Strict Data Protection" />
+                <FeatureItem Icon={tick} text="Moneyback Guarantee" />
+              </div>
+
+              <Link href="/get-started">
+                <button className="bg-[#5B16FE] hover:bg-[#4F46E5] text-white rounded-full px-8 py-4 font-poppins text-base leading-6 transition-colors">
+                  Get Started Now →
+                </button>
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Progress Indicators */}
+        <SmallPreviewImages slides={slides} activeIndex={activeIndex} />
       </div>
     </div>
   );

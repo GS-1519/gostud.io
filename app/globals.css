@@ -119,34 +119,81 @@ img-comparison-slider.rendered {
     scrollbar-width: none;  /* Firefox */
   }
 }
-:root {
-  --sds-size-depth-0: 0px;
-  --sds-size-depth-100: 8px;
-  --sds-size-depth-400: 24px;
-  --sds-size-depth-800: 48px;
-  --sds-size-depth-negative-100: -8px;
-  --sds-color-black-100: rgba(0, 0, 0, 0.1);
-  --sds-color-black-200: rgba(0, 0, 0, 0.2);
+
+/* Reset default margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-@layer utilities {
-  .bg-gradient-border {
-    border: 1.5px solid;
-    border-image-source: linear-gradient(90deg, #8371FF -39.48%, #A077FE 32.07%, #01C7E4 100%);
-    border-image-slice: 1;
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* If you're using a layout component, add this */
+main {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Remove any margin/padding from main elements */
+main {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100%;
+}
+
+/* Add fadeIn animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
   }
-} 
-.gradient-border {
-  background: linear-gradient(white, white) padding-box,
-              linear-gradient(90deg, #8371FF -39.48%, #A077FE 32.07%, #01C7E4 100%) border-box;
-  border: 1.5px solid transparent;
-  border-radius: 20px;
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
-:root {
-  --sds-size-depth-0: 0px;
-  --sds-size-depth-100: 8px;
-  --sds-size-depth-400: 24px;
-  --sds-size-depth-800: 48px;
-  --sds-size-depth-negative-100: -8px;
-  --sds-color-black-100: rgba(0, 0, 0, 0.1);
-  --sds-color-black-200: rgba(0, 0, 0, 0.2);
+
+/* Custom breakpoint for extra small devices */
+@media (min-width: 480px) {
+  .xs\:min-h-\[400px\] { min-height: 400px; }
+  .xs\:max-w-\[85\%\] { max-width: 85%; }
+  .xs\:max-w-\[90\%\] { max-width: 90%; }
+  .xs\:text-\[26px\] { font-size: 26px; }
+  .xs\:text-\[14px\] { font-size: 14px; }
+  .xs\:mt-4 { margin-top: 1rem; }
+  .xs\:mt-7 { margin-top: 1.75rem; }
+  .xs\:w-\[90\%\] { width: 90%; }
+  .xs\:h-\[46px\] { height: 46px; }
+  .xs\:px-\[25px\] { padding-left: 25px; padding-right: 25px; }
+  .xs\:ml-6 { margin-left: 1.5rem; }
+
+  /* New xs breakpoint styles */
+  .xs\:min-h-\[250px\] { min-height: 250px; }
+  .xs\:mt-\[100px\] { margin-top: 100px; }
+  .xs\:max-w-\[280px\] { max-width: 280px; }
+  .xs\:h-\[40px\] { height: 40px; }
+  .xs\:px-\[20px\] { padding-left: 20px; padding-right: 20px; }
+  .xs\:py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+  .xs\:text-\[14px\] { font-size: 14px; }
+  .xs\:px-4 { padding-left: 1rem; padding-right: 1rem; }
+}
+
+/* Optimize touch interactions */
+@media (hover: hover) and (pointer: fine) {
+  .hover\:scale-\[1\.02\]:hover {
+    transform: scale(1.02);
+  }
 }

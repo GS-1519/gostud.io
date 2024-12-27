@@ -11,6 +11,12 @@ import FAQSection from "@/components/Question";
 import HeadshotContainer from "@/components/Banner";
 import type { Metadata } from 'next'
 import Script from 'next/script'
+import PhotographyGrid from "@/components/PhotographyGrid";
+import WhySection from "@/components/Why";
+import CreationGallery from "@/components/CreationLibaray";
+import BrandsPage from "@/components/BrandPage";
+import TeamSection from "@/components/TeamSection";
+import Ariaa from "@/components/Ariaa";
 
 
 export const dynamic = "force-dynamic";
@@ -64,20 +70,24 @@ export default async function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <div className="w-full bg-[#F4F7FA] min-h-screen font-poppins">
-        <div className="w-full">
-          <div className="w-full">
-            <div id="ai-headshots">
-              <HeroSection />
-            </div>
+        <div>
+          <div id="ai-headshots" className="w-full">
+            <HeroSection />
+          </div>
+          <div>
             <ExplainerSection />
+            <PhotographyGrid/>
             <ComparisonPage />
-            <div id="testimonial">
-              <HeadshotReviewSection />
-            </div>
-            <div id="pricing" className="w-full bg-white">
+            <WhySection/>
+            <BrandsPage/>
+            <HeadshotReviewSection />
+            <div id="pricing">
               <PricingSection user={user} />
             </div>
             <DataSecuritySection />
+            <Ariaa/>
+            <TeamSection/>
+            <CreationGallery/>
             <div id="faq">
               <FAQSection />
             </div>

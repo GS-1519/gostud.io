@@ -78,13 +78,8 @@ const Navbar: React.FC = () => {
   return (
     <>
       <div className="fixed top-0 left-0 right-0 w-full z-40">
-        <nav 
-          className="bg-white backdrop-blur-lg bg-opacity-80 shadow-lg font-poppins mx-auto rounded-b-[24px] border-b border-x border-gray-100"
-          style={{
-            maxWidth: '1276px',
-          }}
-        >
-          <div className="flex items-center justify-between h-16 px-4 sm:px-6 lg:px-8">
+        <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200">
+          <div className="flex items-center justify-between h-16 px-4 sm:px-6 lg:px-8 max-w-[1400px] mx-auto">
             {/* Logo Section */}
             <div className="flex-shrink-0">
               <Link href={user ? '/overview' : '/'} className="flex items-center">
@@ -151,15 +146,10 @@ const Navbar: React.FC = () => {
         </nav>
 
         {/* Mobile Navigation Menu */}
-        {isMenuOpen && (
-          <div 
-            className="lg:hidden mt-2 mx-auto overflow-hidden"
-            style={{ maxWidth: '1276px' }}
-          >
-            <div className="bg-white backdrop-blur-lg bg-opacity-80 shadow-lg rounded-[24px] border border-gray-100 py-3">
-              <div className="px-4 pt-2 pb-3 space-y-1">
-                <NavItems isMobile user={user} />
-              </div>
+        {!user && isMenuOpen && (
+          <div className="lg:hidden w-full bg-white backdrop-blur-lg bg-opacity-80 shadow-lg border-b border-gray-100 py-3">
+            <div className="px-4 pt-2 pb-3 space-y-1">
+              <NavItems isMobile />
             </div>
           </div>
         )}

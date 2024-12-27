@@ -10,6 +10,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next'
 import ClarityScript from "@/components/ClarityScript";
 import GoogleTagManager from "@/components/GoogleTagManager";
 import 'react-tabs/style/react-tabs.css';
+import { StepBar } from "@/components/ui/step-bar";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.gostudio.ai'),
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: any) {
   return (
-    <html lang="en" className="overflow-x-hidden">
+    <html lang="en">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -35,15 +36,14 @@ export default function RootLayout({ children }: any) {
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="msvalidate.01" content="1EBFA7B1A8C0B11490CBE5476B33271C" />
       </head>
-      <body className="flex flex-col bg-[#F4F7FA] min-h-screen w-full overflow-x-hidden font-[Poppins]">
+      <body className="flex flex-col bg-white min-h-screen font-[Poppins]">
         <GoogleTagManager />
         <ClarityScript />
         <Navbar />
         <CSPostHogProvider>
-          <main className="flex-1 flex flex-col w-full">
-            <div className="pt-[32px] sm:pt-[36px]">
-              {children}
-            </div>
+          <main className="flex-1 flex flex-col pt-16">
+            <StepBar />
+            {children}
           </main>
         </CSPostHogProvider>
         <FooterWrapper />

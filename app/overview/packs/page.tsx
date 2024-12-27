@@ -17,36 +17,12 @@ import { redirect } from "next/navigation";
  */
 // const packsIsEnabled = process.env.NEXT_PUBLIC_TUNE_TYPE === "packs";
 
-export default async function Index() {
-
-// if(!packsIsEnabled) {
-//   redirect('/overview')
-// }
-
+export default function PacksPage() {
   return (
-    <div className="w-full max-w-2xl mx-auto">
-      <div
-        id="train-model-container"
-        className="flex flex-1 flex-col gap-2 px-2"
-      >
-        <Link href="/overview" className="text-sm w-fit">
-          <Button variant={"outline"}>
-            <FaArrowLeft className="mr-2" />
-            Go Back
-          </Button>
-        </Link>
-        <Card>
-          <CardHeader>
-            <CardTitle>Packs Gallery</CardTitle>
-            <CardDescription>
-              Choose the type of images you would like to create.
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="grid gap-6">
-            <PacksGalleryZone />
-          </CardContent>
-        </Card>
-      </div>
+    <div className="pt-[120px]">
+      <h1 className="text-4xl font-bold mb-4">Packs</h1>
+      <p className="text-gray-600 mb-8">Choose a pack to start generating images.</p>
+      <PacksGalleryZone />
     </div>
   );
- }
+}
