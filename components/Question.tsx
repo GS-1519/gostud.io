@@ -106,9 +106,9 @@ const FAQSection = () => {
   ];
 
   return (
-    <div className="bg-white w-full mx-auto px-4 sm:px-6 lg:px-8 rounded-[24px]">
-      <div className="max-w-[1116px] mx-auto bg-white rounded-[24px]">
-        <div className="flex flex-col p-8">
+    <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 bg-white">
+      <div className="max-w-[1280px] mx-auto">
+        <div className="flex flex-col py-8">
           <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 text-center font-jakarta mb-6">
             Frequently Asked Questions
           </h2>

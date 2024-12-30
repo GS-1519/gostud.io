@@ -8,6 +8,7 @@ import ReviewSection from "@/components/HeadshotReviewSection";
 
 import Footer from "@/components/Footer";
 import Banner from "@/components/Banner";
+import ExplainerSection from "@/components/ExplainerSection";
 
 import AnnieHero from "@/components/AnnieHero";
 import AnnieHeadshotHero from "@/components/Annine-HeadshotsHero";
@@ -44,32 +45,18 @@ export default async function AnnieHeadshotPage() {
 
   return (
     <div className="w-full bg-[#F4F7FA] min-h-screen font-poppins">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-[82px]">
-        <div className="w-full max-w-[1276px] mx-auto space-y-12">
-          <div id="ai-headshots">
-            <AnnieHero/>
-          </div>
-          <Works
-          
-          
-          image3="/Frame10.png"
-          />
-          <Why imageSet="Group15" />
-          <div id="testimonial">
-            <AnnieHeadshotHero/>
-          </div>
-          <div id="testimonial">
-            <ReviewSection/>
-          </div>
-          
-         
-         
-          <div>
-            <Banner/>
-          </div>
+      <div>
+        <div id="ai-headshots" className="w-full">
+          <AnnieHero/>
+        </div>
+        <div>
+          <ExplainerSection />
+          <AnnieHeadshotHero />
+          <ReviewSection />
+          <Banner />
+          <Footer/>
         </div>
       </div>
-      <Footer/>
     </div>
   );
 }

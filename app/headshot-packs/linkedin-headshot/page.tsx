@@ -2,12 +2,12 @@ import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import type { Metadata } from 'next'
-import Works from "@/components/Works";
-import Why from "@/components/Why";
+
 import ReviewSection from "@/components/HeadshotReviewSection";
 import Footer from "@/components/Footer";
 import Banner from "@/components/Banner";
 import LinkedlnHero from "@/components/LinkedlnHero";
+import ExplainerSection from "@/components/ExplainerSection";
 
 export const dynamic = "force-dynamic";
 
@@ -41,25 +41,18 @@ export default async function LinkedInPhotos() {
 
   return (
     <div className="w-full bg-[#F4F7FA] min-h-screen font-poppins">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-[82px]">
-        <div className="w-full max-w-[1276px] mx-auto space-y-12">
-          <div id="ai-headshots">
-            <LinkedlnHero/>
-          </div>
-          <Works
-          image3="/Group2.png"
-          />
-          <Why imageSet="Group7" />
-          <div id="testimonial">
-            <ReviewSection/>
-          </div>
-         
-          <div>
-            <Banner/>
-          </div>
-        </div>
+    <div>
+      <div id="ai-headshots" className="w-full">
+        <LinkedlnHero />
       </div>
-      <Footer/>
+      <div>
+        <ExplainerSection />
+        
+        <ReviewSection />
+        <Banner />
+        <Footer/>
+      </div>
     </div>
+  </div>
   );
 }

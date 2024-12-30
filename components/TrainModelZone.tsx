@@ -330,172 +330,213 @@ const TrainModelZone: React.FC<TrainModelZoneProps> = ({ packSlug, onContinue, u
   return (
     <div className="flex justify-between items-start min-h-screen font-poppins bg-white p-2 sm:p-4 lg:p-0">
       <div className="w-full max-w-[1276px] mx-auto p-3 sm:p-6 lg:p-[84px_60px] flex flex-col lg:flex-row gap-4 lg:gap-8">
-        {/* Left Section */}
-        <div className="w-full lg:w-[580px] rounded-3xl p-[3px] bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4]">
-          <div className="bg-[#F2F2F7] rounded-3xl p-4 sm:p-6 lg:p-8 flex flex-col justify-between h-full relative">
-            <input 
-              ref={fileInputRef}
-              id="file-upload" 
-              type="file" 
-              className="hidden"
-              onChange={handleFileUpload} 
-              accept="image/*"
-              multiple
-              disabled={isLoading}
-            />
+        {/* Left Section - Updated with order utilities */}
+        <div className="w-full lg:w-[480px] flex flex-col order-2 lg:order-1">
+          {/* Banner */}
+          <div className="w-full rounded-xl bg-[#5B16FE0F] p-[16px_20px] mb-4 flex items-center gap-6">
+            <div className="w-5 h-5">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.3333 2.5H6.66667C6.32499 2.5 6.04166 2.78333 6.04166 3.125V4.375C6.04166 4.71667 6.32499 5 6.66667 5H13.3333C13.675 5 13.9583 4.71667 13.9583 4.375V3.125C13.9583 2.78333 13.675 2.5 13.3333 2.5Z" fill="#5B16FE"/>
+                <path d="M16.875 5H3.125C2.78333 5 2.5 5.28333 2.5 5.625V16.875C2.5 17.2167 2.78333 17.5 3.125 17.5H16.875C17.2167 17.5 17.5 17.2167 17.5 16.875V5.625C17.5 5.28333 17.2167 5 16.875 5ZM15.8333 15.8333H4.16667V6.66667H15.8333V15.8333Z" fill="#5B16FE"/>
+              </svg>
+            </div>
+            <p className="font-poppins font-medium text-base leading-6 text-black max-w-[576.86px]">
+              You can now auto-crop your group selfies! Simply tap on the image you want to crop, and we'll take care of it for you.
+            </p>
+          </div>
 
-            {isLoading && (
-              <div className="absolute inset-0 bg-white/80 backdrop-blur-sm rounded-3xl z-50 flex flex-col items-center justify-center">
-                <div className="w-16 h-16 rounded-full border-4 border-[#8371FF] border-t-transparent animate-spin mb-4" />
-                <p className="text-[#7C3AED] font-medium">Uploading images...</p>
-                <p className="text-gray-500 text-sm mt-2">Please wait while we process your photos</p>
-              </div>
-            )}
+          {/* Main Upload Section */}
+          <div className="rounded-3xl p-[3px] bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4]">
+            <div className="bg-[#F2F2F7] rounded-3xl p-4 sm:p-6 lg:p-8 flex flex-col justify-between h-full relative">
+              <input 
+                ref={fileInputRef}
+                id="file-upload" 
+                type="file" 
+                className="hidden"
+                onChange={handleFileUpload} 
+                accept="image/*"
+                multiple
+                disabled={isLoading}
+              />
 
-            <h2 className="text-2xl sm:text-3xl font-normal text-black text-center mb-4 sm:mb-6">Start Uploading photos</h2>
-
-            {files.length === 0 && badFiles.length === 0 ? (
-              <div className="flex-1 flex flex-col">
-                <div className="w-full sm:w-3/4 border-2 border-dashed border-[#7C3AED] rounded-[12.19px] p-3 sm:p-6 flex flex-col items-center justify-center gap-4 mt-4 sm:mt-8 mx-auto">
-                  <label 
-                    className={`cursor-pointer w-full ${isLoading ? 'pointer-events-none opacity-50' : ''}`}
-                    onClick={() => {
-                      if (fileInputRef.current) {
-                        fileInputRef.current.value = '';
-                        fileInputRef.current.click();
-                      }
-                    }}
-                  >
-                    <div className="bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4] text-white rounded-lg px-6 py-3 flex items-center justify-center gap-2 hover:opacity-90 transition-opacity mx-auto max-w-[200px]">
-                      <Upload size={20} />
-                      <span>Upload files</span>
-                    </div>
-                  </label>
-                  <p className="text-sm text-gray-500 text-center">
-                    Click to upload or drag and drop<br />
-                    PNG, JPG, HEIC up to 120MB
-                  </p>
+              {isLoading && (
+                <div className="absolute inset-0 bg-white/80 backdrop-blur-sm rounded-3xl z-50 flex flex-col items-center justify-center">
+                  <div className="w-16 h-16 rounded-full border-4 border-[#8371FF] border-t-transparent animate-spin mb-4" />
+                  <p className="text-[#7C3AED] font-medium">Uploading images...</p>
+                  <p className="text-gray-500 text-sm mt-2">Please wait while we process your photos</p>
                 </div>
-              </div>
-            ) : (
-              <>
-                <div className="rounded-[11.47px] border-[0.5px] border-[#68D585] bg-[#F2FCF4] overflow-hidden mb-4">
-                  <div className="p-2 sm:p-4">
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="flex items-center gap-2">
-                        <div className="w-6 h-6 rounded-full bg-[#68D585] flex items-center justify-center">
-                          <Check className="text-white w-4 h-4" />
-                        </div>
-                        <span className="font-medium">Good Photos</span>
+              )}
+
+              <h2 className="text-2xl sm:text-3xl font-normal text-black text-center mb-4 sm:mb-6">Start Uploading photos</h2>
+
+              {files.length === 0 && badFiles.length === 0 ? (
+                <div className="flex-1 flex flex-col">
+                  <div className="w-full sm:w-3/4 border-2 border-dashed border-[#7C3AED] rounded-[12.19px] p-3 sm:p-6 flex flex-col items-center justify-center gap-4 mt-4 sm:mt-8 mx-auto">
+                    <label 
+                      className={`cursor-pointer w-full ${isLoading ? 'pointer-events-none opacity-50' : ''}`}
+                      onClick={() => {
+                        if (fileInputRef.current) {
+                          fileInputRef.current.value = '';
+                          fileInputRef.current.click();
+                        }
+                      }}
+                    >
+                      <div className="bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4] text-white rounded-lg px-6 py-3 flex items-center justify-center gap-2 hover:opacity-90 transition-opacity mx-auto max-w-[200px]">
+                        <Upload size={20} />
+                        <span>Upload files</span>
                       </div>
-                      <span className="text-[#68D585] font-medium">{files.length}/8</span>
-                    </div>
-
-                    <div className="w-full h-2 bg-[#E5F9EA] rounded-full mb-4">
-                      <div 
-                        className="h-2 bg-[#68D585] rounded-full transition-all duration-300"
-                        style={{ width: `${(files.length / 8) * 100}%` }}
-                      />
-                    </div>
-
-                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-4">
-                      {files.map((file, index) => (
-                        <div key={`${index}-${file.preview}`} className="relative group aspect-square">
-                          <div className="w-full h-full rounded-lg overflow-hidden border border-gray-200">
-                            {file.preview && (
-                              <img
-                                key={file.preview}
-                                src={file.preview}
-                                alt={`Upload ${index + 1}`}
-                                className="w-full h-full object-cover"
-                                style={{ display: 'block' }}
-                              />
-                            )}
-                          </div>
-
-                          {file.isProcessing && (
-                            <div className="absolute inset-0 bg-black/50 rounded-lg flex items-center justify-center">
-                              <div className="w-8 h-8 rounded-full border-2 border-white border-t-transparent animate-spin" />
-                            </div>
-                          )}
-
-                          {file.needsCropping && !file.isProcessing && (
-                            <button
-                              onClick={() => handleAutoCrop(index)}
-                              className="absolute top-2 right-2 bg-white p-1.5 rounded-full shadow-md hover:bg-gray-50 transition-colors"
-                              disabled={file.isProcessing}
-                            >
-                              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none">
-                                <path d="M8 8h8v8H8z" stroke="currentColor" strokeWidth="1.5"/>
-                              </svg>
-                            </button>
-                          )}
-                        </div>
-                      ))}
-
-                      {Array.from({ length: Math.max(0, 8 - files.length) }).map((_, i) => (
-                        <div 
-                          key={`empty-${i}`} 
-                          className="aspect-square rounded-lg border-2 border-dashed border-[#E5E7EB] flex items-center justify-center cursor-pointer hover:border-[#7C3AED] transition-colors"
-                          onClick={() => fileInputRef.current?.click()}
-                        >
-                          <div className="w-full h-full flex items-center justify-center">
-                            <Plus className="w-5 h-5 text-gray-400" />
-                          </div>
-                        </div>
-                      ))}
-                    </div>
+                    </label>
+                    <p className="text-sm text-gray-500 text-center">
+                      Click to upload or drag and drop<br />
+                      PNG, JPG, HEIC up to 120MB
+                    </p>
                   </div>
                 </div>
-
-                {badFiles.length > 0 && (
-                  <div className="rounded-[11.47px] border-[0.5px] border-[#EF4444] bg-[#FEF2F2] overflow-hidden mb-4">
+              ) : (
+                <>
+                  <div className="rounded-[11.47px] border-[0.5px] border-[#68D585] bg-[#F2FCF4] overflow-hidden mb-4">
                     <div className="p-2 sm:p-4">
-                      <div className="flex items-center gap-2 mb-4">
-                        <div className="w-6 h-6 rounded-full bg-[#EF4444] flex items-center justify-center">
-                          <AlertCircle className="text-white w-4 h-4" />
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="flex items-center gap-2">
+                          <div className="w-6 h-6 rounded-full bg-[#68D585] flex items-center justify-center">
+                            <Check className="text-white w-4 h-4" />
+                          </div>
+                          <span className="font-medium">Good Photos</span>
                         </div>
-                        <span className="font-medium">Bad Photos</span>
+                        <span className="text-[#68D585] font-medium">{files.length}/8</span>
                       </div>
+
+                      <div className="w-full h-2 bg-[#E5F9EA] rounded-full mb-4">
+                        <div 
+                          className="h-2 bg-[#68D585] rounded-full transition-all duration-300"
+                          style={{ width: `${(files.length / 8) * 100}%` }}
+                        />
+                      </div>
+
                       <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-4">
-                        {badFiles.map((badFile, index) => (
-                          <div key={index} className="relative aspect-square">
-                            <img
-                              src={badFile.preview}
-                              alt="Bad photo"
-                              className="w-full h-full object-cover rounded-lg"
-                            />
-                            <div className="absolute bottom-0 left-0 right-0 bg-[#EF4444] text-white text-xs p-2 text-center">
-                              {badFile.reason}
+                        {files.map((file, index) => (
+                          <div key={`${index}-${file.preview}`} className="relative group aspect-square">
+                            <div className="w-full h-full rounded-lg overflow-hidden border border-gray-200">
+                              {file.preview && (
+                                <img
+                                  key={file.preview}
+                                  src={file.preview}
+                                  alt={`Upload ${index + 1}`}
+                                  className="w-full h-full object-cover"
+                                  style={{ display: 'block' }}
+                                />
+                              )}
+                            </div>
+
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                // Revoke only the URL for the specific image being deleted
+                                if (files[index].preview) {
+                                  URL.revokeObjectURL(files[index].preview);
+                                }
+                                
+                                setFiles(prevFiles => {
+                                  // Create a new array excluding the deleted image
+                                  const updatedFiles = prevFiles.filter((_, i) => i !== index);
+                                  
+                                  // Update longshot count if needed
+                                  if (files[index].inspectionData?.full_body_image_or_longshot) {
+                                    setLongShotCount(prev => prev - 1);
+                                  }
+                                  
+                                  return updatedFiles;
+                                });
+                              }}
+                              className="absolute top-2 left-2 bg-white p-1.5 rounded-full shadow-md hover:bg-gray-50 transition-colors opacity-0 group-hover:opacity-100"
+                            >
+                              <Trash2 className="w-4 h-4 text-red-500" />
+                            </button>
+
+                            {file.isProcessing && (
+                              <div className="absolute inset-0 bg-black/50 rounded-lg flex items-center justify-center">
+                                <div className="w-8 h-8 rounded-full border-2 border-white border-t-transparent animate-spin" />
+                              </div>
+                            )}
+
+                            {file.needsCropping && !file.isProcessing && (
+                              <button
+                                onClick={() => handleAutoCrop(index)}
+                                className="absolute top-2 right-2 bg-white p-1.5 rounded-full shadow-md hover:bg-gray-50 transition-colors"
+                                disabled={file.isProcessing}
+                              >
+                                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none">
+                                  <path d="M8 8h8v8H8z" stroke="currentColor" strokeWidth="1.5"/>
+                                </svg>
+                              </button>
+                            )}
+                          </div>
+                        ))}
+
+                        {Array.from({ length: Math.max(0, 8 - files.length) }).map((_, i) => (
+                          <div 
+                            key={`empty-${i}`} 
+                            className="aspect-square rounded-lg border-2 border-dashed border-[#E5E7EB] flex items-center justify-center cursor-pointer hover:border-[#7C3AED] transition-colors"
+                            onClick={() => fileInputRef.current?.click()}
+                          >
+                            <div className="w-full h-full flex items-center justify-center">
+                              <Plus className="w-5 h-5 text-gray-400" />
                             </div>
                           </div>
                         ))}
                       </div>
                     </div>
                   </div>
-                )}
 
-                <div className="flex justify-center">
-                  <button
-                    onClick={handleContinue}
-                    disabled={files.length < 4 || !modelInfo}
-                    className={`w-full sm:w-[315px] h-[48px] rounded-[50px] p-[12px_25px] gap-[10px] flex items-center justify-center transition-all duration-300
-                      ${files.length >= 4 && modelInfo 
-                        ? 'bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4] text-white hover:opacity-90'
-                        : 'bg-gray-200 text-gray-500 cursor-not-allowed'
-                      }`}
-                  >
-                    Continue
-                    <ArrowRight size={20} />
-                  </button>
-                </div>
-              </>
-            )}
+                  {badFiles.length > 0 && (
+                    <div className="rounded-[11.47px] border-[0.5px] border-[#EF4444] bg-[#FEF2F2] overflow-hidden mb-4">
+                      <div className="p-2 sm:p-4">
+                        <div className="flex items-center gap-2 mb-4">
+                          <div className="w-6 h-6 rounded-full bg-[#EF4444] flex items-center justify-center">
+                            <AlertCircle className="text-white w-4 h-4" />
+                          </div>
+                          <span className="font-medium">Bad Photos</span>
+                        </div>
+                        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-4">
+                          {badFiles.map((badFile, index) => (
+                            <div key={index} className="relative aspect-square">
+                              <img
+                                src={badFile.preview}
+                                alt="Bad photo"
+                                className="w-full h-full object-cover rounded-lg"
+                              />
+                              <div className="absolute bottom-0 left-0 right-0 bg-[#EF4444] text-white text-xs p-2 text-center">
+                                {badFile.reason}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  <div className="flex justify-center">
+                    <button
+                      onClick={handleContinue}
+                      disabled={files.length < 4 || !modelInfo}
+                      className={`w-full sm:w-[315px] h-[48px] rounded-[50px] p-[12px_25px] gap-[10px] flex items-center justify-center transition-all duration-300
+                        ${files.length >= 4 && modelInfo 
+                          ? 'bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4] text-white hover:opacity-90'
+                          : 'bg-gray-200 text-gray-500 cursor-not-allowed'
+                        }`}
+                    >
+                      Continue
+                      <ArrowRight size={20} />
+                    </button>
+                  </div>
+                </>
+              )}
+            </div>
           </div>
         </div>
 
-        {/* Right Section - Image Guide */}
-        <div className="w-full lg:w-[485px] ml-0 lg:ml-auto mt-4 lg:mt-0">
+        {/* Right Section - Updated with order utilities */}
+        <div className="w-full lg:w-[485px] ml-0 lg:ml-auto order-1 lg:order-2 mb-4 lg:mb-0">
           <h2 className="font-poppins text-xl sm:text-2xl mb-2">Image Guide</h2>
           <p className="text-gray-600 mb-4 text-sm sm:text-base">Follow the guide to get quality photos.</p>
           

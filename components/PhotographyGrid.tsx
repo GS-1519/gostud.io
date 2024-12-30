@@ -434,7 +434,7 @@ const PackOverlay: React.FC<OverlayProps> = ({ isOpen, onClose, packType, title 
         </div>
 
         {/* Image Slider */}
-        <div className="mb-8 h-[400px] flex items-center">
+        <div className="mb-3 h-[400px] flex items-center">
           <ImageSlider images={currentPack.images[activeTab]} />
         </div>
 
@@ -467,11 +467,6 @@ const PhotoCard: React.FC<PhotoCardProps> = ({ imageUrl, onClick, title }) => (
           className="w-full h-full object-cover"
           alt={title}
         />
-        <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent">
-          <h3 className="text-white text-xl font-medium text-center">
-            {title}
-          </h3>
-        </div>
       </div>
     </div>
   </div>

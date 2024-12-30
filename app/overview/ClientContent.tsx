@@ -68,71 +68,50 @@ function Sidebar({ user, isOpen, onClose }: { user: User; isOpen: boolean; onClo
     {
       name: "AI Image Generator",
       icon: Edit3,
-      href: "/free-tools",
-      isActive: pathname === "/free-tools/background-remover"
+      href: "/",
+      isActive: pathname === "/free-tools"
+    },
+    {
+      name: isLoggingOut ? "Logging out..." : "Log Out",
+      icon: LogOut,
+      href: "#",
+      isActive: false,
+      onClick: handleLogout
     }
   ];
 
   return (
-    <>
-      {/* Mobile overlay */}
-      {isOpen && (
-        <div 
-          className="fixed inset-0 bg-black bg-opacity-50 lg:hidden z-20"
-          onClick={onClose}
-        />
-      )}
-      
-      <div className={`
-        fixed lg:static lg:translate-x-0 z-30
-        w-[240px] h-full border-r border-gray-200 px-2 py-3 bg-white
-        transition-transform duration-300
-        ${isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
-      `}>
+    <aside className={`
+      fixed lg:static lg:translate-x-0 z-30
+      w-[300px] h-full bg-white shadow-lg
+      transition-transform duration-300
+      ${isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
+    `}>
+      {/* Sidebar Container */}
+      <div className="flex flex-col h-full p-6">
+        {/* Navigation Links */}
         <div className="space-y-2">
           {navItems.map((item) => (
             <Link 
               key={item.href}
               href={item.href}
-              className={`flex items-center gap-2 p-2 rounded-lg transition-colors duration-200
+              className={`flex items-center gap-4 p-4 rounded-xl transition-all duration-200
                 ${item.isActive 
-                  ? 'bg-[#F7F3FF]' 
-                  : 'hover:bg-gray-100'
+                  ? 'bg-[#F7F3FF] text-[#7C3AED]' 
+                  : 'text-gray-600 hover:bg-gray-50'
                 }`}
+              onClick={() => {
+                if (item.onClick) item.onClick();
+                onClose();
+              }}
             >
-              <div className="flex items-center gap-2">
-                <item.icon 
-                  className={`w-5 h-5 ${
-                    item.isActive 
-                      ? 'text-[#7C3AED]' 
-                      : 'text-gray-500'
-                  }`} 
-                />
-                <span className={`${
-                  item.isActive 
-                    ? 'text-[#7C3AED] font-medium' 
-                    : 'text-gray-700'
-                }`}>
-                  {item.name}
-                </span>
-              </div>
+              <item.icon className={`w-6 h-6 ${item.isActive ? 'text-[#7C3AED]' : 'text-gray-500'}`} />
+              <span className="text-base font-medium">{item.name}</span>
             </Link>
           ))}
         </div>
-
-        <div className="absolute bottom-4 w-[220px]">
-          <button
-            onClick={handleLogout}
-            disabled={isLoggingOut}
-            className={`flex items-center gap-2 p-3 rounded-lg hover:bg-gray-100 text-gray-700 w-full transition-colors duration-200
-              ${isLoggingOut ? 'opacity-50 cursor-not-allowed' : ''}`}
-          >
-            <LogOut className="w-5 h-5" />
-            <span>{isLoggingOut ? 'Logging out...' : 'Log Out'}</span>
-          </button>
-        </div>
       </div>
-    </>
+    </aside>
   );
 }
 
@@ -141,56 +120,71 @@ export default function ClientContent({ models, trainModelUrl, user }: ClientCon
 
   return (
     <div className="flex h-screen bg-white">
+      {/* Overlay */}
+      {isSidebarOpen && (
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-50 lg:hidden z-20"
+          onClick={() => setSidebarOpen(false)}
+        />
+      )}
+
+      {/* Sidebar */}
       <Sidebar 
         user={user} 
         isOpen={isSidebarOpen} 
         onClose={() => setSidebarOpen(false)} 
       />
       
-      <main className="flex-1 overflow-auto">
-        <div className="max-w-7xl mx-auto p-4 sm:p-6">
-          {/* Mobile Header with Menu Button */}
-          <div className="lg:hidden mb-4">
-            <button
-              onClick={() => setSidebarOpen(true)}
-              className="p-2 hover:bg-gray-100 rounded-lg"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
-          </div>
+      {/* Main Content */}
+      <main className="flex-1 overflow-auto p-8">
+        {/* Mobile Menu Button */}
+        <div className="lg:hidden mb-6">
+          <button
+            onClick={() => setSidebarOpen(true)}
+            className="p-2 hover:bg-gray-100 rounded-lg"
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
 
-          <div className="mb-8">
-            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 gap-4">
+        {/* Content Container */}
+        <div className="max-w-7xl mx-auto">
+          {/* Card */}
+          <div className="bg-white rounded-2xl shadow-sm p-8">
+            {/* Header */}
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
               <h1 className="text-2xl font-md text-gray-900">My Headshots</h1>
             </div>
-            <div className="mt-4 p-4 sm:p-6 bg-[#F7F3FF] rounded-lg">
+
+            {/* Generate Images Banner */}
+            <div className="bg-white rounded-xl p-6 mb-8">
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-                <div>
-                  <p className="text-[#7C3AED] text-lg">
-                    Start generating images, Aaria is here to generate your photos!
-                  </p>
-                </div>
-                <Link href={trainModelUrl} className="sm:ml-4">
+                <p className="text-[#7C3AED] text-lg font-medium">
+                  Start generating images, Aaria is here to generate your photos!
+                </p>
+                <Link href={trainModelUrl}>
                   <Button 
                     size="lg" 
-                    className="w-full sm:w-auto"
+                    className="w-full sm:w-auto whitespace-nowrap"
                     style={{ 
                       background: 'linear-gradient(90deg, #8371FF -39.48%, #A077FE 32.07%, #01C7E4 100%)',
                       fontSize: '16px',
                       fontFamily: 'Jakarta Sans, sans-serif'
                     }}
                   >
-                    Train model
+                    Generate Images
                   </Button>
                 </Link>
               </div>
             </div>
+
+            {/* Models List */}
+            <ClientSideModelsList serverModels={models} />
           </div>
-          <ClientSideModelsList serverModels={models} />
         </div>
       </main>
     </div>
   );
-} 
+}

@@ -6,6 +6,7 @@ import type { Metadata } from 'next'
 import Works from "@/components/Works";
 import Why from "@/components/Why";
 import ReviewSection from "@/components/HeadshotReviewSection";
+import ExplainerSection from "@/components/ExplainerSection";
 
 import Footer from "@/components/Footer";
 import Banner from "@/components/Banner";
@@ -45,31 +46,18 @@ export default async function LinkedInPhotos() {
 
   return (
     <div className="w-full bg-[#F4F7FA] min-h-screen font-poppins">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-[82px]">
-        <div className="w-full max-w-[1276px] mx-auto space-y-12">
-          <div id="ai-headshots">
-            <TattoHero/>
-          </div>
-          <Works
-          image2="/Frame1.png"
-          image3="/Frame2.png"
-          />
-          <Why imageSet="Group10" />
-          <div id="testimonial">
-            <TattooHeadshotHero/>
-          </div>
-          <div id="testimonial">
-            <ReviewSection/>
-          </div>
-         
-         
-          
-          <div>
-            <Banner/>
-          </div>
-        </div>
+    <div>
+      <div id="ai-headshots" className="w-full">
+        <TattoHero />
       </div>
-      <Footer/>
+      <div>
+        <ExplainerSection />
+        <TattooHeadshotHero/>
+        <ReviewSection />
+        <Banner />
+        <Footer/>
+      </div>
     </div>
+  </div>
   );
 }

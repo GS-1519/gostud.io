@@ -98,12 +98,12 @@ const TypesHero = () => {
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
-              <div className="relative w-full h-[300px] p-4">
+              <div className="relative w-full h-[400px]">
                 <Image
                   src={headshot.image}
                   alt={headshot.title}
                   fill
-                  className="object-contain transition-transform duration-300"
+                  className="object-cover"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   priority={index < 2}
                 />
