@@ -136,9 +136,9 @@ export default function ClientContent({ models, trainModelUrl, user }: ClientCon
       />
       
       {/* Main Content */}
-      <main className="flex-1 overflow-auto p-8">
+      <main className="flex-1 overflow-auto p-4">
         {/* Mobile Menu Button */}
-        <div className="lg:hidden mb-6">
+        <div className="lg:hidden mb-4">
           <button
             onClick={() => setSidebarOpen(true)}
             className="p-2 hover:bg-gray-100 rounded-lg"
@@ -150,18 +150,18 @@ export default function ClientContent({ models, trainModelUrl, user }: ClientCon
         </div>
 
         {/* Content Container */}
-        <div className="max-w-7xl mx-auto">
+        <div className="mx-auto">
           {/* Card */}
-          <div className="bg-white rounded-2xl shadow-sm p-8">
+          <div className="bg-white rounded-2xl shadow-sm p-4">
             {/* Header */}
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
               <h1 className="text-2xl font-md text-gray-900">My Headshots</h1>
             </div>
 
             {/* Generate Images Banner */}
-            <div className="bg-white rounded-xl p-6 mb-8">
-              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-                <p className="text-[#7C3AED] text-lg font-medium">
+            <div className="bg-white rounded-xl p-4 mb-6">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+                <p className="text-[#7C3AED] text-lg font-medium mb-0">
                   Start generating images, Aaria is here to generate your photos!
                 </p>
                 <Link href={trainModelUrl}>
