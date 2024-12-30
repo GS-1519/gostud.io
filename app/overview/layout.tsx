@@ -4,19 +4,22 @@ import { redirect } from 'next/navigation';
 
 export const dynamic = "force-dynamic";
 
+async function getUser() {
+  const cookieStore = cookies();
+  const supabase = createServerComponentClient({
+    cookies: () => cookieStore
+  });
+
+  const { data: { user } } = await supabase.auth.getUser();
+  return user;
+}
+
 export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const cookieStore = cookies();
-  const supabase = createServerComponentClient({ 
-    cookies: () => cookieStore 
-  });
-
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
+  const user = await getUser();
 
   if (!user) {
     redirect('/login');

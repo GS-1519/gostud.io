@@ -71,11 +71,11 @@ export default function ClientSideModelsList({
         <div className="flex flex-col gap-4">
           <div className="flex flex-row gap-4 w-full justify-between items-center text-center">
             <h1 className="font-bold text-lg marginTop: '20px'">Your models</h1>
-            <Link href={trainModelUrl} className="w-fit">
+            {/* <Link href={trainModelUrl} className="w-fit">
               <Button size={"lg"} style={{ background: 'linear-gradient(90deg, #8371FF -39.48%, #A077FE 32.07%, #01C7E4 100%)', fontSize: '16px', fontFamily: 'Jakarta Sans, sans-serif', marginTop: '20px' }}>
                 Train model
               </Button>
-            </Link>
+            </Link> */}
           </div>
           <ModelsTable models={models} />
         </div>
@@ -83,13 +83,13 @@ export default function ClientSideModelsList({
       {models && models.length === 0 && (
         <div className="flex flex-col gap-4 items-center">
           <FaImages size={64} className="text-gray-500" />
-          <h1 className="text-2xl font-bold">
+          <h1 className="text-2xl font-md">
             Get started by training your first model.
           </h1>
           <div>
-            <Link href={trainModelUrl}>
+            {/* <Link href={trainModelUrl}>
               <Button size={"lg"} style={{ background: 'linear-gradient(90deg, #8371FF -39.48%, #A077FE 32.07%, #01C7E4 100%)', fontFamily: 'Jakarta Sans, sans-serif' }}>Train model</Button>
-            </Link>
+            </Link> */}
           </div>
         </div>
       )}

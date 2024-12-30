@@ -5,46 +5,97 @@ import { PricingTier } from '@/components/constants/pricing-tier';
 import { IBillingFrequency } from '@/components/constants/billing-frequency';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
-import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
-import { useUserInfo } from '@/components/hooks/useUserInfo';
 import { toast } from 'react-hot-toast';
+import { User } from '@supabase/supabase-js';
 
-interface Props {
-  loading: boolean;
+interface PriceCardsProps {
   frequency: IBillingFrequency;
-  priceMap: Record<string, string>;
+  loading: boolean;
+  priceMap: Record<string, any>;
+  onTryNowClick: () => Promise<void>;
+  user: any;
 }
 
-export function PriceCards({ loading, frequency, priceMap }: Props) {
+interface AuthState {
+  user: User | null;
+  loading: boolean;
+  error: Error | null;
+}
+
+export const PriceCards: React.FC<PriceCardsProps> = ({
+  frequency,
+  loading,
+  priceMap,
+  onTryNowClick,
+  user
+}) => {
   const router = useRouter();
   const supabase = createClientComponentClient();
   const [activeTier, setActiveTier] = useState<string>('STANDARD');
-  const [isLoading, setIsLoading] = useState(true);
-  const { user } = useUserInfo(supabase);
+  const [authState, setAuthState] = useState<AuthState>({
+    user: null,
+    loading: true,
+    error: null
+  });
 
   useEffect(() => {
-    // Check auth session on component mount
-    const checkSession = async () => {
+    const checkAuth = async () => {
       try {
-        const { data: { session }, error } = await supabase.auth.getSession();
-        if (error) throw error;
-        setIsLoading(false);
+        const { data: { user }, error } = await supabase.auth.getUser();
+        
+        if (error) {
+          setAuthState({
+            user: null,
+            loading: false,
+            error
+          });
+          return;
+        }
+
+        setAuthState({
+          user,
+          loading: false,
+          error: null
+        });
       } catch (error) {
-        console.error('Error checking session:', error);
-        setIsLoading(false);
+        console.error('Auth check error:', error);
+        setAuthState({
+          user: null,
+          loading: false,
+          error: error instanceof Error ? error : new Error('Auth check failed')
+        });
       }
     };
 
-    checkSession();
+    checkAuth();
+
+    // Set up auth state listener
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
+      if (event === 'SIGNED_OUT') {
+        setAuthState({
+          user: null,
+          loading: false,
+          error: null
+        });
+      } else if (event === 'SIGNED_IN' && session?.user) {
+        setAuthState({
+          user: session.user,
+          loading: false,
+          error: null
+        });
+      }
+    });
+
+    return () => {
+      subscription.unsubscribe();
+    };
   }, [supabase]);
 
   const handlePriceClick = async (priceId: string) => {
     try {
-      const { data: { session }, error } = await supabase.auth.getSession();
-      
-      if (error || !session) {
+      if (!authState.user) {
         toast.error('Please login to continue');
         router.push('/login');
         return;
@@ -52,38 +103,40 @@ export function PriceCards({ loading, frequency, priceMap }: Props) {
 
       router.push(`/checkout/${priceId}`);
     } catch (error) {
-      console.error('Error checking session:', error);
+      console.error('Price selection error:', error);
       toast.error('Please login to continue');
       router.push('/login');
     }
   };
 
-  if (isLoading) {
-    return <div>Loading...</div>; // Or your loading component
+  if (authState.loading || loading) {
+    return (
+      <div className="flex items-center justify-center min-h-[600px]">
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900" />
+      </div>
+    );
   }
 
   return (
-    <div className="bg-white w-full py-16">
-      {/* Heading Section */}
-      <div className="text-center mb-16">
-        <h1 className="w-[1134px] h-[48px] mx-auto
-                     font-poppins font-medium text-[32px] 
-                     leading-[48px] tracking-[-0.04em] text-center
-                     text-[#161C2D] whitespace-nowrap">
+    <div className="bg-white w-full md:py-16">
+      {/* Heading Section - Updated for responsiveness */}
+      <div className="text-center mb-8 md:mb-16 px-4">
+        <h1 className="font-poppins font-medium text-[24px] md:text-[32px] 
+                     leading-tight md:leading-[48px] tracking-[-0.04em] text-center
+                     text-[#161C2D] max-w-[1134px] mx-auto">
           PREMIUM QUALITY AT 10 TIMES LESS PRICE
         </h1>
         
-        <p className="w-[1077.84px] h-[54px] mx-auto mt-4
-                    font-poppins font-[500] text-[18px]
-                    leading-[27px] text-center
-                    text-[#161C2D]/70">
+        <p className="font-poppins font-[500] text-[16px] md:text-[18px]
+                    leading-relaxed md:leading-[27px] text-center
+                    text-[#161C2D]/70 max-w-[1077.84px] mx-auto mt-4">
           No studio visits. No $200+ photoshoot fees. No waiting for appointments. Achieve stunning, professional-grade
           headshots in just 30 minutes—all from the comfort of your home.
         </p>
       </div>
 
-      {/* Pricing Cards Grid */}
-      <div className="flex justify-center items-stretch gap-6 max-w-6xl mx-auto px-4">
+      {/* Pricing Cards Grid - Updated for responsiveness */}
+      <div className="flex flex-col md:flex-row justify-center items-stretch gap-6 max-w-6xl mx-auto px-4">
         {PricingTier.map((tier) => {
           const isStandard = tier.name === 'STANDARD';
           const isPremium = tier.name === 'PREMIUM';
@@ -93,12 +146,12 @@ export function PriceCards({ loading, frequency, priceMap }: Props) {
             <div 
               key={tier.id} 
               className={cn(
-                'w-[394px] min-h-[549px] rounded-[12px] p-[42px]',
-                'flex flex-col gap-8',
+                'w-full md:w-[394px] min-h-[549px] rounded-[12px] p-4 md:p-[42px]',
+                'flex flex-col gap-6 md:gap-8',
                 'transition-all duration-300 ease-in-out',
                 'relative cursor-pointer outline-none',
                 {
-                  'shadow-[0_var(--sds-size-depth-400)_var(--sds-size-depth-800)_var(--sds-size-depth-negative-100)_var(--sds-color-black-200)] scale-105':
+                  'shadow-[0_var(--sds-size-depth-400)_var(--sds-size-depth-800)_var(--sds-size-depth-negative-100)_var(--sds-color-black-200)] md:scale-105':
                     isActive,
                   'shadow-none scale-100': !isActive,
                   'bg-white': isActive,
@@ -207,11 +260,11 @@ export function PriceCards({ loading, frequency, priceMap }: Props) {
                 })}
               </div>
 
-              {/* Button Section */}
+              {/* Button Section - Updated for responsiveness */}
               <div className="mt-auto">
                 <Button 
                   className={cn(
-                    'w-[310px] h-[48px] rounded-[46px] px-[25px] py-[12px]',
+                    'w-full md:w-[310px] h-[48px] rounded-[46px] px-[25px] py-[12px]',
                     'flex items-center justify-center gap-[10px]',
                     'text-base font-medium transition-all duration-300',
                     'focus:outline-none focus:ring-2 focus:ring-[#5B16FE] focus:ring-offset-2',
@@ -222,30 +275,23 @@ export function PriceCards({ loading, frequency, priceMap }: Props) {
                         !isActive
                     }
                   )}
-                  asChild
+                  onClick={() => handlePriceClick(tier.priceId[frequency.value as keyof typeof tier.priceId])}
                 >
-                  <Link 
-                    href={`/checkout/${tier.priceId[frequency.value as keyof typeof tier.priceId]}`} 
-                    className="flex items-center justify-center gap-[10px]"
-                    onFocus={() => setActiveTier(tier.name)}
-                    onBlur={() => setActiveTier('STANDARD')}
+                  Try Now
+                  <svg 
+                    className={cn(
+                      "w-5 h-5 transition-transform duration-300",
+                      { "transform translate-x-1": isActive }
+                    )} 
+                    viewBox="0 0 20 20" 
+                    fill="currentColor"
                   >
-                    Try Now
-                    <svg 
-                      className={cn(
-                        "w-5 h-5 transition-transform duration-300",
-                        { "transform translate-x-1": isActive }
-                      )} 
-                      viewBox="0 0 20 20" 
-                      fill="currentColor"
-                    >
-                      <path 
-                        fillRule="evenodd" 
-                        d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" 
-                        clipRule="evenodd" 
-                      />
-                    </svg>
-                  </Link>
+                    <path 
+                      fillRule="evenodd" 
+                      d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" 
+                      clipRule="evenodd" 
+                    />
+                  </svg>
                 </Button>
                 
                 <p className="text-xs text-center text-gray-500 mt-4">
@@ -258,4 +304,4 @@ export function PriceCards({ loading, frequency, priceMap }: Props) {
       </div>
     </div>
   );
-}
+};

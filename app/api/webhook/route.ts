@@ -12,11 +12,10 @@ export async function POST(request: NextRequest) {
     const rawRequestBody = await request.text();
     console.log('🔵 Raw webhook body:', rawRequestBody);
     
-    // Initialize Supabase client with service role
+    // Initialize Supabase client
+    const cookieStore = cookies();
     const supabase = createRouteHandlerClient({ 
-      cookies: () => new Map() as any  // Type assertion to fix cookie store type
-    }, {
-      supabaseKey: process.env.SUPABASE_SERVICE_ROLE_KEY
+      cookies: () => cookieStore 
     });
 
     // For sandbox/testing mode
@@ -47,19 +46,22 @@ export async function POST(request: NextRequest) {
         }
 
         // Get current credits
-        const { data: creditData } = await supabase
+        const { data: creditData, error: creditError } = await supabase
           .from('credits')
           .select('credits')
           .eq('user_id', userId)
-          .maybeSingle();
+          .single();
+
+        if (creditError) {
+          console.error('Error fetching credits:', creditError);
+          throw new Error(`Failed to fetch credits: ${creditError.message}`);
+        }
 
         const currentCredits = creditData?.credits || 0;
-        console.log('Current credits:', currentCredits);
-
-        const newCredits = currentCredits + 1;
+        const newCredits = currentCredits + matchingTier.credits;
         console.log('💳 Credits calculation:', {
           currentCredits,
-          addedCredits: 1,
+          tierCredits: matchingTier.credits,
           newCredits
         });
 
@@ -68,11 +70,11 @@ export async function POST(request: NextRequest) {
           .from('credits')
           .upsert({
             user_id: userId,
-            credits: newCredits
+            credits: newCredits,
+            updated_at: new Date().toISOString()
           });
 
         if (updateError) {
-          console.error('Failed to update credits:', updateError);
           throw new Error(`Failed to update credits: ${updateError.message}`);
         }
 
@@ -82,7 +84,7 @@ export async function POST(request: NextRequest) {
           .insert({
             user_id: userId,
             amount: eventData.data.total,
-            credits: 1,
+            credits: matchingTier.credits,
             status: 'completed',
             provider: 'paddle',
             transaction_id: eventData.data.id,
@@ -108,15 +110,16 @@ export async function POST(request: NextRequest) {
       }
 
       return Response.json({ status: 'success', message: 'Webhook processed' });
-    }
 
-    // Production code with signature verification
-    const signature = request.headers.get('paddle-signature') || '';
-    const privateKey = process.env.PADDLE_NOTIFICATION_WEBHOOK_SECRET || '';
-    
-    const paddle = getPaddleInstance();
-    const eventData = await paddle.webhooks.unmarshal(rawRequestBody, privateKey, signature);
-    // Rest of your production webhook handling code...
+    } else {
+      // Production code with signature verification
+      const signature = request.headers.get('paddle-signature') || '';
+      const privateKey = process.env.PADDLE_NOTIFICATION_WEBHOOK_SECRET || '';
+      
+      const paddle = getPaddleInstance();
+      const eventData = await paddle.webhooks.unmarshal(rawRequestBody, privateKey, signature);
+      // Rest of your production webhook handling code...
+    }
 
   } catch (error) {
     console.error('Webhook error:', error);

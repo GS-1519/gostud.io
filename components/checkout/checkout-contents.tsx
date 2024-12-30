@@ -98,7 +98,18 @@ export function CheckoutContents({ userEmail, userId }: Props) {
               priceId: selectedTier.priceId
             };
 
+            // Store pricing data
             localStorage.setItem('selectedPricingCard', JSON.stringify(cardDetails));
+
+            // Also update the existing trainModelData with the pricing information
+            const existingData = localStorage.getItem('trainModelData');
+            if (existingData) {
+              const parsedData = JSON.parse(existingData);
+              parsedData.paymentInfo = {
+                selectedTier: cardDetails
+              };
+              localStorage.setItem('trainModelData', JSON.stringify(parsedData));
+            }
           }
 
           const paddleInstance = await initializePaddle({

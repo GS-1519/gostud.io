@@ -80,7 +80,7 @@ const TypesHero = () => {
   const visibleHeadshots = showAll ? headshots : headshots.slice(0, 6);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+    <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-24">
       <div className="text-center mb-16">
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4]">
           AI Headshots for Professionals
@@ -90,7 +90,7 @@ const TypesHero = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {visibleHeadshots.map((headshot, index) => (
           <Link href={headshot.link} key={index}>
             <div 
@@ -98,18 +98,18 @@ const TypesHero = () => {
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
-              <div className="relative w-full h-[400px] p-4">
+              <div className="relative w-full h-[300px] p-4">
                 <Image
                   src={headshot.image}
                   alt={headshot.title}
                   fill
                   className="object-contain transition-transform duration-300"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   priority={index < 2}
                 />
               </div>
-              <div className="p-8 bg-gradient-to-r from-[#8371FF]/5 via-[#A077FE]/5 to-[#01C7E4]/5">
-                <h3 className={`text-xl font-semibold mb-3 transition-colors duration-300 ${
+              <div className="p-6 bg-gradient-to-r from-[#8371FF]/5 via-[#A077FE]/5 to-[#01C7E4]/5">
+                <h3 className={`text-lg font-semibold mb-2 transition-colors duration-300 ${
                   hoveredIndex === index ? 'bg-clip-text text-transparent bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4]' : 'text-[#1E293B]'
                 }`}>
                   {headshot.title}

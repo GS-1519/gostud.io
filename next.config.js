@@ -1,8 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['gostudio.ai', 'www.gostudio.ai'],
+    domains: ['res.cloudinary.com', 'gostudio.ai', 'www.gostudio.ai'],
     unoptimized: true,
+  },
+  // Add this to handle larger payloads
+  api: {
+    bodyParser: {
+      sizeLimit: '10mb',
+    },
+    responseLimit: '10mb',
   },
   // Ensure static files are handled correctly
   webpack: (config) => {

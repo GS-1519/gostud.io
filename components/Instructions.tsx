@@ -95,10 +95,11 @@ const PhotoGuideSection = ({ title, icon, iconColor, images }: PhotoGuideProps) 
 
 interface InstructionsPageProps {
   onContinue: () => void;
+  user: any;
 }
 
 // Main Instructions Page Component
-const InstructionsPage: React.FC<InstructionsPageProps> = ({ onContinue }) => {
+const InstructionsPage: React.FC<InstructionsPageProps> = ({ onContinue, user }) => {
   const [countdown, setCountdown] = useState(5);
   const [isCountdownComplete, setIsCountdownComplete] = useState(false);
   const router = useRouter();

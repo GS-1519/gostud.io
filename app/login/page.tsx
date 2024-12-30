@@ -18,38 +18,59 @@ export const metadata: Metadata = {
 
 export const dynamic = "force-dynamic";
 
-export default async function LoginSignupPage({ 
-  searchParams 
-}: { 
-  searchParams?: { [key: string]: string | string[] | undefined } 
-}) {
-  // Get all async resources
-  const cookieStore = cookies();
-  const headersList = await headers();
-  
-  // Create supabase client
-  const supabase = createServerComponentClient({ 
-    cookies: () => cookieStore 
-  });
-
-  // Check if user is already logged in
-  const { data: { session } } = await supabase.auth.getSession();
-  if (session) {
-    redirect('/overview');
+interface PageProps {
+  searchParams?: { 
+    [key: string]: string | string[] | undefined 
   }
+}
 
-  // Get host after session check
-  const host = headersList.get('host');
+export default async function LoginSignupPage({ searchParams }: PageProps) {
+  try {
+    // Get all async resources
+    const cookieStore = cookies();
+    const headersList = headers();
+    
+    // Create supabase client
+    const supabase = createServerComponentClient({
+      cookies: () => cookieStore
+    });
 
-  // Await searchParams
-  const resolvedSearchParams = await Promise.resolve(searchParams || {});
+    // Use getUser instead of getSession
+    const { data: { user }, error } = await supabase.auth.getUser();
+    
+    if (error) {
+      console.error('Auth error:', error);
+      // Continue to login page if there's an auth error
+    } else if (user) {
+      // Redirect if user is authenticated
+      redirect('/overview');
+    }
 
-  return (
-    <div className="flex flex-col flex-1 w-full h-[calc(100vh-73px)]">
-      <LoginPage 
-        host={host} 
-        searchParams={resolvedSearchParams}
-      />
-    </div>
-  );
+    // Get host
+    const host = headersList.get('host');
+
+    // Resolve search params
+    const resolvedSearchParams = await Promise.resolve(searchParams || {});
+
+    return (
+      <div className="flex flex-col flex-1 w-full h-[calc(100vh-73px)]">
+        <LoginPage
+          host={host}
+          searchParams={resolvedSearchParams}
+        />
+      </div>
+    );
+  } catch (error) {
+    console.error('Unexpected error:', error);
+    // Show login page with error state
+    return (
+      <div className="flex flex-col flex-1 w-full h-[calc(100vh-73px)]">
+        <LoginPage
+          host={null}
+          searchParams={searchParams || {}}
+          
+        />
+      </div>
+    );
+  }
 }

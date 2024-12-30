@@ -58,22 +58,19 @@ const BrandingPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
-      <section className="relative w-full">
-        {/* Header Title Container */}
-        <div className="w-full max-w-[459px] mx-auto text-center mb-16 pt-16">
+    <div className="bg-white">
+      <section className="w-full">
+        <div className="w-full max-w-[459px] mx-auto text-center mb-4 pt-4">
           <h2 className="text-[32px] font-poppins font-[500] leading-[48px] text-[#161C2D]">
             BRAND WHO LOVES GOSUDIO
           </h2>
         </div>
 
-        {/* Brand Logo Slider Container */}
-        <div className="w-full bg-[#F6F2FF] overflow-hidden">
-          <div className="relative w-[1440px] h-[250px] mx-auto"> {/* Increased height to accommodate larger logos */}
-            {/* Main Scrolling Container */}
+        <div className="w-full bg-[#F6F2FF] overflow-hidden mb-12">
+          <div className="relative w-[1440px] h-[90px] mx-auto">
             <div className="absolute top-0 left-0 w-full h-full flex items-center">
               {/* First set of brands */}
-              <div className="flex animate-marquee items-center gap-16 whitespace-nowrap">
+              <div className="flex animate-marquee items-center gap-12 whitespace-nowrap">
                 {brands.map((brand) => (
                   <div 
                     key={brand.id}
@@ -94,8 +91,8 @@ const BrandingPage = () => {
                 ))}
               </div>
 
-              {/* Duplicate set for seamless scrolling */}
-              <div className="flex animate-marquee items-center gap-16 whitespace-nowrap">
+              {/* Duplicate set */}
+              <div className="flex animate-marquee items-center gap-12 whitespace-nowrap">
                 {brands.map((brand) => (
                   <div 
                     key={`${brand.id}-duplicate`}

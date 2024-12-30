@@ -7,11 +7,16 @@ import { cookies } from "next/headers";
 export async function POST(request: Request): Promise<NextResponse> {
   const body = (await request.json()) as HandleUploadBody;
 
-  const supabase = createServerComponentClient({ cookies });
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-    
+  // const supabase = createServerComponentClient({ cookies });
+  // const {
+  //   data: { user },
+  // } = await supabase.auth.getUser();
+  const cookieStore = cookies();
+  const supabase = createServerComponentClient({ 
+    cookies: () => cookieStore 
+  });
+  const { data: { user }, error: userError } = await supabase.auth.getUser();
+
   try {
     const jsonResponse = await handleUpload({
       body,

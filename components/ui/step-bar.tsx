@@ -12,10 +12,9 @@ interface Step {
 const steps: Step[] = [
   { number: "01", title: "Select Pack", path: "/overview/packs" },
   { number: "02", title: "Instructions", path: "/overview/models/train" },
-  { number: "03", title: "Model Type", path: "step=model-type" },
-  { number: "04", title: "Upload Photos", path: "step=img-upload" },
-  { number: "05", title: "Get Credits", path: "step=get-credits" },
-  { number: "06", title: "Summary", path: "step=summary" },
+  { number: "03", title: "Upload Photos", path: "step=img-upload" },
+  { number: "04", title: "Get Credits", path: "step=get-credits" },
+  { number: "05", title: "Summary", path: "step=summary" },
 ];
 
 export function StepBar() {
@@ -32,10 +31,9 @@ export function StepBar() {
     if (!step) return 1;
     
     switch (step) {
-      case 'model-type': return 2;
-      case 'img-upload': return 3;
-      case 'get-credits': return 4;
-      case 'summary': return 5;
+      case 'img-upload': return 2;
+      case 'get-credits': return 3;
+      case 'summary': return 4;
       default: return 1;
     }
   };

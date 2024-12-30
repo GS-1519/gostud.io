@@ -17,6 +17,7 @@ import CreationGallery from "@/components/CreationLibaray";
 import BrandsPage from "@/components/BrandPage";
 import TeamSection from "@/components/TeamSection";
 import Ariaa from "@/components/Ariaa";
+import { Pricing } from "@/components/home/pricing/pricing";
 
 
 export const dynamic = "force-dynamic";
@@ -34,8 +35,10 @@ export const metadata: Metadata = {
 }
 
 export default async function Home() {
-  const supabase = await createServerComponentClient({ cookies });
-
+  const cookieStore = cookies();
+  const supabase = createServerComponentClient({ 
+    cookies: () => cookieStore 
+  });
   const {
     data: { user },
   } = await supabase.auth.getUser();
@@ -82,7 +85,7 @@ export default async function Home() {
             <BrandsPage/>
             <HeadshotReviewSection />
             <div id="pricing">
-              <PricingSection user={user} />
+              <Pricing user={user} />
             </div>
             <DataSecuritySection />
             <Ariaa/>

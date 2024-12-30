@@ -8,6 +8,7 @@ import { upload } from "@vercel/blob/client";
 interface TrainModelZoneProps {
   packSlug: string;
   onContinue: () => void;
+  user: any;
 }
 
 interface ImageInspectionResult {
@@ -45,7 +46,7 @@ interface BadImage {
   reason: string;
 }
 
-const TrainModelZone: React.FC<TrainModelZoneProps> = ({ packSlug, onContinue }) => {
+const TrainModelZone: React.FC<TrainModelZoneProps> = ({ packSlug, onContinue, user }) => {
   const [files, setFiles] = useState<ProcessedImage[]>([]);
   const [badFiles, setBadFiles] = useState<BadImage[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -258,8 +259,8 @@ const TrainModelZone: React.FC<TrainModelZoneProps> = ({ packSlug, onContinue })
     }
 
     setIsLoading(true);
-
     try {
+      // Upload images and save data first
       const blobUrls: string[] = [];
       const uploadPromises = files.map(async ({ file }) => {
         try {
@@ -276,64 +277,62 @@ const TrainModelZone: React.FC<TrainModelZoneProps> = ({ packSlug, onContinue })
 
       await Promise.all(uploadPromises);
 
-      const dataToSave = {
+      // Save model data
+      const modelData = {
         modelInfo: modelInfo,
         imageUrls: blobUrls
       };
-      localStorage.setItem('trainModelData', JSON.stringify(dataToSave));
+      localStorage.setItem('trainModelData', JSON.stringify(modelData));
 
-      toast({
-        title: "Upload successful",
-        description: "Your photos have been saved. ",
-        duration: 5000,
-      });
-
-      // credits chceking 
-
+      // Check credits
       const response = await fetch('/astria/check-credits');
-      if (!response.ok) {
-        if (response.status === 402 || response.status === 500) {
-          toast({
-            title: "Insufficient credits",
-            description: "Please purchase credits to continue.",
-            duration: 5000,
-          });
-          onContinue();
-          return;
-        }
-       }
-  
-      // If credits are available, redirect to /summary 
       const data = await response.json();
       console.log("Credits data", data);
-  
-      onContinue();
-      } catch (error: unknown) {
-        console.error('Upload error:', error);
-        
-        let errorMessage = "There was an error processing your request. Please try again.";
-        
-        if (error instanceof Error) {
-          errorMessage = error.message;
-        }
+
+      if (!response.ok || !data.credits || data.credits.credits <= 0) {
+        // No credits - Save current pack and redirect to get-credits
+        localStorage.setItem('selectedPack', JSON.stringify({
+          id: packSlug,
+          title: modelInfo.name || 'Unnamed',
+          cover_url: blobUrls[0], // Use first image as cover
+          slug: packSlug
+        }));
         
         toast({
-          title: "Process failed",
-          description: errorMessage,
+          title: "Insufficient credits",
+          description: "Please purchase credits to continue.",
           duration: 5000,
         });
-      } finally {
-        setIsLoading(false);
+        router.push(`/overview/models/train/${packSlug}?step=get-credits`);
+        return;
       }
-    };
+
+      // Has credits - Go directly to summary with model data
+      router.push(`/overview/models/train/${packSlug}?step=summary`);
+
+    } catch (error: unknown) {
+      console.error('Upload error:', error);
+      let errorMessage = "There was an error processing your request. Please try again.";
+      if (error instanceof Error) {
+        errorMessage = error.message;
+      }
+      toast({
+        title: "Process failed",
+        description: errorMessage,
+        duration: 5000,
+      });
+    } finally {
+      setIsLoading(false);
+    }
+  };
    
 
   return (
-    <div className="flex justify-between items-start min-h-screen font-poppins bg-white p-4 lg:p-0">
-      <div className="w-full max-w-[1276px] mx-auto p-6 lg:p-[84px_60px] flex flex-col lg:flex-row gap-4 lg:gap-8">
+    <div className="flex justify-between items-start min-h-screen font-poppins bg-white p-2 sm:p-4 lg:p-0">
+      <div className="w-full max-w-[1276px] mx-auto p-3 sm:p-6 lg:p-[84px_60px] flex flex-col lg:flex-row gap-4 lg:gap-8">
         {/* Left Section */}
         <div className="w-full lg:w-[580px] rounded-3xl p-[3px] bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4]">
-          <div className="bg-[#F2F2F7] rounded-3xl p-6 lg:p-8 flex flex-col justify-between h-full relative">
+          <div className="bg-[#F2F2F7] rounded-3xl p-4 sm:p-6 lg:p-8 flex flex-col justify-between h-full relative">
             <input 
               ref={fileInputRef}
               id="file-upload" 
@@ -353,11 +352,11 @@ const TrainModelZone: React.FC<TrainModelZoneProps> = ({ packSlug, onContinue })
               </div>
             )}
 
-            <h2 className="text-3xl font-normal text-black text-center mb-6">Start Uploading photos</h2>
+            <h2 className="text-2xl sm:text-3xl font-normal text-black text-center mb-4 sm:mb-6">Start Uploading photos</h2>
 
             {files.length === 0 && badFiles.length === 0 ? (
               <div className="flex-1 flex flex-col">
-                <div className="w-3/4 border-2 border-dashed border-[#7C3AED] rounded-[12.19px] p-6 flex flex-col items-center justify-center gap-4 mt-8 mx-auto">
+                <div className="w-full sm:w-3/4 border-2 border-dashed border-[#7C3AED] rounded-[12.19px] p-3 sm:p-6 flex flex-col items-center justify-center gap-4 mt-4 sm:mt-8 mx-auto">
                   <label 
                     className={`cursor-pointer w-full ${isLoading ? 'pointer-events-none opacity-50' : ''}`}
                     onClick={() => {
@@ -381,7 +380,7 @@ const TrainModelZone: React.FC<TrainModelZoneProps> = ({ packSlug, onContinue })
             ) : (
               <>
                 <div className="rounded-[11.47px] border-[0.5px] border-[#68D585] bg-[#F2FCF4] overflow-hidden mb-4">
-                  <div className="p-4">
+                  <div className="p-2 sm:p-4">
                     <div className="flex items-center justify-between mb-4">
                       <div className="flex items-center gap-2">
                         <div className="w-6 h-6 rounded-full bg-[#68D585] flex items-center justify-center">
@@ -399,7 +398,7 @@ const TrainModelZone: React.FC<TrainModelZoneProps> = ({ packSlug, onContinue })
                       />
                     </div>
 
-                    <div className="grid grid-cols-4 gap-4">
+                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-4">
                       {files.map((file, index) => (
                         <div key={`${index}-${file.preview}`} className="relative group aspect-square">
                           <div className="w-full h-full rounded-lg overflow-hidden border border-gray-200">
@@ -451,14 +450,14 @@ const TrainModelZone: React.FC<TrainModelZoneProps> = ({ packSlug, onContinue })
 
                 {badFiles.length > 0 && (
                   <div className="rounded-[11.47px] border-[0.5px] border-[#EF4444] bg-[#FEF2F2] overflow-hidden mb-4">
-                    <div className="p-4">
+                    <div className="p-2 sm:p-4">
                       <div className="flex items-center gap-2 mb-4">
                         <div className="w-6 h-6 rounded-full bg-[#EF4444] flex items-center justify-center">
                           <AlertCircle className="text-white w-4 h-4" />
                         </div>
                         <span className="font-medium">Bad Photos</span>
                       </div>
-                      <div className="grid grid-cols-4 gap-4">
+                      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-4">
                         {badFiles.map((badFile, index) => (
                           <div key={index} className="relative aspect-square">
                             <img
@@ -480,7 +479,7 @@ const TrainModelZone: React.FC<TrainModelZoneProps> = ({ packSlug, onContinue })
                   <button
                     onClick={handleContinue}
                     disabled={files.length < 4 || !modelInfo}
-                    className={`w-[315px] h-[48px] rounded-[50px] p-[12px_25px] gap-[10px] flex items-center justify-center transition-all duration-300
+                    className={`w-full sm:w-[315px] h-[48px] rounded-[50px] p-[12px_25px] gap-[10px] flex items-center justify-center transition-all duration-300
                       ${files.length >= 4 && modelInfo 
                         ? 'bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4] text-white hover:opacity-90'
                         : 'bg-gray-200 text-gray-500 cursor-not-allowed'
@@ -496,15 +495,15 @@ const TrainModelZone: React.FC<TrainModelZoneProps> = ({ packSlug, onContinue })
         </div>
 
         {/* Right Section - Image Guide */}
-        <div className="w-full lg:w-[485px] ml-auto">
-          <h2 className="font-poppins text-2xl mb-2">Image Guide</h2>
-          <p className="text-gray-600 mb-4">Follow the guide to get quality photos.</p>
+        <div className="w-full lg:w-[485px] ml-0 lg:ml-auto mt-4 lg:mt-0">
+          <h2 className="font-poppins text-xl sm:text-2xl mb-2">Image Guide</h2>
+          <p className="text-gray-600 mb-4 text-sm sm:text-base">Follow the guide to get quality photos.</p>
           
-          <p className="text-[#7C3AED] mb-6">
+          <p className="text-[#7C3AED] mb-4 sm:mb-6 text-sm sm:text-base">
             To ensure better photo quality, Aaria requires 1 half-body and 7 close-up images of you facing the camera.
           </p>
 
-          <div className="w-[385px] h-[385px] relative rounded-[11.47px] overflow-hidden bg-[#F8F8FC] border border-gray-200">
+          <div className="w-full sm:w-[385px] aspect-square relative rounded-[11.47px] overflow-hidden bg-[#F8F8FC] border border-gray-200">
             <Image
               src="/good/img6.png"
               alt="Example photos guide"

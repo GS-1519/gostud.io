@@ -1,60 +1,38 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Button } from '@/components/ui/button';
+import { ArrowRight } from 'lucide-react';
 
 const Banner = () => {
   return (
-    <div className="relative w-full min-h-[200px] xs:min-h-[250px] sm:min-h-[300px] md:h-[459px]">
-      {/* Background Image - Enhanced responsive handling */}
+    <div className="relative w-full h-[200px] xs:h-[250px] sm:h-[300px] md:h-[459px] overflow-hidden">
+      {/* Background Image */}
       <Image
-        src="/Top.png"
+        src="/Topp.png"
         alt="Banner background"
         fill
-        className="object-cover object-center"
-        sizes="(max-width: 480px) 100vw,
-               (max-width: 768px) 100vw,
+        className="object-contain xs:object-cover object-center scale-[1.2] xs:scale-100"
+        sizes="(max-width: 480px) 480px,
+               (max-width: 768px) 768px,
                100vw"
         priority
       />
 
-      {/* Button Container - Improved mobile positioning */}
-      <div className="absolute inset-0 flex items-center justify-center px-3 xs:px-4 sm:px-6 md:px-0">
-        <div className="mt-[80px] xs:mt-[100px] sm:mt-[150px] md:mt-[251px] 
-                      w-full max-w-[260px] xs:max-w-[280px] sm:max-w-[318px]
-                      transition-all duration-300 ease-in-out">
-          <Link
-            href="/login"
-            className="flex items-center justify-center 
-                     w-full h-[36px] xs:h-[40px] sm:h-[48px]
-                     px-[15px] xs:px-[20px] sm:px-[25px] 
-                     py-1.5 xs:py-2 sm:py-3
-                     bg-[#5B16FE] text-white 
-                     rounded-[52px] 
-                     transition-all duration-300
-                     hover:bg-[#4910d0] hover:scale-[1.02] 
-                     active:scale-[0.98]
-                     text-[13px] xs:text-[14px] sm:text-[15px] md:text-[16px] 
-                     font-medium
-                     shadow-lg hover:shadow-xl 
-                     text-center
-                     whitespace-nowrap
-                     touch-manipulation"
-          >
-            Get your Headshot Now
-          </Link>
-        </div>
-      </div>
+      {/* Button positioned over the image - moved even lower */}
+      <div className="absolute top-[75%] left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <Link href="/overview">
+          <Button 
+                       className="bg-[#5B16FE] hover:bg-[#4F46E5] text-white px-8 py-3 rounded-full"
 
-      {/* Gradient Overlay - Optimized for all screen sizes */}
-      <div className="absolute inset-0 bg-gradient-to-b 
-                      from-transparent 
-                      via-[#0B0B0F]/40 xs:via-[#0B0B0F]/30 
-                      to-[#0B0B0F]/70 xs:to-[#0B0B0F]/60" 
-      />
+          >
+            Get Started
+            <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 transition-transform group-hover:translate-x-1" />
+          </Button>
+        </Link>
+      </div>
     </div>
   );
 };
-
-
 
 export default Banner;

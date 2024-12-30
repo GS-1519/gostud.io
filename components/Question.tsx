@@ -106,10 +106,10 @@ const FAQSection = () => {
   ];
 
   return (
-    <div className="bg-white w-full mx-auto py-10 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 rounded-[24px]">
+    <div className="bg-white w-full mx-auto px-4 sm:px-6 lg:px-8 rounded-[24px]">
       <div className="max-w-[1116px] mx-auto bg-white rounded-[24px]">
-        <div className="flex flex-col gap-20 p-8 sm:p-12 lg:p-16">
-          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 text-center font-jakarta">
+        <div className="flex flex-col p-8">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 text-center font-jakarta mb-6">
             Frequently Asked Questions
           </h2>
           <div className="space-y-4">

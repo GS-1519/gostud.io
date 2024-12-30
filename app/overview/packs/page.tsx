@@ -19,7 +19,7 @@ import { redirect } from "next/navigation";
 
 export default function PacksPage() {
   return (
-    <div className="pt-[120px]">
+    <div className="pt-[40px]">
       <h1 className="text-4xl font-bold mb-4">Packs</h1>
       <p className="text-gray-600 mb-8">Choose a pack to start generating images.</p>
       <PacksGalleryZone />

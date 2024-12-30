@@ -9,6 +9,10 @@ import PricingSection from "@/components/PricingSection";
 import FAQSection from "@/components/Question";
 import Footer from "@/components/Footer";
 import Banner from "@/components/Banner";
+import ExplainerSection from "@/components/ExplainerSection";
+import HeadshotReviewSection from "@/components/HeadshotReviewSection";
+import { Pricing } from "@/components/home/pricing/pricing";
+import HeadshotContainer from "@/components/Banner";
 
 import TypesHero from "@/components/TypesHero";
 import PhotosHero from "@/components/Photos-Types";
@@ -33,35 +37,14 @@ export const metadata: Metadata = {
 
 export default async function PhotoshootTypes() {
   const supabase = createServerComponentClient({ cookies });
-
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
+  const { data: { user } } = await supabase.auth.getUser();
 
   return (
-    <div className="w-full bg-[#F4F7FA] min-h-screen font-poppins">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-[82px]">
-        <div className="w-full max-w-[1276px] mx-auto space-y-12">
-          <div id="ai-headshots">
-            <PhotosHero/>
-          </div>
-          <Works/>
-          <Why imageSet="Jfram" />
-          <div id="testimonial">
-            <ReviewSection/>
-          </div>
-          <div id="pricing">
-            <PricingSection user={user} />
-          </div>
-          <div id="faq">
-            <FAQSection />
-          </div>
-          <div>
-            <Banner/>
-          </div>
-        </div>
-      </div>
+    <main className="w-full bg-[#F4F7FA] min-h-screen font-poppins">
+      <PhotosHero/>
+     
+      
       <Footer/>
-    </div>
+    </main>
   );
 }

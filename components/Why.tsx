@@ -3,6 +3,10 @@
 import React from 'react';
 import Image from 'next/image';
 
+interface WhyProps {
+  imageSet: string;
+}
+
 const WhySection = () => {
   const [activeFeature, setActiveFeature] = React.useState(0);
 

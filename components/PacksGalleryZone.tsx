@@ -6,6 +6,9 @@ import Link from "next/link";
 import { Loader2, ChevronDown, ChevronUp } from "lucide-react";
 import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
+import { PackDetailsOverlay } from './PackDetailsOverlay';
+import { Button } from '@/components/ui/button';
+import { packImages } from '@/utils/packImages';
 
 interface Cost {
   cost: number;
@@ -27,6 +30,7 @@ interface Pack {
   title: string;
   cover_url: string;
   costs: Costs;
+  images: string[];
 }
 
 const groupPacksByCategory = (packs: Pack[]) => {
@@ -61,6 +65,7 @@ export default function PacksGalleryZone() {
     children: true,
     pets: true
   });
+  const [selectedPack, setSelectedPack] = useState<Pack | null>(null);
 
   const fetchPacks = async (): Promise<void> => {
     try {
@@ -90,22 +95,22 @@ export default function PacksGalleryZone() {
     fetchPacks();
   }, []);
 
-  const handlePackSelect = (e: React.MouseEvent, pack: Pack) => {
-    e.preventDefault();
+  const handlePackSelect = (pack: Pack) => {
+    console.log('Selected pack:', pack);
     
-    try {
-      localStorage.setItem('selectedPack', JSON.stringify(pack));
-      console.log('Pack saved:', pack);
-      
-      router.push(`/overview/models/train/${pack.slug}`);
-    } catch (error) {
-      console.error('Error saving pack to localStorage:', error);
-      toast({
-        title: "Error",
-        description: "Failed to save your selection. Please try again.",
-        duration: 5000,
-      });
-    }
+    // Get the normalized slug for the pack
+    const normalizedSlug = pack.slug.replace('md-', '').toLowerCase().replace(/-/g, '');
+    
+    // Get additional images for this pack
+    const additionalImages = packImages[normalizedSlug] || [];
+    
+    setSelectedPack({
+      ...pack,
+      images: [
+        pack.cover_url,  // Keep the S3 cover image
+        ...additionalImages  // Add our local pack images
+      ]
+    });
   };
 
   const groupedPacks = groupPacksByCategory(packs);
@@ -115,6 +120,43 @@ export default function PacksGalleryZone() {
       ...prev,
       [section]: !prev[section]
     }));
+  };
+
+  const handleStartCreating = () => {
+    if (selectedPack) {
+      try {
+        localStorage.setItem('selectedPack', JSON.stringify(selectedPack));
+        router.push(`/overview/models/train/${selectedPack.slug}`);
+      } catch (error) {
+        console.error('Error saving pack to localStorage:', error);
+        toast({
+          title: "Error",
+          description: "Failed to save your selection. Please try again.",
+          duration: 5000,
+        });
+      }
+    } else {
+      const firstPack = packs[0];
+      if (firstPack) {
+        try {
+          localStorage.setItem('selectedPack', JSON.stringify(firstPack));
+          router.push(`/overview/models/train/${firstPack.slug}`);
+        } catch (error) {
+          console.error('Error saving pack to localStorage:', error);
+          toast({
+            title: "Error",
+            description: "Failed to save your selection. Please try again.",
+            duration: 5000,
+          });
+        }
+      } else {
+        toast({
+          title: "No packs available",
+          description: "Please select a pack first.",
+          duration: 5000,
+        });
+      }
+    }
   };
 
   if (loading) {
@@ -172,15 +214,10 @@ export default function PacksGalleryZone() {
               {expandedSections[category] && (
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-[17px]">
                   {categoryPacks.map((pack) => (
-                    <Link 
-                      href={`/overview/models/train/${pack.slug}`} 
-                      key={pack.id} 
-                      onClick={(e) => handlePackSelect(e, pack)}
-                      className="group relative rounded-[11.34px] overflow-hidden transition-all duration-300 hover:scale-[1.02]"
-                      style={{
-                        width: '184.33px',
-                        height: '259.95px'
-                      }}
+                    <div 
+                      key={pack.id}
+                      onClick={() => handlePackSelect(pack)}
+                      className="group relative rounded-[11.34px] overflow-hidden cursor-pointer"
                     >
                       <div className="relative h-full">
                         <img
@@ -195,13 +232,36 @@ export default function PacksGalleryZone() {
                           </h3>
                         </div>
                       </div>
-                    </Link>
+                    </div>
                   ))}
                 </div>
               )}
             </div>
           )
         )}
+      </div>
+
+      {selectedPack && (
+        <PackDetailsOverlay
+          isOpen={!!selectedPack}
+          onClose={() => setSelectedPack(null)}
+          pack={selectedPack}
+        />
+      )}
+
+      <div className="mt-12 flex justify-center">
+        <Button
+          onClick={handleStartCreating}
+          className="bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4] text-white px-10 py-2 rounded-[42px] hover:opacity-90 transition-all duration-300"
+          style={{
+            width: '269px',
+            height: '48px',
+            padding: '12px 25px',
+            gap: '10px'
+          }}
+        >
+          Continue
+        </Button>
       </div>
     </div>
   );
