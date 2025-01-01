@@ -12,6 +12,7 @@ import ExplainerSection from "@/components/ExplainerSection";
 
 import ArtisticHero from "@/components/ArtisticHero";
 import ArtisticHeadshotHero from "@/components/Artistic-Headshots";
+import ClientRedirect from "@/components/ClientRedirect";
 
 export const dynamic = "force-dynamic";
 
@@ -40,7 +41,7 @@ export default async function LinkedInPhotos() {
   } = await supabase.auth.getUser();
 
   if (user) {
-    return redirect("/overview");
+    return <ClientRedirect />;
   }
 
   return (

@@ -1,6 +1,7 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 import { X } from 'lucide-react';
+import Link from 'next/link';
 
 interface PhotoCardProps {
   imageUrl: string;
@@ -440,7 +441,7 @@ const PackOverlay: React.FC<OverlayProps> = ({ isOpen, onClose, packType, title 
 
         {/* Generate Button */}
         <div className="text-center">
-          <button className="bg-[#5B16FE] hover:bg-[#4F46E5] text-white px-8 py-3 rounded-full font-medium transition-colors">
+          <button className="bg-[#5B16FE] hover:bg-[#4F46E5] text-white px-4 py-2 rounded-full font-medium transition-colors sm:px-6 sm:py-3">
             Generate →
           </button>
         </div>
@@ -522,12 +523,13 @@ const PhotographyGrid = () => {
           packType={selectedPack || 'corporate'}
           title={photos.find(p => p.type === selectedPack)?.title || 'Photography Pack'}
         />
-
+         <Link href="/login" className="block">
         <div className="text-center mt-8">
-          <button className="w-full md:w-auto bg-[#5B16FE] hover:bg-[#4F46E5] text-white font-medium py-3 px-6 md:px-12 rounded-full transition-colors duration-200">
+          <button className="w-full md:w-auto bg-[#5B16FE] hover:bg-[#4F46E5] text-white font-medium py-2 px-4 md:py-3 md:px-6 rounded-full transition-colors duration-200">
             Explore More →
           </button>
         </div>
+        </Link>
       </div>
     </div>
   );

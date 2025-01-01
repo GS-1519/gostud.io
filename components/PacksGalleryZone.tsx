@@ -96,21 +96,84 @@ export default function PacksGalleryZone() {
   }, []);
 
   const handlePackSelect = (pack: Pack) => {
-    console.log('Selected pack:', pack);
+    // Initial logging
+    console.log('1. Initial Pack Data:', {
+      title: pack.title,
+      originalSlug: pack.slug,
+      coverUrl: pack.cover_url
+    });
     
     // Get the normalized slug for the pack
-    const normalizedSlug = pack.slug.replace('md-', '').toLowerCase().replace(/-/g, '');
+    let normalizedSlug = pack.slug
+      .replace('md-', '')
+      .toLowerCase()
+      .replace('photoshoot', 'photoshoot')
+      .replace('christmas-sweater', 'christmas')
+      .replace('cat-meowgic', 'cat')
+      .replace('me-iconic', 'iconic')
+      .replace('partners-headshots', 'partner')
+      .replace('wild-friends-forever', 'wildfriends')
+      .replace('vikings-style', 'vikings')
+      .replace('wrestlemania-style', 'wrestlemania')
+      .replace('youtube-thumbnail-reaction', 'youtube')
+      .replace('everyday-onesies', 'onesie')
+      .replace('generative-artistic-filters', 'artistic')
+      .replace('kids-bday', 'birthday')
+      .replace('game-of-thrones-style', 'gamesofthrones')
+      .replace('game-of-thrones', 'gamesofthrones')
+      .replace('dog-art', 'dog')
+      .replace('inspiration-board', 'fitness')
+      .replace('botanical-illustration', 'botanical')
+      .replace('famous-photographers', 'helmut')
+      .replace('jcrew-style', 'jcrew')
+      .replace('corporate-headshots', 'corporate')
+      .replace('glamour-shot', 'glamour')
+      .replace('birthday-party-save-the-daye', 'hbdsave')
+      .replace('xmas-by-futurecreators', 'winter')
+      .replace('amichai-ai', 'success')
+      .replace('stylish-studio-portraits', 'stylish')
+      .replace(/-/g, '');
+    
+    // Debug slug transformation
+    console.log('2. Slug Processing:', {
+      original: pack.slug,
+      afterArtisticReplace: pack.slug.toLowerCase().replace('generative-artistic-filters', 'artistic'),
+      normalized: normalizedSlug,
+      availableKeys: Object.keys(packImages),
+      matchFound: packImages.hasOwnProperty(normalizedSlug)
+    });
     
     // Get additional images for this pack
     const additionalImages = packImages[normalizedSlug] || [];
     
-    setSelectedPack({
+    // Debug image loading
+    console.log('3. Image Loading:', {
+      normalizedSlug,
+      foundInPackImages: !!packImages[normalizedSlug],
+      numberOfAdditionalImages: additionalImages.length,
+      firstImage: additionalImages[0],
+      allImages: additionalImages,
+      availablePacks: Object.keys(packImages)
+    });
+    
+    const finalPack = {
       ...pack,
       images: [
-        pack.cover_url,  // Keep the S3 cover image
-        ...additionalImages  // Add our local pack images
+        pack.cover_url,
+        ...additionalImages
       ]
+    };
+    
+    // Debug final pack
+    console.log('4. Final Pack:', {
+      title: finalPack.title,
+      slug: finalPack.slug,
+      normalizedSlug,
+      totalImages: finalPack.images.length,
+      allImages: finalPack.images
     });
+    
+    setSelectedPack(finalPack);
   };
 
   const groupedPacks = groupPacksByCategory(packs);

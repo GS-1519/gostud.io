@@ -12,16 +12,15 @@ import { useRouter, usePathname } from 'next/navigation';
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 import ClientSideModelsList from "@/components/realtime/ClientSideModelsList";
 import { Database } from '@/types/supabase';
-import { useCallback, useState } from 'react';
+import { useCallback, useState, useEffect } from 'react';
 import { User } from '@supabase/supabase-js';
 
-type ClientContentProps = {
-  models: Array<Database['public']['Tables']['models']['Row'] & {
-    samples: Database['public']['Tables']['samples']['Row'][]
-  }>;
+interface ClientContentProps {
+  models: any[];
   trainModelUrl: string;
-  user: User;
-};
+  user: any;
+  handleRedirect?: boolean;
+}
 
 function Sidebar({ user, isOpen, onClose }: { user: User; isOpen: boolean; onClose: () => void }) {
   const router = useRouter();
@@ -115,8 +114,25 @@ function Sidebar({ user, isOpen, onClose }: { user: User; isOpen: boolean; onClo
   );
 }
 
-export default function ClientContent({ models, trainModelUrl, user }: ClientContentProps) {
+export default function ClientContent({ models, trainModelUrl, user, handleRedirect }: ClientContentProps) {
+  const router = useRouter();
   const [isSidebarOpen, setSidebarOpen] = useState(false);
+
+  useEffect(() => {
+    if (handleRedirect) {
+      const intendedPack = localStorage.getItem('intendedPack');
+      if (intendedPack) {
+        try {
+          const packData = JSON.parse(intendedPack);
+          if (packData.redirect) {
+            router.push('/overview/packs');
+          }
+        } catch (error) {
+          console.error('Error handling redirect:', error);
+        }
+      }
+    }
+  }, [handleRedirect, router]);
 
   return (
     <div className="flex h-screen bg-white">

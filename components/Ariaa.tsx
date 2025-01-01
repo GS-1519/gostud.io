@@ -32,7 +32,7 @@ const Ariaa = () => {
 
       {/* Button - Adjusted position */}
       <div className="absolute bottom-12 md:bottom-8 left-1/2 transform -translate-x-1/2 z-10">
-        <Link href="/overview">
+        <Link href="/login">
           <Button 
             className="bg-[#5B16FE] hover:bg-[#4F46E5] text-white px-8 py-3 rounded-full
                      flex items-center gap-2 group"

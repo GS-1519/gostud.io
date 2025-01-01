@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface WhyProps {
   imageSet: string;
@@ -111,13 +112,14 @@ const WhySection = () => {
             </svg>
           </button>
         </div>
-
+        <Link href="/login">
         <button className="w-full bg-[#7C3AED] text-white rounded-full py-3 flex items-center justify-center gap-2">
           Try Now
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
             <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
         </button>
+        </Link>
       </div>
 
       {/* Desktop Version */}
@@ -183,7 +185,7 @@ const WhySection = () => {
             </div>
           </div>
         </div>
-
+        <Link href="/login">
         <div className="flex justify-center mt-12">
           <button className="w-[269px] h-[48px] bg-[#5B16FE] text-white rounded-[49px] px-[25px] py-[12px] flex items-center justify-center gap-[10px] font-poppins">
             Try Now
@@ -192,6 +194,7 @@ const WhySection = () => {
             </svg>
           </button>
         </div>
+        </Link>
       </div>
     </div>
   );

@@ -1,10 +1,11 @@
 'use client'
+import { useRouter } from 'next/navigation'
 import { useState } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import { ChevronDown, ChevronUp, Wand2 } from 'lucide-react';
 
 const SpeakerHeadshotHero = () => {
+  const router = useRouter();
   const [activeCategory, setActiveCategory] = useState('all');
   const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
   const [showAll, setShowAll] = useState(false);
@@ -61,6 +62,18 @@ const SpeakerHeadshotHero = () => {
   };
 
   const displayImages = getDisplayImages();
+
+  const handleGenerateMore = () => {
+    // Store the pack info in localStorage before redirecting
+    localStorage.setItem('intendedPack', JSON.stringify({
+      type: 'speaker',
+      path: '/headshot-packs/ted-speaker-headshot',
+      redirect: true
+    }));
+    
+    // Redirect to login
+    router.push('/login');
+  };
 
   return (
     <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-24">
@@ -132,14 +145,13 @@ const SpeakerHeadshotHero = () => {
             )}
           </button>
         ) : (
-          <Link href="/login">
-            <button 
-              className="group flex items-center gap-2 px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105 text-white bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4] hover:opacity-90"
-            >
-              Generate More
-              <Wand2 className="w-5 h-5 transition-transform group-hover:rotate-45" />
-            </button>
-          </Link>
+          <button 
+            onClick={handleGenerateMore}
+            className="group flex items-center gap-2 px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105 text-white bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4] hover:opacity-90"
+          >
+            Generate More
+            <Wand2 className="w-5 h-5 transition-transform group-hover:rotate-45" />
+          </button>
         )}
       </div>
 

@@ -66,12 +66,14 @@ const HeadshotSteps = () => {
               <p className="text-gray-600 text-base leading-relaxed mb-8">
                 Upload a few photos of yourself to let AI learn about you.
               </p>
+              <Link href="/login" className="block">
               <button className="w-[269px] h-[48px] rounded-[37px] bg-[#5B16FE] hover:bg-[#4912d0] text-white px-[25px] py-[12px] font-medium flex items-center justify-center gap-[10px]">
                 <span>Try Now</span>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </button>
+              </Link>
             </div>
           </div>
 

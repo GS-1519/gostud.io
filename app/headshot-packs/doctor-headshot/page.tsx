@@ -10,6 +10,7 @@ import Footer from "@/components/Footer";
 import Banner from "@/components/Banner";
 import DoctorHero from "@/components/DoctorHero";
 import DoctorHeadshotHero from "@/components/Doctor-Headshots";
+import ClientRedirect from "@/components/ClientRedirect";
 
 export const dynamic = "force-dynamic";
 
@@ -38,7 +39,7 @@ export default async function DoctorPhotos() {
   } = await supabase.auth.getUser();
 
   if (user) {
-    return redirect("/overview");
+    return <ClientRedirect />;
   }
 
   return (

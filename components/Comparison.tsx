@@ -98,12 +98,14 @@ const ComparisonPage = () => {
             </div>
 
             {/* Button */}
+            <Link href="/login">
             <button className="w-full bg-[#5B16FE] text-white rounded-[100px] h-[56px] mt-8 flex items-center justify-center gap-2 text-[16px] font-medium px-8">
               Explore More
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M13.5 19L20.5 12L13.5 5M3.5 12H20.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </button>
+            </Link>
           </div>
         </div>
       </div>

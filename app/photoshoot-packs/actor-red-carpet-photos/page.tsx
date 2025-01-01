@@ -1,6 +1,7 @@
 import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
+import ClientRedirect from "@/components/ClientRedirect";
 
 import type { Metadata } from 'next'
 import Works from "@/components/Works";
@@ -33,15 +34,12 @@ export const metadata: Metadata = {
   }
 }
 
-export default async function LinkedInPhotos() {
+export default async function RedCarpetPage() {
   const supabase = createServerComponentClient({ cookies });
-
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
+  const { data: { user } } = await supabase.auth.getUser();
 
   if (user) {
-    return redirect("/overview");
+    return <ClientRedirect />;
   }
 
   return (

@@ -11,6 +11,7 @@ import ExplainerSection from "@/components/ExplainerSection";
 
 import YoutubeHero from "@/components/YoutubeHero";
 import YoutubeHeadshotHero from "@/components/Youtube-Headshots";
+import ClientRedirect from "@/components/ClientRedirect";
 
 export const dynamic = "force-dynamic";
 
@@ -39,7 +40,7 @@ export default async function DoctorPhotos() {
   } = await supabase.auth.getUser();
 
   if (user) {
-    return redirect("/overview");
+    return <ClientRedirect />;
   }
 
   return (

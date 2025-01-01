@@ -472,9 +472,8 @@ const SummaryPage: React.FC = () => {
         .forEach(key => localStorage.removeItem(key));
 
       toast.success('Model data submitted successfully');
-      router.refresh();
-      // Use replace instead of push to prevent back navigation
-      router.push('/overview');
+      
+      window.location.href = '/overview';
 
     } catch (error: any) {
       console.error('Error submitting model data:', error);

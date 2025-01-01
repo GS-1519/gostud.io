@@ -58,7 +58,7 @@ const ImageSlider: React.FC<{ images: PackImage[] }> = ({ images }) => {
                       onLoad={() => setImagesLoaded(prev => prev + 1)}
                       onError={(e) => {
                         console.error(`Failed to load image: ${img.src}`);
-                        e.currentTarget.src = "https://www.astria.ai/assets/logo-b4e21f646fb5879eb91113a70eae015a7413de8920960799acb72c60ad4eaa99.png"; // Use Astria's default logo as fallback
+                        e.currentTarget.src = "https://www.astria.ai/assets/logo-b4e21f646fb5879eb91113a70eae015a7413de8920960799acb72c60ad4eaa99.png";
                       }}
                     />
                   </div>
@@ -94,7 +94,7 @@ const ImageSlider: React.FC<{ images: PackImage[] }> = ({ images }) => {
                       onLoad={() => setImagesLoaded(prev => prev + 1)}
                       onError={(e) => {
                         console.error(`Failed to load image: ${img.src}`);
-                        e.currentTarget.src = "https://www.astria.ai/assets/logo-b4e21f646fb5879eb91113a70eae015a7413de8920960799acb72c60ad4eaa99.png"; // Use Astria's default logo as fallback
+                        e.currentTarget.src = "https://www.astria.ai/assets/logo-b4e21f646fb5879eb91113a70eae015a7413de8920960799acb72c60ad4eaa99.png";
                       }}
                     />
                   </div>

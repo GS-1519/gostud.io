@@ -1,6 +1,6 @@
 import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
-import { redirect } from "next/navigation";
+import ClientRedirect from "@/components/ClientRedirect";
 import type { Metadata } from 'next'
 
 
@@ -31,31 +31,28 @@ export const metadata: Metadata = {
   },
 }
 
-export default async function DoctorPhotos() {
+export default async function BusinessCasualHeadshots() {
   const supabase = createServerComponentClient({ cookies });
-
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
+  const { data: { user } } = await supabase.auth.getUser();
 
   if (user) {
-    return redirect("/overview");
+    return <ClientRedirect />;
   }
 
   return (
     <div className="w-full bg-[#F4F7FA] min-h-screen font-poppins">
-    <div>
-      <div id="ai-headshots" className="w-full">
-        <JcrewHero/>
-      </div>
       <div>
-        <ExplainerSection />
-        <JcrewHeadshotHero />
-        <ReviewSection />
-        <Banner />
-        <Footer/>
+        <div id="ai-headshots" className="w-full">
+          <JcrewHero />
+        </div>
+        <div>
+          <ExplainerSection />
+          <JcrewHeadshotHero />
+          <ReviewSection />
+          <Banner />
+          <Footer/>
+        </div>
       </div>
     </div>
-  </div>
   );
 }

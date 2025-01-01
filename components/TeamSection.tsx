@@ -121,7 +121,7 @@ const TeamSection = () => {
 
         {/* Try Now Button */}
         <div className="flex justify-center mt-8">
-          <Link href="/try-now">
+          <Link href="/login">
             <button 
               className="w-[269px] h-[48px] rounded-[49px] flex items-center justify-center gap-[10px] hover:opacity-90 transition-opacity text-[16px] leading-[24px] font-medium text-white bg-[#5B16FE]"
               style={{

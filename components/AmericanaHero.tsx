@@ -1,11 +1,28 @@
+'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
 import lock from "@/public/logo/lock.svg"
 import circul from "@/public/logo/circul.svg"
 import mdi from "@/public/logo/mdi.svg"
 import tick from "@/public/logo/tick.svg"
+import { useRouter } from 'next/navigation'
 
 const AmericanaHero = () => {
+  const router = useRouter()
+
+  const handleCreateClassic = () => {
+    // Store the intended pack type in localStorage
+    localStorage.setItem('intendedPack', JSON.stringify({
+      type: 'americana',
+      path: '/photoshoot-packs/vintage-americana-photos',
+      redirect: true
+    }))
+    
+    // Redirect to login
+    router.push('/login')
+  }
+
   return (
     <div className="relative overflow-hidden">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -55,7 +72,10 @@ const AmericanaHero = () => {
               </div>
 
               <div className="mt-4 sm:mt-6 flex justify-center lg:justify-start">
-                <button className="w-fit rounded-full bg-[#5B16FE] px-2.5 py-1.5 sm:px-4 sm:py-2.5 lg:px-6 lg:py-3 text-xs sm:text-sm lg:text-base text-white flex items-center justify-center sm:inline-flex gap-2 hover:bg-opacity-90 transition-all">
+                <button 
+                  onClick={handleCreateClassic}
+                  className="w-fit rounded-full bg-[#5B16FE] px-2.5 py-1.5 sm:px-4 sm:py-2.5 lg:px-6 lg:py-3 text-xs sm:text-sm lg:text-base text-white flex items-center justify-center sm:inline-flex gap-2 hover:bg-opacity-90 transition-all"
+                >
                   Create Your Classic
                   <span className="ml-1 sm:ml-2">→</span>
                 </button>

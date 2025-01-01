@@ -1,6 +1,6 @@
 import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
-import { redirect } from "next/navigation";
+import ClientRedirect from "@/components/ClientRedirect";
 import DatingHero  from "@/components/DatingHero";
 import type { Metadata } from 'next'
 import Works from "@/components/Works";
@@ -33,15 +33,12 @@ export const metadata: Metadata = {
   }
 }
 
-export default async function LinkedInPhotos() {
+export default async function VikingPhotos() {
   const supabase = createServerComponentClient({ cookies });
-
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
+  const { data: { user } } = await supabase.auth.getUser();
 
   if (user) {
-    return redirect("/overview");
+    return <ClientRedirect />;
   }
 
   return (
@@ -52,7 +49,7 @@ export default async function LinkedInPhotos() {
         </div>
         <div>
           <ExplainerSection />
-          <VikingHeadshotHero/>
+          <VikingHeadshotHero />
           <ReviewSection />
           <Banner />
           <Footer/>

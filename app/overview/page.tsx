@@ -28,19 +28,12 @@ async function getData() {
       cookies: () => cookieStore
     });
 
-    // Use getUser instead of getSession
     const { data: { user }, error: authError } = await supabase.auth.getUser();
 
-    if (authError) {
-      console.error("Authentication error:", authError);
+    if (authError || !user) {
       return { redirect: '/login' };
     }
 
-    if (!user) {
-      return { redirect: '/login' };
-    }
-
-    // Fetch models using the authenticated user's ID
     const { data: models, error: modelsError } = await supabase
       .from('models')
       .select('*, samples(*)')
@@ -53,7 +46,7 @@ async function getData() {
 
     return {
       models: models || [],
-      user,  // Pass the authenticated user
+      user,
       trainModelUrl: "/overview/packs",
       currentPath: headersList.get("x-invoke-path") || ""
     };
@@ -78,6 +71,7 @@ export default async function OverviewPage() {
           models={data.models}
           trainModelUrl={data.trainModelUrl || ''}
           user={data.user}
+          handleRedirect={true}
         />
       </Suspense>
     );

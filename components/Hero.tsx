@@ -177,7 +177,7 @@ export default function Hero() {
               <FeatureItem Icon={tick} text="Money-back" />
             </div>
 
-            <Link href="/get-started" className="block">
+            <Link href="/login" className="block">
               <button className="w-full bg-[#7C3AED] hover:bg-[#6D28D9] text-white rounded-full py-3.5 font-poppins text-base transition-colors">
                 Try Now →
               </button>
@@ -230,7 +230,7 @@ export default function Hero() {
                 <FeatureItem Icon={tick} text="Moneyback Guarantee" />
               </div>
 
-              <Link href="/get-started">
+              <Link href="/login">
                 <button className="bg-[#5B16FE] hover:bg-[#4F46E5] text-white rounded-full px-8 py-4 font-poppins text-base leading-6 transition-colors">
                   Get Started Now →
                 </button>

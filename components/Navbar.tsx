@@ -147,9 +147,9 @@ const Navbar: React.FC = () => {
 
         {/* Mobile Navigation Menu */}
         {!user && isMenuOpen && (
-          <div className="lg:hidden w-full bg-white backdrop-blur-lg bg-opacity-80 shadow-lg border-b border-gray-100 py-3">
-            <div className="px-4 pt-2 pb-3 space-y-1">
-              <NavItems isMobile />
+          <div className="lg:hidden fixed top-16 left-0 right-0 w-full bg-white backdrop-blur-lg bg-opacity-95 shadow-lg border-b border-gray-100 py-3 max-h-[calc(100vh-64px)] overflow-y-auto">
+            <div className="px-4 pt-2 pb-3">
+              <NavItems isMobile user={user} />
             </div>
           </div>
         )}

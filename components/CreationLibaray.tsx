@@ -113,7 +113,7 @@ const Gallery = () => {
 
         {/* Create Headshot Button */}
         <div className="flex justify-center mt-8 mb-0">
-          <Link href="/create" className="w-full sm:w-auto">
+          <Link href="/login" className="w-full sm:w-auto">
             <button 
               className="w-full sm:w-auto px-4 sm:px-6 py-3 text-white rounded-full flex items-center justify-center gap-2 hover:opacity-90 transition-opacity font-poppins font-medium"
               style={{

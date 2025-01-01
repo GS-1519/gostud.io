@@ -18,6 +18,7 @@ import BrandsPage from "@/components/BrandPage";
 import TeamSection from "@/components/TeamSection";
 import Ariaa from "@/components/Ariaa";
 import { Pricing } from "@/components/home/pricing/pricing";
+import ClientRedirect from "@/components/ClientRedirect"; 
 
 
 export const dynamic = "force-dynamic";
@@ -39,12 +40,13 @@ export default async function Home() {
   const supabase = createServerComponentClient({ 
     cookies: () => cookieStore 
   });
+  
   const {
     data: { user },
   } = await supabase.auth.getUser();
 
   if (user) {
-    return redirect("/overview");
+    return <ClientRedirect />;
   }
 
   const jsonLd = {

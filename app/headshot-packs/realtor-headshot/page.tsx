@@ -12,6 +12,7 @@ import ExplainerSection from "@/components/ExplainerSection";
 
 import RealtorHero from "@/components/RealtorHero";
 import RealtorHeadshotHero from "@/components/Realtor-Headshots";
+import ClientRedirect from "@/components/ClientRedirect";
 
 export const dynamic = "force-dynamic";
 
@@ -40,7 +41,7 @@ export default async function DoctorPhotos() {
   } = await supabase.auth.getUser();
 
   if (user) {
-    return redirect("/overview");
+    return <ClientRedirect />;
   }
 
   return (
