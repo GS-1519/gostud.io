@@ -5,6 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Footer from "@/components/Footer"
 import Banner from "@/components/Banner"
+import WhySection from '@/components/Why'
 
 // Types
 interface City {
@@ -97,9 +98,167 @@ const countryData: CountryDataMap = {
   // Add other countries here
 }
 
+// US Cities Data
+const usaCities: City[] = [
+  {
+    name: "New York",
+    population: "8.8M",
+    image: "/cities/new-york.jpg",
+    description: "New York, a city with 8.8M habitants. See the top headshot studios by customers reviews.",
+    link: "/near-me/united-states/new-york"
+  },
+  {
+    name: "Los Angeles",
+    population: "3.9M",
+    image: "/cities/los-angeles.jpg",
+    description: "Los Angeles, a city with 3.9M habitants. See the top headshot studios by customers reviews.",
+    link: "/near-me/united-states/los-angeles"
+  },
+  {
+    name: "Chicago",
+    population: "2.7M",
+    image: "/cities/chicago.jpg",
+    description: "Chicago, a city with 2.7M habitants. See the top headshot studios by customers reviews.",
+    link: "/near-me/united-states/chicago"
+  },
+  {
+    name: "Brooklyn",
+    population: "2.7M",
+    image: "/cities/brooklyn.jpg",
+    description: "Brooklyn, a city with 2.7M habitants. See the top headshot studios by customers reviews.",
+    link: "/near-me/united-states/brooklyn"
+  },
+  {
+    name: "Houston",
+    population: "2.3M",
+    image: "/cities/houston.jpg",
+    description: "Houston, a city with 2.3M habitants. See the top headshot studios by customers reviews.",
+    link: "/near-me/united-states/houston"
+  },
+  {
+    name: "Queens",
+    population: "2.3M",
+    image: "/cities/queens.jpg",
+    description: "Queens, a city with 2.3M habitants. See the top headshot studios by customers reviews.",
+    link: "/near-me/united-states/queens"
+  },
+  {
+    name: "Phoenix",
+    population: "1.6M",
+    image: "/cities/phoenix.jpg",
+    description: "Phoenix, a city with 1.6M habitants. See the top headshot studios by customers reviews.",
+    link: "/near-me/united-states/phoenix"
+  },
+  {
+    name: "Philadelphia",
+    population: "1.6M",
+    image: "/cities/philadelphia.jpg",
+    description: "Philadelphia, a city with 1.6M habitants. See the top headshot studios by customers reviews.",
+    link: "/near-me/united-states/philadelphia"
+  }
+];
+
+
+
+// Nearby Countries Data Structure
+interface NearbyCountry {
+  name: string;
+  image: string;
+  description: string;
+  link: string;
+}
+
+// All countries in one place
+const countryRelations: { [key: string]: NearbyCountry[] } = {
+  'united-states': [
+    {
+      name: "Mexico",
+      image: "/countries/mexico.jpg",
+      description: "Mexico, a country renowned for its vibrant culture, breathtaking landscapes, and warm-hearted people. Whether you're a...",
+      link: "/near-me/mexico"
+    },
+    {
+      name: "Canada",
+      image: "/countries/canada.jpg",
+      description: "Discover top headshot photographers in Canada",
+      link: "/near-me/canada"
+    },
+    {
+      name: "Brazil",
+      image: "/countries/brazil.jpg",
+      description: "Brazil, a vibrant country brimming with diverse landscapes, rich culture, and warm-hearted people. Whether you're a professional.....",
+      link: "/near-me/brazil"
+    },
+    {
+      name: "United Kingdom",
+      image: "/countries/uk.jpg",
+      description: "Find professional headshot studios in the UK",
+      link: "/near-me/united-kingdom"
+    },
+    {
+      name: "Australia",
+      image: "/countries/australia.jpg",
+      description: "Explore professional headshot services across Australia's vibrant cities...",
+      link: "/near-me/australia"
+    },
+    {
+      name: "France",
+      image: "/countries/france.jpg",
+      description: "Discover elegant headshot photography in the heart of Europe...",
+      link: "/near-me/france"
+    }
+  ],
+  // Add more country relations...
+}
+
+// Single Carousel Component
+const CountryCarousel = ({ country }: { country: string }) => {
+  const nearbyCountries = countryRelations[country] || []
+
+  return (
+    <div className="mt-16">
+      <div className="text-center mb-8">
+        <span className="text-[#8371FF] text-lg">
+          Discover more Headshot Photographers in countries near {country.replace('-', ' ')}
+        </span>
+        <h2 className="text-3xl font-bold mt-4">
+          Other countries close to {country.replace('-', ' ')}
+        </h2>
+      </div>
+
+      <div className="flex overflow-x-auto gap-6 pb-4 scrollbar-hide">
+        {nearbyCountries.map((nearCountry, index) => (
+          <Link
+            key={index}
+            href={nearCountry.link}
+            className="flex-shrink-0 w-[300px] group"
+          >
+            <div className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
+              <div className="relative h-[200px]">
+                <Image
+                  src={nearCountry.image}
+                  alt={`${nearCountry.name} Photography`}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, 300px"
+                />
+              </div>
+              <div className="p-4">
+                <h3 className="text-xl font-semibold mb-2">{nearCountry.name}</h3>
+                <p className="text-gray-600 text-sm line-clamp-3">{nearCountry.description}</p>
+              </div>
+            </div>
+          </Link>
+        ))}
+      </div>
+    </div>
+  )
+}
+
 export default function CountryPage({ params }: Props) {
   const country = params.country.toLowerCase().replace(' ', '-')
   const data = countryData[country]
+  const nearbyCountries = countryRelations[country] || []
 
   if (!data) {
     return (
@@ -141,55 +300,73 @@ export default function CountryPage({ params }: Props) {
             </p>
           </div>
 
-          {/* Cities Grid */}
-          <div>
-            <h2 className="text-2xl font-bold mb-6">{data.subtitle}</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {data.cities.map((city) => (
-                <Link 
-                  href={city.link}
-                  key={city.name}
-                  className="block group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300"
+          {/* City Cards Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            {usaCities.map((city, index) => (
+              <Link 
+                key={index}
+                href={city.link}
+                className="block group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300"
+              >
+                <div className="relative h-48">
+                  <Image
+                    src={city.image}
+                    alt={`${city.name} Headshot Studios`}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                  />
+                </div>
+                <div className="p-4">
+                  <h3 className="text-xl font-semibold mb-2">{city.name}</h3>
+                  <p className="text-gray-600 text-sm">{city.description}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
+                   {/* Why Choose Section */}
+          <WhySection country={country.replace('-', ' ')} />
+
+          {/* Similar Countries Carousel */}
+          <div className="mb-16">
+            <h2 className="text-2xl font-bold mb-6">Explore Nearby Countries</h2>
+            <div className="flex overflow-x-auto gap-6 pb-4 scrollbar-hide">
+              {countryRelations[country] && countryRelations[country].map((country, index) => (
+                <Link
+                  key={index}
+                  href={country.link}
+                  className="flex-shrink-0 w-72 group"
                 >
-                  <div className="aspect-[4/3] relative">
-                    <Image
-                      src={city.image}
-                      alt={`${city.name} Professional Headshot Studios`}
-                      fill
-                      className="object-cover transition-transform group-hover:scale-105 duration-300"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                  </div>
-                  <div className="p-4">
-                    <h3 className="text-xl font-bold text-gray-900">{city.name}</h3>
-                    <p className="text-sm text-gray-600 mt-1">{city.population} inhabitants</p>
-                    <p className="text-sm text-gray-600 mt-2">{city.description}</p>
+                  <div className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300">
+                    <div className="relative h-40">
+                      <Image
+                        src={country.image}
+                        alt={country.name}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+                    <div className="p-4">
+                      <h3 className="text-lg font-semibold mb-1">{country.name}</h3>
+                      <p className="text-gray-600 text-sm">{country.description}</p>
+                    </div>
                   </div>
                 </Link>
               ))}
             </div>
           </div>
 
-          {/* Why Choose Section */}
-          <div className="bg-white rounded-xl p-8 shadow-sm">
-            <h2 className="text-2xl font-bold mb-6">
-              Why Choose GoStudio in {country.replace('-', ' ')}?
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="space-y-2">
-                <div className="text-[#8371FF] text-xl font-bold">Professional Quality</div>
-                <p className="text-gray-600">Expert photographers with years of experience in professional headshots</p>
-              </div>
-              <div className="space-y-2">
-                <div className="text-[#8371FF] text-xl font-bold">AI Enhancement</div>
-                <p className="text-gray-600">State-of-the-art AI technology ensures perfect results every time</p>
-              </div>
-              <div className="space-y-2">
-                <div className="text-[#8371FF] text-xl font-bold">Quick Delivery</div>
-                <p className="text-gray-600">Same-day delivery available for most headshot sessions</p>
-              </div>
+          {/* Only Carousel Section */}
+        
+          {/* Blog Section */}
+          <div className="mt-24">
+            <div className="text-center">
+              <span className="text-[#8371FF] text-lg">Headshot Photography Blogs</span>
+              <h2 className="text-3xl font-bold mt-4 mb-12">
+                Read more about headshot photography
+              </h2>
             </div>
+            {/* Add your blog cards here */}
           </div>
 
           <Banner />

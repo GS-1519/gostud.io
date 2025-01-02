@@ -31,7 +31,23 @@ const Gallery = () => {
     { src: '/Packs/Doctor-photos/Women/women1.jpg', isLarge: true, alt: 'Professional headshot 10' },
     { src: '/Packs/Botnical-photos/Women/women1.jpg', isLarge: true, alt: 'Professional headshot 10' },
     { src: '/Packs/Botnical-photos/Women/women6.jpg', isLarge: true, alt: 'Professional headshot 10' },
+    { src: '/Packs/Redcarpat-photos/Man/man2.jpg', isLarge: true, alt: 'Professional headshot 10' },
+    { src: '/Packs/Redcarpat-photos/Man/man3.jpg', isLarge: true, alt: 'Professional headshot 10' },
+    { src: '/Packs/Americana-photos/Man/man2.jpg', isLarge: true, alt: 'Professional headshot 10' },
     { src: '/Packs/Botnical-photos/Man/man2.jpg', isLarge: true, alt: 'Professional headshot 10' },
+    { src: '/Packs/Americana-photos/Man/man3.jpg', isLarge: true, alt: 'Professional headshot 10' },
+    { src: '/Packs/Dating-photo/Man/man2.jpg', isLarge: true, alt: 'Professional headshot 10' },
+    { src: '/Packs/Dating-photo/Man/man3.jpg', isLarge: true, alt: 'Professional headshot 10' },
+    { src: '/Packs/Dating-photo/Women/women3.jpg', isLarge: true, alt: 'Professional headshot 10' },
+    { src: '/Packs/Dating-photo/Women/women5.jpg', isLarge: true, alt: 'Professional headshot 10' },
+    { src: '/Packs/Fitness-photos/Women/women5.jpg', isLarge: true, alt: 'Professional headshot 10' },
+    { src: '/Packs/Tattos-photos/Women/women5.jpg', isLarge: true, alt: 'Professional headshot 10' },
+    { src: '/Packs/Halloween-photos/Women/women5.jpg', isLarge: true, alt: 'Professional headshot 10' },
+    { src: '/Packs/Gamesofthrones-photos/Man/man5.jpg', isLarge: true, alt: 'Professional headshot 10' },
+    { src: '/Packs/Helmut-photos/Man/man5.jpg', isLarge: true, alt: 'Professional headshot 10' },
+    { src: '/Packs/Jcrew-photos/Man/man5.jpg', isLarge: true, alt: 'Professional headshot 10' },
+    { src: '/Packs/Kidsbirthday-photos/Girls/girls5.jpg', isLarge: true, alt: 'Professional headshot 10' },
+    { src: '/Packs/Wreslemania-photos/Man/man5.jpg', isLarge: true, alt: 'Professional headshot 10' },
     
   ];
 

@@ -1,5 +1,12 @@
 import { NextResponse } from 'next/server';
-import sharp from 'sharp';
+import { v2 as cloudinary } from 'cloudinary';
+
+// Configure Cloudinary
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
+});
 
 export async function POST(request: Request) {
   try {
@@ -13,18 +20,29 @@ export async function POST(request: Request) {
       );
     }
 
-    // Convert file to buffer
+    // Convert file to base64
     const buffer = await file.arrayBuffer();
+    const base64Image = Buffer.from(buffer).toString('base64');
+    const dataURI = `data:${file.type};base64,${base64Image}`;
 
     try {
-      // Use sharp for face detection and cropping
-      const processedBuffer = await sharp(Buffer.from(buffer))
-        .resize(800, 800, {
-          fit: 'cover',
-          position: 'attention' // This uses face detection
-        })
-        .jpeg({ quality: 90 })
-        .toBuffer();
+      // Upload to Cloudinary with face detection and cropping
+      const result = await cloudinary.uploader.upload(dataURI, {
+        // Use face detection for cropping
+        gravity: "face", // This will focus on the largest face
+        crop: "thumb", // Use thumbnail crop mode
+        width: 800,
+        height: 800,
+        zoom: "0.7", // Zoom out slightly to include more context
+        quality: 90,
+      });
+
+      // Fetch the processed image
+      const response = await fetch(result.secure_url);
+      const processedBuffer = await response.arrayBuffer();
+
+      // Delete the uploaded image from Cloudinary
+      await cloudinary.uploader.destroy(result.public_id);
 
       return new NextResponse(processedBuffer, {
         headers: {

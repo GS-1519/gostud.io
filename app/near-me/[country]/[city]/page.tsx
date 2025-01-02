@@ -1,9 +1,8 @@
 import { Metadata } from 'next'
-import Image from 'next/image'
-import Link from 'next/link'
+import CityTemplate from '@/components/templates/CityTemplate'
 import Footer from "@/components/Footer"
 import Banner from "@/components/Banner"
-import { Star, MapPin, Clock, Camera, Award } from 'lucide-react'
+import Link from 'next/link'
 
 interface Studio {
   name: string;
@@ -41,6 +40,63 @@ interface Props {
 }
 
 const cityData: CityDataMap = {
+  "new-york": {
+    title: "Top 10 New York Best Professional Headshot Studios",
+    description: "Discover the best professional headshot photographers in New York",
+    longDescription: "Welcome to New York's premier collection of professional headshot studios. Our curated list features the city's most talented photographers, specializing in corporate headshots, actor portfolios, and professional portraits. Each studio has been carefully selected based on quality, customer satisfaction, and expertise.",
+    features: [
+      {
+        title: "Expert Photographers",
+        description: "Award-winning photographers with decades of experience"
+      },
+      {
+        title: "Prime Locations",
+        description: "Conveniently located studios across Manhattan"
+      },
+      {
+        title: "Industry Standard",
+        description: "State-of-the-art equipment and techniques"
+      }
+    ],
+    studios: [
+      {
+        name: "Manhattan Headshots",
+        rating: 4.9,
+        reviews: 285,
+        price: "$299",
+        image: "/studios/new-york/studio1.jpg",
+        specialties: ["Corporate Headshots", "Actor Headshots", "Model Portfolios"],
+        location: "Midtown Manhattan",
+        description: "Premium headshot studio in the heart of NYC",
+        features: ["Natural Lighting", "Multiple Backdrops", "Professional Makeup"],
+        availability: "Mon-Sat: 9AM-7PM"
+      },
+      {
+        name: "Broadway Portraits",
+        rating: 4.8,
+        reviews: 173,
+        price: "$249",
+        image: "/studios/new-york/studio2.jpg",
+        specialties: ["Theater Headshots", "Commercial Portraits", "Professional Headshots"],
+        location: "Theater District",
+        description: "Specialized in theatrical and commercial headshots",
+        features: ["Theater Lighting", "Quick Turnaround", "Retouching Included"],
+        availability: "Tue-Sun: 10AM-8PM"
+      },
+      {
+        name: "Wall Street Studios",
+        rating: 4.9,
+        reviews: 156,
+        price: "$349",
+        image: "/studios/new-york/studio3.jpg",
+        specialties: ["Executive Portraits", "LinkedIn Photos", "Team Photos"],
+        location: "Financial District",
+        description: "Corporate headshot specialists",
+        features: ["Corporate Setting", "Same-Day Delivery", "Group Discounts"],
+        availability: "Mon-Fri: 8AM-6PM"
+      }
+    ]
+  },
   yokohama: {
     title: "Top 10 Yokohama Best Professional Headshot Studios",
     description: "Discover the best professional headshot photographers in Yokohama",
@@ -132,131 +188,23 @@ export default function CityPage({ params }: Props) {
     )
   }
 
+  const nearbyItems = {
+    title: `Other cities close to ${city}`,
+    subtitle: `Discover more Headshot Photographers in cities near ${city}`,
+    items: [/* Your nearby cities data */]
+  }
+
   return (
-    <div className="w-full bg-[#F4F7FA] min-h-screen font-poppins">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-[82px]">
-        <div className="w-full max-w-[1276px] mx-auto space-y-12 py-16">
-          {/* Breadcrumb */}
-          <div className="flex items-center gap-2 text-sm text-gray-600">
-            <Link href="/near-me" className="hover:text-[#8371FF]">Near Me</Link>
-            <span>›</span>
-            <Link href={`/near-me/${params.country}`} className="hover:text-[#8371FF] capitalize">
-              {params.country}
-            </Link>
-            <span>›</span>
-            <span className="capitalize">{params.city}</span>
-          </div>
-
-          {/* Hero Section */}
-          <div className="space-y-6">
-            <h1 className="text-4xl sm:text-5xl font-bold">
-              <span className="bg-gradient-to-r from-[#8371FF] to-[#A077FE] bg-clip-text text-transparent">
-                {data.title}
-              </span>
-            </h1>
-            <p className="text-lg text-gray-600 max-w-3xl">
-              {data.longDescription}
-            </p>
-
-            {/* Features Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-              {data.features.map((feature) => (
-                <div key={feature.title} className="bg-white rounded-xl p-6 shadow-sm">
-                  <h3 className="text-lg font-bold mb-2">{feature.title}</h3>
-                  <p className="text-gray-600">{feature.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Studios List */}
-          <div className="space-y-6">
-            {data.studios.map((studio, index) => (
-              <div 
-                key={studio.name}
-                className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300"
-              >
-                <div className="flex flex-col md:flex-row gap-6">
-                  <div className="w-full md:w-1/3">
-                    <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
-                      <Image
-                        src={studio.image}
-                        alt={studio.name}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex items-start justify-between mb-4">
-                      <div>
-                        <h3 className="text-xl font-bold">{studio.name}</h3>
-                        <div className="flex items-center gap-2 text-gray-600">
-                          <MapPin className="w-4 h-4" />
-                          <p>{studio.location}</p>
-                        </div>
-                      </div>
-                      <div className="text-right">
-                        <div className="text-2xl font-bold text-[#8371FF]">{studio.price}</div>
-                        <div className="text-sm text-gray-600">per session</div>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-center gap-2 mb-4">
-                      <Star className="w-5 h-5 text-yellow-400 fill-current" />
-                      <div className="font-medium">{studio.rating}</div>
-                      <div className="text-gray-600">({studio.reviews} reviews)</div>
-                    </div>
-
-                    <p className="text-gray-600 mb-4">{studio.description}</p>
-
-                    <div className="flex items-center gap-2 text-gray-600 mb-4">
-                      <Clock className="w-4 h-4" />
-                      <span>{studio.availability}</span>
-                    </div>
-
-                    <div className="flex flex-wrap gap-2">
-                      {studio.specialties.map((specialty) => (
-                        <span 
-                          key={specialty}
-                          className="px-3 py-1 bg-[#F4F7FA] rounded-full text-sm text-gray-600"
-                        >
-                          {specialty}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Why Choose Section */}
-          <div className="bg-white rounded-xl p-8 shadow-sm">
-            <h2 className="text-2xl font-bold mb-6">
-              Why Choose GoStudio in {params.city}?
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="space-y-2">
-                <div className="text-[#8371FF] text-xl font-bold">Local Expertise</div>
-                <p className="text-gray-600">Photographers who know the best spots in {params.city}</p>
-              </div>
-              <div className="space-y-2">
-                <div className="text-[#8371FF] text-xl font-bold">Quality Guaranteed</div>
-                <p className="text-gray-600">AI-enhanced photos with perfect results</p>
-              </div>
-              <div className="space-y-2">
-                <div className="text-[#8371FF] text-xl font-bold">Fast Delivery</div>
-                <p className="text-gray-600">Get your photos within 24 hours</p>
-              </div>
-            </div>
-          </div>
-
-          <Banner />
-        </div>
-      </div>
+    <>
+      <CityTemplate
+        city={params.city}
+        country={params.country}
+        pageData={data}
+        nearbyItems={nearbyItems}
+      />
+      <Banner />
       <Footer />
-    </div>
+    </>
   )
 }
 

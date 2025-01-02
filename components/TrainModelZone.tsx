@@ -98,6 +98,12 @@ const TrainModelZone: React.FC<TrainModelZoneProps> = ({ packSlug, onContinue, u
         
         const formData = new FormData();
         formData.append('file', file);
+        
+        // Add existing characteristics if we have any
+        if (files.length > 0) {
+          const existingCharacteristics = files.map(f => f.inspectionData);
+          formData.append('characteristics', JSON.stringify(existingCharacteristics));
+        }
 
         const inspectResponse = await fetch('/api/inspect-image', {
           method: 'POST',
@@ -108,7 +114,15 @@ const TrainModelZone: React.FC<TrainModelZoneProps> = ({ packSlug, onContinue, u
           throw new Error('Failed to inspect image');
         }
 
-        const data: ImageInspectionResult = await inspectResponse.json();
+        const responseData = await inspectResponse.json();
+        const data = responseData.current || responseData;
+        const aggregatedData = responseData.aggregated;
+
+        // Use aggregated data if available
+        if (aggregatedData && !modelInfo) {
+          setModelInfo(aggregatedData);
+          localStorage.setItem('modelInfo', JSON.stringify(aggregatedData));
+        }
 
         if (data.blurry || 
             data.funny_face || 
@@ -134,23 +148,6 @@ const TrainModelZone: React.FC<TrainModelZoneProps> = ({ packSlug, onContinue, u
 
         if (data.full_body_image_or_longshot) {
           setLongShotCount(prev => prev + 1);
-        }
-
-        if (!modelInfo) {
-          const newModelInfo = {
-            name: data.name,
-            ethnicity: data.ethnicity,
-            age: data.age,
-            glasses: data.glasses,
-            eye_color: data.eye_color,
-            hair_color: data.hair_color,
-            hair_length: data.hair_length,
-            hair_style: data.hair_style,
-            facial_hair: data.facial_hair,
-            is_bald: data.is_bald
-          };
-          setModelInfo(newModelInfo);
-          localStorage.setItem('modelInfo', JSON.stringify(newModelInfo));
         }
 
         setFiles(prev => [...prev, {
@@ -181,7 +178,7 @@ const TrainModelZone: React.FC<TrainModelZoneProps> = ({ packSlug, onContinue, u
         event.target.value = '';
       }
     }
-  }, [modelInfo, longShotCount, toast]);
+  }, [modelInfo, longShotCount, toast, files]);
 
   const handleAutoCrop = async (index: number) => {
     const file = files[index];
@@ -194,6 +191,7 @@ const TrainModelZone: React.FC<TrainModelZoneProps> = ({ packSlug, onContinue, u
     try {
       const formData = new FormData();
       formData.append('file', file.file);
+      formData.append('imageType', file.inspectionData?.full_body_image_or_longshot ? 'longshot' : 'selfie');
 
       const response = await fetch('/api/auto-crop', {
         method: 'POST',
