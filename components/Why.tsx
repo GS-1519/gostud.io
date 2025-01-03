@@ -48,9 +48,9 @@ const WhySection = () => {
     <div className="w-full bg-white">
       {/* Mobile Version */}
       <div className="md:hidden w-full max-w-[358px] mx-auto p-4">
-        <h1 className="text-center text-2xl font-bold mb-4 font-poppins">
+        <div className="text-center text-2xl font-bold mb-4 font-poppins">
           WHY <span className="bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4] text-transparent bg-clip-text">GOSTUDIO.AI?</span>
-        </h1>
+        </div>
         
         <p className="text-center text-gray-600 mb-8">
           Aaria ensures you're ready for every professional moment. From resumes to LinkedIn, we make your headshots shine effortlessly.
@@ -66,9 +66,9 @@ const WhySection = () => {
           />
         </div>
 
-        <h2 className="text-[#5B16FE] text-xl font-semibold mb-3">
+        <h3 className="text-[#5B16FE] text-xl font-semibold mb-3">
           {features[activeFeature].title}
-        </h2>
+        </h3>
         
         <p className="text-gray-600 mb-6">
           {features[activeFeature].description}
@@ -124,9 +124,9 @@ const WhySection = () => {
 
       {/* Desktop Version */}
       <div className="hidden md:block max-w-[1440px] mx-auto py-16 px-[120px]">
-        <h1 className="w-[304px] h-[48px] text-center mx-auto font-poppins font-medium text-[32px] leading-[48px]">
+        <h2 className="w-[304px] h-[48px] text-center mx-auto font-poppins font-medium text-[32px] leading-[48px]">
           WHY <span className="bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4] text-transparent bg-clip-text">GOSTUDIO.AI?</span>
-        </h1>
+        </h2>
         
         <p className="w-[886.52px] h-[54px] text-center mx-auto font-poppins font-normal text-[18px] leading-[27px] text-[#161C2D] mb-12">
           Aaria ensures you're ready for every professional moment. From resumes to LinkedIn, we make your headshots shine effortlessly.

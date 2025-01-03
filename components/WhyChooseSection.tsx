@@ -35,24 +35,29 @@ const WhyChooseSection = () => {
   ];
 
   return (
-    <div className="w-full max-w-[1276px] mx-auto">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {features.map((feature, index) => (
-          <div 
-            key={index} 
-            className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
-          >
-            <div className="flex items-start space-x-4">
-              <div className="bg-[#F4F7FA] p-3 rounded-xl">
-                {feature.icon}
-              </div>
-              <div>
-                <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</p>
+    <div className="w-full bg-white py-16">
+      <h2 className="text-3xl font-bold text-center mb-12">
+        Why Choose Us
+      </h2>
+      <div className="w-full max-w-[1276px] mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {features.map((feature, index) => (
+            <div 
+              key={index} 
+              className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
+            >
+              <div className="flex items-start space-x-4">
+                <div className="bg-[#F4F7FA] p-3 rounded-xl">
+                  {feature.icon}
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold mb-2">{feature.title}</h3>
+                  <p className="text-gray-600">{feature.description}</p>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

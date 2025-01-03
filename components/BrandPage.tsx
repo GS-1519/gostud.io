@@ -58,64 +58,57 @@ const BrandingPage = () => {
   ];
 
   return (
-    <div className="bg-white">
-      <section className="w-full">
-        <div className="w-full max-w-[459px] mx-auto text-center mb-4 pt-4">
-          <h2 className="text-[32px] font-poppins font-[500] leading-[48px] text-[#161C2D]">
-            BRAND WHO LOVES GOSUDIO
-          </h2>
-        </div>
+    <div className="w-full bg-white">
+      
+      <div className="w-full bg-[#F6F2FF] overflow-hidden mb-12">
+        <div className="relative w-[1440px] h-[90px] mx-auto">
+          <div className="absolute top-0 left-0 w-full h-full flex items-center">
+            {/* First set of brands */}
+            <div className="flex animate-marquee items-center gap-12 whitespace-nowrap">
+              {brands.map((brand) => (
+                <div 
+                  key={brand.id}
+                  className="flex-shrink-0 flex items-center justify-center"
+                  style={{ 
+                    width: `${brand.width}px`,
+                    height: `${brand.height}px`
+                  }}
+                >
+                  <img
+                    src={brand.logo}
+                    alt={`${brand.name} logo`}
+                    className="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                    width={brand.width}
+                    height={brand.height}
+                  />
+                </div>
+              ))}
+            </div>
 
-        <div className="w-full bg-[#F6F2FF] overflow-hidden mb-12">
-          <div className="relative w-[1440px] h-[90px] mx-auto">
-            <div className="absolute top-0 left-0 w-full h-full flex items-center">
-              {/* First set of brands */}
-              <div className="flex animate-marquee items-center gap-12 whitespace-nowrap">
-                {brands.map((brand) => (
-                  <div 
-                    key={brand.id}
-                    className="flex-shrink-0 flex items-center justify-center"
-                    style={{ 
-                      width: `${brand.width}px`,
-                      height: `${brand.height}px`
-                    }}
-                  >
-                    <img
-                      src={brand.logo}
-                      alt={`${brand.name} logo`}
-                      className="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-300"
-                      width={brand.width}
-                      height={brand.height}
-                    />
-                  </div>
-                ))}
-              </div>
-
-              {/* Duplicate set */}
-              <div className="flex animate-marquee items-center gap-12 whitespace-nowrap">
-                {brands.map((brand) => (
-                  <div 
-                    key={`${brand.id}-duplicate`}
-                    className="flex-shrink-0 flex items-center justify-center"
-                    style={{ 
-                      width: `${brand.width}px`,
-                      height: `${brand.height}px`
-                    }}
-                  >
-                    <img
-                      src={brand.logo}
-                      alt={`${brand.name} logo`}
-                      className="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-300"
-                      width={brand.width}
-                      height={brand.height}
-                    />
-                  </div>
-                ))}
-              </div>
+            {/* Duplicate set */}
+            <div className="flex animate-marquee items-center gap-12 whitespace-nowrap">
+              {brands.map((brand) => (
+                <div 
+                  key={`${brand.id}-duplicate`}
+                  className="flex-shrink-0 flex items-center justify-center"
+                  style={{ 
+                    width: `${brand.width}px`,
+                    height: `${brand.height}px`
+                  }}
+                >
+                  <img
+                    src={brand.logo}
+                    alt={`${brand.name} logo`}
+                    className="w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                    width={brand.width}
+                    height={brand.height}
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </div>
   );
 };

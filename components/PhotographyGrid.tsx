@@ -440,10 +440,41 @@ const PackOverlay: React.FC<OverlayProps> = ({ isOpen, onClose, packType, title 
         </div>
 
         {/* Generate Button */}
-        <div className="text-center">
-          <button className="bg-[#5B16FE] hover:bg-[#4F46E5] text-white px-4 py-2 rounded-full font-medium transition-colors sm:px-6 sm:py-3">
-            Generate →
-          </button>
+        <div className="flex justify-center">
+          <Link href="/login">
+            <button className="w-[200px] sm:w-[269px] h-[40px] sm:h-[48px] bg-[#5B16FE] hover:bg-[#4F46E5] text-white rounded-full flex items-center justify-center gap-2 hover:opacity-90 transition-opacity font-poppins text-[13px] sm:text-[16px]">
+              <span>Generate</span>
+              <svg className="w-3 sm:w-5 h-3 sm:h-5" viewBox="0 0 20 20" fill="none">
+                <path 
+                  d="M4.16666 10H15.8333M15.8333 10L10 4.16669M15.8333 10L10 15.8334" 
+                  stroke="currentColor" 
+                  strokeWidth="2" 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button>
+          </Link>
+        </div>
+
+        {/* Explore More Button */}
+        <div className="flex justify-center mt-8">
+          <Link href="/login">
+            <div className="flex justify-center">
+              <button className="w-[200px] sm:w-[269px] h-[40px] sm:h-[48px] bg-[#5B16FE] hover:bg-[#4F46E5] text-white rounded-full flex items-center justify-center gap-2 hover:opacity-90 transition-opacity font-poppins text-[13px] sm:text-[16px]">
+                <span>Explore More</span>
+                <svg className="w-3 sm:w-5 h-3 sm:h-5" viewBox="0 0 20 20" fill="none">
+                  <path 
+                    d="M4.16666 10H15.8333M15.8333 10L10 4.16669M15.8333 10L10 15.8334" 
+                    stroke="currentColor" 
+                    strokeWidth="2" 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+          </Link>
         </div>
       </div>
     </div>
@@ -496,10 +527,10 @@ const PhotographyGrid = () => {
     <div className="w-full bg-white">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-[82px] py-16">
         <div className="text-center mb-8">
-          <h1 className="mx-auto w-full md:w-[600px] h-auto md:h-[48px] font-[500] text-[32px] leading-[48px] text-center text-[#161C2D] font-poppins mb-4">
+          <h2 className="mx-auto w-full md:w-[600px] h-auto md:h-[48px] font-[500] text-[24px] sm:text-[32px] leading-[36px] sm:leading-[48px] text-center">
             OUR PACKS-YOU NAME IT, WE HAVE IT.
-          </h1>
-          <p className="mx-auto w-full md:w-[992px] h-auto md:h-[54px] font-[400] text-[18px] leading-[27px] tracking-[-0.04em] text-center text-[#161C2D] font-poppins">
+          </h2>
+          <p className="mx-auto w-full md:w-[992px] h-auto md:h-[54px] font-[400] text-[16px] sm:text-[18px] leading-[24px] sm:leading-[27px] tracking-[-0.04em] text-center text-[#161C2D] font-poppins">
             Explore our complete range of photography packs, crafted to suit every style and need. 
             From professional portraits to creative edits, we've got it all covered. 
             Whatever your vision, our AI photographer brings it to life effortlessly.
@@ -523,13 +554,23 @@ const PhotographyGrid = () => {
           packType={selectedPack || 'corporate'}
           title={photos.find(p => p.type === selectedPack)?.title || 'Photography Pack'}
         />
-         <Link href="/login" className="block">
-        <div className="text-center mt-8">
-          <button className="w-full md:w-auto bg-[#5B16FE] hover:bg-[#4F46E5] text-white font-medium py-2 px-4 md:py-3 md:px-6 rounded-full transition-colors duration-200">
-            Explore More →
-          </button>
+
+        <div className="flex justify-center mt-8">
+          <Link href="/login">
+            <button className="w-[200px] sm:w-[269px] h-[40px] sm:h-[48px] bg-[#7C3AED] hover:bg-[#6D28D9] text-white rounded-full flex items-center justify-center gap-2 hover:opacity-90 transition-opacity font-poppins text-[13px] sm:text-[16px]">
+              <span>Try Now</span>
+              <svg className="w-3 sm:w-5 h-3 sm:h-5" viewBox="0 0 20 20" fill="none">
+                <path 
+                  d="M4.16666 10H15.8333M15.8333 10L10 4.16669M15.8333 10L10 15.8334" 
+                  stroke="currentColor" 
+                  strokeWidth="2" 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button>
+          </Link>
         </div>
-        </Link>
       </div>
     </div>
   );

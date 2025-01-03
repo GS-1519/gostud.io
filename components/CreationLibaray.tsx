@@ -65,13 +65,14 @@ const Gallery = () => {
   };
 
   return (
-    <div className="bg-white">
+    <div className="w-full bg-white">
+      
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8">
         {/* Header Section */}
         <div className="text-center mb-8 sm:mb-12 pt-4">
-          <h1 className="text-[32px] leading-[48px] font-medium text-center mb-4" style={{ background: 'linear-gradient(90deg, #8371FF -39.48%, #A077FE 15.54%, #01C7E4 100%)', WebkitBackgroundClip: 'text', backgroundClip: 'text', color: 'transparent' }}>
+          <h2 className="text-[32px] leading-[48px] font-medium text-center mb-4" style={{ background: 'linear-gradient(90deg, #8371FF -39.48%, #A077FE 15.54%, #01C7E4 100%)', WebkitBackgroundClip: 'text', backgroundClip: 'text', color: 'transparent' }}>
             TAKE A SNEAK PEEK INTO MY CREATIONS
-          </h1>
+          </h2>
           <p className="text-[#161C2D]/60 text-[16px] leading-[24px] max-w-[790px] mx-auto">
             I'm excited to share a glimpse of my work with you.
           </p>
@@ -128,15 +129,16 @@ const Gallery = () => {
         </div>
 
         {/* Create Headshot Button */}
-        <div className="flex justify-center mt-8 mb-0">
+        <div className="flex justify-center mt-8 mb-0 px-4 sm:px-0">
           <Link href="/login" className="w-full sm:w-auto">
             <button 
-              className="w-full sm:w-auto px-4 sm:px-6 py-3 text-white rounded-full flex items-center justify-center gap-2 hover:opacity-90 transition-opacity font-poppins font-medium"
+              className="mx-auto px-4 sm:px-6 py-2.5 sm:py-3 text-white rounded-full flex items-center justify-center gap-2 hover:opacity-90 transition-opacity font-poppins text-[14px] sm:text-[16px]"
               style={{
-                background: 'linear-gradient(90deg, #8371FF -39.48%, #A077FE 15.54%, #01C7E4 100%)'
+                background: '#5B16FE',
+                maxWidth: '269px',
               }}
             >
-              <span className="text-[14px] sm:text-[16px]">Create Your Headshot</span>
+              <span>Create Your Headshot</span>
               <svg className="w-4 sm:w-5 h-4 sm:h-5" viewBox="0 0 20 20" fill="none">
                 <path 
                   d="M4.16666 10H15.8333M15.8333 10L10 4.16669M15.8333 10L10 15.8334" 

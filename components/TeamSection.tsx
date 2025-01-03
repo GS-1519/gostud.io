@@ -37,8 +37,8 @@ const TeamSection = () => {
       <div className="max-w-[1440px] mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-[32px] leading-[48px] font-medium text-center mb-4">
-            NOW FOR YOUR TEAMS!
+          <h2 className="w-[304px] h-[48px] text-center mx-auto font-poppins font-medium text-[32px] leading-[48px]">
+            WHY <span>GOSTUDIO.AI?</span>
           </h2>
           <p className="text-[16px] leading-[24px] text-[#161C2D]/60 max-w-[790px] mx-auto text-center">
             Create a unified, professional look for your team with studio-quality headshots, effortlessly crafted by Aaria. We deliver 

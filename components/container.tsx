@@ -15,7 +15,7 @@ const SecurityFeature = ({ icon, title, description }: { icon: string, title: st
       />
     </div>
     <div className="flex-1">
-      <h3 className="font-poppins font-bold text-[18px] sm:text-[20px] leading-[28px] sm:leading-[30px] text-[#161C2D] uppercase mb-2">
+      <h3 className="font-poppins font-bold text-[18px] sm:text-[20px] leading-[28px]">
         {title}
       </h3>
       <p className="font-poppins font-normal text-[14px] sm:text-[16px] leading-[21px] sm:leading-[24px] text-[#161C2D]/60">
@@ -54,9 +54,7 @@ const DataSecuritySection = () => {
       <div className="max-w-[1440px] mx-auto px-4 sm:px-16 py-8 sm:py-16">
         {/* Header */}
         <div className="text-center mb-8 sm:mb-14">
-          <h2 
-            className="text-[24px] sm:text-[32px] leading-[36px] sm:leading-[48px] font-poppins font-medium mb-3 sm:mb-4 text-transparent bg-clip-text bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4]"
-          >
+          <h2 className="text-[24px] sm:text-[32px] leading-[36px] sm:leading-[48px] font-poppins font-medium mb-3 sm:mb-4">
             WE VALUE DATA PRIVACY
           </h2>
           <p className="text-[14px] sm:text-[16px] leading-[21px] sm:leading-[24px] font-poppins font-normal text-[#161C2D]/60">
@@ -80,13 +78,13 @@ const DataSecuritySection = () => {
         <div className="flex justify-center mt-8">
           <Link href="/login" className="w-full sm:w-auto">
             <button 
-              className="w-full sm:w-auto px-4 sm:px-6 py-3 text-white rounded-full flex items-center justify-center gap-2 hover:opacity-90 transition-opacity font-poppins font-medium"
+              className="w-[200px] sm:w-[269px] h-[40px] sm:h-[48px] text-white rounded-full flex items-center justify-center gap-2 hover:opacity-90 transition-opacity font-poppins text-[13px] sm:text-[16px] mx-auto"
               style={{
                 background: 'linear-gradient(90deg, #8371FF -39.48%, #A077FE 15.54%, #01C7E4 100%)'
               }}
             >
-              <span className="text-[14px] sm:text-[16px]">Create Your Headshot</span>
-              <svg className="w-4 sm:w-5 h-4 sm:h-5" viewBox="0 0 20 20" fill="none">
+              <span>Create Your Headshot</span>
+              <svg className="w-3 sm:w-5 h-3 sm:h-5" viewBox="0 0 20 20" fill="none">
                 <path 
                   d="M4.16666 10H15.8333M15.8333 10L10 4.16669M15.8333 10L10 15.8334" 
                   stroke="currentColor" 

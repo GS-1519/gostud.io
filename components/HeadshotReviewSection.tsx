@@ -56,16 +56,16 @@ const TestimoniallGrid = () => (
   <div className="bg-white border-b">
     <div className="max-w-[1440px] mx-auto px-4 sm:px-8 md:px-16">
       <div className="text-center pt-8 pb-6 md:py-8">
-        <h1 className="text-[32px] md:text-[48px] leading-[48px] md:leading-[64px] font-medium mb-4 font-poppins text-center">
-          <span className="bg-gradient-to-r from-[#8371FF] to-[#A077FE] bg-clip-text text-transparent font-poppins font-medium tracking-[-4%]">
+        <h2 className="text-[24px] sm:text-[32px] md:text-[48px] leading-[36px] sm:leading-[48px] md:leading-[64px] font-medium mb-4 font-poppins text-center">
+          <span className="bg-gradient-to-r from-[#8371FF] to-[#A077FE] bg-clip-text text-transparent">
             <AnimatedNumber end={80000} duration={2000} />
           </span>
           {' '}PHOTOS ALREADY CREATED FOR{' '}
-          <span className="bg-[#01C7E4] bg-clip-text text-transparent font-poppins font-medium tracking-[-4%]">
+          <span className="bg-[#01C7E4] bg-clip-text text-transparent">
             <AnimatedNumber end={21000} duration={2000} />
           </span>
           {' '}HAPPY CUSTOMERS
-        </h1>
+        </h2>
         <p className="text-[18px] leading-[28px] text-[#161C2D]/60 max-w-[736px] mx-auto font-poppins">
           Not made in a studio. Created by AI. Don't just take our word for it. Our AI turns everyday photos into professional headshots, that reflect your confidence & credibility.
         </p>
@@ -149,26 +149,26 @@ stic tool that saves me a lot of effort!"
 
       {/* Join Now section */}
       <div className="flex justify-center mt-8">
-          <Link href="/login" className="w-full sm:w-auto">
-            <button 
-              className="w-full sm:w-auto px-4 sm:px-6 py-3 text-white rounded-full flex items-center justify-center gap-2 hover:opacity-90 transition-opacity font-poppins font-medium"
-              style={{
-                background: 'linear-gradient(90deg, #8371FF -39.48%, #A077FE 15.54%, #01C7E4 100%)'
-              }}
-            >
-              <span className="text-[14px] sm:text-[16px]">Create Your Headshot</span>
-              <svg className="w-4 sm:w-5 h-4 sm:h-5" viewBox="0 0 20 20" fill="none">
-                <path 
-                  d="M4.16666 10H15.8333M15.8333 10L10 4.16669M15.8333 10L10 15.8334" 
-                  stroke="currentColor" 
-                  strokeWidth="2" 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
-          </Link>
-        </div>
+        <Link href="/login" className="w-full sm:w-auto">
+          <button 
+            className="w-[200px] sm:w-[269px] h-[40px] sm:h-[48px] text-white rounded-full flex items-center justify-center gap-2 hover:opacity-90 transition-opacity font-poppins text-[13px] sm:text-[16px] mx-auto"
+            style={{
+              background: 'linear-gradient(90deg, #8371FF -39.48%, #A077FE 15.54%, #01C7E4 100%)'
+            }}
+          >
+            <span>Create Your Headshot</span>
+            <svg className="w-3 sm:w-5 h-3 sm:h-5" viewBox="0 0 20 20" fill="none">
+              <path 
+                d="M4.16666 10H15.8333M15.8333 10L10 4.16669M15.8333 10L10 15.8334" 
+                stroke="currentColor" 
+                strokeWidth="2" 
+                strokeLinecap="round" 
+                strokeLinejoin="round"
+              />
+            </svg>
+          </button>
+        </Link>
+      </div>
     </div>
   </div>
 );

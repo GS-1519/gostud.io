@@ -108,21 +108,19 @@ const FAQSection = () => {
   return (
     <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-[1280px] mx-auto">
-        <div className="flex flex-col py-8">
-          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 text-center font-jakarta mb-6">
-            Frequently Asked Questions
-          </h2>
-          <div className="space-y-4">
-            {faqs.map((faq, index) => (
-              <FAQItem
-                key={index}
-                question={faq.question}
-                answer={faq.answer}
-                isOpen={index === openIndex}
-                toggleOpen={() => setOpenIndex(index === openIndex ? -1 : index)}
-              />
-            ))}
-          </div>
+        <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 text-center font-jakarta mb-6">
+          Frequently Asked Questions
+        </h2>
+        <div className="space-y-4">
+          {faqs.map((faq, index) => (
+            <FAQItem
+              key={index}
+              question={faq.question}
+              answer={faq.answer}
+              isOpen={index === openIndex}
+              toggleOpen={() => setOpenIndex(index === openIndex ? -1 : index)}
+            />
+          ))}
         </div>
       </div>
     </div>

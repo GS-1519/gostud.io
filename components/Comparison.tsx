@@ -48,9 +48,9 @@ const ComparisonPage = () => {
         <div className="max-w-[992px] mx-auto px-6 py-8">
           <div className="bg-white">
             {/* Header */}
-            <h2 className="w-[358px] h-[48px] font-poppins text-[32px] font-[500] leading-[48px] text-center mx-auto text-[#161C2D] mb-4">
+            <div className="w-[358px] h-auto sm:h-[48px] font-poppins text-[24px] sm:text-[32px] font-[500] leading-[36px] sm:leading-[48px] text-center mx-auto text-[#161C2D] mb-4">
               SAVE MONEY AND TIME
-            </h2>
+            </div>
             <p className="text-center text-[15px] text-gray-600 mb-8 max-w-[320px] mx-auto leading-[1.6]">
               Aaria ensures you're ready for every professional moment. From resumes to LinkedIn, we make your headshots shine effortlessly.
             </p>
@@ -112,9 +112,8 @@ const ComparisonPage = () => {
 
       {/* Desktop Version */}
       <div className="hidden md:block max-w-[992px] mx-auto py-16">
-        {/* Desktop Header */}
         <div className="text-center mb-12">
-          <h2 className="w-[358px] h-[48px] font-poppins text-[32px] font-[500] leading-[48px] text-center mx-auto text-[#161C2D] mb-4">
+          <h2 className="w-[358px] h-auto sm:h-[48px] font-poppins text-[24px] sm:text-[32px] font-[500] leading-[36px] sm:leading-[48px] text-center mx-auto text-[#161C2D] mb-4">
             SAVE MONEY AND TIME
           </h2>
         </div>

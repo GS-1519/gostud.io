@@ -44,9 +44,9 @@ const HeadshotSteps = () => {
   return (
     <div className="w-full bg-white">
       <div className="pt-[80px] pb-[24px]">
-        <h1 className="font-poppins text-[32px] leading-[48px] font-medium text-center mb-[80px]">
+        <h2 className="font-poppins text-[24px] sm:text-[32px] leading-[36px] sm:leading-[48px] font-medium text-center mb-[80px]">
           3 EASY STEPS TO GET YOUR STUDIO QUALITY PROFILE.
-        </h1>
+        </h2>
 
         <div className="flex flex-col md:flex-row justify-between items-start gap-[24px] relative px-4 md:px-[82px]">
           {/* Step 1 */}
@@ -61,8 +61,10 @@ const HeadshotSteps = () => {
             </div>
 
             <div className="space-y-4">
-              <h2 className="font-poppins text-[28.27px] leading-[24.74px] font-medium w-[330.08px] h-[25px]">01</h2>
-              <h3 className="font-poppins text-[21.2px] leading-[24.74px] font-medium">Upload a few photos</h3>
+              <h3 className="font-poppins text-[21.2px] leading-[24.74px] font-medium">
+                <span className="block text-[28.27px] mb-2">01</span>
+                Upload a few photos
+              </h3>
               <p className="text-gray-600 text-base leading-relaxed mb-8">
                 Upload a few photos of yourself to let AI learn about you.
               </p>
@@ -89,26 +91,11 @@ const HeadshotSteps = () => {
               }}
             >
               <div className="relative z-10">
-                <h2 className="font-poppins text-[28.27px] leading-[24.74px] font-medium w-[330.08px] h-[25px] text-white mb-6">02</h2>
-                <h3 
-                  className="font-poppins text-[21.2px] leading-[24.74px] font-medium w-[330.08px] h-[50px] text-white mb-4"
-                  style={{
-                    fontFamily: 'Poppins',
-                    fontWeight: '500'
-                  }}
-                >
-                  Our AI Photographer "Aaria"
-                  get to work
+                <h3 className="font-poppins text-[21.2px] leading-[24.74px] font-medium text-white">
+                  <span className="block text-[28.27px] mb-2">02</span>
+                  Our AI Photographer "Aaria" get to work
                 </h3>
-                <p 
-                  className="w-[330.08px] h-[72px] text-white"
-                  style={{
-                    fontFamily: 'Poppins',
-                    fontSize: '15.9px',
-                    lineHeight: '23.85px',
-                    fontWeight: '400'
-                  }}
-                >
+                <p className="w-[330.08px] h-[72px] text-white font-poppins text-[15.9px] leading-[23.85px] font-normal">
                   Aaria creates a private, personalized model just for you—ensuring headshots
                   that reflect your unique style and identity.
                 </p>
@@ -128,8 +115,10 @@ const HeadshotSteps = () => {
             </div>
 
             <div className="space-y-4">
-              <h2 className="font-poppins text-[28.27px] leading-[24.74px] font-medium w-[330.08px] h-[25px]">03</h2>
-              <h3 className="font-poppins text-[21.2px] leading-[24.74px] font-medium">Download favorite Headshots</h3>
+              <h3 className="font-poppins text-[21.2px] leading-[24.74px] font-medium">
+                <span className="block text-[28.27px] mb-2">03</span>
+                Download favorite Headshots
+              </h3>
               <p className="text-gray-600 text-base leading-relaxed mb-8">
                 You'll receive a variety of styles, giving you the perfect Headshots to
                 elevate your business professional profile.

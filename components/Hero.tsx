@@ -47,12 +47,12 @@ const TwoImageSection = ({ leftImage, rightImage }: TwoImageSectionProps) => (
           className="object-cover object-center w-full scale-100 md:scale-108"
           sizes="(max-width: 768px) 100vw, 50vw"
         />
-        {/* Title overlay for mobile */}
+        {/* Change mobile title from h1 to div since we'll have main h1 in desktop view */}
         <div className="absolute bottom-3 left-4 right-4 md:hidden z-10">
-          <h1 className="font-poppins font-semibold text-white text-[26px] leading-[34px] xs:text-[30px] xs:leading-[38px]">
+          <div className="font-poppins font-semibold text-white text-[26px] leading-[34px] xs:text-[30px] xs:leading-[38px]">
             Professional Headshots<br />
             using your Selfies.
-          </h1>
+          </div>
         </div>
       </div>
     </div>
@@ -177,11 +177,22 @@ export default function Hero() {
               <FeatureItem Icon={tick} text="Money-back" />
             </div>
 
-            <Link href="/login" className="block">
-              <button className="w-full bg-[#7C3AED] hover:bg-[#6D28D9] text-white rounded-full py-3.5 font-poppins text-base transition-colors">
-                Try Now →
-              </button>
-            </Link>
+            <div className="flex justify-center">
+              <Link href="/login">
+                <button className="w-[200px] sm:w-[269px] h-[40px] sm:h-[48px] bg-[#7C3AED] hover:bg-[#6D28D9] text-white rounded-full flex items-center justify-center gap-2 hover:opacity-90 transition-opacity font-poppins text-[13px] sm:text-[16px]">
+                  <span>Try Now</span>
+                  <svg className="w-3 sm:w-5 h-3 sm:h-5" viewBox="0 0 20 20" fill="none">
+                    <path 
+                      d="M4.16666 10H15.8333M15.8333 10L10 4.16669M15.8333 10L10 15.8334" 
+                      stroke="currentColor" 
+                      strokeWidth="2" 
+                      strokeLinecap="round" 
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>

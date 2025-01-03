@@ -121,11 +121,11 @@ export const PriceCards: React.FC<PriceCardsProps> = ({
     <div className="bg-white w-full md:py-16">
       {/* Heading Section - Updated for responsiveness */}
       <div className="text-center mb-8 md:mb-16 px-4">
-        <h1 className="font-poppins font-medium text-[24px] md:text-[32px] 
+        <h2 className="font-poppins font-medium text-[24px] md:text-[32px] 
                      leading-tight md:leading-[48px] tracking-[-0.04em] text-center
                      text-[#161C2D] max-w-[1134px] mx-auto">
           PREMIUM QUALITY AT 10 TIMES LESS PRICE
-        </h1>
+        </h2>
         
         <p className="font-poppins font-[500] text-[16px] md:text-[18px]
                     leading-relaxed md:leading-[27px] text-center
