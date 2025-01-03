@@ -72,9 +72,45 @@ const TypesHero = () => {
       image: '/Packs/Types/helmut.jpg',
       link: '/headshot-packs/model-headshots'
     },
+    {
+      title: 'Styled for Success',
+      description: 'Professional portraits with sophisticated styling for a polished, contemporary look.',
+      image: '/Packs/Types/sucess.jpg',
+      link: '/headshot-packs/stylishlawyers-headshot'
+    },
+    {
+      title: 'Professional Package',
+      description: 'Complete professional headshot package perfect for corporate and business needs.',
+      image: '/Packs/Types/professinal.jpg',
+      link: '/headshot-packs/professional-tattoos-portraits'
+    },
+    {
+      title: 'Partner\'s Collection',
+      description: 'Premium headshots designed specifically for law firm partners and senior executives.',
+      image: '/Packs/Types/partner.jpg',
+      link: '/headshot-packs/partners-headshots'
+    },
+    {
+      title: 'Marvel Class',
+      description: 'Dynamic, high-impact headshots with a cinematic quality inspired by Marvel productions.',
+      image: '/Packs/Types/miarval.jpg',
+      link: '/headshot-packs/meiravclass-headshot'
+    },
+    {
+      title: 'Lawyer Branded',
+      description: 'Specialized headshots that reinforce your legal brand and professional authority.',
+      image: '/Packs/Types/branded.jpg',
+      link: '/headshot-packs/lawyer-headshot'
+    },
+    {
+      title: 'Effortless Professionalism',
+      description: 'Natural, approachable headshots that maintain a strong professional presence.',
+      image: '/Packs/Types/effortless.jpg',
+      link: '/headshot-packs/effortlessprofessionalism-headshot'
+    },
   ];
 
-  const [showAll, setShowAll] = useState(false);
+  const [showAll, setShowAll] = useState(true);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const visibleHeadshots = showAll ? headshots : headshots.slice(0, 6);

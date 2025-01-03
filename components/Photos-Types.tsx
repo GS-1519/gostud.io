@@ -97,6 +97,153 @@ const PhotosHero = () => {
     image: '/Packs/Types/botnical.jpg',
     link: '/photoshoot-packs/botanical-photos'
   },
+  {
+    title: 'Dreamland Kids Photos',
+    description: 'Magical and whimsical portraits for children in dreamlike settings',
+    image: '/Packs/Types/dreamland.jpg',
+    link: '/photoshoot-packs/4dreamland-kids-photos'
+  },
+  {
+    title: 'Baby Doodles',
+    description: 'Transform your baby photos into adorable doodle-style portraits. Perfect for nursery art and birth announcements.',
+    image: '/Packs/Types/doll.jpg',
+    link: '/photoshoot-packs/baby-doodles-photos'
+  },
+  {
+    title: 'Birthday Magic',
+    description: 'Create enchanting birthday portraits perfect for celebrations, invitations, and special occasions.',
+    image: '/Packs/Types/magic.jpg',
+    link: '/photoshoot-packs/birthday-magic-photos'
+  },
+  {
+    title: 'Personal Brand Photography',
+    description: 'Professional photography solutions designed to elevate your personal brand and create a consistent visual presence.',
+    image: '/Packs/Types/branded.jpg',
+    link: '/photoshoot-packs/branding-photography'
+  },
+  {
+    title: 'Casual Photography',
+    description: 'Natural and relaxed portraits perfect for social media and casual professional needs.',
+    image: '/Packs/Types/casual.jpg',
+    link: '/photoshoot-packs/casual-photos'
+  },
+  {
+    title: 'Casual Collection',
+    description: 'Create a diverse series of casual, lifestyle portraits perfect for maintaining a consistent online presence.',
+    image: '/Packs/Types/CC.jpg',
+    link: '/photoshoot-packs/casualcollection-photos'
+  },
+  {
+    title: 'Cat Magic',
+    description: 'Transform your cat photos into magical portraits that capture their unique personality and charm.',
+    image: '/Packs/Types/cat.jpg',
+    link: '/photoshoot-packs/catmeowgic-photos'
+  },
+
+{
+  title: 'Cyberpunk',
+  description: 'Transform into a stunning cyberpunk character with futuristic digital art styles.',
+  image: '/Packs/Types/cyber.jpg',
+  link: '/photoshoot-packs/cyberpunk-photos'
+},
+{
+  title: 'Hanukkah Miracle',
+  description: 'Create beautiful Hanukkah-themed portraits that capture the magic of the Festival of Lights.',
+  image: '/Packs/Types/hakkuka.jpg',
+  link: '/photoshoot-packs/hanukka-miracle-photos'
+},
+{
+  title: 'Happy Kid',
+  description: 'Create delightful portraits of happy children that capture their pure joy and innocence.',
+  image: '/Packs/Types/happy.jpg',
+  link: '/photoshoot-packs/happy-kid-photos'
+},
+{
+  title: 'Influencer',
+  description: 'Create stunning influencer-style portraits perfect for social media and content creation.',
+  image: '/Packs/Types/infulencer.jpg',
+  link: '/photoshoot-packs/influencer-photos'
+},
+{
+  title: 'Me Iconic',
+  description: 'Create your own iconic portrait style that makes you stand out from the crowd.',
+  image: '/Packs/Types/me.jpg',
+  link: '/photoshoot-packs/me-iconic-photos'
+},
+// Add these to your headshots array
+{
+  title: 'Merry Christmas',
+  description: 'Create magical Christmas portraits that capture the joy and warmth of the holiday season.',
+  image: '/Packs/Types/merry.jpg',
+  link: '/photoshoot-packs/merry-christmas-photos'
+},
+{
+  title: 'Playful Casual',
+  description: 'Create fun and natural casual portraits that show your playful side.',
+  image: '/Packs/Types/playful.jpg',
+  link: '/photoshoot-packs/playful-casual-photos'
+},
+{
+  title: 'Podcaster',
+  description: 'Create professional podcaster portraits that help build your audio brand.',
+  image: '/Packs/Types/podcast.jpg',
+  link: '/photoshoot-packs/podcaster-photos'
+},
+{
+  title: 'Romantic Maternity',
+  description: 'Create beautiful and romantic maternity portraits that celebrate the magic of pregnancy.',
+  image: '/Packs/Types/maternity.jpg',
+  link: '/photoshoot-packs/romantic-maternity-photos'
+},
+{
+  title: 'Social Media',
+  description: 'Create stunning portraits optimized for all social media platforms.',
+  image: '/Packs/Types/social-media.jpg',
+  link: '/photoshoot-packs/social-media-photos'
+},
+// Add these to your headshots array
+{
+  title: 'Time Machine',
+  description: 'Travel through time with stunning historical portraits and period-themed photos.',
+  image: '/Packs/Types/machin.jpg',
+  link: '/photoshoot-packs/time-machine-photos'
+},
+{
+  title: 'Timeless Studio',
+  description: 'Create elegant studio portraits with a timeless, professional appeal.',
+  image: '/Packs/Types/timeless.jpg',
+  link: '/photoshoot-packs/timeless-studio-photos'
+},
+{
+  title: 'Tel Aviv Fashion',
+  description: 'Create stunning Tel Aviv-inspired fashion portraits with urban style.',
+  image: '/Packs/Types/tlv.jpg',
+  link: '/photoshoot-packs/TLV-fashion-photos'
+},
+{
+  title: 'Wild Friends',
+  description: 'Create magical portraits with your pets and animal companions.',
+  image: '/Packs/Types/wild.jpg',
+  link: '/photoshoot-packs/wild-friends-photos'
+},
+{
+  title: 'Winter Wonderland',
+  description: 'Create enchanting winter wonderland portraits in magical snow scenes.',
+  image: '/Packs/Types/wonder.jpg',
+  link: '/photoshoot-packs/winter-wonderland-photos'
+},
+{
+  title: 'Work From Home',
+  description: 'Create professional work-from-home portraits for remote work.',
+  image: '/Packs/Types/WHF.jpg',
+  link: '/photoshoot-packs/work-from-home-photos'
+},
+{
+  title: 'Vintage Pack',
+  description: 'Create beautiful vintage-style portraits with timeless retro aesthetics and classic throwback appeal.',
+  image: '/Packs/Types/vintage.jpg',
+  link: '/photoshoot-packs/vintage-pack-photos'
+},
   ];
 
   const [showAll, setShowAll] = useState(false);

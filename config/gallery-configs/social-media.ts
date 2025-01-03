@@ -1,0 +1,55 @@
+export const socialMediaConfig = {
+  title: "Social Media Portrait Collection",
+  description: "Create stunning social media portraits perfect for all platforms and building a strong online presence",
+  categories: [
+    { name: 'All', value: 'all' },
+    { name: 'Women', value: 'women' },
+    { name: 'Men', value: 'men' }
+  ],
+  images: {
+    women: [
+      { src: '/Packs/Social Media/Women/women1.jpg', alt: 'Social media woman portrait 1' },
+      { src: '/Packs/Social Media/Women/women2.jpg', alt: 'Social media woman portrait 2' },
+      { src: '/Packs/Social Media/Women/women3.jpg', alt: 'Social media woman portrait 3' },
+      { src: '/Packs/Social Media/Women/women4.jpg', alt: 'Social media woman portrait 4' },
+      { src: '/Packs/Social Media/Women/women5.jpg', alt: 'Social media woman portrait 5' },
+      { src: '/Packs/Social Media/Women/women6.jpg', alt: 'Social media woman portrait 6' },
+      { src: '/Packs/Social Media/Women/women7.jpg', alt: 'Social media woman portrait 7' },
+      { src: '/Packs/Social Media/Women/women8.jpg', alt: 'Social media woman portrait 8' },
+      { src: '/Packs/Social Media/Women/women9.jpg', alt: 'Social media woman portrait 9' },
+      { src: '/Packs/Social Media/Women/women10.jpg', alt: 'Social media woman portrait 10' },
+      { src: '/Packs/Social Media/Women/women11.jpg', alt: 'Social media woman portrait 11' },
+      { src: '/Packs/Social Media/Women/women12.jpg', alt: 'Social media woman portrait 12' },
+      { src: '/Packs/Social Media/Women/women13.jpg', alt: 'Social media woman portrait 13' },
+      { src: '/Packs/Social Media/Women/women14.jpg', alt: 'Social media woman portrait 14' },
+      { src: '/Packs/Social Media/Women/women15.jpg', alt: 'Social media woman portrait 15' },
+      { src: '/Packs/Social Media/Women/women16.jpg', alt: 'Social media woman portrait 16' },
+      { src: '/Packs/Social Media/Women/women17.jpg', alt: 'Social media woman portrait 17' },
+      { src: '/Packs/Social Media/Women/women18.jpg', alt: 'Social media woman portrait 18' },
+      { src: '/Packs/Social Media/Women/women19.jpg', alt: 'Social media woman portrait 19' },
+      { src: '/Packs/Social Media/Women/women20.jpg', alt: 'Social media woman portrait 20' },
+      { src: '/Packs/Social Media/Women/women21.jpg', alt: 'Social media woman portrait 21' },
+      { src: '/Packs/Social Media/Women/women22.jpg', alt: 'Social media woman portrait 22' },
+      { src: '/Packs/Social Media/Women/women23.jpg', alt: 'Social media woman portrait 23' },
+      { src: '/Packs/Social Media/Women/women24.jpg', alt: 'Social media woman portrait 24' },
+      { src: '/Packs/Social Media/Women/women25.jpg', alt: 'Social media woman portrait 25' },
+      { src: '/Packs/Social Media/Women/women26.jpg', alt: 'Social media woman portrait 26' },
+      { src: '/Packs/Social Media/Women/women27.jpg', alt: 'Social media woman portrait 27' },
+      { src: '/Packs/Social Media/Women/women28.jpg', alt: 'Social media woman portrait 28' },
+      { src: '/Packs/Social Media/Women/women29.jpg', alt: 'Social media woman portrait 29' },
+      { src: '/Packs/Social Media/Women/women30.jpg', alt: 'Social media woman portrait 30' },
+    ],
+    men: [
+      { src: '/Packs/Social Media/Man/man1.jpg', alt: 'Social media man portrait 1' },
+      { src: '/Packs/Social Media/Man/man2.jpg', alt: 'Social media man portrait 2' },
+      { src: '/Packs/Social Media/Man/man3.jpg', alt: 'Social media man portrait 3' },
+      { src: '/Packs/Social Media/Man/man4.jpg', alt: 'Social media man portrait 4' },
+      { src: '/Packs/Social Media/Man/man5.jpg', alt: 'Social media man portrait 5' },
+      { src: '/Packs/Social Media/Man/man6.jpg', alt: 'Social media man portrait 6' },
+      { src: '/Packs/Social Media/Man/man7.jpg', alt: 'Social media man portrait 7' },
+      { src: '/Packs/Social Media/Man/man8.jpg', alt: 'Social media man portrait 8' },
+     
+    ]
+  },
+  packType: 'social-media'
+} 
