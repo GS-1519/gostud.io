@@ -4,8 +4,8 @@ const nextConfig = {
     domains: ['res.cloudinary.com', 'gostudio.ai', 'www.gostudio.ai'],
     unoptimized: true,
   },
-  // Add this to handle larger payloads
-  api: {
+  // Remove the standalone api config and add it to serverRuntimeConfig
+  serverRuntimeConfig: {
     bodyParser: {
       sizeLimit: '10mb',
     },
