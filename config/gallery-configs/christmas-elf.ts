@@ -17,7 +17,7 @@ export const christmasElfConfig = {
 
     ],
     boys: [
-      { src: '/Packs/Elf-photos/Boys/boys1.jpg', alt: 'elf-photos boy portrait 1' },
+      { src: '/Packs/Elf-photos/Boys/boy1.jpg', alt: 'elf-photos boy portrait 1' },
       { src: '/Packs/Elf-photos/Boys/boy2.jpg', alt: 'elf-photos boy portrait 2' },
       { src: '/Packs/Elf-photos/Boys/boy3.jpg', alt: 'elf-photos boy portrait 3' },
       { src: '/Packs/Elf-photos/Boys/boy4.jpg', alt: 'elf-photos boy portrait 4' },
