@@ -5,10 +5,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 interface WhyProps {
-  country: string;
+  country?: string;
 }
 
-const WhySection: React.FC<WhyProps> = ({ country }) => {
+const WhySection: React.FC<WhyProps> = ({ country = 'global' }) => {
   const [activeFeature, setActiveFeature] = React.useState(0);
 
   const features = [

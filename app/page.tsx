@@ -83,7 +83,7 @@ export default async function Home() {
             <ExplainerSection />
             <PhotographyGrid/>
             <ComparisonPage />
-            <WhySection/>
+            <WhySection country="global" />
             <BrandsPage/>
             <HeadshotReviewSection />
             <div id="pricing">
