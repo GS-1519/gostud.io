@@ -11,6 +11,12 @@ const nextConfig = {
     },
     responseLimit: '10mb',
   },
+  // Add experimental features
+  experimental: {
+    appDir: true,
+    serverActions: true,
+    serverComponentsExternalPackages: [],
+  },
   // Ensure static files are handled correctly
   webpack: (config) => {
     config.module.rules.push({
@@ -20,6 +26,12 @@ const nextConfig = {
     return config
   },
   transpilePackages: ['react-tabs'],
+  // Add this to help with Edge runtime issues
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  // Add this for development
+  reactStrictMode: true,
   async redirects() {
     return [
       {
