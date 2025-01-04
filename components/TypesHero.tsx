@@ -72,15 +72,51 @@ const TypesHero = () => {
       image: '/Packs/Types/helmut.jpg',
       link: '/headshot-packs/model-headshots'
     },
+    {
+      title: 'Styled for Success',
+      description: 'Professional portraits with sophisticated styling for a polished, contemporary look.',
+      image: '/Packs/Types/sucess.jpg',
+      link: '/headshot-packs/stylishlawyers-headshot'
+    },
+    {
+      title: 'Professional Package',
+      description: 'Complete professional headshot package perfect for corporate and business needs.',
+      image: '/Packs/Types/professinal.jpg',
+      link: '/headshot-packs/professional-tattoos-portraits'
+    },
+    {
+      title: 'Partner\'s Collection',
+      description: 'Premium headshots designed specifically for law firm partners and senior executives.',
+      image: '/Packs/Types/partner.jpg',
+      link: '/headshot-packs/partners-headshots'
+    },
+    {
+      title: 'Marvel Class',
+      description: 'Dynamic, high-impact headshots with a cinematic quality inspired by Marvel productions.',
+      image: '/Packs/Types/miarval.jpg',
+      link: '/headshot-packs/meiravclass-headshot'
+    },
+    {
+      title: 'Lawyer Branded',
+      description: 'Specialized headshots that reinforce your legal brand and professional authority.',
+      image: '/Packs/Types/branded.jpg',
+      link: '/headshot-packs/lawyer-headshot'
+    },
+    {
+      title: 'Effortless Professionalism',
+      description: 'Natural, approachable headshots that maintain a strong professional presence.',
+      image: '/Packs/Types/effortless.jpg',
+      link: '/headshot-packs/effortlessprofessionalism-headshot'
+    },
   ];
 
-  const [showAll, setShowAll] = useState(false);
+  const [showAll, setShowAll] = useState(true);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const visibleHeadshots = showAll ? headshots : headshots.slice(0, 6);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+    <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-24">
       <div className="text-center mb-16">
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4]">
           AI Headshots for Professionals
@@ -90,7 +126,7 @@ const TypesHero = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {visibleHeadshots.map((headshot, index) => (
           <Link href={headshot.link} key={index}>
             <div 
@@ -98,18 +134,18 @@ const TypesHero = () => {
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
-              <div className="relative w-full h-[400px] p-4">
+              <div className="relative w-full h-[400px]">
                 <Image
                   src={headshot.image}
                   alt={headshot.title}
                   fill
-                  className="object-contain transition-transform duration-300"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="object-cover"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   priority={index < 2}
                 />
               </div>
-              <div className="p-8 bg-gradient-to-r from-[#8371FF]/5 via-[#A077FE]/5 to-[#01C7E4]/5">
-                <h3 className={`text-xl font-semibold mb-3 transition-colors duration-300 ${
+              <div className="p-6 bg-gradient-to-r from-[#8371FF]/5 via-[#A077FE]/5 to-[#01C7E4]/5">
+                <h3 className={`text-lg font-semibold mb-2 transition-colors duration-300 ${
                   hoveredIndex === index ? 'bg-clip-text text-transparent bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4]' : 'text-[#1E293B]'
                 }`}>
                   {headshot.title}

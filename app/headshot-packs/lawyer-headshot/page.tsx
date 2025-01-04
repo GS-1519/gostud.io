@@ -2,15 +2,16 @@ import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import type { Metadata } from 'next'
-import Works from "@/components/Works";
-import Why from "@/components/Why";
+
 import ReviewSection from "@/components/HeadshotReviewSection";
 
 import Footer from "@/components/Footer";
 import Banner from "@/components/Banner";
+import ExplainerSection from "@/components/ExplainerSection";
 
 import LawyerHero from "@/components/LawyerHero";
 import LawyerHeadshotHero from "@/components/LawyerHeadshotHero";
+import ClientRedirect from "@/components/ClientRedirect";
 
 export const dynamic = "force-dynamic";
 
@@ -31,43 +32,28 @@ export const metadata: Metadata = {
   }
 }
 
-export default async function LinkedInPhotos() {
+export default async function LawyerPhotos() {
   const supabase = createServerComponentClient({ cookies });
-
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
+  const { data: { user } } = await supabase.auth.getUser();
 
   if (user) {
-    return redirect("/overview");
+    return <ClientRedirect />;
   }
 
   return (
     <div className="w-full bg-[#F4F7FA] min-h-screen font-poppins">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-[82px]">
-        <div className="w-full max-w-[1276px] mx-auto space-y-12">
-          <div id="ai-headshots">
-            <LawyerHero/>
-          </div>
-          <Works
-          
-          />
-          <Why imageSet="Group9" />
-          <div id="testimonial">
-            <LawyerHeadshotHero/>
-          </div>
-          <div id="testimonial">
-            <ReviewSection/>
-          </div>
-          
-          
-          
-          <div>
-            <Banner/>
-          </div>
+      <div>
+        <div id="ai-headshots" className="w-full">
+          <LawyerHero />
+        </div>
+        <div>
+          <ExplainerSection />
+          <LawyerHeadshotHero />
+          <ReviewSection />
+          <Banner />
+          <Footer/>
         </div>
       </div>
-      <Footer/>
     </div>
   );
 }

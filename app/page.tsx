@@ -11,6 +11,14 @@ import FAQSection from "@/components/Question";
 import HeadshotContainer from "@/components/Banner";
 import type { Metadata } from 'next'
 import Script from 'next/script'
+import PhotographyGrid from "@/components/PhotographyGrid";
+import WhySection from "@/components/Why";
+import CreationGallery from "@/components/CreationLibaray";
+import BrandsPage from "@/components/BrandPage";
+import TeamSection from "@/components/TeamSection";
+import Ariaa from "@/components/Ariaa";
+import { Pricing } from "@/components/home/pricing/pricing";
+import ClientRedirect from "@/components/ClientRedirect"; 
 
 
 export const dynamic = "force-dynamic";
@@ -28,14 +36,17 @@ export const metadata: Metadata = {
 }
 
 export default async function Home() {
-  const supabase = createServerComponentClient({ cookies });
-
+  const cookieStore = cookies();
+  const supabase = createServerComponentClient({ 
+    cookies: () => cookieStore 
+  });
+  
   const {
     data: { user },
   } = await supabase.auth.getUser();
 
   if (user) {
-    return redirect("/overview");
+    return <ClientRedirect />;
   }
 
   const jsonLd = {
@@ -64,25 +75,29 @@ export default async function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <div className="w-full bg-[#F4F7FA] min-h-screen font-poppins">
-        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-[82px]">
-          <div className="w-full max-w-[1276px] mx-auto space-y-12">
-            <div id="ai-headshots">
-              <HeroSection />
-            </div>
+        <div>
+          <div id="ai-headshots" className="w-full">
+            <HeroSection />
+          </div>
+          <div>
             <ExplainerSection />
+            <PhotographyGrid/>
             <ComparisonPage />
-            <div id="testimonial">
-              <HeadshotReviewSection />
-            </div>
+            <WhySection/>
+            <BrandsPage/>
+            <HeadshotReviewSection />
             <div id="pricing">
-              <PricingSection user={user} />
+              <Pricing user={user} />
             </div>
             <DataSecuritySection />
+            <Ariaa/>
+            <TeamSection/>
+            <CreationGallery/>
             <div id="faq">
               <FAQSection />
             </div>
             <HeadshotContainer />
-            </div>
+          </div>
         </div>
       </div>
     </>

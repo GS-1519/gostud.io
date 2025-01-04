@@ -1,10 +1,12 @@
 'use client'
+import { useRouter } from 'next/navigation'
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ChevronDown, ChevronUp, Wand2 } from 'lucide-react';
 
 const BoldHeadshotHero = () => {
+  const router = useRouter();
   const [activeCategory, setActiveCategory] = useState('all');
   const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
   const [showAll, setShowAll] = useState(false);
@@ -68,86 +70,96 @@ const BoldHeadshotHero = () => {
 
   const displayImages = getDisplayImages();
 
+  const handleGenerateMore = () => {
+    // Store the pack info in localStorage before redirecting
+    localStorage.setItem('intendedPack', JSON.stringify({
+      type: 'color',
+      path: '/photoshoot-packs/pop-color-photos',
+      redirect: true
+    }));
+    
+    // Redirect to login
+    router.push('/login');
+  };
+
   return (
-    <div className="w-full max-w-[1276px] mx-auto bg-white rounded-[24px] sm:rounded-[60px] py-[18px] sm:py-20 px-4 sm:px-8 lg:px-10">
-      <div className="text-center space-y-8">
-        <div className="space-y-4">
-          <h2 className="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-red-500 to-purple-500 leading-tight tracking-tight">
-            Bold & Vibrant Portrait Collection
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Transform your photos into striking portraits with bold colors and dynamic contrasts that make a powerful statement
-          </p>
-        </div>
+    <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-24">
+      <div className="text-center mb-16">
+        <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4]">
+          Bold & Vibrant Portrait Collection
+        </h2>
+        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          Transform your photos into striking portraits with bold colors and dynamic contrasts that make a powerful statement
+        </p>
+      </div>
 
-        <div className="flex justify-center gap-4">
-          {categories.map((category) => (
-            <button
-              key={category.value}
-              onClick={() => {
-                setActiveCategory(category.value);
-                setShowAll(false);
-              }}
-              className={`px-6 py-2 rounded-full transition-all duration-300 transform hover:scale-105 ${
-                activeCategory === category.value
-                  ? 'bg-purple-600 text-white hover:bg-purple-700'
-                  : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-              }`}
-            >
-              {category.name}
-            </button>
-          ))}
-        </div>
+      <div className="flex justify-center gap-4 mb-16">
+        {categories.map((category) => (
+          <button
+            key={category.value}
+            onClick={() => {
+              setActiveCategory(category.value);
+              setShowAll(false);
+            }}
+            className={`px-6 py-2 rounded-full transition-all duration-300 transform hover:scale-105 ${
+              activeCategory === category.value
+                ? 'bg-purple-600 text-white hover:bg-purple-700'
+                : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+            }`}
+          >
+            {category.name}
+          </button>
+        ))}
+      </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {displayImages.map((image, index) => (
-            <div 
-              key={index}
-              className="relative group cursor-pointer overflow-hidden rounded-lg"
-              onClick={() => setSelectedImage(image)}
-            >
-              <div className="aspect-[4/5]">
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  width={400}
-                  height={500}
-                  className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
-                />
-              </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {displayImages.map((image, index) => (
+          <div 
+            key={`${image.src}-${index}`}
+            className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
+            onClick={() => setSelectedImage(image)}
+          >
+            <div className="relative w-full h-[400px]">
+              <Image
+                src={image.src}
+                alt={image.alt}
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                className="object-cover"
+                priority={index < 2}
+              />
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
+      </div>
 
-        <div className="flex flex-col items-center gap-4">
-          {activeCategory === 'all' ? (
-            <button
-              onClick={() => setShowAll(!showAll)}
-              className="group flex items-center gap-2 px-6 py-3 bg-purple-600 text-white rounded-full hover:bg-purple-700 transition-all duration-300 transform hover:scale-105"
-            >
-              {showAll ? (
-                <>
-                  Show Less
-                  <ChevronUp className="w-5 h-5 transition-transform group-hover:-translate-y-1" />
-                </>
-              ) : (
-                <>
-                  Explore More
-                  <ChevronDown className="w-5 h-5 transition-transform group-hover:translate-y-1" />
-                </>
-              )}
-            </button>
-          ) : (
-            <Link href="/login">
-              <button 
-                className="group flex items-center gap-2 px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105 text-white bg-gradient-to-r from-purple-500 via-violet-500 to-cyan-400 hover:opacity-90"
-              >
-                Generate More
-                <Wand2 className="w-5 h-5 transition-transform group-hover:rotate-45" />
-              </button>
-            </Link>
-          )}
-        </div>
+      <div className="flex flex-col items-center gap-4 mt-24">
+        {activeCategory === 'all' ? (
+          <button
+            onClick={() => setShowAll(!showAll)}
+            className="group flex items-center gap-2 px-6 py-3 bg-purple-600 text-white rounded-full hover:bg-purple-700 transition-all duration-300 transform hover:scale-105"
+          >
+            {showAll ? (
+              <>
+                Show Less
+                <ChevronUp className="w-5 h-5 transition-transform group-hover:-translate-y-1" />
+              </>
+            ) : (
+              <>
+                Explore More
+                <ChevronDown className="w-5 h-5 transition-transform group-hover:translate-y-1" />
+              </>
+            )}
+          </button>
+        ) : (
+          <button 
+            onClick={handleGenerateMore}
+            className="group flex items-center gap-2 px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105 text-white bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4] hover:opacity-90"
+          >
+            Generate More
+            <Wand2 className="w-5 h-5 transition-transform group-hover:rotate-45" />
+          </button>
+        )}
       </div>
 
       {selectedImage && (

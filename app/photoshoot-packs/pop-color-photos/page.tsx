@@ -1,6 +1,6 @@
 import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
-import { redirect } from "next/navigation";
+import ClientRedirect from "@/components/ClientRedirect";
 import type { Metadata } from 'next'
 import Works from "@/components/Works";
 import Why from "@/components/Why";
@@ -10,6 +10,7 @@ import Footer from "@/components/Footer";
 import Banner from "@/components/Banner";
 import ColorHero from "@/components/ColorHero";
 import BoldHeadshotHero from "@/components/Bold-Headshots";
+import ExplainerSection from "@/components/ExplainerSection";
 
 export const dynamic = "force-dynamic";
 
@@ -30,41 +31,28 @@ export const metadata: Metadata = {
   }
 }
 
-export default async function DoctorPhotos() {
+export default async function ColorPhotos() {
   const supabase = createServerComponentClient({ cookies });
-
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
+  const { data: { user } } = await supabase.auth.getUser();
 
   if (user) {
-    return redirect("/overview");
+    return <ClientRedirect />;
   }
 
   return (
     <div className="w-full bg-[#F4F7FA] min-h-screen font-poppins">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-[82px]">
-        <div className="w-full max-w-[1276px] mx-auto space-y-12">
-          <div id="ai-headshots">
-            <ColorHero/>
-          </div>
-          <Works/>
-          <Why imageSet="ColorFram" />
-          <div id="testimonial">
-            <BoldHeadshotHero/>
-          </div>
-          <div id="testimonial">
-            <ReviewSection/>
-          </div>
-          
-      
-        
-          <div>
-            <Banner/>
-          </div>
+      <div>
+        <div id="ai-headshots" className="w-full">
+          <ColorHero />
+        </div>
+        <div>
+          <ExplainerSection />
+          <BoldHeadshotHero />
+          <ReviewSection />
+          <Banner />
+          <Footer/>
         </div>
       </div>
-      <Footer/>
     </div>
   );
 }

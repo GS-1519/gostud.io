@@ -20,9 +20,10 @@ export default function UserMenu({ user, credits }: UserMenuProps) {
     try {
       await supabase.auth.signOut();
       setIsOpen(false);
+      router.push('/');
       router.refresh();
     } catch (error) {
-      console.error('Error logging out:', error);
+      console.error('Error signing out:', error);
     }
   };
 
@@ -57,13 +58,13 @@ export default function UserMenu({ user, credits }: UserMenuProps) {
         </button>
 
         {isOpen && (
-          <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-10">
-            <div className="px-4 py-2 text-sm text-gray-700 font-poppins border-b">
+          <div className="absolute right-0 mt-2 w-72 bg-white rounded-lg shadow-lg overflow-hidden z-10">
+            <div className="px-4 py-3 text-sm text-gray-700 font-poppins border-b break-words">
               {user.email}
             </div>
             <button
               onClick={handleLogout}
-              className="block w-full text-left px-4 py-2 text-sm text-red-600 hover:bg-gray-100 font-jakarta"
+              className="block w-full text-left px-4 py-3 text-sm text-red-600 hover:bg-gray-100 font-jakarta"
             >
               Logout
             </button>

@@ -1,290 +1,176 @@
-import React from 'react';
-import Image from 'next/image';
-import AI from "@/public/logo/AI.svg";
+'use client'
+import React, { useState, useEffect } from 'react';
+import { Star } from 'lucide-react';
+import Link from 'next/link';
 
-// Add these utility functions at the top of the file
-const getRandomNumber = (min: number, max: number) => {
-  return Math.floor(Math.random() * (max - min + 1) + min);
+const StarRating = () => (
+  <div className="flex gap-1">
+    {[...Array(5)].map((_, i) => (
+      <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+    ))}
+  </div>
+);
+const AnimatedNumber = ({ end, duration = 2000 }: { end: number, duration?: number }) => {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    let startTime: number | null = null;
+    let animationFrame: number | null = null;
+
+    const animate = (currentTime: number) => {
+      if (!startTime) startTime = currentTime;
+      const progress = (currentTime - startTime) / duration;
+
+      if (progress < 1) {
+        setCount(Math.floor(end * progress));
+        animationFrame = requestAnimationFrame(animate);
+      } else {
+        setCount(end);
+      }
+    };
+
+    animationFrame = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(animationFrame ?? 0);
+  }, [end, duration]);
+
+  return <>{count.toLocaleString()}</>;
 };
 
-const formatNumber = (num: number) => {
-  return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-};
-
-// Add this shuffle utility function
-const shuffleArray = <T,>(array: T[]): T[] => {
-  const shuffled = [...array];
-  for (let i = shuffled.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-  }
-  return shuffled;
-};
-
-// First, let's define the type for our testimonial
-interface Testimonial {
-  name: string;
-  image: string;
-  date: string;
-  rating: number;
-  text?: string;
-}
-
-const testimonials: Testimonial[] = [
-  {
-    name: "Priya Sharma",
-    image: "/homepage-reviews/professional-woman-13.jpg",
-    date: "Aug 2024",
-    rating: 4.5,
-    text: "As a media personality, I was skeptical about AI enhancement, but the results are stunning! Used it for my recent magazine feature and social media profiles. The consistency across platforms is exactly what I needed. ✨"
-  },
-  {
-    name: "David Rosenberg",
-    image: "/homepage-reviews/professional-man15.jpg",
-    date: "Aug 2024",
-    rating: 4.5,
-    text: "Being in commercial real estate, my profile photo shows up everywhere - from business cards to building proposals. GoStudio helped me achieve that perfect balance of approachable yet professional. Great investment! 🏢"
-  },
-  {
-    name: "Maya Patel",
-    image: "/homepage-reviews/professional-woman9.jpg",
-    date: "Sept 2024",
-    rating: 5,
-    text: "Starting my career in investment banking, I needed to look polished yet approachable. GoStudio helped me strike that perfect balance. My headshot now looks like it belongs in the company's annual report! 📊"
-  },
-  {
-    name: "Alessandro Conti",
-    image: "/homepage-reviews/professional-man19.jpg",
-    date: "Aug 2024",
-    rating: 5,
-    text: "Ho provato diversi servizi, ma GoStudio è stato il migliore. Perfetto per il mio profilo da docente universitario e per le conferenze internazionali. Eccezionale! 🎓"
-  },
-  {
-    name: "Christina Mueller",
-    image: "/homepage-reviews/professional-woman10.jpg",
-    date: "Oct 2024",
-    rating: 4.5,
-    text: "Einfach fantastisch! As a business coach, my photo needs to convey tr and experience. GoStudio delivered exactly that - and so quickly! Now using it across all my marketing materials. Danke! ⭐"
-  },
-  {
-    name: "Christopher Bennett",
-    image: "/homepage-reviews/professional-man5.jpg",
-    date: "Oct 2024",
-    rating: 5,
-    text: "Had been putting off getting a new headshot for years (who has the time?). My daughter suggested GoStudio - took me 5 minutes to upload and the results came back looking better than my last professional shoot from 2019. Brilliant service."
-  },
-  {
-    name: "Isabella Romano",
-    image: "/homepage-reviews/professional-woman.jpg",
-    date: "Sept 2024",
-    rating: 4.5,
-    text: "Come responsabile delle vendite internazionali, avevo bisogno di una foto che trasmettesse professionalità e affidabilità. GoStudio ha superato le mie aspettative. Perfetto per il mio personal branding! 🌍"
-  },
-  {
-    name: "Matthew Sullivan",
-    image: "/homepage-reviews/professional-man1.jpg",
-    date: "Oct 2024",
-    rating: 5,
-    text: "Working at Deloitte means every detail matters. Got this done for our team of 15 - the consistency in lighting and background made our 'Meet the Team' page look incredibly professional. No more mismatched headshots!"
-  },
-//   {
-//     name: "Elena Petrova",
-//     image: "/homepage-reviews/dating-woman-1.jpg",
-//     date: "Sept 2024",
-//     rating: 5,
-//     text: "Превосходное качество! Used the enhanced photos for both our Moscow and London offices' website. The consistency across all regional teams is exactly what our firm needed. Professional, elegant, and worth every penny. Спасибо! 🌟"
-//   },
-  {
-    name: "Eric Schmidt",
-    image: "/homepage-reviews/professional-man6.jpg",
-    date: "Nov 2024",
-    rating: 5,
-    text: "As a startup founder, I needed something quick and professional for our pitch deck. GoStudio delivered exactly what I needed in minutes. Investors actually commented on how polished our team photos looked! 🚀"
- },
-  {
-    name: "Rachel Goldstein",
-    image: "/homepage-reviews/photoshoot-women-fullshot.jpg",
-    date: "Nov 2024",
-    rating: 5,
-    text: "Quick story - had a last-minute speaker bio needed for a tech conference in San Francisco. Got my photo enhanced during my Uber ride there. The organizers literally asked which studio I used! 😄"
-  },
-  {
-    name: "Emmanuel Okonjo",
-    image: "/homepage-reviews/professional-man16.jpg",
-    date: "Nov 2024",
-    rating: 5,
-    text: "Running a tech consultancy means I'm always on video calls with clients. Really impressed with how GoStudio enhanced my headshot while keeping it natural. Even my LinkedIn connection requests increased! 💻"
-  },
-  {
-    name: "Amir Khoury",
-    image: "/homepage-reviews/dating-man6.jpg",
-    date: "Sept 2024",
-    rating: 5,
-    text: "As a wealth management advisor in Dubai, I needed photos that would resonate with international clients. GoStudio transformed my casual office photo into something that belongs on a Bloomberg terminal. Worth every dirham!"
-  },
-];
-
-// Star SVG Components
-const FullStar = () => (
-    <svg 
-      className="w-[18px] h-[18px]" 
-      viewBox="0 0 18 18" 
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path 
-        d="M8.49751 1.44954C8.77008 0.877484 9.61123 0.877484 9.8838 1.44954L11.8264 5.53644C11.9265 5.74772 12.1282 5.89608 12.3617 5.92899L16.8859 6.61635C17.5235 6.71384 17.7835 7.50961 17.3197 7.95557L14.0497 11.1C13.8818 11.2616 13.8063 11.4974 13.8456 11.7298L14.6705 16.2301C14.7857 16.8641 14.1093 17.3537 13.5381 17.0486L9.49674 14.8991C9.28641 14.7863 9.03491 14.7863 8.82457 14.8991L4.78324 17.0486C4.21203 17.3537 3.53562 16.8641 3.65077 16.2301L4.47573 11.7298C4.51498 11.4974 4.43951 11.2616 4.27161 11.1L1.00163 7.95557C0.537826 7.50961 0.797863 6.71384 1.43544 6.61635L5.95959 5.92899C6.19312 5.89608 6.39483 5.74772 6.49494 5.53644L8.49751 1.44954Z" 
-        fill="#FFB800"
-      />
-    </svg>
-  );
-  
-  const HalfStar = () => (
-    <svg 
-      className="w-[18px] h-[18px]" 
-      viewBox="0 0 18 18" 
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      {/* Gray background star */}
-      <path 
-        d="M8.49751 1.44954C8.77008 0.877484 9.61123 0.877484 9.8838 1.44954L11.8264 5.53644C11.9265 5.74772 12.1282 5.89608 12.3617 5.92899L16.8859 6.61635C17.5235 6.71384 17.7835 7.50961 17.3197 7.95557L14.0497 11.1C13.8818 11.2616 13.8063 11.4974 13.8456 11.7298L14.6705 16.2301C14.7857 16.8641 14.1093 17.3537 13.5381 17.0486L9.49674 14.8991C9.28641 14.7863 9.03491 14.7863 8.82457 14.8991L4.78324 17.0486C4.21203 17.3537 3.53562 16.8641 3.65077 16.2301L4.47573 11.7298C4.51498 11.4974 4.43951 11.2616 4.27161 11.1L1.00163 7.95557C0.537826 7.50961 0.797863 6.71384 1.43544 6.61635L5.95959 5.92899C6.19312 5.89608 6.39483 5.74772 6.49494 5.53644L8.49751 1.44954Z" 
-        fill="#D9D9D9"
-      />
-      {/* Yellow half star overlay */}
-      <mask id="half-star-mask">
-        <rect x="0" y="0" width="9" height="18" fill="white"/>
-      </mask>
-      <path 
-        d="M8.49751 1.44954C8.77008 0.877484 9.61123 0.877484 9.8838 1.44954L11.8264 5.53644C11.9265 5.74772 12.1282 5.89608 12.3617 5.92899L16.8859 6.61635C17.5235 6.71384 17.7835 7.50961 17.3197 7.95557L14.0497 11.1C13.8818 11.2616 13.8063 11.4974 13.8456 11.7298L14.6705 16.2301C14.7857 16.8641 14.1093 17.3537 13.5381 17.0486L9.49674 14.8991C9.28641 14.7863 9.03491 14.7863 8.82457 14.8991L4.78324 17.0486C4.21203 17.3537 3.53562 16.8641 3.65077 16.2301L4.47573 11.7298C4.51498 11.4974 4.43951 11.2616 4.27161 11.1L1.00163 7.95557C0.537826 7.50961 0.797863 6.71384 1.43544 6.61635L5.95959 5.92899C6.19312 5.89608 6.39483 5.74772 6.49494 5.53644L8.49751 1.44954Z" 
-        fill="#FFB800"
-        mask="url(#half-star-mask)"
-      />
-    </svg>
-  );
-  
-  const EmptyStar = () => (
-    <svg 
-      className="w-[18px] h-[18px]" 
-      viewBox="0 0 18 18" 
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path 
-        d="M8.49751 1.44954C8.77008 0.877484 9.61123 0.877484 9.8838 1.44954L11.8264 5.53644C11.9265 5.74772 12.1282 5.89608 12.3617 5.92899L16.8859 6.61635C17.5235 6.71384 17.7835 7.50961 17.3197 7.95557L14.0497 11.1C13.8818 11.2616 13.8063 11.4974 13.8456 11.7298L14.6705 16.2301C14.7857 16.8641 14.1093 17.3537 13.5381 17.0486L9.49674 14.8991C9.28641 14.7863 9.03491 14.7863 8.82457 14.8991L4.78324 17.0486C4.21203 17.3537 3.53562 16.8641 3.65077 16.2301L4.47573 11.7298C4.51498 11.4974 4.43951 11.2616 4.27161 11.1L1.00163 7.95557C0.537826 7.50961 0.797863 6.71384 1.43544 6.61635L5.95959 5.92899C6.19312 5.89608 6.39483 5.74772 6.49494 5.53644L8.49751 1.44954Z" 
-        fill="#D9D9D9"
-      />
-    </svg>
-  );
-  
-  // Update the RatingStars component to ensure it handles the rating properly
-const RatingStars = ({ rating }: { rating: number }) => {
-    return (
-        <div className="flex gap-[2px]">
-            {[...Array(5)].map((_, index) => {
-                const value = index + 1;
-                if (value <= rating) {
-                    // Full star for values less than or equal to rating
-                    return <FullStar key={`star-${index}`} />;
-                } else if (value - rating <= 0.5 && value - rating > 0) {
-                    // Half star when difference is 0.5 or less but greater than 0
-                    return <HalfStar key={`star-${index}`} />;
-                } else {
-                    // Empty star for all other cases
-                    return <EmptyStar key={`star-${index}`} />;
-                }
-            })}
+const TestimonialCard = ({ image, text }: { image?: string, text: string }) => (
+  <div className="relative p-[1px] rounded-[10px] bg-gradient-to-r from-[rgba(131,113,255,0.4)] via-[rgba(160,119,254,0.4)] to-[rgba(1,199,228,0.4)]">
+    <div className="bg-white rounded-[10px] h-full overflow-hidden">
+      {image && (
+        <div className="relative">
+          <img className="h-auto w-full" src={image} alt="Testimonial" />
         </div>
-    );
-};
-  
-  
-  // Add this interface
-  interface ReviewCardProps {
-    review: Testimonial;
-  }
-  
-  // Update the ReviewCard component to explicitly pass the rating
-const ReviewCard: React.FC<ReviewCardProps> = ({ review }) => {
-    return (
-      <div className="break-inside-avoid mb-4 rounded-[24px] border border-[rgba(10,23,39,0.1)] overflow-hidden bg-white">
-        {review.image && (
-          <div className="relative w-full aspect-[4/5]">
-            <Image
-              src={review.image}
-              alt={`${review.name}'s headshot`}
-              layout="fill"
-              objectFit="cover"
-              className="object-center"
-            />
-            <div className="absolute top-3 sm:top-4 left-3 sm:left-4">
-              <Image src={AI} alt="AI Logo" width={60} height={16} className="w-[60px] h-[16px] sm:w-[90px] sm:h-[25px]" />
-            </div>
-          </div>
-        )}
-        
-        <div className="p-5 sm:p-6 space-y-3">
-          <div className="flex justify-between items-center">
-            <h3 className="font-medium text-base sm:text-lg text-gray-900">{review.name}</h3>
-            <span className="text-xs text-gray-500">{review.date}</span>
-          </div>
-          
-          <div className="flex gap-[2px]">
-            <RatingStars rating={review.rating} />
-          </div>
-          
-          {review.text && (
-            <p className="text-[15px] leading-[22px] text-[#475467]">{review.text}</p>
-          )}
+      )}
+      <div className="p-4">
+        <StarRating />
+        <p className="mt-2 text-[14px] leading-[20px] text-[#161C2D]/60 font-poppins">{text}</p>
+      </div>
+    </div>
+  </div>
+);
+
+const TestimoniallGrid = () => (
+  <div className="bg-white border-b">
+    <div className="max-w-[1440px] mx-auto px-4 sm:px-8 md:px-16">
+      <div className="text-center pt-8 pb-6 md:py-8">
+        <h2 className="text-[24px] sm:text-[32px] md:text-[48px] leading-[36px] sm:leading-[48px] md:leading-[64px] font-medium mb-4 font-poppins text-center">
+          <span className="bg-gradient-to-r from-[#8371FF] to-[#A077FE] bg-clip-text text-transparent">
+            <AnimatedNumber end={80000} duration={2000} />
+          </span>
+          {' '}PHOTOS ALREADY CREATED FOR{' '}
+          <span className="bg-[#01C7E4] bg-clip-text text-transparent">
+            <AnimatedNumber end={21000} duration={2000} />
+          </span>
+          {' '}HAPPY CUSTOMERS
+        </h2>
+        <p className="text-[18px] leading-[28px] text-[#161C2D]/60 max-w-[736px] mx-auto font-poppins">
+          Not made in a studio. Created by AI. Don't just take our word for it. Our AI turns everyday photos into professional headshots, that reflect your confidence & credibility.
+        </p>
+      </div>
+
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 pb-6 md:pb-8">
+        {/* Column #1 */}
+        <div className="flex flex-col gap-4 md:gap-8">
+          <TestimonialCard 
+            image="/testimoniall/img10.png"
+            text="The results are stunning and tailored according to me. These AI headshots are next level."
+          />
+          <TestimonialCard 
+            text="I tested the platform with a range of product images, and I was pleased with the outcomes."
+          />
+          <TestimonialCard 
+            image="/testimoniall/img7.png"
+            text="Amazing Product Photo generator site ever!"
+          />
+        </div>
+
+        {/* Column #2 */}
+        <div className="flex flex-col gap-4 md:gap-8">
+          <TestimonialCard 
+            text="As an online retailer, high-quality 
+product images are crucial. I uploaded 
+a few photos of my jewelry, and the AI 
+generated multiple stunning options that 
+showcased the pieces beautifully. The 
+variety allowed me to select different 
+backgrounds and angles to highlight 
+my products effectively. "
+          />
+          <TestimonialCard 
+            image="/testimoniall/img1.png"
+            text="A must-have tool for e-commerce!"
+          />
+          <TestimonialCard 
+            image="/testimoniall/img6.png"
+            text="Upload once, and you get so many options to pick from."
+          />
+        </div>
+
+        {/* Column #3 */}
+        <div className="flex flex-col gap-4 md:gap-8">
+          <TestimonialCard 
+            image="/testimoniall/img2.png"
+            text="Excellent quality and diversity in photos."
+          />
+          <TestimonialCard 
+            image="/testimoniall/img4.png"
+            text="Fast and user-friendly interface. I appreciate how easy this platform is to use."
+          />
+          <TestimonialCard 
+            text="I appreciate how easy this platform is to 
+use. I was impressed with how many 
+options I received. While most of them 
+were great, there were a couple that 
+didn't quite capture the product as I 
+hoped. However, it's easy to filter through 
+and find the best ones. Overall, a fanta-
+stic tool that saves me a lot of effort!"
+          />
+        </div>
+
+        {/* Column #4 */}
+        <div className="flex flex-col gap-4 md:gap-8">
+          <TestimonialCard 
+            image="/testimoniall/img3.png"
+            text="The AI is incredibly smart at generating diverse images. It's like having a mini photo studio!"
+          />
+          <TestimonialCard 
+            text="I love how the platform gives several options after uploading a single image. It's easy to pick a style or background that matches my aesthetic. Still, the convenience of multiple results and the overall quality are worth it! It's a time-saver, especially if you need variety for social media."
+          />
+          <TestimonialCard 
+            image="/testimoniall/img5.png"
+            text="Very satisfied with the quick service and quality."
+          />
         </div>
       </div>
-    );
-  };
-  
 
-  const ReviewSection = () => {
-    // Generate random numbers within realistic ranges
-    const photosCreated = formatNumber(getRandomNumber(12000, 15000));
-    const happyCustomers = formatNumber(getRandomNumber(2800, 3500));
-  
-    // Shuffle testimonials
-    const shuffledTestimonials = shuffleArray(testimonials);
-
-    return (
-      <div className="w-full max-w-[1276px] mx-auto bg-white rounded-[24px] sm:rounded-[60px] py-[18px] sm:py-20 px-4 sm:px-8 lg:px-10 font-poppins">
-        <div className="space-y-8">
-          <div className="text-center space-y-6">
-            <h2 className="text-gray-500 font-semibold font-jakarta">TESTIMONIALS</h2>
-            <h3 className="text-3xl sm:text-5xl font-bold font-jakarta">
-              <span className="bg-gradient-to-r from-[#7160FF] to-[#B19FFF] text-transparent bg-clip-text">{photosCreated}</span> headshots already created
-              <br/>
-              <span className="bg-gradient-to-r from-[#00B6D0] to-[#53E0FF] text-transparent bg-clip-text">{happyCustomers}</span> happy customers 
-            </h3>
-            <p className="text-gray-600 text-sm sm:text-base max-w-3xl mx-auto">
-              Transform your photos into polished, professional headshots in minutes. Join thousands of professionals 
-              who trust our AI to create studio-quality portraits that enhance their personal brand and make the right first impression.
-            </p>
-          </div>
-  
-          {/* Reviews Grid - now using shuffled testimonials */}
-          <div className="columns-1 sm:columns-2 lg:columns-3 gap-4">
-            {shuffledTestimonials.map((review, index) => (
-              <ReviewCard key={`${review.name}-${index}`} review={review} />
-            ))}
-          </div>
-
-          {/* View More Link */}
-          {/* <div className="flex justify-center pt-8">
-            <Link 
-              href="/reviews" 
-              className="inline-flex items-center px-6 py-3 text-base font-medium text-white bg-[#7160FF] hover:bg-[#5B4CCC] transition-colors duration-200 rounded-full"
-            >
-              View Our Photography
-            </Link>
-          </div> */}
-        </div>
+      {/* Join Now section */}
+      <div className="flex justify-center mt-8">
+        <Link href="/login" className="w-full sm:w-auto">
+          <button 
+            className="w-[200px] sm:w-[269px] h-[40px] sm:h-[48px] text-white rounded-full flex items-center justify-center gap-2 hover:opacity-90 transition-opacity font-poppins text-[13px] sm:text-[16px] mx-auto"
+            style={{
+              background: 'linear-gradient(90deg, #8371FF -39.48%, #A077FE 15.54%, #01C7E4 100%)'
+            }}
+          >
+            <span>Create Your Headshot</span>
+            <svg className="w-3 sm:w-5 h-3 sm:h-5" viewBox="0 0 20 20" fill="none">
+              <path 
+                d="M4.16666 10H15.8333M15.8333 10L10 4.16669M15.8333 10L10 15.8334" 
+                stroke="currentColor" 
+                strokeWidth="2" 
+                strokeLinecap="round" 
+                strokeLinejoin="round"
+              />
+            </svg>
+          </button>
+        </Link>
       </div>
-    );
-  };
-  
-  export default ReviewSection;
+    </div>
+  </div>
+);
+
+export default TestimoniallGrid;

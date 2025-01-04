@@ -1,6 +1,6 @@
 import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
-import { redirect } from "next/navigation";
+import ClientRedirect from "@/components/ClientRedirect";
 import type { Metadata } from 'next'
 import Works from "@/components/Works";
 import Why from "@/components/Why";
@@ -8,8 +8,10 @@ import ReviewSection from "@/components/HeadshotReviewSection";
 
 import Footer from "@/components/Footer";
 import Banner from "@/components/Banner";
+import ExplainerSection from "@/components/ExplainerSection";
 
 import GlamourHero from "@/components/GlamourHero";
+import GlamourHeadshotHero from "@/components/Photoshots-Headshot";
 
 export const dynamic = "force-dynamic";
 
@@ -25,42 +27,28 @@ export const metadata: Metadata = {
   }
 }
 
-export default async function glamour() {
+export default async function GlamourPage() {
   const supabase = createServerComponentClient({ cookies });
-
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
+  const { data: { user } } = await supabase.auth.getUser();
 
   if (user) {
-    return redirect("/overview");
+    return <ClientRedirect />;
   }
 
   return (
     <div className="w-full bg-[#F4F7FA] min-h-screen font-poppins">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-[82px]">
-        <div className="w-full max-w-[1276px] mx-auto space-y-12">
-          <div id="ai-headshots">
-            <GlamourHero/>
-          </div>
-          <Works
-          
-          image2="/Frame6.png"
-          image3="/Frame7.png"
-          />
-          <Why imageSet="Group13" />
-          <div id="testimonial">
-            <ReviewSection/>
-          </div>
-          
-         
-          
-          <div>
-            <Banner/>
-          </div>
+      <div>
+        <div id="ai-headshots" className="w-full">
+          <GlamourHero />
+        </div>
+        <div>
+          <ExplainerSection />
+          <GlamourHeadshotHero />
+          <ReviewSection />
+          <Banner />
+          <Footer/>
         </div>
       </div>
-      <Footer/>
     </div>
   );
 }

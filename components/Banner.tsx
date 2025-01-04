@@ -1,46 +1,35 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Button } from '@/components/ui/button';
+import { ArrowRight } from 'lucide-react';
 
 const Banner = () => {
   return (
-    <div className="w-full max-w-[1276px] mx-auto rounded-[13.64px] sm:rounded-[48px] overflow-hidden mb-4 sm:mb-8 font-poppins">
-      <div className="w-full h-[149px] sm:h-[459px] relative" style={{background: 'linear-gradient(90deg, #8371FF -39.48%, #A077FE 15.54%, #01C7E4 100%)'}}>
-        <div className="absolute inset-0 backdrop-blur-sm"></div>
-        <div className="flex flex-row h-full relative z-10">
-          {/* Logo - hidden on small screens */}
-          <div className="hidden sm:block sm:w-2/5 relative overflow-hidden">
-            <Image
-              src="/Union.png"
-              alt="Go logo"
-              layout="fill"
-              objectFit="cover"
-              className="object-center"
-            />
-          </div>
-          {/* Content */}
-          <div className="w-full sm:w-3/5 p-4 sm:p-12 flex flex-col justify-center">
-            <h2 className="text-lg sm:text-4xl font-bold text-white leading-tight mb-2 sm:mb-6 font-jakarta">
-              PhotoStudio Replacement.
-              <br className="hidden sm:inline" />
-              Your personal AI Studio.
-            </h2>
-            <div className="relative mb-2 sm:mb-6">
-              {/* <span className="bg-white text-[#8371FF] text-[10px] sm:text-xs px-2 sm:px-3 py-0.5 sm:py-1 rounded-full absolute -top-3 sm:-top-6 right-0 sm:right-12 whitespace-nowrap">on average</span> */}
-            </div>
-            <p className="text-xs sm:text-xl text-white mb-3 sm:mb-8">
-              Get Hyper Realistic studio-quality photos in less than an hour.
-            </p>
-            <Link href="/login">
-            <button className="w-[140px] sm:w-[200px] md:w-[318px] h-[36px] sm:h-[40px] md:h-[48px] bg-[#5B16FE] text-white text-[10px] sm:text-sm md:text-lg font-semibold rounded-full sm:rounded-[50px] px-2 sm:px-4 md:px-[25px] py-1 sm:py-2 md:py-[12px] hover:bg-[#5B16FE] transition duration-300 flex items-center justify-center gap-1 sm:gap-2 md:gap-[10px]">
-            <span className="whitespace-nowrap">Get your Photoshoot Now</span>
-            <svg className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-            </button>
-          </Link>
-          </div>
-        </div>
+    <div className="relative w-full h-[200px] xs:h-[250px] sm:h-[300px] md:h-[459px] overflow-hidden">
+      {/* Background Image */}
+      <Image
+        src="/Topp.png"
+        alt="Banner background"
+        fill
+        className="object-contain xs:object-cover object-center scale-[1.2] xs:scale-100"
+        sizes="(max-width: 480px) 480px,
+               (max-width: 768px) 768px,
+               100vw"
+        priority
+      />
+
+      {/* Button positioned over the image - moved even lower */}
+      <div className="absolute top-[75%] left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <Link href="/login">
+          <Button 
+                       className="bg-[#5B16FE] hover:bg-[#4F46E5] text-white px-8 py-3 rounded-full"
+
+          >
+            Get Started
+            <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 transition-transform group-hover:translate-x-1" />
+          </Button>
+        </Link>
       </div>
     </div>
   );

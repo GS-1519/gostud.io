@@ -1,78 +1,101 @@
+'use client'
 import React from 'react';
 import Image from 'next/image';
-import { StaticImageData } from 'next/image';
-import Borderone from "/public/Borderone.svg";
-import Bordertwo from "/public/Bordertwo.svg";
-import Borderthird from "/public/Borderthird.svg";
-import Borderfour from "/public/Borderfour.svg";
 import Link from 'next/link';
 
-interface SecurityFeatureProps {
-  imageSrc: string | StaticImageData;
-  title: string;
-  description: string;
-  lineCount: 2 | 3;
-}
-
-const SecurityFeature: React.FC<SecurityFeatureProps> = ({ imageSrc, title, description, lineCount }) => (
-  <div className="flex items-start space-x-4 mb-6 sm:mb-0">
-    <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full flex-shrink-0 overflow-hidden bg-gradient-to-br from-purple-400 to-blue-400 mt-1">
-      <Image src={imageSrc} alt={title} width={64} height={64} className="object-cover" />
+const SecurityFeature = ({ icon, title, description }: { icon: string, title: string, description: string }) => (
+  <div className="flex flex-row items-start gap-4 sm:gap-6 text-left">
+    <div className="w-[80px] h-[80px] sm:w-[107.81px] sm:h-[107.81px] flex items-center justify-center flex-shrink-0">
+      <Image 
+        src={icon}
+        alt={title}
+        width={107}
+        height={107}
+        className="w-full h-full"
+      />
     </div>
-    <div className="flex-grow">
-      <h3 className="text-white text-sm sm:text-lg font-semibold mb-1 font-jakarta">{title}</h3>
-      <p className={`text-gray-400 text-xs sm:text-sm ${lineCount === 2 ? 'line-clamp-2' : 'line-clamp-3'}`}>{description}</p>
+    <div className="flex-1">
+      <h3 className="font-poppins font-bold text-[18px] sm:text-[20px] leading-[28px]">
+        {title}
+      </h3>
+      <p className="font-poppins font-normal text-[14px] sm:text-[16px] leading-[21px] sm:leading-[24px] text-[#161C2D]/60">
+        {description}
+      </p>
     </div>
   </div>
 );
 
-const DataSecuritySection: React.FC = () => {
+const DataSecuritySection = () => {
+  const features = [
+    {
+      icon: '/logos/Border.png',
+      title: "NO DATA SELLING, NO SHARING",
+      description: "We will never sell your data or share with the third party websites."
+    },
+    {
+      icon: '/logos/lock.png',
+      title: "YOUR PHOTOS, YOUR CONTROL",
+      description: "We won't use your photos to train AI without your permissions."
+    },
+    {
+      icon: '/logos/text.png',
+      title: "AUTO DELETION OF DATA",
+      description: "The system automatically deletes all your images after 90 days. You choose to keep the setting your way."
+    },
+    {
+      icon: '/logos/Group.png',
+      title: "TOP-NOTCH SECURITY",
+      description: "We encrypt all sensitive user data. We use industry's best trusted software for your data."
+    }
+  ];
+
   return (
-    <div className="w-full max-w-[1276px] mx-auto bg-[#1E1E1E] rounded-3xl overflow-hidden relative p-6 sm:p-12 font-poppins">
-      <div className="flex flex-col items-center">
-        <h2 className="text-sm sm:text-base uppercase text-gray-400 mb-2 sm:mb-4 tracking-wider w-full text-center font-jakarta">PRIVACY</h2>
-        <h3 className="text-2xl sm:text-5xl font-bold mb-3 sm:mb-6 bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent text-center font-jakarta">
-          We value Data Privacy
-        </h3>
-        <p className="text-gray-400 text-sm sm:text-lg mb-8 sm:mb-12 text-center max-w-2xl">
-          Trusted by Fortune 500 Leaders and Top professionals.<br className="hidden sm:inline" />
-          Reputed enterprise organisations and teams trust us with their data.
-        </p>
-        
-        <div className="w-full grid sm:grid-cols-2 gap-y-6 sm:gap-x-16 sm:gap-y-12">
-          <SecurityFeature
-            imageSrc={Borderone}
-            title="NO DATA SELLING, NO SHARING"
-            description="We will never sell your data or share with the third party websites."
-            lineCount={2}
-          />
-          <SecurityFeature
-            imageSrc={Bordertwo}
-            title="YOUR PHOTOS, YOUR CONTROL"
-            description="We won't use your photos to train AI without your permissions."
-            lineCount={2}
-          />
-          <SecurityFeature
-            imageSrc={Borderthird}
-            title="AUTO DELETION OF DATA"
-            description="The system automatically deletes all your images after 90 days. You choose to keep the setting your way."
-            lineCount={3}
-          />
-          <SecurityFeature
-            imageSrc={Borderfour}
-            title="TOP-NOTCH SECURITY"
-            description="We encrypt all sensitive user data. We use industry's best trusted software for your data."
-            lineCount={3}
-          />
+    <div className="w-full bg-white">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-16 py-8 sm:py-16">
+        {/* Header */}
+        <div className="text-center mb-8 sm:mb-14">
+          <h2 className="text-[24px] sm:text-[32px] leading-[36px] sm:leading-[48px] font-poppins font-medium mb-3 sm:mb-4">
+            WE VALUE DATA PRIVACY
+          </h2>
+          <p className="text-[14px] sm:text-[16px] leading-[21px] sm:leading-[24px] font-poppins font-normal text-[#161C2D]/60">
+            Trusted by Fortune 500 Leaders and Top professionals
+            <br />
+            Reputed enterprise organizations and teams trust us with their data
+          </p>
         </div>
-        <Link href="/login">
-        <button className="w-full sm:w-auto py-3 px-6 sm:px-8 bg-[linear-gradient(90deg,#8371FF_-39.48%,#A077FE_15.54%,#01C7E4_100%)] text-white font-semibold rounded-full hover:opacity-90 transition duration-300 flex items-center justify-center text-base sm:text-lg mt-8 sm:mt-12">
-          Create Your Headshot
-          <svg className="w-5 h-5 ml-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
-        </button>
-        </Link>
+
+        {/* Features Grid - Single column on mobile */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-x-20 sm:gap-y-12 mb-8 sm:mb-12">
+          {features.map((feature, index) => (
+            <SecurityFeature
+              key={index}
+              {...feature}
+            />
+          ))}
+        </div>
+
+        {/* Create Button */}
+        <div className="flex justify-center mt-8">
+          <Link href="/login" className="w-full sm:w-auto">
+            <button 
+              className="w-[200px] sm:w-[269px] h-[40px] sm:h-[48px] text-white rounded-full flex items-center justify-center gap-2 hover:opacity-90 transition-opacity font-poppins text-[13px] sm:text-[16px] mx-auto"
+              style={{
+                background: 'linear-gradient(90deg, #8371FF -39.48%, #A077FE 15.54%, #01C7E4 100%)'
+              }}
+            >
+              <span>Create Your Headshot</span>
+              <svg className="w-3 sm:w-5 h-3 sm:h-5" viewBox="0 0 20 20" fill="none">
+                <path 
+                  d="M4.16666 10H15.8333M15.8333 10L10 4.16669M15.8333 10L10 15.8334" 
+                  stroke="currentColor" 
+                  strokeWidth="2" 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button>
+          </Link>
+        </div>
       </div>
     </div>
   );

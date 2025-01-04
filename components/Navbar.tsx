@@ -49,7 +49,23 @@ const Navbar: React.FC = () => {
     };
   
     checkUser();
-  }, [supabase]);
+
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(
+      async (event, session) => {
+        if (event === 'SIGNED_IN') {
+          setUser(session?.user ?? null);
+          router.refresh();
+        } else if (event === 'SIGNED_OUT') {
+          setUser(null);
+          setCredits(null);
+          router.push('/');
+          router.refresh();
+        }
+      }
+    );
+
+    return () => subscription.unsubscribe();
+  }, [supabase, router]);
 
   const getUserMenuProps = (user: User | null, credits: number | null): UserMenuProps | null => {
     if (!user || !user.email) return null;
@@ -62,13 +78,8 @@ const Navbar: React.FC = () => {
   return (
     <>
       <div className="fixed top-0 left-0 right-0 w-full z-40">
-        <nav 
-          className="bg-white backdrop-blur-lg bg-opacity-80 shadow-lg font-poppins mx-auto rounded-b-[24px] border-b border-x border-gray-100"
-          style={{
-            maxWidth: '1276px',
-          }}
-        >
-          <div className="flex items-center justify-between h-16 px-4 sm:px-6 lg:px-8">
+        <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200">
+          <div className="flex items-center justify-between h-16 px-4 sm:px-6 lg:px-8 max-w-[1400px] mx-auto">
             {/* Logo Section */}
             <div className="flex-shrink-0">
               <Link href={user ? '/overview' : '/'} className="flex items-center">
@@ -84,13 +95,11 @@ const Navbar: React.FC = () => {
             </div>
 
             {/* Desktop Navigation - Center */}
-            {!user && (
-              <div className="hidden lg:flex items-center justify-center flex-1 ml-8">
-                <div className="flex space-x-8">
-                  <NavItems />
-                </div>
+            <div className="hidden lg:flex items-center justify-center flex-1 ml-8">
+              <div className="flex space-x-8">
+                <NavItems user={user} />
               </div>
-            )}
+            </div>
 
             {/* Right Section - Auth/Menu */}
             <div className="flex items-center gap-3 sm:gap-4">
@@ -138,14 +147,9 @@ const Navbar: React.FC = () => {
 
         {/* Mobile Navigation Menu */}
         {!user && isMenuOpen && (
-          <div 
-            className="lg:hidden mt-2 mx-auto overflow-hidden"
-            style={{ maxWidth: '1276px' }}
-          >
-            <div className="bg-white backdrop-blur-lg bg-opacity-80 shadow-lg rounded-[24px] border border-gray-100 py-3">
-              <div className="px-4 pt-2 pb-3 space-y-1">
-                <NavItems isMobile />
-              </div>
+          <div className="lg:hidden fixed top-16 left-0 right-0 w-full bg-white backdrop-blur-lg bg-opacity-95 shadow-lg border-b border-gray-100 py-3 max-h-[calc(100vh-64px)] overflow-y-auto">
+            <div className="px-4 pt-2 pb-3">
+              <NavItems isMobile user={user} />
             </div>
           </div>
         )}

@@ -1,10 +1,11 @@
 'use client'
+import { useRouter } from 'next/navigation'
 import { useState } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import { ChevronDown, ChevronUp, Wand2 } from 'lucide-react';
 
 const DogHeadshotHero = () => {
+  const router = useRouter();
   const [activeCategory, setActiveCategory] = useState('all');
   const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
   const [showAll, setShowAll] = useState(false);
@@ -34,48 +35,58 @@ const DogHeadshotHero = () => {
 
   const displayImages = getDisplayImages();
 
+  const handleGenerateMore = () => {
+    // Store the pack info in localStorage before redirecting
+    localStorage.setItem('intendedPack', JSON.stringify({
+      type: 'dog',
+      path: '/photoshoot-packs/pet-photography-dog',
+      redirect: true
+    }));
+    
+    // Redirect to login
+    router.push('/login');
+  };
+
   return (
-    <div className="w-full max-w-[1276px] mx-auto bg-white rounded-[24px] sm:rounded-[60px] py-[18px] sm:py-20 px-4 sm:px-8 lg:px-10">
-      <div className="text-center space-y-8">
-        <div className="space-y-4">
-          <h2 className="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-500 to-red-500 leading-tight tracking-tight">
-            Pawsome Pet Portrait Collection
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Transform your furry friend's photos into stunning portraits that capture their unique personality and charm
-          </p>
-        </div>
+    <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-24">
+      <div className="text-center mb-16">
+        <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4]">
+          Pawsome Pet Portrait Collection
+        </h2>
+        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          Transform your furry friend's photos into stunning portraits that capture their unique personality and charm
+        </p>
+      </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {displayImages.map((image, index) => (
-            <div 
-              key={index}
-              className="relative group cursor-pointer overflow-hidden rounded-lg"
-              onClick={() => setSelectedImage(image)}
-            >
-              <div className="aspect-[4/5]">
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  width={400}
-                  height={500}
-                  className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
-                />
-              </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {displayImages.map((image, index) => (
+          <div 
+            key={`${image.src}-${index}`}
+            className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
+            onClick={() => setSelectedImage(image)}
+          >
+            <div className="relative w-full h-[400px]">
+              <Image
+                src={image.src}
+                alt={image.alt}
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                className="object-cover"
+                priority={index < 2}
+              />
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
+      </div>
 
-        <div className="flex flex-col items-center gap-4">
-          <Link href="/login">
-            <button 
-              className="group flex items-center gap-2 px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105 text-white bg-gradient-to-r from-amber-400 via-orange-500 to-red-500 hover:opacity-90"
-            >
-              Generate More
-              <Wand2 className="w-5 h-5 transition-transform group-hover:rotate-45" />
-            </button>
-          </Link>
-        </div>
+      <div className="flex flex-col items-center gap-4 mt-24">
+        <button 
+          onClick={handleGenerateMore}
+          className="group flex items-center gap-2 px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105 text-white bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4] hover:opacity-90"
+        >
+          Generate More
+          <Wand2 className="w-5 h-5 transition-transform group-hover:rotate-45" />
+        </button>
       </div>
 
       {selectedImage && (

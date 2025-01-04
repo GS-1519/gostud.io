@@ -46,6 +46,7 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 224.3 76.3% 48%;
+    
   }
 }
 
@@ -117,4 +118,95 @@ img-comparison-slider.rendered {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
   }
+}
+
+/* Reset default margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* If you're using a layout component, add this */
+main {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Remove any margin/padding from main elements */
+main {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100%;
+}
+
+/* Add fadeIn animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Custom breakpoint for extra small devices */
+@media (min-width: 480px) {
+  .xs\:min-h-\[400px\] { min-height: 400px; }
+  .xs\:max-w-\[85\%\] { max-width: 85%; }
+  .xs\:max-w-\[90\%\] { max-width: 90%; }
+  .xs\:text-\[26px\] { font-size: 26px; }
+  .xs\:text-\[14px\] { font-size: 14px; }
+  .xs\:mt-4 { margin-top: 1rem; }
+  .xs\:mt-7 { margin-top: 1.75rem; }
+  .xs\:w-\[90\%\] { width: 90%; }
+  .xs\:h-\[46px\] { height: 46px; }
+  .xs\:px-\[25px\] { padding-left: 25px; padding-right: 25px; }
+  .xs\:ml-6 { margin-left: 1.5rem; }
+
+  /* New xs breakpoint styles */
+  .xs\:min-h-\[250px\] { min-height: 250px; }
+  .xs\:mt-\[100px\] { margin-top: 100px; }
+  .xs\:max-w-\[280px\] { max-width: 280px; }
+  .xs\:h-\[40px\] { height: 40px; }
+  .xs\:px-\[20px\] { padding-left: 20px; padding-right: 20px; }
+  .xs\:py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+  .xs\:text-\[14px\] { font-size: 14px; }
+  .xs\:px-4 { padding-left: 1rem; padding-right: 1rem; }
+}
+
+/* Optimize touch interactions */
+@media (hover: hover) and (pointer: fine) {
+  .hover\:scale-\[1\.02\]:hover {
+    transform: scale(1.02);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 15s linear infinite;
 }

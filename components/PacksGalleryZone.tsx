@@ -6,6 +6,9 @@ import Link from "next/link";
 import { Loader2, ChevronDown, ChevronUp } from "lucide-react";
 import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
+import { PackDetailsOverlay } from './PackDetailsOverlay';
+import { Button } from '@/components/ui/button';
+import { packImages } from '@/utils/packImages';
 
 interface Cost {
   cost: number;
@@ -27,6 +30,7 @@ interface Pack {
   title: string;
   cover_url: string;
   costs: Costs;
+  images: string[];
 }
 
 const groupPacksByCategory = (packs: Pack[]) => {
@@ -61,6 +65,7 @@ export default function PacksGalleryZone() {
     children: true,
     pets: true
   });
+  const [selectedPack, setSelectedPack] = useState<Pack | null>(null);
 
   const fetchPacks = async (): Promise<void> => {
     try {
@@ -90,22 +95,85 @@ export default function PacksGalleryZone() {
     fetchPacks();
   }, []);
 
-  const handlePackSelect = (e: React.MouseEvent, pack: Pack) => {
-    e.preventDefault();
+  const handlePackSelect = (pack: Pack) => {
+    // Initial logging
+    console.log('1. Initial Pack Data:', {
+      title: pack.title,
+      originalSlug: pack.slug,
+      coverUrl: pack.cover_url
+    });
     
-    try {
-      localStorage.setItem('selectedPack', JSON.stringify(pack));
-      console.log('Pack saved:', pack);
-      
-      router.push(`/overview/models/train/${pack.slug}`);
-    } catch (error) {
-      console.error('Error saving pack to localStorage:', error);
-      toast({
-        title: "Error",
-        description: "Failed to save your selection. Please try again.",
-        duration: 5000,
-      });
-    }
+    // Get the normalized slug for the pack
+    let normalizedSlug = pack.slug
+      .replace('md-', '')
+      .toLowerCase()
+      .replace('photoshoot', 'photoshoot')
+      .replace('christmas-sweater', 'christmas')
+      .replace('cat-meowgic', 'cat')
+      .replace('me-iconic', 'iconic')
+      .replace('partners-headshots', 'partner')
+      .replace('wild-friends-forever', 'wildfriends')
+      .replace('vikings-style', 'vikings')
+      .replace('wrestlemania-style', 'wrestlemania')
+      .replace('youtube-thumbnail-reaction', 'youtube')
+      .replace('everyday-onesies', 'onesie')
+      .replace('generative-artistic-filters', 'artistic')
+      .replace('kids-bday', 'birthday')
+      .replace('game-of-thrones-style', 'gamesofthrones')
+      .replace('game-of-thrones', 'gamesofthrones')
+      .replace('dog-art', 'dog')
+      .replace('inspiration-board', 'fitness')
+      .replace('botanical-illustration', 'botanical')
+      .replace('famous-photographers', 'helmut')
+      .replace('jcrew-style', 'jcrew')
+      .replace('corporate-headshots', 'corporate')
+      .replace('glamour-shot', 'glamour')
+      .replace('birthday-party-save-the-daye', 'hbdsave')
+      .replace('xmas-by-futurecreators', 'winter')
+      .replace('amichai-ai', 'success')
+      .replace('stylish-studio-portraits', 'stylish')
+      .replace(/-/g, '');
+    
+    // Debug slug transformation
+    console.log('2. Slug Processing:', {
+      original: pack.slug,
+      afterArtisticReplace: pack.slug.toLowerCase().replace('generative-artistic-filters', 'artistic'),
+      normalized: normalizedSlug,
+      availableKeys: Object.keys(packImages),
+      matchFound: packImages.hasOwnProperty(normalizedSlug)
+    });
+    
+    // Get additional images for this pack
+    const additionalImages = packImages[normalizedSlug] || [];
+    
+    // Debug image loading
+    console.log('3. Image Loading:', {
+      normalizedSlug,
+      foundInPackImages: !!packImages[normalizedSlug],
+      numberOfAdditionalImages: additionalImages.length,
+      firstImage: additionalImages[0],
+      allImages: additionalImages,
+      availablePacks: Object.keys(packImages)
+    });
+    
+    const finalPack = {
+      ...pack,
+      images: [
+        pack.cover_url,
+        ...additionalImages
+      ]
+    };
+    
+    // Debug final pack
+    console.log('4. Final Pack:', {
+      title: finalPack.title,
+      slug: finalPack.slug,
+      normalizedSlug,
+      totalImages: finalPack.images.length,
+      allImages: finalPack.images
+    });
+    
+    setSelectedPack(finalPack);
   };
 
   const groupedPacks = groupPacksByCategory(packs);
@@ -115,6 +183,43 @@ export default function PacksGalleryZone() {
       ...prev,
       [section]: !prev[section]
     }));
+  };
+
+  const handleStartCreating = () => {
+    if (selectedPack) {
+      try {
+        localStorage.setItem('selectedPack', JSON.stringify(selectedPack));
+        router.push(`/overview/models/train/${selectedPack.slug}`);
+      } catch (error) {
+        console.error('Error saving pack to localStorage:', error);
+        toast({
+          title: "Error",
+          description: "Failed to save your selection. Please try again.",
+          duration: 5000,
+        });
+      }
+    } else {
+      const firstPack = packs[0];
+      if (firstPack) {
+        try {
+          localStorage.setItem('selectedPack', JSON.stringify(firstPack));
+          router.push(`/overview/models/train/${firstPack.slug}`);
+        } catch (error) {
+          console.error('Error saving pack to localStorage:', error);
+          toast({
+            title: "Error",
+            description: "Failed to save your selection. Please try again.",
+            duration: 5000,
+          });
+        }
+      } else {
+        toast({
+          title: "No packs available",
+          description: "Please select a pack first.",
+          duration: 5000,
+        });
+      }
+    }
   };
 
   if (loading) {
@@ -148,48 +253,79 @@ export default function PacksGalleryZone() {
   };
 
   return (
-    <div className="space-y-8">
-      {Object.entries(groupedPacks).map(([category, categoryPacks]) => 
-        categoryPacks.length > 0 && (
-          <div key={category} className="space-y-4">
-            <button 
-              onClick={() => toggleSection(category)}
-              className="w-full flex items-center justify-between text-xl font-bold py-2 hover:bg-gray-50 rounded-lg transition-colors duration-200"
-            >
-              <h2>{getCategoryTitle(category)}</h2>
-              <span className="text-gray-500">
-                {expandedSections[category] ? (
-                  <ChevronUp className="w-6 h-6" />
-                ) : (
-                  <ChevronDown className="w-6 h-6" />
-                )}
-              </span>
-            </button>
-            
-            {expandedSections[category] && (
-              <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 transition-all duration-300">
-                {categoryPacks.map((pack) => (
-                  <Link 
-                    href={`/overview/models/train/${pack.slug}`} 
-                    key={pack.id} 
-                    className="w-full h-70 bg-black rounded-md overflow-hidden transition-transform duration-300 hover:scale-105"
-                    onClick={(e) => handlePackSelect(e, pack)}
-                  >
-                    <img
-                      src={pack.cover_url ?? "https://www.astria.ai/assets/logo-b4e21f646fb5879eb91113a70eae015a7413de8920960799acb72c60ad4eaa99.png"}
-                      alt={pack.title}
-                      className="w-full h-4/5 object-cover"
-                    />
-                    <div className="text-white w-full p-3 text-md font-bold text-center capitalize leading-tight">
-                      {pack.title}
+    <div className="w-full">
+    
+
+      <div className="space-y-8">
+        {Object.entries(groupedPacks).map(([category, categoryPacks]) => 
+          categoryPacks.length > 0 && (
+            <div key={category} className="space-y-4">
+              <button 
+                onClick={() => toggleSection(category)}
+                className="w-full flex items-center justify-between text-xl font-semibold text-[#161C2D] py-2"
+              >
+                <h2>{getCategoryTitle(category)}</h2>
+                <span className="text-[#64748B]">
+                  {expandedSections[category] ? (
+                    <ChevronUp className="w-5 h-5" />
+                  ) : (
+                    <ChevronDown className="w-5 h-5" />
+                  )}
+                </span>
+              </button>
+              
+              {expandedSections[category] && (
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-[17px]">
+                  {categoryPacks.map((pack) => (
+                    <div 
+                      key={pack.id}
+                      onClick={() => handlePackSelect(pack)}
+                      className="group relative rounded-[11.34px] overflow-hidden cursor-pointer"
+                    >
+                      <div className="relative h-full">
+                        <img
+                          src={pack.cover_url ?? "https://www.astria.ai/assets/logo-b4e21f646fb5879eb91113a70eae015a7413de8920960799acb72c60ad4eaa99.png"}
+                          alt={pack.title}
+                          className="w-full h-full object-cover"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/60" />
+                        <div className="absolute bottom-0 left-0 right-0 p-4">
+                          <h3 className="text-white text-lg font-medium capitalize">
+                            {pack.title}
+                          </h3>
+                        </div>
+                      </div>
                     </div>
-                  </Link>
-                ))}
-              </div>
-            )}
-          </div>
-        )
+                  ))}
+                </div>
+              )}
+            </div>
+          )
+        )}
+      </div>
+
+      {selectedPack && (
+        <PackDetailsOverlay
+          isOpen={!!selectedPack}
+          onClose={() => setSelectedPack(null)}
+          pack={selectedPack}
+        />
       )}
+
+      <div className="mt-12 flex justify-center">
+        <Button
+          onClick={handleStartCreating}
+          className="bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4] text-white px-10 py-2 rounded-[42px] hover:opacity-90 transition-all duration-300"
+          style={{
+            width: '269px',
+            height: '48px',
+            padding: '12px 25px',
+            gap: '10px'
+          }}
+        >
+          Continue
+        </Button>
+      </div>
     </div>
   );
 }

@@ -2,79 +2,168 @@ import React from 'react';
 import { DollarSign, Clock, Layers, User } from 'lucide-react';
 import Link from 'next/link';
 
+const gradientTextStyle = {
+  background: 'linear-gradient(90.21deg, #8371FF 54.14%, #A077FE 77.65%, #01C7E4 99.96%)',
+  WebkitBackgroundClip: 'text',
+  WebkitTextFillColor: 'transparent',
+  backgroundClip: 'text'
+};
+
 const ComparisonPage = () => {
   const comparisonData = [
-    { 
-      label: 'Value for money', 
-      icon: DollarSign, 
-      goStudio: '$10', 
-      studio: '$500+', 
-      color: 'bg-green-500' 
+    {
+      label: 'Value for money',
+      icon: DollarSign,
+      goStudio: '$19',
+      studio: '$200',
+      iconBg: '#22C55E'
     },
-    { 
-      label: 'Save time', 
-      icon: Clock, 
-      goStudio: '30 minutes', 
-      studio: '1-2 days', 
-      color: 'bg-gray-500' 
+    {
+      label: 'Save time',
+      icon: Clock,
+      goStudio: '30 minutes',
+      studio: '2-3 days',
+      iconBg: '#A855F7'
     },
-    { 
-      label: 'Variety', 
-      icon: Layers, 
-      goStudio: '20 Headshots', 
-      studio: '5-8 Headshots', 
-      color: 'bg-red-400' 
+    {
+      label: 'Variety',
+      icon: Layers,
+      goStudio: '30 headshots',
+      studio: '4-5 headshots',
+      iconBg: '#F87171'
     },
-    { 
-      label: 'More choices', 
-      icon: User, 
-      goStudio: '50+ Packs to choose from', 
-      studio: '2-3 setups', 
-      color: 'bg-purple-500' 
-    },
+    {
+      label: 'More choices',
+      icon: User,
+      goStudio: '20 styles',
+      studio: '1 style',
+      iconBg: '#A855F7'
+    }
   ];
 
   return (
-    <div className="w-full max-w-[1276px] mx-auto bg-white rounded-[24px] sm:rounded-[60px] py-8 sm:py-20 px-4 sm:px-6 lg:px-8 flex items-center justify-center font-poppins">
-      <div className="w-full sm:w-[992px] flex flex-col gap-4 sm:gap-6 max-w-full sm:max-w-none py-[18px] sm:py-0">
-        <h2 className="text-center text-gray-500 font-semibold font-jakarta">COMPARE</h2>
-        <h3 className="text-2xl sm:text-4xl font-bold text-center font-jakarta mb-2 sm:mb-2">
-          Save Money and Time
-        </h3>
-        <p className="text-center text-gray-600 text-sm sm:text-lg mb-4 sm:mb-8 font-poppins">
-          Choose the smarter way — save time and money without compromising on quality
-        </p>
+    <div className="w-full bg-white">
+      {/* Mobile Version */}
+      <div className="md:hidden">
+        <div className="max-w-[992px] mx-auto px-6 py-8">
+          <div className="bg-white">
+            {/* Header */}
+            <div className="w-[358px] h-auto sm:h-[48px] font-poppins text-[24px] sm:text-[32px] font-[500] leading-[36px] sm:leading-[48px] text-center mx-auto text-[#161C2D] mb-4">
+              SAVE MONEY AND TIME
+            </div>
+            <p className="text-center text-[15px] text-gray-600 mb-8 max-w-[320px] mx-auto leading-[1.6]">
+              Aaria ensures you're ready for every professional moment. From resumes to LinkedIn, we make your headshots shine effortlessly.
+            </p>
 
-        <div className="grid grid-cols-3 gap-2 sm:gap-4 mb-4 sm:mb-6 text-sm sm:text-base font-poppins">
-          <div></div>
-          <div className="font-semibold" style={{ background: 'linear-gradient(90deg, #8371FF -39.48%, #A077FE 32.07%, #01C7E4 100%)', WebkitBackgroundClip: 'text', backgroundClip: 'text', color: 'transparent' }}>Go Studio.ai</div>
-          <div className="font-semibold">Studio Photoshoot</div>
+            {/* Column Headers */}
+            <div className="grid grid-cols-[1fr,auto,auto] gap-4 mb-6">
+              <div></div>
+              <div className="text-[16px] font-medium min-w-[100px] bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4] text-transparent bg-clip-text">
+                Go Studio.ai
+              </div>
+              <div className="text-gray-400 text-[16px] min-w-[100px]">
+                Studio Photoshoot
+              </div>
+            </div>
+
+            {/* Comparison Items */}
+            <div className="space-y-6">
+              {comparisonData.map((item, index) => (
+                <div 
+                  key={index} 
+                  className="grid grid-cols-[1fr,auto,auto] gap-4 items-center"
+                >
+                  {/* Label + Icon */}
+                  <div className="flex items-center gap-3">
+                    <div 
+                      className="w-6 h-6 rounded-full flex items-center justify-center"
+                      style={{ backgroundColor: item.iconBg }}
+                    >
+                      <item.icon className="text-white" size={16} />
+                    </div>
+                    <div className="text-[15px] text-gray-900">{item.label}</div>
+                  </div>
+
+                  {/* Go Studio Value */}
+                  <div className="text-[15px] font-medium text-gray-900 min-w-[100px]">
+                    {item.goStudio}
+                  </div>
+
+                  {/* Studio Value */}
+                  <div className="text-[15px] text-gray-400 min-w-[100px]">
+                    {item.studio}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Button */}
+            <Link href="/login">
+            <button className="w-full bg-[#5B16FE] text-white rounded-[100px] h-[56px] mt-8 flex items-center justify-center gap-2 text-[16px] font-medium px-8">
+              Explore More
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.5 19L20.5 12L13.5 5M3.5 12H20.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </button>
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      {/* Desktop Version */}
+      <div className="hidden md:block max-w-[992px] mx-auto py-16">
+        <div className="text-center mb-12">
+          <h2 className="w-[358px] h-auto sm:h-[48px] font-poppins text-[24px] sm:text-[32px] font-[500] leading-[36px] sm:leading-[48px] text-center mx-auto text-[#161C2D] mb-4">
+            SAVE MONEY AND TIME
+          </h2>
         </div>
 
-        {comparisonData.map((item, index) => (
-          <div key={index} className="space-y-2 sm:space-y-2 pb-3 sm:pb-4 border-b border-[rgba(10,23,39,0.1)]">
-            <div className="grid grid-cols-3 gap-2 sm:gap-4 items-center text-sm sm:text-base font-poppins">
-              <div className="flex items-center">
-                <div className={`w-6 h-6 sm:w-8 sm:h-8 rounded-full ${item.color} flex items-center justify-center mr-2 sm:mr-3`}>
-                  <item.icon className="text-white" size={12} />
-                </div>
-                <span className="font-poppins">{item.label}</span>
-              </div>
-              <div className="font-poppins">{item.goStudio}</div>
-              <div className="text-gray-400 font-poppins">{item.studio}</div>
-            </div>
+        {/* Desktop Comparison Headers */}
+        <div className="grid grid-cols-3 gap-8 mb-8">
+          <div></div>
+          <div className="text-xl font-semibold bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4] text-transparent bg-clip-text">
+            Go Studio.ai
           </div>
-        ))}
+          <div className="text-[#767676] text-xl font-semibold">Studio Photoshoot</div>
+        </div>
 
-        <div className="flex justify-center mt-6 sm:mt-8">
-          <Link href="/login">
-          <button className="w-full sm:w-[287px] h-[48px] rounded-[50px] bg-[#5B16FE] text-white font-semibold text-base flex items-center justify-center px-4 sm:px-[25px] py-3 sm:py-[12px] hover:opacity-90 transition-opacity font-poppins">
-            <span>Get Started</span>
-            <svg className="ml-2 sm:ml-[10px]" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        {/* Desktop Comparison Items */}
+        <div className="space-y-8">
+          {comparisonData.map((item, index) => (
+            <div key={index} className="grid grid-cols-3 gap-8 pb-8 border-b border-gray-200 last:border-0">
+              <div className="flex items-center gap-4">
+                <div 
+                  className="w-12 h-12 rounded-full flex items-center justify-center"
+                  style={{ backgroundColor: item.iconBg }}
+                >
+                  <item.icon className="text-white" size={24} />
+                </div>
+                <span className="text-gray-900 text-xl font-medium">{item.label}</span>
+              </div>
+              <div className="text-gray-900 text-xl font-medium">
+                {item.goStudio}
+              </div>
+              <div className="text-gray-500 text-xl">
+                {item.studio}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Desktop Button */}
+        <div className="flex justify-center mt-12">
+          <button className="bg-[#7C3AED] hover:bg-[#6D28D9] text-white px-8 py-3 rounded-full flex items-center justify-center gap-2 transition-colors">
+            Explore More
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path 
+                d="M5 12H19M19 12L12 5M19 12L12 19" 
+                stroke="currentColor" 
+                strokeWidth="2" 
+                strokeLinecap="round" 
+                strokeLinejoin="round"
+              />
             </svg>
           </button>
-          </Link>
         </div>
       </div>
     </div>

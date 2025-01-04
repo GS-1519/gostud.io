@@ -1,10 +1,12 @@
 'use client'
+import { useRouter } from 'next/navigation'
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ChevronDown, ChevronUp, Wand2 } from 'lucide-react';
 
 const DatingHeadshotHero = () => {
+  const router = useRouter();
   const [activeCategory, setActiveCategory] = useState('all');
   const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
   const [showAll, setShowAll] = useState(false);
@@ -55,98 +57,97 @@ const DatingHeadshotHero = () => {
 
   const displayImages = getDisplayImages();
 
+  const handleGenerateMore = () => {
+    // Store the pack info in localStorage before redirecting
+    localStorage.setItem('intendedPack', JSON.stringify({
+      type: 'dating',
+      path: '/photoshoot-packs/online-dating-profile-photos',
+      redirect: true
+    }));
+    
+    // Redirect to login
+    router.push('/login');
+  };
+
   return (
-    <div className="relative overflow-hidden bg-white">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center space-y-8 py-12">
-          <div className="space-y-4">
-            <h2 
-              className="text-4xl sm:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4] leading-tight tracking-tight"
-              style={{
-                backgroundImage: 'linear-gradient(90deg, #8371FF -39.48%, #A077FE 15.54%, #01C7E4 100%)'
-              }}
-            >
-              Dating Profile Photos That Make the Perfect First Impression
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed font-light">
-              Stand out on dating apps with our AI-powered professional photos.
-              <span className="font-medium text-gray-800"> Natural, authentic, and totally you.</span>
-            </p>
-          </div>
+    <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-24">
+      <div className="text-center mb-16">
+        <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4]">
+          Dating Profile Photos That Make the Perfect First Impression
+        </h2>
+        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          Stand out on dating apps with our AI-powered professional photos.
+          <span className="font-medium text-gray-800"> Natural, authentic, and totally you.</span>
+        </p>
+      </div>
 
-          <div className="flex justify-center gap-4">
-            {categories.map((category) => (
-              <button
-                key={category.value}
-                onClick={() => {
-                  setActiveCategory(category.value);
-                  setShowAll(false);
-                }}
-                className={`px-6 py-2 rounded-full transition-all duration-300 ${
-                  activeCategory === category.value
-                    ? 'bg-[#5B16FE] text-white hover:opacity-90'
-                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-                }`}
-              >
-                {category.name}
-              </button>
-            ))}
-          </div>
+      <div className="flex justify-center gap-4 mb-16">
+        {categories.map((category) => (
+          <button
+            key={category.value}
+            onClick={() => {
+              setActiveCategory(category.value);
+              setShowAll(false);
+            }}
+            className={`px-6 py-2 rounded-full transition-all duration-300 transform hover:scale-105 ${
+              activeCategory === category.value
+                ? 'bg-purple-600 text-white hover:bg-purple-700'
+                : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+            }`}
+          >
+            {category.name}
+          </button>
+        ))}
+      </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {displayImages.map((image, index) => (
-              <div 
-                key={index}
-                className="relative group cursor-pointer"
-                onClick={() => setSelectedImage(image)}
-              >
-                <div className="aspect-w-4 aspect-h-5 rounded-lg overflow-hidden">
-                  <Image
-                    src={image.src}
-                    alt={image.alt}
-                    width={400}
-                    height={500}
-                    className="object-cover transform transition-transform group-hover:scale-105"
-                    layout="responsive"
-                  />
-                </div>
-              </div>
-            ))}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {displayImages.map((image, index) => (
+          <div 
+            key={`${image.src}-${index}`}
+            className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1"
+            onClick={() => setSelectedImage(image)}
+          >
+            <div className="relative w-full h-[400px]">
+              <Image
+                src={image.src}
+                alt={image.alt}
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                className="object-cover"
+                priority={index < 2}
+              />
+            </div>
           </div>
+        ))}
+      </div>
 
-          <div className="flex flex-col items-center gap-4">
-            {activeCategory === 'all' ? (
-              <button
-                onClick={() => setShowAll(!showAll)}
-                className="group flex items-center gap-2 px-6 py-3 bg-[#5B16FE] text-white rounded-full hover:opacity-90 transition-all duration-300 transform hover:scale-105"
-              >
-                {showAll ? (
-                  <>
-                    Show Less
-                    <ChevronUp className="w-5 h-5 group-hover:-translate-y-1 transition-transform" />
-                  </>
-                ) : (
-                  <>
-                    Explore More
-                    <ChevronDown className="w-5 h-5 group-hover:translate-y-1 transition-transform" />
-                  </>
-                )}
-              </button>
+      <div className="flex flex-col items-center gap-4 mt-24">
+        {activeCategory === 'all' ? (
+          <button
+            onClick={() => setShowAll(!showAll)}
+            className="group flex items-center gap-2 px-6 py-3 bg-purple-600 text-white rounded-full hover:bg-purple-700 transition-all duration-300 transform hover:scale-105"
+          >
+            {showAll ? (
+              <>
+                Show Less
+                <ChevronUp className="w-5 h-5 transition-transform group-hover:-translate-y-1" />
+              </>
             ) : (
-              <Link href="/login">
-                <button 
-                  className="group flex items-center gap-2 px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105 text-white"
-                  style={{
-                    background: 'linear-gradient(90deg, #8371FF -39.48%, #A077FE 15.54%, #01C7E4 100%)'
-                  }}
-                >
-                  Generate More
-                  <Wand2 className="w-5 h-5 group-hover:rotate-45 transition-transform" />
-                </button>
-              </Link>
+              <>
+                Explore More
+                <ChevronDown className="w-5 h-5 transition-transform group-hover:translate-y-1" />
+              </>
             )}
-          </div>
-        </div>
+          </button>
+        ) : (
+          <button 
+            onClick={handleGenerateMore}
+            className="group flex items-center gap-2 px-8 py-3 rounded-full transition-all duration-300 transform hover:scale-105 text-white bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4] hover:opacity-90"
+          >
+            Generate More
+            <Wand2 className="w-5 h-5 transition-transform group-hover:rotate-45" />
+          </button>
+        )}
       </div>
 
       {selectedImage && (

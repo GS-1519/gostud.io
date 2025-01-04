@@ -2,8 +2,7 @@ import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import type { Metadata } from 'next'
-import Works from "@/components/Works";
-import Why from "@/components/Why";
+
 import ReviewSection from "@/components/HeadshotReviewSection";
 
 import Footer from "@/components/Footer";
@@ -11,6 +10,8 @@ import Banner from "@/components/Banner";
 
 import DateHero from "@/components/DateHero";
 import SaveDateHeadshotHero from "@/components/Save-Date-Headshots";
+import ExplainerSection from "@/components/ExplainerSection";
+import ClientRedirect from "@/components/ClientRedirect";
 
 export const dynamic = "force-dynamic";
 
@@ -31,46 +32,28 @@ export const metadata: Metadata = {
   }
 }
 
-export default async function LinkedInPhotos() {
+export default async function DatePage() {
   const supabase = createServerComponentClient({ cookies });
-
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
+  const { data: { user } } = await supabase.auth.getUser();
 
   if (user) {
-    return redirect("/overview");
+    return <ClientRedirect />;
   }
 
   return (
     <div className="w-full bg-[#F4F7FA] min-h-screen font-poppins">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-[82px]">
-        <div className="w-full max-w-[1276px] mx-auto space-y-12">
-          <div id="ai-headshots">
-            <DateHero/>
-          </div>
-          <Works
-          
-          
-          image2="/Frame8.png"
-          image3="/Frame25.png"
-          />
-          <Why imageSet="Group26" />
-          <div id="testimonial">
-            <SaveDateHeadshotHero/>
-          </div>
-          <div id="testimonial">
-            <ReviewSection/>
-          </div>
-          
-          
-         
-          <div>
-            <Banner/>
-          </div>
+      <div>
+        <div id="ai-headshots" className="w-full">
+          <DateHero />
+        </div>
+        <div>
+          <ExplainerSection />
+          <SaveDateHeadshotHero />
+          <ReviewSection />
+          <Banner />
+          <Footer/>
         </div>
       </div>
-      <Footer/>
     </div>
   );
 }

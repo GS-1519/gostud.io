@@ -1,27 +1,62 @@
-import React, { useState, useCallback, useEffect } from 'react';
-import { Upload, Trash2, ChevronUp, ChevronDown } from 'lucide-react';
+import React, { useState, useCallback, useEffect, useRef } from 'react';
+import { Upload, Trash2, Check, AlertCircle, Plus, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import { useToast } from "@/components/ui/use-toast";
 import { useRouter } from "next/navigation";
 import { upload } from "@vercel/blob/client";
-import Frame from "@/public/Frame.svg"
 
 interface TrainModelZoneProps {
   packSlug: string;
   onContinue: () => void;
+  user: any;
 }
 
-const TrainModelZone: React.FC<TrainModelZoneProps> = ({ packSlug, onContinue }) => {
-  const [files, setFiles] = useState<{ file: File; preview: string }[]>([]);
+interface ImageInspectionResult {
+  name: "man" | "woman" | "boy" | "girl" | "baby" | "cat" | "dog" | "NONE";
+  ethnicity?: "caucasian" | "black" | "hispanic" | "korean" | "japanese" | "chinese" | "philippine";
+  age?: "20 yo" | "30 yo" | "40 yo" | "50 yo" | "60 yo" | "70 yo";
+  glasses?: "glasses" | "NONE";
+  eye_color?: "blue eyes" | "brown eyes" | "green eyes" | "gray eyes" | "black eyes" | "NONE";
+  hair_color?: "blonde" | "brunette" | "red hair" | "black hair" | "NONE";
+  hair_length?: "short hair" | "medium hair" | "long hair" | "NONE";
+  hair_style?: "dreadlocks" | "bald" | "cornrows" | "straight hair" | "curly hair" | "wavy hair" | "NONE";
+  facial_hair?: "mustache" | "beard" | "goatee" | "NONE";
+  is_bald?: "bald" | "NONE";
+  funny_face: boolean;
+  wearing_sunglasses: boolean;
+  wearing_hat: boolean;
+  blurry: boolean;
+  includes_multiple_people: boolean;
+  full_body_image_or_longshot: boolean;
+  selfie: boolean;
+}
+
+interface ProcessedImage {
+  file: File;
+  preview: string;
+  isCropped?: boolean;
+  inspectionData?: ImageInspectionResult;
+  isProcessing?: boolean;
+  needsCropping?: boolean;
+}
+
+interface BadImage {
+  file: File;
+  preview: string;
+  reason: string;
+}
+
+const TrainModelZone: React.FC<TrainModelZoneProps> = ({ packSlug, onContinue, user }) => {
+  const [files, setFiles] = useState<ProcessedImage[]>([]);
+  const [badFiles, setBadFiles] = useState<BadImage[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(true);
-  const [modelInfo, setModelInfo] = useState<{ name: string; type: string; user_id: string } | null>(null);
+  const [longShotCount, setLongShotCount] = useState(0);
+  const [selfieCount, setSelfieCount] = useState(0);
+  const [modelInfo, setModelInfo] = useState<any>(null);
   const { toast } = useToast();
   const router = useRouter();
-  const nextStep = "/get-credits"; // "/summary" - can have this for testing
-
-  console.log("nextStep", nextStep);
-
+  const fileInputRef = useRef<HTMLInputElement>(null);
+  
   useEffect(() => {
     const storedModelInfo = localStorage.getItem('modelInfo');
     if (storedModelInfo) {
@@ -29,59 +64,186 @@ const TrainModelZone: React.FC<TrainModelZoneProps> = ({ packSlug, onContinue })
     }
   }, []);
 
-  const handleFileUpload = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
-    const acceptedFiles = Array.from(event.target.files || []);
+  useEffect(() => {
+    return () => {
+      files.forEach(file => {
+        if (file.preview) URL.revokeObjectURL(file.preview);
+      });
+      badFiles.forEach(file => {
+        if (file.preview) URL.revokeObjectURL(file.preview);
+      });
+    };
+  }, [files, badFiles]);
+
+  const getImageIssue = (data: ImageInspectionResult): string => {
+    if (data.blurry) return "Image is blurry";
+    if (data.funny_face) return "Funny face detected";
+    if (data.wearing_sunglasses) return "Wearing sunglasses";
+    if (data.wearing_hat) return "Wearing hat";
+    if (data.includes_multiple_people) return "Multiple people detected";
+    if (data.full_body_image_or_longshot && longShotCount >= 1) return "Only one long shot allowed";
+    if (data.selfie && selfieCount >= 1) return "Only one selfie allowed";
+    return "Invalid image";
+  };
+
+  const handleFileUpload = useCallback(async (event: React.ChangeEvent<HTMLInputElement>) => {
+    const selectedFiles = Array.from(event.target.files || []);
+    if (!selectedFiles.length) return;
     
-    const newFiles = acceptedFiles.filter(
-      (file: File) => !files.some((f) => f.file.name === file.name)
-    );
+    setIsLoading(true);
+    
+    try {
+      for (const file of selectedFiles) {
+        const tempPreview = URL.createObjectURL(file);
+        
+        const formData = new FormData();
+        formData.append('file', file);
+        
+        // Add existing characteristics if we have any
+        if (files.length > 0) {
+          const existingCharacteristics = files.map(f => f.inspectionData);
+          formData.append('characteristics', JSON.stringify(existingCharacteristics));
+        }
 
-    if (files.length + newFiles.length < 4) {
+        const inspectResponse = await fetch('/api/inspect-image', {
+          method: 'POST',
+          body: formData
+        });
+
+        if (!inspectResponse.ok) {
+          throw new Error('Failed to inspect image');
+        }
+
+        const responseData = await inspectResponse.json();
+        const data = responseData.current || responseData;
+        const aggregatedData = responseData.aggregated;
+
+        // Use aggregated data if available
+        if (aggregatedData && !modelInfo) {
+          setModelInfo(aggregatedData);
+          localStorage.setItem('modelInfo', JSON.stringify(aggregatedData));
+        }
+
+        if (data.blurry || 
+            data.funny_face || 
+            data.wearing_sunglasses || 
+            data.wearing_hat ||
+            data.includes_multiple_people) {
+          setBadFiles(prev => [...prev, {
+            file,
+            preview: tempPreview,
+            reason: getImageIssue(data)
+          }]);
+          continue;
+        }
+
+        if (data.full_body_image_or_longshot && longShotCount >= 1) {
+          setBadFiles(prev => [...prev, {
+            file,
+            preview: tempPreview,
+            reason: "Only one long shot allowed"
+          }]);
+          continue;
+        }
+
+        if (data.full_body_image_or_longshot) {
+          setLongShotCount(prev => prev + 1);
+        }
+
+        setFiles(prev => [...prev, {
+          file,
+          preview: tempPreview,
+          isProcessing: false,
+          inspectionData: data,
+          needsCropping: data.full_body_image_or_longshot
+        }]);
+      }
+
       toast({
-        title: "Not enough images",
-        description: "Please upload at least 4 images.",
+        title: selectedFiles.length > 1 ? "Upload successful" : "Image uploaded",
+        description: selectedFiles.length > 1 ? "Your photos have been processed" : "Your photo has been processed",
+        duration: 3000,
+      });
+
+    } catch (error) {
+      console.error('Error uploading files:', error);
+      toast({
+        title: "Error",
+        description: "Failed to upload images",
         duration: 5000,
       });
-      return;
+    } finally {
+      setIsLoading(false);
+      if (event.target) {
+        event.target.value = '';
+      }
     }
+  }, [modelInfo, longShotCount, toast, files]);
 
-    if (files.length + newFiles.length > 10) {
+  const handleAutoCrop = async (index: number) => {
+    const file = files[index];
+    if (!file || !file.needsCropping) return;
+
+    setFiles(prev => prev.map((f, i) => 
+      i === index ? { ...f, isProcessing: true } : f
+    ));
+
+    try {
+      const formData = new FormData();
+      formData.append('file', file.file);
+      formData.append('imageType', file.inspectionData?.full_body_image_or_longshot ? 'longshot' : 'selfie');
+
+      const response = await fetch('/api/auto-crop', {
+        method: 'POST',
+        body: formData
+      });
+
+      if (!response.ok) {
+        throw new Error(`Failed to crop image: ${response.statusText}`);
+      }
+
+      const croppedBlob = await response.blob();
+      const croppedPreview = URL.createObjectURL(croppedBlob);
+      const croppedFile = new File([croppedBlob], file.file.name, {
+        type: croppedBlob.type || 'image/jpeg'
+      });
+
+      if (file.preview) {
+        URL.revokeObjectURL(file.preview);
+      }
+
+      await new Promise(resolve => setTimeout(resolve, 100));
+
+      setFiles(prev => {
+        const newFiles = [...prev];
+        newFiles[index] = {
+          file: croppedFile,
+          preview: croppedPreview,
+          isProcessing: false,
+          isCropped: true,
+          needsCropping: false,
+          inspectionData: file.inspectionData
+        };
+        return newFiles;
+      });
+
       toast({
-        title: "Too many images",
-        description: "You can only upload up to 10 images in total. Please try again.",
+        title: "Success",
+        description: "Image cropped successfully",
+        duration: 3000,
+      });
+
+    } catch (error) {
+      console.error('Error cropping image:', error);
+      toast({
+        title: "Error",
+        description: "Failed to crop image",
         duration: 5000,
       });
-      return;
+      setFiles(prev => prev.map((f, i) => 
+        i === index ? { ...f, isProcessing: false } : f
+      ));
     }
-
-    const totalSize = [...files, ...newFiles].reduce((acc, file) => 
-      acc + ('size' in file ? file.size : file.file.size), 0);
-    if (totalSize > 120 * 1024 * 1024) {  // 120MB limit
-      toast({
-        title: "Images exceed size limit",
-        description: "The total combined size of the images cannot exceed 120MB.",
-        duration: 5000,
-      });
-      return;
-    }
-
-    const newFileObjects = newFiles.map(file => ({
-      file,
-      preview: URL.createObjectURL(file)
-    }));
-
-    setFiles(prevFiles => [...prevFiles, ...newFileObjects]);
-
-    toast({
-      title: "Images selected",
-      description: "The images were successfully selected.",
-      duration: 5000,
-    });
-  }, [files, toast]);
-
-  const handleRemoveFile = (fileToRemove: { file: File; preview: string }) => {
-    setFiles(files.filter(file => file.file !== fileToRemove.file));
-    URL.revokeObjectURL(fileToRemove.preview);
   };
 
   const handleContinue = async () => {
@@ -95,10 +257,9 @@ const TrainModelZone: React.FC<TrainModelZoneProps> = ({ packSlug, onContinue })
     }
 
     setIsLoading(true);
-    const blobUrls: string[] = [];
-
     try {
-      // Upload files and get blob URLs
+      // Upload images and save data first
+      const blobUrls: string[] = [];
       const uploadPromises = files.map(async ({ file }) => {
         try {
           const blob = await upload(file.name, file, {
@@ -113,57 +274,46 @@ const TrainModelZone: React.FC<TrainModelZoneProps> = ({ packSlug, onContinue })
       });
 
       await Promise.all(uploadPromises);
-      console.log('Files uploaded successfully, blob URLs:', blobUrls);
 
-      // Store all information in localStorage
-      const dataToSave = {
+      // Save model data
+      const modelData = {
         modelInfo: modelInfo,
         imageUrls: blobUrls
       };
-      localStorage.setItem('trainModelData', JSON.stringify(dataToSave));
-      
-      // Safely parse and log the saved data
-      const savedData = localStorage.getItem('trainModelData');
-      console.log('Data saved in TrainModelZone:', savedData ? JSON.parse(savedData) : null);
+      localStorage.setItem('trainModelData', JSON.stringify(modelData));
 
-      toast({
-        title: "Upload successful",
-        description: "Your photos and model information have been saved. Checking out your credits.",
-        duration: 5000,
-      });
+      // Check credits
+      const response = await fetch('/astria/check-credits');
+      const data = await response.json();
+      console.log("Credits data", data);
 
-      // Check for credits 
-        // Call an API to check for credits
-        // If no credits, redirect to /get-credits
-        // If credits, redirect to /summary 
-
-    const response = await fetch('/astria/check-credits');
-    if (!response.ok) {
-      if (response.status === 402 || response.status === 500) {
+      if (!response.ok || !data.credits || data.credits.credits <= 0) {
+        // No credits - Save current pack and redirect to get-credits
+        localStorage.setItem('selectedPack', JSON.stringify({
+          id: packSlug,
+          title: modelInfo.name || 'Unnamed',
+          cover_url: blobUrls[0], // Use first image as cover
+          slug: packSlug
+        }));
+        
         toast({
           title: "Insufficient credits",
           description: "Please purchase credits to continue.",
           duration: 5000,
         });
-        router.push('/get-credits');
+        router.push(`/overview/models/train/${packSlug}?step=get-credits`);
         return;
       }
-    }
 
-    // If credits are available, redirect to /summary 
-    const data = await response.json();
-    console.log("Credits data", data);
+      // Has credits - Go directly to summary with model data
+      router.push(`/overview/models/train/${packSlug}?step=summary`);
 
-      router.push('/summary');
     } catch (error: unknown) {
       console.error('Upload error:', error);
-      
       let errorMessage = "There was an error processing your request. Please try again.";
-      
       if (error instanceof Error) {
         errorMessage = error.message;
       }
-      
       toast({
         title: "Process failed",
         description: errorMessage,
@@ -173,125 +323,240 @@ const TrainModelZone: React.FC<TrainModelZoneProps> = ({ packSlug, onContinue })
       setIsLoading(false);
     }
   };
-
-  const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
-  };
+   
 
   return (
-    <div className="flex justify-center items-center min-h-screen font-poppins bg-gray-100 p-4 lg:p-0">
-      <div className="w-full max-w-md lg:max-w-none lg:w-[1276px] lg:h-[672px] bg-white rounded-2xl p-6 lg:p-[84px_60px] flex flex-col lg:flex-row gap-8 shadow-lg">
-        {/* Left side - Photo guidelines */}
-        <div className="w-full lg:w-[468px] rounded-3xl lg:p-6 flex flex-col gap-8 bg-[#F2F2F7] shadow-[0px_8px_48px_0px_#00000026]">
-          <div className="flex justify-between items-center lg:hidden" onClick={toggleDropdown}>
-            <h2 className="text-xl font-semibold font-jakarta">Photo of yourself (Do's & Don't)</h2>
-            {isDropdownOpen ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+    <div className="flex justify-between items-start min-h-screen font-poppins bg-white p-2 sm:p-4 lg:p-0">
+      <div className="w-full max-w-[1276px] mx-auto p-3 sm:p-6 lg:p-[84px_60px] flex flex-col lg:flex-row gap-4 lg:gap-8">
+        {/* Left Section - Updated with order utilities */}
+        <div className="w-full lg:w-[480px] flex flex-col order-2 lg:order-1">
+          {/* Banner */}
+          <div className="w-full rounded-xl bg-[#5B16FE0F] p-[16px_20px] mb-4 flex items-center gap-6">
+            <div className="w-5 h-5">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.3333 2.5H6.66667C6.32499 2.5 6.04166 2.78333 6.04166 3.125V4.375C6.04166 4.71667 6.32499 5 6.66667 5H13.3333C13.675 5 13.9583 4.71667 13.9583 4.375V3.125C13.9583 2.78333 13.675 2.5 13.3333 2.5Z" fill="#5B16FE"/>
+                <path d="M16.875 5H3.125C2.78333 5 2.5 5.28333 2.5 5.625V16.875C2.5 17.2167 2.78333 17.5 3.125 17.5H16.875C17.2167 17.5 17.5 17.2167 17.5 16.875V5.625C17.5 5.28333 17.2167 5 16.875 5ZM15.8333 15.8333H4.16667V6.66667H15.8333V15.8333Z" fill="#5B16FE"/>
+              </svg>
+            </div>
+            <p className="font-poppins font-medium text-base leading-6 text-black max-w-[576.86px]">
+              You can now auto-crop your group selfies! Simply tap on the image you want to crop, and we'll take care of it for you.
+            </p>
           </div>
-          {(isDropdownOpen || window.innerWidth >= 1024) && (
-            <>
-              <h2 className="font-semibold font-jakarta hidden lg:block">Photo of yourself (Do's & Don't)</h2>
-              <div className="w-full h-auto">
-                <Image src={Frame} alt="✅ Good and ❌ Bad Photos" width={412} height={336} layout="responsive" />
-              </div>
-              <p className="text-xs text-gray-500 mt-auto lg:hidden">
-                By using our AI Tools, you agree to and accept our <a href="/terms" className="text-blue-500 hover:underline">Terms of Use</a>
-              </p>
-            </>
-          )}
-        </div>
 
-        {/* Right side - Upload functionality */}
-        <div className="w-full lg:w-[580px] rounded-3xl p-[3px] bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4]">
-          <div className="bg-white rounded-3xl p-6 lg:p-8 flex flex-col justify-between h-full">
-            <div className="space-y-6 text-center">
-              <h2 className="text-xl font-semibold text-black">Start Uploading photos</h2>
-              <p className="text-sm text-black">
-                Select at least 4 of your best photos. Capture facial features from different angles.
-              </p>
-              
-              {/* File upload area */}
-              {files.length === 0 ? (
-                <div className="w-full border-2 border-dashed border-purple-300 rounded-2xl p-4 sm:p-8 flex flex-col items-center justify-center gap-4 mb-8 bg-white">
-                  <label htmlFor="file-upload" className="cursor-pointer w-full lg:w-auto">
-                    <div className="bg-[linear-gradient(90deg,#8371FF_-39.48%,#A077FE_32.07%,#01C7E4_100%)] text-white font-semibold rounded-full flex items-center justify-center text-base sm:text-lg px-4 sm:px-8 py-3 hover:opacity-90 transition-opacity lg:px-6 lg:py-2 lg:w-auto lg:mx-auto">
-                      <Upload size={20} className="mr-2" />
-                      <span>Upload files</span>
-                    </div>
-                    <input 
-                      id="file-upload" 
-                      type="file" 
-                      className="hidden"
-                      multiple 
-                      onChange={handleFileUpload} 
-                      accept="image/*" 
-                    />
-                  </label>
-                  <div className="w-full sm:w-[195px] h-[32px] flex flex-col justify-center mx-auto">
-                    <p className="text-xs leading-4 text-gray-500 font-normal text-center">
-                      Click to upload or drag and drop
-                    </p>
-                    <p className="text-xs leading-4 text-gray-500 font-normal text-center">
+          {/* Main Upload Section */}
+          <div className="rounded-3xl p-[3px] bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4]">
+            <div className="bg-[#F2F2F7] rounded-3xl p-4 sm:p-6 lg:p-8 flex flex-col justify-between h-full relative">
+              <input 
+                ref={fileInputRef}
+                id="file-upload" 
+                type="file" 
+                className="hidden"
+                onChange={handleFileUpload} 
+                accept="image/*"
+                multiple
+                disabled={isLoading}
+              />
+
+              {isLoading && (
+                <div className="absolute inset-0 bg-white/80 backdrop-blur-sm rounded-3xl z-50 flex flex-col items-center justify-center">
+                  <div className="w-16 h-16 rounded-full border-4 border-[#8371FF] border-t-transparent animate-spin mb-4" />
+                  <p className="text-[#7C3AED] font-medium">Uploading images...</p>
+                  <p className="text-gray-500 text-sm mt-2">Please wait while we process your photos</p>
+                </div>
+              )}
+
+              <h2 className="text-2xl sm:text-3xl font-normal text-black text-center mb-4 sm:mb-6">Start Uploading photos</h2>
+
+              {files.length === 0 && badFiles.length === 0 ? (
+                <div className="flex-1 flex flex-col">
+                  <div className="w-full sm:w-3/4 border-2 border-dashed border-[#7C3AED] rounded-[12.19px] p-3 sm:p-6 flex flex-col items-center justify-center gap-4 mt-4 sm:mt-8 mx-auto">
+                    <label 
+                      className={`cursor-pointer w-full ${isLoading ? 'pointer-events-none opacity-50' : ''}`}
+                      onClick={() => {
+                        if (fileInputRef.current) {
+                          fileInputRef.current.value = '';
+                          fileInputRef.current.click();
+                        }
+                      }}
+                    >
+                      <div className="bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4] text-white rounded-lg px-6 py-3 flex items-center justify-center gap-2 hover:opacity-90 transition-opacity mx-auto max-w-[200px]">
+                        <Upload size={20} />
+                        <span>Upload files</span>
+                      </div>
+                    </label>
+                    <p className="text-sm text-gray-500 text-center">
+                      Click to upload or drag and drop<br />
                       PNG, JPG, HEIC up to 120MB
                     </p>
                   </div>
                 </div>
               ) : (
-                <div className="grid grid-cols-2 sm:grid-cols-5 gap-6 mb-8">
-                  {files.map(({ file, preview }, index) => (
-                    <div key={index} className="relative group aspect-square">
-                      <img
-                        src={preview}
-                        alt={file.name}
-                        className="w-full h-full object-cover rounded-lg"
-                      />
-                      <button
-                        onClick={() => handleRemoveFile({ file, preview })}
-                        className="absolute top-2 right-2 bg-red-500 text-white rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity"
-                      >
-                        <Trash2 size={20} />
-                      </button>
+                <>
+                  <div className="rounded-[11.47px] border-[0.5px] border-[#68D585] bg-[#F2FCF4] overflow-hidden mb-4">
+                    <div className="p-2 sm:p-4">
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="flex items-center gap-2">
+                          <div className="w-6 h-6 rounded-full bg-[#68D585] flex items-center justify-center">
+                            <Check className="text-white w-4 h-4" />
+                          </div>
+                          <span className="font-medium">Good Photos</span>
+                        </div>
+                        <span className="text-[#68D585] font-medium">{files.length}/8</span>
+                      </div>
+
+                      <div className="w-full h-2 bg-[#E5F9EA] rounded-full mb-4">
+                        <div 
+                          className="h-2 bg-[#68D585] rounded-full transition-all duration-300"
+                          style={{ width: `${(files.length / 8) * 100}%` }}
+                        />
+                      </div>
+
+                      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-4">
+                        {files.map((file, index) => (
+                          <div key={`${index}-${file.preview}`} className="relative group aspect-square">
+                            <div className="w-full h-full rounded-lg overflow-hidden border border-gray-200">
+                              {file.preview && (
+                                <img
+                                  key={file.preview}
+                                  src={file.preview}
+                                  alt={`Upload ${index + 1}`}
+                                  className="w-full h-full object-cover"
+                                  style={{ display: 'block' }}
+                                />
+                              )}
+                            </div>
+
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                // Revoke only the URL for the specific image being deleted
+                                if (files[index].preview) {
+                                  URL.revokeObjectURL(files[index].preview);
+                                }
+                                
+                                setFiles(prevFiles => {
+                                  // Create a new array excluding the deleted image
+                                  const updatedFiles = prevFiles.filter((_, i) => i !== index);
+                                  
+                                  // Update longshot count if needed
+                                  if (files[index].inspectionData?.full_body_image_or_longshot) {
+                                    setLongShotCount(prev => prev - 1);
+                                  }
+                                  
+                                  return updatedFiles;
+                                });
+                              }}
+                              className="absolute top-2 left-2 bg-white p-1.5 rounded-full shadow-md hover:bg-gray-50 transition-colors opacity-0 group-hover:opacity-100"
+                            >
+                              <Trash2 className="w-4 h-4 text-red-500" />
+                            </button>
+
+                            {file.isProcessing && (
+                              <div className="absolute inset-0 bg-black/50 rounded-lg flex items-center justify-center">
+                                <div className="w-8 h-8 rounded-full border-2 border-white border-t-transparent animate-spin" />
+                              </div>
+                            )}
+
+                            {file.needsCropping && !file.isProcessing && (
+                              <button
+                                onClick={() => handleAutoCrop(index)}
+                                className="absolute top-2 right-2 bg-white p-1.5 rounded-full shadow-md hover:bg-gray-50 transition-colors"
+                                disabled={file.isProcessing}
+                              >
+                                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none">
+                                  <path d="M8 8h8v8H8z" stroke="currentColor" strokeWidth="1.5"/>
+                                </svg>
+                              </button>
+                            )}
+                          </div>
+                        ))}
+
+                        {Array.from({ length: Math.max(0, 8 - files.length) }).map((_, i) => (
+                          <div 
+                            key={`empty-${i}`} 
+                            className="aspect-square rounded-lg border-2 border-dashed border-[#E5E7EB] flex items-center justify-center cursor-pointer hover:border-[#7C3AED] transition-colors"
+                            onClick={() => fileInputRef.current?.click()}
+                          >
+                            <div className="w-full h-full flex items-center justify-center">
+                              <Plus className="w-5 h-5 text-gray-400" />
+                            </div>
+                          </div>
+                        ))}
+                      </div>
                     </div>
-                  ))}
-                  {Array.from({ length: Math.max(0, 4 - files.length) }).map((_, index) => (
-                    <label
-                      key={`empty-${index}`}
-                      htmlFor="file-upload"
-                      className="border-2 border-dashed rounded-lg flex items-center justify-center cursor-pointer aspect-square border-purple-500 border-b-blue-500"
+                  </div>
+
+                  {badFiles.length > 0 && (
+                    <div className="rounded-[11.47px] border-[0.5px] border-[#EF4444] bg-[#FEF2F2] overflow-hidden mb-4">
+                      <div className="p-2 sm:p-4">
+                        <div className="flex items-center gap-2 mb-4">
+                          <div className="w-6 h-6 rounded-full bg-[#EF4444] flex items-center justify-center">
+                            <AlertCircle className="text-white w-4 h-4" />
+                          </div>
+                          <span className="font-medium">Bad Photos</span>
+                        </div>
+                        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-4">
+                          {badFiles.map((badFile, index) => (
+                            <div key={index} className="relative aspect-square">
+                              <img
+                                src={badFile.preview}
+                                alt="Bad photo"
+                                className="w-full h-full object-cover rounded-lg"
+                              />
+                              <div className="absolute bottom-0 left-0 right-0 bg-[#EF4444] text-white text-xs p-2 text-center">
+                                {badFile.reason}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  <div className="flex justify-center">
+                    <button
+                      onClick={handleContinue}
+                      disabled={files.length < 4 || !modelInfo}
+                      className={`w-full sm:w-[315px] h-[48px] rounded-[50px] p-[12px_25px] gap-[10px] flex items-center justify-center transition-all duration-300
+                        ${files.length >= 4 && modelInfo 
+                          ? 'bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4] text-white hover:opacity-90'
+                          : 'bg-gray-200 text-gray-500 cursor-not-allowed'
+                        }`}
                     >
-                      <span className="text-5xl text-purple-400">+</span>
-                    </label>
-                  ))}
-                  <input 
-                    id="file-upload" 
-                    type="file" 
-                    className="hidden"
-                    multiple 
-                    onChange={handleFileUpload} 
-                    accept="image/*" 
-                  />
-                </div>
+                      Continue
+                      <ArrowRight size={20} />
+                    </button>
+                  </div>
+                </>
               )}
-              
-              <p className="text-xs text-gray-500 font-normal leading-[16px] text-center px-4 sm:px-0 mb-6 hidden lg:block">
-                By using our AI Tools, you agree to and accept our <a href="#" className="text-blue-500 hover:underline">Terms of Use</a>
-              </p>
-              <button 
-                className={`w-full lg:w-auto lg:px-12 py-2 sm:py-3 rounded-full font-semibold text-base sm:text-lg text-white transition-colors ${
-                  files.length >= 4 && !isLoading
-                    ? 'bg-[linear-gradient(90deg,#8371FF_-39.48%,#A077FE_32.07%,#01C7E4_100%)] hover:opacity-90'
-                    : 'bg-gray-400 cursor-not-allowed'
-                } lg:mx-auto lg:block`}
-                onClick={handleContinue}
-                disabled={files.length < 4 || isLoading}
-              >
-                {isLoading ? 'Uploading...' : 'Continue →'}
-              </button>
             </div>
+          </div>
+        </div>
+
+        {/* Right Section - Updated with order utilities */}
+        <div className="w-full lg:w-[485px] ml-0 lg:ml-auto order-1 lg:order-2 mb-4 lg:mb-0">
+          <h2 className="font-poppins text-xl sm:text-2xl mb-2">Image Guide</h2>
+          <p className="text-gray-600 mb-4 text-sm sm:text-base">Follow the guide to get quality photos.</p>
+          
+          <p className="text-[#7C3AED] mb-4 sm:mb-6 text-sm sm:text-base">
+            To ensure better photo quality, Aaria requires 1 half-body and 7 close-up images of you facing the camera.
+          </p>
+
+          <div className="w-full sm:w-[385px] aspect-square relative rounded-[11.47px] overflow-hidden bg-[#F8F8FC] border border-gray-200">
+            <Image
+              src="/good/img6.png"
+              alt="Example photos guide"
+              fill
+              className="object-contain p-[12.34px] gap-[14.63px]"
+              priority
+            />
           </div>
         </div>
       </div>
     </div>
+    
   );
 };
+
 
 export default TrainModelZone;

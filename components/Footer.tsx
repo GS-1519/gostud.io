@@ -55,12 +55,36 @@ const Footer: React.FC = () => {
         { text: 'Barbie Headshot', href: '/headshot-packs/barbie-headshot' },
         { text: 'Viking Portraits', href: '/headshot-packs/viking-portraits' },
         { text: 'Realtor Headshot', href: '/headshot-packs/realtor-headshot' },
-        { text: 'TED Speaker Headshot', href: '/headshot-packs/ted-speaker-headshot' }
+        { text: 'TED Speaker Headshot', href: '/headshot-packs/ted-speaker-headshot' },
+        { text: 'Business Casual Headshots', href: '/headshot-packs/business-casual-headshots' },
+        { text: 'Effortless Professional Headshots', href: '/headshot-packs/effortlessprofessionalism-headshot' },
+        { text: 'Lawyer Branded Headshots', href: '/headshot-packs/lawyerbranded-headshot' },
+        { text: 'Meirav Class Headshots', href: '/headshot-packs/meiravclass-headshot' },
+        { text: 'Partner Headshots', href: '/headshot-packs/partners-headshots' },
+        { text: 'Professional Package Headshots', href: '/headshot-packs/professionalpackage-headshot' },
+        { text: 'Styled for Success Headshots', href: '/headshot-packs/styled-for-success-headshot' },
+        { text: 'Stylish Lawyer Headshots', href: '/headshot-packs/stylishlawyers-headshot' }
       ]
     },
     {
       title: 'AI Photos',
       items: [
+        { text: 'Dreamland Kids Photos', href: '/photoshoot-packs/4dreamland-kids-photos' },
+        { text: 'Baby Doodles Photos', href: '/photoshoot-packs/baby-doodles-photos' },
+        { text: 'Birthday Magic Photos', href: '/photoshoot-packs/birthday-magic-photos' },
+        { text: 'Branding Photography', href: '/photoshoot-packs/branding-photography' },
+        { text: 'Casual Photos', href: '/photoshoot-packs/casual-photos' },
+        { text: 'Casual Collection Photos', href: '/photoshoot-packs/casualcollection-photos' },
+        { text: 'Cat Magic Photos', href: '/photoshoot-packs/catmeowgic-photos' },
+        { text: 'Christmas Elf Photos', href: '/photoshoot-packs/christmas-elf-photos' },
+        { text: 'Christmas Sweater Photos', href: '/photoshoot-packs/christmas-sweater-photos' },
+        { text: 'Family Christmas Photos', href: '/photoshoot-packs/cool-family-christmas-photos' },
+        { text: 'Cyberpunk Photos', href: '/photoshoot-packs/cyberpunk-photos' },
+        { text: 'Hanukkah Miracle Photos', href: '/photoshoot-packs/hanukka-miracle-photos' },
+        { text: 'Happy Kid Photos', href: '/photoshoot-packs/happy-kid-photos' },
+        { text: 'Influencer Photos', href: '/photoshoot-packs/influencer-photos' },
+        { text: 'Me Iconic Photos', href: '/photoshoot-packs/me-iconic-photos' },
+        { text: 'Merry Christmas Photos', href: '/photoshoot-packs/merry-christmas-photos' },
         { text: 'Vintage Americana Photos', href: '/photoshoot-packs/vintage-americana-photos' },
         { text: 'Onesie Portraits', href: '/photoshoot-packs/onesie-portraits' },
         { text: 'Halloween Photos', href: '/photoshoot-packs/halloween-photos' },
@@ -75,7 +99,18 @@ const Footer: React.FC = () => {
         { text: 'Online Dating Profile Photos', href: '/photoshoot-packs/online-dating-profile-photos' },
         { text: 'Pet Photography Dog', href: '/photoshoot-packs/pet-photography-dog' },
         { text: 'Pop Color Photos', href: '/photoshoot-packs/pop-color-photos' },
-        { text: 'YouTube Thumbnail Photos', href: '/photoshoot-packs/youtube-thumbnail-photos' }
+        { text: 'YouTube Thumbnail Photos', href: '/photoshoot-packs/youtube-thumbnail-photos' },
+        { text: 'Playful Casual Photos', href: '/photoshoot-packs/playful-casual-photos' },
+        { text: 'Podcaster Photos', href: '/photoshoot-packs/podcaster-photos' },
+        { text: 'Romantic Maternity Photos', href: '/photoshoot-packs/romantic-maternity-photos' },
+        { text: 'Social Media Photos', href: '/photoshoot-packs/social-media-photos' },
+        { text: 'Time Machine Photos', href: '/photoshoot-packs/time-machine-photos' },
+        { text: 'Timeless Studio Photos', href: '/photoshoot-packs/timeless-studio-photos' },
+        { text: 'TLV Fashion Photos', href: '/photoshoot-packs/TLV-fashion-photos' },
+        { text: 'Vintage Pack Photos', href: '/photoshoot-packs/vintage-pack-photos' },
+        { text: 'Wild Friends Photos', href: '/photoshoot-packs/wild-friends-photos' },
+        { text: 'Winter Wonderland Photos', href: '/photoshoot-packs/winter-wonderland-photos' },
+        { text: 'Work From Home Photos', href: '/photoshoot-packs/work-from-home-photos' }
       ]
     },
     {
