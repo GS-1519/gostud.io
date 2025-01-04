@@ -325,7 +325,7 @@ export default function CountryPage({ params }: Props) {
             ))}
           </div>
                    {/* Why Choose Section */}
-          <WhySection country={country.replace('-', ' ')} />
+          <WhySection country={params.country.replace('-', ' ')} />
 
           {/* Similar Countries Carousel */}
           <div className="mb-16">
