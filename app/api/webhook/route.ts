@@ -102,10 +102,12 @@ export async function POST(request: NextRequest) {
           newCredits
         });
 
-        return Response.json({
+        return new Response(JSON.stringify({
           status: 'success',
           credits: newCredits,
           message: 'Credits updated successfully'
+        }), {
+          headers: { 'Content-Type': 'application/json' }
         });
       }
 
@@ -123,9 +125,12 @@ export async function POST(request: NextRequest) {
 
   } catch (error) {
     console.error('Webhook error:', error);
-    return Response.json({ 
+    return new Response(JSON.stringify({ 
       status: 'error',
       message: error instanceof Error ? error.message : 'Internal server error'
-    }, { status: 500 });
+    }), {
+      status: 500,
+      headers: { 'Content-Type': 'application/json' }
+    });
   }
 }
