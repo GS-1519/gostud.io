@@ -118,7 +118,7 @@ export const heroConfigs: Record<string, HeroConfig> = {
     normalTitle: 'Magical Holiday Portraits',
     description: 'Transform into a magical Christmas elf with our AI photography. Perfect for spreading holiday cheer and creating enchanting seasonal memories.',
     buttonText: 'Create Elf Magic',
-    imagePath: '/Packs/Types/christmas-elf.jpg',
+    imagePath: '/Packs/Types/elf.jpg',
     imageAlt: 'Christmas Elf Portrait Photography',
     packType: 'christmas-elf',
     packPath: '/photoshoot-packs/christmas-elf-photos',
