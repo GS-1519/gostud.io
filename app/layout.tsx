@@ -14,9 +14,6 @@ import { StepBar } from "@/components/ui/step-bar";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.gostudio.ai'),
-  alternates: {
-    canonical: '/'
-  },
   title: "Headshots AI",
   description: "Generate awesome headshots in minutes using AI",
 };
