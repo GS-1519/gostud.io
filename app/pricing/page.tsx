@@ -1,5 +1,4 @@
 'use client';
-
 import { Pricing } from '@/components/home/pricing/pricing';
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
 import { useRouter } from 'next/navigation';
@@ -113,46 +112,9 @@ export default function PricingPage() {
     </div>
   );
 }
-// Update your Pricing component props type
+
 interface PricingProps {
   onPaymentClick: () => Promise<void>;
   user: User | null;
   isLoading?: boolean;
-}
-
-// You might also want to update the useUserInfo hook to use getUser:
-export function useUserInfo(supabase: any) {
-  const [user, setUser] = useState<User | null>(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const checkUser = async () => {
-      try {
-        const { data: { user }, error } = await supabase.auth.getUser();
-        
-        if (error) {
-          throw error;
-        }
-
-        setUser(user);
-      } catch (error) {
-        console.error('Error checking user:', error);
-        setUser(null);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    checkUser();
-
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((event: any, session: any) => {
-      setUser(session?.user ?? null);
-    });
-
-    return () => {
-      subscription.unsubscribe();
-    };
-  }, [supabase]);
-
-  return { user, loading };
 }
