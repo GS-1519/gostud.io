@@ -22,33 +22,68 @@ const nextConfig = {
   transpilePackages: ['react-tabs'],
   async redirects() {
     return [
-      // Redirect from non-www to www
       {
-        source: '/:path*',
-        has: [
-          {
-            type: 'host',
-            value: 'gostudio.ai',
-          },
-        ],
-        destination: 'https://www.gostudio.ai/:path*',
-        permanent: true,
+        source: '/photos/red-carpet-photos',
+        destination: '/photoshoot-packs/actor-red-carpet-photos',
+        permanent: true
       },
-      // Redirect from http to https
       {
-        source: '/:path*',
-        has: [
-          {
-            type: 'header',
-            key: 'x-forwarded-proto',
-            value: 'http',
-          },
-        ],
-        destination: 'https://www.gostudio.ai/:path*',
-        permanent: true,
+        source: '/photos/helmut-newton-photos',
+        destination: '/headshot-packs/model-headshots',
+        permanent: true
       },
+      {
+        source: '/photoshoot-packs/model-headshots',
+        destination: '/headshot-packs/model-headshots',
+        permanent: true
+      },
+      {
+        source: '/photos/realtor-photos',
+        destination: '/headshot-packs/realtor-headshot',
+        permanent: true
+      },
+      {
+        source: '/headshot-types',
+        destination: '/headshot-packs',
+        permanent: true
+      },
+      {
+        source: '/photos/birthday-party-save-the-date-photoshoot',
+        destination: '/photoshoot-packs/birthday-party-save-the-date-photoshoot',
+        permanent: true
+      },
+      {
+        source: '/photos/artistic-portraits',
+        destination: '/photoshoot-packs/artistic-portraits',
+        permanent: true
+      },
+      {
+        source: '/photoshoot-packs/pop-color-photos',
+        destination: '/photoshoot-packs/pop-color-photos',
+        permanent: true
+      },
+      {
+        source: '/photos/:slug',
+        destination: '/photoshoot-packs/:slug',
+        permanent: true
+      },
+      {
+        source: '/headshot-types/:slug',
+        destination: '/headshot-packs/:slug',
+        permanent: true
+      },
+      {
+        source: '/photoshoot/:slug',
+        destination: '/photoshoot-packs/:slug',
+        permanent: true
+      },
+      {
+        source: '/headshot-packs/model-headshots',
+        destination: '/photoshoot-packs/model-headshots',
+        permanent: true
+      }
     ]
-  },
+  }
 }
 
 module.exports = nextConfig
