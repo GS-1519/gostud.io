@@ -6,7 +6,7 @@ export const heroConfigs: Record<string, HeroConfig> = {
     normalTitle: 'Where Dreams Come Alive',
     description: 'Transform your children\'s photos into enchanting dreamland portraits. Create magical memories with whimsical backgrounds, fairy-tale themes, and playful scenarios perfect for young imaginations.',
     buttonText: 'Create Magic',
-    imagePath: '/dreamland.png',
+    imagePath: '/Packs/Types/dreamland.png',
     imageAlt: 'Dreamland Kids portraits',
     packType: 'dreamland-kids',
     packPath: '/photoshoot-packs/4dreamland-kids-photos',
