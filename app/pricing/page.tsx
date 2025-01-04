@@ -1,5 +1,4 @@
 'use client';
-
 import { Pricing } from '@/components/home/pricing/pricing';
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
 import { useRouter } from 'next/navigation';
