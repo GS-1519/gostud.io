@@ -5,10 +5,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 interface WhyProps {
-  imageSet: string;
+  country: string;
 }
 
-const WhySection = () => {
+const WhySection: React.FC<WhyProps> = ({ country }) => {
   const [activeFeature, setActiveFeature] = React.useState(0);
 
   const features = [
