@@ -111,7 +111,12 @@ export async function POST(request: NextRequest) {
         });
       }
 
-      return Response.json({ status: 'success', message: 'Webhook processed' });
+      return new Response(JSON.stringify({ 
+        status: 'success', 
+        message: 'Webhook processed' 
+      }), {
+        headers: { 'Content-Type': 'application/json' }
+      });
 
     } else {
       // Production code with signature verification
