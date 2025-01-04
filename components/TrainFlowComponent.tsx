@@ -8,9 +8,10 @@ import GetCreditsPage from '@/app/get-credits/page';
 interface TrainModelSectionProps {
   packSlug: string;
   onContinue: () => void;
+  user: any;
 }
 
-const TrainModelSection: React.FC<TrainModelSectionProps> = ({ packSlug, onContinue }) => {
+const TrainModelSection: React.FC<TrainModelSectionProps> = ({ packSlug, onContinue, user }) => {
   const searchParams = useSearchParams();
   const router = useRouter();
   const [currentStep, setCurrentStep] = useState<string>('img-upload');
@@ -58,11 +59,12 @@ const TrainModelSection: React.FC<TrainModelSectionProps> = ({ packSlug, onConti
     return (
       <TrainModelZone 
         packSlug={packSlug}
+        user={user}
         onContinue={async () => {
           await checkCredits();
           if (hasEnoughCredits) {
             console.log('Proceeding with model training');
-            onContinue(); // Call the onContinue prop here
+            onContinue();
           } else {
             navigateToNextStep('get-credits');
           }
@@ -78,7 +80,7 @@ const TrainModelSection: React.FC<TrainModelSectionProps> = ({ packSlug, onConti
   // If no step or unknown step, show ModelTypeSelector
   return <ModelTypeSelector onContinue={() => {
     navigateToNextStep('img-upload');
-    onContinue(); // Call the onContinue prop here as well
+    onContinue();
   }} />;
 };
 

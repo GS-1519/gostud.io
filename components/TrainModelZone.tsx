@@ -8,7 +8,7 @@ import { upload } from "@vercel/blob/client";
 interface TrainModelZoneProps {
   packSlug: string;
   onContinue: () => void;
-  user: any;
+  user?: any;
 }
 
 interface ImageInspectionResult {
