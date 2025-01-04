@@ -5,6 +5,7 @@ import ProductHero from "@/components/ProductHero";
 import AIToolSection from "@/components/AIToolSection";
 import AIBackgroundSection from '@/components/AIBackgroundSection';
 import ComparisonPage from "@/components/Comparison";
+import HeadshotReviewSection from "@/components/HeadshotReviewSection";
 
 import PricingSection from "@/components/PricingSection";
 import DataSecuritySection from "@/components/container";
@@ -47,7 +48,7 @@ export default async function ProductPhotography() {
           <AIBackgroundSection />-+
           <ComparisonPage />
           <div id="testimonial">
-         
+          <HeadshotReviewSection />
           </div>
           <div id="pricing">
             <PricingSection user={user} />
