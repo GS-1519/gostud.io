@@ -12,65 +12,33 @@ export default function PricingPage() {
   const supabase = createClientComponentClient();
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+
+  // Add debug logs
+  useEffect(() => {
+    console.log('Pricing page mounted');
+    console.log('Initial loading state:', loading);
+  }, []);
 
   useEffect(() => {
     const getUser = async () => {
       try {
+        console.log('Fetching user...');
         const { data: { user }, error } = await supabase.auth.getUser();
         if (error) throw error;
+        console.log('User data:', user);
         setUser(user);
       } catch (err) {
         console.error('Auth error:', err);
-        setError(err instanceof Error ? err.message : 'Authentication error');
       } finally {
         setLoading(false);
       }
     };
 
     getUser();
-
-    // Set up auth state listener
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
-      setUser(session?.user ?? null);
-    });
-
-    return () => {
-      subscription.unsubscribe();
-    };
   }, [supabase]);
 
-  const handlePaymentClick = async () => {
-    try {
-      if (!user) {
-        router.push('/login');
-        return;
-      }
-      
-      // Add your payment logic here
-      router.push('/get-credits');
-    } catch (error) {
-      console.error('Payment error:', error);
-      setError('Payment process failed. Please try again.');
-    }
-  };
-
-  // Add console logs for debugging
-  useEffect(() => {
-    console.log('Current user:', user);
-    console.log('Loading state:', loading);
-    console.log('Error state:', error);
-  }, [user, loading, error]);
-
-  if (error) {
-    return (
-      <div className="flex items-center justify-center min-h-screen">
-        <div className="text-red-600">Error: {error}</div>
-      </div>
-    );
-  }
-
   if (loading) {
+    console.log('Showing loading state');
     return (
       <div className="flex items-center justify-center min-h-screen">
         <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900" />
@@ -78,6 +46,7 @@ export default function PricingPage() {
     );
   }
 
+  console.log('Rendering pricing component');
   return (
     <ErrorBoundary>
       <div className="flex flex-col min-h-screen bg-[#F4F7FA]">
@@ -86,7 +55,6 @@ export default function PricingPage() {
             <Pricing 
               user={user}
               isLoading={loading}
-              onPaymentClick={handlePaymentClick}
               showTitle={true}
             />
           </div>

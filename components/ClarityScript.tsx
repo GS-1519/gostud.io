@@ -3,7 +3,7 @@
 declare global {
   interface Window {
     clarity: any;
-    [key: string]: any;  // Allow string indexing
+    [key: string]: any;
   }
 }
 
@@ -16,6 +16,13 @@ interface ClarityWindow extends Window {
 
 export default function ClarityScript() {
   if (process.env.NODE_ENV === 'production' && typeof window !== 'undefined') {
+    const CLARITY_ID = process.env.NEXT_PUBLIC_CLARITY_ID;
+
+    if (!CLARITY_ID) {
+      console.warn('Clarity ID is not configured');
+      return null;
+    }
+
     (function(c: ClarityWindow, l: Document, a: string, r: string, i: string) {
       if (!c[a]) {
         c[a] = function() {
@@ -30,7 +37,7 @@ export default function ClarityScript() {
       if (y && y.parentNode) {
         y.parentNode.insertBefore(t, y);
       }
-    })(window as ClarityWindow, document, "clarity", "script", "oy3edackba");
+    })(window as ClarityWindow, document, "clarity", "script", CLARITY_ID);
   }
   return null;
 }
