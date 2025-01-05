@@ -23,6 +23,12 @@ const nextConfig = {
       test: /\.(png|jpg|gif|svg)$/i,
       type: 'asset/resource'
     })
+    config.resolve.fallback = {
+      ...config.resolve.fallback,
+      fs: false,
+      net: false,
+      tls: false,
+    };
     return config
   },
   transpilePackages: ['react-tabs'],
@@ -32,6 +38,7 @@ const nextConfig = {
   },
   // Add this for development
   reactStrictMode: true,
+  swcMinify: true,
   async redirects() {
     return [
       {
@@ -95,6 +102,10 @@ const nextConfig = {
         permanent: true
       }
     ]
+  },
+  env: {
+    NEXT_PUBLIC_PADDLE_CLIENT_TOKEN: process.env.NEXT_PUBLIC_PADDLE_CLIENT_TOKEN,
+    NEXT_PUBLIC_PADDLE_ENV: process.env.NEXT_PUBLIC_PADDLE_ENV,
   }
 }
 
