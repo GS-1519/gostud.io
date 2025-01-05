@@ -6,11 +6,13 @@ import { Environments, initializePaddle, Paddle } from '@paddle/paddle-js';
 import { usePaddlePrices } from '@/components/hooks/usePaddlePrices';
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 import { useRouter } from 'next/navigation';
+import { User } from '@supabase/supabase-js';
+import type { ExtendedUser } from '@/components/hooks/useUserInfo';
 
 interface PricingProps {
   showTitle?: boolean;
   onPaymentClick?: () => Promise<void>;
-  user: any;
+  user: ExtendedUser | null;
   isLoading?: boolean;
 }
 
