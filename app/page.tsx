@@ -88,7 +88,11 @@ export default async function Home() {
             <BrandsPage/>
             <HeadshotReviewSection />
             <div id="pricing">
-              <Pricing user={user} />
+              <Pricing 
+                user={user} 
+                isLoading={false}
+                showTitle={true}
+              />
             </div>
             <DataSecuritySection />
             <Ariaa/>

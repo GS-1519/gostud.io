@@ -12,7 +12,7 @@ import type { ExtendedUser } from '@/components/hooks/useUserInfo';
 interface PricingProps {
   showTitle?: boolean;
   onPaymentClick?: () => Promise<void>;
-  user: ExtendedUser | null;
+  user: User | null;
   isLoading?: boolean;
 }
 
