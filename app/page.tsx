@@ -22,7 +22,6 @@ import ClientRedirect from "@/components/ClientRedirect";
 
 
 export const dynamic = "force-dynamic";
-export const runtime = 'nodejs';
 
 export const metadata: Metadata = {
   title: 'AI Professional Headshots & Product Photography Studio | Photos in Minutes',
@@ -84,15 +83,11 @@ export default async function Home() {
             <ExplainerSection />
             <PhotographyGrid/>
             <ComparisonPage />
-            <WhySection country="global" />
+            <WhySection/>
             <BrandsPage/>
             <HeadshotReviewSection />
             <div id="pricing">
-              <Pricing 
-                user={user} 
-                isLoading={false}
-                showTitle={true}
-              />
+              <Pricing user={user} />
             </div>
             <DataSecuritySection />
             <Ariaa/>

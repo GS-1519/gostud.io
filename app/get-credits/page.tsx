@@ -24,19 +24,12 @@ export default function GetCreditsPage() {
   useEffect(() => {
     const checkAuth = async () => {
       try {
-        console.log('Checking auth...'); // Debug log
         setAuthState(prev => ({ ...prev, loading: true }));
         
         const { data: { user }, error } = await supabase.auth.getUser();
-        console.log('Auth response:', { user, error }); // Debug log
 
         if (error) {
           throw error;
-        }
-
-        if (!user) {
-          router.push('/login?returnTo=/get-credits');
-          return;
         }
 
         setAuthState({
@@ -51,21 +44,22 @@ export default function GetCreditsPage() {
           loading: false,
           error: error instanceof Error ? error : new Error('Authentication failed')
         });
-        router.push('/login?returnTo=/get-credits');
+        router.push('/login');
       }
     };
 
+    // Initial auth check
     checkAuth();
 
+    // Set up auth state change listener
     const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
-      console.log('Auth state changed:', event); // Debug log
       if (event === 'SIGNED_OUT') {
         setAuthState({
           user: null,
           loading: false,
           error: null
         });
-        router.push('/login?returnTo=/get-credits');
+        router.push('/login');
       } else if (event === 'SIGNED_IN' && session?.user) {
         setAuthState({
           user: session.user,
@@ -75,30 +69,33 @@ export default function GetCreditsPage() {
       }
     });
 
+    // Cleanup subscription
     return () => subscription.unsubscribe();
   }, [supabase, router]);
 
   const handlePaymentClick = async () => {
     try {
       if (!authState.user) {
-        router.push('/login?returnTo=/get-credits');
+        router.push('/login');
         return;
       }
 
+      // Verify auth state before proceeding
       const { data: { user }, error } = await supabase.auth.getUser();
       
       if (error || !user) {
         throw new Error('Authentication required');
       }
 
-      // Add your payment logic here
-      console.log('Processing payment for user:', user.id);
+      // Proceed with payment logic here
+      // You can safely use authState.user or user here
       
     } catch (error) {
       console.error('Payment error:', error);
       if (error instanceof Error && error.message === 'Authentication required') {
-        router.push('/login?returnTo=/get-credits');
+        router.push('/login');
       }
+      // Handle other payment errors appropriately
     }
   };
 
@@ -115,7 +112,7 @@ export default function GetCreditsPage() {
       <div className="flex flex-col items-center justify-center min-h-screen">
         <p className="text-red-500 mb-4">Failed to load payment page</p>
         <button 
-          onClick={() => router.push('/login?returnTo=/get-credits')}
+          onClick={() => router.push('/login')}
           className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
         >
           Return to Login
@@ -125,17 +122,12 @@ export default function GetCreditsPage() {
   }
 
   return (
-    <div className="flex flex-col min-h-screen bg-[#F4F7FA]">
-      <main className="flex-grow">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <h1 className="text-3xl font-bold mb-8 text-center">Get Credits</h1>
-          <Pricing 
-            onPaymentClick={handlePaymentClick}
-            user={authState.user}
-            isLoading={authState.loading}
-            showTitle={false}
-          />
-        </div>
+    <div className="flex flex-col min-h-screen">
+      <main>
+        <Pricing 
+          onPaymentClick={handlePaymentClick}
+          user={authState.user}  // Optional: Pass user data if needed in Pricing
+        />
       </main>
     </div>
   );

@@ -1,45 +1,38 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Environment variables
+  env: {
+    NEXT_PUBLIC_PADDLE_CLIENT_TOKEN: process.env.NEXT_PUBLIC_PADDLE_CLIENT_TOKEN,
+    NEXT_PUBLIC_PADDLE_ENV: process.env.NEXT_PUBLIC_PADDLE_ENV
+  },
+  
+  // Image configuration
   images: {
     domains: ['res.cloudinary.com', 'gostudio.ai', 'www.gostudio.ai'],
     unoptimized: true,
   },
-  // Remove the standalone api config and add it to serverRuntimeConfig
-  serverRuntimeConfig: {
+  
+  // API configurations
+  api: {
     bodyParser: {
       sizeLimit: '10mb',
     },
     responseLimit: '10mb',
   },
-  // Add experimental features
-  experimental: {
-    appDir: true,
-    serverActions: true,
-    serverComponentsExternalPackages: [],
-    timeoutMs: 60000,
-  },
-  // Ensure static files are handled correctly
+  
+  // Webpack configuration
   webpack: (config) => {
     config.module.rules.push({
       test: /\.(png|jpg|gif|svg)$/i,
       type: 'asset/resource'
     })
-    config.resolve.fallback = {
-      ...config.resolve.fallback,
-      fs: false,
-      net: false,
-      tls: false,
-    };
     return config
   },
+  
+  // Package transpilation
   transpilePackages: ['react-tabs'],
-  // Add this to help with Edge runtime issues
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  // Add this for development
-  reactStrictMode: true,
-  swcMinify: true,
+  
+  // Redirects configuration
   async redirects() {
     return [
       {
@@ -103,24 +96,7 @@ const nextConfig = {
         permanent: true
       }
     ]
-  },
-  env: {
-    NEXT_PUBLIC_PADDLE_CLIENT_TOKEN: process.env.NEXT_PUBLIC_PADDLE_CLIENT_TOKEN,
-    NEXT_PUBLIC_PADDLE_ENV: process.env.NEXT_PUBLIC_PADDLE_ENV,
-  },
-  async headers() {
-    return [
-      {
-        source: '/:path*',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
-          },
-        ],
-      },
-    ];
-  },
+  }
 }
 
 module.exports = nextConfig

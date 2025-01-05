@@ -1,44 +1,99 @@
 'use client';
 
-import { ErrorBoundary } from '@/components/ErrorBoundary';
 import { Pricing } from '@/components/home/pricing/pricing';
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
 import { useRouter } from 'next/navigation';
 import { useState, useEffect } from 'react';
-import type { User } from '@supabase/supabase-js';
+import { User } from '@supabase/supabase-js';
+
+interface AuthState {
+  user: User | null;
+  loading: boolean;
+  error: Error | null;
+}
 
 export default function PricingPage() {
   const router = useRouter();
   const supabase = createClientComponentClient();
-  const [user, setUser] = useState<User | null>(null);
-  const [loading, setLoading] = useState(true);
-
-  // Add debug logs
-  useEffect(() => {
-    console.log('Pricing page mounted');
-    console.log('Initial loading state:', loading);
-  }, []);
+  const [authState, setAuthState] = useState<AuthState>({
+    user: null,
+    loading: true,
+    error: null
+  });
 
   useEffect(() => {
-    const getUser = async () => {
+    const checkAuth = async () => {
       try {
-        console.log('Fetching user...');
         const { data: { user }, error } = await supabase.auth.getUser();
-        if (error) throw error;
-        console.log('User data:', user);
-        setUser(user);
-      } catch (err) {
-        console.error('Auth error:', err);
-      } finally {
-        setLoading(false);
+        
+        if (error) {
+          setAuthState({
+            user: null,
+            loading: false,
+            error
+          });
+          return;
+        }
+
+        setAuthState({
+          user,
+          loading: false,
+          error: null
+        });
+      } catch (error) {
+        setAuthState({
+          user: null,
+          loading: false,
+          error: error instanceof Error ? error : new Error('Auth check failed')
+        });
       }
     };
 
-    getUser();
+    checkAuth();
+
+    // Set up auth state listener
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
+      if (event === 'SIGNED_OUT') {
+        setAuthState({
+          user: null,
+          loading: false,
+          error: null
+        });
+      } else if (event === 'SIGNED_IN' && session?.user) {
+        setAuthState({
+          user: session.user,
+          loading: false,
+          error: null
+        });
+      }
+    });
+
+    return () => {
+      subscription.unsubscribe();
+    };
   }, [supabase]);
 
-  if (loading) {
-    console.log('Showing loading state');
+  const handlePaymentClick = async () => {
+    try {
+      // Verify authentication before proceeding
+      const { data: { user }, error } = await supabase.auth.getUser();
+      
+      if (error || !user) {
+        router.push('/login');
+        return;
+      }
+
+      // Add your payment logic here
+      // For example:
+      // await initiatePayment(user.id);
+      
+    } catch (error) {
+      console.error('Payment error:', error);
+      router.push('/login');
+    }
+  };
+
+  if (authState.loading) {
     return (
       <div className="flex items-center justify-center min-h-screen">
         <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900" />
@@ -46,20 +101,58 @@ export default function PricingPage() {
     );
   }
 
-  console.log('Rendering pricing component');
   return (
-    <ErrorBoundary>
-      <div className="flex flex-col min-h-screen bg-[#F4F7FA]">
-        <main className="flex-grow">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <Pricing 
-              user={user}
-              isLoading={loading}
-              showTitle={true}
-            />
-          </div>
-        </main>
-      </div>
-    </ErrorBoundary>
+    <div className="flex flex-col min-h-screen">
+      <main>
+        <Pricing 
+          onPaymentClick={handlePaymentClick}
+          user={authState.user}
+          isLoading={authState.loading}
+        />
+      </main>
+    </div>
   );
+}
+// Update your Pricing component props type
+interface PricingProps {
+  onPaymentClick: () => Promise<void>;
+  user: User | null;
+  isLoading?: boolean;
+}
+
+// You might also want to update the useUserInfo hook to use getUser:
+export function useUserInfo(supabase: any) {
+  const [user, setUser] = useState<User | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const checkUser = async () => {
+      try {
+        const { data: { user }, error } = await supabase.auth.getUser();
+        
+        if (error) {
+          throw error;
+        }
+
+        setUser(user);
+      } catch (error) {
+        console.error('Error checking user:', error);
+        setUser(null);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    checkUser();
+
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((event: any, session: any) => {
+      setUser(session?.user ?? null);
+    });
+
+    return () => {
+      subscription.unsubscribe();
+    };
+  }, [supabase]);
+
+  return { user, loading };
 }
