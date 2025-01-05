@@ -7,17 +7,17 @@ import { Analytics } from "@vercel/analytics/react";
 import FooterWrapper from "@/components/FooterWrapper";
 import { CSPostHogProvider } from './providers'
 import { SpeedInsights } from '@vercel/speed-insights/next'
+import ClarityScript from "@/components/ClarityScript";
 import GoogleTagManager from "@/components/GoogleTagManager";
 import 'react-tabs/style/react-tabs.css';
 import { StepBar } from "@/components/ui/step-bar";
-import ClarityScript from "@/components/ClarityScript";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.gostudio.ai'),
   title: "Headshots AI",
   description: "Generate awesome headshots in minutes using AI",
 };
-
+export const dynamic = 'force-dynamic'
 export default function RootLayout({ children }: any) {
   return (
     <html lang="en">
