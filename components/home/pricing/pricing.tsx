@@ -48,6 +48,9 @@ export const Pricing: React.FC<PricingProps> = ({
   };
 
   useEffect(() => {
+    let retryCount = 0;
+    const maxRetries = 3;
+
     const initPaddle = async () => {
       try {
         if (process.env.NEXT_PUBLIC_PADDLE_CLIENT_TOKEN && process.env.NEXT_PUBLIC_PADDLE_ENV) {
@@ -59,6 +62,10 @@ export const Pricing: React.FC<PricingProps> = ({
         }
       } catch (error) {
         console.error('Failed to initialize Paddle:', error);
+        if (retryCount < maxRetries) {
+          retryCount++;
+          setTimeout(initPaddle, 1000 * retryCount); // Exponential backoff
+        }
       }
     };
 

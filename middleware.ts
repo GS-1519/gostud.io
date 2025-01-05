@@ -8,24 +8,26 @@ export async function middleware(request: NextRequest) {
   const supabase = createMiddlewareClient({ req: request, res });
 
   try {
-    const { data: { user }, error } = await supabase.auth.getUser();
+    const {
+      data: { user },
+      error,
+    } = await supabase.auth.getUser();
 
-    // Add pricing to protected routes
+    // Protect get-credits route
     if (request.nextUrl.pathname === '/get-credits') {
-      if (error || !user) {
+      if (!user) {
+        // Store the attempted URL to redirect back after login
         const returnTo = encodeURIComponent(request.nextUrl.pathname);
-        return NextResponse.redirect(new URL(`/login?returnTo=${returnTo}`, request.url));
+        return NextResponse.redirect(
+          new URL(`/login?returnTo=${returnTo}`, request.url)
+        );
       }
-    }
-
-    // Always allow access to the pricing page
-    if (request.nextUrl.pathname === '/pricing') {
       return res;
     }
 
-    // If user is authenticated and tries to access login
-    if (user && request.nextUrl.pathname === '/login') {
-      return NextResponse.redirect(new URL('/overview', request.url));
+    // Handle other protected routes
+    if (['/pricing', '/login'].includes(request.nextUrl.pathname)) {
+      return res;
     }
 
     return res;

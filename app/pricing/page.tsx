@@ -1,5 +1,6 @@
 'use client';
 
+import { ErrorBoundary } from '@/components/ErrorBoundary';
 import { Pricing } from '@/components/home/pricing/pricing';
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
 import { useRouter } from 'next/navigation';
@@ -78,17 +79,19 @@ export default function PricingPage() {
   }
 
   return (
-    <div className="flex flex-col min-h-screen bg-[#F4F7FA]">
-      <main className="flex-grow">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <Pricing 
-            user={user}
-            isLoading={loading}
-            onPaymentClick={handlePaymentClick}
-            showTitle={true}
-          />
-        </div>
-      </main>
-    </div>
+    <ErrorBoundary>
+      <div className="flex flex-col min-h-screen bg-[#F4F7FA]">
+        <main className="flex-grow">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <Pricing 
+              user={user}
+              isLoading={loading}
+              onPaymentClick={handlePaymentClick}
+              showTitle={true}
+            />
+          </div>
+        </main>
+      </div>
+    </ErrorBoundary>
   );
 }

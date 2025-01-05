@@ -16,6 +16,7 @@ const nextConfig = {
     appDir: true,
     serverActions: true,
     serverComponentsExternalPackages: [],
+    timeoutMs: 60000,
   },
   // Ensure static files are handled correctly
   webpack: (config) => {
@@ -106,7 +107,20 @@ const nextConfig = {
   env: {
     NEXT_PUBLIC_PADDLE_CLIENT_TOKEN: process.env.NEXT_PUBLIC_PADDLE_CLIENT_TOKEN,
     NEXT_PUBLIC_PADDLE_ENV: process.env.NEXT_PUBLIC_PADDLE_ENV,
-  }
+  },
+  async headers() {
+    return [
+      {
+        source: '/:path*',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+    ];
+  },
 }
 
 module.exports = nextConfig
