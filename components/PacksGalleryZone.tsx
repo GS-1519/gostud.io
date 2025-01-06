@@ -41,14 +41,23 @@ const groupPacksByCategory = (packs: Pack[]) => {
   };
 
   packs.forEach(pack => {
-    if (pack.costs.man || pack.costs.woman) {
+    // Check if the pack title contains "Photoshoot"
+    const isPhotoshootPack = pack.title.toLowerCase().includes('photoshoot');
+
+    if (isPhotoshootPack) {
+      // Only add Photoshoot pack to adults category
       groups.adults.push(pack);
-    }
-    if (pack.costs.boy || pack.costs.girl) {
-      groups.children.push(pack);
-    }
-    if (pack.costs.dog || pack.costs.cat) {
-      groups.pets.push(pack);
+    } else {
+      // For all other packs, use the original logic
+      if (pack.costs.man || pack.costs.woman) {
+        groups.adults.push(pack);
+      }
+      if (pack.costs.boy || pack.costs.girl) {
+        groups.children.push(pack);
+      }
+      if (pack.costs.dog || pack.costs.cat) {
+        groups.pets.push(pack);
+      }
     }
   });
 

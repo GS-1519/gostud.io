@@ -34,7 +34,7 @@ const ImageSlider: React.FC<{ images: PackImage[] }> = ({ images }) => {
           {/* First set of images */}
           <div 
             className="flex animate-marquee items-center gap-6 whitespace-nowrap"
-            style={{ animation: 'marquee 15s linear infinite' }}
+            style={{ animation: 'marquee 30s linear infinite' }}
           >
             {images.map((img, i) => (
               <div 
@@ -70,7 +70,7 @@ const ImageSlider: React.FC<{ images: PackImage[] }> = ({ images }) => {
           {/* Duplicate set for continuous scroll */}
           <div 
             className="flex animate-marquee items-center gap-6 whitespace-nowrap"
-            style={{ animation: 'marquee 15s linear infinite' }}
+            style={{ animation: 'marquee 30s linear infinite' }}
           >
             {images.map((img, i) => (
               <div 
