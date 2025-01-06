@@ -9,6 +9,16 @@ cloudinary.config({
 });
 
 export async function POST(request: Request) {
+  if (!process.env.CLOUDINARY_CLOUD_NAME || 
+      !process.env.CLOUDINARY_API_KEY || 
+      !process.env.CLOUDINARY_API_SECRET) {
+    console.error('Missing Cloudinary credentials');
+    return NextResponse.json(
+      { error: 'Server configuration error' },
+      { status: 500 }
+    );
+  }
+
   try {
     const formData = await request.formData();
     const file = formData.get('file') as File;
@@ -28,21 +38,34 @@ export async function POST(request: Request) {
     try {
       // Upload to Cloudinary with face detection and cropping
       const result = await cloudinary.uploader.upload(dataURI, {
-        // Use face detection for cropping
-        gravity: "face", // This will focus on the largest face
-        crop: "thumb", // Use thumbnail crop mode
+        gravity: "face",
+        crop: "thumb",
         width: 800,
         height: 800,
-        zoom: "0.7", // Zoom out slightly to include more context
+        zoom: "0.7",
         quality: 90,
+        timeout: 60000, // Add timeout of 60 seconds
       });
+
+      if (!result || !result.secure_url) {
+        throw new Error('Failed to get processed image URL from Cloudinary');
+      }
 
       // Fetch the processed image
       const response = await fetch(result.secure_url);
+      if (!response.ok) {
+        throw new Error(`Failed to fetch processed image: ${response.statusText}`);
+      }
+
       const processedBuffer = await response.arrayBuffer();
 
       // Delete the uploaded image from Cloudinary
-      await cloudinary.uploader.destroy(result.public_id);
+      try {
+        await cloudinary.uploader.destroy(result.public_id);
+      } catch (deleteError) {
+        console.error('Error deleting image from Cloudinary:', deleteError);
+        // Continue execution even if delete fails
+      }
 
       return new NextResponse(processedBuffer, {
         headers: {
@@ -51,15 +74,18 @@ export async function POST(request: Request) {
         }
       });
 
-    } catch (error) {
-      console.error('Processing Error:', error);
-      throw new Error('Failed to process image');
+    } catch (processingError) {
+      console.error('Cloudinary Processing Error:', processingError);
+      return NextResponse.json(
+        { error: 'Image processing failed' },
+        { status: 500 }
+      );
     }
 
   } catch (error) {
-    console.error('Error cropping image:', error);
+    console.error('Auto-crop error:', error);
     return NextResponse.json(
-      { error: 'Failed to crop image' },
+      { error: 'Failed to process image' },
       { status: 500 }
     );
   }

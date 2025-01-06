@@ -202,10 +202,15 @@ const TrainModelZone: React.FC<TrainModelZoneProps> = ({ packSlug, onContinue, u
       });
 
       if (!response.ok) {
-        throw new Error(`Failed to crop image: ${response.statusText}`);
+        const errorData = await response.json().catch(() => ({}));
+        throw new Error(errorData.error || `Failed to crop image: ${response.statusText}`);
       }
 
       const croppedBlob = await response.blob();
+      if (!croppedBlob || croppedBlob.size === 0) {
+        throw new Error('Received empty response from server');
+      }
+
       const croppedPreview = URL.createObjectURL(croppedBlob);
       const croppedFile = new File([croppedBlob], file.file.name, {
         type: croppedBlob.type || 'image/jpeg'
@@ -240,7 +245,7 @@ const TrainModelZone: React.FC<TrainModelZoneProps> = ({ packSlug, onContinue, u
       console.error('Error cropping image:', error);
       toast({
         title: "Error",
-        description: "Failed to crop image",
+        description: error instanceof Error ? error.message : "Failed to crop image",
         duration: 5000,
       });
       setFiles(prev => prev.map((f, i) => 
