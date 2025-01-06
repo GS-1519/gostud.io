@@ -191,7 +191,10 @@ const TrainModelZone: React.FC<TrainModelZoneProps> = ({ packSlug, onContinue, u
     try {
       const formData = new FormData();
       formData.append('file', file.file);
-      formData.append('imageType', file.inspectionData?.full_body_image_or_longshot ? 'longshot' : 'selfie');
+      formData.append('imageType', 
+        file.inspectionData?.includes_multiple_people ? 'group' : 
+        file.inspectionData?.full_body_image_or_longshot ? 'longshot' : 'selfie'
+      );
 
       const response = await fetch('/api/auto-crop', {
         method: 'POST',
@@ -451,22 +454,31 @@ const TrainModelZone: React.FC<TrainModelZoneProps> = ({ packSlug, onContinue, u
                               <Trash2 className="w-4 h-4 text-red-500" />
                             </button>
 
+                            {file.needsCropping && !file.isProcessing && (
+                              <div className="absolute top-2 right-2 group/crop">
+                                <button
+                                  onClick={() => handleAutoCrop(index)}
+                                  className="bg-white p-1.5 rounded-full shadow-md hover:bg-gray-50 transition-colors relative"
+                                  disabled={file.isProcessing}
+                                >
+                                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none">
+                                    <path d="M8 8h8v8H8z" stroke="currentColor" strokeWidth="1.5"/>
+                                  </svg>
+                                  
+                                  <div className="absolute invisible group-hover/crop:visible opacity-0 group-hover/crop:opacity-100 transition-opacity bottom-full mb-2 -left-1/2 transform translate-x-1/2">
+                                    <div className="bg-black text-white text-xs rounded py-1 px-2 whitespace-nowrap">
+                                      Click to auto-crop image
+                                    </div>
+                                    <div className="w-2 h-2 bg-black transform rotate-45 absolute -bottom-1 left-1/2 -translate-x-1/2"></div>
+                                  </div>
+                                </button>
+                              </div>
+                            )}
+
                             {file.isProcessing && (
                               <div className="absolute inset-0 bg-black/50 rounded-lg flex items-center justify-center">
                                 <div className="w-8 h-8 rounded-full border-2 border-white border-t-transparent animate-spin" />
                               </div>
-                            )}
-
-                            {file.needsCropping && !file.isProcessing && (
-                              <button
-                                onClick={() => handleAutoCrop(index)}
-                                className="absolute top-2 right-2 bg-white p-1.5 rounded-full shadow-md hover:bg-gray-50 transition-colors"
-                                disabled={file.isProcessing}
-                              >
-                                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none">
-                                  <path d="M8 8h8v8H8z" stroke="currentColor" strokeWidth="1.5"/>
-                                </svg>
-                              </button>
                             )}
                           </div>
                         ))}
@@ -495,16 +507,23 @@ const TrainModelZone: React.FC<TrainModelZoneProps> = ({ packSlug, onContinue, u
                           </div>
                           <span className="font-medium">Bad Photos</span>
                         </div>
+
                         <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-4">
-                          {badFiles.map((badFile, index) => (
-                            <div key={index} className="relative aspect-square">
-                              <img
-                                src={badFile.preview}
-                                alt="Bad photo"
-                                className="w-full h-full object-cover rounded-lg"
-                              />
-                              <div className="absolute bottom-0 left-0 right-0 bg-[#EF4444] text-white text-xs p-2 text-center">
-                                {badFile.reason}
+                          {badFiles.map((file, index) => (
+                            <div key={index} className="flex flex-col gap-2">
+                              {/* Image Container */}
+                              <div className="relative aspect-square rounded-lg overflow-hidden border border-red-200">
+                                {file.preview && (
+                                  <img
+                                    src={file.preview}
+                                    alt={`Bad upload ${index + 1}`}
+                                    className="w-full h-full object-cover"
+                                  />
+                                )}
+                              </div>
+                              {/* Error Message Below Image */}
+                              <div className="bg-red-500 text-white text-sm rounded-lg p-2 text-center">
+                                {file.reason}
                               </div>
                             </div>
                           ))}

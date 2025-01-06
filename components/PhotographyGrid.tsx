@@ -60,7 +60,7 @@ const ImageSlider: React.FC<{ images: PackImage[] }> = ({ images }) => {
           {/* First set of images */}
           <div 
             className="flex animate-marquee items-center gap-6 whitespace-nowrap"
-            style={{ animation: 'marquee 15s linear infinite' }}
+            style={{ animation: 'marquee 30s linear infinite' }}
           >
             {images.map((img, i) => (
               <div 
@@ -88,7 +88,7 @@ const ImageSlider: React.FC<{ images: PackImage[] }> = ({ images }) => {
           {/* Duplicate set */}
           <div 
             className="flex animate-marquee items-center gap-6 whitespace-nowrap"
-            style={{ animation: 'marquee 15s linear infinite' }}
+            style={{ animation: 'marquee 30s linear infinite' }}
           >
             {images.map((img, i) => (
               <div 
@@ -120,7 +120,7 @@ const ImageSlider: React.FC<{ images: PackImage[] }> = ({ images }) => {
 
 // Overlay Component
 const PackOverlay: React.FC<OverlayProps> = ({ isOpen, onClose, packType, title }) => {
-  const [activeTab, setActiveTab] = useState<'Men' | 'Women'>('Men');
+  const [activeTab, setActiveTab] = useState<'Men' | 'Women'>('Women');
 
   if (!isOpen) return null;
 
@@ -150,20 +150,20 @@ const PackOverlay: React.FC<OverlayProps> = ({ isOpen, onClose, packType, title 
       title: "Corporate Headshot",
       images: {
         Men: [
-          { src: '/Packs/Corporate-photos/Man/man1.jpg', alt: 'Professional corporate headshot man' },
-          { src: '/Packs/Corporate-photos/Man/man2.jpg', alt: 'Business professional portrait man' },
-          { src: '/Packs/Corporate-photos/Man/man3.jpg', alt: 'Executive headshot man' },
-          { src: '/Packs/Corporate-photos/Man/man4.jpg', alt: 'Corporate leader portrait man' },
-          { src: '/Packs/Corporate-photos/Man/man5.jpg', alt: 'Business formal headshot man' },
-          { src: '/Packs/Corporate-photos/Man/man6.jpg', alt: 'Professional office portrait man' }
+          { src: '/Packs/corporate-photos/Man/man1.jpg', alt: 'Professional corporate headshot man' },
+          { src: '/Packs/corporate-photos/Man/man2.jpg', alt: 'Business professional portrait man' },
+          { src: '/Packs/corporate-photos/Man/man3.jpg', alt: 'Executive headshot man' },
+          { src: '/Packs/corporate-photos/Man/man4.jpg', alt: 'Corporate leader portrait man' },
+          { src: '/Packs/corporate-photos/Man/man5.jpg', alt: 'Business formal headshot man' },
+          { src: '/Packs/corporate-photos/Man/man6.jpg', alt: 'Professional office portrait man' }
         ],
         Women: [
-          { src: '/Packs/Corporate-photos/Women/women1.jpg', alt: 'Professional corporate headshot woman' },
-          { src: '/Packs/Corporate-photos/Women/women2.jpg', alt: 'Business professional portrait woman' },
-          { src: '/Packs/Corporate-photos/Women/women3.jpg', alt: 'Executive headshot woman' },
-          { src: '/Packs/Corporate-photos/Women/women4.jpg', alt: 'Corporate leader portrait woman' },
-          { src: '/Packs/Corporate-photos/Women/women5.jpg', alt: 'Business formal headshot woman' },
-          { src: '/Packs/Corporate-photos/Women/women6.jpg', alt: 'Professional office portrait woman' }
+          { src: '/Packs/corporate-photos/Women/women1.jpg', alt: 'Professional corporate headshot woman' },
+          { src: '/Packs/corporate-photos/Women/women2.jpg', alt: 'Business professional portrait woman' },
+          { src: '/Packs/corporate-photos/Women/women3.jpg', alt: 'Executive headshot woman' },
+          { src: '/Packs/corporate-photos/Women/women4.jpg', alt: 'Corporate leader portrait woman' },
+          { src: '/Packs/corporate-photos/Women/women5.jpg', alt: 'Business formal headshot woman' },
+          { src: '/Packs/corporate-photos/Women/women6.jpg', alt: 'Professional office portrait woman' }
         ]
       }
     },
@@ -359,14 +359,7 @@ const PackOverlay: React.FC<OverlayProps> = ({ isOpen, onClose, packType, title 
     barbie: {
       title: "Barbie Style",
       images: {
-        Men: [
-          { src: '/Packs/Barbie-photos/Man/man1.jpg', alt: 'Barbie style man portrait' },
-          { src: '/Packs/Barbie-photos/Man/man2.jpg', alt: 'Pink themed male headshot' },
-          { src: '/Packs/Barbie-photos/Man/man3.jpg', alt: 'Retro style man portrait' },
-          { src: '/Packs/Barbie-photos/Man/man4.jpg', alt: 'Vintage male photo' },
-          { src: '/Packs/Barbie-photos/Man/man5.jpg', alt: 'Classic style man portrait' },
-          { src: '/Packs/Barbie-photos/Man/man6.jpg', alt: 'Retro male headshot' }
-        ],
+        Men: [],
         Women: [
           { src: '/Packs/Barbie-photos/Women/women1.jpg', alt: 'Barbie style woman portrait' },
           { src: '/Packs/Barbie-photos/Women/women2.jpg', alt: 'Pink themed female headshot' },
@@ -381,6 +374,9 @@ const PackOverlay: React.FC<OverlayProps> = ({ isOpen, onClose, packType, title 
   
 
   const currentPack = packData[packType] || packData.corporate;
+  
+  // Determine if Men tab should be disabled
+  const hasMenImages = currentPack.images.Men && currentPack.images.Men.length > 0;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90">
@@ -414,11 +410,12 @@ const PackOverlay: React.FC<OverlayProps> = ({ isOpen, onClose, packType, title 
         <div className="flex justify-center gap-2 mb-8">
           <button
             onClick={() => setActiveTab('Men')}
+            disabled={!hasMenImages}
             className={`px-8 py-2 rounded-full transition-all ${
               activeTab === 'Men'
                 ? 'bg-[#5B16FE] text-white'
                 : 'text-white border border-gray-600 hover:bg-gray-800'
-            }`}
+            } ${!hasMenImages ? 'opacity-50 cursor-not-allowed' : ''}`}
           >
             Men
           </button>

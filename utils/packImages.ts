@@ -421,7 +421,6 @@ export const packImages: PackImagePaths = {
     '/reviews-all/photoshoot-man.jpg',
     '/reviews-all/photoshoot-women.jpg',
     
-    '/reviews-all/photoshoot-women-beautiful1-nystreet.jpg',
     
     '/reviews-all/photoshoot-women-nearlake.jpg',
     
