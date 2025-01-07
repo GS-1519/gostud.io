@@ -25,8 +25,16 @@ const nextConfig = {
     config.module.rules.push({
       test: /\.(png|jpg|gif|svg)$/i,
       type: 'asset/resource'
-    })
-    return config
+    });
+    config.module.rules.push({
+      test: /\.wasm$/,
+      type: 'webassembly/async'
+    });
+    config.experiments = {
+      asyncWebAssembly: true,
+      layers: true,
+    };
+    return config;
   },
   
   // Package transpilation

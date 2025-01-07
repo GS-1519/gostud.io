@@ -169,7 +169,7 @@ export const packImages: PackImagePaths = {
     '/Packs/Mythical-photos/Women/women4.jpg',
     '/Packs/Mythical-photos/Women/women5.jpg',
   ],
-  'annie': [
+  'annieleibovitz': [
     '/Packs/Annie-photos/Man/man1.jpg',
     '/Packs/Annie-photos/Man/man2.jpg',
     '/Packs/Annie-photos/Man/man3.jpg',

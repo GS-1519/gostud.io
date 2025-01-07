@@ -78,6 +78,10 @@ const ImageSlider: React.FC<{ images: PackImage[] }> = ({ images }) => {
                       src={img.src} 
                       alt={img.alt}
                       className="w-full h-full object-cover"
+                      onError={(e) => {
+                        console.error(`Failed to load image: ${img.src}`);
+                        e.currentTarget.src = '/fallback-image.jpg'; // Optional: provide a fallback image
+                      }}
                     />
                   </div>
                 </div>
@@ -106,6 +110,10 @@ const ImageSlider: React.FC<{ images: PackImage[] }> = ({ images }) => {
                       src={img.src} 
                       alt={img.alt}
                       className="w-full h-full object-cover"
+                      onError={(e) => {
+                        console.error(`Failed to load image: ${img.src}`);
+                        e.currentTarget.src = '/fallback-image.jpg'; // Optional: provide a fallback image
+                      }}
                     />
                   </div>
                 </div>

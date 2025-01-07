@@ -117,6 +117,7 @@ export default function PacksGalleryZone() {
       .replace('md-', '')
       .toLowerCase()
       .replace('photoshoot', 'photoshoot')
+      .replace('annie-leibovitz', 'annieleibovitz')
       .replace('christmas-sweater', 'christmas')
       .replace('cat-meowgic', 'cat')
       .replace('me-iconic', 'iconic')

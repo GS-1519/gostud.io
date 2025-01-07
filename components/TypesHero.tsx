@@ -25,30 +25,6 @@ const TypesHero = () => {
       link: '/headshot-packs/actor-headshot'
     },
     {
-      title: 'Professional Tattoo Portraits',
-      description: 'Showcase your tattoos with professional portraits that highlight your artistic expression.',
-      image: '/Packs/Types/tattos.jpg',
-      link: '/headshot-packs/professional-tattoos-portraits'
-    },
-    {
-      title: 'Annie Leibovitz Style',
-      description: 'Dramatic portraits inspired by Annie Leibovitz\'s iconic photography style.',
-      image: '/Packs/Types/annie.jpg',
-      link: '/headshot-packs/annie-headshot'
-    },
-    {
-      title: 'Barbie Style',
-      description: 'Fun and stylish Barbie-inspired portrait photography.',
-      image: '/Packs/Types/barbie.jpg',
-      link: '/headshot-packs/barbie-headshot'
-    },
-    {
-      title: 'Viking Portraits',
-      description: 'Powerful Viking-inspired portraits perfect for historical themes and fantasy shoots.',
-      image: '/Packs/Types/vings.jpg',
-      link: '/headshot-packs/viking-portraits'
-    },
-    {
       title: 'Realtor Style',
       description: 'Professional portraits for real estate professionals.',
       image: '/Packs/Types/realtro.jpg',
@@ -90,12 +66,7 @@ const TypesHero = () => {
       image: '/Packs/Types/partner.jpg',
       link: '/headshot-packs/partners-headshots'
     },
-    {
-      title: 'Marvel Class',
-      description: 'Dynamic, high-impact headshots with a cinematic quality inspired by Marvel productions.',
-      image: '/Packs/Types/miarval.jpg',
-      link: '/headshot-packs/meiravclass-headshot'
-    },
+  
     {
       title: 'Lawyer Branded',
       description: 'Specialized headshots that reinforce your legal brand and professional authority.',
