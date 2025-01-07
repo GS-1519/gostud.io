@@ -18,34 +18,25 @@ export async function preloadWasmModules() {
   });
 }
 
-export async function ensureWasmLoaded(format: OutputType): Promise<void> {
-  if (wasmInitialized.get(format)) return;
-  
+export async function ensureWasmLoaded(format: string) {
   try {
-    // Load each format independently
     switch (format) {
       case 'avif':
-        await import(/* webpackChunkName: "avif-codec" */ '@jsquash/avif');
-        break;
-      case 'jxl':
-        await import(/* webpackChunkName: "jxl-codec" */ '@jsquash/jxl');
-        break;
-      case 'jpeg':
-        await import(/* webpackChunkName: "jpeg-codec" */ '@jsquash/jpeg');
-        break;
-      case 'png':
-        await import(/* webpackChunkName: "png-codec" */ '@jsquash/png');
+        await import('@jsquash/avif').catch(err => {
+          console.warn('AVIF support not available:', err);
+          throw err;
+        });
         break;
       case 'webp':
-        await import(/* webpackChunkName: "webp-codec" */ '@jsquash/webp');
+        await import('@jsquash/webp').catch(err => {
+          console.warn('WebP support not available:', err);
+          throw err;
+        });
         break;
-      default:
-        throw new Error(`Unsupported format: ${format}`);
+      // ... other formats ...
     }
-    wasmInitialized.set(format, true);
   } catch (error) {
-    console.error(`Failed to initialize ${format}:`, error);
-    wasmInitialized.set(format, false);
+    console.error(`Failed to load WASM for ${format}:`, error);
     throw error;
   }
 }

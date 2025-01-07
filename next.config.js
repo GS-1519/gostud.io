@@ -22,40 +22,31 @@ const nextConfig = {
   
   // Webpack configuration with WebAssembly support
   webpack: (config, { isServer }) => {
-    // Original image rules
-    config.module.rules.push({
-      test: /\.(png|jpg|gif|svg)$/i,
-      type: 'asset/resource'
-    });
-
-    // WebAssembly support
+    // WebAssembly configuration
     config.experiments = {
-      ...config.experiments,
       asyncWebAssembly: true,
       layers: true,
     };
 
-    // Add rules for WASM and binary files
+    // Update WASM loading rules
     config.module.rules.push({
       test: /\.wasm$/,
-      type: 'webassembly/async',
+      use: {
+        loader: 'webassembly/async',
+      },
+      type: 'javascript/auto',
     });
 
-    // Node.js polyfills
-    config.resolve.fallback = {
-      ...config.resolve.fallback,
-      fs: false,
-      path: false,
-      crypto: false,
-    };
-
-    // Fix for WASM loading
+    // Fix WASM output for client-side
     if (!isServer) {
-      config.output = {
-        ...config.output,
-        webassemblyModuleFilename: 'static/wasm/[modulehash].wasm',
-      };
+      config.output.webassemblyModuleFilename = 'static/wasm/[modulehash].wasm';
     }
+
+    // Keep other existing rules
+    config.module.rules.push({
+      test: /\.(png|jpg|gif|svg)$/i,
+      type: 'asset/resource'
+    });
 
     return config;
   },
@@ -67,7 +58,6 @@ const nextConfig = {
   experimental: {
     esmExternals: "loose",
     serverComponentsExternalPackages: ["@huggingface/transformers"],
-    webassembly: true,
   },
   
   // Redirects configuration

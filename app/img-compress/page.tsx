@@ -36,7 +36,9 @@ export default function Page() {
         console.error('Invalid file object:', file);
         return false;
       }
-      return file.type.startsWith('image/') || file.name.toLowerCase().endsWith('jxl');
+      // Only accept common image formats
+      const validTypes = ['image/jpeg', 'image/png', 'image/webp'];
+      return validTypes.includes(file.type);
     });
 
     // Create ImageFile objects with proper initialization
@@ -46,17 +48,34 @@ export default function Page() {
       name: file.name,
       originalSize: file.size,
       status: 'pending' as const,
+      preview: URL.createObjectURL(file), // Add preview URL
     }));
 
     // Only proceed if we have valid files
     if (imageFiles.length > 0) {
-      setImages((prev) => [...prev, ...imageFiles]);
+      setImages(prev => [...prev, ...imageFiles]);
       
-      requestAnimationFrame(() => {
-        imageFiles.forEach(image => addToQueue(image.id));
-      });
+      // Use Promise.all to handle multiple files
+      Promise.all(
+        imageFiles.map(async (image) => {
+          try {
+            await ensureWasmLoaded(outputType);
+            addToQueue(image.id);
+          } catch (error) {
+            console.error(`Failed to process image ${image.name}:`, error);
+            // Update image status to error
+            setImages(prev => 
+              prev.map(img => 
+                img.id === image.id 
+                  ? { ...img, status: 'error' as const } 
+                  : img
+              )
+            );
+          }
+        })
+      );
     }
-  }, [addToQueue]);
+  }, [addToQueue, outputType]);
 
   const handleRemoveImage = useCallback((id: string) => {
     setImages((prev) => {
@@ -94,17 +113,32 @@ export default function Page() {
 
   // Initialize WASM modules on mount
   useEffect(() => {
+    let mounted = true;
+
     const initWasm = async () => {
       try {
-        // Initialize WASM for the current output type
         await ensureWasmLoaded(outputType);
       } catch (error) {
-        console.error('Failed to initialize WASM:', error);
+        console.error('WASM initialization failed:', error);
+        if (mounted) {
+          // Show error state or fallback
+          setImages(prev => 
+            prev.map(img => 
+              img.status === 'pending' 
+                ? { ...img, status: 'error' as const }
+                : img
+            )
+          );
+        }
       }
     };
 
     initWasm();
-  }, [outputType]); // Re-run when output type changes
+
+    return () => {
+      mounted = false;
+    };
+  }, [outputType]);
 
   // Update WASM when output type changes
   useEffect(() => {
@@ -117,6 +151,17 @@ export default function Page() {
     };
     loadNewFormat();
   }, [outputType]);
+
+  // Clean up previews when component unmounts
+  useEffect(() => {
+    return () => {
+      images.forEach(image => {
+        if (image.preview) {
+          URL.revokeObjectURL(image.preview);
+        }
+      });
+    };
+  }, [images]);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800">
