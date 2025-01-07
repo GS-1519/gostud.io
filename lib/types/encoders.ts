@@ -12,7 +12,7 @@ export interface ImageFile {
   error?: string;
 }
 
-export type OutputType = 'jpeg' | 'png' | 'webp' | 'avif';
+export type OutputType = 'avif' | 'jpeg' | 'jxl' | 'png' | 'webp';
 
 export interface CompressionOptions {
   quality?: number;
