@@ -19,6 +19,7 @@ interface PackDetailsOverlayProps {
     slug: string;
     title: string;
     images: string[];
+    cover_url: string;
   };
 }
 
@@ -133,9 +134,8 @@ export function PackDetailsOverlay({ isOpen, onClose, pack }: PackDetailsOverlay
           slug: pack.slug,
           title: pack.title,
           images: pack.images,
-          timestamp: new Date().getTime() // Add timestamp for potential expiry checks
+          timestamp: new Date().getTime()
         }));
-        console.log('Pack saved to localStorage:', pack.title);
       } catch (error) {
         console.error('Error saving pack to localStorage:', error);
       }
@@ -166,10 +166,18 @@ export function PackDetailsOverlay({ isOpen, onClose, pack }: PackDetailsOverlay
   };
 
   // Convert pack images to PackImage format
-  const packImages: PackImage[] = pack.images.map(src => ({
-    src,
+  const packImages: PackImage[] = (pack.images || []).map(src => ({
+    src: src || pack.cover_url, // Fallback to cover_url if src is undefined
     alt: `${pack.title} preview`
   }));
+
+  // Add error handling for empty images array
+  if (!packImages.length && pack.cover_url) {
+    packImages.push({
+      src: pack.cover_url,
+      alt: `${pack.title} preview`
+    });
+  }
 
   const nextImage = () => {
     setCurrentImageIndex((prev) => (prev + 1) % packImages.length);
