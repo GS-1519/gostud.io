@@ -175,7 +175,23 @@ export default function PacksGalleryZone() {
       allImages: finalPack.images
     });
     
-    setSelectedPack(finalPack);
+    try {
+      // Save pack data with a specific key for model packs
+      localStorage.setItem('modelPackSelection', JSON.stringify(finalPack));
+      
+      // Also save to trainModelData but keep it separate from uploads
+      const trainData = localStorage.getItem('trainModelData') || '{}';
+      const parsedTrainData = JSON.parse(trainData);
+      
+      parsedTrainData.selectedPack = finalPack; // Add pack but don't touch uploads
+      
+      localStorage.setItem('trainModelData', JSON.stringify(parsedTrainData));
+      
+      setSelectedPack(finalPack);
+      
+    } catch (error) {
+      console.error('Error saving pack to localStorage:', error);
+    }
   };
 
   const groupedPacks = groupPacksByCategory(packs);

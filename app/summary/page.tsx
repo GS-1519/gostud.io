@@ -38,6 +38,7 @@ interface ModelData {
     title: string;
     cover_url: string;
     slug: string;
+    images: string[];
   };
   imageUrls: string[];
   paymentInfo?: {
@@ -355,21 +356,25 @@ const SummaryPage: React.FC = () => {
       try {
         setIsLoading(true);
         
-        // Load all required data from localStorage
+        // Load data from separate localStorage keys
         const storedTrainData = localStorage.getItem('trainModelData');
-        const storedPackData = localStorage.getItem('selectedPack');
+        const storedModelPack = localStorage.getItem('modelPackSelection'); // Changed key
         const storedCard = localStorage.getItem('selectedPricingCard');
         
-        console.log('Stored Data:', { storedTrainData, storedPackData, storedCard }); // Debug log
+        console.log('Stored Data:', { 
+          storedTrainData, 
+          storedModelPack,  // Log model pack
+          storedCard 
+        });
 
         if (!storedTrainData) {
-          console.log('No train data found'); // Debug log
+          console.log('No train data found');
           router.push('/overview');
           return;
         }
 
         const trainData = JSON.parse(storedTrainData);
-        const packData = storedPackData ? JSON.parse(storedPackData) : null;
+        const modelPack = storedModelPack ? JSON.parse(storedModelPack) : null; // Use model pack
 
         // Set model data with proper structure
         const modelDataToSet = {
@@ -380,16 +385,17 @@ const SummaryPage: React.FC = () => {
             hair_color: trainData.modelInfo?.hair_color || '',
             ethnicity: trainData.modelInfo?.ethnicity || '',
           },
-          imageUrls: trainData.imageUrls || [],
-          selectedPack: packData || {
+          imageUrls: trainData.imageUrls || [], // Keep uploaded images
+          selectedPack: modelPack || { // Use the model pack data
             id: '',
             title: '',
             cover_url: '',
-            slug: ''
+            slug: '',
+            images: [] // Include pack images
           }
         };
 
-        console.log('Setting Model Data:', modelDataToSet); // Debug log
+        console.log('Setting Model Data:', modelDataToSet);
         setModelData(modelDataToSet);
 
         // Set pricing card if it exists

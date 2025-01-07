@@ -163,6 +163,34 @@ export function CheckoutContents({ userEmail, userId }: Props) {
     }
   }, [paddle, priceId]);
 
+  useEffect(() => {
+    if (priceId?.startsWith('pri_')) {
+      try {
+        // Don't clear or overwrite selectedModelPack
+        const selectedTier = PricingTier.find(tier => 
+          Object.values(tier.priceId).some(id => id === priceId)
+        );
+
+        if (selectedTier) {
+          // Save pricing data with a different key
+          localStorage.setItem('selectedPricingTier', JSON.stringify(selectedTier));
+
+          // Update trainModelData without touching the pack data
+          const existingData = localStorage.getItem('trainModelData');
+          if (existingData) {
+            const parsedData = JSON.parse(existingData);
+            parsedData.paymentInfo = {
+              selectedTier: selectedTier
+            };
+            localStorage.setItem('trainModelData', JSON.stringify(parsedData));
+          }
+        }
+      } catch (error) {
+        console.error('Error in checkout:', error);
+      }
+    }
+  }, [priceId]);
+
   return (
     <div className="min-h-screen bg-white">
       <div className="max-w-[1274px] w-full mx-auto px-4 md:px-[70.5px]">
