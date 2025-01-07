@@ -275,7 +275,7 @@ export const PriceCards: React.FC<PriceCardsProps> = ({
                         !isActive
                     }
                   )}
-                  onClick={() => handlePriceClick(tier.priceId[frequency.value as keyof typeof tier.priceId])}
+                  onClick={() => handlePriceClick(tier.priceId)}
                 >
                   Try Now
                   <svg 

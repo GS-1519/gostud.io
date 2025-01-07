@@ -11,10 +11,7 @@ export interface Tier {
     icon: typeof Camera | typeof Clock | typeof Shirt | typeof Users;
     text: string;
   }>;
-  priceId: {
-    month: string;
-    year: string;
-  };
+  priceId: string;
   featured?: boolean;
 }
 
@@ -31,10 +28,7 @@ export const PricingTier: Tier[] = [
       { icon: Shirt, text: '5 outfits and backgrounds' },
       { icon: Users, text: '5 poses' }
     ],
-    priceId: {
-      month: 'pri_01j6wfjbgevsc47sv22ja6qq60',
-      year: 'pri_01j6wfjbgevsc47sv22ja6qq60'
-    }
+    priceId: 'pri_01j6wfjbgevsc47sv22ja6qq60'
   },
   {
     name: 'STANDARD',
@@ -49,10 +43,7 @@ export const PricingTier: Tier[] = [
       { icon: Shirt, text: '20 outfits and backgrounds' },
       { icon: Users, text: '20 poses' }
     ],
-    priceId: {
-      month: 'pri_01j6w1gr39da9p41rymadfde5q',
-      year: 'pri_01j6w1gr39da9p41rymadfde5q'
-    }
+    priceId: 'pri_01j6w1gr39da9p41rymadfde5q'
   },
   {
     name: 'PREMIUM',
@@ -68,9 +59,6 @@ export const PricingTier: Tier[] = [
       { icon: Users, text: '40 poses' }
     ],
     featured: false,
-    priceId: {
-      month: 'pri_01j6wfs9rsv8xcbgcz9jwtx146',
-      year: 'pri_01j6wfs9rsv8xcbgcz9jwtx146'
-    }
+    priceId: 'pri_01j6wfs9rsv8xcbgcz9jwtx146'
   }
 ];

@@ -18,17 +18,17 @@ interface Props {
 // Define the Tier type
 interface Tier {
   name: string;
-  id: string;
+  id: 'basic' | 'standard' | 'premium';
   badge?: string;
   price: number;
-  originalPrice?: number;
-  features: {
+  originalPrice: number;
+  credits: number;
+  features: Array<{
     icon: any;
     text: string;
-  }[];
-  priceId: {
-    [key: string]: string;
-  };
+  }>;
+  priceId: string;
+  featured?: boolean;
 }
 
 // Add this interface at the top
@@ -41,9 +41,7 @@ interface PricingCardDetails {
     text: string;
   }[];
   badge?: string;
-  priceId: {
-    [key: string]: string;
-  };
+  priceId: string;
 }
 
 // Add these CSS variables at the root level
@@ -83,10 +81,8 @@ export function CheckoutContents({ userEmail, userId }: Props) {
     const initializePaddleCheckout = async () => {
       if (!paddle?.Initialized && process.env.NEXT_PUBLIC_PADDLE_CLIENT_TOKEN && process.env.NEXT_PUBLIC_PADDLE_ENV && priceId?.startsWith('pri_')) {
         try {
-          // Save selected pricing card to localStorage
-          const selectedTier = PricingTier.find(tier => 
-            Object.values(tier.priceId).some(id => id === priceId)
-          );
+          // Find the selected tier using the single priceId
+          const selectedTier = PricingTier.find(tier => tier.priceId === priceId);
 
           if (selectedTier) {
             const cardDetails: PricingCardDetails = {
@@ -98,10 +94,9 @@ export function CheckoutContents({ userEmail, userId }: Props) {
               priceId: selectedTier.priceId
             };
 
-            // Store pricing data
             localStorage.setItem('selectedPricingCard', JSON.stringify(cardDetails));
-
-            // Also update the existing trainModelData with the pricing information
+            
+            // Update trainModelData
             const existingData = localStorage.getItem('trainModelData');
             if (existingData) {
               const parsedData = JSON.parse(existingData);
@@ -112,6 +107,7 @@ export function CheckoutContents({ userEmail, userId }: Props) {
             }
           }
 
+          // Initialize Paddle with one-time payment settings
           const paddleInstance = await initializePaddle({
             token: process.env.NEXT_PUBLIC_PADDLE_CLIENT_TOKEN,
             environment: process.env.NEXT_PUBLIC_PADDLE_ENV as Environments,
