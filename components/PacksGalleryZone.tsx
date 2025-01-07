@@ -116,8 +116,11 @@ export default function PacksGalleryZone() {
     let normalizedSlug = pack.slug
       .replace('md-', '')
       .toLowerCase()
+      // Fix Annie Leibovitz normalization
+      .replace(/annie[- ]leibovitz/i, 'annie')
+      // Fix Helmut Newton normalization
+      .replace(/helmut[- ]newton/i, 'helmut')
       .replace('photoshoot', 'photoshoot')
-      .replace('annie-leibovitz', 'annieleibovitz')
       .replace('christmas-sweater', 'christmas')
       .replace('cat-meowgic', 'cat')
       .replace('me-iconic', 'iconic')
@@ -144,10 +147,9 @@ export default function PacksGalleryZone() {
       .replace('stylish-studio-portraits', 'stylish')
       .replace(/-/g, '');
     
-    // Debug slug transformation
+    // Add debug logging
     console.log('2. Slug Processing:', {
       original: pack.slug,
-      afterArtisticReplace: pack.slug.toLowerCase().replace('generative-artistic-filters', 'artistic'),
       normalized: normalizedSlug,
       availableKeys: Object.keys(packImages),
       matchFound: packImages.hasOwnProperty(normalizedSlug)
@@ -155,16 +157,6 @@ export default function PacksGalleryZone() {
     
     // Get additional images for this pack
     const additionalImages = packImages[normalizedSlug] || [];
-    
-    // Debug image loading
-    console.log('3. Image Loading:', {
-      normalizedSlug,
-      foundInPackImages: !!packImages[normalizedSlug],
-      numberOfAdditionalImages: additionalImages.length,
-      firstImage: additionalImages[0],
-      allImages: additionalImages,
-      availablePacks: Object.keys(packImages)
-    });
     
     const finalPack = {
       ...pack,

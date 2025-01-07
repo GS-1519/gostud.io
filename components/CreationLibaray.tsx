@@ -13,7 +13,7 @@ const Gallery = () => {
   // Gallery images data with proper paths
   const images: GalleryImage[] = [
     { src: '/Packs/Glamour-photos/Man/man1.jpg', isLarge: false, alt: 'Professional headshot 1' },
-    { src: '/Packs/Helmut-photos/Man/man4.jpg', isLarge: false, alt: 'Professional headshot 2' },
+    { src: '/Packs/Botnical-photos/Man/man2.jpg', isLarge: true, alt: 'Professional headshot 10' },
     { src: '/Packs/Jcrew-photos/Women/women3.jpg', isLarge: true, alt: 'Professional headshot 3' },
     { src: '/Packs/Youtube-photos/Women/women3.jpg', isLarge: false, alt: 'Professional headshot 4' },
     { src: '/Packs/Doctor-photos/Women/women1.jpg', isLarge: true, alt: 'Professional headshot 10' },
