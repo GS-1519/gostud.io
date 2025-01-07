@@ -515,20 +515,22 @@ const TrainModelZone: React.FC<TrainModelZoneProps> = ({ packSlug, onContinue, u
 
                         <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-4">
                           {badFiles.map((file, index) => (
-                            <div key={index} className="flex flex-col gap-2">
+                            <div key={index} className="relative group">
                               {/* Image Container */}
                               <div className="relative aspect-square rounded-lg overflow-hidden border border-red-200">
                                 {file.preview && (
                                   <img
                                     src={file.preview}
                                     alt={`Bad upload ${index + 1}`}
-                                    className="w-full h-full object-cover"
+                                    className="w-full h-full object-cover opacity-75"
                                   />
                                 )}
-                              </div>
-                              {/* Error Message Below Image */}
-                              <div className="bg-red-500 text-white text-sm rounded-lg p-2 text-center">
-                                {file.reason}
+                                {/* Overlay with Error Message */}
+                                <div className="absolute inset-0 flex items-end p-2">
+                                  <div className="w-full bg-red-500 bg-opacity-90 text-white text-xs font-medium rounded-md p-2 text-center">
+                                    {file.reason}
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           ))}

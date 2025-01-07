@@ -387,29 +387,31 @@ const PackOverlay: React.FC<OverlayProps> = ({ isOpen, onClose, packType, title 
   const hasMenImages = currentPack.images.Men && currentPack.images.Men.length > 0;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4">
       <div 
-        className="w-[1270px] bg-[#161C2D] rounded-xl relative"
+        className="w-full md:w-[1270px] bg-[#161C2D] rounded-xl relative max-h-[90vh] overflow-y-auto"
         style={{ 
-          height: '703px',
-          padding: '24px 82px',
+          height: 'auto',
+          minHeight: '500px',
+          padding: '24px 20px md:px-82px',
         }}
       >
-        {/* Close button */}
+        {/* Close button - Made more prominent and accessible on mobile */}
         <button 
           onClick={onClose} 
-          className="absolute right-6 top-6 text-gray-400 hover:text-white"
+          className="absolute right-4 top-4 text-gray-400 hover:text-white p-2 z-50"
+          aria-label="Close overlay"
         >
-          <X size={24} />
+          <X size={28} />
         </button>
 
-        {/* Title */}
-        <h2 className="text-center text-3xl bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent font-medium mb-4">
+        {/* Title - Adjusted font size for mobile */}
+        <h2 className="text-center text-2xl md:text-3xl bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent font-medium mb-4 mt-8 md:mt-0 px-4">
           {title}
         </h2>
         
-        {/* Description */}
-        <p className="text-center text-gray-300 mb-8 max-w-2xl mx-auto">
+        {/* Description - Adjusted padding for mobile */}
+        <p className="text-center text-gray-300 mb-8 max-w-2xl mx-auto px-4 text-sm md:text-base">
           Explore the complete range of photography packs I've crafted just for you! Whether it's
           professional portraits or creative edits, I've got every style and need covered.
         </p>
@@ -444,8 +446,8 @@ const PackOverlay: React.FC<OverlayProps> = ({ isOpen, onClose, packType, title 
           <ImageSlider images={currentPack.images[activeTab]} />
         </div>
 
-        {/* Generate Button */}
-        <div className="flex justify-center">
+        {/* Single Generate Button - Remove the second "Explore More" button */}
+        <div className="flex justify-center mt-8 mb-8">
           <Link href="/login">
             <button className="w-[200px] sm:w-[269px] h-[40px] sm:h-[48px] bg-[#5B16FE] hover:bg-[#4F46E5] text-white rounded-full flex items-center justify-center gap-2 hover:opacity-90 transition-opacity font-poppins text-[13px] sm:text-[16px]">
               <span>Generate</span>
@@ -459,26 +461,6 @@ const PackOverlay: React.FC<OverlayProps> = ({ isOpen, onClose, packType, title 
                 />
               </svg>
             </button>
-          </Link>
-        </div>
-
-        {/* Explore More Button */}
-        <div className="flex justify-center mt-8">
-          <Link href="/login">
-            <div className="flex justify-center">
-              <button className="w-[200px] sm:w-[269px] h-[40px] sm:h-[48px] bg-[#5B16FE] hover:bg-[#4F46E5] text-white rounded-full flex items-center justify-center gap-2 hover:opacity-90 transition-opacity font-poppins text-[13px] sm:text-[16px]">
-                <span>Explore More</span>
-                <svg className="w-3 sm:w-5 h-3 sm:h-5" viewBox="0 0 20 20" fill="none">
-                  <path 
-                    d="M4.16666 10H15.8333M15.8333 10L10 4.16669M15.8333 10L10 15.8334" 
-                    stroke="currentColor" 
-                    strokeWidth="2" 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </button>
-            </div>
           </Link>
         </div>
       </div>
