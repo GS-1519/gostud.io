@@ -8,7 +8,7 @@ const nextConfig = {
   
   // Image configuration
   images: {
-    domains: ['res.cloudinary.com', 'gostudio.ai', 'www.gostudio.ai'],
+    domains: ['res.cloudinary.com', 'gostudio.ai', 'www.gostudio.ai', 'localhost'],
     unoptimized: true,
   },
   
@@ -20,25 +20,55 @@ const nextConfig = {
     responseLimit: '10mb',
   },
   
-  // Webpack configuration
-  webpack: (config) => {
+  // Webpack configuration with WebAssembly support
+  webpack: (config, { isServer }) => {
+    // Original image rules
     config.module.rules.push({
       test: /\.(png|jpg|gif|svg)$/i,
       type: 'asset/resource'
     });
-    config.module.rules.push({
-      test: /\.wasm$/,
-      type: 'webassembly/async'
-    });
+
+    // WebAssembly support
     config.experiments = {
+      ...config.experiments,
       asyncWebAssembly: true,
       layers: true,
     };
+
+    // Add rules for WASM and binary files
+    config.module.rules.push({
+      test: /\.wasm$/,
+      type: 'webassembly/async',
+    });
+
+    // Node.js polyfills
+    config.resolve.fallback = {
+      ...config.resolve.fallback,
+      fs: false,
+      path: false,
+      crypto: false,
+    };
+
+    // Fix for WASM loading
+    if (!isServer) {
+      config.output = {
+        ...config.output,
+        webassemblyModuleFilename: 'static/wasm/[modulehash].wasm',
+      };
+    }
+
     return config;
   },
   
   // Package transpilation
   transpilePackages: ['react-tabs'],
+  
+  // Required for @huggingface/transformers
+  experimental: {
+    esmExternals: "loose",
+    serverComponentsExternalPackages: ["@huggingface/transformers"],
+    webassembly: true,
+  },
   
   // Redirects configuration
   async redirects() {
