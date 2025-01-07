@@ -1,28 +1,20 @@
+export type ImageStatus = 'pending' | 'processing' | 'complete' | 'error';
+
 export interface ImageFile {
   id: string;
   file: File;
   name: string;
-  size: number;
-  type: string;
+  originalSize: number;
+  status: ImageStatus;
   preview?: string;
   blob?: Blob;
-  compressedSize?: number;
-  outputType?: OutputType;
-  status: 'idle' | 'processing' | 'complete' | 'error';
-  error?: string;
+  outputType?: string;
 }
 
-export type OutputType = 'avif' | 'jpeg' | 'jxl' | 'png' | 'webp';
+export type OutputType = 'webp' | 'jpeg' | 'png' | 'avif' | 'jxl';
 
 export interface CompressionOptions {
-  quality?: number;
-  width?: number;
-  height?: number;
-  fit?: 'contain' | 'cover' | 'fill' | 'inside' | 'outside';
-  position?: string;
-  background?: string;
-  withoutEnlargement?: boolean;
-  withoutReduction?: boolean;
+  quality: number;
 }
 
 export interface FormatQualitySettings {
