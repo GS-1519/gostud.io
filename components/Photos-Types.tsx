@@ -244,6 +244,36 @@ const PhotosHero = () => {
   image: '/Packs/Types/vintage.jpg',
   link: '/photoshoot-packs/vintage-pack-photos'
 },
+{
+  title: 'Professional Tattoo Portraits',
+  description: 'Showcase your tattoos with professional portraits that highlight your artistic expression.',
+  image: '/Packs/Types/tattos.jpg',
+  link: '/photoshoot-packs/professional-tattoos-portraits'
+},
+{
+  title: 'Annie Leibovitz Style',
+  description: 'Dramatic portraits inspired by Annie Leibovitz\'s iconic photography style.',
+  image: '/Packs/Types/annie.jpg',
+  link: '/photoshoot-packs/annie-headshot'
+},
+{
+  title: 'Barbie Style',
+  description: 'Fun and stylish Barbie-inspired portrait photography.',
+  image: '/Packs/Types/barbie.jpg',
+  link: '/photoshoot-packs/barbie-headshot'
+},
+{
+  title: 'Viking Portraits',
+  description: 'Powerful Viking-inspired portraits perfect for historical themes and fantasy shoots.',
+  image: '/Packs/Types/vings.jpg',
+  link: '/photoshoot-packs/viking-portraits'
+},
+{
+  title: 'Marvel Class',
+  description: 'Dynamic, high-impact headshots with a cinematic quality inspired by Marvel productions.',
+  image: '/Packs/Types/miarval.jpg',
+  link: '/photoshoot-packs/meiravclass-headshot'
+},
   ];
 
   const [showAll, setShowAll] = useState(false);

@@ -67,19 +67,19 @@ const Navbar: React.FC = () => {
     return () => subscription.unsubscribe();
   }, [supabase, router]);
 
-  const getUserMenuProps = (user: User | null, credits: number | null): UserMenuProps | null => {
-    if (!user || !user.email) return null;
-    return {
-      user: { email: user.email },
-      credits: credits ?? 0
-    };
-  };
+  // Create userMenuProps object
+  const userMenuProps = user ? {
+    user: {
+      email: user.email || ''
+    },
+    credits: credits || 0
+  } : null;
 
   return (
     <>
       <div className="fixed top-0 left-0 right-0 w-full z-40">
-        <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200">
-          <div className="flex items-center justify-between h-16 px-4 sm:px-6 lg:px-8 max-w-[1400px] mx-auto">
+        <nav className="h-16 bg-white border-b border-gray-200">
+          <div className="flex items-center justify-between h-full px-4 sm:px-6 lg:px-8 max-w-[1400px] mx-auto">
             {/* Logo Section */}
             <div className="flex-shrink-0">
               <Link href={user ? '/overview' : '/'} className="flex items-center">
@@ -101,18 +101,15 @@ const Navbar: React.FC = () => {
               </div>
             </div>
 
-            {/* Right Section - Auth/Menu */}
-            <div className="flex items-center gap-3 sm:gap-4">
-              {user ? (
-                // User Menu
-                (() => {
-                  const userMenuProps = getUserMenuProps(user, credits);
-                  return userMenuProps ? (
-                    <div className="flex items-center">
-                      <UserMenu {...userMenuProps} />
-                    </div>
-                  ) : null;
-                })()
+            {/* Right Section */}
+            <div className="flex items-center gap-3 sm:gap-4 relative z-[150]">
+              {user && userMenuProps ? (
+                <div className="flex items-center">
+                  <UserMenu 
+                    user={userMenuProps.user}
+                    credits={userMenuProps.credits}
+                  />
+                </div>
               ) : (
                 // Login Button & Mobile Menu
                 <div className="flex items-center gap-2 sm:gap-4">
@@ -147,14 +144,14 @@ const Navbar: React.FC = () => {
 
         {/* Mobile Navigation Menu */}
         {!user && isMenuOpen && (
-          <div className="lg:hidden fixed top-16 left-0 right-0 w-full bg-white backdrop-blur-lg bg-opacity-95 shadow-lg border-b border-gray-100 py-3 max-h-[calc(100vh-64px)] overflow-y-auto">
+          <div className="lg:hidden fixed top-16 left-0 right-0 w-full bg-white backdrop-blur-lg bg-opacity-95 shadow-lg border-b border-gray-100 py-3 max-h-[calc(100vh-64px)] overflow-y-auto z-35">
             <div className="px-4 pt-2 pb-3">
               <NavItems isMobile user={user} />
             </div>
           </div>
         )}
       </div>
-      <div className="h-[64px]" />
+      <div className="h-16" />
     </>
   );
 }

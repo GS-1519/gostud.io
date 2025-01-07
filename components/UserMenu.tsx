@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 import { useRouter } from 'next/navigation';
 
@@ -13,8 +13,28 @@ interface UserMenuProps {
 
 export default function UserMenu({ user, credits }: UserMenuProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
   const supabase = createClientComponentClient();
+
+  // Handle click outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+
+    // Add event listener when dropdown is open
+    if (isOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    // Cleanup
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isOpen]);
 
   const handleLogout = async () => {
     try {
@@ -47,7 +67,7 @@ export default function UserMenu({ user, credits }: UserMenuProps) {
         <span className="font-poppins">{credits} Credits</span>
       </button>
 
-      <div className="relative">
+      <div className="relative" ref={menuRef}>
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="flex items-center space-x-2 focus:outline-none"
@@ -58,13 +78,21 @@ export default function UserMenu({ user, credits }: UserMenuProps) {
         </button>
 
         {isOpen && (
-          <div className="absolute right-0 mt-2 w-72 bg-white rounded-lg shadow-lg overflow-hidden z-10">
+          <div 
+            className="absolute right-0 w-72 bg-white rounded-lg shadow-xl overflow-hidden z-[200]"
+            style={{
+              position: 'absolute',
+              top: 'calc(100% + 0.5rem)',
+              right: 0,
+              filter: 'drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08))'
+            }}
+          >
             <div className="px-4 py-3 text-sm text-gray-700 font-poppins border-b break-words">
               {user.email}
             </div>
             <button
               onClick={handleLogout}
-              className="block w-full text-left px-4 py-3 text-sm text-red-600 hover:bg-gray-100 font-jakarta"
+              className="block w-full text-left px-4 py-3 text-sm text-red-600 hover:bg-gray-100 font-jakarta transition-colors duration-200"
             >
               Logout
             </button>

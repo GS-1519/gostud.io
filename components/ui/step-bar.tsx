@@ -41,7 +41,7 @@ export function StepBar() {
   const currentStepIndex = getCurrentStepIndex();
   
   return (
-    <div className="sticky top-0 left-0 right-0 z-50 bg-white px-4">
+    <div className="sticky top-0 left-0 right-0 z-30 bg-white px-4">
       <div className="max-w-[1200px] mx-auto py-6">
         {/* Mobile View - Top */}
         <div className="md:hidden mb-4">
