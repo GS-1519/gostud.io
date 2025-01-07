@@ -22,27 +22,25 @@ const nextConfig = {
   
   // Webpack configuration with WebAssembly support
   webpack: (config, { isServer }) => {
-    // WebAssembly configuration
+    // Enable WebAssembly
     config.experiments = {
+      ...config.experiments,
       asyncWebAssembly: true,
       layers: true,
     };
 
-    // Update WASM loading rules
+    // Add rule for WASM files
     config.module.rules.push({
       test: /\.wasm$/,
-      use: {
-        loader: 'webassembly/async',
-      },
-      type: 'javascript/auto',
+      type: 'webassembly/async',
     });
 
-    // Fix WASM output for client-side
+    // Fix for client-side WASM loading
     if (!isServer) {
       config.output.webassemblyModuleFilename = 'static/wasm/[modulehash].wasm';
     }
 
-    // Keep other existing rules
+    // Asset handling
     config.module.rules.push({
       test: /\.(png|jpg|gif|svg)$/i,
       type: 'asset/resource'
@@ -52,12 +50,13 @@ const nextConfig = {
   },
   
   // Package transpilation
-  transpilePackages: ['react-tabs'],
+  transpilePackages: ['react-tabs', '@jsquash/avif', '@jsquash/jpeg', '@jsquash/webp', '@jsquash/png'],
   
-  // Required for @huggingface/transformers
+  // Experimental features
   experimental: {
     esmExternals: "loose",
     serverComponentsExternalPackages: ["@huggingface/transformers"],
+    webpackBuildWorker: true,
   },
   
   // Redirects configuration
