@@ -63,9 +63,7 @@ export function CheckoutContents({ userEmail, userId }: Props) {
   const [isHovered, setIsHovered] = useState(false);
 
   // Find the selected tier by matching the priceId with any tier's priceId
-  const selectedTier = PricingTier.find(tier => 
-    Object.values(tier.priceId).some(id => id === priceId)
-  );
+  const selectedTier = PricingTier.find(tier => tier.priceId === priceId);
 
   const handleCheckoutEvents = (event: CheckoutEventsData) => {
     setCheckoutData(event);
@@ -208,7 +206,7 @@ export function CheckoutContents({ userEmail, userId }: Props) {
             {selectedTier && (
               <div 
                 className={cn(
-                  'w-[394px] min-h-[549px] rounded-[12px] p-[42px]',
+                  'w-full max-w-[394px] min-h-[549px] rounded-[12px] p-[42px]',
                   'flex flex-col gap-8',
                   'bg-white',
                   'relative',
@@ -306,7 +304,7 @@ export function CheckoutContents({ userEmail, userId }: Props) {
                   <div className="flex justify-between text-sm">
                     <span className="text-[#64748B]">Subtotal</span>
                     <span className="font-medium text-[#161C2D]">
-                      ${checkoutData?.totals.subtotal || 0}
+                      ${checkoutData?.totals.subtotal || selectedTier.price}
                     </span>
                   </div>
 
@@ -323,7 +321,7 @@ export function CheckoutContents({ userEmail, userId }: Props) {
                     <div className="flex justify-between">
                       <span className="text-[#64748B]">Total due today</span>
                       <span className="font-medium text-[#161C2D] text-lg">
-                        ${checkoutData?.totals.total || 0}
+                        ${checkoutData?.totals.total || selectedTier.price}
                       </span>
                     </div>
                   </div>

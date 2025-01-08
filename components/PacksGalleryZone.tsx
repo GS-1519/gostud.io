@@ -140,7 +140,7 @@ export default function PacksGalleryZone() {
       .replace('famous-photographers', 'helmut')
       .replace('jcrew-style', 'jcrew')
       .replace('corporate-headshots', 'corporate')
-      .replace('glamour-shot', 'glamour')
+      .replace('glamour-shot', 'glamour')    
       .replace('birthday-party-save-the-daye', 'hbdsave')
       .replace('xmas-by-futurecreators', 'winter')
       .replace('amichai-ai', 'success')
