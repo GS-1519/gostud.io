@@ -131,11 +131,11 @@ export const packImages: PackImagePaths = {
     '/Packs/Glamour-photos/Man/man3.jpg',
     '/Packs/Glamour-photos/Man/man4.jpg',
     '/Packs/Glamour-photos/Man/man5.jpg',
-    '/Packs/Glamour-photos/Women/women1.jpg',
-    '/Packs/Glamour-photos/Women/women2.jpg',
-    '/Packs/Glamour-photos/Women/women3.jpg',
-    '/Packs/Glamour-photos/Women/women4.jpg',
-    '/Packs/Glamour-photos/Women/women5.jpg',
+    '/Packs/Dating-photo/Women/women1.jpg',
+    '/Packs/Dating-photo/Women/women2.jpg',
+    '/Packs/Dating-photo/Women/women3.jpg',
+    '/Packs/Dating-photo/Women/women4.jpg',
+    '/Packs/Dating-photo/Women/women5.jpg',
   ],
   'barbie': [
     
