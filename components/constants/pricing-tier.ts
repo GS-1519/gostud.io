@@ -28,7 +28,7 @@ export const PricingTier: Tier[] = [
       { icon: Shirt, text: '5 outfits and backgrounds' },
       { icon: Users, text: '5 poses' }
     ],
-    priceId: 'pri_01j6wfjbgevsc47sv22ja6qq60'
+    priceId: 'pri_01jgxm65n9e0b9md6e6h8z3gmg'
   },
   {
     name: 'STANDARD',
@@ -43,7 +43,7 @@ export const PricingTier: Tier[] = [
       { icon: Shirt, text: '20 outfits and backgrounds' },
       { icon: Users, text: '20 poses' }
     ],
-    priceId: 'pri_01j6w1gr39da9p41rymadfde5q'
+    priceId: 'pri_01jgxma319chemtj7z5zfymw89'
   },
   {
     name: 'PREMIUM',
@@ -59,6 +59,6 @@ export const PricingTier: Tier[] = [
       { icon: Users, text: '40 poses' }
     ],
     featured: false,
-    priceId: 'pri_01j6wfs9rsv8xcbgcz9jwtx146'
+    priceId: 'pri_01jgxm1zyk0rnk8jczgz121jyq'
   }
 ];
