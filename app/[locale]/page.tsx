@@ -19,7 +19,8 @@ import TeamSection from "@/components/TeamSection";
 import Ariaa from "@/components/Ariaa";
 import { Pricing } from "@/components/home/pricing/pricing";
 import ClientRedirect from "@/components/ClientRedirect"; 
-
+import { NextIntlClientProvider } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 
 export const dynamic = "force-dynamic";
 
@@ -35,7 +36,17 @@ export const metadata: Metadata = {
   }
 }
 
-export default async function Home() {
+async function getMessages(locale: string) {
+  try {
+    return (await import(`@/messages/${locale}.json`)).default;
+  } catch (error) {
+    return (await import(`@/messages/en.json`)).default;
+  }
+}
+
+export default async function Home({ params }: { params: { locale: string } }) {
+  const locale = params?.locale || 'en';
+  const messages = await getMessages(locale);
   const cookieStore = cookies();
   const supabase = createServerComponentClient({ 
     cookies: () => cookieStore 
@@ -68,7 +79,7 @@ export default async function Home() {
   };
 
   return (
-    <>
+    <NextIntlClientProvider locale={locale} messages={messages}>
       <Script
         id="json-ld"
         type="application/ld+json"
@@ -100,6 +111,16 @@ export default async function Home() {
           </div>
         </div>
       </div>
-    </>
+    </NextIntlClientProvider>
   );
+}
+
+// Add generateStaticParams if you want to statically generate pages for specific locales
+export async function generateStaticParams() {
+  return [
+    { locale: 'en' },
+    { locale: 'fr' },
+    { locale: 'ar' }
+    // Add more locales as needed
+  ];
 }

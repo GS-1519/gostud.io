@@ -1,12 +1,14 @@
 'use client'
 
-import React, { useEffect, useState } from 'react';
+import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/navigation';
-import { toast } from 'react-hot-toast';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
-import { redirect } from "next/navigation";
+import { toast } from 'react-hot-toast';
 import { cn } from '@/lib/utils';
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
+
+// If ModelDetails is in a separate file:
 
 // Initialize Supabase client
 const supabase = createClientComponentClient();
@@ -96,29 +98,31 @@ const ModelDetails: React.FC<ModelDetailsProps> = ({
   handleSave,
   setEditedValues 
 }) => {
+  const t = useTranslations('summary');
+
   return (
     <div className="mb-8">
       <div className="bg-[#F3F0FF] rounded-lg p-3 sm:p-4 mb-4 sm:mb-6">
         <span className="text-[#5B16FE]">✓</span>
         <span className="ml-2 text-[#5B16FE] text-sm sm:text-base">
-          These are the features Aaria has detected. You can also edit if necessary.
+          {t('detectedFeatures')}
         </span>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-12 gap-4">
         {/* Left Column */}
         <div className="col-span-1 sm:col-span-5">
-          {/* Age Field - Read Only (replacing Name field) */}
+          {/* Age Field */}
           <div className="mb-6">
-            <h2 className="text-[#5B16FE] font-semibold mb-2">AGE</h2>
+            <h2 className="text-[#5B16FE] font-semibold mb-2">{t('age')}</h2>
             <div className="w-full h-[46px] bg-white rounded-lg border border-gray-200 p-3">
-              <p>{modelData?.modelInfo.age || 'Not specified'}</p>
+              <p>{modelData?.modelInfo.age || t('notSpecified')}</p>
             </div>
           </div>
 
           {/* Eye Color Field */}
           <div className="mb-6">
-            <h2 className="text-[#5B16FE] font-semibold mb-2">EYE COLOR</h2>
+            <h2 className="text-[#5B16FE] font-semibold mb-2">{t('eyeColor')}</h2>
             <div className="w-full h-[46px] bg-white rounded-lg border border-gray-200 p-3 flex justify-between items-center">
               {editMode.eye_color ? (
                 <>
@@ -127,10 +131,10 @@ const ModelDetails: React.FC<ModelDetailsProps> = ({
                     value={editedValues.eye_color}
                     onChange={(e) => setEditedValues(prev => ({ ...prev, eye_color: e.target.value }))}
                     className="flex-1 outline-none"
-                    placeholder="Enter eye color"
+                    placeholder={t('enterEyeColor')}
                   />
                   <button onClick={() => handleSave('eye_color')} className="text-[#5B16FE] ml-2">
-                    Save
+                    {t('save')}
                   </button>
                 </>
               ) : (
@@ -146,7 +150,7 @@ const ModelDetails: React.FC<ModelDetailsProps> = ({
 
           {/* Hair Color Field */}
           <div className="mb-6">
-            <h2 className="text-[#5B16FE] font-semibold mb-2">HAIR COLOR</h2>
+            <h2 className="text-[#5B16FE] font-semibold mb-2">{t('hairColor')}</h2>
             <div className="w-full h-[46px] bg-white rounded-lg border border-gray-200 p-3 flex justify-between items-center">
               {editMode.hair_color ? (
                 <>
@@ -155,15 +159,15 @@ const ModelDetails: React.FC<ModelDetailsProps> = ({
                     value={editedValues.hair_color}
                     onChange={(e) => setEditedValues(prev => ({ ...prev, hair_color: e.target.value }))}
                     className="flex-1 outline-none"
-                    placeholder="Enter hair color"
+                    placeholder={t('enterHairColor')}
                   />
                   <button onClick={() => handleSave('hair_color')} className="text-[#5B16FE] ml-2">
-                    Save
+                    {t('save')}
                   </button>
                 </>
               ) : (
                 <>
-                  <p>{modelData?.modelInfo.hair_color || 'Not specified'}</p>
+                  <p>{modelData?.modelInfo.hair_color || t('notSpecified')}</p>
                   <button onClick={() => handleEdit('hair_color')} className="text-[#5B16FE]">
                     ✏️
                   </button>
@@ -177,7 +181,7 @@ const ModelDetails: React.FC<ModelDetailsProps> = ({
         <div className="col-span-1 sm:col-span-5">
           {/* Gender Field */}
           <div className="mb-6">
-            <h2 className="text-[#5B16FE] font-semibold mb-2">GENDER</h2>
+            <h2 className="text-[#5B16FE] font-semibold mb-2">{t('gender')}</h2>
             <div className="flex items-center gap-2">
               <div className="w-[46px] h-[46px] flex items-center justify-center bg-white rounded-lg border border-[#5B16FE]">
                 <svg className="w-5 h-5 text-[#5B16FE]" fill="currentColor" viewBox="0 0 20 20">
@@ -185,14 +189,14 @@ const ModelDetails: React.FC<ModelDetailsProps> = ({
                 </svg>
               </div>
               <div className="flex-1 h-[46px] bg-white rounded-lg border border-gray-200 p-3">
-                <p>{modelData?.modelInfo.type === 'person' ? 'Male' : modelData?.modelInfo.type}</p>
+                <p>{modelData?.modelInfo.type === 'person' ? t('male') : modelData?.modelInfo.type}</p>
               </div>
             </div>
           </div>
 
           {/* Ethnicity Field */}
           <div className="mb-6">
-            <h2 className="text-[#5B16FE] font-semibold mb-2">ETHNICITY</h2>
+            <h2 className="text-[#5B16FE] font-semibold mb-2">{t('ethnicity')}</h2>
             <div className="w-full h-[46px] bg-white rounded-lg border border-gray-200 p-3 flex justify-between items-center">
               {editMode.ethnicity ? (
                 <>
@@ -201,10 +205,10 @@ const ModelDetails: React.FC<ModelDetailsProps> = ({
                     value={editedValues.ethnicity}
                     onChange={(e) => setEditedValues(prev => ({ ...prev, ethnicity: e.target.value }))}
                     className="flex-1 outline-none"
-                    placeholder="Enter ethnicity"
+                    placeholder={t('enterEthnicity')}
                   />
                   <button onClick={() => handleSave('ethnicity')} className="text-[#5B16FE] ml-2">
-                    Save
+                    {t('save')}
                   </button>
                 </>
               ) : (
@@ -264,6 +268,7 @@ interface AuthState {
 }
 
 const SummaryPage: React.FC = () => {
+  const t = useTranslations();
   const [modelData, setModelData] = useState<ModelData | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -522,10 +527,12 @@ const SummaryPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-100 p-3 sm:p-8 font-poppins">
       <div className="max-w-[1274px] mx-auto rounded-[20px] sm:rounded-[40px] bg-white shadow-lg overflow-hidden p-4 sm:p-12">
-        <h1 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-8 text-center">Order Summary</h1>
+        <h1 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-8 text-center">
+          {t('summary.orderSummary')}
+        </h1>
         
         <p className="mx-auto w-full sm:w-[812px] text-sm sm:text-base h-auto sm:h-[60px] mb-6 sm:mb-12 opacity-70 text-center font-poppins font-500 leading-[24px] sm:leading-[30px] mt-4">
-          Save hundreds compared to a photo shoot. Customize your AI professional headshot with manual edits or get a redo if the initial uploads were wrong.
+          {t('summary.summaryDescription')}
         </p>
 
         {/* Pricing Card */}

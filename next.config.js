@@ -1,6 +1,7 @@
+const withNextIntl = require('next-intl/plugin')();
+
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  // Environment variables
+const config = {
   env: {
     NEXT_PUBLIC_PADDLE_CLIENT_TOKEN: process.env.NEXT_PUBLIC_PADDLE_CLIENT_TOKEN,
     NEXT_PUBLIC_PADDLE_ENV: process.env.NEXT_PUBLIC_PADDLE_ENV
@@ -124,6 +125,7 @@ const nextConfig = {
       }
     ]
   }
-}
 
-module.exports = nextConfig
+};
+
+module.exports = withNextIntl(config);

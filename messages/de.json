@@ -1,0 +1,703 @@
+{
+    "hero": {
+      "title": "Professionelle Businessfotos aus Ihren Selfies",
+      "description": "Stechen Sie auf LinkedIn, Twitter und bei Personalvermittlern hervor. Laden Sie Ihre Selfies hoch und erhalten Sie Hunderte von professionellen Businessfotos von Ihrer KI-Fotografin \"Aaria\".",
+      "features": {
+        "styles": "150+ Stile und Outfits",
+        "delivery": "Ergebnisse innerhalb 1 Stunde",
+        "protection": "Strenger Datenschutz",
+        "guarantee": "Geld-zurück-Garantie"
+      },
+      "button": "Jetzt testen",
+      "tryNow": "Jetzt starten →"
+    },
+    "ExplainerSection": {
+      "title": "3 EINFACHE SCHRITTE ZU IHREM STUDIO-QUALITÄTSPROFIL",
+      "step1": {
+        "title": "Laden Sie einige Fotos hoch",
+        "description": "Laden Sie einige Fotos von sich hoch, damit die KI Sie kennenlernen kann."
+      },
+      "step2": {
+        "title": "Unsere KI-Fotografin \"Aaria\" macht sich an die Arbeit",
+        "description": "Aaria erstellt ein privates, personalisiertes Modell nur für Sie und garantiert Businessfotos, die Ihren einzigartigen Stil und Ihre Identität widerspiegeln."
+      },
+      "step3": {
+        "title": "Lieblings-Businessfotos herunterladen",
+        "description": "Sie erhalten verschiedene Stile, die Ihnen die perfekten Businessfotos für Ihr professionelles Profil liefern."
+      },
+      "tryNow": "Jetzt testen"
+    },
+    "PhotographyGrid": {
+      "title": "UNSERE PAKETE - SIE NENNEN ES, WIR HABEN ES",
+      "description": "Entdecken Sie unsere komplette Auswahl an Fotografie-Paketen, die für jeden Stil und Bedarf entwickelt wurden. Von professionellen Porträts bis hin zu kreativen Bearbeitungen haben wir alles im Angebot. Ganz gleich, welche Vision Sie haben, unsere KI-Fotografin setzt sie mühelos um.",
+      "tryNow": "Jetzt testen",
+      "packs": {
+        "corporate": "Business-Porträts",
+        "speaker": "Speaker-Paket",
+        "doctor": "Mediziner",
+        "realtor": "Immobilienmakler",
+        "dating": "Dating-Profil",
+        "redcarpet": "Roter Teppich",
+        "boldcolors": "Kräftige Farben",
+        "tattoo": "Tattoo-Künstler",
+        "glamour": "Glamour-Aufnahme",
+        "barbie": "Barbie-Stil",
+        "halloween": "Halloween-Thema",
+        "mythical": "Mystisch"
+      }
+    },
+    "Comparison": {
+      "title": "SPAREN SIE GELD UND ZEIT",
+      "description": "Aaria sorgt dafür, dass Sie für jeden professionellen Moment bereit sind. Von Lebensläufen bis LinkedIn lassen wir Ihre Businessfotos mühelos glänzen.",
+      "columns": {
+        "goStudio": "Go Studio.ai",
+        "studio": "Studio-Fotoshooting"
+      },
+      "items": {
+        "value": {
+          "label": "Preis-Leistungs-Verhältnis",
+          "goStudio": "19 €",
+          "studio": "200 €"
+        },
+        "time": {
+          "label": "Zeitersparnis",
+          "goStudio": "30 Minuten",
+          "studio": "2-3 Tage"
+        },
+        "variety": {
+          "label": "Vielfalt",
+          "goStudio": "30 Businessfotos",
+          "studio": "4-5 Businessfotos"
+        },
+        "choices": {
+          "label": "Mehr Auswahl",
+          "goStudio": "20 Stile",
+          "studio": "1 Stil"
+        }
+      },
+      "exploreMore": "Mehr entdecken"
+    },
+    "Why": {
+      "title": {
+        "why": "WARUM",
+        "gostudio": "GOSTUDIO.AI?"
+      },
+      "description": "Verwandeln Sie Ihr professionelles Image mit KI-gesteuerten Businessfotos. Erhalten Sie Fotos in Studioqualität für LinkedIn, Lebensläufe und mehr in wenigen Minuten.",
+      "features": {
+        "linkedin": {
+          "title": "Auf LinkedIn hervorstechen",
+          "description": "Hinterlassen Sie einen starken ersten Eindruck mit einem professionellen Businessfoto, das Ihre Profilaufrufe und Glaubwürdigkeit steigert."
+        },
+        "resume": {
+          "title": "Lassen Sie Ihren Lebenslauf glänzen",
+          "description": "Werten Sie Ihre Bewerbungen mit einem gepflegten Businessfoto auf, das eine persönliche Note und Professionalität verleiht."
+        },
+        "events": {
+          "title": "Events & Konferenzen",
+          "description": "Präsentieren Sie sich von Ihrer besten Seite bei professionellen Veranstaltungen. Perfekt für Rednerprofile, Veranstaltungsverzeichnisse und Ausweise."
+        },
+        "business": {
+          "title": "Visitenkarten & Branding",
+          "description": "Schaffen Sie ein einheitliches professionelles Image für all Ihre Geschäftsunterlagen mit hochwertigen Businessfotos."
+        },
+        "online": {
+          "title": "Digitale Präsenz",
+          "description": "Sehen Sie auf allen Plattformen professionell aus - von sozialen Medien über Unternehmenswebsites bis hin zu professionellen Netzwerken."
+        }
+      },
+      "tryNow": "Jetzt testen"
+    },
+    "HeadshotReview": {
+      "title": {
+        "part1": "BEREITS ERSTELLTE FOTOS FÜR",
+        "part2": "ZUFRIEDENE KUNDEN"
+      },
+      "description": "Nicht im Studio gemacht. Von KI erstellt. Nehmen Sie nicht nur unser Wort dafür. Unsere KI verwandelt Alltagsfotos in professionelle Businessfotos, die Ihr Selbstbewusstsein & Ihre Glaubwürdigkeit widerspiegeln.",
+      "createButton": "Erstellen Sie Ihr Businessfoto",
+      "testimonials": {
+        "col1": {
+          "1": "Die Ergebnisse sind beeindruckend und auf mich zugeschnitten. Diese KI-Businessfotos sind auf einem anderen Level.",
+          "2": "Ich habe die Plattform mit verschiedenen Produktbildern getestet und war mit den Ergebnissen zufrieden.",
+          "3": "Die beste Produktfoto-Generator-Seite aller Zeiten!"
+        },
+        "col2": {
+          "1": "Als Online-Händler sind hochwertige Produktbilder entscheidend. Ich habe einige Fotos meines Schmucks hochgeladen, und die KI hat mehrere beeindruckende Optionen generiert, die die Stücke wunderschön präsentieren. Die Vielfalt ermöglichte es mir, verschiedene Hintergründe und Winkel auszuwählen, um meine Produkte effektiv hervorzuheben.",
+          "2": "Ein Muss für E-Commerce!",
+          "3": "Einmal hochladen und Sie haben so viele Optionen zur Auswahl."
+        },
+        "col3": {
+          "1": "Ausgezeichnete Qualität und Vielfalt der Fotos.",
+          "2": "Schnelle und benutzerfreundliche Oberfläche. Ich schätze, wie einfach diese Plattform zu benutzen ist.",
+          "3": "Ich schätze, wie einfach diese Plattform zu benutzen ist. Ich war beeindruckt von der Anzahl der Optionen, die ich erhalten habe. Während die meisten großartig waren, gab es ein paar, die das Produkt nicht ganz so erfasst haben, wie ich es erhofft hatte. Es ist jedoch einfach, die besten herauszufiltern. Insgesamt ein fantastisches Tool, das mir viel Aufwand erspart!"
+        },
+        "col4": {
+          "1": "Die KI ist unglaublich geschickt darin, verschiedene Bilder zu generieren. Es ist wie ein Mini-Fotostudio!",
+          "2": "Ich liebe, wie die Plattform nach dem Hochladen eines einzelnen Bildes mehrere Optionen bietet. Es ist einfach, einen Stil oder Hintergrund auszuwählen, der zu meiner Ästhetik passt. Dennoch sind der Komfort der mehrfachen Ergebnisse und die Gesamtqualität es wert! Es spart Zeit, besonders wenn Sie Vielfalt für soziale Medien benötigen.",
+          "3": "Sehr zufrieden mit dem schnellen Service und der Qualität."
+        }
+      }
+    },
+    "Pricing": {
+      "title": "PREMIUM-QUALITÄT ZUM 10-FACH GÜNSTIGEREN PREIS",
+      "description": "Keine Studiobesuche. Keine Fotoshooting-Gebühren von 200+ €. Keine Wartezeiten für Termine. Erreichen Sie atemberaubende, professionelle Businessfotos in nur 30 Minuten—alles von zu Hause aus.",
+      "badges": {
+        "mostPopular": "82% wählen diesen Plan",
+        "bestValue": "Bestes Preis-Leistungs-Verhältnis"
+      },
+      "oneTimePayment": "Einmalige Zahlung",
+      "noSubscription": "Kein Abonnement erforderlich",
+      "tryNow": "Jetzt testen",
+      "features": {
+        "headshots": {
+          "basic": "20 hochwertige Businessfotos",
+          "standard": "60 hochwertige Businessfotos",
+          "premium": "100 hochwertige Businessfotos"
+        },
+        "processing": {
+          "basic": "2 Stunden Bearbeitungszeit",
+          "standard": "1 Stunde Bearbeitungszeit",
+          "premium": "30 Min. Bearbeitungszeit"
+        },
+        "outfits": {
+          "basic": "5 Outfits und Hintergründe",
+          "standard": "20 Outfits und Hintergründe",
+          "premium": "40 Outfits und Hintergründe"
+        },
+        "poses": {
+          "basic": "5 Posen",
+          "standard": "20 Posen",
+          "premium": "40 Posen"
+        }
+      }
+    },
+    "DataSecurity": {
+      "title": "WIR SCHÄTZEN DATENSCHUTZ",
+      "subtitle": {
+        "line1": "Vertraut von Fortune 500-Führungskräften und Top-Profis",
+        "line2": "Renommierte Unternehmensorganisationen und Teams vertrauen uns ihre Daten an"
+      },
+      "features": {
+        "noSelling": {
+          "title": "KEIN DATENVERKAUF, KEIN TEILEN",
+          "description": "Wir werden Ihre Daten niemals verkaufen oder mit Drittanbieter-Websites teilen."
+        },
+        "control": {
+          "title": "IHRE FOTOS, IHRE KONTROLLE",
+          "description": "Wir werden Ihre Fotos nicht ohne Ihre Erlaubnis zum KI-Training verwenden."
+        },
+        "autoDeletion": {
+          "title": "AUTOMATISCHE DATENLÖSCHUNG",
+          "description": "Das System löscht automatisch alle Ihre Bilder nach 90 Tagen. Sie können die Einstellung nach Ihren Wünschen anpassen."
+        },
+        "security": {
+          "title": "HÖCHSTE SICHERHEIT",
+          "description": "Wir verschlüsseln alle sensiblen Benutzerdaten. Wir verwenden die besten vertrauenswürdigen Softwarelösungen der Branche für Ihre Daten."
+        }
+      },
+      "createButton": "Erstellen Sie Ihr Businessfoto"
+    },
+    "TeamSection": {
+      "title": {
+        "why": "WARUM",
+        "gostudio": "GOSTUDIO.AI?"
+      },
+      "description": "Erstellen Sie einen einheitlichen, professionellen Look für Ihr Team mit Businessfotos in Studioqualität, mühelos erstellt von Aaria. Wir liefern gepflegte Porträts, die die Werte Ihres Unternehmens widerspiegeln. Keine kostspieligen Fotoshootings—nur nahtlose, hochwertige Ergebnisse.",
+      "teamHeadshots": "Team-Businessfotos",
+      "tryNow": "Jetzt testen"
+    },
+    "CreationGallery": {
+      "title": "WERFEN SIE EINEN BLICK AUF MEINE KREATIONEN",
+      "description": "Ich freue mich darauf, Ihnen einen Einblick in meine Arbeit zu geben.",
+      "createButton": "Erstellen Sie Ihr Businessfoto"
+    },
+    "FAQ": {
+      "title": "Häufig gestellte Fragen",
+      "questions": {
+        "whatIs": {
+          "question": "Was ist GoStudio.ai? Wie funktioniert es?",
+          "answer": "GoStudio.ai verwendet Ihre eigenen Fotos, um ein individuelles KI-Modell zu trainieren, das Ihr Aussehen repräsentiert und Ihre Businessfotos in verschiedenen Stilen und Kleidung generieren kann. Die Qualität der generierten Businessfotos hängt von den hochgeladenen Bildern ab. Sie sollten versuchen, verschiedene Perspektiven Ihres Gesichts, Ihrer Augen und verschiedene Winkel zu haben. Jedes Bild sollte etwas Neues über Ihr Aussehen und Ihre Gesichtszüge zeigen."
+        },
+        "photoRequirements": {
+          "question": "Welche Art von Fotos muss ich hochladen?",
+          "answer": "Vielfalt hat Priorität. Verschiedene Gesichtsausdrücke und verschiedene Hintergründe, aufgenommen zu verschiedenen Tageszeiten, sind der Schlüssel zu hochwertigen Eingangsfotos. Ach ja, und bitte minimales Make-up und Accessoires!"
+        },
+        "ownership": {
+          "question": "Wer besitzt die Rechte an den generierten Fotos?",
+          "answer": "Sie behalten die vollständigen Rechte sowohl an den hochgeladenen als auch an den KI-generierten Bildern. Ihre Fotos werden ausschließlich zum Training Ihres persönlichen KI-Modells verwendet und werden niemals mit anderen Benutzern geteilt."
+        },
+        "timing": {
+          "question": "Wie lange dauert es, bis ich meine Businessfotos erhalte?",
+          "answer": "Der Prozess dauert typischerweise etwa 15-20 Minuten vom Hochladen bis zum Erhalt Ihres ersten Satzes KI-generierter Businessfotos. Sie können dann sofort zusätzliche Variationen generieren."
+        },
+        "satisfaction": {
+          "question": "Was passiert, wenn ich mit den Ergebnissen nicht zufrieden bin?",
+          "answer": "Wir bieten eine Zufriedenheitsgarantie. Wenn Sie mit Ihren Ergebnissen nicht zufrieden sind, arbeiten wir mit Ihnen an der Verbesserung oder erstatten Ihnen den vollen Betrag zurück."
+        },
+        "linkedin": {
+          "question": "Kann ich diese Fotos auf LinkedIn und anderen professionellen Plattformen verwenden?",
+          "answer": "Absolut! Unsere KI-generierten Businessfotos sind perfekt für LinkedIn, Unternehmenswebsites, Visitenkarten und andere professionelle Verwendungen."
+        },
+        "whichAI": {
+          "question": "Welche KI-Technologie verwenden Sie?",
+          "answer": "Wir verwenden eine proprietäre Mischung fortschrittlicher KI-Technologien, einschließlich modernster Bildgenerierungsmodelle, die speziell für die Erstellung professioneller Businessfotos optimiert sind."
+        },
+        "dataSecurity": {
+          "question": "Wie gehen Sie mit Datensicherheit und Privatsphäre um?",
+          "answer": "Wir nehmen Ihre Privatsphäre sehr ernst. Ihre Fotos werden verschlüsselt, sicher gespeichert und nur für Ihr persönliches KI-Modell verwendet. Wir geben Ihre Daten niemals an Dritte weiter."
+        }
+      }
+    },
+    "login": {
+      "title": "Anmelden / Registrieren",
+      "emailLabel": "E-Mail",
+      "emailPlaceholder": "beispiel@meinefirma.de",
+      "emailRequired": "E-Mail ist erforderlich",
+      "emailInvalid": "Ungültige E-Mail-Adresse",
+      "googleButton": "Mit Google fortfahren",
+      "mostUsed": "Am häufigsten verwendet",
+      "orDivider": "Oder mit E-Mail fortfahren",
+      "submitButton": "Code per E-Mail erhalten",
+      "infoText": "Sie erhalten einen einmaligen Code in Ihrem Posteingang.",
+      "termsText": "Mit der Registrierung akzeptieren Sie unsere",
+      "termsLink": "Allgemeinen Geschäftsbedingungen",
+      "andText": "und",
+      "privacyLink": "Datenschutzrichtlinie",
+      "errors": {
+        "loginFailed": "Anmeldung fehlgeschlagen",
+        "invalidEmail": "Ungültige E-Mail-Adresse",
+        "googleSignInFailed": "Google-Anmeldung fehlgeschlagen",
+        "tryAgain": "Bitte versuchen Sie es erneut. Wenn das Problem weiterhin besteht, kontaktieren Sie den Support."
+      },
+      "testimonial": "Fotos kamen besser raus als in einigen Studios, die ich probiert habe",
+      "testimonialAuthor": "Sarah Chen"
+    },
+    "waitingForMagicLink": {
+      "title": "Überprüfen Sie Ihre E-Mail, um fortzufahren",
+      "description": "Wir haben Ihnen einen Magic-Link per E-Mail geschickt, um auf Ihr Konto zuzugreifen.",
+      "hint": "Hinweis: Er könnte sich in Ihrem Spam-Ordner befinden.",
+      "backButton": "Zurück"
+    },
+    "loginFail": {
+      "title": "Anmeldefehler",
+      "defaultError": "Etwas ist schiefgelaufen, bitte wenden Sie sich an den Support.",
+      "browserError": "Ups! Es scheint, als hätten Sie versucht, Ihren Magic-Link von einem anderen Gerät oder Browser zu öffnen.",
+      "hint": "Hinweis: Bitte stellen Sie sicher, dass Sie den Link auf demselben Gerät/Browser öffnen, von dem aus Sie sich registriert haben.",
+      "loginLink": "Anmelden"
+    },
+    "navbar": {
+      "loginButton": "Anmelden / Registrieren"
+    },
+    "userMenu": {
+      "credits": "Guthaben",
+      "logout": "Abmelden"
+    },
+    "navigation": {
+      "headshotPacks": "Businessfoto-Pakete",
+      "photoshootPacks": "Fotoshooting-Pakete",
+      "freeTools": "Kostenlose Tools",
+      "backgroundLibrary": "Hintergrundbibliothek",
+      "backgroundRemover": "Hintergrund-Entferner",
+      "testimonial": "Testimonial",
+      "pricing": "Preise",
+      "faq": "FAQ"
+    },
+    "sidebar": {
+      "dashboard": "Dashboard",
+      "myHeadshots": "Meine Businessfotos",
+      "photoEditorTools": "Foto-Editor-Tools",
+      "aiImageGenerator": "KI-Bildgenerator",
+      "logout": "Abmelden",
+      "loggingOut": "Wird abgemeldet..."
+    },
+    "overview": {
+      "myHeadshots": "Meine Businessfotos",
+      "generateImagesMessage": "Beginnen Sie mit der Bildgenerierung, Aaria ist hier, um Ihre Fotos zu erstellen!",
+      "generateImages": "Bilder generieren"
+    },
+    "packs": {
+      "title": "Pakete",
+      "description": "Wählen Sie ein Paket, um mit der Bildgenerierung zu beginnen.",
+      "selectPack": "01/ Paket auswählen",
+      "instructions": "02/ Anleitung",
+      "uploadPhotos": "03/ Fotos hochladen",
+      "getCredits": "04/ Guthaben erhalten",
+      "summary": "05/ Zusammenfassung",
+      "errorFetching": "Fehler beim Abrufen der Pakete",
+      "requestFailed": "Anfrage fehlgeschlagen mit Statuscode 404"
+    },
+    "packsGallery": {
+      "loading": "Pakete werden geladen...",
+      "noPacks": "Keine Pakete verfügbar.",
+      "continueButton": "Weiter",
+      "errors": {
+        "fetchTitle": "Fehler beim Abrufen der Pakete",
+        "unknownTitle": "Unbekannter Fehler",
+        "unknownDescription": "Ein unbekannter Fehler ist aufgetreten."
+      },
+      "categories": {
+        "adults": "Professionelle & Lifestyle-Pakete",
+        "children": "Kinder-Pakete",
+        "pets": "Haustier-Pakete",
+        "default": "{category} Pakete"
+      },
+      "packDetails": {
+        "close": "Schließen",
+        "select": "Paket auswählen",
+        "imagesIncluded": "Enthaltene Bilder",
+        "price": "Preis"
+      }
+    },
+    "photoGuide": {
+      "title": "Bildanleitung",
+      "subtitle": "Folgen Sie der Anleitung, um qualitativ hochwertige Fotos zu erhalten.",
+      "sections": {
+        "goodPhotos": "Gute Fotos zum Hochladen",
+        "photosToAvoid": "Fotos zu vermeiden",
+        "refrainUsing": "Bitte vermeiden"
+      },
+      "descriptions": {
+        "closeUpSelfie": "Nahaufnahme-Selfie",
+        "facingCamera": "Sie schauen in die Kamera",
+        "halfBody": "Halber Körper",
+        "onlyVisible": "Nur Sie sind sichtbar",
+        "groupSelfies": "Gruppen-Selfies",
+        "withSomeone": "Mit jemandem",
+        "hidingFace": "Gesicht verdecken",
+        "wearingGlasses": "Brille tragen",
+        "onlyFace": "Nur Gesicht",
+        "nudity": "Nacktheit",
+        "blurredImage": "Verschwommenes Bild",
+        "tooMuchShadow": "Zu viel Schatten"
+      },
+      "alt": {
+        "goodPhoto1": "Gutes Foto Beispiel 1",
+        "goodPhoto2": "Gutes Foto Beispiel 2",
+        "goodPhoto3": "Gutes Foto Beispiel 3",
+        "goodPhoto4": "Gutes Foto Beispiel 4",
+        "badPhoto1": "Schlechtes Foto Beispiel 1",
+        "badPhoto2": "Schlechtes Foto Beispiel 2",
+        "badPhoto3": "Schlechtes Foto Beispiel 3",
+        "badPhoto4": "Schlechtes Foto Beispiel 4"
+      }
+    },
+    "trainModel": {
+      "notEnoughInfo": "Nicht genügend Informationen",
+      "uploadRequirements": "Bitte laden Sie mindestens 4 Bilder hoch und stellen Sie sicher, dass Modellinformationen verfügbar sind.",
+      "uploadingImages": "Bilder werden hochgeladen...",
+      "pleaseWait": "Bitte warten Sie, während wir Ihre Fotos verarbeiten",
+      "startUploading": "Beginnen Sie mit dem Hochladen von Fotos",
+      "uploadFiles": "Dateien hochladen",
+      "dragDropHint": "Zum Hochladen klicken oder per Drag & Drop",
+      "fileTypes": "PNG, JPG, HEIC bis zu 120MB",
+      "goodPhotos": "Gute Fotos",
+      "badPhotos": "Schlechte Fotos",
+      "continue": "Weiter",
+      "imageGuide": "Bildanleitung",
+      "followGuide": "Folgen Sie der Anleitung, um qualitativ hochwertige Fotos zu erhalten.",
+      "photoRequirements": "Für eine bessere Fotoqualität benötigt Aaria 1 Halzkörper- und 7 Nahaufnahmen von Ihnen mit Blick in die Kamera.",
+      "autoCropBanner": "Sie können jetzt Ihre Gruppen-Selfies automatisch zuschneiden! Tippen Sie einfach auf das Bild, das Sie zuschneiden möchten, und wir kümmern uns darum."
+    },
+    "checkout": {
+      "title": "KASSE",
+      "subtitle": "Sparen Sie Hunderte im Vergleich zu einem Fotoshooting. Passen Sie Ihr KI-Businessfoto mit manuellen Bearbeitungen an oder lassen Sie es neu erstellen, wenn die ersten Uploads nicht optimal waren.",
+      "standardBadge": "82% wählen diesen Plan",
+      "premiumBadge": "Bestes Preis-Leistungs-Verhältnis",
+      "subtotal": "Zwischensumme",
+      "tax": "Mehrwertsteuer",
+      "totalDue": "Heute zu zahlender Gesamtbetrag",
+      "noSubscription": "Kein Abonnement erforderlich",
+      "oneTimePayment": "Einmalige Zahlung",
+      "features": {
+        "headshots": {
+          "basic": "10 Professionelle KI-Businessfotos",
+          "standard": "30 Professionelle KI-Businessfotos",
+          "premium": "100 Professionelle KI-Businessfotos"
+        },
+        "processing": {
+          "basic": "24 Stunden Bearbeitungszeit",
+          "standard": "12 Stunden Bearbeitungszeit",
+          "premium": "6 Stunden Bearbeitungszeit"
+        },
+        "outfits": {
+          "basic": "2 Outfits",
+          "standard": "4 Outfits",
+          "premium": "8 Outfits"
+        },
+        "poses": {
+          "basic": "2 Posen",
+          "standard": "4 Posen",
+          "premium": "8 Posen"
+        }
+      }
+    },
+    "summary": {
+      "detectedFeatures": "Dies sind die Merkmale, die Aaria erkannt hat. Sie können diese bei Bedarf auch bearbeiten.",
+      "age": "ALTER",
+      "eyeColor": "AUGENFARBE",
+      "hairColor": "HAARFARBE",
+      "gender": "GESCHLECHT",
+      "ethnicity": "ETHNIZITÄT",
+      "notSpecified": "Nicht angegeben",
+      "enterEyeColor": "Augenfarbe eingeben",
+      "enterHairColor": "Haarfarbe eingeben",
+      "enterEthnicity": "Ethnizität eingeben",
+      "save": "Speichern",
+      "male": "Männlich",
+      "orderSummary": "Bestellübersicht",
+      "summaryDescription": "Sparen Sie Hunderte im Vergleich zu einem Fotoshooting. Passen Sie Ihr KI-Businessfoto mit manuellen Bearbeitungen an oder lassen Sie es neu erstellen, wenn die ersten Uploads nicht optimal waren.",
+      "uploadedPhotos": "HOCHGELADENE FOTOS",
+      "processing": "Wird verarbeitet...",
+      "startTraining": "Training starten",
+      "noModelData": "Keine Modelldaten",
+      "noModelDataDesc": "Es wurden keine Modelldaten gefunden. Bitte gehen Sie zurück und erstellen Sie zuerst ein Modell.",
+      "generateHeadshots": "Businessfotos generieren",
+      "loading": "Wird geladen..."
+    },
+    
+      "photoTypes": {
+        "title": "Professionelle KI-Fotostile",
+        "subtitle": "Wählen Sie aus unserer vielfältigen Sammlung KI-gestützter Fotostile, um Ihr perfektes professionelles Portrait zu erstellen.",
+        "showMore": "Alle Stile anzeigen",
+        "showLess": "Weniger anzeigen",
+        "types": {
+          "vintageAmericana": {
+            "title": "Vintage Americana Fotos",
+            "description": "Professionelle Porträtaufnahmen mit amerikanischem Flair, ideal für LinkedIn und Business-Networking"
+          },
+          "onesiePortraits": {
+            "title": "Strampler-Portraits",
+            "description": "Bezaubernde Portraits für Babys und Kleinkinder"
+          },
+          "halloweenPhotos": {
+            "title": "Halloween-Fotos",
+            "description": "Gruselige und spaßige Portraits für Halloween-Enthusiasten"
+          },
+          "birthdayParty": {
+            "title": "Geburtstags-Save-the-Date",
+            "description": "Natürliche, authentische Portraits für Dating-Profile"
+          },
+          "artisticPortraits": {
+            "title": "Künstlerische Portraits",
+            "description": "Kreative und kunstvolle Portraitfotografie"
+          },
+          "wrestlemaniaPhotos": {
+            "title": "Wrestlemania-Fotos",
+            "description": "Dynamische Wrestling-inspirierte Portraits, die Stärke und Charakter einfangen"
+          },
+          "redCarpet": {
+            "title": "Roter Teppich Schauspielerfotos",
+            "description": "Glamouröse und sophistizierte Portraits im Stil des roten Teppichs"
+          },
+          "gameOfThrones": {
+            "title": "Game of Thrones Portraits",
+            "description": "Fantasy-inspirierte Portraits im Stil von Game of Thrones"
+          },
+          "kidsBirthday": {
+            "title": "Kindergeburtstag-Portraits",
+            "description": "Besondere Momente von Kindergeburtstagen festhalten"
+          },
+          "mythicalCreatures": {
+            "title": "Mythische Wesen Portraits",
+            "description": "Fantasy-inspirierte Portraits mit mythischen Kreaturen"
+          },
+          "onlineDating": {
+            "title": "Online-Dating Profilfotos",
+            "description": "Perfekte Portraits für Online-Dating-Profile"
+          },
+          "petPhotography": {
+            "title": "Haustierfotografie",
+            "description": "Professionelle Portraits für Haustiere"
+          },
+          "popColor": {
+            "title": "Pop-Color Fotos",
+            "description": "Lebendige Portraits mit Pop-Art-Einfluss"
+          },
+          "youtubeThumbnails": {
+            "title": "YouTube-Thumbnail Fotos",
+            "description": "Auffällige Portraits, perfekt für YouTube-Thumbnails"
+          },
+          "actressPortraits": {
+            "title": "Schauspielerinnen-Portraits",
+            "description": "Lebendige und detaillierte Fotografien von Pflanzen und Blumen"
+          },
+          "dreamlandKids": {
+            "title": "Traumland-Kinderfotos",
+            "description": "Magische und verspielte Portraits für Kinder in traumhaften Kulissen"
+          },
+          "babyDoodles": {
+            "title": "Baby-Kritzeleien",
+            "description": "Verwandeln Sie Ihre Babyfotos in niedliche Kritzelei-Portraits. Perfekt für Kinderzimmerkunst und Geburtsankündigungen."
+          },
+          "birthdayMagic": {
+            "title": "Geburtstagszauber",
+            "description": "Erstellen Sie bezaubernde Geburtstagsportraits für Feiern, Einladungen und besondere Anlässe."
+          },
+          "personalBrand": {
+            "title": "Personal Branding Fotografie",
+            "description": "Professionelle Fotolösungen zur Stärkung Ihrer persönlichen Marke und Schaffung einer konsistenten visuellen Präsenz."
+          },
+          "casualPhotography": {
+            "title": "Lässige Fotografie",
+            "description": "Natürliche und entspannte Portraits, perfekt für Social Media und lockere professionelle Bedürfnisse."
+          },
+          "casualCollection": {
+            "title": "Lässige Kollektion",
+            "description": "Erstellen Sie eine vielfältige Serie lässiger Lifestyle-Portraits für eine konsistente Online-Präsenz."
+          },
+          "catMagic": {
+            "title": "Katzenzauber",
+            "description": "Verwandeln Sie Ihre Katzenfotos in magische Portraits, die ihre einzigartige Persönlichkeit und ihren Charme einfangen."
+          },
+          "cyberpunk": {
+            "title": "Cyberpunk",
+            "description": "Verwandeln Sie sich in einen atemberaubenden Cyberpunk-Charakter mit futuristischen digitalen Kunststilen."
+          },
+          "hanukkahMiracle": {
+            "title": "Chanukka-Wunder",
+            "description": "Erstellen Sie wunderschöne Chanukka-themed Portraits, die die Magie des Lichterfestes einfangen."
+          },
+          "happyKid": {
+            "title": "Glückliches Kind",
+            "description": "Erstellen Sie entzückende Portraits glücklicher Kinder, die ihre reine Freude und Unschuld einfangen."
+          },
+          "influencer": {
+            "title": "Influencer",
+            "description": "Erstellen Sie atemberaubende Influencer-Style Portraits, perfekt für Social Media und Content-Erstellung."
+          },
+          "meIconic": {
+            "title": "Mein Ikonisch",
+            "description": "Erstellen Sie Ihren eigenen ikonischen Portraitstil, der Sie aus der Masse hervorhebt."
+          },
+          "merryChristmas": {
+            "title": "Frohe Weihnachten",
+            "description": "Erstellen Sie magische Weihnachtsportraits, die die Freude und Wärme der Weihnachtszeit einfangen."
+          },
+          "playfulCasual": {
+            "title": "Verspielt Lässig",
+            "description": "Erstellen Sie spaßige und natürliche lässige Portraits, die Ihre verspielte Seite zeigen."
+          },
+          "podcaster": {
+            "title": "Podcaster",
+            "description": "Erstellen Sie professionelle Podcaster-Portraits, die Ihre Audio-Marke aufbauen."
+          },
+          "romanticMaternity": {
+            "title": "Romantische Schwangerschaft",
+            "description": "Erstellen Sie wunderschöne und romantische Schwangerschaftsportraits, die die Magie der Schwangerschaft feiern."
+          },
+          "socialMedia": {
+            "title": "Social Media",
+            "description": "Erstellen Sie atemberaubende Portraits, optimiert für alle Social-Media-Plattformen."
+          },
+          "timeMachine": {
+            "title": "Zeitmaschine",
+            "description": "Reisen Sie durch die Zeit mit atemberaubenden historischen Portraits und epochalen Fotos."
+          },
+          "timelessStudio": {
+            "title": "Zeitloses Studio",
+            "description": "Erstellen Sie elegante Studioportraits mit zeitloser, professioneller Ausstrahlung."
+          },
+          "telAvivFashion": {
+            "title": "Tel Aviv Mode",
+            "description": "Erstellen Sie atemberaubende Tel Aviv-inspirierte Mode-Portraits mit urbanem Stil."
+          },
+          "wildFriends": {
+            "title": "Wilde Freunde",
+            "description": "Erstellen Sie magische Portraits mit Ihren Haustieren und tierischen Gefährten."
+          },
+          "winterWonderland": {
+            "title": "Winterwunderland",
+            "description": "Erstellen Sie bezaubernde Winterwunderland-Portraits in magischen Schneeszenen."
+          },
+          "workFromHome": {
+            "title": "Homeoffice",
+            "description": "Erstellen Sie professionelle Homeoffice-Portraits für Remote-Arbeit."
+          },
+          "vintagePack": {
+            "title": "Vintage-Paket",
+            "description": "Erstellen Sie wunderschöne Vintage-Style Portraits mit zeitloser Retro-Ästhetik und klassischer Ausstrahlung."
+          },
+          "professionalTattoos": {
+            "title": "Professionelle Tattoo-Portraits",
+            "description": "Präsentieren Sie Ihre Tattoos mit professionellen Portraits, die Ihren künstlerischen Ausdruck hervorheben."
+          },
+          "annieLeibovitz": {
+            "title": "Annie Leibovitz Stil",
+            "description": "Dramatische Portraits inspiriert von Annie Leibovitz' ikonischem Fotografiestil."
+          },
+          "barbie": {
+            "title": "Barbie-Style Portraitfotografie",
+            "description": "Verwandeln Sie Ihre Fotos in atemberaubende Barbie-inspirierte Portraits. Perfekt für Fashion-Enthusiasten und alle, die einen glamourösen, verspielten Look suchen.",
+            "categories": {
+              "all": "Alle",
+              "woman": "Frauen"
+            }
+          },
+          "vikingPortraits": {
+            "title": "Wikinger-Portraits",
+            "description": "Kraftvolle Wikinger-inspirierte Portraits, perfekt für historische Themen und Fantasy-Shootings."
+          },
+          "marvelClass": {
+            "title": "Marvel-Klasse",
+            "description": "Dynamische, eindrucksvolle Headshots mit filmischer Qualität, inspiriert von Marvel-Produktionen."
+          }
+        }
+      },
+      
+        "headshots": {
+          "title": "KI-Businessfotos für Profis",
+          "subtitle": "Hunderte von Geschäftsleuten nutzen HeadshotPro täglich, um professionelle Fotos für ihren Beruf zu erstellen.",
+          "showMore": "Alle Stile anzeigen",
+          "showLess": "Weniger anzeigen",
+          "types": {
+            "doctor": {
+              "title": "Arzt-Businessfotos",
+              "description": "Professionelle medizinische Portraits für Ärzte und Gesundheitsfachkräfte"
+            },
+            "lawyer": {
+              "title": "Anwalts-Businessfotos",
+              "description": "Professionelle Portraits für Juristen und Anwaltskanzleien"
+            },
+            "actor": {
+              "title": "Schauspieler-Portraits",
+              "description": "Stilvolle Glamour-Portraits, perfekt für Mode-, Beauty- und Modelling-Portfolios"
+            },
+            "realtor": {
+              "title": "Immobilienmakler-Stil",
+              "description": "Professionelle Portraits für Immobilienfachleute"
+            },
+            "tedSpeaker": {
+              "title": "TED-Speaker-Stil",
+              "description": "Professionelle Portraits für Redner und Präsentatoren"
+            },
+            "businessCasual": {
+              "title": "Business-Casual-Fotos",
+              "description": "Klassische und stilvolle Portraits im J.Crew-Stil"
+            },
+            "model": {
+              "title": "Model-Businessfotos",
+              "description": "Elegante und ausdrucksstarke Portraits im Stil von Helmut Newton"
+            },
+            "styledSuccess": {
+              "title": "Erfolgsstyling",
+              "description": "Professionelle Portraits mit raffiniertem Styling für einen modernen Look"
+            },
+            "professional": {
+              "title": "Professional-Paket",
+              "description": "Komplettes Businessfoto-Paket, perfekt für Unternehmens- und Geschäftsanforderungen"
+            },
+            "partnersCollection": {
+              "title": "Partner-Kollektion",
+              "description": "Premium-Businessfotos speziell für Kanzleipartner und Führungskräfte"
+            },
+            "lawyerBranded": {
+              "title": "Anwalt-Branding",
+              "description": "Spezialisierte Businessfotos zur Stärkung Ihrer juristischen Marke und Autorität"
+            },
+            "effortlessProfessionalism": {
+              "title": "Müheloser Professionalismus",
+              "description": "Natürliche, zugängliche Businessfotos mit starker professioneller Ausstrahlung"
+            }
+          }
+        }
+      }
+  

@@ -1,6 +1,8 @@
+'use client'
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useTranslations, useLocale } from 'next-intl';
 
 // Define the interface for image data
 interface GalleryImage {
@@ -10,6 +12,10 @@ interface GalleryImage {
 }
 
 const Gallery = () => {
+  const t = useTranslations('CreationGallery');
+  const locale = useLocale();
+  const isRTL = locale === 'ar';
+
   // Gallery images data with proper paths
   const images: GalleryImage[] = [
     { src: '/Packs/Glamour-photos/Man/man1.jpg', isLarge: false, alt: 'Professional headshot 1' },
@@ -66,16 +72,23 @@ const Gallery = () => {
   };
 
   return (
-    <div className="w-full bg-white">
+    <div className="w-full bg-white" dir={isRTL ? 'rtl' : 'ltr'}>
       
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8">
         {/* Header Section */}
         <div className="text-center mb-8 sm:mb-12 pt-4">
-          <h2 className="text-[32px] leading-[48px] font-medium text-center mb-4" style={{ background: 'linear-gradient(90deg, #8371FF -39.48%, #A077FE 15.54%, #01C7E4 100%)', WebkitBackgroundClip: 'text', backgroundClip: 'text', color: 'transparent' }}>
-            TAKE A SNEAK PEEK INTO MY CREATIONS
+          <h2 className="text-[32px] leading-[48px] font-medium text-center mb-4" 
+              style={{ 
+                background: 'linear-gradient(90deg, #8371FF -39.48%, #A077FE 15.54%, #01C7E4 100%)', 
+                WebkitBackgroundClip: 'text', 
+                backgroundClip: 'text', 
+                color: 'transparent',
+                whiteSpace: 'pre-line'
+              }}>
+            {t('title')}
           </h2>
           <p className="text-[#161C2D]/60 text-[16px] leading-[24px] max-w-[790px] mx-auto">
-            I'm excited to share a glimpse of my work with you.
+            {t('description')}
           </p>
         </div>
 
@@ -139,8 +152,12 @@ const Gallery = () => {
                 maxWidth: '269px',
               }}
             >
-              <span>Create Your Headshot</span>
-              <svg className="w-4 sm:w-5 h-4 sm:h-5" viewBox="0 0 20 20" fill="none">
+              <span>{t('createButton')}</span>
+              <svg 
+                className={`w-4 sm:w-5 h-4 sm:h-5 ${isRTL ? 'rotate-180' : ''}`} 
+                viewBox="0 0 20 20" 
+                fill="none"
+              >
                 <path 
                   d="M4.16666 10H15.8333M15.8333 10L10 4.16669M15.8333 10L10 15.8334" 
                   stroke="currentColor" 

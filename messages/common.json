@@ -1,0 +1,72 @@
+{
+  "shared": {
+    "buttons": {
+      "tryNow": {
+        "en": "Try Now",
+        "ar": "جرب الآن",
+        "fr": "Essayer maintenant",
+        "ja": "今すぐ試す",
+        "ko": "지금 시작하기",
+        "cn": "立即尝试"
+      },
+      "createHeadshot": {
+        "en": "Create Your Headshot",
+        "ar": "إنشاء صورتك الشخصية",
+        "fr": "Créer votre photo",
+        "ja": "ヘッドショットを作成",
+        "ko": "프로필 사진 만들기",
+        "cn": "创建您的形象照"
+      },
+      "showMore": {
+        "en": "Show More",
+        "ar": "عرض المزيد",
+        "fr": "Voir plus",
+        "ja": "もっと見る",
+        "ko": "더 보기",
+        "cn": "查看更多"
+      },
+      "showLess": {
+        "en": "Show Less",
+        "ar": "عرض أقل",
+        "fr": "Voir moins",
+        "ja": "閉じる",
+        "ko": "접기",
+        "cn": "收起"
+      }
+    },
+    "features": {
+      "styles": {
+        "en": "150+ styles and outfits",
+        "ar": "أكثر من 150 نمطًا وملابس",
+        "fr": "Plus de 150 styles et tenues",
+        "ja": "150以上のスタイルと衣装",
+        "ko": "150가지 이상의 스타일과 의상",
+        "cn": "150+种风格和服装"
+      },
+      "delivery": {
+        "en": "Results within 1 hour",
+        "ar": "النتائج خلال ساعة واحدة",
+        "fr": "Résultats en moins d'une heure",
+        "ja": "1時間以内に結果をお届け",
+        "ko": "1시간 이내 결과물 전달",
+        "cn": "1小时内出结果"
+      },
+      "protection": {
+        "en": "Strict Data Protection",
+        "ar": "حماية بيانات صارمة",
+        "fr": "Protection stricte des données",
+        "ja": "厳格なデータ保護",
+        "ko": "엄격한 데이터 보호",
+        "cn": "严格的数据保护"
+      },
+      "guarantee": {
+        "en": "Moneyback Guarantee",
+        "ar": "ضمان استرداد الأموال",
+        "fr": "Garantie satisfait ou remboursé",
+        "ja": "返金保証",
+        "ko": "환불 보장",
+        "cn": "退款保证"
+      }
+    }
+  }
+} 

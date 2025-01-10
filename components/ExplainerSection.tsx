@@ -1,7 +1,9 @@
+'use client'
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-// Removed Instagram import due to error
+import { useTranslations } from 'next-intl';
+import { useRouter } from 'next/navigation';
 
 // Curved Arrow Component
 const CurvedArrow = ({ rotation, style }: { rotation: number; style: React.CSSProperties }) => {
@@ -39,13 +41,16 @@ const CurvedArrow = ({ rotation, style }: { rotation: number; style: React.CSSPr
 };
 
 const HeadshotSteps = () => {
+  const t = useTranslations('ExplainerSection');
+  const { locale } = useRouter();
+  const isRTL = locale === 'ar';
   const imageBoxStyle = "w-[90px] h-[90px] rounded-[16px] border border-gray-100 overflow-hidden flex items-center justify-center bg-white shadow-sm relative";
 
   return (
-    <div className="w-full bg-white">
+    <div className={`w-full bg-white ${isRTL ? 'rtl' : 'ltr'}`}>
       <div className="pt-[80px] pb-[24px]">
         <h2 className="font-poppins text-[24px] sm:text-[32px] leading-[36px] sm:leading-[48px] font-medium text-center mb-[80px]">
-          3 EASY STEPS TO GET YOUR STUDIO QUALITY PROFILE.
+          {t('title')}
         </h2>
 
         <div className="flex flex-col md:flex-row justify-between items-start gap-[24px] relative px-4 md:px-[82px]">
@@ -63,18 +68,18 @@ const HeadshotSteps = () => {
             <div className="space-y-4">
               <h3 className="font-poppins text-[21.2px] leading-[24.74px] font-medium">
                 <span className="block text-[28.27px] mb-2">01</span>
-                Upload a few photos
+                {t('step1.title')}
               </h3>
               <p className="text-gray-600 text-base leading-relaxed mb-8">
-                Upload a few photos of yourself to let AI learn about you.
+                {t('step1.description')}
               </p>
               <Link href="/login" className="block">
-              <button className="w-[269px] h-[48px] rounded-[37px] bg-[#5B16FE] hover:bg-[#4912d0] text-white px-[25px] py-[12px] font-medium flex items-center justify-center gap-[10px]">
-                <span>Try Now</span>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-              </button>
+                <button className="w-[269px] h-[48px] rounded-[37px] bg-[#5B16FE] hover:bg-[#4912d0] text-white px-[25px] py-[12px] font-medium flex items-center justify-center gap-[10px]">
+                  <span>{t('tryNow')}</span>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </button>
               </Link>
             </div>
           </div>
@@ -93,11 +98,10 @@ const HeadshotSteps = () => {
               <div className="relative z-10">
                 <h3 className="font-poppins text-[21.2px] leading-[24.74px] font-medium text-white">
                   <span className="block text-[28.27px] mb-2">02</span>
-                  Our AI Photographer "Aaria" get to work
+                  {t('step2.title')}
                 </h3>
                 <p className="w-[330.08px] h-[72px] text-white font-poppins text-[15.9px] leading-[23.85px] font-normal">
-                  Aaria creates a private, personalized model just for you—ensuring headshots
-                  that reflect your unique style and identity.
+                  {t('step2.description')}
                 </p>
               </div>
             </div>
@@ -117,13 +121,11 @@ const HeadshotSteps = () => {
             <div className="space-y-4">
               <h3 className="font-poppins text-[21.2px] leading-[24.74px] font-medium">
                 <span className="block text-[28.27px] mb-2">03</span>
-                Download favorite Headshots
+                {t('step3.title')}
               </h3>
               <p className="text-gray-600 text-base leading-relaxed mb-8">
-                You'll receive a variety of styles, giving you the perfect Headshots to
-                elevate your business professional profile.
+                {t('step3.description')}
               </p>
-              
             </div>
           </div>
         </div>

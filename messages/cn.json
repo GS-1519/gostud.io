@@ -1,0 +1,622 @@
+{
+    "hero": {
+      "title": "使用自拍制作专业形象照",
+      "description": "在LinkedIn、Twitter上脱颖而出，吸引招聘者。上传您的自拍照，从您最喜欢的AI摄影师Aaria获得数百张专业形象照。",
+      "features": {
+        "styles": "150+种风格和服装",
+        "delivery": "1小时内出结果",
+        "protection": "严格的数据保护",
+        "guarantee": "退款保证"
+      },
+      "button": "立即尝试",
+      "tryNow": "现在开始"
+    },
+    "ExplainerSection": {
+      "title": "3个简单步骤获得您的工作室品质形象",
+      "step1": {
+        "title": "上传几张照片",
+        "description": "上传几张您的照片，让AI了解您"
+      },
+      "step2": {
+        "title": "我们的AI摄影师Aaria开始工作",
+        "description": "Aaria专门为您创建私人定制模型，确保形象照能反映您独特的风格和身份"
+      },
+      "step3": {
+        "title": "下载喜欢的形象照",
+        "description": "您将收到各种风格的照片，为您的商务专业形象带来完美提升"
+      },
+      "tryNow": "立即尝试"
+    },
+    "PhotographyGrid": {
+      "title": "我们的套餐-您说需要什么，我们就有什么。",
+      "description": "探索我们完整的摄影套餐系列，为每种风格和需求量身定制。从专业肖像到创意编辑，我们全方位覆盖。无论您的愿景是什么，我们的AI摄影师都能轻松实现。",
+      "tryNow": "立即尝试",
+      "packs": {
+        "corporate": "企业形象照",
+        "speaker": "演讲者套餐",
+        "doctor": "医疗专业人士",
+        "realtor": "房地产经纪人",
+        "dating": "约会资料",
+        "redcarpet": "红毯",
+        "boldcolors": "大胆色彩",
+        "tattoo": "纹身艺术家",
+        "glamour": "魅力照",
+        "barbie": "芭比风格",
+        "halloween": "万圣节主题",
+        "mythical": "神话主题"
+      }
+    },
+    "Comparison": {
+      "title": "节省金钱和时间",
+      "description": "Aaria确保您为每个专业时刻做好准备。从简历到LinkedIn，我们让您的形象照轻松闪耀。",
+      "columns": {
+        "goStudio": "Go Studio.ai",
+        "studio": "工作室拍摄"
+      },
+      "items": {
+        "value": {
+          "label": "物有所值",
+          "goStudio": "¥19",
+          "studio": "¥200"
+        },
+        "time": {
+          "label": "节省时间",
+          "goStudio": "30分钟",
+          "studio": "2-3天"
+        },
+        "variety": {
+          "label": "多样性",
+          "goStudio": "30张形象照",
+          "studio": "4-5张形象照"
+        },
+        "choices": {
+          "label": "更多选择",
+          "goStudio": "20种风格",
+          "studio": "1种风格"
+        }
+      },
+      "exploreMore": "探索更多"
+    },
+    "Why": {
+      "title": {
+        "why": "为什么选择",
+        "gostudio": "GOSTUDIO.AI?"
+      },
+      "description": "通过AI驱动的形象照改变您的专业形象。在几分钟内获得工作室品质的照片，用于LinkedIn、简历等。",
+      "features": {
+        "linkedin": {
+          "title": "在LinkedIn上脱颖而出",
+          "description": "用专业形象照给人留下深刻的第一印象，提升您的档案浏览量和可信度。"
+        },
+        "resume": {
+          "title": "让您的简历闪耀",
+          "description": "用精致的形象照提升您的求职申请，增添个人特色和专业性。"
+        },
+        "events": {
+          "title": "活动和会议",
+          "description": "在专业活动中展现最好的自己。适用于演讲者档案、活动目录和徽章。"
+        },
+        "business": {
+          "title": "名片和品牌",
+          "description": "用高质量形象照在所有商务材料中创建统一的专业形象。"
+        },
+        "online": {
+          "title": "数字形象",
+          "description": "在所有平台上展现专业形象 - 从社交媒体到公司网站和专业网络。"
+        }
+      },
+      "tryNow": "立即尝试"
+    },
+    "HeadshotReview": {
+      "title": {
+        "part1": "已为",
+        "part2": "满意客户创建的照片"
+      },
+      "description": "不是在工作室拍摄。由AI创建。别只相信我们的话。我们的AI将日常照片转变为专业形象照，反映您的自信和可信度。",
+      "createButton": "创建您的形象照",
+      "testimonials": {
+        "col1": {
+          "1": "结果令人惊艳，完全根据我定制。这些AI形象照真是高级。",
+          "2": "我用一系列产品图片测试了平台，对结果非常满意。",
+          "3": "有史以来最棒的产品照片生成器网站！"
+        },
+        "col2": {
+          "1": "作为在线零售商，高质量的产品图片至关重要。我上传了几张珠宝照片，AI生成了多个令人惊艳的选项，完美展示了这些作品。多样性让我能选择不同的背景和角度来有效突出我的产品。",
+          "2": "电商必备工具！",
+          "3": "上传一次，就能获得这么多选择。"
+        },
+        "col3": {
+          "1": "照片质量和多样性都很出色。",
+          "2": "界面快速且用户友好。我很欣赏这个平台多么易用。",
+          "3": "我很欣赏这个平台多么易用。我对收到的选项数量印象深刻。虽然大多数都很棒，但有几张没有完全按我希望的方式捕捉产品。不过，筛选并找到最好的很容易。总的来说，这是一个节省大量精力的出色工具！"
+        },
+        "col4": {
+          "1": "AI在生成多样化图像方面非常智能。就像有一个迷你照相馆！",
+          "2": "我喜欢平台在上传单张图片后提供多个选项。选择符合我审美的风格或背景很容易。尽管如此，多重结果的便利性和整体质量都值得！特别是当您需要社交媒体上的多样性时，这真是省时。",
+          "3": "对快速服务和质量非常满意。"
+        }
+      }
+    },
+    "Pricing": {
+      "title": "十倍优惠的高级品质",
+      "description": "无需工作室拍摄。无需支付200+的拍摄费用。无需等待预约。在家中舒适地在30分钟内获得令人惊艳的专业级形象照。",
+      "badges": {
+        "mostPopular": "82%选择此计划",
+        "bestValue": "最佳价值"
+      },
+      "oneTimePayment": "一次性付款",
+      "noSubscription": "无需订阅",
+      "tryNow": "立即尝试",
+      "features": {
+        "headshots": {
+          "basic": "20张高质量形象照",
+          "standard": "60张高质量形象照",
+          "premium": "100张高质量形象照"
+        },
+        "processing": {
+          "basic": "2小时处理时间",
+          "standard": "1小时处理时间",
+          "premium": "30分钟处理时间"
+        },
+        "outfits": {
+          "basic": "5套服装和背景",
+          "standard": "20套服装和背景",
+          "premium": "40套服装和背景"
+        },
+        "poses": {
+          "basic": "5种姿势",
+          "standard": "20种姿势",
+          "premium": "40种姿势"
+        }
+      }
+    },
+    "DataSecurity": {
+      "title": "我们重视数据隐私",
+      "subtitle": {
+        "line1": "受到财富500强领袖和顶级专业人士的信任",
+        "line2": "知名企业组织和团队信任我们处理他们的数据"
+      },
+      "features": {
+        "noSelling": {
+          "title": "不出售数据，不分享",
+          "description": "我们永远不会出售您的数据或与第三方网站分享。"
+        },
+        "control": {
+          "title": "您的照片，您做主",
+          "description": "未经您许可，我们不会使用您的照片训练AI。"
+        },
+        "autoDeletion": {
+          "title": "自动删除数据",
+          "description": "系统会在90天后自动删除所有您的图片。您可以选择按自己的方式保存设置。"
+        },
+        "security": {
+          "title": "顶级安全",
+          "description": "我们对所有敏感用户数据进行加密。我们使用行业最信任的软件保护您的数据。"
+        }
+      },
+      "createButton": "创建您的形象照"
+    },
+    "TeamSection": {
+      "title": {
+        "why": "为什么选择",
+        "gostudio": "GOSTUDIO.AI?"
+      },
+      "description": "通过Aaria轻松制作的工作室级形象照，为您的团队创建统一、专业的形象。我们提供反映公司价值观的精致肖像。无需昂贵的拍摄—只需无缝、高质量的结果。",
+      "teamHeadshots": "团队形象照",
+      "tryNow": "立即尝试"
+    },
+    "CreationGallery": {
+      "title": "偷看我的创作",
+      "description": "我很兴奋能与您分享我的作品一瞥。",
+      "createButton": "创建您的形象照"
+    },
+    "FAQ": {
+      "title": "常见问题",
+      "questions": {
+        "whatIs": {
+          "question": "什么是GoStudio.ai？它是如何工作的？",
+          "answer": "GoStudio.ai使用您自己的照片训练一个定制AI模型，该模型代表您的外表并可以生成各种风格和服装的形象照。生成的形象照质量取决于您上传的照片。您应该尝试从不同角度拍摄您的脸部、眼睛。每张照片都应该展示您外表和面部特征的新方面。"
+        },
+        "photoRequirements": {
+          "question": "我需要上传什么样的照片？",
+          "answer": "多样性是关键。不同的面部表情和不同的背景，在一天中不同时间拍摄的照片是高质量输入照片的关键。哦，请尽量少化妆和佩戴饰品！"
+        },
+        "ownership": {
+          "question": "谁拥有生成照片的版权？",
+          "answer": "您完全拥有您上传的照片和AI生成的图像的版权。您的照片仅用于训练您的个人AI模型，绝不会与其他用户分享。"
+        },
+        "timing": {
+          "question": "需要多长时间才能得到我的形象照？",
+          "answer": "从上传到收到第一组AI生成的形象照，这个过程通常需要15-20分钟。之后您可以立即生成其他变体。"
+        },
+        "satisfaction": {
+          "question": "如果我对结果不满意怎么办？",
+          "answer": "我们提供满意保证。如果您对结果不满意，我们会与您合作改进或提供全额退款。"
+        },
+        "linkedin": {
+          "question": "我可以在LinkedIn和其他专业平台上使用这些照片吗？",
+          "answer": "当然可以！我们的AI生成的形象照非常适合LinkedIn、公司网站、名片和其他专业用途。"
+        },
+        "whichAI": {
+          "question": "你们使用哪种AI技术？",
+          "answer": "我们使用专有的先进AI技术组合，包括最先进的图像生成模型，专门优化用于创建专业形象照。"
+        },
+        "dataSecurity": {
+          "question": "你们如何处理数据安全和隐私？",
+          "answer": "我们非常重视您的隐私。您的照片经过加密，安全存储，仅用于您的个人AI模型。我们绝不会与第三方分享您的数据。"
+        }
+      }
+    },
+    "login": {
+      "title": "登录/注册",
+      "emailLabel": "电子邮箱",
+      "emailPlaceholder": "example@mybiz.com",
+      "emailRequired": "电子邮箱为必填项",
+      "emailInvalid": "无效的电子邮箱地址",
+      "googleButton": "使用谷歌账号继续",
+      "mostUsed": "最常用",
+      "orDivider": "或使用电子邮箱继续",
+      "submitButton": "获取邮箱验证码",
+      "infoText": "您将在收件箱中收到一个一次性验证码。",
+      "termsText": "注册即表示您接受我们的",
+      "termsLink": "服务条款",
+      "andText": "和",
+      "privacyLink": "隐私政策",
+      "errors": {
+        "loginFailed": "登录失败",
+        "invalidEmail": "无效的电子邮箱地址",
+        "googleSignInFailed": "谷歌登录失败",
+        "tryAgain": "请重试。如果问题持续存在，请联系客服支持。"
+      },
+      "testimonial": "照片比我尝试过的一些工作室的还要好",
+      "testimonialAuthor": "陈萨拉"
+    },
+    "waitingForMagicLink": {
+      "title": "请查看您的邮箱以继续",
+      "description": "我们已经向您发送了一个魔法链接以访问您的账户。",
+      "hint": "提示：它可能在您的垃圾邮件文件夹中。",
+      "backButton": "返回"
+    },
+    "loginFail": {
+      "title": "登录错误",
+      "defaultError": "出现问题，请联系客服支持。",
+      "browserError": "糟糕！看起来您试图从另一个设备或浏览器打开魔法链接。",
+      "hint": "提示：请确保在您尝试注册的同一设备/浏览器上打开链接。",
+      "loginLink": "登录"
+    },
+    "navbar": {
+      "loginButton": "登录/注册"
+    },
+    "userMenu": {
+      "credits": "积分",
+      "logout": "退出登录"
+    },
+    "navigation": {
+      "headshotPacks": "形象照套餐",
+      "photoshootPacks": "摄影套餐",
+      "freeTools": "免费工具",
+      "backgroundLibrary": "背景库",
+      "backgroundRemover": "背景移除工具",
+      "testimonial": "用户评价",
+      "pricing": "价格",
+      "faq": "常见问题"
+    },
+    "sidebar": {
+      "dashboard": "控制面板",
+      "myHeadshots": "我的形象照",
+      "photoEditorTools": "照片编辑工具",
+      "aiImageGenerator": "AI图像生成器",
+      "logout": "退出登录",
+      "loggingOut": "正在退出..."
+    },
+    "overview": {
+      "myHeadshots": "我的形象照",
+      "generateImagesMessage": "开始生成图片，Aaria在这里为您生成照片！",
+      "generateImages": "生成图片"
+    },
+    "summary": {
+      "orderSummary": "订单摘要",
+      "summaryDescription": "与传统拍摄相比节省数百元。通过手动编辑自定义您的AI专业形象照，如果初次上传效果不理想可以重新生成",
+      "uploadedPhotos": "已上传照片",
+      "processing": "处理中...",
+      "startTraining": "开始训练",
+      "noModelData": "无模型数据",
+      "noModelDataDesc": "未找到模型数据。请返回并先创建模型",
+      "generateHeadshots": "生成形象照",
+      "loading": "加载中...",
+      "detectedFeatures": "这些是Aaria检测到的特征。如有需要，您也可以编辑",
+      "age": "年龄",
+      "eyeColor": "眼睛颜色",
+      "hairColor": "头发颜色",
+      "gender": "性别",
+      "ethnicity": "族裔",
+      "notSpecified": "未指定",
+      "enterEyeColor": "输入眼睛颜色",
+      "enterHairColor": "输入头发颜色",
+      "enterEthnicity": "输入族裔",
+      "save": "保存",
+      "male": "男性",
+      "female": "女性",
+      "selectedPack": "已选套餐",
+      "basic": "基础版",
+      "standard": "标准版",
+      "premium": "高级版",
+      "noPackSelected": "未选择套餐",
+      "features": {
+        "headshots": {
+          "basic": "10张专业AI形象照",
+          "standard": "30张专业AI形象照",
+          "premium": "100张专业AI形象照"
+        },
+        "processing": {
+          "basic": "24小时处理时间",
+          "standard": "12小时处理时间",
+          "premium": "6小时处理时间"
+        },
+        "outfits": {
+          "basic": "2套服装",
+          "standard": "4套服装",
+          "premium": "8套服装"
+        },
+        "poses": {
+          "basic": "2种姿势",
+          "standard": "4种姿势",
+          "premium": "8种姿势"
+        }
+      }
+    },
+    "checkout": {
+      "title": "结账",
+      "subtitle": "与传统拍摄相比节省数百元。通过手动编辑自定义您的AI专业形象照，如果初次上传效果不理想可以重新生成。",
+      "standardBadge": "82%选择此计划",
+      "premiumBadge": "最佳价值",
+      "subtotal": "小计",
+      "tax": "税费",
+      "totalDue": "今日应付总额",
+      "noSubscription": "无需订阅",
+      "oneTimePayment": "一次性付款"
+    },
+    
+      "photoTypes": {
+        "title": "专业AI照片风格",
+        "subtitle": "从我们丰富多样的AI驱动照片风格中选择，创作您完美的专业形象照",
+        "showMore": "查看全部风格",
+        "showLess": "收起",
+        "types": {
+          "vintageAmericana": {
+            "title": "复古美式照片",
+            "description": "带有美式风格的专业头像，非常适合领英和商务社交"
+          },
+          "onesiePortraits": {
+            "title": "婴儿连体服写真",
+            "description": "可爱的婴幼儿写真照"
+          },
+          "halloweenPhotos": {
+            "title": "万圣节照片",
+            "description": "为万圣节爱好者准备的有趣又神秘的写真"
+          },
+          "birthdayParty": {
+            "title": "生日派对纪念照",
+            "description": "自然真实的约会资料照片"
+          },
+          "artisticPortraits": {
+            "title": "艺术写真",
+            "description": "富有创意和艺术感的人像摄影"
+          },
+          "wrestlemaniaPhotos": {
+            "title": "摔角风格照片",
+            "description": "展现力量与个性的动感摔角主题写真"
+          },
+          "redCarpet": {
+            "title": "演员红毯照",
+            "description": "灵感来自红毯的魅力与精致写真"
+          },
+          "gameOfThrones": {
+            "title": "权力的游戏写真",
+            "description": "权力的游戏风格的奇幻主题写真"
+          },
+          "kidsBirthday": {
+            "title": "儿童生日写真",
+            "description": "捕捉儿童生日特殊时刻的写真"
+          },
+          "mythicalCreatures": {
+            "title": "神话生物写真",
+            "description": "以神话生物为主题的奇幻写真"
+          },
+          "onlineDating": {
+            "title": "网络约会资料照",
+            "description": "完美的在线交友资料照片"
+          },
+          "petPhotography": {
+            "title": "宠物摄影",
+            "description": "专业的宠物写真服务"
+          },
+          "popColor": {
+            "title": "波普彩色照片",
+            "description": "受波普艺术影响的鲜艳写真"
+          },
+          "youtubeThumbnails": {
+            "title": "YouTube封面照",
+            "description": "完美适配YouTube缩略图的醒目写真"
+          },
+          "actressPortraits": {
+            "title": "女演员写真",
+            "description": "生动细致的植物和花卉摄影"
+          },
+          "dreamlandKids": {
+            "title": "梦幻儿童照",
+            "description": "在梦幻场景中拍摄的魔幻儿童写真"
+          },
+          "babyDoodles": {
+            "title": "宝宝涂鸦照",
+            "description": "将宝宝照片转换成可爱的涂鸦风格写真。完美适合婴儿房装饰和新生儿通知"
+          },
+          "birthdayMagic": {
+            "title": "生日魔法照",
+            "description": "创作适合庆祝、邀请和特殊场合的梦幻生日写真"
+          },
+          "personalBrand": {
+            "title": "个人品牌摄影",
+            "description": "专业摄影方案，提升您的个人品牌并创造统一的视觉形象"
+          },
+          "casualPhotography": {
+            "title": "休闲写真",
+            "description": "适合社交媒体和日常专业需求的自然轻松写真"
+          },
+          "casualCollection": {
+            "title": "休闲写真系列",
+            "description": "创作多样化的休闲生活方式写真，保持一致的在线形象"
+          },
+          "catMagic": {
+            "title": "猫咪魔法照",
+            "description": "将您的猫咪照片转换成展现其独特个性和魅力的魔法写真"
+          },
+          "cyberpunk": {
+            "title": "赛博朋克风",
+            "description": "以未来派数字艺术风格打造震撼的赛博朋克角色形象"
+          },
+          "hanukkahMiracle": {
+            "title": "光明节奇迹",
+            "description": "创作捕捉光明节魔力的精美主题写真"
+          },
+          "happyKid": {
+            "title": "快乐儿童照",
+            "description": "创作捕捉儿童纯真快乐的精彩写真"
+          },
+          "influencer": {
+            "title": "网红写真",
+            "description": "创作完美适合社交媒体和内容创作的精美网红风格写真"
+          },
+          "meIconic": {
+            "title": "标志性个人照",
+            "description": "创作让您在人群中脱颖而出的独特写真风格"
+          },
+          "merryChristmas": {
+            "title": "圣诞快乐照",
+            "description": "创作捕捉节日欢乐与温暖的魔法圣诞写真"
+          },
+          "playfulCasual": {
+            "title": "俏皮休闲照",
+            "description": "创作展现您活泼一面的有趣自然休闲写真"
+          },
+          "podcaster": {
+            "title": "播客主持人照",
+            "description": "创作有助于打造您播客品牌的专业写真"
+          },
+          "romanticMaternity": {
+            "title": "浪漫孕照",
+            "description": "创作庆祝怀孕奇迹的唯美浪漫孕期写真"
+          },
+          "socialMedia": {
+            "title": "社交媒体照",
+            "description": "为所有社交媒体平台优化的精美写真"
+          },
+          "timeMachine": {
+            "title": "时光机照",
+            "description": "穿越时空的精美历史写真和年代主题照片"
+          },
+          "timelessStudio": {
+            "title": "永恒工作室照",
+            "description": "创作具有永恒专业魅力的优雅工作室写真"
+          },
+          "telAvivFashion": {
+            "title": "特拉维夫时尚照",
+            "description": "创作具有都市风格的特拉维夫风格时尚写真"
+          },
+          "wildFriends": {
+            "title": "野趣好友照",
+            "description": "与宠物和动物伙伴一起创作的魔法写真"
+          },
+          "winterWonderland": {
+            "title": "冬日仙境照",
+            "description": "在魔幻雪景中创作梦幻冬日仙境写真"
+          },
+          "workFromHome": {
+            "title": "居家办公照",
+            "description": "创作适合远程工作的专业居家写真"
+          },
+          "vintagePack": {
+            "title": "复古风格包",
+            "description": "创作具有永恒复古美学和经典魅力的精美复古风格写真"
+          },
+          "professionalTattoos": {
+            "title": "专业纹身写真",
+            "description": "通过专业写真展示您的纹身艺术表现"
+          },
+          "annieLeibovitz": {
+            "title": "安妮·莱博维茨风格",
+            "description": "受安妮·莱博维茨标志性摄影风格启发的戏剧性写真"
+          },
+          "barbie": {
+            "title": "芭比风格",
+            "description": "有趣时尚的芭比风格人像摄影"
+          },
+          "vikingPortraits": {
+            "title": "维京写真",
+            "description": "完美适合历史主题和奇幻拍摄的强大维京风格写真"
+          },
+          "marvelClass": {
+            "title": "漫威级别照",
+            "description": "受漫威作品启发的具有电影质感的动感精彩头像"
+          }
+        }
+      },
+      
+        "headshots": {
+          "title": "专业AI商务照片",
+          "subtitle": "数百名商业专业人士每天都在使用HeadshotPro生成职业照片。",
+          "showMore": "查看所有风格",
+          "showLess": "收起",
+          "types": {
+            "doctor": {
+              "title": "医生形象照",
+              "description": "适用于医生和医疗专业人士的专业医疗形象照"
+            },
+            "lawyer": {
+              "title": "律师形象照",
+              "description": "适用于律师和法律事务所的专业形象照"
+            },
+            "actor": {
+              "title": "演员写真",
+              "description": "完美适合时尚、美妆和模特作品集的魅力写真"
+            },
+            "realtor": {
+              "title": "房产经纪风格",
+              "description": "房地产专业人士的专业形象照"
+            },
+            "tedSpeaker": {
+              "title": "TED演讲者风格",
+              "description": "演讲者和主持人的专业形象照"
+            },
+            "businessCasual": {
+              "title": "商务休闲照",
+              "description": "J.Crew风格的经典时尚形象照"
+            },
+            "model": {
+              "title": "模特商务照",
+              "description": "受Helmut Newton风格启发的优雅写真"
+            },
+            "styledSuccess": {
+              "title": "成功风尚",
+              "description": "现代精致造型的专业形象照"
+            },
+            "professional": {
+              "title": "专业套餐",
+              "description": "完美适合企业和商务需求的完整专业形象照套餐"
+            },
+            "partnersCollection": {
+              "title": "合伙人系列",
+              "description": "专为律所合伙人和高管设计的高端形象照"
+            },
+            "lawyerBranded": {
+              "title": "律师品牌形象",
+              "description": "强化您的法律品牌和专业权威的专业形象照"
+            },
+            "effortlessProfessionalism": {
+              "title": "自然专业风格",
+              "description": "保持专业形象的自然亲和力形象照"
+            }
+          }
+        }
+      }
+  

@@ -43,7 +43,7 @@ export default async function LoginSignupPage({ searchParams }: PageProps) {
       // Continue to login page if there's an auth error
     } else if (user) {
       // Redirect if user is authenticated
-      redirect('/overview');
+      return redirect('/overview');
     }
 
     // Get host
@@ -62,13 +62,11 @@ export default async function LoginSignupPage({ searchParams }: PageProps) {
     );
   } catch (error) {
     console.error('Unexpected error:', error);
-    // Show login page with error state
     return (
       <div className="flex flex-col flex-1 w-full h-[calc(100vh-73px)]">
         <LoginPage
           host={null}
           searchParams={searchParams || {}}
-          
         />
       </div>
     );

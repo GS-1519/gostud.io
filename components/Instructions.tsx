@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { usePathname } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 
 // Types
 interface PhotoGuideProps {
@@ -29,6 +30,8 @@ const HeaderIcon: React.FC<{ type: string }> = ({ type }) => {
 
 // Photo Guide Section Component
 const PhotoGuideSection = ({ title, icon, iconColor, images }: PhotoGuideProps) => {
+  const t = useTranslations('photoGuide');
+
   // Create descriptions object from images array
   const descriptions = images.reduce((acc, img) => {
     if (!acc[img.label]) {
@@ -55,7 +58,9 @@ const PhotoGuideSection = ({ title, icon, iconColor, images }: PhotoGuideProps) 
         <div className={`w-6 h-6 ${iconColor} rounded-full flex items-center justify-center shrink-0`}>
           <HeaderIcon type={iconType} />
         </div>
-        <h3 className="font-poppins font-normal text-[24px] leading-[36px]">{title}</h3>
+        <h3 className="font-poppins font-normal text-[24px] leading-[36px]">
+          {t(`sections.${title}`)}
+        </h3>
       </div>
 
       {/* Images Grid */}
@@ -100,6 +105,7 @@ interface InstructionsPageProps {
 
 // Main Instructions Page Component
 const InstructionsPage: React.FC<InstructionsPageProps> = ({ onContinue, user }) => {
+  const t = useTranslations('photoGuide');
   const [countdown, setCountdown] = useState(5);
   const [isCountdownComplete, setIsCountdownComplete] = useState(false);
   const router = useRouter();
@@ -132,95 +138,95 @@ const InstructionsPage: React.FC<InstructionsPageProps> = ({ onContinue, user })
   // Section data
   const sections = [
     {
-      title: "Good Photos to Upload",
+      title: "goodPhotos",
       icon: "/icons/check.svg",
       iconColor: "bg-green-500",
       images: [
         {
           src: "/good/img1.png",
-          alt: "Good photo example 1",
+          alt: t('alt.goodPhoto1'),
           label: "good",
-          description: "Close up selfie"
+          description: t('descriptions.closeUpSelfie')
         },
         {
           src: "/good/img2.png",
-          alt: "Good photo example 2",
+          alt: t('alt.goodPhoto2'),
           label: "good",
-          description: "You face the camera"
+          description: t('descriptions.facingCamera')
         },
         {
           src: "/good/img3.png",
-          alt: "Good photo example 3",
+          alt: t('alt.goodPhoto3'),
           label: "good",
-          description: "Half Body"
+          description: t('descriptions.halfBody')
         },
         {
           src: "/good/img4.png",
-          alt: "Good photo example 4",
+          alt: t('alt.goodPhoto4'),
           label: "good",
-          description: "Only you are visible"
+          description: t('descriptions.onlyVisible')
         }
       ]
     },
     {
-      title: "Photos to avoid",
+      title: "photosToAvoid",
       icon: "/icons/cross.svg",
       iconColor: "bg-red-500",
       images: [
         {
           src: "/bad/img1.png",
-          alt: "Bad photo example 1",
+          alt: t('alt.badPhoto1'),
           label: "bad",
-          description: "Group selfies"
+          description: t('descriptions.groupSelfies')
         },
         {
           src: "/bad/img2.png",
-          alt: "Bad photo example 2",
+          alt: t('alt.badPhoto2'),
           label: "bad",
-          description: "With someone"
+          description: t('descriptions.withSomeone')
         },
         {
           src: "/bad/img3.png",
-          alt: "Bad photo example 3",
+          alt: t('alt.badPhoto3'),
           label: "bad",
-          description: "Hiding the face"
+          description: t('descriptions.hidingFace')
         },
         {
           src: "/bad/img4.png",
-          alt: "Bad photo example 4",
+          alt: t('alt.badPhoto4'),
           label: "bad",
-          description: "Wearing Glasses"
+          description: t('descriptions.wearingGlasses')
         }
       ]
     },
     {
-      title: "Refrain using",
+      title: "refrainUsing",
       icon: "/icons/warning.svg",
       iconColor: "bg-yellow-500",
       images: [
         {
           src: "/bad/img5.png",
-          alt: "Avoid photo example 1",
+          alt: t('alt.avoidPhoto1'),
           label: "warning",
-          description: "Only Face"
+          description: t('descriptions.onlyFace')
         },
         {
           src: "/bad/img6.png",
-          alt: "Avoid photo example 2",
+          alt: t('alt.avoidPhoto2'),
           label: "warning",
-          description: "Nudity"
+          description: t('descriptions.nudity')
         },
         {
           src: "/bad/img7.png",
-          alt: "Avoid photo example 3",
+          alt: t('alt.avoidPhoto3'),
           label: "warning",
-          description: "Blurred Image"
+          description: t('descriptions.blurredImage')
         },
         {
           src: "/bad/img8.png",
-          alt: "Avoid photo example 4",
+          alt: t('alt.avoidPhoto4'),
           label: "warning",
-          description: "Too much shadow"
+          description: t('descriptions.tooMuchShadow')
         }
       ]
     }
@@ -233,9 +239,9 @@ const InstructionsPage: React.FC<InstructionsPageProps> = ({ onContinue, user })
         {/* Header */}
         <div className="mb-12">
           <h1 className="font-poppins font-normal text-[24px] leading-[36px] text-left mb-2">
-            Image Guide
+            {t('title')}
           </h1>
-          <p className="text-gray-600 text-left">Follow the guide to get quality photos.</p>
+          <p className="text-gray-600 text-left">{t('subtitle')}</p>
         </div>
 
         {/* Sections Container */}
@@ -253,27 +259,29 @@ const InstructionsPage: React.FC<InstructionsPageProps> = ({ onContinue, user })
       </div>
 
       {/* Fixed Navigation */}
-      <div className="fixed bottom-0 left-0 right-0 bg-white">
+      <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-100">
         <div className="max-w-[1440px] mx-auto px-4 py-4">
-          <div className="flex justify-center gap-4">
+          <div className="flex justify-center items-center gap-4">
+            {/* Go Back Button */}
             <button 
               onClick={() => router.back()}
               className="h-12 px-6 text-purple-600 font-medium 
                        rounded-full border border-purple-600 
                        hover:bg-purple-50 transition-colors
-                       bg-white">
+                       bg-white flex items-center justify-center min-w-[120px]">
               Go Back
             </button>
 
+            {/* Upload Button */}
             <button 
               onClick={handleUploadClick}
+              disabled={!isCountdownComplete}
               className={`h-12 px-6 font-medium rounded-full 
-                       flex items-center gap-2
-                       transition-all duration-300
+                       flex items-center justify-center gap-2
+                       transition-all duration-300 min-w-[160px]
                        ${isCountdownComplete 
                          ? 'bg-gradient-to-r from-[#8371FF] to-[#01C7E4] text-white hover:opacity-90' 
                          : 'bg-gradient-to-r from-[#8371FF] to-[#01C7E4] text-white hover:opacity-90'}`}
-              disabled={!isCountdownComplete}
             >
               <span>
                 {isCountdownComplete 
@@ -281,9 +289,11 @@ const InstructionsPage: React.FC<InstructionsPageProps> = ({ onContinue, user })
                   : `Upload in... (${countdown} sec left)`
                 }
               </span>
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16V4m0 0L3 8m4-4l4 4" />
-              </svg>
+              {isCountdownComplete && (
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16V4m0 0L3 8m4-4l4 4" />
+                </svg>
+              )}
             </button>
           </div>
         </div>

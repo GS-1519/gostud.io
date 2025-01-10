@@ -1,6 +1,8 @@
+'use client'
 import React from 'react';
 import { DollarSign, Clock, Layers, User } from 'lucide-react';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
 const gradientTextStyle = {
   background: 'linear-gradient(90.21deg, #8371FF 54.14%, #A077FE 77.65%, #01C7E4 99.96%)',
@@ -10,33 +12,35 @@ const gradientTextStyle = {
 };
 
 const ComparisonPage = () => {
+  const t = useTranslations('Comparison');
+
   const comparisonData = [
     {
-      label: 'Value for money',
+      label: t('items.value.label'),
       icon: DollarSign,
-      goStudio: '$19',
-      studio: '$200',
+      goStudio: t('items.value.goStudio'),
+      studio: t('items.value.studio'),
       iconBg: '#22C55E'
     },
     {
-      label: 'Save time',
+      label: t('items.time.label'),
       icon: Clock,
-      goStudio: '30 minutes',
-      studio: '2-3 days',
+      goStudio: t('items.time.goStudio'),
+      studio: t('items.time.studio'),
       iconBg: '#A855F7'
     },
     {
-      label: 'Variety',
+      label: t('items.variety.label'),
       icon: Layers,
-      goStudio: '30 headshots',
-      studio: '4-5 headshots',
+      goStudio: t('items.variety.goStudio'),
+      studio: t('items.variety.studio'),
       iconBg: '#F87171'
     },
     {
-      label: 'More choices',
+      label: t('items.choices.label'),
       icon: User,
-      goStudio: '20 styles',
-      studio: '1 style',
+      goStudio: t('items.choices.goStudio'),
+      studio: t('items.choices.studio'),
       iconBg: '#A855F7'
     }
   ];
@@ -47,22 +51,21 @@ const ComparisonPage = () => {
       <div className="md:hidden">
         <div className="max-w-[992px] mx-auto px-6 py-8">
           <div className="bg-white">
-            {/* Header */}
             <div className="w-[358px] h-auto sm:h-[48px] font-poppins text-[24px] sm:text-[32px] font-[500] leading-[36px] sm:leading-[48px] text-center mx-auto text-[#161C2D] mb-4">
-              SAVE MONEY AND TIME
+              {t('title')}
             </div>
             <p className="text-center text-[15px] text-gray-600 mb-8 max-w-[320px] mx-auto leading-[1.6]">
-              Aaria ensures you're ready for every professional moment. From resumes to LinkedIn, we make your headshots shine effortlessly.
+              {t('description')}
             </p>
 
             {/* Column Headers */}
             <div className="grid grid-cols-[1fr,auto,auto] gap-4 mb-6">
               <div></div>
               <div className="text-[16px] font-medium min-w-[100px] bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4] text-transparent bg-clip-text">
-                Go Studio.ai
+                {t('columns.goStudio')}
               </div>
               <div className="text-gray-400 text-[16px] min-w-[100px]">
-                Studio Photoshoot
+                {t('columns.studio')}
               </div>
             </div>
 
@@ -100,7 +103,7 @@ const ComparisonPage = () => {
             {/* Button */}
             <Link href="/login">
             <button className="w-full bg-[#5B16FE] text-white rounded-[100px] h-[56px] mt-8 flex items-center justify-center gap-2 text-[16px] font-medium px-8">
-              Explore More
+              {t('exploreMore')}
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M13.5 19L20.5 12L13.5 5M3.5 12H20.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
@@ -114,7 +117,7 @@ const ComparisonPage = () => {
       <div className="hidden md:block max-w-[992px] mx-auto py-16">
         <div className="text-center mb-12">
           <h2 className="w-[358px] h-auto sm:h-[48px] font-poppins text-[24px] sm:text-[32px] font-[500] leading-[36px] sm:leading-[48px] text-center mx-auto text-[#161C2D] mb-4">
-            SAVE MONEY AND TIME
+            {t('title')}
           </h2>
         </div>
 
@@ -122,9 +125,9 @@ const ComparisonPage = () => {
         <div className="grid grid-cols-3 gap-8 mb-8">
           <div></div>
           <div className="text-xl font-semibold bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4] text-transparent bg-clip-text">
-            Go Studio.ai
+            {t('columns.goStudio')}
           </div>
-          <div className="text-[#767676] text-xl font-semibold">Studio Photoshoot</div>
+          <div className="text-[#767676] text-xl font-semibold">{t('columns.studio')}</div>
         </div>
 
         {/* Desktop Comparison Items */}
@@ -153,7 +156,7 @@ const ComparisonPage = () => {
         {/* Desktop Button */}
         <div className="flex justify-center mt-12">
           <button className="bg-[#7C3AED] hover:bg-[#6D28D9] text-white px-8 py-3 rounded-full flex items-center justify-center gap-2 transition-colors">
-            Explore More
+            {t('exploreMore')}
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
               <path 
                 d="M5 12H19M19 12L12 5M19 12L12 19" 

@@ -2,7 +2,7 @@
 
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 import { useEffect, useState } from "react";
-import { useRouter, usePathname } from "next/navigation";
+import { useRouter, usePathname, useParams } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import NavItems from "./Navitems";
@@ -10,6 +10,7 @@ import UserMenu from "./UserMenu";
 import final_Logo from '@/public/final_Logo.svg';
 import { User } from '@supabase/auth-helpers-nextjs';
 import { Database } from '@/types/supabase';
+import { useTranslations } from 'next-intl';
 
 interface UserMenuProps {
   user: {
@@ -25,6 +26,9 @@ const Navbar: React.FC = () => {
   const router = useRouter();
   const pathname = usePathname();
   const isHomePage = pathname === '/';
+  const params = useParams();
+  const locale = params?.locale || 'en';
+  const t = useTranslations('navbar');
 
   const supabase = createClientComponentClient<Database>();
 
@@ -75,6 +79,13 @@ const Navbar: React.FC = () => {
     credits: credits || 0
   } : null;
 
+  const switchLanguage = (locale: string) => {
+    const currentPath = pathname;
+    if (currentPath) {
+      router.push(currentPath.replace(/^\/[a-z]{2}/, `/${locale}`));
+    }
+  };
+
   return (
     <>
       <div className="fixed top-0 left-0 right-0 w-full z-40">
@@ -104,20 +115,52 @@ const Navbar: React.FC = () => {
             {/* Right Section */}
             <div className="flex items-center gap-3 sm:gap-4 relative z-[150]">
               {user && userMenuProps ? (
-                <div className="flex items-center">
+                <div className="flex items-center gap-4">
                   <UserMenu 
                     user={userMenuProps.user}
                     credits={userMenuProps.credits}
                   />
+                  <select 
+                    value={locale}
+                    onChange={(e) => switchLanguage(e.target.value)}
+                    className="p-2 rounded-md bg-white text-gray-700 border border-gray-300"
+                  >
+                    <option value="en">English</option>
+                    <option value="ar">العربية</option>
+                    <option value="fr">Français</option>
+                    <option value="de">Deutsch</option>
+                    <option value="cn">中文</option>
+                    <option value="ja">Japanese</option>
+                    <option value="ko">Korean</option>
+                    <option value="fr">French</option>
+
+
+                  </select>
                 </div>
               ) : (
                 // Login Button & Mobile Menu
                 <div className="flex items-center gap-2 sm:gap-4">
-                  <Link href="/login">
+                  <Link href={`/${locale}/login`}>
                     <button className="bg-[#5B16FE] text-white font-semibold text-sm sm:text-base py-2 px-4 sm:px-6 rounded-full hover:bg-[#4c12d3] transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
-                      Login / Sign Up
+                      {t('loginButton')}
                     </button>
                   </Link>
+                  
+                  <select 
+                    value={locale}
+                    onChange={(e) => switchLanguage(e.target.value)}
+                    className="p-2 rounded-md bg-white text-gray-700 border border-gray-300"
+                  >
+                    <option value="en">English</option>
+                    <option value="ar">العربية</option>
+                    <option value="fr">Français</option>
+                    <option value="de">Deutsch</option>
+                    <option value="cn">中文</option>
+                    <option value="ja">Japanese</option>
+                    <option value="ko">Korean</option>
+                    <option value="fr">French</option>
+
+                  </select>
                   
                   {/* Mobile Menu Button */}
                   <button

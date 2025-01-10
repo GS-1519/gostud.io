@@ -29,151 +29,109 @@ if (!appWebhookSecret) {
 }
 
 export async function POST(request: Request) {
-  type PromptData = {
-    id: number;
-    text: string;
-    negative_prompt: string;
-    steps: null;
-    tune_id: number;
-    trained_at: string;
-    started_training_at: string;
-    created_at: string;
-    updated_at: string;
-    images: string[];
-  };
-  
-  const incomingData = (await request.json()) as { prompt: PromptData };
-
-  const prompt = incomingData.prompt;
-
-  console.log("Incoming Data", JSON.stringify(incomingData));
-
-  const urlObj = new URL(request.url);
-  const user_id = urlObj.searchParams.get("user_id");
-  const model_id = urlObj.searchParams.get("model_id");
-  const webhook_secret = urlObj.searchParams.get("webhook_secret");
-
-  if (!model_id) {
-    console.log("No model_id detected!");
-    return NextResponse.json(
-      {
-        message: "Malformed URL, no model_id detected!",
-      },
-      { status: 500 }
-    );
-  }  
-
-  if (!webhook_secret) {
-    console.log("No webhook_secret detected!");
-    return NextResponse.json(
-      {
-        message: "Malformed URL, no webhook_secret detected!",
-      },
-      { status: 500 }
-    );
-  }
-
-  if (webhook_secret.toLowerCase() !== appWebhookSecret?.toLowerCase()) {
-    console.log("Unauthorized!");
-    return NextResponse.json(
-      {
-        message: "Unauthorized!",
-      },
-      { status: 401 }
-    );
-  }
-
-  if (!user_id) {
-    console.log("No user_id detected!");
-    return NextResponse.json(
-      {
-        message: "Malformed URL, no user_id detected!",
-      },
-      { status: 500 }
-    );
-  }
-
-  const supabase = createClient<Database>(
-    supabaseUrl as string,
-    supabaseServiceRoleKey as string,
-    {
-      auth: {
-        autoRefreshToken: false,
-        persistSession: false,
-        detectSessionInUrl: false,
-      },
-    }
-  );
-
-  const {
-    data: { user },
-    error,
-  } = await supabase.auth.admin.getUserById(user_id);
-
-  if (error) {
-    console.log("Error fetching user", { error });
-    return NextResponse.json(
-      {
-        message: error.message,
-      },
-      { status: 401 }
-    );
-  }
-
-  if (!user) {
-    console.log("Unauthorized");
-    return NextResponse.json(
-      {
-        message: "Unauthorized",
-      },
-      { status: 401 }
-    );
-  }
-
   try {
-    // Here we join all of the arrays into one.
-    const allHeadshots = prompt.images;
-    console.log("All Headshots", allHeadshots);
-    
-    const { data: model, error: modelError } = await supabase
-      .from("models")
-      .select("*")
-      .eq("id", model_id)
-      .single();
+    // Log the raw request first
+    const rawBody = await request.text();
+    console.log("🔵 Raw webhook body:", rawBody);
 
-    if (modelError) {
-      console.error("Error fetching model", { modelError });
-      return NextResponse.json(
-        {
-          message: "Something went wrong!",
-        },
-        { status: 500 }
-      );
+    // Parse the JSON data
+    let incomingData;
+    try {
+      incomingData = JSON.parse(rawBody);
+      console.log("🎨 Parsed webhook data:", JSON.stringify(incomingData, null, 2));
+    } catch (e) {
+      console.error("Failed to parse webhook body:", e);
+      throw new Error('Invalid webhook payload');
     }
 
-    await Promise.all(
-      allHeadshots.map(async (image) => {
-        const { error: imageError } = await supabase.from("images").insert({
-          modelid: Number(model.id),
-          uri: image,
-        });
-        if (imageError) {
-          console.error("Error inserting image", { imageError });
+    // Extract URL parameters
+    const url = new URL(request.url);
+    const model_id = url.searchParams.get("model_id");
+    const user_id = url.searchParams.get("user_id");
+    const webhook_secret = url.searchParams.get("webhook_secret");
+
+    console.log("🔑 Webhook parameters:", {
+      model_id,
+      user_id,
+      webhook_secret: webhook_secret ? "Present" : "Missing"
+    });
+
+    // Validate webhook secret
+    if (!webhook_secret || webhook_secret !== process.env.APP_WEBHOOK_SECRET) {
+      console.error("❌ Invalid webhook secret");
+      return NextResponse.json({ message: "Unauthorized" }, { status: 401 });
+    }
+
+    // Initialize Supabase client
+    const supabase = createClient(
+      process.env.NEXT_PUBLIC_SUPABASE_URL!,
+      process.env.SUPABASE_SERVICE_ROLE_KEY!,
+      {
+        auth: {
+          autoRefreshToken: false,
+          persistSession: false
         }
-      })
+      }
     );
+
+    // Extract images from the webhook payload
+    const images = incomingData?.prompt?.images || [];
+    console.log("🖼️ Received images:", {
+      count: images.length,
+      urls: images
+    });
+
+    if (!images || images.length === 0) {
+      console.error("❌ No images in webhook payload");
+      return NextResponse.json({ message: "No images received" }, { status: 400 });
+    }
+
+    // Insert images one by one with detailed logging
+    for (const imageUrl of images) {
+      try {
+        console.log("📝 Attempting to insert image:", {
+          modelId: model_id,
+          imageUrl
+        });
+
+        const { data, error } = await supabase
+          .from("images")
+          .insert({
+            modelId: model_id,
+            uri: imageUrl
+          })
+          .select()
+          .single();
+
+        if (error) {
+          console.error("❌ Image insertion failed:", {
+            error,
+            modelId: model_id,
+            imageUrl
+          });
+        } else {
+          console.log("✅ Image inserted successfully:", {
+            imageId: data.id,
+            modelId: model_id
+          });
+        }
+      } catch (err) {
+        console.error("❌ Error processing image:", {
+          error: err,
+          imageUrl
+        });
+      }
+    }
+
+    return NextResponse.json({
+      message: "Webhook processed",
+      imagesProcessed: images.length
+    });
+
+  } catch (error) {
+    console.error("❌ Webhook processing error:", error);
     return NextResponse.json(
-      {
-        message: "success",
-      },
-      { status: 200, statusText: "Success" }
-    );
-  } catch (e) {
-    console.error("Error inserting images", e);
-    return NextResponse.json(
-      {
-        message: "Something went wrong!",
-      },
+      { message: "Error processing webhook" },
       { status: 500 }
     );
   }

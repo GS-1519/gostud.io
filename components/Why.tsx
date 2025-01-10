@@ -1,44 +1,42 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
-interface WhyProps {
-  country?: string;
-}
-
-const WhySection: React.FC<WhyProps> = ({ country = 'global' }) => {
-  const [activeFeature, setActiveFeature] = React.useState(0);
+const WhySection = () => {
+  const [activeFeature, setActiveFeature] = useState(0);
+  const t = useTranslations('Why');
 
   const features = [
     {
-      title: 'Stand Out on LinkedIn',
-      description: 'Make a powerful first impression with a professional headshot that boosts your profile views and credibility.',
+      title: t('features.linkedin.title'),
+      description: t('features.linkedin.description'),
       isActive: true,
       image:'/logos/img1.png' 
     },
     {
-      title: 'Make Resumes Shine',
-      description: 'Elevate your application with a polished headshot that adds a personal touch and professionalism.',
+      title: t('features.resume.title'),
+      description: t('features.resume.description'),
       isActive: false,
       image:'/logos/img2.png'
     },
     {
-      title: 'Events and Conferences',
-      description: 'Represent you best self. Use professional headshots for speaker profiles, event directories, or badges.',
+      title: t('features.events.title'),
+      description: t('features.events.description'),
       isActive: false,
       image:'/logos/img3.png'
     },
     {
-      title: 'Personalize Your Business Cards',
-      description: 'Leave a lasting impression with a crisp, professional headshot that reflects your brand.',
+      title: t('features.business.title'),
+      description: t('features.business.description'),
       isActive: false,
       image:'/logos/img4.png' 
     },
     {
-      title: 'Boost Your Online Presence',
-      description: 'Use eye-catching photos for platforms like Instagram, Facebook, Twitter even for your dating profiles.',
+      title: t('features.online.title'),
+      description: t('features.online.description'),
       isActive: false,
       image:'/logos/img5.png'
     }
@@ -49,11 +47,14 @@ const WhySection: React.FC<WhyProps> = ({ country = 'global' }) => {
       {/* Mobile Version */}
       <div className="md:hidden w-full max-w-[358px] mx-auto p-4">
         <div className="text-center text-2xl font-bold mb-4 font-poppins">
-          WHY <span className="bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4] text-transparent bg-clip-text">GOSTUDIO.AI?</span>
+          <span>{t('title.why')}</span>{' '}
+          <span className="bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4] text-transparent bg-clip-text">
+            {t('title.gostudio')}
+          </span>
         </div>
         
         <p className="text-center text-gray-600 mb-8">
-          Aaria ensures you're ready for every professional moment. From resumes to LinkedIn, we make your headshots shine effortlessly.
+          {t('description')}
         </p>
 
         <div className="bg-[#F8F7FF] rounded-2xl p-6 mb-6 relative h-[300px]">
@@ -114,7 +115,7 @@ const WhySection: React.FC<WhyProps> = ({ country = 'global' }) => {
         </div>
         <Link href="/login">
         <button className="w-full bg-[#7C3AED] text-white rounded-full py-3 flex items-center justify-center gap-2">
-          Try Now
+          {t('tryNow')}
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
             <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
@@ -124,12 +125,15 @@ const WhySection: React.FC<WhyProps> = ({ country = 'global' }) => {
 
       {/* Desktop Version */}
       <div className="hidden md:block max-w-[1440px] mx-auto py-16 px-[120px]">
-        <h2 className="w-[304px] h-[48px] text-center mx-auto font-poppins font-medium text-[32px] leading-[48px]">
-          WHY <span className="bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4] text-transparent bg-clip-text">GOSTUDIO.AI?</span>
+        <h2 className="text-center mx-auto font-poppins font-medium text-[32px] leading-[48px]">
+          <span>{t('title.why')}</span>{' '}
+          <span className="bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4] text-transparent bg-clip-text">
+            {t('title.gostudio')}
+          </span>
         </h2>
         
         <p className="w-[886.52px] h-[54px] text-center mx-auto font-poppins font-normal text-[18px] leading-[27px] text-[#161C2D] mb-12">
-          Aaria ensures you're ready for every professional moment. From resumes to LinkedIn, we make your headshots shine effortlessly.
+          {t('description')}
         </p>
 
         <div className="flex gap-[100px]">
@@ -188,7 +192,7 @@ const WhySection: React.FC<WhyProps> = ({ country = 'global' }) => {
         <Link href="/login">
         <div className="flex justify-center mt-12">
           <button className="w-[269px] h-[48px] bg-[#5B16FE] text-white rounded-[49px] px-[25px] py-[12px] flex items-center justify-center gap-[10px] font-poppins">
-            Try Now
+            {t('tryNow')}
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
               <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>

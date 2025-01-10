@@ -1,0 +1,700 @@
+{
+  "hero": {
+    "title": "Professional Headshots using your Selfies",
+    "description": "Stand out on LinkedIn, Twitter, with recruiters. Upload your selfies and receive hundreds of professional headshots all from your favorite AI photographer \"Aaria\".",
+    "features": {
+      "styles": "150+ styles and outfits",
+      "delivery": "Results within 1 hour",
+      "protection": "Strict Data Protection",
+      "guarantee": "Moneyback Guarantee"
+    },
+    "button": "Try Now",
+    "tryNow": "Get Started Now →"
+  },
+  "ExplainerSection": {
+    "title": "3 EASY STEPS TO GET YOUR STUDIO QUALITY PROFILE.",
+    "step1": {
+      "title": "Upload a few photos",
+      "description": "Upload a few photos of yourself to let AI learn about you."
+    },
+    "step2": {
+      "title": "Our AI Photographer \"Aaria\" get to work",
+      "description": "Aaria creates a private, personalized model just for you—ensuring headshots that reflect your unique style and identity."
+    },
+    "step3": {
+      "title": "Download favorite Headshots",
+      "description": "You'll receive a variety of styles, giving you the perfect Headshots to elevate your business professional profile."
+    },
+    "tryNow": "Try Now"
+  },
+  "PhotographyGrid": {
+    "title": "OUR PACKS-YOU NAME IT, WE HAVE IT.",
+    "description": "Explore our complete range of photography packs, crafted to suit every style and need. From professional portraits to creative edits, we've got it all covered. Whatever your vision, our AI photographer brings it to life effortlessly.",
+    "tryNow": "Try Now",
+    "packs": {
+      "corporate": "Corporate Headshots",
+      "speaker": "Speaker Pack",
+      "doctor": "Medical Professional",
+      "realtor": "Real Estate Agent",
+      "dating": "Dating Profile",
+      "redcarpet": "Red Carpet",
+      "boldcolors": "Bold Colors",
+      "tattoo": "Tattoo Artist",
+      "glamour": "Glamour Shot",
+      "barbie": "Barbie Style",
+      "halloween": "Halloween Theme",
+      "mythical": "Mythical"
+    }
+  },
+  "Comparison": {
+    "title": "SAVE MONEY AND TIME",
+    "description": "Aaria ensures you're ready for every professional moment. From resumes to LinkedIn, we make your headshots shine effortlessly.",
+    "columns": {
+      "goStudio": "Go Studio.ai",
+      "studio": "Studio Photoshoot"
+    },
+    "items": {
+      "value": {
+        "label": "Value for money",
+        "goStudio": "$19",
+        "studio": "$200"
+      },
+      "time": {
+        "label": "Save time",
+        "goStudio": "30 minutes",
+        "studio": "2-3 days"
+      },
+      "variety": {
+        "label": "Variety",
+        "goStudio": "30 headshots",
+        "studio": "4-5 headshots"
+      },
+      "choices": {
+        "label": "More choices",
+        "goStudio": "20 styles",
+        "studio": "1 style"
+      }
+    },
+    "exploreMore": "Explore More"
+  },
+  "Why": {
+    "title": {
+      "why": "WHY",
+      "gostudio": "GOSTUDIO.AI?"
+    },
+    "description": "Transform your professional image with AI-powered headshots. Get studio-quality photos for LinkedIn, resumes, and more in minutes.",
+    "features": {
+      "linkedin": {
+        "title": "Stand Out on LinkedIn",
+        "description": "Make a powerful first impression with a professional headshot that boosts your profile views and credibility."
+      },
+      "resume": {
+        "title": "Make Your Resume Shine",
+        "description": "Elevate your job applications with a polished headshot that adds a personal touch and professionalism."
+      },
+      "events": {
+        "title": "Events & Conferences",
+        "description": "Present your best self at professional events. Perfect for speaker profiles, event directories, and badges."
+      },
+      "business": {
+        "title": "Business Cards & Branding",
+        "description": "Create a consistent professional image across all your business materials with high-quality headshots."
+      },
+      "online": {
+        "title": "Digital Presence",
+        "description": "Look professional across all platforms - from social media to company websites and professional networks."
+      }
+    },
+    "tryNow": "Try Now"
+  },
+  "HeadshotReview": {
+    "title": {
+      "part1": "PHOTOS ALREADY CREATED FOR",
+      "part2": "HAPPY CUSTOMERS"
+    },
+    "description": "Not made in a studio. Created by AI. Don't just take our word for it. Our AI turns everyday photos into professional headshots, that reflect your confidence & credibility.",
+    "createButton": "Create Your Headshot",
+    "testimonials": {
+      "col1": {
+        "1": "The results are stunning and tailored according to me. These AI headshots are next level.",
+        "2": "I tested the platform with a range of product images, and I was pleased with the outcomes.",
+        "3": "Amazing Product Photo generator site ever!"
+      },
+      "col2": {
+        "1": "As an online retailer, high-quality product images are crucial. I uploaded a few photos of my jewelry, and the AI generated multiple stunning options that showcased the pieces beautifully. The variety allowed me to select different backgrounds and angles to highlight my products effectively.",
+        "2": "A must-have tool for e-commerce!",
+        "3": "Upload once, and you get so many options to pick from."
+      },
+      "col3": {
+        "1": "Excellent quality and diversity in photos.",
+        "2": "Fast and user-friendly interface. I appreciate how easy this platform is to use.",
+        "3": "I appreciate how easy this platform is to use. I was impressed with how many options I received. While most of them were great, there were a couple that didn't quite capture the product as I hoped. However, it's easy to filter through and find the best ones. Overall, a fantastic tool that saves me a lot of effort!"
+      },
+      "col4": {
+        "1": "The AI is incredibly smart at generating diverse images. It's like having a mini photo studio!",
+        "2": "I love how the platform gives several options after uploading a single image. It's easy to pick a style or background that matches my aesthetic. Still, the convenience of multiple results and the overall quality are worth it! It's a time-saver, especially if you need variety for social media.",
+        "3": "Very satisfied with the quick service and quality."
+      }
+    }
+  },
+  "Pricing": {
+    "title": "PREMIUM QUALITY AT 10 TIMES LESS PRICE",
+    "description": "No studio visits. No $200+ photoshoot fees. No waiting for appointments. Achieve stunning, professional-grade headshots in just 30 minutes—all from the comfort of your home.",
+    "badges": {
+      "mostPopular": "82% pick this plan",
+      "bestValue": "Best Value"
+    },
+    "oneTimePayment": "One Time Payment",
+    "noSubscription": "No subscription required",
+    "tryNow": "Try Now",
+    "features": {
+      "headshots": {
+        "basic": "20 high-quality headshots",
+        "standard": "60 high-quality headshots",
+        "premium": "100 high-quality headshots"
+      },
+      "processing": {
+        "basic": "2-hour processing time",
+        "standard": "1-hour processing time",
+        "premium": "30-min processing time"
+      },
+      "outfits": {
+        "basic": "5 outfits and backgrounds",
+        "standard": "20 outfits and backgrounds",
+        "premium": "40 outfits and backgrounds"
+      },
+      "poses": {
+        "basic": "5 poses",
+        "standard": "20 poses",
+        "premium": "40 poses"
+      }
+    }
+  },
+  "DataSecurity": {
+    "title": "WE VALUE DATA PRIVACY",
+    "subtitle": {
+      "line1": "Trusted by Fortune 500 Leaders and Top professionals",
+      "line2": "Reputed enterprise organizations and teams trust us with their data"
+    },
+    "features": {
+      "noSelling": {
+        "title": "NO DATA SELLING, NO SHARING",
+        "description": "We will never sell your data or share with the third party websites."
+      },
+      "control": {
+        "title": "YOUR PHOTOS, YOUR CONTROL",
+        "description": "We won't use your photos to train AI without your permissions."
+      },
+      "autoDeletion": {
+        "title": "AUTO DELETION OF DATA",
+        "description": "The system automatically deletes all your images after 90 days. You choose to keep the setting your way."
+      },
+      "security": {
+        "title": "TOP-NOTCH SECURITY",
+        "description": "We encrypt all sensitive user data. We use industry's best trusted software for your data."
+      }
+    },
+    "createButton": "Create Your Headshot"
+  },
+  "TeamSection": {
+    "title": {
+      "why": "WHY",
+      "gostudio": "GOSTUDIO.AI?"
+    },
+    "description": "Create a unified, professional look for your team with studio-quality headshots, effortlessly crafted by Aaria. We deliver polished portraits that reflect your company's values. No costly photo shoots—just seamless, high-quality results.",
+    "teamHeadshots": "Team Headshots",
+    "tryNow": "Try Now"
+  },
+  "CreationGallery": {
+    "title": "TAKE A SNEAK PEEK INTO MY CREATIONS",
+    "description": "I'm excited to share a glimpse of my work with you.",
+    "createButton": "Create Your Headshot"
+  },
+  "FAQ": {
+    "title": "Frequently Asked Questions",
+    "questions": {
+      "whatIs": {
+        "question": "What is GoStudio.ai? How does it work?",
+        "answer": "GoStudio.ai uses your own photos to train a custom AI model that represents your appearance and can generate your headshots in various styles and clothing. The quality of the generated headshots depends on the pictures you upload. You should try to have different perspectives of your face, eyes, and various angles. Each picture should represent something new about your appearance and facial features."
+      },
+      "photoRequirements": {
+        "question": "What kind of photos do I need to upload?",
+        "answer": "Make variety a priority. Varied facial expressions and varied backgrounds, taken at various times of the day, are the keys to high-quality input photos. Oh, and minimal makeup and accessories, please!"
+      },
+      "ownership": {
+        "question": "Who owns the rights to the generated photos?",
+        "answer": "You retain full ownership of both the photos you upload and the AI-generated images. Your photos are used solely to train your personal AI model and are never shared with other users."
+      },
+      "timing": {
+        "question": "How long does it take to get my headshots?",
+        "answer": "The process typically takes about 15-20 minutes from upload to receiving your first set of AI-generated headshots. You can then generate additional variations instantly."
+      },
+      "satisfaction": {
+        "question": "What if I'm not satisfied with the results?",
+        "answer": "We offer a satisfaction guarantee. If you're not happy with your results, we'll work with you to improve them or provide a full refund."
+      },
+      "linkedin": {
+        "question": "Can I use these photos on LinkedIn and other professional platforms?",
+        "answer": "Absolutely! Our AI-generated headshots are perfect for LinkedIn, company websites, business cards, and other professional uses."
+      },
+      "whichAI": {
+        "question": "Which AI technology do you use?",
+        "answer": "We use a proprietary blend of advanced AI technologies, including state-of-the-art image generation models, specifically optimized for creating professional headshots."
+      },
+      "dataSecurity": {
+        "question": "How do you handle data security and privacy?",
+        "answer": "We take your privacy seriously. Your photos are encrypted, stored securely, and used only for your personal AI model. We never share your data with third parties."
+      }
+    }
+  },
+  "login": {
+    "title": "Log in / Sign up",
+    "emailLabel": "Email",
+    "emailPlaceholder": "example@mybiz.com",
+    "emailRequired": "Email is required",
+    "emailInvalid": "Invalid email address",
+    "googleButton": "Continue with Google",
+    "mostUsed": "Most Used",
+    "orDivider": "Or continue with email",
+    "submitButton": "Get code on E-mail",
+    "infoText": "You will receive a one time code in your inbox.",
+    "termsText": "By signing up, you accept our",
+    "termsLink": "Terms & Conditions",
+    "andText": "and",
+    "privacyLink": "Privacy Policy",
+    "errors": {
+      "loginFailed": "Login failed",
+      "invalidEmail": "Invalid Email Address",
+      "googleSignInFailed": "Google sign-in failed",
+      "tryAgain": "Please try again. If the problem persists, contact support."
+    },
+    "testimonial": "Photos came out better than some studios I've tried",
+    "testimonialAuthor": "Sarah Chen"
+  },
+  "waitingForMagicLink": {
+    "title": "Check your email to continue",
+    "description": "We've emailed you a magic link to access your account.",
+    "hint": "Hint: it might be in your spam folder.",
+    "backButton": "Go back"
+  },
+  "loginFail": {
+    "title": "Login Error",
+    "defaultError": "Something went wrong, please reach out to support.",
+    "browserError": "Oops! It looks like you tried to open your magic link from another device or browser.",
+    "hint": "Hint: Please make sure you open the link on the same device / browser from which you tried to signup.",
+    "loginLink": "Login"
+  },
+  "navbar": {
+    "loginButton": "Login / Sign Up"
+  },
+  "userMenu": {
+    "credits": "Credits",
+    "logout": "Logout"
+  },
+  "navigation": {
+    "headshotPacks": "Headshot Packs",
+    "photoshootPacks": "Photoshoot Packs",
+    "freeTools": "Free Tools",
+    "backgroundLibrary": "Background Library",
+    "backgroundRemover": "Background Remover",
+    "testimonial": "Testimonial",
+    "pricing": "Pricing",
+    "faq": "FAQ"
+  },
+  "sidebar": {
+    "dashboard": "Dashboard",
+    "myHeadshots": "My Headshots",
+    "photoEditorTools": "Photo Editor Tools",
+    "aiImageGenerator": "AI Image Generator",
+    "logout": "Log Out",
+    "loggingOut": "Logging out..."
+  },
+  "overview": {
+    "myHeadshots": "My Headshots",
+    "generateImagesMessage": "Start generating images, Aaria is here to generate your photos!",
+    "generateImages": "Generate Images"
+  },
+  "packs": {
+    "title": "Packs",
+    "description": "Choose a pack to start generating images.",
+    "selectPack": "01/ Select Pack",
+    "instructions": "02/ Instructions",
+    "uploadPhotos": "03/ Upload Photos",
+    "getCredits": "04/ Get Credits",
+    "summary": "05/ Summary",
+    "errorFetching": "Error fetching packs",
+    "requestFailed": "Request failed with status code 404"
+  },
+  "packsGallery": {
+    "loading": "Loading packs...",
+    "noPacks": "No packs available.",
+    "continueButton": "Continue",
+    "errors": {
+      "fetchTitle": "Error fetching packs",
+      "unknownTitle": "Unknown error",
+      "unknownDescription": "An unknown error occurred."
+    },
+    "categories": {
+      "adults": "Professional & Lifestyle Packs",
+      "children": "Children Packs",
+      "pets": "Pet Packs",
+      "default": "{category} Packs"
+    },
+    "packDetails": {
+      "close": "Close",
+      "select": "Select Pack",
+      "imagesIncluded": "Images included",
+      "price": "Price"
+    }
+  },
+  "photoGuide": {
+    "title": "Image Guide",
+    "subtitle": "Follow the guide to get quality photos.",
+    "sections": {
+      "goodPhotos": "Good Photos to Upload",
+      "photosToAvoid": "Photos to avoid",
+      "refrainUsing": "Refrain using"
+    },
+    "descriptions": {
+      "closeUpSelfie": "Close up selfie",
+      "facingCamera": "You face the camera",
+      "halfBody": "Half Body",
+      "onlyVisible": "Only you are visible",
+      "groupSelfies": "Group selfies",
+      "withSomeone": "With someone",
+      "hidingFace": "Hiding the face",
+      "wearingGlasses": "Wearing Glasses",
+      "onlyFace": "Only Face",
+      "nudity": "Nudity",
+      "blurredImage": "Blurred Image",
+      "tooMuchShadow": "Too much shadow"
+    },
+    "alt": {
+      "goodPhoto1": "Good photo example 1",
+      "goodPhoto2": "Good photo example 2",
+      "goodPhoto3": "Good photo example 3",
+      "goodPhoto4": "Good photo example 4",
+      "badPhoto1": "Bad photo example 1",
+      "badPhoto2": "Bad photo example 2",
+      "badPhoto3": "Bad photo example 3",
+      "badPhoto4": "Bad photo example 4"
+    }
+  },
+  "trainModel": {
+    "notEnoughInfo": "Not enough information",
+    "uploadRequirements": "Please upload at least 4 images and ensure model information is available.",
+    "uploadingImages": "Uploading images...",
+    "pleaseWait": "Please wait while we process your photos",
+    "startUploading": "Start Uploading photos",
+    "uploadFiles": "Upload files",
+    "dragDropHint": "Click to upload or drag and drop",
+    "fileTypes": "PNG, JPG, HEIC up to 120MB",
+    "goodPhotos": "Good Photos",
+    "badPhotos": "Bad Photos",
+    "continue": "Continue",
+    "imageGuide": "Image Guide",
+    "followGuide": "Follow the guide to get quality photos.",
+    "photoRequirements": "To ensure better photo quality, Aaria requires 1 half-body and 7 close-up images of you facing the camera.",
+    "autoCropBanner": "You can now auto-crop your group selfies! Simply tap on the image you want to crop, and we'll take care of it for you."
+  },
+  "checkout": {
+    "title": "CHECK-OUT",
+    "subtitle": "Save hundreds compared to a photo shoot. Customize your AI professional headshot with manual edits or get a redo if the initial uploads were wrong.",
+    "standardBadge": "82% pick this plan",
+    "premiumBadge": "Best Value",
+    "subtotal": "Subtotal",
+    "tax": "Tax",
+    "totalDue": "Total due today",
+    "noSubscription": "No subscription required",
+    "oneTimePayment": "One Time Payment",
+    "features": {
+      "headshots": {
+        "basic": "10 Professional AI Headshots",
+        "standard": "30 Professional AI Headshots",
+        "premium": "100 Professional AI Headshots"
+      },
+      "processing": {
+        "basic": "24-hour processing time",
+        "standard": "12-hour processing time",
+        "premium": "6-hour processing time"
+      },
+      "outfits": {
+        "basic": "2 Outfits",
+        "standard": "4 Outfits",
+        "premium": "8 Outfits"
+      },
+      "poses": {
+        "basic": "2 Poses",
+        "standard": "4 Poses",
+        "premium": "8 Poses"
+      }
+    }
+  },
+  "summary": {
+    "detectedFeatures": "These are the features Aaria has detected. You can also edit if necessary.",
+    "age": "AGE",
+    "eyeColor": "EYE COLOR",
+    "hairColor": "HAIR COLOR",
+    "gender": "GENDER",
+    "ethnicity": "ETHNICITY",
+    "notSpecified": "Not specified",
+    "enterEyeColor": "Enter eye color",
+    "enterHairColor": "Enter hair color",
+    "enterEthnicity": "Enter ethnicity",
+    "save": "Save",
+    "male": "Male",
+    "orderSummary": "Order Summary",
+    "summaryDescription": "Save hundreds compared to a photo shoot. Customize your AI professional headshot with manual edits or get a redo if the initial uploads were wrong.",
+    "uploadedPhotos": "UPLOADED PHOTOS",
+    "processing": "Processing...",
+    "startTraining": "Start Training",
+    "noModelData": "No Model Data",
+    "noModelDataDesc": "No model data was found. Please go back and create a model first.",
+    "generateHeadshots": "Generate Headshots",
+    "loading": "Loading..."
+  },
+  "photoTypes": {
+    "title": "Professional AI Photo Styles",
+    "subtitle": "Choose from our diverse collection of AI-powered photo styles to create your perfect professional portrait.",
+    "showMore": "See All Styles",
+    "showLess": "Show Less",
+    "types": {
+      "vintageAmericana": {
+        "title": "Vintage Americana Photos",
+        "description": "Professional headshots with an Americana twist, ideal for LinkedIn and business networking"
+      },
+      "onesiePortraits": {
+        "title": "Onesie Portraits",
+        "description": "Adorable portraits for babies and toddlers"
+      },
+      "halloweenPhotos": {
+        "title": "Halloween Photos",
+        "description": "Spooky and fun portraits for Halloween enthusiasts"
+      },
+      "birthdayParty": {
+        "title": "Birthday Party Save The Date",
+        "description": "Natural, authentic portraits for dating profiles"
+      },
+      "artisticPortraits": {
+        "title": "Artistic Portraits",
+        "description": "Creative and artistic portrait photography"
+      },
+      "wrestlemaniaPhotos": {
+        "title": "Wrestlemania Photos",
+        "description": "Dynamic wrestling-inspired portraits capturing strength and character"
+      },
+      "redCarpet": {
+        "title": "Actor Red Carpet Photos",
+        "description": "Glamorous and sophisticated portraits inspired by the red carpet"
+      },
+      "gameOfThrones": {
+        "title": "Game of Thrones Portraits",
+        "description": "Fantasy-inspired portraits in the style of Game of Thrones"
+      },
+      "kidsBirthday": {
+        "title": "Kids Birthday Portraits",
+        "description": "Capturing special moments for children's birthdays"
+      },
+      "mythicalCreatures": {
+        "title": "Mythical Creatures Portraits",
+        "description": "Fantasy-inspired portraits featuring mythical creatures"
+      },
+      "onlineDating": {
+        "title": "Online Dating Profile Photos",
+        "description": "Perfect portraits for online dating profiles"
+      },
+      "petPhotography": {
+        "title": "Pet Photography",
+        "description": "Professional portraits for pets"
+      },
+      "popColor": {
+        "title": "Pop Color Photos",
+        "description": "Vibrant portraits with pop art influence"
+      },
+      "youtubeThumbnails": {
+        "title": "YouTube Thumbnail Photos",
+        "description": "Eye-catching portraits perfect for YouTube thumbnails"
+      },
+      "actressPortraits": {
+        "title": "Actress Portraits",
+        "description": "Vibrant and detailed photographs of plants and flowers"
+      },
+      "dreamlandKids": {
+        "title": "Dreamland Kids Photos",
+        "description": "Magical and whimsical portraits for children in dreamlike settings"
+      },
+      "babyDoodles": {
+        "title": "Baby Doodles",
+        "description": "Transform your baby photos into adorable doodle-style portraits. Perfect for nursery art and birth announcements."
+      },
+      "birthdayMagic": {
+        "title": "Birthday Magic",
+        "description": "Create enchanting birthday portraits perfect for celebrations, invitations, and special occasions."
+      },
+      "personalBrand": {
+        "title": "Personal Brand Photography",
+        "description": "Professional photography solutions designed to elevate your personal brand and create a consistent visual presence."
+      },
+      "casualPhotography": {
+        "title": "Casual Photography",
+        "description": "Natural and relaxed portraits perfect for social media and casual professional needs."
+      },
+      "casualCollection": {
+        "title": "Casual Collection",
+        "description": "Create a diverse series of casual, lifestyle portraits perfect for maintaining a consistent online presence."
+      },
+      "catMagic": {
+        "title": "Cat Magic",
+        "description": "Transform your cat photos into magical portraits that capture their unique personality and charm."
+      },
+      "cyberpunk": {
+        "title": "Cyberpunk",
+        "description": "Transform into a stunning cyberpunk character with futuristic digital art styles."
+      },
+      "hanukkahMiracle": {
+        "title": "Hanukkah Miracle",
+        "description": "Create beautiful Hanukkah-themed portraits that capture the magic of the Festival of Lights."
+      },
+      "happyKid": {
+        "title": "Happy Kid",
+        "description": "Create delightful portraits of happy children that capture their pure joy and innocence."
+      },
+      "influencer": {
+        "title": "Influencer",
+        "description": "Create stunning influencer-style portraits perfect for social media and content creation."
+      },
+      "meIconic": {
+        "title": "Me Iconic",
+        "description": "Create your own iconic portrait style that makes you stand out from the crowd."
+      },
+      "merryChristmas": {
+        "title": "Merry Christmas",
+        "description": "Create magical Christmas portraits that capture the joy and warmth of the holiday season."
+      },
+      "playfulCasual": {
+        "title": "Playful Casual",
+        "description": "Create fun and natural casual portraits that show your playful side."
+      },
+      "podcaster": {
+        "title": "Podcaster",
+        "description": "Create professional podcaster portraits that help build your audio brand."
+      },
+      "romanticMaternity": {
+        "title": "Romantic Maternity",
+        "description": "Create beautiful and romantic maternity portraits that celebrate the magic of pregnancy."
+      },
+      "socialMedia": {
+        "title": "Social Media",
+        "description": "Create stunning portraits optimized for all social media platforms."
+      },
+      "timeMachine": {
+        "title": "Time Machine",
+        "description": "Travel through time with stunning historical portraits and period-themed photos."
+      },
+      "timelessStudio": {
+        "title": "Timeless Studio",
+        "description": "Create elegant studio portraits with a timeless, professional appeal."
+      },
+      "telAvivFashion": {
+        "title": "Tel Aviv Fashion",
+        "description": "Create stunning Tel Aviv-inspired fashion portraits with urban style."
+      },
+      "wildFriends": {
+        "title": "Wild Friends",
+        "description": "Create magical portraits with your pets and animal companions."
+      },
+      "winterWonderland": {
+        "title": "Winter Wonderland",
+        "description": "Create enchanting winter wonderland portraits in magical snow scenes."
+      },
+      "workFromHome": {
+        "title": "Work From Home",
+        "description": "Create professional work-from-home portraits for remote work."
+      },
+      "vintagePack": {
+        "title": "Vintage Pack",
+        "description": "Create beautiful vintage-style portraits with timeless retro aesthetics and classic throwback appeal."
+      },
+      "professionalTattoos": {
+        "title": "Professional Tattoo Portraits",
+        "description": "Showcase your tattoos with professional portraits that highlight your artistic expression."
+      },
+      "annieLeibovitz": {
+        "title": "Annie Leibovitz Style",
+        "description": "Dramatic portraits inspired by Annie Leibovitz's iconic photography style."
+      },
+      "barbie": {
+        "title": "Barbie Style",
+        "description": "Fun and stylish Barbie-inspired portrait photography."
+      },
+      "vikingPortraits": {
+        "title": "Viking Portraits",
+        "description": "Powerful Viking-inspired portraits perfect for historical themes and fantasy shoots."
+      },
+      "marvelClass": {
+        "title": "Marvel Class",
+        "description": "Dynamic, high-impact headshots with a cinematic quality inspired by Marvel productions."
+      }
+    }
+  },
+  "headshots": {
+    "title": "AI Headshots for Professionals",
+    "subtitle": "Hundreds of business professionals of all kinds use HeadshotPro every day to generate a professional headshot they can use at work.",
+    "showMore": "See All Styles",
+    "showLess": "Show Less",
+    "types": {
+      "doctor": {
+        "title": "Doctor Headshots",
+        "description": "Professional medical portraits for healthcare professionals, doctors, and medical practices."
+      },
+      "lawyer": {
+        "title": "Lawyer Headshots",
+        "description": "Professional portraits for legal professionals and law firms."
+      },
+      "actor": {
+        "title": "Actor Headshots",
+        "description": "Create stunning glamour portraits perfect for fashion, beauty, and professional modeling portfolios."
+      },
+      "realtor": {
+        "title": "Realtor Style",
+        "description": "Professional portraits for real estate professionals."
+      },
+      "tedSpeaker": {
+        "title": "TED Speaker Style",
+        "description": "Professional portraits for speakers and presenters."
+      },
+      "businessCasual": {
+        "title": "Business Casual Headshots",
+        "description": "Classic and stylish portraits inspired by J.Crew's aesthetic"
+      },
+      "model": {
+        "title": "Model Headshots",
+        "description": "Sleek and provocative portraits inspired by Helmut Newton's style"
+      },
+      "styledSuccess": {
+        "title": "Styled for Success",
+        "description": "Professional portraits with sophisticated styling for a polished, contemporary look."
+      },
+      "professional": {
+        "title": "Professional Package",
+        "description": "Complete professional headshot package perfect for corporate and business needs."
+      },
+      "partnersCollection": {
+        "title": "Partner's Collection",
+        "description": "Premium headshots designed specifically for law firm partners and senior executives."
+      },
+      "lawyerBranded": {
+        "title": "Lawyer Branded",
+        "description": "Specialized headshots that reinforce your legal brand and professional authority."
+      },
+      "effortlessProfessionalism": {
+        "title": "Effortless Professionalism",
+        "description": "Natural, approachable headshots that maintain a strong professional presence."
+      }
+    }
+  }
+  
+}
+
+
+  

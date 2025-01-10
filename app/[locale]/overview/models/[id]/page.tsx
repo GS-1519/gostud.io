@@ -1,4 +1,4 @@
-import Login from "@/app/login/page";
+import Login from "@/app/[locale]/login/page";
 import { Icons } from "@/components/icons";
 import ClientSideModel from "@/components/realtime/ClientSideModel";
 import { Badge } from "@/components/ui/badge";
@@ -37,6 +37,11 @@ export default async function Index({ params }: { params: { id: string } }) {
     .from("images")
     .select("*")
     .eq("modelId", model.id);
+
+  console.log("Database Images Query:", {
+    modelId: model.id,
+    images: images
+  });
 
   const { data: samples } = await supabase.from("samples").select("*").eq("modelId", model.id);
 

@@ -1,9 +1,12 @@
+'use client'
+
 import React, { useState, useCallback, useEffect, useRef } from 'react';
 import { Upload, Trash2, Check, AlertCircle, Plus, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import { useToast } from "@/components/ui/use-toast";
 import { useRouter } from "next/navigation";
 import { upload } from "@vercel/blob/client";
+import { useTranslations } from 'next-intl';
 
 interface TrainModelZoneProps {
   packSlug: string;
@@ -56,6 +59,7 @@ const TrainModelZone: React.FC<TrainModelZoneProps> = ({ packSlug, onContinue, u
   const { toast } = useToast();
   const router = useRouter();
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const t = useTranslations('trainModel');
   
   useEffect(() => {
     const storedModelInfo = localStorage.getItem('modelInfo');
@@ -257,8 +261,8 @@ const TrainModelZone: React.FC<TrainModelZoneProps> = ({ packSlug, onContinue, u
   const handleContinue = async () => {
     if (files.length < 4 || !modelInfo) {
       toast({
-        title: "Not enough information",
-        description: "Please upload at least 4 images and ensure model information is available.",
+        title: t('notEnoughInfo'),
+        description: t('uploadRequirements'),
         duration: 5000,
       });
       return;
@@ -347,7 +351,7 @@ const TrainModelZone: React.FC<TrainModelZoneProps> = ({ packSlug, onContinue, u
               </svg>
             </div>
             <p className="font-poppins font-medium text-base leading-6 text-black max-w-[576.86px]">
-              You can now auto-crop your group selfies! Simply tap on the image you want to crop, and we'll take care of it for you.
+              {t('autoCropBanner')}
             </p>
           </div>
 
@@ -368,12 +372,14 @@ const TrainModelZone: React.FC<TrainModelZoneProps> = ({ packSlug, onContinue, u
               {isLoading && (
                 <div className="absolute inset-0 bg-white/80 backdrop-blur-sm rounded-3xl z-50 flex flex-col items-center justify-center">
                   <div className="w-16 h-16 rounded-full border-4 border-[#8371FF] border-t-transparent animate-spin mb-4" />
-                  <p className="text-[#7C3AED] font-medium">Uploading images...</p>
-                  <p className="text-gray-500 text-sm mt-2">Please wait while we process your photos</p>
+                  <p className="text-[#7C3AED] font-medium">{t('uploadingImages')}</p>
+                  <p className="text-gray-500 text-sm mt-2">{t('pleaseWait')}</p>
                 </div>
               )}
 
-              <h2 className="text-2xl sm:text-3xl font-normal text-black text-center mb-4 sm:mb-6">Start Uploading photos</h2>
+              <h2 className="text-2xl sm:text-3xl font-normal text-black text-center mb-4 sm:mb-6">
+                {t('startUploading')}
+              </h2>
 
               {files.length === 0 && badFiles.length === 0 ? (
                 <div className="flex-1 flex flex-col">
@@ -389,12 +395,12 @@ const TrainModelZone: React.FC<TrainModelZoneProps> = ({ packSlug, onContinue, u
                     >
                       <div className="bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4] text-white rounded-lg px-6 py-3 flex items-center justify-center gap-2 hover:opacity-90 transition-opacity mx-auto max-w-[200px]">
                         <Upload size={20} />
-                        <span>Upload files</span>
+                        <span>{t('uploadFiles')}</span>
                       </div>
                     </label>
                     <p className="text-sm text-gray-500 text-center">
-                      Click to upload or drag and drop<br />
-                      PNG, JPG, HEIC up to 120MB
+                      {t('dragDropHint')}<br />
+                      {t('fileTypes')}
                     </p>
                   </div>
                 </div>
@@ -407,7 +413,7 @@ const TrainModelZone: React.FC<TrainModelZoneProps> = ({ packSlug, onContinue, u
                           <div className="w-6 h-6 rounded-full bg-[#68D585] flex items-center justify-center">
                             <Check className="text-white w-4 h-4" />
                           </div>
-                          <span className="font-medium">Good Photos</span>
+                          <span className="font-medium">{t('goodPhotos')}</span>
                         </div>
                         <span className="text-[#68D585] font-medium">{files.length}/8</span>
                       </div>
@@ -510,7 +516,7 @@ const TrainModelZone: React.FC<TrainModelZoneProps> = ({ packSlug, onContinue, u
                           <div className="w-6 h-6 rounded-full bg-[#EF4444] flex items-center justify-center">
                             <AlertCircle className="text-white w-4 h-4" />
                           </div>
-                          <span className="font-medium">Bad Photos</span>
+                          <span className="font-medium">{t('badPhotos')}</span>
                         </div>
 
                         <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-4">
@@ -549,7 +555,7 @@ const TrainModelZone: React.FC<TrainModelZoneProps> = ({ packSlug, onContinue, u
                           : 'bg-gray-200 text-gray-500 cursor-not-allowed'
                         }`}
                     >
-                      Continue
+                      {t('continue')}
                       <ArrowRight size={20} />
                     </button>
                   </div>
@@ -561,11 +567,11 @@ const TrainModelZone: React.FC<TrainModelZoneProps> = ({ packSlug, onContinue, u
 
         {/* Right Section - Updated with order utilities */}
         <div className="w-full lg:w-[485px] ml-0 lg:ml-auto order-1 lg:order-2 mb-4 lg:mb-0">
-          <h2 className="font-poppins text-xl sm:text-2xl mb-2">Image Guide</h2>
-          <p className="text-gray-600 mb-4 text-sm sm:text-base">Follow the guide to get quality photos.</p>
+          <h2 className="font-poppins text-xl sm:text-2xl mb-2">{t('imageGuide')}</h2>
+          <p className="text-gray-600 mb-4 text-sm sm:text-base">{t('followGuide')}</p>
           
           <p className="text-[#7C3AED] mb-4 sm:mb-6 text-sm sm:text-base">
-            To ensure better photo quality, Aaria requires 1 half-body and 7 close-up images of you facing the camera.
+            {t('photoRequirements')}
           </p>
 
           <div className="w-full sm:w-[385px] aspect-square relative rounded-[11.47px] overflow-hidden bg-[#F8F8FC] border border-gray-200">

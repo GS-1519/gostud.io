@@ -14,6 +14,7 @@ import ClientSideModelsList from "@/components/realtime/ClientSideModelsList";
 import { Database } from '@/types/supabase';
 import { useCallback, useState, useEffect } from 'react';
 import { User } from '@supabase/supabase-js';
+import { useTranslations } from 'next-intl';
 
 interface ClientContentProps {
   models: any[];
@@ -27,6 +28,7 @@ function Sidebar({ user, isOpen, onClose }: { user: User; isOpen: boolean; onClo
   const pathname = usePathname();
   const [isLoggingOut, setIsLoggingOut] = useState(false);
   const supabase = createClientComponentClient<Database>();
+  const t = useTranslations('sidebar');
 
   const handleLogout = useCallback(async () => {
     if (isLoggingOut) return;
@@ -47,31 +49,31 @@ function Sidebar({ user, isOpen, onClose }: { user: User; isOpen: boolean; onClo
 
   const navItems = [
     {
-      name: "Dashboard",
+      name: t('dashboard'),
       icon: Home,
       href: "/",
       isActive: pathname === "/"
     },
     {
-      name: "My Headshots",
+      name: t('myHeadshots'),
       icon: ImageIcon,
       href: "/overview",
       isActive: pathname === "/overview"
     },
     {
-      name: "Photo Editor Tools",
+      name: t('photoEditorTools'),
       icon: Edit3,
       href: "/free-tools/background-remover",
       isActive: pathname === "/free-tools/background-remover"
     },
     {
-      name: "AI Image Generator",
+      name: t('aiImageGenerator'),
       icon: Edit3,
       href: "/",
       isActive: pathname === "/free-tools"
     },
     {
-      name: isLoggingOut ? "Logging out..." : "Log Out",
+      name: isLoggingOut ? t('loggingOut') : t('logout'),
       icon: LogOut,
       href: "#",
       isActive: false,
@@ -117,6 +119,7 @@ function Sidebar({ user, isOpen, onClose }: { user: User; isOpen: boolean; onClo
 export default function ClientContent({ models, trainModelUrl, user, handleRedirect }: ClientContentProps) {
   const router = useRouter();
   const [isSidebarOpen, setSidebarOpen] = useState(false);
+  const t = useTranslations('overview');
 
   useEffect(() => {
     if (handleRedirect) {
@@ -171,14 +174,14 @@ export default function ClientContent({ models, trainModelUrl, user, handleRedir
           <div className="bg-white rounded-2xl shadow-sm p-4">
             {/* Header */}
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
-              <h1 className="text-2xl font-md text-gray-900">My Headshots</h1>
+              <h1 className="text-2xl font-md text-gray-900">{t('myHeadshots')}</h1>
             </div>
 
             {/* Generate Images Banner */}
             <div className="bg-white rounded-xl p-4 mb-6">
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                 <p className="text-[#7C3AED] text-lg font-medium mb-0">
-                  Start generating images, Aaria is here to generate your photos!
+                  {t('generateImagesMessage')}
                 </p>
                 <Link href={trainModelUrl}>
                   <Button 
@@ -190,7 +193,7 @@ export default function ClientContent({ models, trainModelUrl, user, handleRedir
                       fontFamily: 'Jakarta Sans, sans-serif'
                     }}
                   >
-                    Generate Images
+                    {t('generateImages')}
                   </Button>
                 </Link>
               </div>

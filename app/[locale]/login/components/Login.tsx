@@ -11,6 +11,7 @@ import login from "/public/login.svg";
 import { WaitingForMagicLink } from './WaitingForMagicLink';
 import { useRouter } from 'next/navigation';
 import final_Logo from '@/public/final_Logo.svg';
+import { useTranslations } from 'next-intl';
 
 interface LoginPageProps {
   host?: string | null;  // Make host optional
@@ -30,6 +31,7 @@ const LoginPage: React.FC<LoginPageProps> = ({ host, searchParams, params }) => 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showWaiting, setShowWaiting] = useState(false);
   const { toast } = useToast();
+  const t = useTranslations('login');
 
   const {
     register,
@@ -122,8 +124,8 @@ const LoginPage: React.FC<LoginPageProps> = ({ host, searchParams, params }) => 
           />
           <div className="absolute bottom-4 left-4 bg-white p-3 rounded-lg shadow-md max-w-[220px]">
             <div className="absolute -bottom-2 -left-2 text-indigo-500 text-xl">★</div>
-            <p className="text-sm font-bold mb-1 font-jakarta">"Photos came out better than some studios I've tried."</p>
-            <p className="text-xs text-indigo-600">— Sarah Chen</p>
+            <p className="text-sm font-bold mb-1 font-jakarta">{t('testimonial')}</p>
+            <p className="text-xs text-indigo-600">{t('testimonialAuthor')}</p>
           </div>
         </div>
         
@@ -133,7 +135,9 @@ const LoginPage: React.FC<LoginPageProps> = ({ host, searchParams, params }) => 
               <div className="flex items-center mb-4">
               <Image src={final_Logo} width={120} height={80} alt="Studio.ai logo"  className="rounded-sm" />
               </div>
-              <h2 className="text-2xl font-semibold text-gray-800 mt-4 font-jakarta">Log in / Sign up</h2>
+              <h2 className="text-2xl font-semibold text-gray-800 mt-4 font-jakarta">
+                {t('title')}
+              </h2>
             </div>
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
               <div className="relative">
@@ -148,10 +152,10 @@ const LoginPage: React.FC<LoginPageProps> = ({ host, searchParams, params }) => 
                     <path d="M5.08857 11.9169C4.66969 10.6749 4.66969 9.33008 5.08857 8.08811V5.51233H1.76688C0.348541 8.33798 0.348541 11.667 1.76688 14.4927L5.08857 11.9169V11.9169Z" fill="#FBBC04"/>
                     <path d="M10.7019 3.95805C12.1276 3.936 13.5055 4.47247 14.538 5.45722L17.393 2.60218C15.5852 0.904587 13.1858 -0.0287217 10.7019 0.000673888C6.92087 0.000673888 3.46322 2.13185 1.76562 5.51234L5.08732 8.08813C5.87733 5.71811 8.09302 3.95805 10.7019 3.95805V3.95805Z" fill="#EA4335"/>
                   </svg>
-                  Continue with Google
+                  {t('googleButton')}
                 </Button>
                 <span className="absolute -top-2 -left-2 px-2 py-1 text-xs font-jakarta text-white bg-blue-600">
-                  Most Used
+                  {t('mostUsed')}
                 </span>
               </div>
 
@@ -160,23 +164,23 @@ const LoginPage: React.FC<LoginPageProps> = ({ host, searchParams, params }) => 
                   <div className="w-full border-t border-gray-300"></div>
                 </div>
                 <div className="relative flex justify-center text-sm">
-                  <span className="px-2 text-gray-500 bg-white">Or continue with email</span>
+                  <span className="px-2 text-gray-500 bg-white">{t('orDivider')}</span>
                 </div>
               </div>
 
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1 font-jakarta">
-                  Email
+                  {t('emailLabel')}
                 </label>
                 <Input
                   id="email"
                   type="email"
-                  placeholder="example@mybiz.com"
+                  placeholder={t('emailPlaceholder')}
                   {...register("email", { 
-                    required: "Email is required",
+                    required: t('emailRequired'),
                     pattern: {
                       value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                      message: "Invalid email address"
+                      message: t('emailInvalid')
                     }
                   })}
                   className="w-[339.5px] h-[46px] px-[17px] py-[13px] rounded-[50px] border-t border-l focus:outline-none focus:ring-2 focus:ring-indigo-500"
@@ -192,33 +196,33 @@ const LoginPage: React.FC<LoginPageProps> = ({ host, searchParams, params }) => 
                 variant="outline"
                 className="w-[339.5px] h-[46px] px-[16.5px] py-[13px] bg-white text-[#5B16FE] font-medium rounded-[50px] border border-[#5B16FE] hover:bg-[#5B16FE]/5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#5B16FE] flex items-center justify-center transition-colors"
               >
-                Get code on E-mail
+                {t('submitButton')}
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
             </form>
             
             <div className="text-center mt-6">
               <p className="w-[314.95px] h-[34px] text-xs text-gray-500 font-poppins font-normal leading-[18px] mx-auto">
-                You will receive a one time code in your inbox.
+                {t('infoText')}
               </p>
             </div>
           </div>
           
           <div className="mt-auto">
             <p className="text-xs text-center text-gray-500">
-              By signing up, you accept our{' '}
+              {t('termsText')}{' '}
               <a 
                 href="/terms" 
                 className="text-indigo-600 hover:underline"
               >
-                Terms & Conditions
+                {t('termsLink')}
               </a>{' '}
-              and{' '}
+              {t('andText')}{' '}
               <a 
                 href="/privacy" 
                 className="text-indigo-600 hover:underline"
               >
-                Privacy Policy
+                {t('privacyLink')}
               </a>.
             </p>
           </div>

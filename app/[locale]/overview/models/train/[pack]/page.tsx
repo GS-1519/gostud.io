@@ -8,8 +8,7 @@ import ModelTypeSelector from "@/components/ModelTypeSelector";
 import TrainModelZone from "@/components/TrainModelZone";
 import InstructionsPage from '@/components/Instructions';
 import { Pricing } from '@/components/home/pricing/pricing';
-import SummaryPage from '@/app/summary/page';
-
+import SummaryPage from '@/app/[locale]/summary/page';  // ✅
 interface ExtendedUser extends User {
   credits?: number;
 }
@@ -33,22 +32,22 @@ export default function TrainModelPage() {
   const router = useRouter();
   const supabase = createClientComponentClient();
   const pack = params?.pack as string;
+  const locale = params?.locale || 'en';
 
   const handlePaymentClick = async () => {
     try {
-      // Use getUser instead of getSession
       const { data: { user }, error } = await supabase.auth.getUser();
       
       if (error || !user) {
-        router.push('/login');
+        router.push(`/${locale}/login`);
         return;
       }
 
-      router.push(`/overview/models/train/${pack}?step=summary`);
+      router.push(`/${locale}/overview/models/train/${pack}?step=summary`);
       setCurrentStep('summary');
     } catch (error) {
       console.error('Payment flow error:', error);
-      router.push('/login');
+      router.push(`/${locale}/login`);
     }
   };
 
@@ -110,7 +109,7 @@ export default function TrainModelPage() {
   }, [searchParams]);
 
   const handleContinue = (nextStep: string) => {
-    router.push(`/overview/models/train/${pack}?step=${nextStep}`);
+    router.push(`/${locale}/overview/models/train/${pack}?step=${nextStep}`);
     setCurrentStep(nextStep);
   };
 
@@ -128,7 +127,7 @@ export default function TrainModelPage() {
         <div className="flex flex-col items-center justify-center min-h-screen">
           <p className="text-red-500 mb-4">Please log in to continue</p>
           <button
-            onClick={() => router.push('/login')}
+            onClick={() => router.push(`/${locale}/login`)}
             className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
           >
             Go to Login
