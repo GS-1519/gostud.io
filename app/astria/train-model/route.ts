@@ -24,6 +24,12 @@ if (!appWebhookSecret) {
   throw new Error("MISSING APP_WEBHOOK_SECRET!");
 }
 
+// Add interface for credits
+interface CreditRecord {
+  credits: number;
+  user_id: string;
+}
+
 export async function POST(request: Request) {
   try {
     console.log('Starting model training process');
@@ -80,55 +86,26 @@ export async function POST(request: Request) {
 
       const { error: creditError, data: credits } = await supabase
         .from("credits")
-        .select("credits")
-        .eq("user_id", user.id);
+        .select<"credits", CreditRecord>("credits")
+        .eq("user_id", user.id)
+        .single();
+
+      console.log("Credits check result:", { creditError, credits });
 
       if (creditError) {
-        console.log("Error fetching credits", { creditError });
+        console.error("Error fetching credits", { creditError });
         return NextResponse.json(
-          {
-            message: "Something went wrong!",
-          },
+          { message: "Error checking credits" },
           { status: 500 }
         );
       }
 
-      if (credits.length === 0) {
-        // create credits for user.
-        const { error: errorCreatingCredits } = await supabase
-          .from("credits")
-          .insert({
-            user_id: user.id,
-            credits: 0,
-          });
-
-        if (errorCreatingCredits) {
-          console.error("Error Creating Credits", { errorCreatingCredits });
-          return NextResponse.json(
-            {
-              message: "Something went wrong!",
-            },
-            { status: 500 }
-          );
-        }
-
+      // Simplified credits check
+      if (!credits || credits.credits < 1) {
         return NextResponse.json(
-          {
-            message:
-              "Not enough credits, please purchase some credits and try again.",
-          },
-          { status: 500 }
+          { message: "Not enough credits, please purchase some credits and try again." },
+          { status: 400 }
         );
-      } else if (credits[0]?.credits < 1) {
-        return NextResponse.json(
-          {
-            message:
-              "Not enough credits, please purchase some credits and try again.",
-          },
-          { status: 500 }
-        );
-      } else {
-        _credits = credits;
       }
 
     // create a model row in supabase
@@ -281,8 +258,8 @@ export async function POST(request: Request) {
         );
       }
 
-      if (_credits && _credits.length > 0) {
-        const subtractedCredits = _credits[0].credits - 1;
+      if (credits) {
+        const subtractedCredits = credits.credits - 1;
         const { error: updateCreditError, data } = await supabase
           .from("credits")
           .update({ credits: subtractedCredits })

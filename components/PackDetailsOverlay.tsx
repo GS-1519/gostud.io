@@ -281,24 +281,20 @@ export function PackDetailsOverlay({ isOpen, onClose, pack }: PackDetailsOverlay
                     boxShadow: '0px 4px 24px -1px rgba(0, 0, 0, 0.2)'
                   }}
                 >
-                  <div className="w-full h-full group relative">
-                    <div className="relative h-full w-full bg-[#161C2D] rounded-xl overflow-hidden">
-                      <Image 
-                        src={img.src} 
-                        alt={img.alt}
-                        width={280}
-                        height={380}
-                        className="w-full h-full object-cover"
-                        priority={i < 2}
-                        onLoad={() => setImagesLoaded(prev => prev + 1)}
-                        onError={(e) => {
-                          console.error(`Failed to load image: ${img.src}`);
-                          e.currentTarget.src = "https://www.astria.ai/assets/logo-b4e21f646fb5879eb91113a70eae015a7413de8920960799acb72c60ad4eaa99.png";
-                        }}
-                      />
-                    </div>
-                    {/* Gradient overlay on hover */}
-                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl p-[6px] bg-gradient-to-r from-[#8371FF] via-[rgba(160,119,254,0.8)] to-[rgba(1,199,228,0.5)]" />
+                  <div className="relative h-full w-full bg-[#161C2D] rounded-xl overflow-hidden">
+                    <Image 
+                      src={img.src} 
+                      alt={img.alt}
+                      width={280}
+                      height={380}
+                      className="w-full h-full object-cover"
+                      priority={i < 2}
+                      onLoad={() => setImagesLoaded(prev => prev + 1)}
+                      onError={(e) => {
+                        console.error(`Failed to load image: ${img.src}`);
+                        e.currentTarget.src = "https://www.astria.ai/assets/logo-b4e21f646fb5879eb91113a70eae015a7413de8920960799acb72c60ad4eaa99.png";
+                      }}
+                    />
                   </div>
                 </div>
               ))}
