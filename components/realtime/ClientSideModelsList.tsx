@@ -82,10 +82,10 @@ export default function ClientSideModelsList({
       )}
       {models && models.length === 0 && (
         <div className="flex flex-col gap-4 items-center">
-          <FaImages size={64} className="text-gray-500" />
+          {/* <FaImages size={64} className="text-gray-500" />
           <h1 className="text-2xl font-md">
             Get started by training your first model.
-          </h1>
+          </h1> */}
           <div>
             {/* <Link href={trainModelUrl}>
               <Button size={"lg"} style={{ background: 'linear-gradient(90deg, #8371FF -39.48%, #A077FE 32.07%, #01C7E4 100%)', fontFamily: 'Jakarta Sans, sans-serif' }}>Train model</Button>

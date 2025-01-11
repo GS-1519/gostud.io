@@ -24,7 +24,7 @@ const Gallery = () => {
     { src: '/Packs/Halloween-photos/Women/women1.jpg', isLarge: true, alt: 'Professional headshot 10' },
     { src: '/Packs/Mythical-photos/Women/women2.jpg', isLarge: false, alt: 'Professional headshot 5' },
     { src: '/Packs/Glamour-photos/Man/man1.jpg', isLarge: true, alt: 'Professional headshot 6' },
-    { src: '/Packs/Annie-photos/Women/women3.jpg', isLarge: false, alt: 'Professional headshot 7' },
+    { src: '/Packs/Botnical-photos/Women/women3.jpg', isLarge: false, alt: 'Professional headshot 7' },
     { src: '/Packs/Dog/dog6.jpg', isLarge: true, alt: 'Professional headshot 8' },
     { src: '/Packs/Fitness-photos/Women/women4.jpg', isLarge: false, alt: 'Professional headshot 9' },
     { src: '/Packs/Halloween-photos/Women/women1.jpg', isLarge: true, alt: 'Professional headshot 10' },
