@@ -5,7 +5,7 @@ import { PriceCards } from '@/components/home/pricing/price-cards';
 
 import { Environments, initializePaddle, Paddle } from '@paddle/paddle-js';
 import { useEffect, useState } from 'react';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { CheckoutEventsData } from '@paddle/paddle-js/types/checkout/events';
 import { cn } from '@/lib/utils';
 
@@ -61,12 +61,17 @@ export function CheckoutContents({ userEmail, userId }: Props) {
   const [paddle, setPaddle] = useState<Paddle | null>(null);
   const [checkoutData, setCheckoutData] = useState<CheckoutEventsData | null>(null);
   const [isHovered, setIsHovered] = useState(false);
+  const router = useRouter();
 
   // Find the selected tier by matching the priceId with any tier's priceId
   const selectedTier = PricingTier.find(tier => tier.priceId === priceId);
 
   const handleCheckoutEvents = (event: CheckoutEventsData) => {
     setCheckoutData(event);
+    
+    if (event.status === 'completed') {
+      router.push('/summary');
+    }
   };
 
   useEffect(() => {
