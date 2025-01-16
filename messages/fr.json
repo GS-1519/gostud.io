@@ -110,10 +110,32 @@
   "HeadshotReview": {
     "title": {
       "part1": "PHOTOS DÉJÀ CRÉÉES POUR",
-      "part2": "DES CLIENTS SATISFAITS"
+      "part2": "CLIENTS SATISFAITS"
     },
     "description": "Pas prises en studio. Créées par l'IA. Ne nous croyez pas sur parole. Notre IA transforme vos photos quotidiennes en photos professionnelles qui reflètent votre confiance et votre crédibilité.",
-    "createButton": "Créer votre photo"
+    "createButton": "Créer votre photo",
+    "testimonials": {
+      "col1": {
+        "1": "Les résultats sont stupéfiants et personnalisés pour moi. Ces photos IA sont d'un autre niveau.",
+        "2": "J'ai testé la plateforme avec diverses images, et j'ai été ravi des résultats.",
+        "3": "Le meilleur générateur de photos que j'ai jamais utilisé !"
+      },
+      "col2": {
+        "1": "En tant que professionnel, des photos de haute qualité sont cruciales. L'IA a généré plusieurs options magnifiques qui me représentent parfaitement.",
+        "2": "Un outil indispensable pour les professionnels !",
+        "3": "Un seul téléchargement et vous obtenez tellement d'options à choisir."
+      },
+      "col3": {
+        "1": "Excellente qualité et diversité dans les photos.",
+        "2": "Interface rapide et conviviale. J'apprécie la facilité d'utilisation de cette plateforme.",
+        "3": "La qualité des photos est remarquable. Bien que la plupart soient excellentes, le processus de sélection est simple et efficace."
+      },
+      "col4": {
+        "1": "L'IA est incroyablement intelligente pour générer des images diverses. C'est comme avoir un mini studio photo !",
+        "2": "J'adore comment la plateforme propose plusieurs options après avoir téléchargé une seule image. La commodité des résultats multiples en vaut vraiment la peine !",
+        "3": "Très satisfait du service rapide et de la qualité."
+      }
+    }
   },
   "testimonials": {
     "col1": {
@@ -220,31 +242,31 @@
       "photoRequirements": {
         "question": "Quel type de photos dois-je télécharger ?",
         "answer": "Privilégiez la variété. Des expressions faciales variées et des arrière-plans variés, pris à différents moments de la journée, sont les clés pour des photos d'entrée de haute qualité. Ah, et un minimum de maquillage et d'accessoires, s'il vous plaît !"
+      },
+      "ownership": {
+        "question": "Qui possède les droits des photos générées ?",
+        "answer": "Vous conservez la pleine propriété des photos que vous téléchargez et des images générées par l'IA. Vos photos sont utilisées uniquement pour entraîner votre modèle d'IA personnel et ne sont jamais partagées avec d'autres utilisateurs."
+      },
+      "timing": {
+        "question": "Combien de temps faut-il pour obtenir mes photos ?",
+        "answer": "Le processus prend généralement environ 15-20 minutes entre le téléchargement et la réception de votre premier ensemble de photos générées par l'IA. Vous pouvez ensuite générer des variations supplémentaires instantanément."
+      },
+      "satisfaction": {
+        "question": "Que se passe-t-il si je ne suis pas satisfait des résultats ?",
+        "answer": "Nous offrons une garantie satisfaction. Si vous n'êtes pas satisfait de vos résultats, nous travaillerons avec vous pour les améliorer ou vous fournirons un remboursement complet."
+      },
+      "linkedin": {
+        "question": "Puis-je utiliser ces photos sur LinkedIn et autres plateformes professionnelles ?",
+        "answer": "Absolument ! Nos photos générées par l'IA sont parfaites pour LinkedIn, sites d'entreprise, cartes de visite et autres utilisations professionnelles."
+      },
+      "whichAI": {
+        "question": "Quelle technologie d'IA utilisez-vous ?",
+        "answer": "Nous utilisons un mélange propriétaire de technologies d'IA avancées, incluant des modèles de génération d'images de pointe, spécifiquement optimisés pour créer des photos professionnelles."
+      },
+      "dataSecurity": {
+        "question": "Comment gérez-vous la sécurité et la confidentialité des données ?",
+        "answer": "Nous prenons votre confidentialité très au sérieux. Vos photos sont cryptées, stockées en toute sécurité et utilisées uniquement pour votre modèle d'IA personnel. Nous ne partageons jamais vos données avec des tiers."
       }
-    },
-    "ownership": {
-      "question": "Qui possède les droits des photos générées ?",
-      "answer": "Vous conservez la pleine propriété des photos que vous téléchargez et des images générées par l'IA. Vos photos sont utilisées uniquement pour entraîner votre modèle d'IA personnel et ne sont jamais partagées avec d'autres utilisateurs."
-    },
-    "timing": {
-      "question": "Combien de temps faut-il pour obtenir mes photos ?",
-      "answer": "Le processus prend généralement environ 15-20 minutes entre le téléchargement et la réception de votre premier ensemble de photos générées par l'IA. Vous pouvez ensuite générer des variations supplémentaires instantanément."
-    },
-    "satisfaction": {
-      "question": "Que se passe-t-il si je ne suis pas satisfait des résultats ?",
-      "answer": "Nous offrons une garantie satisfaction. Si vous n'êtes pas satisfait de vos résultats, nous travaillerons avec vous pour les améliorer ou vous fournirons un remboursement complet."
-    },
-    "linkedin": {
-      "question": "Puis-je utiliser ces photos sur LinkedIn et autres plateformes professionnelles ?",
-      "answer": "Absolument ! Nos photos générées par l'IA sont parfaites pour LinkedIn, sites d'entreprise, cartes de visite et autres utilisations professionnelles."
-    },
-    "whichAI": {
-      "question": "Quelle technologie d'IA utilisez-vous ?",
-      "answer": "Nous utilisons un mélange propriétaire de technologies d'IA avancées, incluant des modèles de génération d'images de pointe, spécifiquement optimisés pour créer des photos professionnelles."
-    },
-    "dataSecurity": {
-      "question": "Comment gérez-vous la sécurité et la confidentialité des données ?",
-      "answer": "Nous prenons votre confidentialité très au sérieux. Vos photos sont cryptées, stockées en toute sécurité et utilisées uniquement pour votre modèle d'IA personnel. Nous ne partageons jamais vos données avec des tiers."
     }
   },
   "login": {
@@ -652,5 +674,404 @@
             "description": "Photos naturelles et accessibles maintenant une présence professionnelle forte"
           }
         }
-      }
+      },
+  "heroFeatures": {
+    "styles": "Plus de 150 styles",
+    "delivery": "Prêt en moins d'1h",
+    "protection": "Protection stricte des données",
+    "guarantee": "Résultats garantis"
+  },
+  "heroPages": {
+    "lawyer": {
+      "title": {
+        "part1": "Photos Professionnelles",
+        "part2": "d'Avocat",
+        "part3": "Générées par IA",
+        "part4": "en Minutes"
+      },
+      "description": "Transformez vos selfies en portraits juridiques professionnels qui inspirent confiance et crédibilité auprès des clients.",
+      "button": "Commencer Gratuitement"
+    },
+    "doctor": {
+      "title": {
+        "part1": "Photos Professionnelles",
+        "part2": "de Médecin",
+        "part3": "Générées par IA",
+        "part4": "en Minutes"
+      },
+      "description": "Transformez vos selfies en portraits médicaux professionnels qui inspirent confiance aux patients.",
+      "button": "Commencer Gratuitement"
+    },
+    "business": {
+      "title": {
+        "part1": "Photos Professionnelles",
+        "part2": "d'Entreprise",
+        "part3": "Générées par IA",
+        "part4": "en Minutes"
+      },
+      "description": "Transformez vos selfies en portraits professionnels qui renforcent votre image d'entreprise.",
+      "button": "Commencer Gratuitement"
+    },
+    "glamour": {
+      "title": {
+        "part1": "Studio Photo Professionnel",
+        "part2": "Propulsé par l'IA"
+      },
+      "description": "Transformez vos photos quotidiennes en portraits professionnels époustouflants. Parfait pour les réseaux sociaux, les profils de rencontre et votre image de marque personnelle."
+    },
+    "realtor": {
+      "title": {
+        "part1": "Photos Professionnelles",
+        "part2": "d'Agent Immobilier",
+        "part3": "Propulsées par l'IA"
+      },
+      "description": "Transformez vos selfies en portraits immobiliers professionnels qui inspirent confiance et crédibilité auprès des clients potentiels.",
+      "button": "Commencer Gratuitement"
+    },
+    "speaker": {
+      "title": {
+        "part1": "Photos Professionnelles",
+        "part2": "de Conférencier",
+        "part3": "Style TED Talk",
+        "part4": "Propulsées par l'IA"
+      },
+      "description": "Transformez vos selfies en portraits d'orateur percutants qui captent l'attention et inspirent confiance. Parfait pour les keynotes, conférences et présentations professionnelles.",
+      "button": "Commencer Gratuitement"
+    },
+    "jcrew": {
+      "title": {
+        "part1": "Photos de profil décontractées",
+        "part2": "propulsées par l'IA"
+      },
+      "description": "Transformez vos photos en portraits professionnels décontractés qui allient convivialité et professionnalisme. Parfait pour les environnements de travail modernes et les industries créatives.",
+      "button": "Commencer"
+    },
+    "heroFeatures": {
+      "styles": "Plus de 150 styles",
+      "delivery": "Prêt en 1 heure",
+      "protection": "Protection stricte",
+      "guarantee": "Garantie satisfait"
+    },
+    "americana": {
+      "title": {
+        "part1": "Style Rétro Américain",
+        "part2": "Portraits avec Âme"
+      },
+      "description": "Capturez le charme nostalgique de l'Americana classique dans vos portraits. Parfait pour les musiciens, les artistes et tous ceux qui recherchent cette élégance vintage intemporelle."
+    },
+    "onesie": {
+      "title": {
+        "part1": "Style Confort Ludique",
+        "part2": "Portraits Qui Éclatent"
+      },
+      "description": "Transformez vos photos en portraits amusants et douillets qui révèlent votre personnalité. Parfait pour les réseaux sociaux, les créateurs de contenu et tous ceux qui aiment le confort avec style.",
+      "button": "Commencer",
+      "imageAlt": "Exemples de portraits onesie"
+    },
+    "halloween": {
+      "title": {
+        "part1": "Style Halloween Effrayant",
+        "part2": "Portraits avec Caractère"
+      },
+      "description": "Transformez vos photos en portraits d'Halloween effrayants. Parfait pour les réseaux sociaux, le contenu saisonnier et tous ceux qui aiment la saison effrayante.",
+      "button": "Commencer",
+      "imageAlt": "Exemples de portraits Halloween"
+    },
+    "date": {
+      "title": {
+        "part1": "Style Save the Date",
+        "part2": "Moments Mémorables"
+      },
+      "description": "Créez de magnifiques portraits save-the-date qui capturent vos moments spéciaux. Parfait pour les mariages, les anniversaires et toutes vos annonces de célébration.",
+      "button": "Commencer à Créer",
+      "imageAlt": "Exemples de portraits save the date"
+    },
+    "artistic": {
+      "title": {
+        "part1": "Style Artistique",
+        "part2": "Portraits avec Âme"
+      },
+      "description": "Transformez vos photos en chefs-d'œuvre artistiques qui capturent votre essence. Parfait pour les réseaux sociaux, les portfolios créatifs et tous ceux qui aiment l'expression artistique.",
+      "button": "Commencer à Créer",
+      "imageAlt": "Exemples de portraits artistiques"
+    },
+    "wrestlemania": {
+      "title": {
+        "part1": "Style Champion de Catch",
+        "part2": "Portraits Puissants"
+      },
+      "description": "Transformez vos photos en portraits épiques de champion de catch. Parfait pour les fans, les réseaux sociaux et tous ceux qui veulent capturer l'esprit de champion.",
+      "button": "Commencer",
+      "imageAlt": "Exemples de portraits de champion de catch"
+    },
+    "carpet": {
+      "title": {
+        "part1": "Style Tapis Rouge",
+        "part2": "Portraits de Célébrité"
+      },
+      "description": "Transformez vos photos en portraits glamour de tapis rouge. Parfait pour les réseaux sociaux, les événements spéciaux et tous ceux qui veulent se sentir comme une star.",
+      "button": "Commencer",
+      "imageAlt": "Exemples de portraits tapis rouge"
+    },
+    "myth": {
+      "title": {
+        "part1": "Transformez-vous en",
+        "part2": "Créatures Mythiques",
+        "part3": "avec l'IA",
+        "part4": "Magique"
+      },
+      "description": "Transformez vos photos en portraits enchantés de créatures mythiques. Parfait pour les amateurs de fantasy, les projets créatifs et tous ceux qui rêvent de transformations magiques.",
+      "button": "Commencer à Créer",
+      "imageAlt": "Exemples de portraits de créatures mythiques"
+    },
+    "birthday": {
+      "title": {
+        "part1": "Expérience Magique",
+        "part2": "de Portraits d'Anniversaire"
+      },
+      "description": "Transformez les photos de votre enfant en portraits d'anniversaire magiques. Parfait pour les invitations, les souvenirs et la création de moments spéciaux.",
+      "button": "Créer la Magie",
+      "imageAlt": "Exemples de portraits d'anniversaire"
+    },
+    "dog": {
+      "title": {
+        "part1": "Studio de Portraits",
+        "part2": "Artistiques pour Chiens"
+      },
+      "description": "Transformez les photos de votre chien en magnifiques portraits artistiques. Parfait pour les amoureux des animaux, les réseaux sociaux et célébrer votre ami à quatre pattes.",
+      "button": "Commencer",
+      "imageAlt": "Exemples de portraits de chiens"
+    },
+    "color": {
+      "title": {
+        "part1": "Studio de Portraits",
+        "part2": "Pop Color avec IA"
+      },
+      "description": "Transformez vos photos en portraits vibrants et colorés. Parfait pour les réseaux sociaux, la marque personnelle et l'expression créative.",
+      "button": "Commencer à Créer",
+      "imageAlt": "Exemples de portraits pop color"
+    },
+    "youtube": {
+      "title": {
+        "part1": "Studio de Création de",
+        "part2": "Miniatures YouTube"
+      },
+      "description": "Créez des miniatures YouTube accrocheuses qui augmentent vos vues. Parfait pour les créateurs de contenu et la croissance de chaîne.",
+      "button": "Commencer Maintenant",
+      "imageAlt": "Exemples de miniatures YouTube"
+    },
+    "botanical": {
+      "title": {
+        "part1": "IA Beauté Naturelle",
+        "part2": "Portraits avec",
+        "part3": "Illustrations Botaniques"
+      },
+      "description": "Embrassez l'élégance de la nature avec des portraits générés par IA enrichis d'éléments délicats d'illustration botanique.",
+      "button": "Commencer Gratuitement",
+      "imageAlt": "Exemples de portraits botaniques"
     }
+  },
+ 
+  
+    
+    
+      "heroPacks": {
+        "dreamlandKids": {
+          "gradientTitle": "Photos Magiques d'Enfants",
+          "normalTitle": "Où les Rêves Deviennent Réalité",
+          "description": "Transformez les photos de vos enfants en peintures magiques dans un monde de rêve. Arrière-plans fantastiques, thèmes de contes de fées et scènes amusantes pour créer des souvenirs magiques.",
+          "buttonText": "Commencer la Magie"
+        },
+        "babyDoodles": {
+          "gradientTitle": "Gribouillis de Bébé",
+          "normalTitle": "Photos Adorables de Bébés",
+          "description": "Créez de belles photos amusantes pour bébés. Parfait pour capturer les moments heureux de l'enfance et les souvenirs familiaux.",
+          "buttonText": "Capturer les Moments"
+        },
+        "brandingPhotography": {
+          "gradientTitle": "Photographie de Marque",
+          "normalTitle": "Se Démarquer et Briller",
+          "description": "Valorisez votre marque personnelle avec une photographie professionnelle alimentée par l'IA",
+          "buttonText": "Construire votre Marque"
+        },
+        "workFromHome": {
+          "gradientTitle": "Travail à Domicile",
+          "normalTitle": "Photos Professionnelles à Distance",
+          "description": "Créez des photos professionnelles pour le travail à distance. Parfait pour les télétravailleurs et les réunions virtuelles",
+          "buttonText": "Travailler Intelligemment"
+        },
+        "vintagePack": {
+          "gradientTitle": "Pack Vintage",
+          "normalTitle": "Photos Style Rétro",
+          "description": "Créez de beaux portraits style vintage. Parfait pour les looks rétro et les photos classiques",
+          "buttonText": "Remonter le Temps"
+        },
+        "casualPhotos": {
+          "gradientTitle": "Photos Décontractées",
+          "normalTitle": "Naturel et Sympathique",
+          "description": "Créez des portraits naturels qui montrent votre vraie personnalité. Parfait pour les réseaux sociaux et la marque personnelle",
+          "buttonText": "Obtenir des Photos Naturelles"
+        },
+        "casualCollection": {
+          "gradientTitle": "Collection Décontractée",
+          "normalTitle": "Moments Naturels",
+          "description": "Créez une variété de photos décontractées qui reflètent votre vraie personnalité. Parfait pour le contenu social et le profil.",
+          "buttonText": "Démarrer la Collection"
+        },
+        "catMagic": {
+          "gradientTitle": "Magie Féline",
+          "normalTitle": "Moments Spéciaux",
+          "description": "Transformez les photos de votre chat en images magiques pleines de personnalité. Parfait pour les amoureux des animaux et les réseaux sociaux.",
+          "buttonText": "Créer la Magie"
+        },
+        "christmasElf": {
+          "gradientTitle": "Lutin de Noël",
+          "normalTitle": "Magie de Noël",
+          "description": "Créez des photos amusantes sur le thème des lutins de Noël. Parfait pour les cartes de Noël et les célébrations familiales.",
+          "buttonText": "Commencer l'Amusement"
+        },
+        "christmasSweater": {
+          "gradientTitle": "Pull de Noël",
+          "normalTitle": "Ambiance Chaleureuse de Noël",
+          "description": "Créez des photos festives et chaleureuses sur le thème du pull de Noël. Parfait pour les cartes de Noël et les fêtes de bureau.",
+          "buttonText": "Commencer la Célébration"
+        },
+        "familyChristmas": {
+          "gradientTitle": "Noël en Famille",
+          "normalTitle": "Souvenirs Familiaux Magiques",
+          "description": "Créez des photos de famille magiques de Noël qui capturent la magie de la saison. Parfait pour les cartes de Noël et les précieux souvenirs familiaux.",
+          "buttonText": "Créer la Magie Familiale"
+        },
+        "cyberpunk": {
+          "gradientTitle": "Cyberpunk",
+          "normalTitle": "Futur Numérique",
+          "description": "Transformez vos photos en œuvres d'art cyberpunk futuristes. Parfait pour les fans de science-fiction et de design futuriste.",
+          "buttonText": "Entrer dans le Futur"
+        },
+        "hanukkahMiracle": {
+          "gradientTitle": "Miracle de Hanoukka",
+          "normalTitle": "Fête des Lumières",
+          "description": "Créez de belles photos sur le thème de Hanoukka qui capturent la magie de la Fête des Lumières. Parfait pour les cartes de fête et les célébrations familiales.",
+          "buttonText": "Allumer les Lumières"
+        },
+        "happyKid": {
+          "gradientTitle": "Enfant Heureux",
+          "normalTitle": "Moments de Joie",
+          "description": "Créez des photos incroyables d'enfants qui capturent leur joie et leur innocence. Parfait pour les albums de famille et les souvenirs précieux.",
+          "buttonText": "Capturer la Joie"
+        },
+        "influencer": {
+          "gradientTitle": "Influenceur",
+          "normalTitle": "Éclat Social",
+          "description": "Créez des photos professionnelles dignes d'un influenceur à succès. Parfait pour les réseaux sociaux et la construction de marque personnelle.",
+          "buttonText": "Commencer à Influencer"
+        },
+        "meIconic": {
+          "gradientTitle": "Mon Iconique",
+          "normalTitle": "Photos Iconiques",
+          "description": "Transformez vos photos en prises de vue iconiques qui expriment votre personnalité unique. Parfait pour l'expression personnelle et se démarquer.",
+          "buttonText": "Devenir Iconique"
+        },
+        "merryChristmas": {
+          "gradientTitle": "Joyeux Noël",
+          "normalTitle": "Joie de Noël",
+          "description": "Créez des photos qui portent l'esprit de Noël. Parfait pour les cartes et les célébrations.",
+          "buttonText": "Célébrer Noël"
+        },
+        "playfulCasual": {
+          "gradientTitle": "Décontracté Ludique",
+          "normalTitle": "Moments Détendus",
+          "description": "Créez des photos décontractées et ludiques qui reflètent votre esprit enjoué. Parfait pour les moments quotidiens et les réseaux sociaux.",
+          "buttonText": "Commencer l'Amusement"
+        },
+        "podcaster": {
+          "gradientTitle": "Podcasteur",
+          "normalTitle": "Voix Visuelle",
+          "description": "Créez des photos professionnelles dignes d'un podcasteur professionnel. Parfait pour la promotion et le marketing.",
+          "buttonText": "Commencer la Diffusion"
+        },
+        "romanticMaternity": {
+          "gradientTitle": "Maternité Romantique",
+          "normalTitle": "Moments de Grossesse",
+          "description": "Documentez votre parcours de grossesse avec de belles photos romantiques. Parfait pour les souvenirs familiaux et le partage avec les proches.",
+          "buttonText": "Enregistrer les Moments"
+        },
+        "socialMedia": {
+          "gradientTitle": "Réseaux Sociaux",
+          "normalTitle": "Éclat Numérique",
+          "description": "Créez des photos attrayantes pour les réseaux sociaux. Parfait pour le contenu numérique et la présence en ligne.",
+          "buttonText": "Commencer à Briller"
+        },
+        "timeMachine": {
+          "gradientTitle": "Machine à Remonter le Temps",
+          "normalTitle": "Voyage dans le Temps",
+          "description": "Voyagez dans le temps avec des photos au style d'époques différentes. Parfait pour les amateurs d'histoire et la nostalgie.",
+          "buttonText": "Démarrer le Voyage"
+        },
+        "timelessStudio": {
+          "gradientTitle": "Studio Intemporel",
+          "normalTitle": "Beauté Éternelle",
+          "description": "Créez des photos classiques intemporelles dans un studio professionnel. Parfait pour les photos formelles et professionnelles.",
+          "buttonText": "Commencer la Séance"
+        },
+        "tlvFashion": {
+          "gradientTitle": "Mode Tel Aviv",
+          "normalTitle": "Mode Contemporaine",
+          "description": "Créez des photos de mode contemporaine avec l'esprit vibrant de Tel Aviv. Parfait pour les amateurs de mode et de style.",
+          "buttonText": "Découvrir l'Élégance"
+        },
+        "wildFriends": {
+          "gradientTitle": "Amis Sauvages",
+          "normalTitle": "Aventures Naturelles",
+          "description": "Créez des photos avec une touche sauvage et naturelle. Parfait pour les amoureux de la nature et les aventuriers.",
+          "buttonText": "Démarrer l'Aventure"
+        },
+        "winterWonderland": {
+          "gradientTitle": "Pays des Merveilles d'Hiver",
+          "normalTitle": "Magie Hivernale",
+          "description": "Créez des photos magiques dans des décors hivernaux féeriques. Parfait pour la saison hivernale et les fêtes.",
+          "buttonText": "Découvrir la Magie"
+        },
+        "birthdayMagic": {
+          "gradientTitle": "Photos Magiques d'Anniversaire",
+          "normalTitle": "Capturez des Moments Spéciaux",
+          "description": "Créez des souvenirs magiques avec nos photos d'anniversaire professionnelles",
+          "buttonText": "Commencer maintenant"
+        },
+        
+        "common": {
+          "features": {
+            "styles": "Styles multiples",
+            "delivery": "Livraison rapide",
+            "protection": "Protection sécurisée",
+            "guarantee": "Garantie satisfaction"
+          }
+        },
+        "marvelClass": {
+          "gradientTitle": "Classe Premium",
+          "normalTitle": "Portraits Juridiques",
+          "description": "Découvrez le summum de l'imagerie professionnelle avec nos photos IA. Conçues pour capturer l'essence de l'excellence juridique avec une sophistication et un style inégalés.",
+          "button": "Découvrir la Qualité Premium",
+          "imageAlt": "Portraits juridiques professionnels"
+        },
+        "vikingsHero": {
+          "gradientTitle": "Portraits Vikings",
+          "normalTitle": "Propulsé par la Magie IA",
+          "description": "Transformez vos photos en portraits légendaires capturant l'esprit des guerriers nordiques. Parfait pour les profils de jeux, le contenu créatif et l'image de marque personnelle unique.",
+          "button": "Créez Votre Légende",
+          "imageAlt": "Portraits style viking"
+        },
+        "barbieHero": {
+          "gradientTitle": "Portraits Pop Culture",
+          "normalTitle": "Avec une Personnalité Vibrante",
+          "description": "Créez des portraits saisissants aux couleurs audacieuses et au style ludique. Parfait pour les influenceurs des réseaux sociaux et les créateurs de contenu créatif.",
+          "button": "Créez Votre Éditorial",
+          "imageAlt": "Portraits style Barbie"
+        }
+      }
+    
+  
+   
+}
+
+

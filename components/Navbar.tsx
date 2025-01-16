@@ -132,7 +132,14 @@ const Navbar: React.FC = () => {
                     <option value="cn">中文</option>
                     <option value="ja">Japanese</option>
                     <option value="ko">Korean</option>
-                    <option value="fr">French</option>
+                    <option value="es">Spanish</option>
+                    <option value="it">Italian</option>
+                    <option value="th">IThai</option>
+                    <option value="tr">Turkish</option>
+                    <option value="br">Brazilian</option>
+                    <option value="ru">Russian</option>
+                    <option value="vi">Vietnamese</option>
+                    <option value="id">Indonesian</option>
 
 
                   </select>
@@ -158,7 +165,14 @@ const Navbar: React.FC = () => {
                     <option value="cn">中文</option>
                     <option value="ja">Japanese</option>
                     <option value="ko">Korean</option>
-                    <option value="fr">French</option>
+                    <option value="es">Spanish</option>
+                    <option value="it">Italian</option>
+                    <option value="th">IThai</option>
+                    <option value="tr">Turkish</option>
+                    <option value="br">Brazilian</option>
+                    <option value="ru">Russian</option>
+                    <option value="vi">Vietnamese</option>
+                    <option value="id">Indonesian</option>
 
                   </select>
                   

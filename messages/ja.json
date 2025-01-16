@@ -695,8 +695,247 @@
               "description": "プロフェッショナルな存在感を保ちながら、自然で親しみやすいヘッドショット"
             }
           }
-        }
+        },
+        
+  "common": {
+    "features": {
+      "styles": "150以上のスタイルから選択",
+      "delivery": "1時間以内に結果提供",
+      "protection": "厳格なデータ保護",
+      "guarantee": "返金保証付き"
+    }
+  },
+  "heroPages": {
+    "color": {
+      "title": {
+        "part1": "�ップカラー",
+        "part2": "AIポートレートスタジオ"
+      },
+      "description": "あなたの写真を鮮やかでカラフルなポートレートに変身させましょう。SNS、パーソナルブランディング、クリエイティブな表現に最適です。",
+      "button": "作成を開始",
+      "imageAlt": "ポップカラーポートレートの例"
+    },
+    "youtube": {
+      "title": {
+        "part1": "YouTubeサムネイル",
+        "part2": "クリエイターズスタジオ"
+      },
+      "description": "再生回数を伸ばす目を引くYouTubeサムネイルを作成。コンテンツクリエイターとチャンネル成長に最適です。",
+      "button": "今すぐ始める",
+      "imageAlt": "YouTubeサムネイルの例"
+    },
+    "botanical": {
+      "title": {
+        "part1": "自然の美しさAI",
+        "part2": "ボタニカル",
+        "part3": "イラスト付きポートレート"
+      },
+      "description": "繊細なボタニカルイラストの要素で彩られたAI生成ポートレートで、自然の優雅さを表現します。",
+      "button": "無料で始める",
+      "imageAlt": "ボタニカルポートレートの例"
+    }
+  },
+ 
+    
+      "heroPacks": {
+        "dreamlandKids": {
+          "gradientTitle": "子どもの魔法写真",
+          "normalTitle": "夢が叶う場所",
+          "description": "お子様の写真を夢の世界の魔法のような絵に変身させましょう。ファンタジックな背景、おとぎ話のテーマ、楽しいシーンで魔法のような思い出を作ります。",
+          "buttonText": "魔法を始める"
+        },
+        "babyDoodles": {
+          "gradientTitle": "ベビー落書き",
+          "normalTitle": "かわいい赤ちゃん写真",
+          "description": "赤ちゃんのための素敵で楽しい写真を作成。幼児期の幸せな瞬間と家族の思い出を完璧に捉えます。",
+          "buttonText": "思い出を残す"
+        },
+        "brandingPhotography": {
+          "gradientTitle": "ブランディング写真",
+          "normalTitle": "輝く個性",
+          "description": "AIを活用したプロフェッショナルな写真であなたのパーソナルブランドを高めましょう",
+          "buttonText": "ブランドを構築"
+        },
+        "workFromHome": {
+          "gradientTitle": "在宅ワーク",
+          "normalTitle": "リモートプロフェッショナル写真",
+          "description": "リモートワーク用のプロフェッショナルな写真を作成。リモートワーカーやオンライン会議に最適です",
+          "buttonText": "スマートに働く"
+        },
+        "vintagePack": {
+          "gradientTitle": "ヴィンテージパック",
+          "normalTitle": "レトロスタイル写真",
+          "description": "美しいヴィンテージスタイルのポートレートを作成。レトロな雰囲気とクラシックな写真に最適です",
+          "buttonText": "時代を遡る"
+        },
+        "birthdayMagic": {
+          "gradientTitle": "バースデーマジック",
+          "normalTitle": "お祝いの写真",
+          "description": "誕生日のための魔法のような写真を作成。特別な機会に最適です",
+          "buttonText": "お祝いを始める"
+        },
+        "casualPhotos": {
+          "gradientTitle": "カジュアル写真",
+          "normalTitle": "自然で親しみやすい",
+          "description": "あなたの本当の個性を表現する自然なポートレートを作成。SNSやパーソナルブランディングに最適です",
+          "buttonText": "ナチュラルな写真を取得"
+        },
+        "casualCollection": {
+          "gradientTitle": "カジュアルコレクション",
+          "normalTitle": "自然な瞬間",
+          "description": "あなたの本当の個性を反映する様々なカジュアルな写真を作成。SNSコンテンツやプロフィールに最適です。",
+          "buttonText": "コレクションを開始"
+        },
+        "catMagic": {
+          "gradientTitle": "キャットマジック",
+          "normalTitle": "特別な瞬間",
+          "description": "あなたの猫の写真を個性豊かな魔法のような画像に変身させます。ペット愛好家やSNSに最適です。",
+          "buttonText": "魔法を作る"
+        },
+        "christmasElf": {
+          "gradientTitle": "クリスマスエルフ",
+          "normalTitle": "クリスマスマジック",
+          "description": "クリスマスエルフをテーマにした楽しい写真を作成。クリスマスカードや家族のお祝いに最適です。",
+          "buttonText": "楽しみを始める"
+        },
+        "christmasSweater": {
+          "gradientTitle": "クリスマスセーター",
+          "normalTitle": "暖かいクリスマスムード",
+          "description": "クリスマスセーターをテーマにした温かいお祝いの写真を作成。クリスマスカードやオフィスパーティーに最適です。",
+          "buttonText": "お祝いを始める"
+        },
+        "familyChristmas": {
+          "gradientTitle": "ファミリークリスマス",
+          "normalTitle": "魔法の家族の思い出",
+          "description": "季節の魔法を捉えた魔法のようなクリスマス家族写真を作成。クリスマスカードや大切な家族の思い出に最適です。",
+          "buttonText": "家族の魔法を作る"
+        },
+        "cyberpunk": {
+          "gradientTitle": "サイバーパンク",
+          "normalTitle": "デジタルフューチャー",
+          "description": "あなたの写真を未来的なサイバーパンクアートに変身させます。SFファンや未来的なデザインに最適です。",
+          "buttonText": "未来へ進む"
+        },
+        "hanukkahMiracle": {
+          "gradientTitle": "ハヌカーの奇跡",
+          "normalTitle": "光の祭典",
+          "description": "光の祭典の魔法を捉えた美しいハヌカーテーマの写真を作成。お祝いカードや家族のお祝いに最適です。",
+          "buttonText": "光を灯す"
+        },
+        "happyKid": {
+          "gradientTitle": "ハッピーキッズ",
+          "normalTitle": "喜びの瞬間",
+          "description": "子どもたちの喜びと無邪気さを捉えた素晴らしい写真を作成。家族のアルバムや大切な思い出に最適です。",
+          "buttonText": "喜びを捉える"
+        },
+        "influencer": {
+          "gradientTitle": "インフルエンサー",
+          "normalTitle": "ソーシャルシャイン",
+          "description": "成功するインフルエンサーにふさわしいプロフェッショナルな写真を作成。SNSやパーソナルブランド構築に最適です。",
+          "buttonText": "影響力を始める"
+        },
+        "meIconic": {
+          "gradientTitle": "マイアイコニック",
+          "normalTitle": "アイコニック写真",
+          "description": "あなたのユニークな個性を表現するアイコニックなショットに写真を変身させます。自己表現と個性的な演出に最適です。",
+          "buttonText": "アイコンになる"
+        },
+        "merryChristmas": {
+          "gradientTitle": "メリークリスマス",
+          "normalTitle": "クリスマスの喜び",
+          "description": "クリスマスの精神を伝える写真を作成。グリーティングカードやお祝いに最適です。",
+          "buttonText": "クリスマスを祝う"
+        },
+        "playfulCasual": {
+          "gradientTitle": "遊び心カジュアル",
+          "normalTitle": "リラックスした瞬間",
+          "description": "あなたの陽気な精神を反映した遊び心のあるカジュアルな写真を作成。日常の瞬間やSNSに最適です。",
+          "buttonText": "楽しみを始める"
+        },
+        "podcaster": {
+          "gradientTitle": "ポッドキャスター",
+          "normalTitle": "ビジュアルボイス",
+          "description": "プロのポッドキャスターにふさわしいプロフェッショナルな写真を作成。プロモーションやマーケティングに最適です。",
+          "buttonText": "配信を始める"
+        },
+        "romanticMaternity": {
+          "gradientTitle": "ロマンティックマタニティ",
+          "normalTitle": "マタニティの瞬間",
+          "description": "美しいロマンティックな写真であなたの妊娠の旅を記録。家族の思い出や大切な人との共有に最適です。",
+          "buttonText": "瞬間を記録"
+        },
+        "socialMedia": {
+          "gradientTitle": "ソーシャルメディア",
+          "normalTitle": "デジタルシャイン",
+          "description": "SNS用の魅力的な写真を作成。デジタルコンテンツやオンラインプレゼンスに最適です。",
+          "buttonText": "輝き始める"
+        },
+        "timeMachine": {
+          "gradientTitle": "タイムマシン",
+          "normalTitle": "タイムトラベル",
+          "description": "様々な時代のスタイルを持つ写真で時間旅行。歴史愛好家とノスタルジアに最適です。",
+          "buttonText": "旅を始める"
+        },
+        "timelessStudio": {
+          "gradientTitle": "タイムレススタジオ",
+          "normalTitle": "永遠の美",
+          "description": "プロフェッショナルなスタジオでタイムレスなクラシック写真を作成。フォーマルやプロフェッショナルな写真に最適です。",
+          "buttonText": "撮影を始める"
+        },
+        "tlvFashion": {
+          "gradientTitle": "テルアビブファッション",
+          "normalTitle": "コンテンポラリーファッション",
+          "description": "テルアビブの活気ある精神を持つコンテンポラリーなファッション写真を作成。ファッションとスタイル愛好家に最適です。",
+          "buttonText": "エレガンスを発見"
+        },
+        "wildFriends": {
+          "gradientTitle": "ワイルドフレンズ",
+          "normalTitle": "自然の冒険",
+          "description": "ワイルドで自然なタッチの写真を作成。自然愛好家と冒険家に最適です。",
+          "buttonText": "冒険を始める"
+        },
+        "winterWonderland": {
+          "gradientTitle": "ウィンターワンダーランド",
+          "normalTitle": "冬の魔法",
+          "description": "おとぎ話のような冬のシーンで魔法のような写真を作成。冬のシーズンと休暇に最適です。",
+          "buttonText": "魔法を発見"
+        },
+        
+            "marvelClass": {
+              "gradientTitle": "プレミアムクラス",
+              "normalTitle": "法律家ポートレート",
+              "description": "AI撮影による最高峰のプロフェッショナル写真をご体験ください。比類のない洗練さとスタイルで法的専門性の本質を捉えます。",
+              "button": "プレミアム品質を体験",
+              "imageAlt": "プロフェッショナルな法律家ポートレート"
+            },
+            "vikingsHero": {
+              "gradientTitle": "バイキングポートレート",
+              "normalTitle": "AIマジック搭載",
+              "description": "北欧の戦士の精神を捉えた伝説的なポートレートに写真を変身させましょう。ゲームプロフィール、クリエイティブコンテンツ、ユニークな個人ブランディングに最適です。",
+              "button": "あなたの伝説を作る",
+              "imageAlt": "バイキングスタイルのポートレート"
+            },
+            "barbieHero": {
+              "gradientTitle": "ポップカルチャーポートレート",
+              "normalTitle": "鮮やかな個性を持って",
+              "description": "大胆な色使いと遊び心のあるスタイルで印象的なポートレートを作成。ソーシャルメディアインフルエンサーやクリエイティブコンテンツクリエイターに最適です。",
+              "button": "エディトリアルを作成",
+              "imageAlt": "バービースタイルのポートレート"
+            },
+        "common": {
+  "features": {
+    "styles": "複数のスタイル",
+    "delivery": "迅速な配信",
+    "protection": "安全な保護",
+    "guarantee": "満足保証"
+  }
+}
       }
+    
+  }
+
+        
+      
       
     
   

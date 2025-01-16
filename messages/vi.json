@@ -1,0 +1,939 @@
+{
+  "hero": {
+    "title": "Ảnh chân dung chuyên nghiệp từ ảnh selfie của bạn",
+    "description": "Nổi bật trên LinkedIn, Twitter và với các nhà tuyển dụng. Tải lên ảnh selfie và nhận hàng trăm ảnh chân dung chuyên nghiệp từ nhiếp ảnh gia AI \"Aaria\" yêu thích của bạn.",
+    "features": {
+      "styles": "150+ kiểu và trang phục",
+      "delivery": "Có kết quả trong vòng 1 giờ",
+      "protection": "Bảo vệ dữ liệu nghiêm ngặt",
+      "guarantee": "Đảm bảo hoàn tiền"
+    },
+    "button": "Thử ngay",
+    "tryNow": "Bắt đầu ngay →"
+  },
+  "ExplainerSection": {
+    "title": "3 BƯỚC ĐƠN GIẢN ĐỂ CÓ ẢNH CHẤT LƯỢNG STUDIO",
+    "step1": {
+      "title": "Tải lên một vài tấm ảnh",
+      "description": "Tải lên một vài tấm ảnh của bạn để AI học về bạn."
+    },
+    "step2": {
+      "title": "Nhiếp ảnh gia AI \"Aaria\" bắt đầu làm việc",
+      "description": "Aaria tạo một mô hình riêng, được cá nhân hóa chỉ dành cho bạn—đảm bảo ảnh chân dung phản ánh phong cách và cá tính độc đáo của bạn."
+    },
+    "step3": {
+      "title": "Tải xuống ảnh chân dung yêu thích",
+      "description": "Bạn sẽ nhận được nhiều phong cách khác nhau, cho bạn ảnh chân dung hoàn hảo để nâng tầm hồ sơ chuyên nghiệp của bạn."
+    },
+    "tryNow": "Thử ngay"
+  },
+  "PhotographyGrid": {
+    "title": "CÁC GÓI CỦA CHÚNG TÔI - BẠN CẦN GÌ, CHÚNG TÔI CÓ.",
+    "description": "Khám phá bộ sưu tập gói chụp ảnh đầy đủ của chúng tôi, được thiết kế phù hợp với mọi phong cách và nhu cầu. Từ ảnh chân dung chuyên nghiệp đến chỉnh sửa sáng tạo, chúng tôi có tất cả. Bất kể tầm nhìn của bạn là gì, nhiếp ảnh gia AI của chúng tôi sẽ biến nó thành hiện thực một cách dễ dàng.",
+    "tryNow": "Thử ngay",
+    "packs": {
+      "corporate": "Ảnh chân dung doanh nghiệp",
+      "speaker": "Gói diễn giả",
+      "doctor": "Chuyên gia y tế",
+      "realtor": "Môi giới bất động sản",
+      "dating": "Hồ sơ hẹn hò",
+      "redcarpet": "Thảm đỏ",
+      "boldcolors": "Màu sắc nổi bật",
+      "tattoo": "Nghệ sĩ xăm",
+      "glamour": "Ảnh quyến rũ",
+      "barbie": "Phong cách Barbie",
+      "halloween": "Chủ đề Halloween",
+      "mythical": "Thần thoại"
+    }
+  },
+  "Comparison": {
+    "title": "TIẾT KIỆM TIỀN VÀ THỜI GIAN",
+    "description": "Aaria đảm bảo bạn luôn sẵn sàng cho mọi khoảnh khắc chuyên nghiệp. Từ CV đến LinkedIn, chúng tôi giúp ảnh chân dung của bạn tỏa sáng một cách dễ dàng.",
+    "columns": {
+      "goStudio": "Go Studio.ai",
+      "studio": "Chụp ảnh tại Studio"
+    },
+    "items": {
+      "value": {
+        "label": "Giá trị đồng tiền",
+        "goStudio": "$19",
+        "studio": "$200"
+      },
+      "time": {
+        "label": "Tiết kiệm thời gian",
+        "goStudio": "30 phút",
+        "studio": "2-3 ngày"
+      },
+      "variety": {
+        "label": "Đa dạng",
+        "goStudio": "30 ảnh chân dung",
+        "studio": "4-5 ảnh chân dung"
+      },
+      "choices": {
+        "label": "Nhiều lựa chọn hơn",
+        "goStudio": "20 phong cách",
+        "studio": "1 phong cách"
+      }
+    },
+    "exploreMore": "Khám phá thêm"
+  },
+  "Why": {
+    "title": {
+      "why": "TẠI SAO CHỌN",
+      "gostudio": "GOSTUDIO.AI?"
+    },
+    "description": "Biến đổi hình ảnh chuyên nghiệp của bạn với ảnh chân dung được hỗ trợ bởi AI. Nhận ảnh chất lượng studio cho LinkedIn, CV và hơn thế nữa chỉ trong vài phút.",
+    "features": {
+      "linkedin": {
+        "title": "Nổi bật trên LinkedIn",
+        "description": "Tạo ấn tượng đầu tiên mạnh mẽ với ảnh chân dung chuyên nghiệp giúp tăng lượt xem hồ sơ và độ tin cậy."
+      },
+      "resume": {
+        "title": "Làm CV của bạn tỏa sáng",
+        "description": "Nâng tầm hồ sơ xin việc với ảnh chân dung chuyên nghiệp thêm phần cá nhân và chuyên nghiệp."
+      },
+      "events": {
+        "title": "Sự kiện & Hội nghị",
+        "description": "Thể hiện bản thân tốt nhất tại các sự kiện chuyên nghiệp. Hoàn hảo cho hồ sơ diễn giả, danh bạ sự kiện và thẻ."
+      },
+      "business": {
+        "title": "Danh thiếp & Thương hiệu",
+        "description": "Tạo hình ảnh chuyên nghiệp nhất quán trên tất cả tài liệu kinh doanh với ảnh chân dung chất lượng cao."
+      },
+      "online": {
+        "title": "Hiện diện kỹ thuật số",
+        "description": "Trông chuyên nghiệp trên mọi nền tảng - từ mạng xã hội đến trang web công ty và mạng lưới chuyên nghiệp."
+      }
+    },
+    "tryNow": "Thử ngay"
+  },
+  "HeadshotReview": {
+    "title": {
+      "part1": "ẢNH ĐÃ TẠO CHO",
+      "part2": "KHÁCH HÀNG HÀI LÒNG"
+    },
+    "description": "Không chụp trong studio. Được tạo bởi AI. Đừng chỉ tin lời chúng tôi. AI của chúng tôi biến ảnh thường ngày thành ảnh chân dung chuyên nghiệp, phản ánh sự tự tin và uy tín của bạn.",
+    "createButton": "Tạo ảnh chân dung của bạn",
+    "testimonials": {
+      "col1": {
+        "1": "Kết quả tuyệt vời và được điều chỉnh theo tôi. Những ảnh chân dung AI này thật đẳng cấp.",
+        "2": "Tôi đã thử nghiệm nền tảng với nhiều ảnh sản phẩm khác nhau và rất hài lòng với kết quả.",
+        "3": "Trang tạo ảnh sản phẩm tuyệt vời nhất từ trước đến nay!"
+      },
+      "col2": {
+        "1": "Là một người bán hàng trực tuyến, ảnh sản phẩm chất lượng cao rất quan trọng. Tôi đã tải lên một vài ảnh trang sức của mình và AI đã tạo ra nhiều tùy chọn tuyệt đẹp thể hiện sản phẩm một cách hoàn hảo. Sự đa dạng cho phép tôi chọn các phông nền và góc độ khác nhau để làm nổi bật sản phẩm hiệu quả.",
+        "2": "Công cụ không thể thiếu cho thương mại điện tử!",
+        "3": "Tải lên một lần và bạn có rất nhiều tùy chọn để lựa chọn."
+      },
+      "col3": {
+        "1": "Chất lượng và sự đa dạng tuyệt vời trong ảnh.",
+        "2": "Giao diện nhanh và thân thiện với người dùng. Tôi đánh giá cao việc nền tảng này dễ sử dụng như thế nào.",
+        "3": "Tôi đánh giá cao việc nền tảng này dễ sử dụng như thế nào. Tôi ấn tượng với số lượng tùy chọn nhận được. Mặc dù hầu hết chúng đều tuyệt vời, có một vài cái không thể hiện sản phẩm như tôi mong đợi. Tuy nhiên, việc lọc và tìm những cái tốt nhất rất dễ dàng. Nhìn chung, một công cụ tuyệt vời giúp tiết kiệm rất nhiều công sức!"
+      },
+      "col4": {
+        "1": "AI cực kỳ thông minh trong việc tạo ra các hình ảnh đa dạng. Giống như có một studio mini vậy!",
+        "2": "Tôi thích cách nền tảng cung cấp nhiều tùy chọn sau khi tải lên một hình ảnh. Dễ dàng chọn phong cách hoặc phông nền phù hợp với thẩm mỹ của tôi. Tuy nhiên, sự tiện lợi của nhiều kết quả và chất lượng tổng thể rất đáng giá! Nó tiết kiệm thời gian, đặc biệt nếu bạn cần sự đa dạng cho mạng xã hội.",
+        "3": "Rất hài lòng với dịch vụ nhanh chóng và chất lượng."
+      }
+    }
+  },
+  "Pricing": {
+    "title": "CHẤT LƯỢNG CAO CẤP VỚI GIÁ THẤP HƠN 10 LẦN",
+    "description": "Không cần đến studio. Không phí chụp ảnh $200+. Không cần chờ đợi lịch hẹn. Có được ảnh chân dung chuyên nghiệp, tuyệt đẹp chỉ trong 30 phút—tất cả từ sự thoải mái tại nhà của bạn.",
+    "badges": {
+      "mostPopular": "82% chọn gói này",
+      "bestValue": "Giá trị nhất"
+    },
+    "oneTimePayment": "Thanh toán một lần",
+    "noSubscription": "Không cần đăng ký",
+    "tryNow": "Thử ngay",
+    "features": {
+      "headshots": {
+        "basic": "20 ảnh chân dung chất lượng cao",
+        "standard": "60 ảnh chân dung chất lượng cao",
+        "premium": "100 ảnh chân dung chất lượng cao"
+      },
+      "processing": {
+        "basic": "Thời gian xử lý 2 giờ",
+        "standard": "Thời gian xử lý 1 giờ",
+        "premium": "Thời gian xử lý 30 phút"
+      },
+      "outfits": {
+        "basic": "5 trang phục và phông nền",
+        "standard": "20 trang phục và phông nền",
+        "premium": "40 trang phục và phông nền"
+      },
+      "poses": {
+        "basic": "5 tư thế",
+        "standard": "20 tư thế",
+        "premium": "40 tư thế"
+      }
+    }
+  },
+  "DataSecurity": {
+    "title": "CHÚNG TÔI COI TRỌNG QUYỀN RIÊNG TƯ DỮ LIỆU",
+    "subtitle": {
+      "line1": "Được tin tưởng bởi các lãnh đạo Fortune 500 và các chuyên gia hàng đầu",
+      "line2": "Các tổ chức và đội ngũ doanh nghiệp uy tín tin tưởng chúng tôi với dữ liệu của họ"
+    },
+    "features": {
+      "noSelling": {
+        "title": "KHÔNG BÁN, KHÔNG CHIA SẺ DỮ LIỆU",
+        "description": "Chúng tôi sẽ không bao giờ bán dữ liệu của bạn hoặc chia sẻ với các trang web bên thứ ba."
+      },
+      "control": {
+        "title": "ẢNH CỦA BẠN, QUYỀN KIỂM SOÁT CỦA BẠN",
+        "description": "Chúng tôi sẽ không sử dụng ảnh của bạn để huấn luyện AI mà không có sự cho phép của bạn."
+      },
+      "autoDeletion": {
+        "title": "TỰ ĐỘNG XÓA DỮ LIỆU",
+        "description": "Hệ thống tự động xóa tất cả ảnh của bạn sau 90 ngày. Bạn có thể chọn giữ cài đặt theo cách của mình."
+      },
+      "security": {
+        "title": "BẢO MẬT HÀNG ĐẦU",
+        "description": "Chúng tôi mã hóa tất cả dữ liệu nhạy cảm của người dùng. Chúng tôi sử dụng phần mềm đáng tin cậy tốt nhất trong ngành cho dữ liệu của bạn."
+      }
+    },
+    "createButton": "Tạo ảnh chân dung của bạn"
+  },
+  "TeamSection": {
+    "title": {
+      "why": "TẠI SAO CHỌN",
+      "gostudio": "GOSTUDIO.AI?"
+    },
+    "description": "Tạo một diện mạo thống nhất, chuyên nghiệp cho đội ngũ của bạn với ảnh chân dung chất lượng studio, được tạo ra một cách dễ dàng bởi Aaria. Chúng tôi cung cấp những bức chân dung hoàn hảo phản ánh giá trị công ty của bạn. Không cần chi phí chụp ảnh đắt đỏ—chỉ cần kết quả chất lượng cao, mượt mà.",
+    "teamHeadshots": "Ảnh chân dung đội ngũ",
+    "tryNow": "Thử ngay"
+  },
+  "CreationGallery": {
+    "title": "XEM NHANH CÁC TÁC PHẨM CỦA TÔI",
+    "description": "Tôi rất vui được chia sẻ một phần công việc của mình với bạn.",
+    "createButton": "Tạo ảnh chân dung của bạn"
+  },
+  "FAQ": {
+    "title": "Câu hỏi thường gặp",
+    "questions": {
+      "whatIs": {
+        "question": "GoStudio.ai là gì? Nó hoạt động như thế nào?",
+        "answer": "GoStudio.ai sử dụng ảnh của chính bạn để huấn luyện một mô hình AI tùy chỉnh đại diện cho ngoại hình của bạn và có thể tạo ra ảnh chân dung của bạn trong nhiều phong cách và trang phục khác nhau. Chất lượng của ảnh chân dung được tạo ra phụ thuộc vào những bức ảnh bạn tải lên. Bạn nên cố gắng có các góc nhìn khác nhau về khuôn mặt, mắt và các góc độ khác nhau. Mỗi bức ảnh nên thể hiện điều gì đó mới về ngoại hình và đặc điểm khuôn mặt của bạn."
+      },
+      "photoRequirements": {
+        "question": "Tôi cần tải lên những loại ảnh nào?",
+        "answer": "Ưu tiên sự đa dạng. Các biểu cảm khuôn mặt và phông nền đa dạng, được chụp vào các thời điểm khác nhau trong ngày, là chìa khóa cho ảnh đầu vào chất lượng cao. Và xin lưu ý, hạn chế trang điểm và phụ kiện!"
+      },
+      "ownership": {
+        "question": "Ai sở hữu quyền đối với ảnh được tạo ra?",
+        "answer": "Bạn giữ toàn quyền sở hữu cả ảnh bạn tải lên và ảnh được tạo bởi AI. Ảnh của bạn chỉ được sử dụng để huấn luyện mô hình AI cá nhân của bạn và không bao giờ được chia sẻ với người dùng khác."
+      },
+      "timing": {
+        "question": "Mất bao lâu để nhận được ảnh chân dung của tôi?",
+        "answer": "Quá trình thường mất khoảng 15-20 phút từ lúc tải lên đến khi nhận được bộ ảnh chân dung AI đầu tiên. Sau đó bạn có thể tạo thêm các biến thể ngay lập tức."
+      },
+      "satisfaction": {
+        "question": "Nếu tôi không hài lòng với kết quả thì sao?",
+        "answer": "Chúng tôi cam kết đảm bảo sự hài lòng. Nếu bạn không hài lòng với kết quả, chúng tôi sẽ làm việc với bạn để cải thiện hoặc hoàn tiền đầy đủ."
+      },
+      "linkedin": {
+        "question": "Tôi có thể sử dụng những ảnh này trên LinkedIn và các nền tảng chuyên nghiệp khác không?",
+        "answer": "Hoàn toàn có thể! Ảnh chân dung được tạo bởi AI của chúng tôi hoàn hảo cho LinkedIn, trang web công ty, danh thiếp và các mục đích chuyên nghiệp khác."
+      },
+      "whichAI": {
+        "question": "Bạn sử dụng công nghệ AI nào?",
+        "answer": "Chúng tôi sử dụng sự kết hợp độc quyền của các công nghệ AI tiên tiến, bao gồm các mô hình tạo ảnh hiện đại nhất, được tối ưu hóa đặc biệt để tạo ảnh chân dung chuyên nghiệp."
+      },
+      "dataSecurity": {
+        "question": "Bạn xử lý bảo mật và quyền riêng tư dữ liệu như thế nào?",
+        "answer": "Chúng tôi coi trọng quyền riêng tư của bạn. Ảnh của bạn được mã hóa, lưu trữ an toàn và chỉ được sử dụng cho mô hình AI cá nhân của bạn. Chúng tôi không bao giờ chia sẻ dữ liệu của bạn với bên thứ ba."
+      }
+    }
+  },
+  "login": {
+    "title": "Đăng nhập / Đăng ký",
+    "emailLabel": "Email",
+    "emailPlaceholder": "example@mybiz.com",
+    "emailRequired": "Yêu cầu nhập email",
+    "emailInvalid": "Địa chỉ email không hợp lệ",
+    "googleButton": "Tiếp tục với Google",
+    "mostUsed": "Được sử dụng nhiều nhất",
+    "orDivider": "Hoặc tiếp tục với email",
+    "submitButton": "Nhận mã qua E-mail",
+    "infoText": "Bạn sẽ nhận được mã một lần trong hộp thư đến.",
+    "termsText": "Bằng cách đăng ký, bạn chấp nhận",
+    "termsLink": "Điều khoản & Điều kiện",
+    "andText": "và",
+    "privacyLink": "Chính sách Quyền riêng tư",
+    "errors": {
+      "loginFailed": "Đăng nhập thất bại",
+      "invalidEmail": "Địa chỉ Email không hợp lệ",
+      "googleSignInFailed": "Đăng nhập Google thất bại",
+      "tryAgain": "Vui lòng thử lại. Nếu vấn đề vẫn tiếp tục, hãy liên hệ hỗ trợ."
+    },
+    "testimonial": "Ảnh đẹp hơn một số studio tôi đã thử",
+    "testimonialAuthor": "Sarah Chen"
+  },
+  "waitingForMagicLink": {
+    "title": "Kiểm tra email của bạn để tiếp tục",
+    "description": "Chúng tôi đã gửi cho bạn một liên kết kỳ diệu để truy cập tài khoản của bạn.",
+    "hint": "Gợi ý: nó có thể nằm trong thư mục spam của bạn.",
+    "backButton": "Quay lại"
+  },
+  "loginFail": {
+    "title": "Lỗi đăng nhập",
+    "defaultError": "Đã xảy ra lỗi, vui lòng liên hệ bộ phận hỗ trợ.",
+    "browserError": "Rất tiếc! Có vẻ như bạn đã cố gắng mở liên kết kỳ diệu từ thiết bị hoặc trình duyệt khác.",
+    "hint": "Gợi ý: Vui lòng đảm bảo bạn mở liên kết trên cùng thiết bị / trình duyệt mà bạn đã dùng để đăng ký.",
+    "loginLink": "Đăng nhập"
+  },
+  "navbar": {
+    "loginButton": "Đăng nhập / Đăng ký"
+  },
+  "userMenu": {
+    "credits": "Tín dụng",
+    "logout": "Đăng xuất"
+  },
+  "navigation": {
+    "headshotPacks": "Gói ảnh chân dung",
+    "photoshootPacks": "Gói chụp ảnh",
+    "freeTools": "Công cụ miễn phí",
+    "backgroundLibrary": "Thư viện phông nền",
+    "backgroundRemover": "Xóa phông nền",
+    "testimonial": "Đánh giá",
+    "pricing": "Bảng giá",
+    "faq": "Câu hỏi thường gặp"
+  },
+  "sidebar": {
+    "dashboard": "Bảng điều khiển",
+    "myHeadshots": "Ảnh chân dung của tôi",
+    "photoEditorTools": "Công cụ chỉnh sửa ảnh",
+    "aiImageGenerator": "Trình tạo ảnh AI",
+    "logout": "Đăng xuất",
+    "loggingOut": "Đang đăng xuất..."
+  },
+  "overview": {
+    "myHeadshots": "Ảnh chân dung của tôi",
+    "generateImagesMessage": "Bắt đầu tạo ảnh, Aaria đã sẵn sàng tạo ảnh cho bạn!",
+    "generateImages": "Tạo ảnh"
+  },
+  "packs": {
+    "title": "Các gói",
+    "description": "Chọn một gói để bắt đầu tạo ảnh.",
+    "selectPack": "01/ Chọn gói",
+    "instructions": "02/ Hướng dẫn",
+    "uploadPhotos": "03/ Tải ảnh lên",
+    "getCredits": "04/ Nhận tín dụng",
+    "summary": "05/ Tổng kết",
+    "errorFetching": "Lỗi khi tải gói",
+    "requestFailed": "Yêu cầu thất bại với mã lỗi 404"
+  },
+  "packsGallery": {
+    "loading": "Đang tải gói...",
+    "noPacks": "Không có gói nào.",
+    "continueButton": "Tiếp tục",
+    "errors": {
+      "fetchTitle": "Lỗi khi tải gói",
+      "unknownTitle": "Lỗi không xác định",
+      "unknownDescription": "Đã xảy ra lỗi không xác định."
+    },
+    "categories": {
+      "adults": "Gói chuyên nghiệp & Phong cách sống",
+      "children": "Gói cho trẻ em",
+      "pets": "Gói cho thú cưng",
+      "default": "Gói {category}"
+    },
+    "packDetails": {
+      "close": "Đóng",
+      "select": "Chọn gói",
+      "imagesIncluded": "Số ảnh bao gồm",
+      "price": "Giá"
+    }
+  },
+  "photoGuide": {
+    "title": "Hướng dẫn ảnh",
+    "subtitle": "Làm theo hướng dẫn để có ảnh chất lượng.",
+    "sections": {
+      "goodPhotos": "Ảnh tốt để tải lên",
+      "photosToAvoid": "Ảnh cần tránh",
+      "refrainUsing": "Hạn chế sử dụng"
+    },
+    "descriptions": {
+      "closeUpSelfie": "Ảnh selfie cận mặt",
+      "facingCamera": "Bạn nhìn vào máy ảnh",
+      "halfBody": "Nửa người",
+      "onlyVisible": "Chỉ có bạn trong ảnh",
+      "groupSelfies": "Ảnh selfie nhóm",
+      "withSomeone": "Có người khác",
+      "hidingFace": "Che mặt",
+      "wearingGlasses": "Đeo kính",
+      "onlyFace": "Chỉ có mặt",
+      "nudity": "Ảnh khỏa thân",
+      "blurredImage": "Ảnh mờ",
+      "tooMuchShadow": "Quá nhiều bóng"
+    },
+    "alt": {
+      "goodPhoto1": "Ví dụ ảnh tốt 1",
+      "goodPhoto2": "Ví dụ ảnh tốt 2",
+      "goodPhoto3": "Ví dụ ảnh tốt 3",
+      "goodPhoto4": "Ví dụ ảnh tốt 4",
+      "badPhoto1": "Ví dụ ảnh xấu 1",
+      "badPhoto2": "Ví dụ ảnh xấu 2",
+      "badPhoto3": "Ví dụ ảnh xấu 3",
+      "badPhoto4": "Ví dụ ảnh xấu 4"
+    }
+  },
+  "trainModel": {
+    "notEnoughInfo": "Không đủ thông tin",
+    "uploadRequirements": "Vui lòng tải lên ít nhất 4 ảnh và đảm bảo thông tin mô hình có sẵn.",
+    "uploadingImages": "Đang tải ảnh lên...",
+    "pleaseWait": "Vui lòng đợi trong khi chúng tôi xử lý ảnh của bạn",
+    "startUploading": "Bắt đầu tải ảnh lên",
+    "uploadFiles": "Tải tệp lên",
+    "dragDropHint": "Nhấp để tải lên hoặc kéo và thả",
+    "fileTypes": "PNG, JPG, HEIC tối đa 120MB",
+    "goodPhotos": "Ảnh tốt",
+    "badPhotos": "Ảnh xấu",
+    "continue": "Tiếp tục",
+    "imageGuide": "Hướng dẫn ảnh",
+    "followGuide": "Làm theo hướng dẫn để có ảnh chất lượng.",
+    "photoRequirements": "Để đảm bảo chất lượng ảnh tốt hơn, Aaria yêu cầu 1 ảnh nửa người và 7 ảnh cận mặt của bạn nhìn vào máy ảnh.",
+    "autoCropBanner": "Bây giờ bạn có thể tự động cắt ảnh selfie nhóm! Chỉ cần chạm vào ảnh bạn muốn cắt, và chúng tôi sẽ lo phần còn lại cho bạn."
+  },
+  "checkout": {
+    "title": "THANH TOÁN",
+    "subtitle": "Tiết kiệm hàng trăm đô so với chụp ảnh truyền thống. Tùy chỉnh ảnh chân dung AI chuyên nghiệp với chỉnh sửa thủ công hoặc được làm lại nếu ảnh tải lên ban đầu không đúng.",
+    "standardBadge": "82% chọn gói này",
+    "premiumBadge": "Giá trị nhất",
+    "subtotal": "Tạm tính",
+    "tax": "Thuế",
+    "totalDue": "Tổng cần thanh toán hôm nay",
+    "noSubscription": "Không yêu cầu đăng ký",
+    "oneTimePayment": "Thanh toán một lần",
+    "features": {
+      "headshots": {
+        "basic": "10 Ảnh chân dung AI chuyên nghiệp",
+        "standard": "30 Ảnh chân dung AI chuyên nghiệp",
+        "premium": "100 Ảnh chân dung AI chuyên nghiệp"
+      },
+      "processing": {
+        "basic": "Thời gian xử lý 24 giờ",
+        "standard": "Thời gian xử lý 12 giờ",
+        "premium": "Thời gian xử lý 6 giờ"
+      },
+      "outfits": {
+        "basic": "2 Trang phục",
+        "standard": "4 Trang phục",
+        "premium": "8 Trang phục"
+      },
+      "poses": {
+        "basic": "2 Tư thế",
+        "standard": "4 Tư thế",
+        "premium": "8 Tư thế"
+      }
+    }
+  },
+  "summary": {
+    "detectedFeatures": "Đây là các đặc điểm Aaria đã phát hiện. Bạn cũng có thể chỉnh sửa nếu cần thiết.",
+    "age": "TUỔI",
+    "eyeColor": "MÀU MẮT",
+    "hairColor": "MÀU TÓC",
+    "gender": "GIỚI TÍNH",
+    "ethnicity": "DÂN TỘC",
+    "notSpecified": "Chưa xác định",
+    "enterEyeColor": "Nhập màu mắt",
+    "enterHairColor": "Nhập màu tóc",
+    "enterEthnicity": "Nhập dân tộc",
+    "save": "Lưu",
+    "male": "Nam",
+    "orderSummary": "Tổng kết đơn hàng",
+    "summaryDescription": "Tiết kiệm hàng trăm đô so với chụp ảnh truyền thống. Tùy chỉnh ảnh chân dung AI chuyên nghiệp với chỉnh sửa thủ công hoặc được làm lại nếu ảnh tải lên ban đầu không đúng.",
+    "uploadedPhotos": "ẢNH ĐÃ TẢI LÊN",
+    "processing": "Đang xử lý...",
+    "startTraining": "Bắt đầu huấn luyện",
+    "noModelData": "Không có dữ liệu mô hình",
+    "noModelDataDesc": "Không tìm thấy dữ liệu mô hình. Vui lòng quay lại và tạo mô hình trước.",
+    "generateHeadshots": "Tạo ảnh chân dung",
+    "loading": "Đang tải..."
+  },
+  "photoTypes": {
+    "title": "Các kiểu ảnh AI chuyên nghiệp",
+    "subtitle": "Chọn từ bộ sưu tập đa dạng các kiểu ảnh được hỗ trợ bởi AI để tạo ra bức chân dung chuyên nghiệp hoàn hảo của bạn.",
+    "showMore": "Xem tất cả kiểu",
+    "showLess": "Thu gọn",
+    "types": {
+      "vintageAmericana": {
+        "title": "Ảnh phong cách Mỹ cổ điển",
+        "description": "Ảnh chân dung chuyên nghiệp với phong cách Mỹ, lý tưởng cho LinkedIn và kết nối kinh doanh"
+      },
+      "onesiePortraits": {
+        "title": "Chân dung áo liền quần",
+        "description": "Chân dung đáng yêu cho trẻ sơ sinh và trẻ mới biết đi"
+      },
+      "halloweenPhotos": {
+        "title": "Ảnh Halloween",
+        "description": "Chân dung ma quái và vui nhộn cho người yêu thích Halloween"
+      },
+      "birthdayParty": {
+        "title": "Save The Date sinh nhật",
+        "description": "Chân dung tự nhiên, chân thực cho hồ sơ hẹn hò"
+      },
+      "artisticPortraits": {
+        "title": "Chân dung nghệ thuật",
+        "description": "Nhiếp ảnh chân dung sáng tạo và nghệ thuật"
+      },
+      "wrestlemaniaPhotos": {
+        "title": "Ảnh Wrestlemania",
+        "description": "Chân dung năng động lấy cảm hứng từ đấu vật, thể hiện sức mạnh và cá tính"
+      },
+      "redCarpet": {
+        "title": "Ảnh thảm đỏ diễn viên",
+        "description": "Chân dung quyến rũ và tinh tế lấy cảm hứng từ thảm đỏ"
+      },
+      "gameOfThrones": {
+        "title": "Chân dung Game of Thrones",
+        "description": "Chân dung lấy cảm hứng từ thế giới giả tưởng theo phong cách Game of Thrones"
+      },
+      "kidsBirthday": {
+        "title": "Chân dung sinh nhật trẻ em",
+        "description": "Ghi lại những khoảnh khắc đặc biệt trong sinh nhật của trẻ"
+      },
+      "mythicalCreatures": {
+        "title": "Chân dung sinh vật thần thoại",
+        "description": "Chân dung lấy cảm hứng từ thế giới giả tưởng với các sinh vật thần thoại"
+      },
+      "onlineDating": {
+        "title": "Ảnh hồ sơ hẹn hò trực tuyến",
+        "description": "Chân dung hoàn hảo cho hồ sơ hẹn hò trực tuyến"
+      },
+      "petPhotography": {
+        "title": "Nhiếp ảnh thú cưng",
+        "description": "Chân dung chuyên nghiệp cho thú cưng"
+      },
+      "popColor": {
+        "title": "Ảnh màu pop",
+        "description": "Chân dung rực rỡ với ảnh hưởng nghệ thuật pop"
+      },
+      "youtubeThumbnails": {
+        "title": "Ảnh thumbnail YouTube",
+        "description": "Chân dung bắt mắt hoàn hảo cho thumbnail YouTube"
+      },
+      "actressPortraits": {
+        "title": "Chân dung diễn viên nữ",
+        "description": "Ảnh rực rỡ và chi tiết của thực vật và hoa"
+      },
+      "dreamlandKids": {
+        "title": "Ảnh trẻ em trong xứ sở mộng mơ",
+        "description": "Chân dung kỳ diệu và huyền ảo cho trẻ em trong khung cảnh như mơ"
+      },
+      "babyDoodles": {
+        "title": "Hình vẽ em bé",
+        "description": "Biến ảnh em bé của bạn thành chân dung phong cách vẽ tay đáng yêu. Hoàn hảo cho trang trí phòng trẻ và thông báo sinh con."
+      },
+      "birthdayMagic": {
+        "title": "Phép màu sinh nhật",
+        "description": "Tạo chân dung sinh nhật quyến rũ hoàn hảo cho lễ kỷ niệm, thiệp mời và dịp đặc biệt."
+      },
+      "personalBrand": {
+        "title": "Nhiếp ảnh thương hiệu cá nhân",
+        "description": "Giải pháp nhiếp ảnh chuyên nghiệp được thiết kế để nâng tầm thương hiệu cá nhân và tạo sự hiện diện hình ảnh nhất quán."
+      },
+      "casualPhotography": {
+        "title": "Nhiếp ảnh thường ngày",
+        "description": "Chân dung tự nhiên và thoải mái hoàn hảo cho mạng xã hội và nhu cầu chuyên nghiệp thông thường."
+      },
+      "casualCollection": {
+        "title": "Bộ sưu tập thường ngày",
+        "description": "Tạo một loạt chân dung phong cách sống thường ngày đa dạng, hoàn hảo để duy trì sự hiện diện trực tuyến nhất quán."
+      },
+      "catMagic": {
+        "title": "Phép màu mèo",
+        "description": "Biến ảnh mèo của bạn thành những bức chân dung kỳ diệu thể hiện tính cách và sự quyến rũ độc đáo của chúng."
+      },
+      "cyberpunk": {
+        "title": "Cyberpunk",
+        "description": "Biến hóa thành nhân vật cyberpunk tuyệt đẹp với phong cách nghệ thuật số tương lai."
+      },
+      "hanukkahMiracle": {
+        "title": "Phép màu Hanukkah",
+        "description": "Tạo chân dung theo chủ đề Hanukkah đẹp đẽ ghi lại phép màu của Lễ hội Ánh sáng."
+      },
+      "happyKid": {
+        "title": "Trẻ em vui vẻ",
+        "description": "Tạo chân dung đáng yêu của trẻ em hạnh phúc ghi lại niềm vui và sự ngây thơ thuần khiết."
+      },
+      "influencer": {
+        "title": "Influencer",
+        "description": "Tạo chân dung phong cách influencer hoàn hảo cho mạng xã hội và sáng tạo nội dung."
+      },
+      "meIconic": {
+        "title": "Biểu tượng của tôi",
+        "description": "Tạo phong cách chân dung biểu tượng riêng giúp bạn nổi bật giữa đám đông."
+      },
+      "merryChristmas": {
+        "title": "Giáng sinh vui vẻ",
+        "description": "Tạo chân dung Giáng sinh kỳ diệu ghi lại niềm vui và sự ấm áp của mùa lễ hội."
+      },
+      "playfulCasual": {
+        "title": "Vui nhộn thường ngày",
+        "description": "Tạo chân dung thường ngày vui nhộn và tự nhiên thể hiện khía cạnh tinh nghịch của bạn."
+      },
+      "podcaster": {
+        "title": "Podcaster",
+        "description": "Tạo chân dung podcaster chuyên nghiệp giúp xây dựng thương hiệu âm thanh của bạn."
+      },
+      "romanticMaternity": {
+        "title": "Thai kỳ lãng mạn",
+        "description": "Tạo chân dung thai kỳ đẹp và lãng mạn tôn vinh điều kỳ diệu của việc mang thai."
+      },
+      "socialMedia": {
+        "title": "Mạng xã hội",
+        "description": "Tạo chân dung tuyệt đẹp được tối ưu hóa cho tất cả các nền tảng mạng xã hội."
+      },
+      "timeMachine": {
+        "title": "Cỗ máy thời gian",
+        "description": "Du hành thời gian với những bức chân dung lịch sử tuyệt đẹp và ảnh theo chủ đề thời đại."
+      },
+      "timelessStudio": {
+        "title": "Studio vượt thời gian",
+        "description": "Tạo chân dung studio thanh lịch với vẻ đẹp chuyên nghiệp vượt thời gian."
+      },
+      "telAvivFashion": {
+        "title": "Thời trang Tel Aviv",
+        "description": "Tạo chân dung thời trang tuyệt đẹp lấy cảm hứng từ Tel Aviv với phong cách đô thị."
+      },
+      "wildFriends": {
+        "title": "Những người bạn hoang dã",
+        "description": "Tạo chân dung kỳ diệu với thú cưng và những người bạn động vật của bạn."
+      },
+      "winterWonderland": {
+        "title": "Xứ sở thần tiên mùa đông",
+        "description": "Tạo chân dung quyến rũ trong khung cảnh tuyết kỳ diệu của xứ sở thần tiên mùa đông."
+      },
+      "workFromHome": {
+        "title": "Làm việc tại nhà",
+        "description": "Tạo chân dung chuyên nghiệp làm việc tại nhà cho công việc từ xa."
+      },
+      "vintagePack": {
+        "title": "Gói cổ điển",
+        "description": "Tạo chân dung phong cách cổ điển đẹp với thẩm mỹ retro vượt thời gian và vẻ đẹp hoài cổ cổ điển."
+      },
+      "professionalTattoos": {
+        "title": "Chân dung hình xăm chuyên nghiệp",
+        "description": "Khoe hình xăm của bạn với chân dung chuyên nghiệp làm nổi bật biểu đạt nghệ thuật của bạn."
+      },
+      "annieLeibovitz": {
+        "title": "Phong cách Annie Leibovitz",
+        "description": "Chân dung ấn tượng lấy cảm hứng từ phong cách nhiếp ảnh biểu tượng của Annie Leibovitz."
+      },
+      "barbie": {
+        "title": "Phong cách Barbie",
+        "description": "Nhiếp ảnh chân dung vui nhộn và phong cách lấy cảm hứng từ Barbie."
+      },
+      "vikingPortraits": {
+        "title": "Chân dung Viking",
+        "description": "Chân dung mạnh mẽ lấy cảm hứng từ Viking hoàn hảo cho chủ đề lịch sử và chụp ảnh giả tưởng."
+      },
+      "marvelClass": {
+        "title": "Phong cách Marvel",
+        "description": "Ảnh chân dung năng động, ấn tượng với chất lượng điện ảnh lấy cảm hứng từ các tác phẩm Marvel."
+      }
+    }
+  },
+  "headshots": {
+    "title": "Ảnh chân dung AI cho người chuyên nghiệp",
+    "subtitle": "Hàng trăm chuyên gia kinh doanh thuộc mọi lĩnh vực sử dụng HeadshotPro mỗi ngày để tạo ảnh chân dung chuyên nghiệp cho công việc.",
+    "showMore": "Xem tất cả phong cách",
+    "showLess": "Thu gọn",
+    "types": {
+      "doctor": {
+        "title": "Ảnh chân dung bác sĩ",
+        "description": "Chân dung y tế chuyên nghiệp cho chuyên gia y tế, bác sĩ và cơ sở y tế."
+      },
+      "lawyer": {
+        "title": "Ảnh chân dung luật sư",
+        "description": "Chân dung chuyên nghiệp cho chuyên gia pháp lý và công ty luật."
+      },
+      "actor": {
+        "title": "Ảnh chân dung diễn viên",
+        "description": "Tạo chân dung quyến rũ tuyệt đẹp hoàn hảo cho hồ sơ thời trang, làm đẹp và người mẫu chuyên nghiệp."
+      },
+      "realtor": {
+        "title": "Phong cách môi giới bất động sản",
+        "description": "Chân dung chuyên nghiệp cho chuyên gia bất động sản."
+      },
+      "tedSpeaker": {
+        "title": "Phong cách diễn giả TED",
+        "description": "Chân dung chuyên nghiệp cho diễn giả và người thuyết trình."
+      },
+      "businessCasual": {
+        "title": "Ảnh chân dung công sở thường ngày",
+        "description": "Chân dung cổ điển và phong cách lấy cảm hứng từ thẩm mỹ của J.Crew"
+      },
+      "model": {
+        "title": "Ảnh chân dung người mẫu",
+        "description": "Chân dung thanh lịch và gợi cảm lấy cảm hứng từ phong cách của Helmut Newton"
+      },
+      "styledSuccess": {
+        "title": "Phong cách thành công",
+        "description": "Chân dung chuyên nghiệp với phong cách tinh tế cho vẻ ngoài hiện đại, hoàn thiện."
+      },
+      "professional": {
+        "title": "Gói chuyên nghiệp",
+        "description": "Gói ảnh chân dung chuyên nghiệp hoàn chỉnh hoàn hảo cho nhu cầu doanh nghiệp và công ty."
+      },
+      "partnersCollection": {
+        "title": "Bộ sưu tập đối tác",
+        "description": "Ảnh chân dung cao cấp được thiết kế đặc biệt cho đối tác công ty luật và giám đốc điều hành cấp cao."
+      },
+      "lawyerBranded": {
+        "title": "Thương hiệu luật sư",
+        "description": "Ảnh chân dung chuyên biệt củng cố thương hiệu pháp lý và thẩm quyền chuyên môn của bạn."
+      },
+      "effortlessProfessionalism": {
+        "title": "Chuyên nghiệp tự nhiên",
+        "description": "Ảnh chân dung tự nhiên, dễ gần nhưng vẫn giữ đợc sự hiện diện chuyên nghiệệp mạnh mẽ."
+      }
+    }
+  },
+  "common": {
+    "features": {
+      "styles": "Lựa chọn từ 150+ phong cách",
+      "delivery": "Kết quả trong vòng 1 giờ",
+      "protection": "Bảo vệ dữ liệu nghiêm ngặt",
+      "guarantee": "Đảm bảo hoàn tiền"
+    }
+  },
+  "heroPages": {
+    "color": {
+      "title": {
+        "part1": "Studio Chân Dung",
+        "part2": "Pop Color với AI"
+      },
+      "description": "Biến ảnh của bạn thành những bức chân dung rực rỡ, đầy màu sắc. Hoàn hảo cho mạng xã hội, thương hiệu cá nhân và thể hiện sáng tạo.",
+      "button": "Bắt Đầu Sáng Tạo",
+      "imageAlt": "Ví dụ về chân dung pop color"
+    },
+    "youtube": {
+      "title": {
+        "part1": "Studio Tạo",
+        "part2": "Hình Thu Nhỏ YouTube"
+      },
+      "description": "Tạo hình thu nhỏ YouTube bắt mắt để tăng lượt xem. Hoàn hảo cho người sáng tạo nội dung và phát triển kênh.",
+      "button": "Bắt Đầu Ngay",
+      "imageAlt": "Ví dụ về hình thu nhỏ YouTube"
+    },
+    "botanical": {
+      "title": {
+        "part1": "AI Vẻ Đẹp Tự Nhiên",
+        "part2": "Chân Dung với",
+        "part3": "Minh Họa Thực Vật"
+      },
+      "description": "Tận hưởng vẻ đẹp tinh tế của thiên nhiên với những bức chân dung được tạo bởi AI, được tô điểm bởi các yếu tố minh họa thực vật tinh tế.",
+      "button": "Bắt Đầu Miễn Phí",
+      "imageAlt": "Ví dụ về chân dung thực vật"
+    }
+  },
+  "heroFeatures": {
+    "styles": "Hơn 150 kiểu",
+    "delivery": "Hoàn thành trong một giờ",
+    "protection": "Bảo vệ quyền riêng tư nghiêm ngặt",
+    "guarantee": "Đảm bảo kết quả"
+  },
+ 
+    
+      "heroPacks": {
+       
+        "dreamlandKids": {
+          "gradientTitle": "Ảnh Ma Thuật Cho Trẻ",
+          "normalTitle": "Nơi Giấc Mơ Thành Hiện Thực",
+          "description": "Biến ảnh của con bạn thành những bức tranh ma thuật trong thế giới mơ ước. Phông nền tuyệt vời, chủ đề cổ tích và cảnh vui nhộn để tạo nên những kỷ niệm diệu kỳ.",
+          "buttonText": "Bắt Đầu Phép Thuật"
+        },
+        "babyDoodles": {
+          "gradientTitle": "Nét Vẽ Em Bé",
+          "normalTitle": "Ảnh Em Bé Đáng Yêu",
+          "description": "Tạo những bức ảnh đẹp và vui nhộn cho em bé. Hoàn hảo để lưu giữ những khoảnh khắc hạnh phúc của tuổi thơ và kỷ niệm gia đình.",
+          "buttonText": "Lưu Giữ Khoảnh Khắc"
+        },
+        "brandingPhotography": {
+          "gradientTitle": "Ảnh Thương Hiệu",
+          "normalTitle": "Nổi Bật và Tỏa Sáng",
+          "description": "Nâng tầm thương hiệu cá nhân của bạn với nhiếp ảnh chuyên nghiệp được hỗ trợ bởi AI",
+          "buttonText": "Xây Dựng Thương Hiệu"
+        },
+        "workFromHome": {
+          "gradientTitle": "Làm Việc Tại Nhà",
+          "normalTitle": "Ảnh Chuyên Nghiệp Từ Xa",
+          "description": "Tạo ảnh chuyên nghiệp cho làm việc từ xa. Hoàn hảo cho người làm việc từ xa và họp trực tuyến",
+          "buttonText": "Làm Việc Thông Minh"
+        },
+        "vintagePack": {
+          "gradientTitle": "Bộ Vintage",
+          "normalTitle": "Ảnh Phong Cách Retro",
+          "description": "Tạo những bức chân dung vintage đẹp. Hoàn hảo cho phong cách retro và ảnh cổ điển",
+          "buttonText": "Quay Về Quá Khứ"
+        },
+        "birthdayMagic": {
+          "gradientTitle": "Ma Thuật Sinh Nhật",
+          "normalTitle": "Ảnh Lễ Kỷ Niệm",
+          "description": "Tạo ảnh ma thuật cho sinh nhật của bạn. Hoàn hảo cho những dịp đặc biệt",
+          "buttonText": "Bắt Đầu Lễ Kỷ Niệm"
+        },
+        "casualPhotos": {
+          "gradientTitle": "Ảnh Thường Ngày",
+          "normalTitle": "Tự Nhiên và Thân Thiện",
+          "description": "Tạo những bức chân dung tự nhiên thể hiện con người thật của bạn. Hoàn hảo cho mạng xã hội và xây dựng thương hiệu cá nhân",
+          "buttonText": "Nhận Ảnh Tự Nhiên"
+        },
+        "casualCollection": {
+          "gradientTitle": "Bộ Sưu Tập Thường Ngày",
+          "normalTitle": "Khoảnh Khắc Tự Nhiên",
+          "description": "Tạo nhiều ảnh thường ngày phản ánh con người thật của bạn. Hoàn hảo cho nội dung mạng xã hội và hồ sơ.",
+          "buttonText": "Bắt Đầu Bộ Sưu Tập"
+        },
+        "catMagic": {
+          "gradientTitle": "Ma Thuật Mèo",
+          "normalTitle": "Khoảnh Khắc Đặc Biệt",
+          "description": "Biến ảnh mèo của bạn thành những hình ảnh ma thuật đầy cá tính. Hoàn hảo cho người yêu thú cưng và mạng xã hội.",
+          "buttonText": "Tạo Phép Thuật"
+        },
+        "christmasElf": {
+          "gradientTitle": "Yêu Tinh Giáng Sinh",
+          "normalTitle": "Ma Thuật Giáng Sinh",
+          "description": "Tạo ảnh vui nhộn theo chủ đề yêu tinh Giáng sinh. Hoàn hảo cho thiệp Giáng sinh và lễ kỷ niệm gia đình.",
+          "buttonText": "Bắt Đầu Vui Vẻ"
+        },
+        "christmasSweater": {
+          "gradientTitle": "Áo Len Giáng Sinh",
+          "normalTitle": "Không Khí Giáng Sinh Ấm Áp",
+          "description": "Tạo ảnh lễ kỷ niệm ấm áp theo chủ đề áo len Giáng sinh. Hoàn hảo cho thiệp Giáng sinh và tiệc văn phòng.",
+          "buttonText": "Bắt Đầu Lễ Kỷ Niệm"
+        },
+        "familyChristmas": {
+          "gradientTitle": "Giáng Sinh Gia Đình",
+          "normalTitle": "Kỷ Niệm Gia Đình Diệu Kỳ",
+          "description": "Tạo ảnh gia đình Giáng sinh ma thuật ghi lại điều kỳ diệu của mùa lễ. Hoàn hảo cho thiệp Giáng sinh và kỷ niệm gia đình quý giá.",
+          "buttonText": "Tạo Ma Thuật Gia Đình"
+        },
+        "cyberpunk": {
+          "gradientTitle": "Cyberpunk",
+          "normalTitle": "Tương Lai Số",
+          "description": "Biến ảnh của bạn thành tác phẩm nghệ thuật cyberpunk tương lai. Hoàn hảo cho người hâm mộ khoa học viễn tưởng và thiết kế tương lai.",
+          "buttonText": "Bước Vào Tương Lai"
+        },
+        "hanukkahMiracle": {
+          "gradientTitle": "Phép Màu Hanukkah",
+          "normalTitle": "Lễ Hội Ánh Sáng",
+          "description": "Tạo ảnh đẹp theo chủ đề Hanukkah ghi lại điều kỳ diệu của Lễ Hội Ánh Sáng. Hoàn hảo cho thiệp lễ hội và lễ kỷ niệm gia đình.",
+          "buttonText": "Thắp Sáng Ánh Sáng"
+        },
+        "happyKid": {
+          "gradientTitle": "Trẻ Em Hạnh Phúc",
+          "normalTitle": "Khoảnh Khắc Niềm Vui",
+          "description": "Tạo ảnh trẻ em tuyệt vời ghi lại niềm vui và sự ngây thơ của chúng. Hoàn hảo cho album gia đình và kỷ niệm quý giá.",
+          "buttonText": "Bắt Trọn Niềm Vui"
+        },
+        "influencer": {
+          "gradientTitle": "Người Ảnh Hưởng",
+          "normalTitle": "Tỏa Sáng Mạng Xã Hội",
+          "description": "Tạo ảnh chuyên nghiệp xứng đáng với một người ảnh hưởng thành công. Hoàn hảo cho mạng xã hội và xây dựng thương hiệu cá nhân.",
+          "buttonText": "Bắt Đầu Ảnh Hưởng"
+        },
+        "meIconic": {
+          "gradientTitle": "Biểu Tượng Của Tôi",
+          "normalTitle": "Ảnh Biểu Tượng",
+          "description": "Biến ảnh của bạn thành những bức ảnh biểu tượng thể hiện cá tính độc đáo của bạn. Hoàn hảo cho việc thể hiện bản thân và nổi bật.",
+          "buttonText": "Trở Thành Biểu Tượng"
+        },
+        "merryChristmas": {
+          "gradientTitle": "Giáng Sinh Vui Vẻ",
+          "normalTitle": "Niềm Vui Giáng Sinh",
+          "description": "Tạo ảnh truyền tải tinh thần Giáng sinh. Hoàn hảo cho thiệp và lễ kỷ niệm.",
+          "buttonText": "Mừng Giáng Sinh"
+        },
+        "playfulCasual": {
+          "gradientTitle": "Vui Nhộn Thường Ngày",
+          "normalTitle": "Khoảnh Khắc Thư Giãn",
+          "description": "Tạo ảnh thường ngày vui nhộn phản ánh tinh thần vui vẻ của bạn. Hoàn hảo cho khoảnh khắc hàng ngày và mạng xã hội.",
+          "buttonText": "Bắt Đầu Vui Vẻ"
+        },
+        "podcaster": {
+          "gradientTitle": "Người Làm Podcast",
+          "normalTitle": "Giọng Nói Trực Quan",
+          "description": "Tạo ảnh chuyên nghiệp xứng đáng với một podcaster chuyên nghiệp. Hoàn hảo cho quảng bá và tiếp thị.",
+          "buttonText": "Bắt Đầu Phát Sóng"
+        },
+        "romanticMaternity": {
+          "gradientTitle": "Thai Kỳ Lãng Mạn",
+          "normalTitle": "Khoảnh Khắc Thai Kỳ",
+          "description": "Ghi lại hành trình thai kỳ của bạn với những bức ảnh lãng mạn đẹp. Hoàn hảo cho kỷ niệm gia đình và chia sẻ với người thân yêu.",
+          "buttonText": "Ghi Lại Khoảnh Khắc"
+        },
+        "socialMedia": {
+          "gradientTitle": "Mạng Xã Hội",
+          "normalTitle": "Tỏa Sáng Kỹ Thuật Số",
+          "description": "Tạo ảnh hấp dẫn cho mạng xã hội. Hoàn hảo cho nội dung kỹ thuật số và sự hiện diện trực tuyến.",
+          "buttonText": "Bắt Đầu Tỏa Sáng"
+        },
+        "timeMachine": {
+          "gradientTitle": "Cỗ Máy Thời Gian",
+          "normalTitle": "Du Hành Thời Gian",
+          "description": "Du hành thời gian với ảnh mang phong cách của các thời đại khác nhau. Hoàn hảo cho người yêu thích lịch sử và hoài niệm.",
+          "buttonText": "Bắt Đầu Hành Trình"
+        },
+        "timelessStudio": {
+          "gradientTitle": "Studio Vượt Thời Gian",
+          "normalTitle": "Vẻ Đẹp Vĩnh Cửu",
+          "description": "Tạo ảnh cổ điển vượt thời gian trong studio chuyên nghiệp. Hoàn hảo cho ảnh chính thức và chuyên nghiệp.",
+          "buttonText": "Bắt Đầu Chụp"
+        },
+        "tlvFashion": {
+          "gradientTitle": "Thời Trang Tel Aviv",
+          "normalTitle": "Thời Trang Đương Đại",
+          "description": "Tạo ảnh thời trang đương đại với tinh thần sôi động của Tel Aviv. Hoàn hảo cho người yêu thời trang và phong cách.",
+          "buttonText": "Khám Phá Sự Thanh Lịch"
+        },
+        "wildFriends": {
+          "gradientTitle": "Bạn Bè Hoang Dã",
+          "normalTitle": "Phiêu Lưu Thiên Nhiên",
+          "description": "Tạo ảnh với nét hoang dã và tự nhiên. Hoàn hảo cho người yêu thiên nhiên và nhà thám hiểm.",
+          "buttonText": "Bắt Đầu Phiêu Lưu"
+        },
+        "winterWonderland": {
+          "gradientTitle": "Xứ Sở Thần Tiên Mùa Đông",
+          "normalTitle": "Ma Thuật Mùa Đông",
+          "description": "Tạo ảnh ma thuật trong khung cảnh mùa đông như cổ tích. Hoàn hảo cho mùa đông và ngày lễ.",
+          "buttonText": "Khám Phá Ma Thuật"
+        },
+        "marvelClass": {
+              "gradientTitle": "Hạng Cao Cấp",
+              "normalTitle": "Chân Dung Pháp Lý",
+              "description": "Trải nghiệm đỉnh cao của hình ảnh chuyên nghiệp với ảnh chân dung AI của chúng tôi. Được thiết kế để nắm bắt bản chất của sự xuất sắc pháp lý với sự tinh tế và phong cách không ai sánh bằng.",
+              "button": "Trải Nghiệm Chất Lượng Cao Cấp",
+              "imageAlt": "Chân dung pháp lý chuyên nghiệp"
+            },
+            "vikingsHero": {
+              "gradientTitle": "Chân Dung Viking",
+              "normalTitle": "Được Tạo bởi Phép Màu AI",
+              "description": "Biến đổi ảnh của bạn thành những bức chân dung huyền thoại nắm bắt tinh thần của các chiến binh Norse. Hoàn hảo cho hồ sơ game, nội dung sáng tạo và xây dựng thương hiệu cá nhân độc đáo.",
+              "button": "Tạo Huyền Thoại của Bạn",
+              "imageAlt": "Chân dung phong cách Viking"
+            },
+            "barbieHero": {
+              "gradientTitle": "Chân Dung Pop Culture",
+              "normalTitle": "Với Cá Tính Sống Động",
+              "description": "Tạo ra những bức chân dung ấn tượng với màu sắc táo bạo và phong cách vui tươi. Hoàn hảo cho những người có ảnh hưởng trên mạng xã hội và người sáng tạo nội dung.",
+              "button": "Tạo Editorial của Bạn",
+              "imageAlt": "Chân dung phong cách Barbie"
+            },
+            "common": {
+              "features": {
+                "styles": "Nhiều phong cách",
+                "delivery": "Giao hàng nhanh",
+                "protection": "Bảo vệ an toàn",
+                "guarantee": "Đảm bảo hài lòng"
+              }
+            }
+          }
+     
+      }
+    
+

@@ -515,11 +515,11 @@ const PhotographyGrid = () => {
   return (
     <div className="w-full bg-white">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-[82px] py-16">
-        <div className="text-center mb-8">
-          <h2 className="mx-auto w-full md:w-[600px] h-auto md:h-[48px] font-[500] text-[24px] sm:text-[32px] leading-[36px] sm:leading-[48px] text-center">
+        <div className="text-center mb-12">
+          <h2 className="mx-auto max-w-[600px] mb-4 font-[500] text-[24px] sm:text-[32px] leading-[1.3] text-center">
             {t('title')}
           </h2>
-          <p className="mx-auto w-full md:w-[992px] h-auto md:h-[54px] font-[400] text-[16px] sm:text-[18px] leading-[24px] sm:leading-[27px] tracking-[-0.04em] text-center text-[#161C2D] font-poppins">
+          <p className="mx-auto max-w-[992px] font-[400] text-[16px] sm:text-[18px] leading-[1.5] tracking-[-0.04em] text-center text-[#161C2D] font-poppins">
             {t('description')}
           </p>
         </div>

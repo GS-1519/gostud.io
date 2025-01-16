@@ -15,7 +15,7 @@ const publicPaths = [
 
 // Create the intl middleware
 const intlMiddleware = createIntlMiddleware({
-  locales: ['en', 'fr', 'ar', 'cn', 'de', 'ja', 'ko', 'fr'],
+  locales: ['en', 'fr', 'ar', 'cn', 'de', 'ja', 'ko', 'es', 'it', 'th', 'tr', 'br', 'ru', 'vi', 'id'],
   defaultLocale: 'en',
   localePrefix: 'always'
 });

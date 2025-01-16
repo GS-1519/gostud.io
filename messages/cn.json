@@ -617,6 +617,288 @@
               "description": "保持专业形象的自然亲和力形象照"
             }
           }
+        },
+   
+  "common": {
+    "features": {
+      "styles": "150+种风格可选",
+      "delivery": "1小时内完成",
+      "protection": "严格的数据保护",
+      "guarantee": "退款保证"
+    }
+  },
+  "heroPages": {
+    "lawyer": {
+      "title": {
+        "part1": "专业",
+        "part2": "律师形象照",
+        "part3": "AI生成",
+        "part4": "几分钟完成"
+      },
+      "description": "将您的自拍照转换成专业的法律形象照，建立客户信任和可信度。",
+      "button": "免费开始"
+    },
+    "doctor": {
+      "title": {
+        "part1": "专业",
+        "part2": "医疗形象照",
+        "part3": "AI生成",
+        "part4": "几分钟完成"
+      },
+      "description": "将您的自拍照转换成专业的医疗形象照，建立患者信任和可信度。",
+      "button": "免费开始使用"
+    },
+    "dating": {
+      "title": {
+        "part1": "展现真实的你",
+        "part2": "约会形象照",
+        "part3": "AI生成",
+        "part4": "建立真诚连接"
+      },
+      "description": "上传您的照片，立即提升您的约会资料，获得多样化的效果。",
+      "button": "免费开始使用"
+    },
+    "glamour": {
+      "title": {
+        "part1": "专业写真工作室",
+        "part2": "AI智能驱动"
+      },
+      "description": "将您的日常照片转变为令人惊艳的专业写真。完美适用于社交媒体、约会档案和个人品牌建设。"
+    },
+    "realtor": {
+      "title": {
+        "part1": "专业房产经纪",
+        "part2": "形象照片",
+        "part3": "AI智能驱动"
+      },
+      "description": "将您的自拍照转变为专业的房地产经纪人形象照，为潜在客户建立信任和信誉。",
+      "button": "免费开始"
+    },
+    "speaker": {
+      "title": {
+        "part1": "专业演讲者",
+        "part2": "和TED演讲风格",
+        "part3": "形象照片",
+        "part4": "AI智能驱动"
+      },
+      "description": "将您的自拍照转变为富有感染力的演讲者形象照，让您在主题演讲、会议和专业演讲活动中脱颖而出。",
+      "button": "免费开始"
+    },
+    "jcrew": {
+      "title": {
+        "part1": "商务休闲专业照片",
+        "part2": "AI智能生成"
+      },
+      "description": "将您的照片转换为专业的商务休闲肖像，融合友好和专业特质。完美适合现代工作环境和创意产业。",
+      "button": "立即开始"
+    }
+  },
+  "heroFeatures": {
+    "styles": "超过150种风格",
+    "delivery": "一小时内完成",
+    "protection": "严格的隐私保护",
+    "guarantee": "结果保证"
+  },
+ 
+    
+      "heroPacks": {
+        "dreamlandKids": {
+          "gradientTitle": "童话魔法照",
+          "normalTitle": "梦想成真之地",
+          "description": "将您孩子的照片转化为梦幻世界中的魔法画作。梦幻背景、童话主题和欢乐场景，创造神奇回忆。",
+          "buttonText": "开启魔法"
+        },
+        "babyDoodles": {
+          "gradientTitle": "宝宝涂鸦",
+          "normalTitle": "可爱宝宝照",
+          "description": "为宝宝创作精美有趣的照片。完美捕捉童年欢乐时光和家庭珍贵回忆。",
+          "buttonText": "捕捉瞬间"
+        },
+        "brandingPhotography": {
+          "gradientTitle": "品牌形象照",
+          "normalTitle": "脱颖而出",
+          "description": "通过AI驱动的专业摄影提升您的个人品牌",
+          "buttonText": "打造品牌"
+        },
+        "workFromHome": {
+          "gradientTitle": "居家办公照",
+          "normalTitle": "远程专业形象",
+          "description": "创建居家办公专业照片。适合远程工作者和线上会议",
+          "buttonText": "智慧工作"
+        },
+        "vintagePack": {
+          "gradientTitle": "复古照片包",
+          "normalTitle": "复古风格照",
+          "description": "创建优雅的复古风格肖像。完美呈现复古造型和经典照片",
+          "buttonText": "时光倒流"
+        },
+       
+        "casualPhotos": {
+          "gradientTitle": "休闲照片",
+          "normalTitle": "自然友好",
+          "description": "创建展现真实个性的自然肖像。适合社交媒体和个人品牌",
+          "buttonText": "获取自然照"
+        },
+        "casualCollection": {
+          "gradientTitle": "休闲系列",
+          "normalTitle": "自然时刻",
+          "description": "创建反映真实个性的多样化休闲照片。适合社交内容和个人档案。",
+          "buttonText": "开始收藏"
+        },
+        "catMagic": {
+          "gradientTitle": "猫咪魔法",
+          "normalTitle": "特别时刻",
+          "description": "将您猫咪的照片变成充满个性的魔法图像。适合宠物爱好者和社交媒体。",
+          "buttonText": "创造魔法"
+        },
+        "christmasElf": {
+          "gradientTitle": "圣诞精灵",
+          "normalTitle": "节日魔法",
+          "description": "创建有趣的圣诞精灵主题照片。适合节日贺卡和家庭庆祝。",
+          "buttonText": "开始欢乐"
+        },
+        "christmasSweater": {
+          "gradientTitle": "圣诞毛衣",
+          "normalTitle": "温暖节日氛围",
+          "description": "创建温馨的圣诞毛衣主题节日照片。适合节日贺卡和办公室派对。",
+          "buttonText": "开始庆祝"
+        },
+        "familyChristmas": {
+          "gradientTitle": "家庭圣诞",
+          "normalTitle": "魔法家庭回忆",
+          "description": "创建捕捉节日魔法的圣诞家庭照。适合节日贺卡和珍贵家庭回忆。",
+          "buttonText": "创造家庭魔法"
+        },
+        "cyberpunk": {
+          "gradientTitle": "赛博朋克",
+          "normalTitle": "数字未来",
+          "description": "将您的照片转变为未来赛博朋克艺术作品。适合科幻迷和未来主义设计。",
+          "buttonText": "进入未来"
+        },
+        "hanukkahMiracle": {
+          "gradientTitle": "光明节奇迹",
+          "normalTitle": "光明节庆典",
+          "description": "创建美丽的光明节主题照片，捕捉节日的魔法。适合节日贺卡和家庭庆祝。",
+          "buttonText": "点亮光明"
+        },
+        "happyKid": {
+          "gradientTitle": "快乐儿童",
+          "normalTitle": "欢乐时光",
+          "description": "创建捕捉儿童欢乐和天真的精彩照片。适合家庭相册和珍贵回忆。",
+          "buttonText": "捕捉欢乐"
+        },
+        "influencer": {
+          "gradientTitle": "网红达人",
+          "normalTitle": "社交光芒",
+          "description": "创建专业的网红级照片。适合社交媒体和个人品牌建设。",
+          "buttonText": "开始影响力"
+        },
+        "meIconic": {
+          "gradientTitle": "我的标志",
+          "normalTitle": "标志性照片",
+          "description": "将您的照片转变为展现独特个性的标志性作品。适合个人表达和突出特色。",
+          "buttonText": "成为标志"
+        },
+        "merryChristmas": {
+          "gradientTitle": "圣诞快乐",
+          "normalTitle": "节日欢乐",
+          "description": "创建充满圣诞精神的照片。适合贺卡和庆祝活动。",
+          "buttonText": "庆祝圣诞"
+        },
+        "playfulCasual": {
+          "gradientTitle": "趣味休闲",
+          "normalTitle": "轻松时刻",
+          "description": "创建反映您活力精神的休闲趣味照片。适合日常时刻和社交媒体。",
+          "buttonText": "开始趣味"
+        },
+        "podcaster": {
+          "gradientTitle": "播客主持",
+          "normalTitle": "视觉声音",
+          "description": "创建专业的播客主持人照片。适合推广和营销。",
+          "buttonText": "开始播放"
+        },
+        "romanticMaternity": {
+          "gradientTitle": "浪漫孕照",
+          "normalTitle": "孕期时刻",
+          "description": "用唯美的浪漫照片记录您的孕期旅程。适合家庭回忆和与亲人分享。",
+          "buttonText": "记录时刻"
+        },
+        "socialMedia": {
+          "gradientTitle": "社交媒体",
+          "normalTitle": "数字光芒",
+          "description": "创建吸引人的社交媒体照片。适合数字内容和在线形象建设。",
+          "buttonText": "开始闪耀"
+        },
+        "timeMachine": {
+          "gradientTitle": "时光机器",
+          "normalTitle": "时空之旅",
+          "description": "通过不同时代风格的照片进行时空旅行。适合历史爱好者和怀旧之情。",
+          "buttonText": "开始旅程"
+        },
+        "timelessStudio": {
+          "gradientTitle": "永恒工作室",
+          "normalTitle": "永恒之美",
+          "description": "在专业工作室创建经典永恒的照片。适合正式和专业照片。",
+          "buttonText": "开始拍摄"
+        },
+        "tlvFashion": {
+          "gradientTitle": "特拉维夫时尚",
+          "normalTitle": "当代时尚",
+          "description": "创建具有特拉维夫活力精神的当代时尚照片。适合时尚和风格爱好者。",
+          "buttonText": "探索优雅"
+        },
+        "wildFriends": {
+          "gradientTitle": "野性伙伴",
+          "normalTitle": "自然冒险",
+          "description": "创建带有野性和自然触感的照片。适合自然爱好者和冒险家。",
+          "buttonText": "开始冒险"
+        },
+        "winterWonderland": {
+          "gradientTitle": "冬日仙境",
+          "normalTitle": "冬季魔法",
+          "description": "在童话般的冬季场景中创建魔法照片。适合冬季和节日季节。",
+          "buttonText": "探索魔法"
+        
+        },
+        "birthdayMagic": {
+          "gradientTitle": "魔法生日照片",
+          "normalTitle": "捕捉特殊时刻",
+          "description": "用我们的专业生日照片创造魔法回忆",
+          "buttonText": "立即开始"
+        },
+        
+            "marvelClass": {
+              "gradientTitle": "高端法律肖像",
+              "normalTitle": "AI精心打造",
+              "description": "体验我们AI头像摄影的巅峰之作。专为捕捉法律精英的精髓而设计，具有无与伦比的精致感和风格。",
+              "button": "立即体验",
+              "imageAlt": "专业法律肖像照片"
+            },
+            "vikingsHero": {
+              "gradientTitle": "维京战士肖像",
+              "normalTitle": "AI魔法驱动",
+              "description": "将您的照片转变为传奇肖像，捕捉北欧战士的精神。完美适合游戏档案、创意内容和独特的个人品牌塑造。",
+              "button": "创造您的传奇",
+              "imageAlt": "维京风格肖像"
+            },
+            "barbieHero": {
+              "gradientTitle": "流行文化肖像",
+              "normalTitle": "充满活力个性",
+              "description": "创作具有大胆色彩和趣味风格的醒目肖像。完美适合社交媒体影响者和创意内容创作者。",
+              "button": "创作您的专题",
+              "imageAlt": "芭比风格肖像"
+            },
+            "common": {
+              "features": {
+                "styles": "多种风格",
+                "delivery": "快速交付",
+                "protection": "安全保护",
+                "guarantee": "满意保证"
+              }
+            }
+          }
         }
-      }
+      
+    
+  
   

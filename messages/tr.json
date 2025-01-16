@@ -1,0 +1,1095 @@
+{
+  "hero": {
+    "title": "Selfielerinizle Profesyonel Portre Fotoğrafları",
+    "description": "LinkedIn, Twitter ve işe alım uzmanları karşısında öne çıkın. Selfielerinizi yükleyin ve favori AI fotoğrafçınız \"Aaria\"dan yüzlerce profesyonel portre fotoğrafı alın.",
+    "features": {
+      "styles": "150+ stil ve kıyafet",
+      "delivery": "1 saat içinde sonuç",
+      "protection": "Sıkı Veri Koruma",
+      "guarantee": "Para İade Garantisi"
+    },
+    "button": "Hemen Deneyin",
+    "tryNow": "Hemen Başlayın →"
+  },
+  "ExplainerSection": {
+    "title": "STÜDYO KALİTESİNDE PROFİL FOTOĞRAFI İÇİN 3 KOLAY ADIM",
+    "step1": {
+      "title": "Birkaç fotoğraf yükleyin",
+      "description": "AI'nin sizi tanıması için birkaç fotoğrafınızı yükleyin."
+    },
+    "step2": {
+      "title": "AI Fotoğrafçımız \"Aaria\" işe koyuluyor",
+      "description": "Aaria sadece size özel, kişiselleştirilmiş bir model oluşturarak benzersiz stilinizi ve kimliğinizi yansıtan portreler üretir."
+    },
+    "step3": {
+      "title": "Favori Portrelerinizi İndirin",
+      "description": "İş profilinizi yükseltmek için mükemmel portreler sunan çeşitli stiller alacaksınız."
+    },
+    "tryNow": "Hemen Deneyin"
+  },
+  "PhotographyGrid": {
+    "title": "PAKETLERİMİZ - NE İSTERSENİZ MEVCUT",
+    "description": "Her stil ve ihtiyaca uygun olarak hazırlanmış fotoğraf paketlerimizin tamamını keşfedin. Profesyonel portrelerden yaratıcı düzenlemelere kadar her şey elimizde. Vizyonunuz ne olursa olsun, AI fotoğrafçımız bunu zahmetsizce hayata geçiriyor.",
+    "tryNow": "Hemen Deneyin",
+    "packs": {
+      "corporate": "Kurumsal Portreler",
+      "speaker": "Konuşmacı Paketi",
+      "doctor": "Tıp Profesyoneli",
+      "realtor": "Emlak Danışmanı",
+      "dating": "Arkadaşlık Profili",
+      "redcarpet": "Kırmızı Halı",
+      "boldcolors": "Canlı Renkler",
+      "tattoo": "Dövme Sanatçısı",
+      "glamour": "Glamour Çekim",
+      "barbie": "Barbie Stili",
+      "halloween": "Cadılar Bayramı Teması",
+      "mythical": "Mitolojik"
+    }
+  },
+  "Comparison": {
+    "title": "ZAMANDAN VE PARADAN TASARRUF EDİN",
+    "description": "Aaria, her profesyonel an için hazır olmanızı sağlar. CV'den LinkedIn'e kadar, portrelerinizin zahmetsizce parlamasını sağlıyoruz.",
+    "columns": {
+      "goStudio": "Go Studio.ai",
+      "studio": "Stüdyo Çekimi"
+    },
+    "items": {
+      "value": {
+        "label": "Paranın değeri",
+        "goStudio": "19$",
+        "studio": "200$"
+      },
+      "time": {
+        "label": "Zaman tasarrufu",
+        "goStudio": "30 dakika",
+        "studio": "2-3 gün"
+      },
+      "variety": {
+        "label": "Çeşitlilik",
+        "goStudio": "30 portre",
+        "studio": "4-5 portre"
+      },
+      "choices": {
+        "label": "Daha fazla seçenek",
+        "goStudio": "20 stil",
+        "studio": "1 stil"
+      }
+    },
+    "exploreMore": "Daha Fazlasını Keşfedin"
+  },
+  "Why": {
+    "title": {
+      "why": "NEDEN",
+      "gostudio": "GOSTUDIO.AI?"
+    },
+    "description": "AI destekli portrelerle profesyonel imajınızı dönüştürün. Dakikalar içinde LinkedIn, CV ve daha fazlası için stüdyo kalitesinde fotoğraflar elde edin.",
+    "features": {
+      "linkedin": {
+        "title": "LinkedIn'de Öne Çıkın",
+        "description": "Profil görüntülenmelerinizi ve güvenilirliğinizi artıran profesyonel bir portre ile güçlü bir ilk izlenim bırakın."
+      },
+      "resume": {
+        "title": "CV'nizi Parlatın",
+        "description": "İş başvurularınızı kişisel dokunuş ve profesyonellik katan şık bir portre ile yükseltin."
+      },
+      "events": {
+        "title": "Etkinlikler ve Konferanslar",
+        "description": "Profesyonel etkinliklerde en iyi halinizle yer alın. Konuşmacı profilleri, etkinlik dizinleri ve yaka kartları için mükemmel."
+      },
+      "business": {
+        "title": "Kartvizitler ve Markalaşma",
+        "description": "Yüksek kaliteli portrelerle tüm iş materyallerinizde tutarlı bir profesyonel imaj yaratın."
+      },
+      "online": {
+        "title": "Dijital Varlık",
+        "description": "Sosyal medyadan şirket web sitelerine ve profesyonel ağlara kadar tüm platformlarda profesyonel görünün."
+      }
+    },
+    "tryNow": "Hemen Deneyin"
+  },
+  "HeadshotReview": {
+    "title": {
+      "part1": "MUTLU MÜŞTERİLERİMİZ İÇİN",
+      "part2": "OLUŞTURULAN FOTOĞRAFLAR"
+    },
+    "description": "Stüdyoda çekilmedi. AI tarafından oluşturuldu. Sadece bizim sözümüze güvenmeyin. AI'mız günlük fotoğraflarınızı, özgüveninizi ve güvenilirliğinizi yansıtan profesyonel portrelere dönüştürüyor.",
+    "createButton": "Portrenizi Oluşturun",
+    "testimonials": {
+      "col1": {
+        "1": "Sonuçlar muhteşem ve bana göre özelleştirilmiş. Bu AI portreleri bir üst seviye.",
+        "2": "Platformu çeşitli ürün görüntüleriyle test ettim ve sonuçlardan memnun kaldım.",
+        "3": "Şimdiye kadarki en iyi Ürün Fotoğrafı üretici sitesi!"
+      },
+      "col2": {
+        "1": "Online perakendeci olarak, yüksek kaliteli ürün görselleri çok önemli. Mücevherlerimin birkaç fotoğrafını yükledim ve AI, parçaları güzelce sergileyen birden çok muhteşem seçenek üretti. Çeşitlilik, ürünlerimi etkili bir şekilde vurgulamak için farklı arka planlar ve açılar seçmeme olanak tanıdı.",
+        "2": "E-ticaret için olmazsa olmaz bir araç!",
+        "3": "Bir kez yükleyin ve seçebileceğiniz birçok seçenek elde edin."
+      },
+      "col3": {
+        "1": "Mükemmel kalite ve fotoğraflarda çeşitlilik.",
+        "2": "Hızlı ve kullanıcı dostu arayüz. Bu platformun kullanımının ne kadar kolay olduğunu takdir ediyorum.",
+        "3": "Bu platformun kullanımının ne kadar kolay olduğunu takdir ediyorum. Aldığım seçenek sayısından etkilendim. Çoğu harikaydı, ancak birkaçı ürünü umduğum gibi yakalayamadı. Yine de, en iyilerini filtrelemek ve bulmak kolay. Genel olarak, bana çok fazla çaba tasarrufu sağlayan harika bir araç!"
+      },
+      "col4": {
+        "1": "AI, çeşitli görüntüler üretmekte inanılmaz derecede akıllı. Küçük bir fotoğraf stüdyosuna sahip olmak gibi!",
+        "2": "Platformun tek bir görüntü yükledikten sonra birkaç seçenek sunmasını seviyorum. Estetiğime uyan bir stil veya arka plan seçmek kolay. Yine de, çoklu sonuçların rahatlığı ve genel kalite buna değer! Özellikle sosyal medya için çeşitlilik gerekiyorsa zaman kazandırıcı.",
+        "3": "Hızlı hizmet ve kaliteden çok memnunum."
+      }
+    }
+  },
+  "Pricing": {
+    "title": "10 KAT DAHA DÜŞÜK FİYATA PREMIUM KALİTE",
+    "description": "Stüdyo ziyareti yok. 200$+ fotoğraf çekim ücreti yok. Randevu bekleme yok. Sadece 30 dakika içinde muhteşem, profesyonel kalitede portreler elde edin—hepsi evinizin rahatlığında.",
+    "badges": {
+      "mostPopular": "82% bu planı seçiyor",
+      "bestValue": "En İyi Değer"
+    },
+    "oneTimePayment": "Tek Seferlik Ödeme",
+    "noSubscription": "Abonelik gerekmiyor",
+    "tryNow": "Hemen Deneyin",
+    "features": {
+      "headshots": {
+        "basic": "20 yüksek kaliteli portre",
+        "standard": "60 yüksek kaliteli portre",
+        "premium": "100 yüksek kaliteli portre"
+      },
+      "processing": {
+        "basic": "2 saat işlem süresi",
+        "standard": "1 saat işlem süresi",
+        "premium": "30 dakika işlem süresi"
+      },
+      "outfits": {
+        "basic": "5 kıyafet ve arka plan",
+        "standard": "20 kıyafet ve arka plan",
+        "premium": "40 kıyafet ve arka plan"
+      },
+      "poses": {
+        "basic": "5 poz",
+        "standard": "20 poz",
+        "premium": "40 poz"
+      }
+    }
+  },
+  "DataSecurity": {
+    "title": "VERİ GİZLİLİĞİNE DEĞER VERİYORUZ",
+    "subtitle": {
+      "line1": "Fortune 500 Liderleri ve Üst Düzey Profesyoneller Tarafından Güvenilen",
+      "line2": "Saygın kurumsal organizasyonlar ve ekipler verilerini bize emanet ediyor"
+    },
+    "features": {
+      "noSelling": {
+        "title": "VERİ SATIŞI YOK, PAYLAŞIM YOK",
+        "description": "Verilerinizi asla satmayacak veya üçüncü taraf web siteleriyle paylaşmayacağız."
+      },
+      "control": {
+        "title": "FOTOĞRAFLARINIZ, SİZİN KONTROLÜNÜZ",
+        "description": "İzniniz olmadan fotoğraflarınızı AI eğitimi için kullanmayacağız."
+      },
+      "autoDeletion": {
+        "title": "OTOMATİK VERİ SİLME",
+        "description": "Sistem tüm görüntülerinizi 90 gün sonra otomatik olarak siler. Ayarları istediğiniz gibi belirleme seçeneğine sahipsiniz."
+      },
+      "security": {
+        "title": "EN ÜST DÜZEY GÜVENLİK",
+        "description": "Tüm hassas kullanıcı verilerini şifreliyoruz. Verileriniz için sektörün en güvenilir yazılımlarını kullanıyoruz."
+      }
+    },
+    "createButton": "Portrenizi Oluşturun"
+  },
+  "TeamSection": {
+    "title": {
+      "why": "NEDEN",
+      "gostudio": "GOSTUDIO.AI?"
+    },
+    "description": "Aaria tarafından zahmetsizce oluşturulan stüdyo kalitesinde portrelerle ekibiniz için birleşik, profesyonel bir görünüm yaratın. Şirketinizin değerlerini yansıtan şık portreler sunuyoruz. Maliyetli fotoğraf çekimleri yok—sadece sorunsuz, yüksek kaliteli sonuçlar.",
+    "teamHeadshots": "Ekip Portreleri",
+    "tryNow": "Hemen Deneyin"
+  },
+  "CreationGallery": {
+    "title": "YARATIMLARIMA BİR GÖZ ATIN",
+    "description": "Çalışmalarımdan bir kesiti sizinle paylaşmaktan heyecan duyuyorum.",
+    "createButton": "Portrenizi Oluşturun"
+  },
+  "FAQ": {
+    "title": "Sıkça Sorulan Sorular",
+    "questions": {
+      "whatIs": {
+        "question": "GoStudio.ai nedir? Nasıl çalışır?",
+        "answer": "GoStudio.ai, kendi fotoğraflarınızı kullanarak görünümünüzü temsil eden ve çeşitli stillerde ve kıyafetlerle portrelerinizi oluşturabilen özel bir AI modeli eğitir. Oluşturulan portrelerin kalitesi yüklediğiniz fotoğraflara bağlıdır. Yüzünüzün, gözlerinizin farklı perspektiflerini ve çeşitli açıları içeren fotoğraflar kullanmaya çalışmalısınız. Her fotoğraf, görünümünüz ve yüz özellikleriniz hakkında yeni bir şey yansıtmalıdır."
+      },
+      "photoRequirements": {
+        "question": "Ne tür fotoğraflar yüklemem gerekiyor?",
+        "answer": "Çeşitliliğe öncelik verin. Günün farklı saatlerinde çekilmiş, farklı yüz ifadeleri ve farklı arka planlar içeren fotoğraflar, yüksek kaliteli girdi fotoğrafları için önemlidir. Ah, ve lütfen minimum makyaj ve aksesuar kullanın!"
+      },
+      "ownership": {
+        "question": "Oluşturulan fotoğrafların hakları kime ait?",
+        "answer": "Hem yüklediğiniz fotoğrafların hem de AI tarafından oluşturulan görüntülerin tam mülkiyeti size aittir. Fotoğraflarınız yalnızca kişisel AI modelinizi eğitmek için kullanılır ve asla diğer kullanıcılarla paylaşılmaz."
+      },
+      "timing": {
+        "question": "Portrelerimi almam ne kadar sürer?",
+        "answer": "Süreç genellikle yüklemeden ilk AI üretimi portre setinizi almanıza kadar yaklaşık 15-20 dakika sürer. Daha sonra anında ek varyasyonlar oluşturabilirsiniz."
+      },
+      "satisfaction": {
+        "question": "Sonuçlardan memnun kalmazsam ne olur?",
+        "answer": "Memnuniyet garantisi sunuyoruz. Sonuçlardan memnun kalmazsanız, onları iyileştirmek için sizinle çalışacağız veya tam para iadesi sağlayacağız."
+      },
+      "linkedin": {
+        "question": "Bu fotoğrafları LinkedIn ve diğer profesyonel platformlarda kullanabilir miyim?",
+        "answer": "Kesinlikle! AI tarafından oluşturulan portrelerimiz LinkedIn, şirket web siteleri, kartvizitler ve diğer profesyonel kullanımlar için mükemmeldir."
+      },
+      "whichAI": {
+        "question": "Hangi AI teknolojisini kullanıyorsunuz?",
+        "answer": "Profesyonel portreler oluşturmak için özel olarak optimize edilmiş, en son teknoloji görüntü oluşturma modellerini içeren özel bir gelişmiş AI teknolojileri karışımı kullanıyoruz."
+      },
+      "dataSecurity": {
+        "question": "Veri güvenliği ve gizliliği nasıl sağlıyorsunuz?",
+        "answer": "Gizliliğinizi ciddiye alıyoruz. Fotoğraflarınız şifrelenir, güvenli bir şekilde saklanır ve yalnızca kişisel AI modeliniz için kullanılır. Verilerinizi asla üçüncü taraflarla paylaşmayız."
+      }
+    }
+  },
+  "login": {
+    "title": "Giriş / Kayıt",
+    "emailLabel": "E-posta",
+    "emailPlaceholder": "ornek@sirketim.com",
+    "emailRequired": "E-posta gerekli",
+    "emailInvalid": "Geçersiz e-posta adresi",
+    "googleButton": "Google ile devam et",
+    "mostUsed": "En Çok Kullanılan",
+    "orDivider": "Veya e-posta ile devam et",
+    "submitButton": "E-posta'ya kod gönder",
+    "infoText": "Gelen kutunuza tek kullanımlık bir kod alacaksınız.",
+    "termsText": "Kayıt olarak",
+    "termsLink": "Şartlar ve Koşullar",
+    "andText": "ve",
+    "privacyLink": "Gizlilik Politikası",
+    "errors": {
+      "loginFailed": "Giriş başarısız",
+      "invalidEmail": "Geçersiz E-posta Adresi",
+      "googleSignInFailed": "Google girişi başarısız oldu",
+      "tryAgain": "Lütfen tekrar deneyin. Sorun devam ederse, destekle iletişime geçin."
+    },
+    "testimonial": "Fotoğraflar denediğim bazı stüdyolardan daha iyi çıktı",
+    "testimonialAuthor": "Sarah Chen"
+  },
+  "waitingForMagicLink": {
+    "title": "Devam etmek için e-postanızı kontrol edin",
+    "description": "Hesabınıza erişmek için size sihirli bir bağlantı gönderdik.",
+    "hint": "İpucu: spam klasörünüzde olabilir.",
+    "backButton": "Geri dön"
+  },
+  "loginFail": {
+    "title": "Giriş Hatası",
+    "defaultError": "Bir şeyler yanlış gitti, lütfen destekle iletişime geçin.",
+    "browserError": "Ups! Sihirli bağlantıyı başka bir cihazdan veya tarayıcıdan açmaya çalışmış gibi görünüyorsunuz.",
+    "hint": "İpucu: Lütfen bağlantıyı kayıt olmaya çalıştığınız cihaz / tarayıcı ile aynı yerden açtığınızdan emin olun.",
+    "loginLink": "Giriş"
+  },
+  "navbar": {
+    "loginButton": "Giriş / Kayıt"
+  },
+  "userMenu": {
+    "credits": "Krediler",
+    "logout": "Çıkış"
+  },
+  "navigation": {
+    "headshotPacks": "Portre Paketleri",
+    "photoshootPacks": "Fotoğraf Çekim Paketleri",
+    "freeTools": "Ücretsiz Araçlar",
+    "backgroundLibrary": "Arka Plan Kütüphanesi",
+    "backgroundRemover": "Arka Plan Kaldırıcı",
+    "testimonial": "Referanslar",
+    "pricing": "Fiyatlandırma",
+    "faq": "SSS"
+  },
+  "sidebar": {
+    "dashboard": "Kontrol Paneli",
+    "myHeadshots": "Portrelerim",
+    "photoEditorTools": "Fotoğraf Düzenleme Araçları",
+    "aiImageGenerator": "AI Görüntü Oluşturucu",
+    "logout": "Çıkış Yap",
+    "loggingOut": "Çıkış yapılıyor..."
+  },
+  "overview": {
+    "myHeadshots": "Portrelerim",
+    "generateImagesMessage": "Görüntü oluşturmaya başlayın, Aaria fotoğraflarınızı oluşturmak için burada!",
+    "generateImages": "Görüntü Oluştur"
+  },
+  "packs": {
+    "title": "Paketler",
+    "description": "Görüntü oluşturmaya başlamak için bir paket seçin.",
+    "selectPack": "01/ Paket Seç",
+    "instructions": "02/ Talimatlar",
+    "uploadPhotos": "03/ Fotoğraf Yükle",
+    "getCredits": "04/ Kredi Al",
+    "summary": "05/ Özet",
+    "errorFetching": "Paketler yüklenirken hata oluştu",
+    "requestFailed": "İstek başarısız oldu, durum kodu 404"
+  },
+  "packsGallery": {
+    "loading": "Paketler yükleniyor...",
+    "noPacks": "Kullanılabilir paket yok.",
+    "continueButton": "Devam Et",
+    "errors": {
+      "fetchTitle": "Paketler yüklenirken hata oluştu",
+      "unknownTitle": "Bilinmeyen hata",
+      "unknownDescription": "Bilinmeyen bir hata oluştu."
+    },
+    "categories": {
+      "adults": "Profesyonel ve Yaşam Tarzı Paketleri",
+      "children": "Çocuk Paketleri",
+      "pets": "Evcil Hayvan Paketleri",
+      "default": "{category} Paketleri"
+    },
+    "packDetails": {
+      "close": "Kapat",
+      "select": "Paket Seç",
+      "imagesIncluded": "Dahil edilen görüntüler",
+      "price": "Fiyat"
+    }
+  },
+  "photoGuide": {
+    "title": "Görüntü Kılavuzu",
+    "subtitle": "Kaliteli fotoğraflar için kılavuzu takip edin.",
+    "sections": {
+      "goodPhotos": "Yüklenecek İyi Fotoğraflar",
+      "photosToAvoid": "Kaçınılması Gereken Fotoğraflar",
+      "refrainUsing": "Kullanmaktan kaçının"
+    },
+    "descriptions": {
+      "closeUpSelfie": "Yakın çekim selfie",
+      "facingCamera": "Kameraya dönük",
+      "halfBody": "Yarım Boy",
+      "onlyVisible": "Sadece siz görünür",
+      "groupSelfies": "Grup selfieleri",
+      "withSomeone": "Başkasıyla birlikte",
+      "hidingFace": "Yüzü gizleyen",
+      "wearingGlasses": "Gözlük takılı",
+      "onlyFace": "Sadece Yüz",
+      "nudity": "Çıplaklık",
+      "blurredImage": "Bulanık Görüntü",
+      "tooMuchShadow": "Çok fazla gölge"
+    },
+    "alt": {
+      "goodPhoto1": "İyi fotoğraf örneği 1",
+      "goodPhoto2": "İyi fotoğraf örneği 2",
+      "goodPhoto3": "İyi fotoğraf örneği 3",
+      "goodPhoto4": "İyi fotoğraf örneği 4",
+      "badPhoto1": "Kötü fotoğraf örneği 1",
+      "badPhoto2": "Kötü fotoğraf örneği 2",
+      "badPhoto3": "Kötü fotoğraf örneği 3",
+      "badPhoto4": "Kötü fotoğraf örneği 4"
+    }
+  },
+  "trainModel": {
+    "notEnoughInfo": "Yetersiz bilgi",
+    "uploadRequirements": "Lütfen en az 4 görüntü yükleyin ve model bilgilerinin mevcut olduğundan emin olun.",
+    "uploadingImages": "Görüntüler yükleniyor...",
+    "pleaseWait": "Fotoğraflarınızı işlerken lütfen bekleyin",
+    "startUploading": "Fotoğraf Yüklemeye Başla",
+    "uploadFiles": "Dosya yükle",
+    "dragDropHint": "Yüklemek için tıklayın veya sürükleyip bırakın",
+    "fileTypes": "PNG, JPG, HEIC - 120MB'a kadar",
+    "goodPhotos": "İyi Fotoğraflar",
+    "badPhotos": "Kötü Fotoğraflar",
+    "continue": "Devam Et",
+    "imageGuide": "Görüntü Kılavuzu",
+    "followGuide": "Kaliteli fotoğraflar için kılavuzu takip edin.",
+    "photoRequirements": "Daha iyi fotoğraf kalitesi için Aaria, kameraya dönük 1 yarım boy ve 7 yakın çekim görüntü gerektirir.",
+    "autoCropBanner": "Artık grup selfie'lerinizi otomatik kırpabilirsiniz! Kırpmak istediğiniz görüntüye dokunmanız yeterli, gerisini biz hallederiz."
+  },
+  "checkout": {
+    "title": "ÖDEME",
+    "subtitle": "Fotoğraf çekimine kıyasla yüzlerce lira tasarruf edin. AI profesyonel portrenizi manuel düzenlemelerle özelleştirin veya ilk yüklemeler yanlışsa yeniden çekim yapın.",
+    "standardBadge": "%82 bu planı seçiyor",
+    "premiumBadge": "En İyi Değer",
+    "subtotal": "Ara Toplam",
+    "tax": "Vergi",
+    "totalDue": "Bugün ödenecek toplam",
+    "noSubscription": "Abonelik gerekmiyor",
+    "oneTimePayment": "Tek Seferlik Ödeme",
+    "features": {
+      "headshots": {
+        "basic": "10 Profesyonel AI Portre",
+        "standard": "30 Profesyonel AI Portre",
+        "premium": "100 Profesyonel AI Portre"
+      },
+      "processing": {
+        "basic": "24 saat işlem süresi",
+        "standard": "12 saat işlem süresi",
+        "premium": "6 saat işlem süresi"
+      },
+      "outfits": {
+        "basic": "2 Kıyafet",
+        "standard": "4 Kıyafet",
+        "premium": "8 Kıyafet"
+      },
+      "poses": {
+        "basic": "2 Poz",
+        "standard": "4 Poz",
+        "premium": "8 Poz"
+      }
+    }
+  },
+  "summary": {
+    "detectedFeatures": "Bunlar Aaria'nın tespit ettiği özellikler. Gerekirse düzenleyebilirsiniz.",
+    "age": "YAŞ",
+    "eyeColor": "GÖZ RENGİ",
+    "hairColor": "SAÇ RENGİ",
+    "gender": "CİNSİYET",
+    "ethnicity": "ETNİK KÖKEN",
+    "notSpecified": "Belirtilmemiş",
+    "enterEyeColor": "Göz rengini girin",
+    "enterHairColor": "Saç rengini girin",
+    "enterEthnicity": "Etnik kökeni girin",
+    "save": "Kaydet",
+    "male": "Erkek",
+    "orderSummary": "Sipariş Özeti",
+    "summaryDescription": "Fotoğraf çekimine kıyasla yüzlerce lira tasarruf edin. AI profesyonel portrenizi manuel düzenlemelerle özelleştirin veya ilk yüklemeler yanlışsa yeniden çekim yapın.",
+    "uploadedPhotos": "YÜKLENMİŞ FOTOĞRAFLAR",
+    "processing": "İşleniyor...",
+    "startTraining": "Eğitimi Başlat",
+    "noModelData": "Model Verisi Yok",
+    "noModelDataDesc": "Model verisi bulunamadı. Lütfen geri dönün ve önce bir model oluşturun.",
+    "generateHeadshots": "Portre Oluştur",
+    "loading": "Yükleniyor..."
+  },
+  "photoTypes": {
+    "title": "Profesyonel AI Fotoğraf Stilleri",
+    "subtitle": "Mükemmel profesyonel portrenizi oluşturmak için AI destekli çeşitli fotoğraf stilleri koleksiyonumuzdan seçim yapın.",
+    "showMore": "Tüm Stilleri Gör",
+    "showLess": "Daha Az Göster",
+    "types": {
+      "vintageAmericana": {
+        "title": "Vintage Americana Fotoğrafları",
+        "description": "LinkedIn ve iş ağı için ideal, Americana tarzında profesyonel portreler"
+      },
+      "onesiePortraits": {
+        "title": "Tulum Portreleri",
+        "description": "Bebekler ve yeni yürümeye başlayan çocuklar için sevimli portreler"
+      },
+      "halloweenPhotos": {
+        "title": "Cadılar Bayramı Fotoğrafları",
+        "description": "Cadılar Bayramı tutkunları için ürkütücü ve eğlenceli portreler"
+      },
+      "birthdayParty": {
+        "title": "Doğum Günü Partisi Save The Date",
+        "description": "Arkadaşlık profilleri için doğal ve otantik portreler"
+      },
+      "artisticPortraits": {
+        "title": "Sanatsal Portreler",
+        "description": "Yaratıcı ve sanatsal portre fotoğrafçılığı"
+      },
+      "wrestlemaniaPhotos": {
+        "title": "Wrestlemania Fotoğrafları",
+        "description": "Güç ve karakteri yakalayan dinamik güreş temalı portreler"
+      },
+      "redCarpet": {
+        "title": "Kırmızı Halı Fotoğrafları",
+        "description": "Kırmızı halıdan ilham alan gösterişli ve sofistike portreler"
+      },
+      "gameOfThrones": {
+        "title": "Game of Thrones Portreleri",
+        "description": "Game of Thrones tarzında fantastik temalı portreler"
+      },
+      "kidsBirthday": {
+        "title": "Çocuk Doğum Günü Portreleri",
+        "description": "Çocukların doğum günlerindeki özel anları yakalayan portreler"
+      },
+      "mythicalCreatures": {
+        "title": "Mitolojik Yaratık Portreleri",
+        "description": "Mitolojik yaratıkları içeren fantastik temalı portreler"
+      },
+      "onlineDating": {
+        "title": "Online Arkadaşlık Profil Fotoğrafları",
+        "description": "Online arkadaşlık profilleri için mükemmel portreler"
+      },
+      "petPhotography": {
+        "title": "Evcil Hayvan Fotoğrafçılığı",
+        "description": "Evcil hayvanlar için profesyonel portreler"
+      },
+      "popColor": {
+        "title": "Pop Renk Fotoğrafları",
+        "description": "Pop art etkili canlı portreler"
+      },
+      "youtubeThumbnails": {
+        "title": "YouTube Küçük Resim Fotoğrafları",
+        "description": "YouTube küçük resimleri için mükemmel, dikkat çekici portreler"
+      },
+      "actressPortraits": {
+        "title": "Aktris Portreleri",
+        "description": "Bitki ve çiçeklerin canlı ve detaylı fotoğrafları"
+      },
+      "dreamlandKids": {
+        "title": "Hayal Diyarı Çocuk Fotoğrafları",
+        "description": "Rüya gibi ortamlarda çocuklar için büyülü ve fantastik portreler"
+      },
+      "babyDoodles": {
+        "title": "Bebek Karikatürleri",
+        "description": "Bebek fotoğraflarınızı sevimli karikatür tarzı portrelere dönüştürün. Bebek odası sanatı ve doğum duyuruları için mükemmel."
+      },
+      "birthdayMagic": {
+        "title": "Doğum Günü Sihri",
+        "description": "Kutlamalar, davetiyeler ve özel anlar için mükemmel büyüleyici doğum günü portreleri oluşturun."
+      },
+      "personalBrand": {
+        "title": "Kişisel Marka Fotoğrafçılığı",
+        "description": "Kişisel markanızı yükseltmek ve tutarlı bir görsel varlık oluşturmak için tasarlanmış profesyonel fotoğrafçılık çözümleri."
+      },
+      "casualPhotography": {
+        "title": "Günlük Fotoğrafçılık",
+        "description": "Sosyal medya ve günlük profesyonel ihtiyaçlar için mükemmel doğal ve rahat portreler."
+      },
+      "casualCollection": {
+        "title": "Günlük Koleksiyon",
+        "description": "Tutarlı bir online varlık için mükemmel, çeşitli günlük yaşam tarzı portreleri oluşturun."
+      },
+      "catMagic": {
+        "title": "Kedi Sihri",
+        "description": "Kedi fotoğraflarınızı, benzersiz kişiliklerini ve çekiciliklerini yakalayan büyülü portrelere dönüştürün."
+      },
+      "cyberpunk": {
+        "title": "Cyberpunk",
+        "description": "Fütüristik dijital sanat stilleriyle etkileyici bir cyberpunk karakterine dönüşün."
+      },
+      "hanukkahMiracle": {
+        "title": "Hanuka Mucizesi",
+        "description": "Işıklar Festivali'nin büyüsünü yakalayan güzel Hanuka temalı portreler oluşturun."
+      },
+      "happyKid": {
+        "title": "Mutlu Çocuk",
+        "description": "Çocukların saf neşesini ve masumiyetini yakalayan keyifli portreler oluşturun."
+      },
+      "influencer": {
+        "title": "Influencer",
+        "description": "Sosyal medya ve içerik üretimi için mükemmel, etkileyici influencer tarzı portreler oluşturun."
+      },
+      "meIconic": {
+        "title": "İkonik Ben",
+        "description": "Sizi kalabalıktan ayıran kendi ikonik portre stilinizi oluşturun."
+      },
+      "merryChristmas": {
+        "title": "Mutlu Noeller",
+        "description": "Yılbaşı sezonunun neşesini ve sıcaklığını yakalayan büyülü portreler oluşturun."
+      },
+      "playfulCasual": {
+        "title": "Eğlenceli Günlük",
+        "description": "Eğlenceli yönünüzü gösteren doğal ve rahat portreler oluşturun."
+      },
+      "podcaster": {
+        "title": "Podcaster",
+        "description": "Ses markanızı oluşturmanıza yardımcı olacak profesyonel podcaster portreleri oluşturun."
+      },
+      "romanticMaternity": {
+        "title": "Romantik Hamilelik",
+        "description": "Hamileliğin büyüsünü kutlayan güzel ve romantik hamilelik portreleri oluşturun."
+      },
+      "socialMedia": {
+        "title": "Sosyal Medya",
+        "description": "Tüm sosyal medya platformları için optimize edilmiş etkileyici portreler oluşturun."
+      },
+      "timeMachine": {
+        "title": "Zaman Makinesi",
+        "description": "Etkileyici tarihi portreler ve dönem temalı fotoğraflarla zamanda yolculuk yapın."
+      },
+      "timelessStudio": {
+        "title": "Zamansız Stüdyo",
+        "description": "Zamansız, profesyonel çekiciliğe sahip zarif stüdyo portreleri oluşturun."
+      },
+      "telAvivFashion": {
+        "title": "Tel Aviv Modası",
+        "description": "Urban tarzda, Tel Aviv'den ilham alan etkileyici moda portreleri oluşturun."
+      },
+      "wildFriends": {
+        "title": "Vahşi Dostlar",
+        "description": "Evcil hayvanlarınız ve hayvan dostlarınızla büyülü portreler oluşturun."
+      },
+      "winterWonderland": {
+        "title": "Kış Masalı",
+        "description": "Büyülü kar sahnelerinde büyüleyici kış masalı portreleri oluşturun."
+      },
+      "workFromHome": {
+        "title": "Evden Çalışma",
+        "description": "Uzaktan çalışma için profesyonel evden çalışma portreleri oluşturun."
+      },
+      "vintagePack": {
+        "title": "Vintage Paketi",
+        "description": "Zamansız retro estetik ve klasik geçmiş çekiciliğiyle güzel vintage tarzı portreler oluşturun."
+      },
+      "professionalTattoos": {
+        "title": "Profesyonel Dövme Portreleri",
+        "description": "Sanatsal ifadenizi vurgulayan profesyonel portrelerle dövmelerinizi sergileyin."
+      },
+      "annieLeibovitz": {
+        "title": "Annie Leibovitz Stili",
+        "description": "Annie Leibovitz'in ikonik fotoğrafçılık stilinden ilham alan dramatik portreler."
+      },
+      "barbie": {
+        "title": "Barbie Stili",
+        "description": "Eğlenceli ve şık Barbie'den ilham alan portre fotoğrafçılığı."
+      },
+      "vikingPortraits": {
+        "title": "Viking Portreleri",
+        "description": "Tarihi temalar ve fantezi çekimleri için mükemmel, güçlü Viking temalı portreler."
+      },
+      "marvelClass": {
+        "title": "Marvel Sınıfı",
+        "description": "Marvel yapımlarından ilham alan sinematik kalitede dinamik, yüksek etkili portreler."
+      }
+    }
+  },
+  "headshots": {
+    "title": "Profesyoneller için AI Portreler",
+    "subtitle": "Her sektörden yüzlerce iş profesyoneli, işte kullanabilecekleri profesyonel portreler oluşturmak için her gün HeadshotPro'yu kullanıyor.",
+    "showMore": "Tüm Stilleri Gör",
+    "showLess": "Daha Az Göster",
+    "types": {
+      "doctor": {
+        "title": "Doktor Portreleri",
+        "description": "Sağlık profesyonelleri, doktorlar ve tıbbi uygulamalar için profesyonel tıbbi portreler."
+      },
+      "lawyer": {
+        "title": "Avukat Portreleri",
+        "description": "Hukuk profesyonelleri ve hukuk firmaları için profesyonel portreler."
+      },
+      "actor": {
+        "title": "Oyuncu Portreleri",
+        "description": "Moda, güzellik ve profesyonel modellik portföyleri için mükemmel, etkileyici glamour portreler oluşturun."
+      },
+      "realtor": {
+        "title": "Emlakçı Stili",
+        "description": "Gayrimenkul profesyonelleri için profesyonel portreler."
+      },
+      "tedSpeaker": {
+        "title": "TED Konuşmacı Stili",
+        "description": "Konuşmacılar ve sunucular için profesyonel portreler."
+      },
+      "businessCasual": {
+        "title": "İş Günlük Portreleri",
+        "description": "J.Crew'un estetiğinden ilham alan klasik ve şık portreler"
+      },
+      "model": {
+        "title": "Model Portreleri",
+        "description": "Helmut Newton'ın stilinden ilham alan şık ve etkileyici portreler"
+      },
+      "styledSuccess": {
+        "title": "Başarı için Stilize",
+        "description": "Zarif, çağdaş bir görünüm için sofistike stillendirmeye sahip profesyonel portreler."
+      },
+      "professional": {
+        "title": "Profesyonel Paket",
+        "description": "Kurumsal ve iş ihtiyaçları için mükemmel, eksiksiz profesyonel portre paketi."
+      },
+      "partnersCollection": {
+        "title": "Ortaklar Koleksiyonu",
+        "description": "Özellikle hukuk firması ortakları ve üst düzey yöneticiler için tasarlanmış premium portreler."
+      },
+      "lawyerBranded": {
+        "title": "Avukat Markalı",
+        "description": "Hukuki markanızı ve profesyonel otoritenizi güçlendiren özel portreler."
+      },
+      "effortlessProfessionalism": {
+        "title": "Zahmetsiz Profesyonellik",
+        "description": "Güçlü bir profesyonel varlığı koruyan doğal ve yaklaşılabilir portreler."
+      }
+    }
+  },
+  "common": {
+    "features": {
+      "styles": "150+ stil arasından seçim",
+      "delivery": "1 saat içinde hazır",
+      "protection": "Sıkı Veri Koruma",
+      "guarantee": "Para İade Garantisi"
+    }
+  },
+  "heroPages": {
+    "lawyer": {
+      "title": {
+        "part1": "Profesyonel",
+        "part2": "Avukat Fotoğrafları",
+        "part3": "Yapay Zeka ile",
+        "part4": "Dakikalar İçinde"
+      },
+      "description": "Selfielerinizi, müşterilerinizle güven ve kredibilite oluşturan profesyonel hukuki portrelere dönüştürün.",
+      "button": "Ücretsiz Başla"
+    },
+    "doctor": {
+      "title": {
+        "part1": "Profesyonel",
+        "part2": "Doktor Fotoğrafları",
+        "part3": "Yapay Zeka ile",
+        "part4": "Dakikalar İçinde"
+      },
+      "description": "Selfielerinizi, hastalarınızla güven ve kredibilite oluşturan profesyonel tıbbi portrelere dönüştürün.",
+      "button": "Ücretsiz Başlayın"
+    },
+    "dating": {
+      "title": {
+        "part1": "Gerçek Sizi Yansıtın",
+        "part2": "Arkadaşlık Fotoğrafları",
+        "part3": "Yapay Zeka ile",
+        "part4": "Gerçek Bağlantılar Kurun"
+      },
+      "description": "Fotoğrafınızı yükleyin ve çeşitli sonuçlarımızla arkadaşlık profilinizi anında yükseltin.",
+      "button": "Ücretsiz Başlayın"
+    },
+    "glamour": {
+      "title": {
+        "part1": "Profesyonel Fotoğraf Stüdyosu",
+        "part2": "Yapay Zeka Destekli"
+      },
+      "description": "Günlük fotoğraflarınızı etkileyici profesyonel portrelere dönüştürün. Sosyal medya, arkadaşlık profilleri ve kişisel markalaşma için mükemmel."
+    },
+    "realtor": {
+      "title": {
+        "part1": "Profesyonel",
+        "part2": "Emlakçı Fotoğrafları",
+        "part3": "Yapay Zeka ile"
+      },
+      "description": "Selfielerinizi, potansiyel müşterilerle güven ve kredibilite oluşturan profesyonel emlak portrelerine dönüştürün.",
+      "button": "Ücretsiz Başlayın"
+    },
+    "speaker": {
+      "title": {
+        "part1": "Profesyonel",
+        "part2": "Konuşmacı ve",
+        "part3": "TED Talk Tarzı",
+        "part4": "Yapay Zeka ile"
+      },
+      "description": "Selfielerinizi dikkat çeken ve güven aşılayan güçlü konuşmacı portrelerine dönüştürün. Açılış konuşmaları, konferanslar ve profesyonel konuşmalar için mükemmel.",
+      "button": "Ücretsiz Başlayın"
+    },
+    "jcrew": {
+      "title": {
+        "part1": "Smart Casual Profesyonel",
+        "part2": "Yapay Zeka Destekli Fotoğraflar"
+      },
+      "description": "Fotoğraflarınızı, dostluk ve profesyonelliği birleştiren smart casual portrelere dönüştürün. Modern çalışma ortamları ve yaratıcı endüstriler için mükemmel.",
+      "button": "Hemen Başla"
+    },
+    "americana": {
+      "title": {
+        "part1": "Retro Americana Tarzı",
+        "part2": "Ruhlu Portreler"
+      },
+      "description": "Portrelerinizde klasik Americana'nın nostaljik çekiciliğini yakalayın. Müzisyenler, sanatçılar ve zamansız vintage çekiciliğini arayanlar için mükemmel."
+    },
+    "onesie": {
+      "title": {
+        "part1": "Eğlenceli Rahat Stil",
+        "part2": "Öne Çıkan Portreler"
+      },
+      "description": "Fotoğraflarınızı kişiliğinizi yansıtan eğlenceli, rahat portrelere dönüştürün. Sosyal medya, içerik üreticileri ve stille konforu seven herkes için mükemmel.",
+      "button": "Hemen Başla",
+      "imageAlt": "Tulum tarzı portre örnekleri"
+    },
+    "halloween": {
+      "title": {
+        "part1": "Ürkütücü Cadılar Bayramı Stili",
+        "part2": "Karakterli Portreler"
+      },
+      "description": "Fotoğraflarınızı ürkütücü Cadılar Bayramı portrelerine dönüştürün. Sosyal medya, mevsimsel içerik ve ürkütücü sezonu seven herkes için mükemmel.",
+      "button": "Hemen Başla",
+      "imageAlt": "Cadılar Bayramı portre örnekleri"
+    },
+    "date": {
+      "title": {
+        "part1": "Save the Date Stili",
+        "part2": "Unutulmaz Anlar"
+      },
+      "description": "Özel anlarınızı yakalayan muhteşem save-the-date portreleri oluşturun. Düğünler, doğum günleri ve tüm kutlama duyurularınız için mükemmel.",
+      "button": "Oluşturmaya Başla",
+      "imageAlt": "Save the date portre örnekleri"
+    },
+    "artistic": {
+      "title": {
+        "part1": "Sanatsal Stil",
+        "part2": "Ruhlu Portreler"
+      },
+      "description": "Fotoğraflarınızı özünüzü yansıtan sanatsal başyapıtlara dönüştürün. Sosyal medya, yaratıcı portfolyolar ve sanatsal ifadeyi seven herkes için mükemmel.",
+      "button": "Oluşturmaya Başla",
+      "imageAlt": "Sanatsal portre örnekleri"
+    },
+    "wrestlemania": {
+      "title": {
+        "part1": "Güreş Şampiyonu Stili",
+        "part2": "Güçlü Portreler"
+      },
+      "description": "Fotoğraflarınızı destansı güreş şampiyonu portrelerine dönüştürün. Hayranlar, sosyal medya ve şampiyon ruhunu yakalamak isteyen herkes için mükemmel.",
+      "button": "Hemen Başla",
+      "imageAlt": "Güreş şampiyonu portre örnekleri"
+    },
+    "carpet": {
+      "title": {
+        "part1": "Kırmızı Halı Stili",
+        "part2": "Ünlü Portreleri"
+      },
+      "description": "Fotoğraflarınızı göz alıcı kırmızı halı portrelerine dönüştürün. Sosyal medya, özel etkinlikler ve kendini yıldız gibi hissetmek isteyen herkes için mükemmel.",
+      "button": "Şimdi Başla",
+      "imageAlt": "Kırmızı halı portre örnekleri"
+    },
+    "myth": {
+      "title": {
+        "part1": "Mitolojik Yaratıklara",
+        "part2": "Dönüşün",
+        "part3": "Sihirli",
+        "part4": "AI ile"
+      },
+      "description": "Fotoğraflarınızı büyüleyici mitolojik yaratık portrelerine dönüştürün. Fantazi severler, yaratıcı projeler ve sihirli dönüşümlerin hayalini kuran herkes için mükemmel.",
+      "button": "Oluşturmaya Başla",
+      "imageAlt": "Mitolojik yaratık portre örnekleri"
+    },
+    "birthday": {
+      "title": {
+        "part1": "Sihirli Doğum Günü",
+        "part2": "Portre Deneyimi"
+      },
+      "description": "Çocuğunuzun fotoğraflarını sihirli doğum günü portrelerine dönüştürün. Davetiyeler, anılar ve özel anlar yaratmak için mükemmel.",
+      "button": "Sihir Yarat",
+      "imageAlt": "Doğum günü portre örnekleri"
+    },
+    "dog": {
+      "title": {
+        "part1": "Sanatsal Köpek",
+        "part2": "Portre Stüdyosu"
+      },
+      "description": "Köpeğinizin fotoğraflarını etkileyici sanatsal portrelere dönüştürün. Evcil hayvan severler, sosyal medya ve tüylü dostunuzu kutlamak için mükemmel.",
+      "button": "Hemen Başla",
+      "imageAlt": "Köpek portre örnekleri"
+    },
+    "color": {
+      "title": {
+        "part1": "Pop Renk",
+        "part2": "AI Portre Stüdyosu"
+      },
+      "description": "Fotoğraflarınızı canlı, renkli portrelere dönüştürün. Sosyal medya, kişisel marka ve yaratıcı ifade için mükemmel.",
+      "button": "Oluşturmaya Başla",
+      "imageAlt": "Pop renk portre örnekleri"
+    },
+    "youtube": {
+      "title": {
+        "part1": "YouTube Küçük Resim",
+        "part2": "Oluşturma Stüdyosu"
+      },
+      "description": "Görüntülenmelerinizi artıracak dikkat çekici YouTube küçük resimleri oluşturun. İçerik üreticileri ve kanal büyümesi için mükemmel.",
+      "button": "Hemen Başla",
+      "imageAlt": "YouTube küçük resim örnekleri"
+    },
+    "botanical": {
+      "title": {
+        "part1": "Doğal Güzellik AI",
+        "part2": "Botanik İllüstrasyonlu",
+        "part3": "Portreler"
+      },
+      "description": "Zarif botanik illüstrasyon öğeleriyle zenginleştirilmiş AI tarafından oluşturulan portrelerle doğanın zarafetini kucaklayın.",
+      "button": "Ücretsiz Başla",
+      "imageAlt": "Botanik portre örnekleri"
+    }
+  },
+  "heroFeatures": {
+    "styles": "150'den fazla stil",
+    "delivery": "Bir saat içinde hazır",
+    "protection": "Sıkı gizlilik koruması",
+    "guarantee": "Sonuçlar garantili"
+  },
+  
+    
+      "heroPacks": {
+        "dreamlandKids": {
+          "gradientTitle": "Sihirli Çocuk Fotoğrafları",
+          "normalTitle": "Hayallerin Gerçek Olduğu Yer",
+          "description": "Çocuklarınızın fotoğraflarını hayal dünyasında sihirli resimlere dönüştürün. Fantastik arka planlar, peri masalı temaları ve eğlenceli sahnelerle sihirli anılar yaratın.",
+          "buttonText": "Sihri Başlat"
+        },
+        "babyDoodles": {
+          "gradientTitle": "Bebek Karalamalar",
+          "normalTitle": "Sevimli Bebek Fotoğrafları",
+          "description": "Bebekler için güzel ve eğlenceli fotoğraflar oluşturun. Çocukluğun mutlu anlarını ve aile anılarını yakalamak için mükemmel.",
+          "buttonText": "Anları Yakala"
+        },
+        "brandingPhotography": {
+          "gradientTitle": "Marka Fotoğrafçılığı",
+          "normalTitle": "Öne Çık ve Parla",
+          "description": "Kişisel markanızı yapay zeka destekli profesyonel fotoğrafçılıkla yükseltin",
+          "buttonText": "Markanı Oluştur"
+        },
+        "workFromHome": {
+          "gradientTitle": "Evden Çalışma",
+          "normalTitle": "Uzaktan Profesyonel Fotoğraflar",
+          "description": "Uzaktan çalışma için profesyonel fotoğraflar oluşturun. Uzaktan çalışanlar ve sanal toplantılar için mükemmel",
+          "buttonText": "Akıllıca Çalış"
+        },
+        "vintagePack": {
+          "gradientTitle": "Vintage Paketi",
+          "normalTitle": "Retro Stil Fotoğraflar",
+          "description": "Güzel vintage tarzı portreler oluşturun. Retro görünümler ve klasik fotoğraflar için mükemmel",
+          "buttonText": "Geçmişe Dön"
+        },
+        "birthdayMagic": {
+          "gradientTitle": "Doğum Günü Sihri",
+          "normalTitle": "Kutlama Fotoğrafları",
+          "description": "Doğum gününüz için sihirli fotoğraflar oluşturun. Özel anlar için mükemmel",
+          "buttonText": "Kutlamaya Başla"
+        },
+        "casualPhotos": {
+          "gradientTitle": "Günlük Fotoğraflar",
+          "normalTitle": "Doğal ve Samimi",
+          "description": "Gerçek kişiliğinizi yansıtan doğal portreler oluşturun. Sosyal medya ve kişisel markalaşma için mükemmel",
+          "buttonText": "Doğal Fotoğraflar Al"
+        },
+        "casualCollection": {
+          "gradientTitle": "Günlük Koleksiyon",
+          "normalTitle": "Doğal Anlar",
+          "description": "Gerçek kişiliğinizi yansıtan çeşitli günlük fotoğraflar oluşturun. Sosyal medya içeriği ve profiller için mükemmel.",
+          "buttonText": "Koleksiyona Başla"
+        },
+        "catMagic": {
+          "gradientTitle": "Kedi Sihri",
+          "normalTitle": "Özel Anlar",
+          "description": "Kedinizin fotoğraflarını karakterli sihirli görüntülere dönüştürün. Evcil hayvan severler ve sosyal medya için mükemmel.",
+          "buttonText": "Sihir Yarat"
+        },
+        "christmasElf": {
+          "gradientTitle": "Noel Cini",
+          "normalTitle": "Noel Sihri",
+          "description": "Noel cini temalı eğlenceli fotoğraflar oluşturun. Noel kartları ve aile kutlamaları için mükemmel.",
+          "buttonText": "Eğlenceye Başla"
+        },
+        "christmasSweater": {
+          "gradientTitle": "Noel Kazağı",
+          "normalTitle": "Sıcak Noel Atmosferi",
+          "description": "Noel kazağı temalı sıcak kutlama fotoğrafları oluşturun. Noel kartları ve ofis partileri için mükemmel.",
+          "buttonText": "Kutlamaya Başla"
+        },
+        "familyChristmas": {
+          "gradientTitle": "Aile Noeli",
+          "normalTitle": "Sihirli Aile Anıları",
+          "description": "Sezonun sihirini yakalayan büyülü Noel aile fotoğrafları oluşturun. Noel kartları ve değerli aile anıları için mükemmel.",
+          "buttonText": "Aile Sihri Yarat"
+        },
+        "cyberpunk": {
+          "gradientTitle": "Siberpunk",
+          "normalTitle": "Dijital Gelecek",
+          "description": "Fotoğraflarınızı fütüristik siberpunk sanat eserlerine dönüştürün. Bilim kurgu hayranları ve fütüristik tasarım için mükemmel.",
+          "buttonText": "Geleceğe Gir"
+        },
+        "hanukkahMiracle": {
+          "gradientTitle": "Hanuka Mucizesi",
+          "normalTitle": "Işıklar Bayramı",
+          "description": "Işıklar Bayramı'nın mucizesini yakalayan güzel Hanuka temalı fotoğraflar oluşturun. Bayram kartları ve aile kutlamaları için mükemmel.",
+          "buttonText": "Işıkları Yak"
+        },
+        "happyKid": {
+          "gradientTitle": "Mutlu Çocuk",
+          "normalTitle": "Neşe Anları",
+          "description": "Çocukların neşesini ve masumiyetini yakalayan harika fotoğraflar oluşturun. Aile albümleri ve değerli anılar için mükemmel.",
+          "buttonText": "Neşeyi Yakala"
+        },
+        "influencer": {
+          "gradientTitle": "Influencer",
+          "normalTitle": "Sosyal Parıltı",
+          "description": "Başarılı bir influencer'a yakışır profesyonel fotoğraflar oluşturun. Sosyal medya ve kişisel marka oluşturma için mükemmel.",
+          "buttonText": "Etkilemeye Başla"
+        },
+        "meIconic": {
+          "gradientTitle": "İkonik Ben",
+          "normalTitle": "İkonik Fotoğraflar",
+          "description": "Fotoğraflarınızı benzersiz kişiliğinizi yansıtan ikonik çekimlere dönüştürün. Kendini ifade etme ve öne çıkma için mükemmel.",
+          "buttonText": "İkon Ol"
+        },
+        "merryChristmas": {
+          "gradientTitle": "Mutlu Noeller",
+          "normalTitle": "Noel Neşesi",
+          "description": "Noel ruhunu yansıtan fotoğraflar oluşturun. Tebrik kartları ve kutlamalar için mükemmel.",
+          "buttonText": "Noeli Kutla"
+        },
+        "playfulCasual": {
+          "gradientTitle": "Eğlenceli Günlük",
+          "normalTitle": "Rahat Anlar",
+          "description": "Neşeli ruhunuzu yansıtan eğlenceli günlük fotoğraflar oluşturun. Günlük anlar ve sosyal medya için mükemmel.",
+          "buttonText": "Eğlenceye Başla"
+        },
+        "podcaster": {
+          "gradientTitle": "Podcaster",
+          "normalTitle": "Görsel Ses",
+          "description": "Profesyonel bir podcaster'a yakışır profesyonel fotoğraflar oluşturun. Tanıtım ve pazarlama için mükemmel.",
+          "buttonText": "Yayına Başla"
+        },
+        "romanticMaternity": {
+          "gradientTitle": "Romantik Hamilelik",
+          "normalTitle": "Hamilelik Anları",
+          "description": "Hamilelik yolculuğunuzu güzel romantik fotoğraflarla belgeleyin. Aile anıları ve sevdiklerinizle paylaşım için mükemmel.",
+          "buttonText": "Anları Kaydet"
+        },
+        "socialMedia": {
+          "gradientTitle": "Sosyal Medya",
+          "normalTitle": "Dijital Parıltı",
+          "description": "Sosyal medya için çekici fotoğraflar oluşturun. Dijital içerik ve çevrimiçi varlık için mükemmel.",
+          "buttonText": "Parlamaya Başla"
+        },
+        "timeMachine": {
+          "gradientTitle": "Zaman Makinesi",
+          "normalTitle": "Zaman Yolculuğu",
+          "description": "Farklı dönemlerin stillerini taşıyan fotoğraflarla zamanda yolculuk yapın. Tarih meraklıları ve nostalji için mükemmel.",
+          "buttonText": "Yolculuğa Başla"
+        },
+        "timelessStudio": {
+          "gradientTitle": "Zamansız Stüdyo",
+          "normalTitle": "Ölümsüz Güzellik",
+          "description": "Profesyonel stüdyoda zamansız klasik fotoğraflar oluşturun. Resmi ve profesyonel fotoğraflar için mükemmel.",
+          "buttonText": "Çekime Başla"
+        },
+        "tlvFashion": {
+          "gradientTitle": "Tel Aviv Modası",
+          "normalTitle": "Çağdaş Moda",
+          "description": "Tel Aviv'in canlı ruhuyla çağdaş moda fotoğrafları oluşturun. Moda ve stil tutkunları için mükemmel.",
+          "buttonText": "Zarafeti Keşfet"
+        },
+        "wildFriends": {
+          "gradientTitle": "Vahşi Dostlar",
+          "normalTitle": "Doğa Maceraları",
+          "description": "Vahşi ve doğal dokunuşlu fotoğraflar oluşturun. Doğa severler ve maceraperestler için mükemmel.",
+          "buttonText": "Maceraya Başla"
+        },
+        "winterWonderland": {
+          "gradientTitle": "Kış Masalı",
+          "normalTitle": "Kış Sihri",
+          "description": "Masalsı kış sahnelerinde sihirli fotoğraflar oluşturun. Kış sezonu ve tatiller için mükemmel.",
+          "buttonText": "Sihri Keşfet"
+        },
+        
+       
+            "marvelClass": {
+              "gradientTitle": "Premium Sınıf",
+              "normalTitle": "Hukuki Portreler",
+              "description": "AI portrelerimizle profesyonel görüntülemenin zirvesini deneyimleyin. Benzersiz zarafet ve stil ile hukuki mükemmelliğin özünü yakalamak için tasarlandı.",
+              "button": "Premium Kaliteyi Deneyin",
+              "imageAlt": "Profesyonel hukuki portreler"
+            },
+            "vikingsHero": {
+              "gradientTitle": "Viking Portreleri",
+              "normalTitle": "AI Sihri ile Güçlendirilmiş",
+              "description": "Fotoğraflarınızı Norse savaşçılarının ruhunu yakalayan efsanevi portrelere dönüştürün. Oyun profilleri, yaratıcı içerik ve benzersiz kişisel markalaşma için mükemmel.",
+              "button": "Efsanenizi Yaratın",
+              "imageAlt": "Viking tarzı portreler"
+            },
+            "barbieHero": {
+              "gradientTitle": "Pop Kültür Portreleri",
+              "normalTitle": "Canlı Kişilikle",
+              "description": "Cesur renkler ve eğlenceli stil ile çarpıcı portreler oluşturun. Sosyal medya influencerları ve yaratıcı içerik üreticileri için mükemmel.",
+              "button": "Editorialinizi Oluşturun",
+              "imageAlt": "Barbie tarzı portreler"
+            },
+        "common": {
+  "features": {
+    "styles": "Çoklu stiller",
+    "delivery": "Hızlı teslimat",
+    "protection": "Güvenli koruma",
+    "guarantee": "Memnuniyet garantisi"
+  }
+}
+      }
+    
+  }
+
+
+ 

@@ -11,6 +11,13 @@
       "button": "Jetzt testen",
       "tryNow": "Jetzt starten →"
     },
+    "heroFeatures": {
+      "styles": "Über 150 Stile",
+      "delivery": "Fertig in einer Stunde",
+      "protection": "Strenger Datenschutz",
+      "guarantee": "Garantierte Ergebnisse"
+    },
+    
     "ExplainerSection": {
       "title": "3 EINFACHE SCHRITTE ZU IHREM STUDIO-QUALITÄTSPROFIL",
       "step1": {
@@ -521,8 +528,16 @@
             "description": "Lebendige und detaillierte Fotografien von Pflanzen und Blumen"
           },
           "dreamlandKids": {
-            "title": "Traumland-Kinderfotos",
-            "description": "Magische und verspielte Portraits für Kinder in traumhaften Kulissen"
+            "title": "Magische Kinderporträts",
+            "description": "Verwandeln Sie die Fotos Ihrer Kinder in zauberhafte Traumland-Porträts. Fantastische Hintergründe, Märchenthemen und verspielte Szenen für magische Erinnerungen.",
+            "buttonText": "Magie erstellen",
+            "imageAlt": "Traumland-Kinderporträts",
+            "features": {
+              "magical": "Magische Themen & Stile",
+              "ready": "In Minuten fertig",
+              "safe": "Sicher & Geschützt",
+              "family": "Familienfreundlich"
+            }
           },
           "babyDoodles": {
             "title": "Baby-Kritzeleien",
@@ -662,8 +677,9 @@
               "description": "Stilvolle Glamour-Portraits, perfekt für Mode-, Beauty- und Modelling-Portfolios"
             },
             "realtor": {
-              "title": "Immobilienmakler-Stil",
-              "description": "Professionelle Portraits für Immobilienfachleute"
+              "title": "Professionelle",
+              "description": "Immobilienmakler-Fotos",
+              "part3": "Unterstützt durch KI"
             },
             "tedSpeaker": {
               "title": "TED-Speaker-Stil",
@@ -698,6 +714,399 @@
               "description": "Natürliche, zugängliche Businessfotos mit starker professioneller Ausstrahlung"
             }
           }
+        },
+        
+  "common": {
+    "features": {
+      "styles": "150+ Stile zur Auswahl",
+      "delivery": "Ergebnisse innerhalb 1 Stunde",
+      "protection": "Strenger Datenschutz",
+      "guarantee": "Geld-zurück-Garantie"
+    }
+  },
+  "heroPages": {
+    "lawyer": {
+      "title": {
+        "part1": "Professionelle",
+        "part2": "Anwalts-Portraits",
+        "part3": "KI-generiert",
+        "part4": "in Minuten"
+      },
+      "description": "Verwandeln Sie Ihre Selfies in professionelle juristische Portraits, die Vertrauen und Glaubwürdigkeit bei Mandanten aufbauen.",
+      "button": "Kostenlos starten"
+    },
+    "doctor": {
+      "title": {
+        "part1": "Professionelle",
+        "part2": "Mediziner-Portraits",
+        "part3": "KI-generiert",
+        "part4": "in Minuten"
+      },
+      "description": "Verwandeln Sie Ihre Selfies in professionelle medizinische Portraits, die Vertrauen und Glaubwürdigkeit bei Patienten aufbauen.",
+      "button": "Kostenlos beginnen"
+    },
+    "dating": {
+      "title": {
+        "part1": "Zeigen Sie Ihr wahres Ich",
+        "part2": "Dating-Portraits",
+        "part3": "KI-generiert",
+        "part4": "für echte Verbindungen"
+      },
+      "description": "Laden Sie Ihr Foto hoch und werten Sie Ihr Dating-Profil sofort mit unserer vielfältigen Auswahl an Ergebnissen auf.",
+      "button": "Kostenlos beginnen"
+    },
+    "glamour": {
+      "title": {
+        "part1": "Professionelles Porträtstudio",
+        "part2": "Unterstützt durch KI"
+      },
+      "description": "Verwandeln Sie Ihre Alltagsfotos in atemberaubende professionelle Porträts. Perfekt für soziale Medien, Dating-Profile und persönliches Branding."
+    },
+    "realtor": {
+      "title": {
+        "part1": "Professionelle",
+        "part2": "Immobilienmakler-Fotos",
+        "part3": "Unterstützt durch KI"
+      },
+      "description": "Verwandeln Sie Ihre Selfies in professionelle Immobilienporträts, die Vertrauen und Glaubwürdigkeit bei potenziellen Kunden aufbauen.",
+      "button": "Kostenlos starten"
+    },
+    "speaker": {
+      "title": {
+        "part1": "Professionelle",
+        "part2": "Speaker- und",
+        "part3": "TED Talk-Fotos",
+        "part4": "Unterstützt durch KI"
+      },
+      "description": "Verwandeln Sie Ihre Selfies in kraftvolle Speaker-Portraits, die Aufmerksamkeit und Vertrauen ausstrahlen. Perfekt für Keynotes, Konferenzen und professionelle Vorträge.",
+      "button": "Kostenlos starten"
+    },
+    "jcrew": {
+      "title": {
+        "part1": "Professionelle Business-Casual",
+        "part2": "KI-generierte Portraits"
+      },
+      "description": "Verwandeln Sie Ihre Fotos in professionelle Business-Casual-Portraits, die Freundlichkeit und Professionalität vereinen. Perfekt für moderne Arbeitsumgebungen und kreative Branchen.",
+      "button": "Jetzt starten"
+    },
+    "americana": {
+      "title": {
+        "part1": "Retro Americana Stil",
+        "part2": "Portraits mit Seele"
+      },
+      "description": "Fangen Sie den nostalgischen Charme des klassischen Americana in Ihren Porträts ein. Perfekt für Musiker, Künstler und alle, die diese zeitlose Vintage-Ausstrahlung suchen."
+    },
+    "onesie": {
+      "title": {
+        "part1": "Verspielter Komfort-Stil",
+        "part2": "Portraits mit Pep"
+      },
+      "description": "Verwandle deine Fotos in lustige, gemütliche Portraits, die deine Persönlichkeit zeigen. Perfekt für Social Media, Content Creator und alle, die Komfort mit Stil lieben.",
+      "button": "Jetzt Loslegen",
+      "imageAlt": "Onesie Portrait Beispiele"
+    },
+    "halloween": {
+      "title": {
+        "part1": "Gruseliger Halloween-Stil",
+        "part2": "Portraits mit Charakter"
+      },
+      "description": "Verwandle deine Fotos in gruselige Halloween-Portraits. Perfekt für soziale Medien, saisonale Inhalte und alle, die die gruselige Jahreszeit lieben.",
+      "button": "Jetzt Gruseln",
+      "imageAlt": "Halloween-Portrait Beispiele"
+    },
+    "date": {
+      "title": {
+        "part1": "Save-the-Date Stil",
+        "part2": "Unvergessliche Momente"
+      },
+      "description": "Erstelle atemberaubende Save-the-Date Portraits, die deine besonderen Momente festhalten. Perfekt für Hochzeiten, Geburtstage und alle deine Feierankündigungen.",
+      "button": "Jetzt Erstellen",
+      "imageAlt": "Save-the-Date Portrait Beispiele"
+    },
+    "artistic": {
+      "title": {
+        "part1": "Künstlerischer Stil",
+        "part2": "Portraits mit Seele"
+      },
+      "description": "Verwandle deine Fotos in künstlerische Meisterwerke, die deine Essenz einfangen. Perfekt für soziale Medien, kreative Portfolios und alle, die künstlerischen Ausdruck lieben.",
+      "button": "Jetzt Erstellen",
+      "imageAlt": "Künstlerische Portrait-Beispiele"
+    },
+    "wrestlemania": {
+      "title": {
+        "part1": "Wrestling-Champion Stil",
+        "part2": "Kraftvolle Portraits"
+      },
+      "description": "Verwandle deine Fotos in epische Wrestling-Champion Portraits. Perfekt für Fans, soziale Medien und alle, die den Champion-Spirit einfangen möchten.",
+      "button": "Jetzt Starten",
+      "imageAlt": "Wrestling-Champion Portrait-Beispiele"
+    },
+    "carpet": {
+      "title": {
+        "part1": "Roter Teppich Stil",
+        "part2": "Promi-Portraits"
+      },
+      "description": "Verwandle deine Fotos in glamouröse Roter-Teppich-Portraits. Perfekt für soziale Medien, besondere Anlässe und alle, die sich wie ein Star fühlen möchten.",
+      "button": "Jetzt Beginnen",
+      "imageAlt": "Roter Teppich Portrait-Beispiele"
+    },
+    "myth": {
+      "title": {
+        "part1": "Verwandle dich in",
+        "part2": "Mythische Wesen",
+        "part3": "mit magischer",
+        "part4": "KI"
+      },
+      "description": "Verwandle deine Fotos in bezaubernde Porträts mythischer Wesen. Perfekt für Fantasy-Liebhaber, kreative Projekte und alle, die von magischen Verwandlungen träumen.",
+      "button": "Jetzt Erstellen",
+      "imageAlt": "Beispiele für mythische Wesen-Porträts"
+    },
+    "birthday": {
+      "title": {
+        "part1": "Magisches Geburtstags",
+        "part2": "Porträt-Erlebnis"
+      },
+      "description": "Verwandle die Fotos deines Kindes in magische Geburtstagsporträts. Perfekt für Einladungen, Erinnerungen und besondere Geburtstagsmomente.",
+      "button": "Magie Erschaffen",
+      "imageAlt": "Beispiele für Geburtstagsporträts"
+    },
+    "dog": {
+      "title": {
+        "part1": "Künstlerisches Hunde",
+        "part2": "Porträt-Studio"
+      },
+      "description": "Verwandle die Fotos deines Hundes in atemberaubende künstlerische Porträts. Perfekt für Tierliebhaber, soziale Medien und die Würdigung deines pelzigen Freundes.",
+      "button": "Jetzt Starten",
+      "imageAlt": "Beispiele für Hundeporträts"
+    },
+    "color": {
+      "title": {
+        "part1": "Pop-Farben",
+        "part2": "KI-Porträtstudio"
+      },
+      "description": "Verwandle deine Fotos in lebendige, farbenfrohe Porträts. Perfekt für soziale Medien, persönliches Branding und kreativen Ausdruck.",
+      "button": "Jetzt Erstellen",
+      "imageAlt": "Pop-Farben Porträtbeispiele"
+    },
+    "youtube": {
+      "title": {
+        "part1": "YouTube-Thumbnail",
+        "part2": "Creator Studio"
+      },
+      "description": "Erstelle auffällige YouTube-Thumbnails, die deine Aufrufe steigern. Perfekt für Content Creator und Kanalwachstum.",
+      "button": "Jetzt Starten",
+      "imageAlt": "YouTube-Thumbnail Beispiele"
+    },
+    "botanical": {
+      "title": {
+        "part1": "Natürliche Schönheit KI",
+        "part2": "Porträts mit",
+        "part3": "Botanischen Illustrationen"
+      },
+      "description": "Erlebe die Eleganz der Natur mit KI-generierten Porträts, verfeinert durch zarte botanische Illustrationselemente.",
+      "button": "Kostenlos Starten",
+      "imageAlt": "Botanische Porträtbeispiele"
+    }
+  },
+  
+    
+      "heroPacks": {
+        "dreamlandKids": {
+          "gradientTitle": "Magische Kinderfotos",
+          "normalTitle": "Wo Träume wahr werden",
+          "description": "Verwandeln Sie die Fotos Ihrer Kinder in magische Kunstwerke in einer Traumwelt. Fantastische Hintergründe, Märchenthemen und lustige Szenen für magische Erinnerungen.",
+          "buttonText": "Magie starten"
+        },
+        "babyDoodles": {
+          "gradientTitle": "Baby-Kritzeleien",
+          "normalTitle": "Bezaubernde Babyfotos",
+          "description": "Erstellen Sie wunderschöne und lustige Fotos für Babys. Perfekt für glückliche Kindheitsmomente und Familienerinnerungen.",
+          "buttonText": "Momente einfangen"
+        },
+        "brandingPhotography": {
+          "gradientTitle": "Marken-Fotografie",
+          "normalTitle": "Herausstechen und Glänzen",
+          "description": "Verbessern Sie Ihre persönliche Marke mit KI-gestützter professioneller Fotografie",
+          "buttonText": "Marke aufbauen"
+        },
+        "workFromHome": {
+          "gradientTitle": "Homeoffice",
+          "normalTitle": "Professionelle Remote-Fotos",
+          "description": "Erstellen Sie professionelle Fotos fürs Homeoffice. Perfekt für Remote-Arbeiter und virtuelle Meetings",
+          "buttonText": "Smart arbeiten"
+        },
+        "vintagePack": {
+          "gradientTitle": "Vintage-Paket",
+          "normalTitle": "Retro-Style Fotos",
+          "description": "Erstellen Sie schöne Vintage-Style Porträts. Perfekt für Retro-Looks und klassische Fotos",
+          "buttonText": "Zeitreise starten"
+        },
+        "birthdayMagic": {
+          "gradientTitle": "Geburtstagszauber",
+          "normalTitle": "Festliche Fotos",
+          "description": "Erstellen Sie magische Fotos für Ihren Geburtstag. Perfekt für besondere Anlässe",
+          "buttonText": "Feier beginnen"
+        },
+        "casualPhotos": {
+          "gradientTitle": "Lässige Fotos",
+          "normalTitle": "Natürlich und Freundlich",
+          "description": "Erstellen Sie natürliche Porträts, die Ihre wahre Persönlichkeit zeigen. Perfekt für soziale Medien und persönliches Branding",
+          "buttonText": "Natürliche Fotos erstellen"
+        },
+        "casualCollection": {
+          "gradientTitle": "Lässige Kollektion",
+          "normalTitle": "Natürliche Momente",
+          "description": "Erstellen Sie vielfältige lässige Fotos, die Ihre wahre Persönlichkeit widerspiegeln. Perfekt für Social-Media-Inhalte und Profile.",
+          "buttonText": "Kollektion starten"
+        },
+        "catMagic": {
+          "gradientTitle": "Katzenzauber",
+          "normalTitle": "Besondere Momente",
+          "description": "Verwandeln Sie Ihre Katzenfotos in magische Bilder voller Persönlichkeit. Perfekt für Haustierliebhaber und soziale Medien.",
+          "buttonText": "Zauber erschaffen"
+        },
+        "christmasElf": {
+          "gradientTitle": "Weihnachtself",
+          "normalTitle": "Weihnachtszauber",
+          "description": "Erstellen Sie lustige Weihnachtself-Themenfotos. Perfekt für Weihnachtskarten und Familienfeiern.",
+          "buttonText": "Spaß beginnen"
+        },
+        "christmasSweater": {
+          "gradientTitle": "Weihnachtspullover",
+          "normalTitle": "Gemütliche Weihnachtsstimmung",
+          "description": "Erstellen Sie festliche Fotos im Weihnachtspullover-Stil. Perfekt für Weihnachtskarten und Bürofeiern.",
+          "buttonText": "Feier starten"
+        },
+        "familyChristmas": {
+          "gradientTitle": "Familienweihnachten",
+          "normalTitle": "Magische Familienerinnerungen",
+          "description": "Erstellen Sie magische Weihnachtsfotos mit der Familie. Perfekt für Weihnachtskarten und kostbare Familienerinnerungen.",
+          "buttonText": "Familienmagie erschaffen"
+        },
+        "cyberpunk": {
+          "gradientTitle": "Cyberpunk",
+          "normalTitle": "Digitale Zukunft",
+          "description": "Verwandeln Sie Ihre Fotos in futuristische Cyberpunk-Kunstwerke. Perfekt für Science-Fiction-Fans und futuristisches Design.",
+          "buttonText": "Zukunft betreten"
+        },
+        "hanukkahMiracle": {
+          "gradientTitle": "Chanukka-Wunder",
+          "normalTitle": "Lichterfest",
+          "description": "Erstellen Sie schöne Chanukka-Themenfotos, die die Magie des Lichterfests einfangen. Perfekt für Feiertagskarten und Familienfeiern.",
+          "buttonText": "Lichter entzünden"
+        },
+        "happyKid": {
+          "gradientTitle": "Glückliches Kind",
+          "normalTitle": "Freudige Momente",
+          "description": "Erstellen Sie tolle Kinderfotos, die Freude und Unschuld einfangen. Perfekt für Familienalben und kostbare Erinnerungen.",
+          "buttonText": "Freude einfangen"
+        },
+        "influencer": {
+          "gradientTitle": "Influencer",
+          "normalTitle": "Sozialer Glanz",
+          "description": "Erstellen Sie professionelle Fotos für erfolgreiche Influencer. Perfekt für soziale Medien und persönliches Branding.",
+          "buttonText": "Einfluss starten"
+        },
+        "meIconic": {
+          "gradientTitle": "Mein Markenzeichen",
+          "normalTitle": "Ikonische Fotos",
+          "description": "Verwandeln Sie Ihre Fotos in ikonische Aufnahmen, die Ihre einzigartige Persönlichkeit ausdrücken. Perfekt für Selbstausdruck und Individualität.",
+          "buttonText": "Ikone werden"
+        },
+        "merryChristmas": {
+          "gradientTitle": "Frohe Weihnachten",
+          "normalTitle": "Weihnachtsfreude",
+          "description": "Erstellen Sie Fotos, die den Geist der Weihnacht einfangen. Perfekt für Grußkarten und Feiern.",
+          "buttonText": "Weihnachten feiern"
+        },
+        "playfulCasual": {
+          "gradientTitle": "Verspielt Lässig",
+          "normalTitle": "Entspannte Momente",
+          "description": "Erstellen Sie verspielte, lässige Fotos, die Ihren lebhaften Geist widerspiegeln. Perfekt für Alltagsmomente und soziale Medien.",
+          "buttonText": "Spaß beginnen"
+        },
+        "podcaster": {
+          "gradientTitle": "Podcaster",
+          "normalTitle": "Visuelle Stimme",
+          "description": "Erstellen Sie professionelle Fotos für Podcaster. Perfekt für Promotion und Marketing.",
+          "buttonText": "Übertragung starten"
+        },
+        "romanticMaternity": {
+          "gradientTitle": "Romantische Schwangerschaft",
+          "normalTitle": "Schwangerschaftsmomente",
+          "description": "Dokumentieren Sie Ihre Schwangerschaftsreise mit romantischen, schönen Fotos. Perfekt für Familienerinnerungen und zum Teilen mit Liebsten.",
+          "buttonText": "Momente festhalten"
+        },
+        "socialMedia": {
+          "gradientTitle": "Soziale Medien",
+          "normalTitle": "Digitaler Glanz",
+          "description": "Erstellen Sie ansprechende Fotos für soziale Medien. Perfekt für digitale Inhalte und Online-Präsenz.",
+          "buttonText": "Strahlen beginnen"
+        },
+        "timeMachine": {
+          "gradientTitle": "Zeitmaschine",
+          "normalTitle": "Zeitreise",
+          "description": "Reisen Sie durch die Zeit mit Fotos im Stil verschiedener Epochen. Perfekt für Geschichtsliebhaber und Nostalgie.",
+          "buttonText": "Reise beginnen"
+        },
+        "timelessStudio": {
+          "gradientTitle": "Zeitloses Studio",
+          "normalTitle": "Zeitlose Schönheit",
+          "description": "Erstellen Sie zeitlose, klassische Fotos in einem professionellen Studio. Perfekt für formelle und professionelle Fotos.",
+          "buttonText": "Fotoshooting starten"
+        },
+        "tlvFashion": {
+          "gradientTitle": "Tel Aviv Mode",
+          "normalTitle": "Zeitgenössische Mode",
+          "description": "Erstellen Sie zeitgenössische Modefotos mit dem lebendigen Geist von Tel Aviv. Perfekt für Mode- und Stilliebhaber.",
+          "buttonText": "Eleganz entdecken"
+        },
+        "wildFriends": {
+          "gradientTitle": "Wilde Freunde",
+          "normalTitle": "Natürliche Abenteuer",
+          "description": "Erstellen Sie Fotos mit wildem und natürlichem Touch. Perfekt für Naturliebhaber und Abenteurer.",
+          "buttonText": "Abenteuer starten"
+        },
+        "winterWonderland": {
+          "gradientTitle": "Winterwunderland",
+          "normalTitle": "Winterzauber",
+          "description": "Erstellen Sie magische Fotos in märchenhaften Winterszenen. Perfekt für die Wintersaison und Feiertage.",
+          "buttonText": "Zauber entdecken"
+        },
+            "marvelClass": {
+              "gradientTitle": "Premium-Klasse",
+              "normalTitle": "Juristische Portraits",
+              "description": "Erleben Sie den Höhepunkt professioneller Fotografie mit unseren KI-Headshots. Entwickelt, um die Essenz juristischer Exzellenz mit unvergleichlicher Raffinesse und Stil einzufangen.",
+              "button": "Jetzt Testen",
+              "imageAlt": "Professionelle juristische Portraits"
+            },
+            "vikingsHero": {
+              "gradientTitle": "Wikinger-Portraits",
+              "normalTitle": "KI-Magie betrieben",
+              "description": "Verwandeln Sie Ihre Fotos in legendäre Portraits, die den Geist nordischer Krieger einfangen. Perfekt für Gaming-Profile, kreative Inhalte und einzigartiges Personal Branding.",
+              "button": "Erschaffe deine Legende",
+              "imageAlt": "Wikinger-Stil Portraits"
+            },
+            "barbieHero": {
+              "gradientTitle": "Pop-Kultur Portraits",
+              "normalTitle": "Mit lebendiger Persönlichkeit",
+              "description": "Erstellen Sie auffällige Portraits mit kühnen Farben und verspieltem Stil. Perfekt für Social Media Influencer und kreative Content Creator.",
+              "button": "Erstelle dein Editorial",
+              "imageAlt": "Barbie-Stil Portraits"
+            },
+            "common": {
+              "features": {
+                "styles": "Mehrere Stile",
+                "delivery": "Schnelle Lieferung",
+                "protection": "Sichere Protektion",
+                "guarantee": "Zufriedenheitsgarantie"
+              }
+            }
+          }
         }
-      }
+      
+    
+  
+
+      
   

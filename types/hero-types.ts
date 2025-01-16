@@ -1,14 +1,17 @@
 export interface HeroConfig {
-  gradientTitle: string;
-  normalTitle: string;
-  description: string;
-  buttonText: string;
+  translationKey?: string;
+  gradientTitle?: string;
+  normalTitle?: string;
+  description?: string;
+  buttonText?: string;
+  id: string;
   imagePath: string;
-  imageAlt: string;
+  imageAlt?: string;
   packType: string;
   packPath: string;
-  features: {
+  features: Array<{
     icon: 'mdi' | 'circul' | 'lock' | 'tick';
-    text: string;
-  }[];
+    textKey?: string;
+    text?: string;
+  }>;
 } 
