@@ -1074,6 +1074,22 @@
     "needHelp": "Cần giúp đỡ?",
     "contactUs": "Liên Hệ",
     "copyright": "© 2024 Bản quyền đã được bảo hộ"
+  },
+  "ariaa": {
+    "bannerAlt": "Nền banner",
+    "photographerAlt": "Nhiếp ảnh gia AI",
+    "heading": "Gặp gỡ nhiếp ảnh gia AI của bạn, chuyên tạo ra những hình ảnh tuyệt vời từ ảnh selfie của bạn.",
+    "description": "Xin chào! Tôi là Aria, nhiếp ảnh gia AI của bạn tại GoStudio.ai. Tôi đã giúp hơn 21.000 người tuyệt vời như bạn tạo ra những bức chân dung và ảnh hồ sơ thực sự phi thường. Cho dù bạn muốn cập nhật LinkedIn, thiết kế danh thiếp hay nâng cao sự hiện diện trực tuyến của mình, tôi luôn sẵn sàng giúp đỡ. Hãy để tôi chăm sóc các chi tiết để bạn có thể tỏa sáng với kết quả chuyên nghiệp một cách dễ dàng!",
+    "button": "Bắt Đầu Ngay"
+  },
+  "banner": {
+    "bannerAlt": "Nền banner",
+    "heading": "Tiết kiệm 87% cho ảnh chuyên nghiệp của bạn. Bất cứ lúc nào, bất cứ đâu.",
+    "subheading": {
+      "line1": "Nhận ảnh chất lượng studio 4K với nhiều trang phục",
+      "line2": "và phông nền trong chưa đầy một giờ"
+    },
+    "button": "Bắt Đầu Ngay"
   }
 
       }

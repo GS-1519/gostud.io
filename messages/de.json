@@ -1242,7 +1242,26 @@
               "needHelp": "Hilfe benötigt?",
               "contactUs": "Kontaktieren Sie uns",
               "copyright": "© 2024 Alle Rechte vorbehalten"
-            }
+            },
+
+            
+              "ariaa": {
+                "bannerAlt": "Banner-Hintergrundbild",
+                "photographerAlt": "KI-Fotografin",
+                "heading": "Lernen Sie Ihre KI-Fotografin kennen, die sich darauf spezialisiert hat, aus Ihren Selfies großartige Fotos zu erstellen.",
+                "description": "Hallo! Ich bin Aria, Ihre KI-Fotografin bei GoStudio.ai. Ich habe bereits über 21.000 großartigen Menschen wie Ihnen geholfen, wirklich außergewöhnliche Porträts und Profilfotos zu erstellen. Ob Sie Ihr LinkedIn-Profil aktualisieren, eine Visitenkarte gestalten oder Ihre Online-Präsenz verbessern möchten - ich bin hier, um zu helfen. Lassen Sie mich die Details übernehmen, damit Sie mühelos mit professionellen Ergebnissen glänzen können!",
+                "button": "Jetzt Starten"
+              },
+              "banner": {
+                "bannerAlt": "Banner-Hintergrundbild",
+                "heading": "Sparen Sie {discount}87% bei Ihren professionellen Fotos. Jederzeit und überall.",
+                "subheading": {
+                  "line1": "Erhalten Sie Studioquality-Fotos in 4K mit verschiedenen Outfits",
+                  "line2": "und Hintergründen in weniger als einer Stunde"
+                },
+                "button": "Jetzt Starten"
+              }
+            
           
         }
       

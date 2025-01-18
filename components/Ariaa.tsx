@@ -1,46 +1,57 @@
+'use client';
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { Button } from './ui/button';
+import { useTranslations } from 'use-intl';
 
 const Ariaa = () => {
+  const t = useTranslations('ariaa');
+  
   return (
-    <div className="relative w-full min-h-[459px] overflow-hidden bg-gradient-to-b from-gray-900/50 to-gray-900/80">
-      {/* Background Image - Show on all screens */}
+    <div className="relative w-full min-h-[20vh] bg-[#1F2937] flex flex-col items-center justify-center text-center px-4">
       <Image
-        src="/big.png"
-        alt="Banner background"
+        src="/banner-bg.png"
+        alt={t('bannerAlt')}
         fill
-        className="object-cover mix-blend-overlay"
+        className="object-cover opacity-40"
         priority
       />
 
-      {/* Single Woman Image - Positioned higher */}
-      <div className="absolute left-0 h-full opacity-0 animate-fadeIn
-                    w-full flex justify-center items-start pt-8 md:pt-0 md:justify-start" 
-        style={{ animation: 'fadeIn 0.5s ease-in forwards' }}>
-        <Image
-          src="/Awomen.png"
-          alt="Woman portrait"
-          width={600}
-          height={459}
-          className="h-[90%] w-auto object-contain"
-          priority
-        />
-      </div>
+      <div className="relative z-10 w-full h-full max-w-7xl mx-auto px-4 py-8">
+        <div className="flex flex-col md:flex-row items-center justify-between h-full gap-8 md:gap-12">
+          <div className="w-full md:w-1/2 flex justify-start -ml-4 md:-ml-8">
+            <Image
+              src="/Awomen.png"
+              alt={t('photographerAlt')}
+              width={500}
+              height={600}
+              className="object-contain"
+              priority
+            />
+          </div>
 
-      {/* Button - Adjusted position */}
-      <div className="absolute bottom-12 md:bottom-8 left-1/2 transform -translate-x-1/2 z-10">
-        <Link href="/login">
-          <Button 
-            className="bg-[#5B16FE] hover:bg-[#4F46E5] text-white px-8 py-3 rounded-full
-                     flex items-center gap-2 group"
-          >
-            Get Started
-            <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-          </Button>
-        </Link>
+          <div className="w-full md:w-1/2 text-left space-y-4 md:pl-8">
+            <h1 className="text-xl md:text-2xl lg:text-3xl font-md text-white leading-tight">
+              {t('heading')}
+            </h1>
+
+            <p className="text-sm md:text-base text-gray-300 leading-relaxed">
+              {t('description')}
+            </p>
+
+            <Link href="/login">
+              <Button 
+                className="bg-[#6D28FF] hover:bg-[#5B16FE] text-white px-8 py-3 rounded-full 
+                         text-lg font-medium inline-flex items-center gap-2 mt-6"
+              >
+                {t('button')}
+                <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+              </Button>
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -1213,7 +1213,24 @@
           "needHelp": "Butuh bantuan?",
           "contactUs": "Hubungi Kami",
           "copyright": "© 2024 Hak Cipta Dilindungi"
-        }
+        },
+
+        "ariaa": {
+      "bannerAlt": "Latar belakang banner",
+      "photographerAlt": "Fotografer AI",
+      "heading": "Temui fotografer AI Anda yang ahli dalam menciptakan gambar menakjubkan dari selfie Anda.",
+      "description": "Halo! Saya Aria, fotografer AI Anda di GoStudio.ai. Saya telah membantu lebih dari 21.000 orang luar biasa seperti Anda menciptakan potret dan foto profil yang benar-benar luar biasa. Baik Anda ingin memperbarui LinkedIn Anda, mendesain kartu nama, atau meningkatkan kehadiran online Anda, saya di sini untuk membantu. Biarkan saya mengurus detailnya agar Anda bersinar dengan hasil profesional dengan mudah!",
+      "button": "Mulai Sekarang"
+    },
+    "banner": {
+      "bannerAlt": "Latar belakang banner",
+      "heading": "Hemat 87% untuk foto profesional Anda. Kapan saja, di mana saja.",
+      "subheading": {
+        "line1": "Dapatkan foto kualitas studio dalam 4K dengan berbagai pakaian",
+        "line2": "dan latar belakang dalam waktu kurang dari satu jam"
+      },
+      "button": "Mulai Sekarang"
+    }
       
   
   }

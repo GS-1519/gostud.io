@@ -1215,6 +1215,23 @@
       "needHelp": "Precisa de ajuda?",
       "contactUs": "Fale Conosco",
       "copyright": "© 2024 Todos os direitos reservados"
+    },
+    
+      "ariaa": {
+        "bannerAlt": "Imagem de fundo do banner",
+        "photographerAlt": "Fotógrafa de IA",
+        "heading": "Conheça sua fotógrafa de IA especializada em criar fotos incríveis a partir das suas selfies.",
+        "description": "Olá! Eu sou a Aria, sua fotógrafa de IA no GoStudio.ai. Já ajudei mais de 21.000 pessoas incríveis como você a criar retratos e fotos profissionais verdadeiramente excepcionais. Seja para atualizar seu LinkedIn, criar um cartão de visitas ou melhorar sua presença online, estou aqui para ajudar. Deixe-me cuidar dos detalhes para que você brilhe com resultados profissionais sem esforço!",
+        "button": "Começar Agora"
+      },
+      "banner": {
+        "bannerAlt": "Imagem de fundo do banner",
+        "heading": "Economize {discount}87% em suas fotos profissionais. A qualquer hora, em qualquer lugar.",
+        "subheading": {
+          "line1": "Obtenha fotos com qualidade de estúdio em 4K com várias roupas",
+          "line2": "e fundos em menos de uma hora"
+        },
+        "button": "Começar Agora"
+      }
     }
   
-} 

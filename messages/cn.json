@@ -1034,8 +1034,26 @@
               "needHelp": "需要帮助？",
               "contactUs": "联系我们",
               "copyright": "© 2024 版权所有"
-            }
+            },
+
           
+  "ariaa": {
+    "bannerAlt": "横幅背景图片",
+    "photographerAlt": "AI摄影师",
+    "heading": "认识您的AI摄影师，专门将您的自拍照转变成令人惊叹的专业照片。",
+    "description": "你好！我是Aria，您在GoStudio.ai的AI摄影师。我已经帮助超过21,000位像您一样优秀的人创建了真正出色的形象照和肖像照。无论您是想更新LinkedIn照片、设计名片，还是改善在线形象，我都能为您提供帮助。让我来处理细节，让您轻松获得专业效果！",
+    "button": "立即开始"
+  },
+  "banner": {
+    "bannerAlt": "横幅背景图片",
+    "heading": "专业照片享受{discount}87%优惠。随时随地。",
+    "subheading": {
+      "line1": "获得4K级别的专业照片，提供多种服装",
+      "line2": "和背景选择，不到一小时即可完成"
+    },
+    "button": "立即开始"
+  }
+
         }
       
     

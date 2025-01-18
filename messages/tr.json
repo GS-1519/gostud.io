@@ -1228,7 +1228,23 @@
           "needHelp": "Yardıma mı ihtiyacınız var?",
           "contactUs": "Bize Ulaşın",
           "copyright": "© 2024 Tüm hakları saklıdır"
-        }
+        },
+        "ariaa": {
+      "bannerAlt": "Banner arka planı",
+      "photographerAlt": "AI fotoğrafçı",
+      "heading": "Selfielerinizden harika görüntüler oluşturmada uzmanlaşmış AI fotoğrafçınızla tanışın.",
+      "description": "Merhaba! Ben Aria, GoStudio.ai'deki AI fotoğrafçınız. Sizin gibi 21.000'den fazla harika insana gerçekten olağanüstü portreler ve profil fotoğrafları oluşturmalarında yardımcı oldum. LinkedIn'inizi güncellemek, kartvizit tasarlamak veya çevrimiçi varlığınızı geliştirmek istiyorsanız, size yardımcı olmak için buradayım. Profesyonel sonuçlarla kolayca parlayabilmeniz için detaylarla ben ilgileneyim!",
+      "button": "Hemen Başla"
+    },
+    "banner": {
+      "bannerAlt": "Banner arka planı",
+      "heading": "Profesyonel fotoğraflarınızda %87 tasarruf edin. İstediğiniz zaman, istediğiniz yerde.",
+      "subheading": {
+        "line1": "Çeşitli kıyafetlerle 4K stüdyo kalitesinde fotoğraflar",
+        "line2": "ve arka planlar bir saatten kısa sürede"
+      },
+      "button": "Hemen Başla"
+    }
       
 
     
