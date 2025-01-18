@@ -50,13 +50,13 @@ export default function UserMenu({ user, credits }: UserMenuProps) {
   };
 
   return (
-    <div className="relative flex items-center space-x-4">
+    <div className="relative flex items-center space-x-2 sm:space-x-4">
       <button 
         onClick={() => router.push('/get-credits')}
-        className="flex items-center bg-gray-100 text-[#5B16FE] px-4 py-2 rounded-full hover:bg-gray-200 transition-all duration-300"
+        className="flex items-center bg-gray-100 text-[#5B16FE] px-2 sm:px-4 py-1.5 sm:py-2 rounded-full hover:bg-gray-200 transition-all duration-300"
       >
         <svg 
-          className="w-4 h-4 mr-2" 
+          className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-1.5 sm:mr-2" 
           viewBox="0 0 24 24" 
           fill="none" 
           xmlns="http://www.w3.org/2000/svg"
@@ -66,7 +66,7 @@ export default function UserMenu({ user, credits }: UserMenuProps) {
             fill="currentColor"
           />
         </svg>
-        <span className="font-poppins">{credits} {t('credits')}</span>
+        <span className="font-poppins text-xs sm:text-sm">{credits} {t('credits')}</span>
       </button>
 
       <div className="relative" ref={menuRef}>
@@ -74,14 +74,14 @@ export default function UserMenu({ user, credits }: UserMenuProps) {
           onClick={() => setIsOpen(!isOpen)}
           className="flex items-center space-x-2 focus:outline-none"
         >
-          <div className="w-8 h-8 bg-[#5B16FE] rounded-full flex items-center justify-center text-white font-bold font-poppins">
+          <div className="w-7 h-7 sm:w-8 sm:h-8 bg-[#5B16FE] rounded-full flex items-center justify-center text-white font-bold font-poppins text-sm sm:text-base">
             {user?.email?.[0]?.toUpperCase() || '?'}
           </div>
         </button>
 
         {isOpen && (
           <div 
-            className="absolute right-0 w-72 bg-white rounded-lg shadow-xl overflow-hidden z-[200]"
+            className="absolute right-0 w-60 sm:w-72 bg-white rounded-lg shadow-xl overflow-hidden z-[200]"
             style={{
               position: 'absolute',
               top: 'calc(100% + 0.5rem)',
@@ -89,12 +89,12 @@ export default function UserMenu({ user, credits }: UserMenuProps) {
               filter: 'drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08))'
             }}
           >
-            <div className="px-4 py-3 text-sm text-gray-700 font-poppins border-b break-words">
+            <div className="px-3 sm:px-4 py-2.5 sm:py-3 text-xs sm:text-sm text-gray-700 font-poppins border-b break-words">
               {user.email}
             </div>
             <button
               onClick={handleLogout}
-              className="block w-full text-left px-4 py-3 text-sm text-red-600 hover:bg-gray-100 font-jakarta transition-colors duration-200"
+              className="block w-full text-left px-3 sm:px-4 py-2.5 sm:py-3 text-xs sm:text-sm text-red-600 hover:bg-gray-100 font-jakarta transition-colors duration-200"
             >
               {t('logout')}
             </button>

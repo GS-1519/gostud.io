@@ -10,18 +10,20 @@ const publicPaths = [
   '/_next', 
   '/fonts', 
   '/examples',
-  '/astria'  // Add this to skip middleware for astria routes
+  '/astria'
 ];
+
+const locales = ['en', 'fr', 'ar', 'cn', 'de', 'ja', 'ko', 'es', 'it', 'th', 'tr', 'br', 'ru', 'vi', 'id'];
 
 // Create the intl middleware
 const intlMiddleware = createIntlMiddleware({
-  locales: ['en', 'fr', 'ar', 'cn', 'de', 'ja', 'ko', 'es', 'it', 'th', 'tr', 'br', 'ru', 'vi', 'id'],
+  locales,
   defaultLocale: 'en',
   localePrefix: 'always'
 });
 
 export async function middleware(request: NextRequest) {
-  // Skip middleware for static files and API routes
+  // Check if the pathname starts with any of the public paths
   if (publicPaths.some(path => request.nextUrl.pathname.startsWith(path))) {
     return NextResponse.next();
   }
@@ -44,7 +46,6 @@ export async function middleware(request: NextRequest) {
     // Handle login page access
     if (request.nextUrl.pathname.includes('/login')) {
       if (user) {
-        // If user is authenticated, redirect to overview
         return NextResponse.redirect(new URL(`/${locale}/overview`, request.url));
       }
       return response;
@@ -53,14 +54,10 @@ export async function middleware(request: NextRequest) {
     // Protected routes that require authentication
     const protectedRoutes = ['/summary', '/overview'];
     
-    // Check if current path is protected
-    const isProtectedRoute = protectedRoutes.some(route => 
-      request.nextUrl.pathname.includes(route)
-    );
-
-    if (isProtectedRoute && (!user || error)) {
-      // Redirect to login while preserving the locale
-      return NextResponse.redirect(new URL(`/${locale}/login`, request.url));
+    if (protectedRoutes.some(route => request.nextUrl.pathname.includes(route))) {
+      if (!user || error) {
+        return NextResponse.redirect(new URL(`/${locale}/login`, request.url));
+      }
     }
 
     return response;
@@ -71,10 +68,17 @@ export async function middleware(request: NextRequest) {
   }
 }
 
+// Update the matcher configuration to catch all routes
 export const config = {
   matcher: [
-    // Match all paths except static files and API routes
-    '/((?!api|_next|fonts|examples|[\\w-]+\\.\\w+).*)',
-    '/(ar|en|fr|de|zh)/:path*'
+    // Match all request paths except for the ones starting with:
+    // - api (API routes)
+    // - _next/static (static files)
+    // - _next/image (image optimization files)
+    // - favicon.ico (favicon file)
+    // But include all locale prefixes
+    '/((?!api|_next/static|_next/image|favicon.ico).*)',
+    // Also match all locale prefixes explicitly
+    `/(${locales.join('|')})(.*)`
   ]
 };

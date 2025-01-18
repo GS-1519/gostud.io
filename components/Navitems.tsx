@@ -3,8 +3,6 @@
 import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
 import { User } from '@supabase/auth-helpers-nextjs';
-import { useTranslations } from 'next-intl';
-import { useParams } from 'next/navigation';
 
 interface NavItemsProps {
   isMobile?: boolean;
@@ -12,9 +10,6 @@ interface NavItemsProps {
 }
 
 export default function NavItems({ isMobile = false, user }: NavItemsProps) {
-  const t = useTranslations('navigation');
-  const params = useParams();
-  const locale = params?.locale || 'en';
   const [isToolsOpen, setIsToolsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const timeoutRef = useRef<NodeJS.Timeout>();
@@ -58,64 +53,60 @@ export default function NavItems({ isMobile = false, user }: NavItemsProps) {
     }
   };
 
+  const navItemClasses = `text-gray-700 font-semibold text-sm px-3 font-jakarta hover:text-purple-600 transition duration-300
+    ${isMobile ? 'block py-3 border-b border-gray-100 w-full' : ''}`;
+
   const loggedInNavItems = (
     <>
       <Link 
-        href={`/${locale}/headshot-packs`}
-        className={`text-gray-700 font-semibold text-sm px-3 font-jakarta hover:text-purple-600 transition duration-300 ${isMobile ? 'block py-2' : ''}`}
+        href="/headshot-packs" 
+        className={navItemClasses}
       >
-        {t('headshotPacks')}
+        Headshot Packs
       </Link>
       
       <Link 
-        href={`/${locale}/photoshoot-packs`}
-        className={`text-gray-700 font-semibold text-sm px-3 font-jakarta hover:text-purple-600 transition duration-300 ${isMobile ? 'block py-2' : ''}`}
+        href="/photoshoot-packs" 
+        className={navItemClasses}
       >
-        {t('photoshootPacks')}
+        Photoshoot Packs
       </Link>
 
       <div 
         ref={dropdownRef}
-        className={`${isMobile ? 'relative' : 'relative group'}`}
+        className={`${isMobile ? 'w-full' : 'relative group'}`}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
         <button 
-          className={`text-gray-700 font-semibold text-sm px-3 font-jakarta hover:text-purple-600 transition duration-300 ${isMobile ? 'block py-2 w-full text-left' : ''}`}
+          className={navItemClasses}
           onClick={handleToolsClick}
         >
-          {t('freeTools')}
+          Free Tools
         </button>
         <div 
           className={`
-            ${isMobile ? 'relative mt-2 ml-4 space-y-1 border-l-2 border-gray-100 pl-4' : 'absolute left-0 mt-0.5 w-48'}
+            ${isMobile ? 'bg-gray-50 mt-1' : 'absolute left-0 mt-0.5 w-48'}
             ${isToolsOpen ? 'block' : 'hidden'}
           `}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
         >
           <div className={`
-            ${!isMobile ? 'pt-2 pb-2 bg-white rounded-lg shadow-lg' : ''}
+            ${!isMobile ? 'bg-white rounded-lg shadow-lg' : ''}
+            py-1
           `}>
             <Link 
-              href={`/${locale}/free-tools/background-library`}
-              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors duration-200"
-              onClick={(e) => {
-                e.stopPropagation();
-                if (isMobile) setIsToolsOpen(false);
-              }}
+              href="/free-tools/background-library" 
+              className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 transition-colors duration-200"
+              onClick={() => isMobile && setIsToolsOpen(false)}
             >
-              {t('backgroundLibrary')}
+              Background Library
             </Link>
             <Link 
-              href={`/${locale}/free-tools/background-remover`}
-              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors duration-200"
-              onClick={(e) => {
-                e.stopPropagation();
-                if (isMobile) setIsToolsOpen(false);
-              }}
+              href="/free-tools/background-remover" 
+              className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-100 transition-colors duration-200"
+              onClick={() => isMobile && setIsToolsOpen(false)}
             >
-              {t('backgroundRemover')}
+              Background Remover
             </Link>
           </div>
         </div>
@@ -127,36 +118,32 @@ export default function NavItems({ isMobile = false, user }: NavItemsProps) {
   const nonLoggedInItems = (
     <>
       <Link 
-        href={`/${locale}/#testimonial`}
+        href="/#testimonial" 
         className={`text-gray-700 font-semibold text-sm px-3 font-jakarta hover:text-purple-600 transition duration-300 ${isMobile ? 'block py-2' : ''}`}
       >
-        {t('testimonial')}
+        Testimonial
       </Link>
 
       <Link 
-        href={`/${locale}/#pricing`}
+        href="/#pricing" 
         className={`text-gray-700 font-semibold text-sm px-3 font-jakarta hover:text-purple-600 transition duration-300 ${isMobile ? 'block py-2' : ''}`}
       >
-        {t('pricing')}
+        Pricing
       </Link>
 
       <Link 
-        href={`/${locale}/#faq`}
+        href="/#faq" 
         className={`text-gray-700 font-semibold text-sm px-3 font-jakarta hover:text-purple-600 transition duration-300 ${isMobile ? 'block py-2' : ''}`}
       >
-        {t('faq')}
+        FAQ
       </Link>
     </>
   );
 
   return (
-    <nav className={`${isMobile ? 'flex flex-col space-y-2' : 'flex items-center gap-8'}`}>
+    <nav className={`${isMobile ? 'flex flex-col' : 'flex items-center gap-8'}`}>
       {loggedInNavItems}
-      {!user && (
-        <div className={`${isMobile ? 'space-y-2' : 'flex items-center gap-8'}`}>
-          {nonLoggedInItems}
-        </div>
-      )}
+      {!user && nonLoggedInItems}
     </nav>
   );
 }
