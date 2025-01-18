@@ -1,0 +1,91 @@
+{
+  "metadata": {
+    "title": "Privacy Policy | GoStudio.ai",
+    "description": "Learn how GoStudio.ai protects your privacy and handles your data.",
+    "keywords": "privacy policy, data protection, privacy rights, GoStudio.ai privacy, data security"
+  },
+  "content": {
+    "title": "Privacy Policy",
+    "introduction": {
+      "title": "Introduction",
+      "content": "This Privacy Policy describes how your personal information is collected, used, and shared when you visit or use our services at GoStudio.ai (the \"Site\"). This policy is particularly important as we handle image data and provide photo processing services. We are based in Bengaluru, India, and operate in accordance with Indian data protection laws."
+    },
+    "personalInfo": {
+      "title": "Personal Information We Collect",
+      "content": "When you visit the Site, we automatically collect certain information about your device, including:",
+      "items": [
+        "Information about your web browser",
+        "IP address",
+        "Time zone",
+        "Cookies installed on your device"
+      ],
+      "additional": "Additionally, as you use the Site, we collect:",
+      "additionalItems": [
+        "Information about the pages you view",
+        "Referring websites or search terms",
+        "How you interact with the Site",
+        "Images and photos you upload for processing",
+        "Any metadata associated with uploaded images"
+      ],
+      "note": "We refer to the automatically-collected information as \"Device Information\" and the uploaded images and related data as \"Image Data.\""
+    },
+    "usage": {
+      "title": "Usage of Personal Information",
+      "content": "We use the collected information to:",
+      "items": [
+        "Process and enhance your uploaded images",
+        "Provide you with the resulting product photos or headshots",
+        "Process your payments and provide invoices/confirmations",
+        "Communicate with you about your orders and services",
+        "Screen for potential risk or fraud",
+        "Improve and optimize our Site and services",
+        "Analyze how customers use our platform",
+        "Assess the success of our marketing campaigns"
+      ]
+    },
+    "imageData": {
+      "title": "Image Data Processing",
+      "content": "We take special care with your Image Data:",
+      "items": [
+        "Images are processed using secure servers",
+        "Original images are retained only for the duration necessary to complete the service",
+        "Processed images are stored securely and accessible only to authorized personnel",
+        "We implement appropriate technical measures to protect your Image Data",
+        "We do not use your images for any purpose other than providing our services unless explicitly authorized"
+      ]
+    },
+    "sharing": {
+      "title": "Information Sharing",
+      "content": "We share your Personal Information with third parties only when necessary:",
+      "items": [
+        "Payment processing partners to handle transactions",
+        "Analytics providers to improve our services",
+        "Cloud storage providers to securely store and process images",
+        "Compliance with applicable laws and regulations",
+        "Response to legal requests (subpoenas, court orders, etc.)"
+      ]
+    },
+    "storage": {
+      "title": "Data Storage and International Transfers",
+      "content": "Our primary operations are based in Bengaluru, India. However, we may transfer data internationally to provide our services. When we do so, we ensure appropriate safeguards are in place to protect your information."
+    },
+    "rights": {
+      "title": "Your Rights",
+      "content": "You have the right to:",
+      "items": [
+        "Access your personal information",
+        "Correct inaccurate data",
+        "Request deletion of your data",
+        "Object to our processing of your data",
+        "Request data portability",
+        "Withdraw consent"
+      ]
+    },
+    "contact": {
+      "title": "Contact Information",
+      "content": "For privacy-related inquiries:",
+      "email": "Email: hello@gostudio.ai"
+    },
+    "lastUpdate": "Last Updated: February 2024"
+  }
+}

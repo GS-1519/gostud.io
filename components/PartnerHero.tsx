@@ -6,9 +6,12 @@ import lock from "@/public/logo/lock.svg"
 import circul from "@/public/logo/circul.svg"
 import mdi from "@/public/logo/mdi.svg"
 import tick from "@/public/logo/tick.svg"
+import { useTranslations } from 'use-intl'
 
 const PartnerHero = () => {
   const router = useRouter();
+  const heroFeaturesT = useTranslations('heroFeatures');
+  const t = useTranslations('heroPages.partner');
 
   const handleGetStarted = () => {
     // Store the pack info in localStorage before redirecting
@@ -30,43 +33,43 @@ const PartnerHero = () => {
             <div className="max-w-[733px] text-center lg:text-left">
               <h1 className="text-[24px] sm:text-[28px] md:text-[36px] lg:text-[40px] font-bold leading-tight flex flex-col gap-1">
                 <div className="flex flex-wrap justify-center lg:justify-start items-center gap-x-1">
-                  <span className="text-[#111827]">Partner-Grade</span>
-                  <span className="text-[#8371FF]">Legal Portraits</span>
+                  <span className="text-[#111827]">{t('title.part1')}</span>
+                  <span className="text-[#8371FF]">{t('title.part2')}</span>
                 </div>
                 <div className="flex flex-wrap justify-center lg:justify-start items-center">
-                  <span className="text-[#01C7E4]">AI-Powered Excellence</span>
-                  <span className="text-[#161C2D] ml-2">for Partners</span>
+                  <span className="text-[#01C7E4]">{t('title.part3')}</span>
+                  <span className="text-[#161C2D] ml-2">{t('title.part4')}</span>
                 </div>
               </h1>
 
               <p className="mt-2 sm:mt-4 text-base sm:text-lg text-[#4B5563] max-w-[600px] mx-auto lg:mx-0">
-                Elevate your firm's leadership presence with executive-grade headshots designed for managing partners and senior attorneys. Project authority and trustworthiness that matches your position.
+                {t('description')}
               </p>
 
               <div className="mt-4 sm:mt-6 grid grid-cols-2 gap-2 max-w-[600px] mx-auto lg:mx-0">
                 <div className="flex items-center gap-1.5">
                   <div className="rounded-full p-1 sm:p-1.5 flex-shrink-0">
-                    <Image src={mdi} alt="mdi" width={20} height={20} className="w-6 h-6 sm:w-7 sm:h-7" />
+                    <Image src={mdi} alt="styles" width={20} height={20} className="w-6 h-6 sm:w-7 sm:h-7" />
                   </div>
-                  <span className="text-[#4B5563] text-xs sm:text-sm">Executive Style Selection</span>
+                  <span className="text-[#4B5563] text-xs sm:text-sm">{heroFeaturesT('styles')}</span>
                 </div>
                 <div className="flex items-center gap-1.5">
                   <div className="rounded-full p-1 sm:p-1.5 flex-shrink-0">
                     <Image src={circul} alt="clock" width={20} height={20} className="w-6 h-6 sm:w-7 sm:h-7" />
                   </div>
-                  <span className="text-[#4B5563] text-xs sm:text-sm">Priority Processing</span>
+                  <span className="text-[#4B5563] text-xs sm:text-sm">{heroFeaturesT('delivery')}</span>
                 </div>
                 <div className="flex items-center gap-1.5">
                   <div className="rounded-full p-1 sm:p-1.5 flex-shrink-0">
-                    <Image src={lock} alt="lock" width={20} height={20} className="w-6 h-6 sm:w-7 sm:h-7" />
+                    <Image src={lock} alt="security" width={20} height={20} className="w-6 h-6 sm:w-7 sm:h-7" />
                   </div>
-                  <span className="text-[#4B5563] text-xs sm:text-sm">Partner-Level Privacy</span>
+                  <span className="text-[#4B5563] text-xs sm:text-sm">{heroFeaturesT('protection')}</span>
                 </div>
                 <div className="flex items-center gap-1.5">
                   <div className="rounded-full p-1 sm:p-1.5 flex-shrink-0">
-                    <Image src={tick} alt="tick" width={20} height={20} className="w-6 h-6 sm:w-7 sm:h-7" />
+                    <Image src={tick} alt="guarantee" width={20} height={20} className="w-6 h-6 sm:w-7 sm:h-7" />
                   </div>
-                  <span className="text-[#4B5563] text-xs sm:text-sm">Executive Satisfaction</span>
+                  <span className="text-[#4B5563] text-xs sm:text-sm">{heroFeaturesT('guarantee')}</span>
                 </div>
               </div>
 
@@ -75,7 +78,7 @@ const PartnerHero = () => {
                   onClick={handleGetStarted}
                   className="w-fit rounded-full bg-[#5B16FE] px-2.5 py-1.5 sm:px-4 sm:py-2.5 lg:px-6 lg:py-3 text-xs sm:text-sm lg:text-base text-white flex items-center justify-center sm:inline-flex gap-2 hover:bg-opacity-90 transition-all"
                 >
-                  Elevate Your Partnership Image
+                  {t('button')}
                   <span className="ml-1 sm:ml-2">→</span>
                 </button>
               </div>
@@ -85,7 +88,7 @@ const PartnerHero = () => {
           <div className="relative h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px] w-full mt-2 lg:mt-0">
             <Image
               src="/lawyer.png"
-              alt="Partner-grade legal portraits"
+              alt={t('imageAlt')}
               fill
               className="object-contain lg:object-right"
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"

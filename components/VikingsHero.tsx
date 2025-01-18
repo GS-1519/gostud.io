@@ -1,5 +1,6 @@
 'use client'
 import { useRouter } from 'next/navigation'
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import Link from 'next/link'
 import lock from "@/public/logo/lock.svg"
@@ -9,16 +10,15 @@ import tick from "@/public/logo/tick.svg"
 
 const VikingsHero = () => {
   const router = useRouter();
+  const commonT = useTranslations('heroPacks.common.features');
+  const t = useTranslations('heroPacks.vikingsHero');
 
   const handleGetStarted = () => {
-    // Store the pack info in localStorage before redirecting
     localStorage.setItem('intendedPack', JSON.stringify({
       type: 'viking',
       path: '/headshot-packs/viking-portraits',
       redirect: true
     }));
-    
-    // Redirect to login
     router.push('/login');
   };
 
@@ -31,16 +31,16 @@ const VikingsHero = () => {
               <h1 className="text-[24px] sm:text-[28px] md:text-[36px] lg:text-[40px] font-bold leading-tight flex flex-col gap-1">
                 <div className="flex flex-wrap justify-center lg:justify-start items-center">
                   <span className="bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4] bg-clip-text text-transparent">
-                    Nordic Warrior Portraits
+                    {t('gradientTitle')}
                   </span>
                 </div>
                 <div className="flex flex-wrap justify-center lg:justify-start">
-                  <span className="text-[#161C2D]">Powered by AI Magic</span>
+                  <span className="text-[#161C2D]">{t('normalTitle')}</span>
                 </div>
               </h1>
 
               <p className="mt-2 sm:mt-4 text-base sm:text-lg text-[#4B5563] max-w-[600px] mx-auto lg:mx-0">
-                Transform your photos into legendary portraits that capture the spirit of Norse warriors. Perfect for gaming profiles, creative content, and unique personal branding.
+                {t('description')}
               </p>
 
               <div className="mt-4 sm:mt-6 grid grid-cols-2 gap-2 max-w-[600px] mx-auto lg:mx-0">
@@ -48,25 +48,25 @@ const VikingsHero = () => {
                   <div className="rounded-full p-1 sm:p-1.5 flex-shrink-0">
                     <Image src={mdi} alt="styles" width={20} height={20} className="w-6 h-6 sm:w-7 sm:h-7" />
                   </div>
-                  <span className="text-[#4B5563] text-xs sm:text-sm">150+ Viking Styles</span>
+                  <span className="text-[#4B5563] text-xs sm:text-sm">{commonT('styles')}</span>
                 </div>
                 <div className="flex items-center gap-1.5">
                   <div className="rounded-full p-1 sm:p-1.5 flex-shrink-0">
                     <Image src={circul} alt="clock" width={20} height={20} className="w-6 h-6 sm:w-7 sm:h-7" />
                   </div>
-                  <span className="text-[#4B5563] text-xs sm:text-sm">Done in less than 1hr</span>
+                  <span className="text-[#4B5563] text-xs sm:text-sm">{commonT('delivery')}</span>
                 </div>
                 <div className="flex items-center gap-1.5">
                   <div className="rounded-full p-1 sm:p-1.5 flex-shrink-0">
                     <Image src={lock} alt="lock" width={20} height={20} className="w-6 h-6 sm:w-7 sm:h-7" />
                   </div>
-                  <span className="text-[#4B5563] text-xs sm:text-sm whitespace-nowrap">Strict data protection</span>
+                  <span className="text-[#4B5563] text-xs sm:text-sm">{commonT('protection')}</span>
                 </div>
                 <div className="flex items-center gap-1.5">
                   <div className="rounded-full p-1 sm:p-1.5 flex-shrink-0">
                     <Image src={tick} alt="tick" width={20} height={20} className="w-6 h-6 sm:w-7 sm:h-7" />
                   </div>
-                  <span className="text-[#4B5563] text-xs sm:text-sm">Guaranteed results</span>
+                  <span className="text-[#4B5563] text-xs sm:text-sm">{commonT('guarantee')}</span>
                 </div>
               </div>
 
@@ -75,7 +75,7 @@ const VikingsHero = () => {
                   onClick={handleGetStarted}
                   className="w-fit rounded-full bg-[#5B16FE] px-2.5 py-1.5 sm:px-4 sm:py-2.5 lg:px-6 lg:py-3 text-xs sm:text-sm lg:text-base text-white flex items-center justify-center sm:inline-flex gap-2 hover:bg-opacity-90 transition-all"
                 >
-                  Create Your Legend
+                  {t('button')}
                   <span className="ml-1 sm:ml-2">→</span>
                 </button>
               </div>
@@ -85,7 +85,7 @@ const VikingsHero = () => {
           <div className="relative h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px] w-full mt-2 lg:mt-0">
             <Image
               src="/vikings.png"
-              alt="Editorial style portraits"
+              alt={t('imageAlt')}
               fill
               className="object-contain object-center lg:object-right"
               priority

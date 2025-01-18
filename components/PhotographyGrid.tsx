@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { X } from 'lucide-react';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
 interface PhotoCardProps {
   imageUrl: string;
@@ -494,6 +495,7 @@ const PhotoCard: React.FC<PhotoCardProps> = ({ imageUrl, onClick, title }) => (
 // Main Component
 const PhotographyGrid = () => {
   const [selectedPack, setSelectedPack] = useState<string | null>(null);
+  const t = useTranslations('PhotographyGrid');
 
   const photos = [
     { imageUrl: '/pack/img1.png', type: 'corporate', title: 'Corporate Headshots' },
@@ -513,14 +515,12 @@ const PhotographyGrid = () => {
   return (
     <div className="w-full bg-white">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-[82px] py-16">
-        <div className="text-center mb-8">
-          <h2 className="mx-auto w-full md:w-[600px] h-auto md:h-[48px] font-[500] text-[24px] sm:text-[32px] leading-[36px] sm:leading-[48px] text-center">
-            OUR PACKS-YOU NAME IT, WE HAVE IT.
+        <div className="text-center mb-12">
+          <h2 className="mx-auto max-w-[600px] mb-4 font-[500] text-[24px] sm:text-[32px] leading-[1.3] text-center">
+            {t('title')}
           </h2>
-          <p className="mx-auto w-full md:w-[992px] h-auto md:h-[54px] font-[400] text-[16px] sm:text-[18px] leading-[24px] sm:leading-[27px] tracking-[-0.04em] text-center text-[#161C2D] font-poppins">
-            Explore our complete range of photography packs, crafted to suit every style and need. 
-            From professional portraits to creative edits, we've got it all covered. 
-            Whatever your vision, our AI photographer brings it to life effortlessly.
+          <p className="mx-auto max-w-[992px] font-[400] text-[16px] sm:text-[18px] leading-[1.5] tracking-[-0.04em] text-center text-[#161C2D] font-poppins">
+            {t('description')}
           </p>
         </div>
 
@@ -545,7 +545,7 @@ const PhotographyGrid = () => {
         <div className="flex justify-center mt-8">
           <Link href="/login">
             <button className="w-[200px] sm:w-[269px] h-[40px] sm:h-[48px] bg-[#7C3AED] hover:bg-[#6D28D9] text-white rounded-full flex items-center justify-center gap-2 hover:opacity-90 transition-opacity font-poppins text-[13px] sm:text-[16px]">
-              <span>Try Now</span>
+              <span>{t('tryNow')}</span>
               <svg className="w-3 sm:w-5 h-3 sm:h-5" viewBox="0 0 20 20" fill="none">
                 <path 
                   d="M4.16666 10H15.8333M15.8333 10L10 4.16669M15.8333 10L10 15.8334" 

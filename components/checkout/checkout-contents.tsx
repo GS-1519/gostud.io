@@ -5,9 +5,10 @@ import { PriceCards } from '@/components/home/pricing/price-cards';
 
 import { Environments, initializePaddle, Paddle } from '@paddle/paddle-js';
 import { useEffect, useState } from 'react';
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import { CheckoutEventsData } from '@paddle/paddle-js/types/checkout/events';
 import { cn } from '@/lib/utils';
+import { useTranslations } from 'next-intl';
 
 
 interface Props {
@@ -61,17 +62,13 @@ export function CheckoutContents({ userEmail, userId }: Props) {
   const [paddle, setPaddle] = useState<Paddle | null>(null);
   const [checkoutData, setCheckoutData] = useState<CheckoutEventsData | null>(null);
   const [isHovered, setIsHovered] = useState(false);
-  const router = useRouter();
+  const t = useTranslations('checkout');
 
   // Find the selected tier by matching the priceId with any tier's priceId
   const selectedTier = PricingTier.find(tier => tier.priceId === priceId);
 
   const handleCheckoutEvents = (event: CheckoutEventsData) => {
     setCheckoutData(event);
-    
-    if (event.status === 'completed') {
-      router.push('/summary');
-    }
   };
 
   useEffect(() => {
@@ -92,7 +89,7 @@ export function CheckoutContents({ userEmail, userId }: Props) {
               name: selectedTier.name,
               price: selectedTier.price,
               originalPrice: selectedTier.originalPrice,
-              features: selectedTier.features,
+              features: selectedTier.features.map(feature => ({...feature, text: feature.textKey})),
               badge: selectedTier.badge,
               priceId: selectedTier.priceId
             };
@@ -196,11 +193,10 @@ export function CheckoutContents({ userEmail, userId }: Props) {
         {/* Header Section */}
         <div className="text-center mb-4 bg-white pt-2 z-10">
           <h1 className="text-[24px] md:text-[32px] font-semibold text-[#161C2D] mb-2">
-            CHECK-OUT
+            {t('title')}
           </h1>
           <p className="text-[14px] md:text-[16px] text-[#64748B] max-w-[800px] mx-auto leading-[1.6] px-4 md:px-0">
-            Save hundreds compared to a photo shoot. Customize your AI professional headshot with 
-            manual edits or get a redo if the initial uploads were wrong.
+            {t('subtitle')}
           </p>
         </div>
 
@@ -229,13 +225,13 @@ export function CheckoutContents({ userEmail, userId }: Props) {
                           WebkitBackgroundClip: 'text',
                           WebkitTextFillColor: 'transparent'
                         }}>
-                          82% pick this plan
+                          {t('standardBadge')}
                         </span>
                       </div>
                     ) : (
                       <div className="px-4 py-1.5 rounded-[20px] bg-transparent border-[1.5px] border-[#5B16FE]">
                         <span className="text-sm font-medium text-[#5B16FE]">
-                          Best Value
+                          {t('premiumBadge')}
                         </span>
                       </div>
                     )}
@@ -255,10 +251,10 @@ export function CheckoutContents({ userEmail, userId }: Props) {
                     {selectedTier.name === 'STANDARD' ? (
                       <div className="flex items-baseline">
                         <span className="text-3xl font-bold text-[#8371FF]">$</span>
-                        <span className="text-5xl font-bold ml-1 text-[#01C7E4]">19</span>
+                        <span className="text-5xl font-bold ml-1 text-[#01C7E4]">{selectedTier.price}</span>
                         <span className="text-gray-400 line-through ml-2 flex items-baseline">
                           <span className="text-[#8371FF]">$</span>
-                          <span className="text-[#01C7E4]">45</span>
+                          <span className="text-[#01C7E4]">{selectedTier.originalPrice}</span>
                         </span>
                       </div>
                     ) : (
@@ -275,7 +271,7 @@ export function CheckoutContents({ userEmail, userId }: Props) {
                       </>
                     )}
                   </div>
-                  <p className="text-gray-500 mt-2">One Time Payment</p>
+                  <p className="text-gray-500 mt-2">{t('oneTimePayment')}</p>
                 </div>
 
                 {/* Features Section */}
@@ -297,7 +293,7 @@ export function CheckoutContents({ userEmail, userId }: Props) {
                           : "text-gray-600"
                       )} />
                       <span className="text-[15px] text-[#64748B]">
-                        {feature.text}
+                        {t(feature.textKey)}
                       </span>
                     </div>
                   ))}
@@ -307,7 +303,7 @@ export function CheckoutContents({ userEmail, userId }: Props) {
                 <div className="mt-auto pt-6 border-t border-[#E2E8F0]/60 space-y-4">
                   {/* Subtotal */}
                   <div className="flex justify-between text-sm">
-                    <span className="text-[#64748B]">Subtotal</span>
+                    <span className="text-[#64748B]">{t('subtotal')}</span>
                     <span className="font-medium text-[#161C2D]">
                       ${checkoutData?.totals.subtotal || selectedTier.price}
                     </span>
@@ -315,7 +311,7 @@ export function CheckoutContents({ userEmail, userId }: Props) {
 
                   {/* Tax */}
                   <div className="flex justify-between text-sm">
-                    <span className="text-[#64748B]">Tax</span>
+                    <span className="text-[#64748B]">{t('tax')}</span>
                     <span className="font-medium text-[#161C2D]">
                       ${checkoutData?.totals.tax || 0}
                     </span>
@@ -324,7 +320,7 @@ export function CheckoutContents({ userEmail, userId }: Props) {
                   {/* Total */}
                   <div className="pt-4 border-t border-[#E2E8F0]/60">
                     <div className="flex justify-between">
-                      <span className="text-[#64748B]">Total due today</span>
+                      <span className="text-[#64748B]">{t('totalDue')}</span>
                       <span className="font-medium text-[#161C2D] text-lg">
                         ${checkoutData?.totals.total || selectedTier.price}
                       </span>
@@ -333,7 +329,7 @@ export function CheckoutContents({ userEmail, userId }: Props) {
                 </div>
 
                 <p className="text-xs text-center text-gray-500 mt-4">
-                  No subscription required
+                  {t('noSubscription')}
                 </p>
               </div>
             )}

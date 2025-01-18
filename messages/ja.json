@@ -1,0 +1,1110 @@
+{
+    "hero": {
+      "title": "自撮り写真からプロフェッショナルなヘッドショットを作成",
+      "description": "LinkedIn、Twitter、リクルーターの目に留まりましょう。自撮り写真をアップロードすると、AIフォトグラファー「Aaria」が数百枚のプロフェッショナルなヘッドショットを作成します。",
+      "features": {
+        "styles": "150以上のスタイルと衣装",
+        "delivery": "1時間以内に結果をお届け",
+        "protection": "厳格なデータ保護",
+        "guarantee": "返金保証"
+      },
+      "button": "今すぐ試す",
+      "tryNow": "今すぐ始める →"
+    },
+    "ExplainerSection": {
+      "title": "スタジオ品質のプロフィールを作成する3つの簡単なステップ",
+      "step1": {
+        "title": "写真をアップロード",
+        "description": "AIがあなたを理解できるように、いくつかの写真をアップロードしてください。"
+      },
+      "step2": {
+        "title": "AIフォトグラファー「Aaria」が作業を開始",
+        "description": "Aariaは、あなた専用のプライベートな個人モデルを作成し、あなたの独自のスタイルとアイデンティティを反映したヘッドショットを保証します。"
+      },
+      "step3": {
+        "title": "お気に入りのヘッドショットをダウンロード",
+        "description": "ビジネスプロフィールを向上させる完璧なヘッドショットを、様々なスタイルで提供します。"
+      },
+      "tryNow": "今すぐ試す"
+    },
+    "PhotographyGrid": {
+      "title": "私たちのパック - あらゆるニーズに対応",
+      "description": "あらゆるスタイルとニーズに合わせて作られた写真パックの完全なラインナップをご覧ください。プロフェッショナルなポートレートからクリエイティブな編集まで、すべてをカバーしています。どのようなビジョンでも、私たちのAIフォトグラファーが簡単に実現します。",
+      "tryNow": "今すぐ試す",
+      "packs": {
+        "corporate": "企業向けヘッドショット",
+        "speaker": "スピーカーパック",
+        "doctor": "医療専門家",
+        "realtor": "不動産エージェント",
+        "dating": "デーティングプロフィール",
+        "redcarpet": "レッドカーペット",
+        "boldcolors": "ボールドカラー",
+        "tattoo": "タトゥーアーティスト",
+        "glamour": "グラマーショット",
+        "barbie": "バービースタイル",
+        "halloween": "ハロウィンテーマ",
+        "mythical": "神秘的"
+      }
+    },
+    "Comparison": {
+      "title": "時間とお金を節約",
+      "description": "Aariaは、あらゆるプロフェッショナルな場面に対応します。履歴書からLinkedInまで、あなたのヘッドショットを簡単に輝かせます。",
+      "columns": {
+        "goStudio": "Go Studio.ai",
+        "studio": "スタジオ撮影"
+      },
+      "items": {
+        "value": {
+          "label": "コストパフォーマンス",
+          "goStudio": "¥2,800",
+          "studio": "¥29,800"
+        },
+        "time": {
+          "label": "時間の節約",
+          "goStudio": "30分",
+          "studio": "2-3日"
+        },
+        "variety": {
+          "label": "バリエーション",
+          "goStudio": "30枚のヘッドショット",
+          "studio": "4-5枚のヘッドショット"
+        },
+        "choices": {
+          "label": "より多くの選択肢",
+          "goStudio": "20種類のスタイル",
+          "studio": "1種類のスタイル"
+        }
+      },
+      "exploreMore": "もっと見る"
+    },
+    "Why": {
+      "title": {
+        "why": "なぜ",
+        "gostudio": "GOSTUDIO.AI？"
+      },
+      "description": "AI駆動のヘッドショットであなたのプロフェッショナルなイメージを変革。数分でLinkedIn、履歴書などのためのスタジオ品質の写真を取得できます。",
+      "features": {
+        "linkedin": {
+          "title": "LinkedInで際立つ",
+          "description": "プロフェッショナルなヘッドショットで強力な第一印象を与え、プロフィール閲覧数と信頼性を高めます。"
+        },
+        "resume": {
+          "title": "履歴書を輝かせる",
+          "description": "洗練されたヘッドショットで求職申し込みを向上させ、個人的なタッチとプロフェッショナリズムを加えます。"
+        },
+        "events": {
+          "title": "イベント＆カンファレンス",
+          "description": "プロフェッショナルなイベントで最高の自分を表現。スピーカープロフィール、イベントディレクトリ、バッジに最適です。"
+        },
+        "business": {
+          "title": "名刺＆ブランディング",
+          "description": "高品質なヘッドショットで、すべてのビジネス資料で一貫したプロフェッショナルなイメージを作成します。"
+        },
+        "online": {
+          "title": "デジタルプレゼンス",
+          "description": "ソーシャルメディアから企業ウェブサイト、プロフェッショナルネットワークまで、あらゆるプラットフォームでプロフェッショナルに見せます。"
+        }
+      },
+      "tryNow": "今すぐ試す"
+    },
+    "HeadshotReview": {
+      "title": {
+        "part1": "満足いただいている",
+        "part2": "お客様のために作成済みの写真"
+      },
+      "description": "スタジオで撮影されたものではありません。AIが作成しました。私たちの言葉を信じるだけでなく、実際をご覧ください。私たちのAIは日常の写真をプロフェッショナルなヘッドショットに変換し、あなたの自信と信頼性を反映します。",
+      "createButton": "ヘッドショットを作成する",
+      "testimonials": {
+        "col1": {
+          "1": "結果は素晴らしく、私に合わせて調整されています。このAIヘッドショットは次元が違います。",
+          "2": "様々な商品画像でプラットフォームをテストし、結果に満足しています。",
+          "3": "これまでで最高の商品写真生成サイトです！"
+        },
+        "col2": {
+          "1": "オンライン小売業者として、高品質の商品画像は重要です。私のジュエリーの写真をいくつかアップロードしたところ、AIが商品を美しく展示する複数の素晴らしいオプションを生成しました。多様なオプションにより、商品を効果的に強調する異なる背景とアングルを選択できました。",
+          "2": "eコマースには必須のツールです！",
+          "3": "一度のアップロードで、選択できる多くのオプションが得られます。"
+        },
+        "col3": {
+          "1": "写真の品質と多様性が優れています。",
+          "2": "迅速で使いやすいインターフェース。このプラットフォームの使いやすさに感謝しています。",
+          "3": "このプラットフォームの使いやすさに感謝しています。受け取ったオプションの数に感動しました。ほとんどは素晴らしかったですが、期待通りに商品を捉えていないものも数枚ありました。しかし、最高のものをフィルタリングするのは簡単です。全体的に、多くの労力を節約できる素晴らしいツールです！"
+        },
+        "col4": {
+          "1": "AIは多様な画像を生成するのが信じられないほど賢いです。ミニ写真スタジオのようです！",
+          "2": "1枚の画像をアップロードした後に複数のオプションを提供する方法が気に入っています。自分の美的感覚に合うスタイルや背景を選ぶのが簡単です。それでも、複数の結果の便利さと全体的な品質は価値があります！特にソーシャルメディア用に多様性が必要な場合は、時間の節約になります。",
+          "3": "迅速なサービスと品質に大変満足しています。"
+        }
+      }
+    },
+    "Pricing": {
+      "title": "10分の1の価格でプレミアム品質を",
+      "description": "スタジオ訪問不要。¥29,800以上の撮影料金不要。予約待ち不要。自宅から30分で、素晴らしいプロフェッショナルグレードのヘッドショットを実現します。",
+      "badges": {
+        "mostPopular": "82%がこのプランを選択",
+        "bestValue": "ベストバリュー"
+      },
+      "oneTimePayment": "一回払い",
+      "noSubscription": "サブスクリプション不要",
+      "tryNow": "今すぐ試す",
+      "features": {
+        "headshots": {
+          "basic": "20枚の高品質ヘッドショット",
+          "standard": "60枚の高品質ヘッドショット",
+          "premium": "100枚の高品質ヘッドショット"
+        },
+        "processing": {
+          "basic": "2時間の処理時間",
+          "standard": "1時間の処理時間",
+          "premium": "30分の処理時間"
+        },
+        "outfits": {
+          "basic": "5種類の衣装と背景",
+          "standard": "20種類の衣装と背景",
+          "premium": "40種類の衣装と背景"
+        },
+        "poses": {
+          "basic": "5種類のポーズ",
+          "standard": "20種類のポーズ",
+          "premium": "40種類のポーズ"
+        }
+      }
+    },
+    "DataSecurity": {
+      "title": "データプライバシーを重視",
+      "subtitle": {
+        "line1": "フォーチュン500のリーダーやトップの専門家に信頼されています",
+        "line2": "評価の高い企業組織やチームが私たちにデータを信頼しています"
+      },
+      "features": {
+        "noSelling": {
+          "title": "データの販売・共有なし",
+          "description": "私たちは決してあなたのデータを販売したり、第三者のウェブサイトと共有したりしません。"
+        },
+        "control": {
+          "title": "あなたの写真、あなたのコントロール",
+          "description": "あなたの許可なく、写真をAIのトレーニングに使用することはありません。"
+        },
+        "autoDeletion": {
+          "title": "データの自動削除",
+          "description": "システムは90日後に自動的にすべての画像を削除します。設定は自由に変更できます。"
+        },
+        "security": {
+          "title": "最高レベルのセキュリティ",
+          "description": "すべての機密ユーザーデータを暗号化しています。業界最高の信頼できるソフトウェアを使用しています。"
+        }
+      },
+      "createButton": "ヘッドショットを作成する"
+    },
+    "TeamSection": {
+      "title": {
+        "why": "なぜ",
+        "gostudio": "GOSTUDIO.AI？"
+      },
+      "description": "Aariaが簡単に作成するスタジオ品質のヘッドショットで、チームの統一された専門的な外観を作成します。あなたの会社の価値観を反映した洗練されたポートレートをお届けします。高額な撮影は不要—シームレスで高品質な結果だけをお届けします。",
+      "teamHeadshots": "チームヘッドショット",
+      "tryNow": "今すぐ試す"
+    },
+    "CreationGallery": {
+      "title": "私の作品をちょっと覗いてみてください",
+      "description": "私の作品の一部をご紹介できることを嬉しく思います。",
+      "createButton": "ヘッドショットを作成する"
+    },
+    "FAQ": {
+      "title": "よくある質問",
+      "questions": {
+        "whatIs": {
+          "question": "GoStudio.aiとは何ですか？どのように機能しますか？",
+          "answer": "GoStudio.aiは、あなたの写真を使用してカスタムAIモデルをトレーニングし、様々なスタイルと衣装であなたのヘッドショットを生成できます。生成されるヘッドショットの品質は、アップロードする写真に依存します。顔、目、様々な角度からの異なる視点を持つ写真を用意する必要があります。各写真は、あなたの外見と顔の特徴について新しい情報を提供する必要があります。"
+        },
+        "photoRequirements": {
+          "question": "どのような写真をアップロードする必要がありますか？",
+          "answer": "多様性を優先してください。様々な表情や背景、一日の異なる時間帯に撮影された写真が、高品質な入力写真の鍵となります。また、メイクやアクセサリーは最小限にしてください！"
+        },
+        "ownership": {
+          "question": "生成された写真の権利は誰に帰属しますか？",
+          "answer": "アップロードした写真もAI生成画像も、完全な権利はあなたに帰属します。あなたの写真は個人のAIモデルのトレーニングにのみ使用され、他のユーザーと共有されることは決してありません。"
+        },
+        "timing": {
+          "question": "ヘッドショットの受け取りにどのくらい時間がかかりますか？",
+          "answer": "通常、アップロードから最初のAI生成ヘッドショットセットの受け取りまで約15-20分かかります。その後、追加のバリエーションを即座に生成できます。"
+        },
+        "satisfaction": {
+          "question": "結果に満足できない場合はどうなりますか？",
+          "answer": "満足保証を提供しています。結果に満足できない場合は、改善のためにサポートさせていただくか、全額返金いたします。"
+        },
+        "linkedin": {
+          "question": "これらの写真をLinkedInや他のプロフェッショナルなプラットフォームで使用できますか？",
+          "answer": "もちろんです！私たちのAI生成ヘッドショットは、LinkedIn、企業ウェブサイト、名刺、その他のプロフェッショナルな用途に最適です。"
+        },
+        "whichAI": {
+          "question": "どのAI技術を使用していますか？",
+          "answer": "プロフェッショナルなヘッドショット作成に特化した最先端の画像生成モデルを含む、独自のAI技術の組み合わせを使用しています。"
+        },
+        "dataSecurity": {
+          "question": "データセキュリティとプライバシーはどのように処理されますか？",
+          "answer": "私たちはプライバシーを真剣に考えています。あなたの写真は暗号化され、安全に保管され、あなたの個人AIモデルにのみ使用されます。第三者とデータを共有することは決してありません。"
+        }
+      }
+    },
+    "login": {
+      "title": "ログイン / 登録",
+      "emailLabel": "メールアドレス",
+      "emailPlaceholder": "example@mybiz.com",
+      "emailRequired": "メールアドレスは必須です",
+      "emailInvalid": "無効なメールアドレスです",
+      "googleButton": "Googleで続ける",
+      "mostUsed": "最も使用されている",
+      "orDivider": "またはメールアドレスで続ける",
+      "submitButton": "メールでコードを取得",
+      "infoText": "ワンタイムコードを受信トレイに送信します。",
+      "termsText": "登録することで、以下に同意したことになります：",
+      "termsLink": "利用規約",
+      "andText": "および",
+      "privacyLink": "プライバシーポリシー",
+      "errors": {
+        "loginFailed": "ログインに失敗しました",
+        "invalidEmail": "無効なメールアドレス",
+        "googleSignInFailed": "Googleログインに失敗しました",
+        "tryAgain": "もう一度お試しください。問題が解決しない場合は、サポートにお問い合わせください。"
+      },
+      "testimonial": "試したスタジオよりも良い写真が出来上がりました",
+      "testimonialAuthor": "サラ・チェン"
+    },
+    "waitingForMagicLink": {
+      "title": "続行するにはメールをご確認ください",
+      "description": "アカウントにアクセスするためのマジックリンクをメールで送信しました。",
+      "hint": "ヒント：迷惑メールフォルダをご確認ください。",
+      "backButton": "戻る"
+    },
+    "loginFail": {
+      "title": "ログインエラー",
+      "defaultError": "問題が発生しました。サポートにお問い合わせください。",
+      "browserError": "申し訳ありません！別のデバイスまたはブラウザからマジックリンクを開こうとしたようです。",
+      "hint": "ヒント：登録時と同じデバイス/ブラウザでリンクを開いてください。",
+      "loginLink": "ログイン"
+    },
+    "navbar": {
+      "loginButton": "ログイン / 登録"
+    },
+    "userMenu": {
+      "credits": "クレジット",
+      "logout": "ログアウト"
+    },
+    "navigation": {
+      "headshotPacks": "ヘッドショットパック",
+      "photoshootPacks": "フォトシュートパック",
+      "freeTools": "無料ツール",
+      "backgroundLibrary": "背景ライブラリ",
+      "backgroundRemover": "背景削除ツール",
+      "testimonial": "お客様の声",
+      "pricing": "料金",
+      "faq": "FAQ"
+    },
+    "sidebar": {
+      "dashboard": "ダッシュボード",
+      "myHeadshots": "マイヘッドショット",
+      "photoEditorTools": "写真編集ツール",
+      "aiImageGenerator": "AI画像ジェネレーター",
+      "logout": "ログアウト",
+      "loggingOut": "ログアウト中..."
+    },
+    "overview": {
+      "myHeadshots": "マイヘッドショット",
+      "generateImagesMessage": "画像生成を開始しましょう。Aariaがあなたの写真を生成します！",
+      "generateImages": "画像を生成"
+    },
+    "packs": {
+      "title": "パック",
+      "description": "画像生成を開始するパックを選択してください。",
+      "selectPack": "01/ パックを選択",
+      "instructions": "02/ 説明",
+      "uploadPhotos": "03/ 写真をアップロード",
+      "getCredits": "04/ クレジットを取得",
+      "summary": "05/ サマリー",
+      "errorFetching": "パックの取得中にエラーが発生しました",
+      "requestFailed": "リクエストが失敗しました（ステータスコード404）"
+    },
+    "packsGallery": {
+      "loading": "パックを読み込み中...",
+      "noPacks": "利用可能なパックがありません。",
+      "continueButton": "続ける",
+      "errors": {
+        "fetchTitle": "パックの取得中にエラーが発生しました",
+        "unknownTitle": "不明なエラー",
+        "unknownDescription": "不明なエラーが発生しました。"
+      },
+      "categories": {
+        "adults": "プロフェッショナル＆ライフスタイルパック",
+        "children": "子供用パック",
+        "pets": "ペット用パック",
+        "default": "{category}パック"
+      },
+      "packDetails": {
+        "close": "閉じる",
+        "select": "パックを選択",
+        "imagesIncluded": "含まれる画像",
+        "price": "価格"
+      }
+    },
+    "photoGuide": {
+      "title": "画像ガイド",
+      "subtitle": "高品質な写真を得るためのガイドに従ってください。",
+      "sections": {
+        "goodPhotos": "アップロードに適した写真",
+        "photosToAvoid": "避けるべき写真",
+        "refrainUsing": "使用を控えてください"
+      },
+      "descriptions": {
+        "closeUpSelfie": "クローズアップ自撮り",
+        "facingCamera": "カメラに向かって正面",
+        "halfBody": "上半身",
+        "onlyVisible": "あなただけが写っている",
+        "groupSelfies": "グループ自撮り",
+        "withSomeone": "誰かと一緒",
+        "hidingFace": "顔を隠している",
+        "wearingGlasses": "メガネをかけている",
+        "onlyFace": "顔だけ",
+        "nudity": "ヌード",
+        "blurredImage": "ぼやけた画像",
+        "tooMuchShadow": "影が多すぎる"
+      },
+      "alt": {
+        "goodPhoto1": "良い写真例1",
+        "goodPhoto2": "良い写真例2",
+        "goodPhoto3": "良い写真例3",
+        "goodPhoto4": "良い写真例4",
+        "badPhoto1": "悪い写真例1",
+        "badPhoto2": "悪い写真例2",
+        "badPhoto3": "悪い写真例3",
+        "badPhoto4": "悪い写真例4"
+      }
+    },
+    "trainModel": {
+      "notEnoughInfo": "情報が不足しています",
+      "uploadRequirements": "少なくとも4枚の画像をアップロードし、モデル情報が利用可能であることを確認してください。",
+      "uploadingImages": "画像をアップロード中...",
+      "pleaseWait": "写真を処理している間お待ちください",
+      "startUploading": "写真のアップロードを開始",
+      "uploadFiles": "ファイルをアップロード",
+      "dragDropHint": "クリックしてアップロードするか、ドラッグ＆ドロップ",
+      "fileTypes": "PNG、JPG、HEIC（最大120MB）",
+      "goodPhotos": "良い写真",
+      "badPhotos": "悪い写真",
+      "continue": "続ける",
+      "imageGuide": "画像ガイド",
+      "followGuide": "高品質な写真を得るためのガイドに従ってください。",
+      "photoRequirements": "より良い写真品質を確保するため、Aariaはカメラに向かって正面を向いた1枚の上半身写真と7枚のクローズアップ写真が必要です。",
+      "autoCropBanner": "グループ自撮りを自動でトリミングできるようになりました！トリミングしたい画像をタップするだけで、後は私たちにお任せください。"
+    },
+    "checkout": {
+      "title": "チェックアウト",
+      "subtitle": "フォトシュートと比べて数百円節約。初回のアップロードが適切でない場合は、手動編集ややり直しでAIプロフェッショナルヘッドショットをカスタマイズできます。",
+      "standardBadge": "82%がこのプランを選択",
+      "premiumBadge": "ベストバリュー",
+      "subtotal": "小計",
+      "tax": "税金",
+      "totalDue": "今日のお支払い総額",
+      "noSubscription": "サブスクリプション不要",
+      "oneTimePayment": "一回払い",
+      "features": {
+        "headshots": {
+          "basic": "10枚のプロフェッショナルAIヘッドショット",
+          "standard": "30枚のプロフェッショナルAIヘッドショット",
+          "premium": "100枚のプロフェッショナルAIヘッドショット"
+        },
+        "processing": {
+          "basic": "24時間の処理時間",
+          "standard": "12時間の処理時間",
+          "premium": "6時間の処理時間"
+        },
+        "outfits": {
+          "basic": "2種類の衣装",
+          "standard": "4種類の衣装",
+          "premium": "8種類の衣装"
+        },
+        "poses": {
+          "basic": "2種類のポーズ",
+          "standard": "4種類のポーズ",
+          "premium": "8種類のポーズ"
+        }
+      }
+    },
+    "summary": {
+      "detectedFeatures": "これらはAariaが検出した特徴です。必要に応じて編集することもできます。",
+      "age": "年齢",
+      "eyeColor": "目の色",
+      "hairColor": "髪の色",
+      "gender": "性別",
+      "ethnicity": "民族",
+      "notSpecified": "未指定",
+      "enterEyeColor": "目の色を入力",
+      "enterHairColor": "髪の色を入力",
+      "enterEthnicity": "民族を入力",
+      "save": "保存",
+      "male": "男性",
+      "orderSummary": "注文サマリー",
+      "summaryDescription": "フォトシュートと比べて数百円節約。初回のアップロードが適切でない場合は、手動編集ややり直しでAIプロフェッショナルヘッドショットをカスタマイズできます。",
+      "uploadedPhotos": "アップロードされた写真",
+      "processing": "処理中...",
+      "startTraining": "トレーニングを開始",
+      "noModelData": "モデルデータなし",
+      "noModelDataDesc": "モデルデータが見つかりません。戻ってまずモデルを作成してください。",
+      "generateHeadshots": "ヘッドショットを生成",
+      "loading": "読み込み中..."
+    },
+    
+      "photoTypes": {
+        "title": "プロフェッショナルAI写真スタイル",
+        "subtitle": "AIを活用した多彩な写真スタイルから、あなたの理想的なプロフェッショナルポートレートを作成できます。",
+        "showMore": "すべてのスタイルを見る",
+        "showLess": "表示を減らす",
+        "types": {
+          "vintageAmericana": {
+            "title": "ヴィンテージアメリカーナ写真",
+            "description": "LinkedInやビジネスネットワーキングに最適な、アメリカンテイストのプロフェッショナルな写真"
+          },
+          "onesiePortraits": {
+            "title": "ベビー服ポートレート",
+            "description": "赤ちゃんや幼児のための愛らしいポートレート"
+          },
+          "halloweenPhotos": {
+            "title": "ハロウィン写真",
+            "description": "ハロウィン愛好家のための楽しくスプーキーなポートレート"
+          },
+          "birthdayParty": {
+            "title": "誕生日パーティー記念写真",
+            "description": "自然で本物らしい雰囲気のデート用プロフィール写真"
+          },
+          "artisticPortraits": {
+            "title": "アーティスティックポートレート",
+            "description": "創造的で芸術的なポートレート写真"
+          },
+          "wrestlemaniaPhotos": {
+            "title": "レスリングスタイル写真",
+            "description": "力強さとキャラクターを捉えたレスリングをイメージしたダイナミックなポートレート"
+          },
+          "redCarpet": {
+            "title": "レッドカーペット俳優写真",
+            "description": "レッドカーペットにインスパイアされた魅力的で洗練されたポートレート"
+          },
+          "gameOfThrones": {
+            "title": "ゲーム・オブ・スローンズ風ポートレート",
+            "description": "ゲーム・オブ・スローンズスタイルのファンタジー風ポートレート"
+          },
+          "kidsBirthday": {
+            "title": "子供の誕生日ポートレート",
+            "description": "子供の誕生日の特別な瞬間を捉えた写真"
+          },
+          "mythicalCreatures": {
+            "title": "神話の生き物ポートレート",
+            "description": "神話の生き物をフィーチャーしたファンタジー風ポートレート"
+          },
+          "onlineDating": {
+            "title": "オンラインデーティングプロフィール写真",
+            "description": "オンラインデーティング用の完璧なポートレート"
+          },
+          "petPhotography": {
+            "title": "ペット写真",
+            "description": "ペットのためのプロフェッショナルなポートレート"
+          },
+          "popColor": {
+            "title": "ポップカラー写真",
+            "description": "ポップアートの影響を受けた鮮やかなポートレート"
+          },
+          "youtubeThumbnails": {
+            "title": "YouTubeサムネイル写真",
+            "description": "YouTubeサムネイルに最適な目を引くポートレート"
+          },
+          "actressPortraits": {
+            "title": "女優ポートレート",
+            "description": "鮮やかで詳細な植物や花の写真"
+          },
+          "dreamlandKids": {
+            "title": "ドリームランドキッズ写真",
+            "description": "夢のような設定での子供たちの魔法のようなファンタジーポートレート"
+          },
+          "babyDoodles": {
+            "title": "ベビードゥードル",
+            "description": "赤ちゃんの写真を愛らしい落書きスタイルのポートレートに変換。保育園のアートや出産報告に最適。"
+          },
+          "birthdayMagic": {
+            "title": "バースデーマジック",
+            "description": "お祝い、招待状、特別な機会に最適な魅惑的な誕生日ポートレート"
+          },
+          "personalBrand": {
+            "title": "パーソナルブランド写真",
+            "description": "あなたのパーソナルブランドを高め、一貫したビジュアルプレゼンスを作り出すためのプロフェッショナルな写真ソリューション"
+          },
+          "casualPhotography": {
+            "title": "カジュアル写真",
+            "description": "ソーシャルメディアやカジュアルなプロフェッショナルニーズに最適な、自然でリラックスしたポートレート"
+          },
+          "casualCollection": {
+            "title": "カジュアルコレクション",
+            "description": "一貫したオンラインプレゼンスを維持するための多様なカジュアルなライフスタイルポートレート"
+          },
+          "catMagic": {
+            "title": "キャットマジック",
+            "description": "あなたの猫の個性と魅力を捉えた魔法のようなポートレートに変換"
+          },
+          "cyberpunk": {
+            "title": "サイバーパンク",
+            "description": "未来的なデジタルアートスタイルで魅力的なサイバーパンクキャラクターに変身"
+          },
+          "hanukkahMiracle": {
+            "title": "ハヌカーの奇跡",
+            "description": "光の祭りの魔法を捉えた美しいハヌカーテーマのポートレート"
+          },
+          "happyKid": {
+            "title": "ハッピーキッド",
+            "description": "子供たちの純粋な喜びと無邪気さを捉えた楽しいポートレート"
+          },
+          "influencer": {
+            "title": "インフルエンサー",
+            "description": "ソーシャルメディアとコンテンツ制作に最適な魅力的なインフルエンサースタイルのポートレート"
+          },
+          "meIconic": {
+            "title": "ミーアイコニック",
+            "description": "群衆の中で際立つあなただけのアイコニックなポートレートスタイル"
+          },
+          "merryChristmas": {
+            "title": "メリークリスマス",
+            "description": "クリスマスシーズンの喜びと温かさを捉えた魔法のようなクリスマスポートレート"
+          },
+          "playfulCasual": {
+            "title": "プレイフルカジュアル",
+            "description": "あなたの遊び心を見せる楽しく自然なカジュアルポートレート"
+          },
+          "podcaster": {
+            "title": "ポッドキャスター",
+            "description": "あなたのオーディオブランドを構築するプロフェッショナルなポッドキャスターポートレート"
+          },
+          "romanticMaternity": {
+            "title": "ロマンティックマタニティ",
+            "description": "妊娠の魔法を祝う美しくロマンティックなマタニティポートレート"
+          },
+          "socialMedia": {
+            "title": "ソーシャルメディア",
+            "description": "すべてのソーシャルメディアプラットフォームに最適化された魅力的なポートレート"
+          },
+          "timeMachine": {
+            "title": "タイムマシン",
+            "description": "時を超えて魅力的な歴史的ポートレートと時代物の写真"
+          },
+          "timelessStudio": {
+            "title": "タイムレススタジオ",
+            "description": "タイムレスでプロフェッショナルな魅力を持つエレガントなスタジオポートレート"
+          },
+          "telAvivFashion": {
+            "title": "テルアビブファッション",
+            "description": "都会的なスタイルのテルアビブにインスパイアされた魅力的なファッションポートレート"
+          },
+          "wildFriends": {
+            "title": "ワイルドフレンズ",
+            "description": "ペットや動物の仲間たちと一緒に撮る魔法のようなポートレート"
+          },
+          "winterWonderland": {
+            "title": "ウィンターワンダーランド",
+            "description": "魔法のような雪景色での魅惑的な冬のワンダーランドポートレート"
+          },
+          "workFromHome": {
+            "title": "在宅ワーク",
+            "description": "リモートワーク用のプロフェッショナルな在宅ポートレート"
+          },
+          "vintagePack": {
+            "title": "ヴィンテージパック",
+            "description": "タイムレスなレトロな美学とクラシックな魅力を持つ美しいヴィンテージスタイルのポートレート"
+          },
+          "professionalTattoos": {
+            "title": "プロフェッショナルタトゥーポートレート",
+            "description": "あなたのタトゥーアートを引き立てるプロフェッショナルなポートレート"
+          },
+          "annieLeibovitz": {
+            "title": "アニー・リーボヴィッツスタイル",
+            "description": "アニー・リーボヴィッツの象徴的な写真スタイルにインスパイアされたドラマチックなポートレート"
+          },
+          "barbie": {
+            "title": "バービースタイル",
+            "description": "楽しくスタイリッシュなバービーにインスパイアされたポートレート写真"
+          },
+          "vikingPortraits": {
+            "title": "ヴァイキングポートレート",
+            "description": "歴史的なテーマとファンタジー撮影に最適なパワフルなヴァイキングスタイルのポートレート"
+          },
+          "marvelClass": {
+            "title": "マーベルクラス",
+            "description": "マーベル作品にインスパイアされた映画のような品質を持つダイナミックなインパクトのあるヘッドショット"
+          }
+        }
+      },
+      
+      
+        "headshots": {
+          "title": "プロフェッショナルのためのAIヘッドショット",
+          "subtitle": "多くのビジネスプロフェッショナルが、毎日HeadshotProを使用して、仕事で使用できるプロフェッショナルなヘッドショットを作成しています。",
+          "showMore": "すべてのスタイルを表示",
+          "showLess": "表示を減らす",
+          "types": {
+            "doctor": {
+              "title": "医師用ヘッドショット",
+              "description": "医療専門家、医師、医療施設向けのプロフェッショナルな医療ポートレート"
+            },
+            "lawyer": {
+              "title": "弁護士用ヘッドショット",
+              "description": "法律専門家や法律事務所向けのプロフェッショナルなポートレート"
+            },
+            "actor": {
+              "title": "俳優用ヘッドショット",
+              "description": "ファッション、ビューティー、プロのモデルポートフォリオに最適な魅力的なグラマーポートレート"
+            },
+            "realtor": {
+              "title": "不動産業者スタイル",
+              "description": "不動産プロフェッショナル向けのプロフェッショナルなポートレート"
+            },
+            "tedSpeaker": {
+              "title": "TEDスピーカースタイル",
+              "description": "スピーカーやプレゼンター向けのプロフェッショナルなポートレート"
+            },
+            "businessCasual": {
+              "title": "ビジネスカジュアルヘッドショット",
+              "description": "J.Crewのエステティックにインスパイアされたクラシックでスタイリッシュなポートレート"
+            },
+            "model": {
+              "title": "モデルヘッドショット",
+              "description": "ヘルムート・ニュートンのスタイルにインスパイアされた洗練された魅力的なポートレート"
+            },
+            "styledSuccess": {
+              "title": "成功のためのスタイリング",
+              "description": "洗練されたスタイリングで、モダンで上品な印象のプロフェッショナルポートレート"
+            },
+            "professional": {
+              "title": "プロフェッショナルパッケージ",
+              "description": "企業やビジネスニーズに最適な完璧なプロフェッショナルヘッドショットパッケージ"
+            },
+            "partnersCollection": {
+              "title": "パートナーズコレクション",
+              "description": "法律事務所のパートナーや上級幹部向けに特別にデザインされたプレミアムヘッドショット"
+            },
+            "lawyerBranded": {
+              "title": "法律家ブランド",
+              "description": "法的ブランドとプロフェッショナルな権威を強化する専門的なヘッドショット"
+            },
+            "effortlessProfessionalism": {
+              "title": "エフォートレスプロフェッショナリズム",
+              "description": "プロフェッショナルな存在感を保ちながら、自然で親しみやすいヘッドショット"
+            }
+          }
+        },
+        
+        "common": {
+          "features": {
+            "styles": "150以上のスタイルから選択",
+            "delivery": "1時間以内に結果提供",
+            "protection": "厳格なデータ保護",
+            "guarantee": "返金保証付き"
+          }
+  },
+  "heroPages": {
+    "color": {
+      "title": {
+        "part1": "�ップカラー",
+        "part2": "AIポートレートスタジオ"
+      },
+      "description": "あなたの写真を鮮やかでカラフルなポートレートに変身させましょう。SNS、パーソナルブランディング、クリエイティブな表現に最適です。",
+      "button": "作成を開始",
+      "imageAlt": "ポップカラーポートレートの例"
+    },
+    "youtube": {
+      "title": {
+        "part1": "YouTubeサムネイル",
+        "part2": "クリエイターズスタジオ"
+      },
+      "description": "再生回数を伸ばす目を引くYouTubeサムネイルを作成。コンテンツクリエイターとチャンネル成長に最適です。",
+      "button": "今すぐ始める",
+      "imageAlt": "YouTubeサムネイルの例"
+    },
+    "botanical": {
+      "title": {
+        "part1": "自然の美しさAI",
+        "part2": "ボタニカル",
+        "part3": "イラスト付きポートレート"
+      },
+      "description": "繊細なボタニカルイラストの要素で彩られたAI生成ポートレートで、自然の優雅さを表現します。",
+      "button": "無料で始める",
+      "imageAlt": "ボタニカルポートレートの例"
+    },
+   
+  "partner": {
+    "title": {
+      "part1": "法律パートナー向け",
+      "part2": "プロフィール写真",
+      "part3": "AI駆動の",
+      "part4": "卓越性"
+    },
+    "description": "シニアパートナーや執行役員弁護士のために作られたプロフィール写真で、貴所の経営陣の存在感を高めます。あなたの地位にふさわしい権威と信頼性を反映させます。",
+    "button": "存在感を高める",
+    "imageAlt": "法律パートナー向けプロフェッショナル写真"
+  },
+  "stylishLawyer": {
+    "title": {
+      "part1": "法的プレゼンスを",
+      "part2": "向上させる",
+      "part3": "プロフェッショナル写真を",
+      "part4": "数分で"
+    },
+    "description": "法律専門家のためにカスタマイズされたAI生成のプロフェッショナル写真で、尊敬と信頼を獲得。法律事務所のウェブサイト、LinkedIn、専門家ディレクトリに最適です。",
+    "button": "イメージを変革する",
+    "imageAlt": "スタイリッシュな弁護士写真"
+  },
+  "professionalism": {
+    "title": {
+      "part1": "比類なき",
+      "part2": "プロフェッショナリズム",
+      "part3": "AI搭載",
+      "part4": "法的卓越性"
+    },
+    "description": "卓越性、信頼性、洗練さを体現するプロフィール写真で、あなたの法的専門知識を示します。最高水準を求める弁護士に最適です。",
+    "button": "プロフィールを向上",
+    "imageAlt": "法的プロフェッショナル写真"
+  },
+  "common": {
+    "features": {
+      "styles": "150以上のスタイルから選択",
+      "delivery": "1時間以内に結果提供",
+      "protection": "厳格なデータ保護",
+      "guarantee": "返金保証付き"
+    }
+  }
+
+  },
+  
+  
+ 
+    
+      "heroPacks": {
+        "dreamlandKids": {
+          "gradientTitle": "子どもの魔法写真",
+          "normalTitle": "夢が叶う場所",
+          "description": "お子様の写真を夢の世界の魔法のような絵に変身させましょう。ファンタジックな背景、おとぎ話のテーマ、楽しいシーンで魔法のような思い出を作ります。",
+          "buttonText": "魔法を始める"
+        },
+        "babyDoodles": {
+          "gradientTitle": "ベビー落書き",
+          "normalTitle": "かわいい赤ちゃん写真",
+          "description": "赤ちゃんのための素敵で楽しい写真を作成。幼児期の幸せな瞬間と家族の思い出を完璧に捉えます。",
+          "buttonText": "思い出を残す"
+        },
+        "brandingPhotography": {
+          "gradientTitle": "ブランディング写真",
+          "normalTitle": "輝く個性",
+          "description": "AIを活用したプロフェッショナルな写真であなたのパーソナルブランドを高めましょう",
+          "buttonText": "ブランドを構築"
+        },
+        "workFromHome": {
+          "gradientTitle": "在宅ワーク",
+          "normalTitle": "リモートプロフェッショナル写真",
+          "description": "リモートワーク用のプロフェッショナルな写真を作成。リモートワーカーやオンライン会議に最適です",
+          "buttonText": "スマートに働く"
+        },
+        "vintagePack": {
+          "gradientTitle": "ヴィンテージパック",
+          "normalTitle": "レトロスタイル写真",
+          "description": "美しいヴィンテージスタイルのポートレートを作成。レトロな雰囲気とクラシックな写真に最適です",
+          "buttonText": "時代を遡る"
+        },
+        "birthdayMagic": {
+          "gradientTitle": "バースデーマジック",
+          "normalTitle": "お祝いの写真",
+          "description": "誕生日のための魔法のような写真を作成。特別な機会に最適です",
+          "buttonText": "お祝いを始める"
+        },
+        "casualPhotos": {
+          "gradientTitle": "カジュアル写真",
+          "normalTitle": "自然で親しみやすい",
+          "description": "あなたの本当の個性を表現する自然なポートレートを作成。SNSやパーソナルブランディングに最適です",
+          "buttonText": "ナチュラルな写真を取得"
+        },
+        "casualCollection": {
+          "gradientTitle": "カジュアルコレクション",
+          "normalTitle": "自然な瞬間",
+          "description": "あなたの本当の個性を反映する様々なカジュアルな写真を作成。SNSコンテンツやプロフィールに最適です。",
+          "buttonText": "コレクションを開始"
+        },
+        "catMagic": {
+          "gradientTitle": "キャットマジック",
+          "normalTitle": "特別な瞬間",
+          "description": "あなたの猫の写真を個性豊かな魔法のような画像に変身させます。ペット愛好家やSNSに最適です。",
+          "buttonText": "魔法を作る"
+        },
+        "christmasElf": {
+          "gradientTitle": "クリスマスエルフ",
+          "normalTitle": "クリスマスマジック",
+          "description": "クリスマスエルフをテーマにした楽しい写真を作成。クリスマスカードや家族のお祝いに最適です。",
+          "buttonText": "楽しみを始める"
+        },
+        "christmasSweater": {
+          "gradientTitle": "クリスマスセーター",
+          "normalTitle": "暖かいクリスマスムード",
+          "description": "クリスマスセーターをテーマにした温かいお祝いの写真を作成。クリスマスカードやオフィスパーティーに最適です。",
+          "buttonText": "お祝いを始める"
+        },
+        "familyChristmas": {
+          "gradientTitle": "ファミリークリスマス",
+          "normalTitle": "魔法の家族の思い出",
+          "description": "季節の魔法を捉えた魔法のようなクリスマス家族写真を作成。クリスマスカードや大切な家族の思い出に最適です。",
+          "buttonText": "家族の魔法を作る"
+        },
+        "cyberpunk": {
+          "gradientTitle": "サイバーパンク",
+          "normalTitle": "デジタルフューチャー",
+          "description": "あなたの写真を未来的なサイバーパンクアートに変身させます。SFファンや未来的なデザインに最適です。",
+          "buttonText": "未来へ進む"
+        },
+        "hanukkahMiracle": {
+          "gradientTitle": "ハヌカーの奇跡",
+          "normalTitle": "光の祭典",
+          "description": "光の祭典の魔法を捉えた美しいハヌカーテーマの写真を作成。お祝いカードや家族のお祝いに最適です。",
+          "buttonText": "光を灯す"
+        },
+        "happyKid": {
+          "gradientTitle": "ハッピーキッズ",
+          "normalTitle": "喜びの瞬間",
+          "description": "子どもたちの喜びと無邪気さを捉えた素晴らしい写真を作成。家族のアルバムや大切な思い出に最適です。",
+          "buttonText": "喜びを捉える"
+        },
+        "influencer": {
+          "gradientTitle": "インフルエンサー",
+          "normalTitle": "ソーシャルシャイン",
+          "description": "成功するインフルエンサーにふさわしいプロフェッショナルな写真を作成。SNSやパーソナルブランド構築に最適です。",
+          "buttonText": "影響力を始める"
+        },
+        "meIconic": {
+          "gradientTitle": "マイアイコニック",
+          "normalTitle": "アイコニック写真",
+          "description": "あなたのユニークな個性を表現するアイコニックなショットに写真を変身させます。自己表現と個性的な演出に最適です。",
+          "buttonText": "アイコンになる"
+        },
+        "merryChristmas": {
+          "gradientTitle": "メリークリスマス",
+          "normalTitle": "クリスマスの喜び",
+          "description": "クリスマスの精神を伝える写真を作成。グリーティングカードやお祝いに最適です。",
+          "buttonText": "クリスマスを祝う"
+        },
+        "playfulCasual": {
+          "gradientTitle": "遊び心カジュアル",
+          "normalTitle": "リラックスした瞬間",
+          "description": "あなたの陽気な精神を反映した遊び心のあるカジュアルな写真を作成。日常の瞬間やSNSに最適です。",
+          "buttonText": "楽しみを始める"
+        },
+        "podcaster": {
+          "gradientTitle": "ポッドキャスター",
+          "normalTitle": "ビジュアルボイス",
+          "description": "プロのポッドキャスターにふさわしいプロフェッショナルな写真を作成。プロモーションやマーケティングに最適です。",
+          "buttonText": "配信を始める"
+        },
+        "romanticMaternity": {
+          "gradientTitle": "ロマンティックマタニティ",
+          "normalTitle": "マタニティの瞬間",
+          "description": "美しいロマンティックな写真であなたの妊娠の旅を記録。家族の思い出や大切な人との共有に最適です。",
+          "buttonText": "瞬間を記録"
+        },
+        "socialMedia": {
+          "gradientTitle": "ソーシャルメディア",
+          "normalTitle": "デジタルシャイン",
+          "description": "SNS用の魅力的な写真を作成。デジタルコンテンツやオンラインプレゼンスに最適です。",
+          "buttonText": "輝き始める"
+        },
+        "timeMachine": {
+          "gradientTitle": "タイムマシン",
+          "normalTitle": "タイムトラベル",
+          "description": "様々な時代のスタイルを持つ写真で時間旅行。歴史愛好家とノスタルジアに最適です。",
+          "buttonText": "旅を始める"
+        },
+        "timelessStudio": {
+          "gradientTitle": "タイムレススタジオ",
+          "normalTitle": "永遠の美",
+          "description": "プロフェッショナルなスタジオでタイムレスなクラシック写真を作成。フォーマルやプロフェッショナルな写真に最適です。",
+          "buttonText": "撮影を始める"
+        },
+        "tlvFashion": {
+          "gradientTitle": "テルアビブファッション",
+          "normalTitle": "コンテンポラリーファッション",
+          "description": "テルアビブの活気ある精神を持つコンテンポラリーなファッション写真を作成。ファッションとスタイル愛好家に最適です。",
+          "buttonText": "エレガンスを発見"
+        },
+        "wildFriends": {
+          "gradientTitle": "ワイルドフレンズ",
+          "normalTitle": "自然の冒険",
+          "description": "ワイルドで自然なタッチの写真を作成。自然愛好家と冒険家に最適です。",
+          "buttonText": "冒険を始める"
+        },
+        "winterWonderland": {
+          "gradientTitle": "ウィンターワンダーランド",
+          "normalTitle": "冬の魔法",
+          "description": "おとぎ話のような冬のシーンで魔法のような写真を作成。冬のシーズンと休暇に最適です。",
+          "buttonText": "魔法を発見"
+        },
+        
+            "marvelClass": {
+              "gradientTitle": "プレミアムクラス",
+              "normalTitle": "法律家ポートレート",
+              "description": "AI撮影による最高峰のプロフェッショナル写真をご体験ください。比類のない洗練さとスタイルで法的専門性の本質を捉えます。",
+              "button": "プレミアム品質を体験",
+              "imageAlt": "プロフェッショナルな法律家ポートレート"
+            },
+            "vikingsHero": {
+              "gradientTitle": "バイキングポートレート",
+              "normalTitle": "AIマジック搭載",
+              "description": "北欧の戦士の精神を捉えた伝説的なポートレートに写真を変身させましょう。ゲームプロフィール、クリエイティブコンテンツ、ユニークな個人ブランディングに最適です。",
+              "button": "あなたの伝説を作る",
+              "imageAlt": "バイキングスタイルのポートレート"
+            },
+            "barbieHero": {
+              "gradientTitle": "ポップカルチャーポートレート",
+              "normalTitle": "鮮やかな個性を持って",
+              "description": "大胆な色使いと遊び心のあるスタイルで印象的なポートレートを作成。ソーシャルメディアインフルエンサーやクリエイティブコンテンツクリエイターに最適です。",
+              "button": "エディトリアルを作成",
+              "imageAlt": "バービースタイルのポートレート"
+            },
+        "common": {
+  "features": {
+    "styles": "複数のスタイル",
+    "delivery": "迅速な配信",
+    "protection": "安全な保護",
+    "guarantee": "満足保証"
+  }
+}
+      },
+
+      
+        "footer": {
+          "logoAlt": "GoStudio",
+          "description": {
+            "line1": "GoStudioはAI搭載のプロフェッショナル写真スタジオです",
+            "line2": "高品質なプロフェッショナルポートレート写真を提供しています",
+            "line3": "ビジネスやプロフェッショナル向けの専門写真撮影を行っています"
+          },
+          "aiHeadshots": {
+            "title": "プロフェッショナルポートレート",
+            "items": {
+              "doctor": "医師向け写真",
+              "lawyer": "弁護士向け写真",
+              "actor": "俳優向け写真",
+              "realtor": "不動産業者向け写真",
+              "tedSpeaker": "TEDスピーカー向け写真",
+              "businessCasual": "ビジネスカジュアル写真",
+              "effortlessPro": "ナチュラルプロ写真",
+              "lawyerBranded": "弁護士ブランド写真",
+              "partner": "パートナー向け写真",
+              "proPack": "プロパッケージ",
+              "styledSuccess": "成功スタイル写真",
+              "stylishLawyer": "スタイリッシュ弁護士写真"
+            }
+          },
+          "aiPhotos": {
+            "title": "特別撮影セッション",
+            "items": {
+              "meiravClass": "メイラヴセッション",
+              "tattoos": "タトゥーポートレート",
+              "annie": "アニーセッション",
+              "barbie": "バービーセッション",
+              "viking": "バイキングポートレート",
+              "dreamland": "ドリームランドキッズフォト",
+              "babyDoodles": "ベビー落書き",
+              "birthdayMagic": "バースデーマジック",
+              "branding": "ブランディング撮影",
+              "casual": "カジュアル写真",
+              "casualCollection": "カジュアルコレクション",
+              "catMagic": "キャットマジック",
+              "christmasElf": "クリスマスエルフ",
+              "christmasSweater": "クリスマスセーター",
+              "familyChristmas": "ファミリークリスマス",
+              "cyberpunk": "サイバーパンク写真",
+              "hanukkah": "ハヌカー写真",
+              "happyKid": "ハッピーキッズ",
+              "influencer": "インフルエンサー写真",
+              "iconic": "アイコニック写真",
+              "merryChristmas": "メリークリスマス",
+              "vintageAmericana": "ビンテージアメリカーナ",
+              "onesie": "着ぐるみポートレート",
+              "halloween": "ハロウィン写真",
+              "actress": "女優向け写真",
+              "birthdayParty": "バースデーパーティー",
+              "artistic": "アート写真",
+              "wrestlemania": "レッスルマニア写真",
+              "redCarpet": "レッドカーペット",
+              "gameOfThrones": "ゲーム・オブ・スローンズ",
+              "kidsBirthday": "キッズバースデー",
+              "mythical": "神話の生き物",
+              "dating": "デーティング写真",
+              "petDog": "ペット犬撮影",
+              "popColor": "ポップカラー写真",
+              "youtube": "YouTube用写真",
+              "playfulCasual": "プレイフルカジュアル",
+              "podcaster": "ポッドキャスター写真",
+              "maternity": "マタニティフォト",
+              "socialMedia": "ソーシャルメディア",
+              "timeMachine": "タイムマシン",
+              "timelessStudio": "タイムレススタジオ",
+              "tlvFashion": "TLVファッション",
+              "vintagePack": "ビンテージパック",
+              "wildFriends": "ワイルドフレンズ",
+              "winterWonderland": "ウィンターワンダーランド",
+              "workFromHome": "在宅ワーク"
+            }
+          },
+          "freeTools": {
+            "title": "無料ツール",
+            "items": {
+              "backgroundLibrary": "背景ライブラリ",
+              "backgroundRemover": "背景削除",
+              "blackBg": "黒背景",
+              "greyBg": "グレー背景",
+              "redBg": "赤背景",
+              "whiteBg": "白背景",
+              "abstractBg": "抽象背景",
+              "christmasBg": "クリスマス背景",
+              "halloweenBg": "ハロウィン背景"
+            }
+          },
+          "company": {
+            "title": "会社情報",
+            "items": {
+              "testimonial": "お客様の声",
+              "pricing": "料金",
+              "faq": "よくある質問",
+              "privacy": "プライバシーポリシー",
+              "terms": "利用規約"
+            }
+          },
+          "needHelp": "お困りですか？",
+          "contactUs": "お問い合わせ",
+          "copyright": "© 2024 All Rights Reserved"
+        },
+
+        "ariaa": {
+      "bannerAlt": "バナー背景",
+      "photographerAlt": "AIフォトグラファー",
+      "heading": "あなたの自撮り写真から素晴らしい画像を作成する専門AIフォトグラファーをご紹介します。",
+      "description": "こんにちは！GoStudio.aiのAIフォトグラファー、アリアです。これまでに21,000人以上のすばらしい方々の、truly extraordinaryな肖像写真やプロフィール写真の作成をお手伝いしてきました。LinkedInの更新、名刺のデザイン、オンラインでの存在感の向上など、どのようなニーズにもお応えします。プロフェッショナルな結果を簡単に実現できるよう、細部までケアさせていただきます！",
+      "button": "今すぐ始める"
+    },
+    "banner": {
+      "bannerAlt": "バナー背景",
+      "heading": "プロフェッショナルな写真を87%お得に。いつでも、どこでも。",
+      "subheading": {
+        "line1": "様々な衣装と背景で4Kのスタジオ品質の写真を",
+        "line2": "1時間以内に取得"
+      },
+      "button": "今すぐ始める"
+    }
+      
+    
+  }
+
+        
+      
+      
+    
+  

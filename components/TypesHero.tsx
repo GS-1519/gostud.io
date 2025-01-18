@@ -3,79 +3,71 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import { useTranslations } from 'next-intl';
 
 const TypesHero = () => {
+  const t = useTranslations('headshots');
+
   const headshots = [
     {
-      title: 'Doctor Headshots',
-      description: 'Professional medical portraits for healthcare professionals, doctors, and medical practices.',
+      title: t('types.doctor.title'),
+      description: t('types.doctor.description'),
       image: '/Packs/Types/doctor.jpg',
       link: '/headshot-packs/doctor-headshot'
     },
     {
-      title: 'Lawyer Headshots',
-      description: 'Professional portraits for legal professionals and law firms.',
+      title: t('types.lawyer.title'),
+      description: t('types.lawyer.description'),
       image: '/Packs/Types/lawyer.jpg',
       link: '/headshot-packs/lawyer-headshot'
     },
     {
-      title: 'Actor Headshots',
-      description: 'Create stunning glamour portraits perfect for fashion, beauty, and professional modeling portfolios.',
+      title: t('types.actor.title'),
+      description: t('types.actor.description'),
       image: '/Packs/Types/glamour.jpg',
       link: '/headshot-packs/actor-headshot'
     },
     {
-      title: 'Realtor Style',
-      description: 'Professional portraits for real estate professionals.',
+      title: t('types.realtor.title'),
+      description: t('types.realtor.description'),
       image: '/Packs/Types/realtro.jpg',
       link: '/headshot-packs/realtor-headshot'
     },
     {
-      title: 'TED Speaker Style',
-      description: 'Professional portraits for speakers and presenters.',
+      title: t('types.tedSpeaker.title'),
+      description: t('types.tedSpeaker.description'),
       image: '/Packs/Types/speaker.jpg',
       link: '/headshot-packs/ted-speaker-headshot'
     },
     {
-      title: 'Business Casual Headshots',
-      description: 'Classic and stylish portraits inspired by J.Crew\'s aesthetic',
+      title: t('types.businessCasual.title'),
+      description: t('types.businessCasual.description'),
       image: '/Packs/Types/Jcrew.jpg',
       link: '/headshot-packs/business-casual-headshots'
     },
+
     {
-      title: 'Model Headshots',
-      description: 'Sleek and provocative portraits inspired by Helmut Newton\'s style',
-      image: '/Packs/Types/helmut.jpg',
-      link: '/headshot-packs/model-headshots'
-    },
-    {
-      title: 'Styled for Success',
-      description: 'Professional portraits with sophisticated styling for a polished, contemporary look.',
+      title: t('types.styledSuccess.title'),
+      description: t('types.styledSuccess.description'),
       image: '/Packs/Types/sucess.jpg',
       link: '/headshot-packs/stylishlawyers-headshot'
     },
+  
     {
-      title: 'Professional Package',
-      description: 'Complete professional headshot package perfect for corporate and business needs.',
-      image: '/Packs/Types/professinal.jpg',
-      link: '/headshot-packs/professional-tattoos-portraits'
-    },
-    {
-      title: 'Partner\'s Collection',
-      description: 'Premium headshots designed specifically for law firm partners and senior executives.',
+      title: t('types.partnersCollection.title'),
+      description: t('types.partnersCollection.description'),
       image: '/Packs/Types/partner.jpg',
       link: '/headshot-packs/partners-headshots'
     },
-  
     {
-      title: 'Lawyer Branded',
-      description: 'Specialized headshots that reinforce your legal brand and professional authority.',
+      title: t('types.lawyerBranded.title'),
+      description: t('types.lawyerBranded.description'),
       image: '/Packs/Types/branded.jpg',
       link: '/headshot-packs/lawyer-headshot'
     },
     {
-      title: 'Effortless Professionalism',
-      description: 'Natural, approachable headshots that maintain a strong professional presence.',
+      title: t('types.effortlessProfessionalism.title'),
+      description: t('types.effortlessProfessionalism.description'),
       image: '/Packs/Types/effortless.jpg',
       link: '/headshot-packs/effortlessprofessionalism-headshot'
     },
@@ -90,10 +82,10 @@ const TypesHero = () => {
     <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-24">
       <div className="text-center mb-16">
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4]">
-          AI Headshots for Professionals
+          {t('title')}
         </h1>
         <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-          Hundreds of business professionals of all kinds use HeadshotPro every day to generate a professional headshot they can use at work.
+          {t('subtitle')}
         </p>
       </div>
 
@@ -135,7 +127,7 @@ const TypesHero = () => {
           onClick={() => setShowAll(!showAll)}
           className="bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4] text-white px-10 py-4 rounded-full font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105"
         >
-          {showAll ? 'Show Less' : 'See All Styles'}
+          {showAll ? t('showLess') : t('showMore')}
         </button>
       </div>
     </div>

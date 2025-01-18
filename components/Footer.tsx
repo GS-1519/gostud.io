@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import final_Logo from '@/public/final_Logo.svg';
+import { useTranslations } from 'use-intl';
 
 interface FooterColumnProps {
   title: string;
@@ -43,99 +44,100 @@ const FooterColumn: React.FC<FooterColumnProps> = ({ title, items }) => (
 );
 
 const Footer: React.FC = () => {
+  const t = useTranslations('footer');
+
   const columns: FooterColumnProps[] = [
     {
-      title: 'AI Headshots',
+      title: t('aiHeadshots.title'),
       items: [
-        { text: 'Doctor Headshot', href: '/headshot-packs/doctor-headshot' },
-        { text: 'Lawyer Headshot', href: '/headshot-packs/lawyer-headshot' },
-        { text: 'Actor Headshot', href: '/headshot-packs/actor-headshot' },
-        { text: 'Realtor Headshot', href: '/headshot-packs/realtor-headshot' },
-        { text: 'TED Speaker Headshot', href: '/headshot-packs/ted-speaker-headshot' },
-        { text: 'Business Casual Headshots', href: '/headshot-packs/business-casual-headshots' },
-        { text: 'Effortless Professional Headshots', href: '/headshot-packs/effortlessprofessionalism-headshot' },
-        { text: 'Lawyer Branded Headshots', href: '/headshot-packs/lawyerbranded-headshot' },
-        { text: 'Partner Headshots', href: '/headshot-packs/partners-headshots' },
-        { text: 'Professional Package Headshots', href: '/headshot-packs/professionalpackage-headshot' },
-        { text: 'Styled for Success Headshots', href: '/headshot-packs/styled-for-success-headshot' },
-        { text: 'Stylish Lawyer Headshots', href: '/headshot-packs/stylishlawyers-headshot' }
+        { text: t('aiHeadshots.items.doctor'), href: '/headshot-packs/doctor-headshot' },
+        { text: t('aiHeadshots.items.lawyer'), href: '/headshot-packs/lawyer-headshot' },
+        { text: t('aiHeadshots.items.actor'), href: '/headshot-packs/actor-headshot' },
+        { text: t('aiHeadshots.items.realtor'), href: '/headshot-packs/realtor-headshot' },
+        { text: t('aiHeadshots.items.tedSpeaker'), href: '/headshot-packs/ted-speaker-headshot' },
+        { text: t('aiHeadshots.items.businessCasual'), href: '/headshot-packs/business-casual-headshots' },
+        { text: t('aiHeadshots.items.effortlessPro'), href: '/headshot-packs/effortlessprofessionalism-headshot' },
+        { text: t('aiHeadshots.items.lawyerBranded'), href: '/headshot-packs/lawyerbranded-headshot' },
+        { text: t('aiHeadshots.items.partner'), href: '/headshot-packs/partners-headshots' },
+        { text: t('aiHeadshots.items.proPack'), href: '/headshot-packs/professionalpackage-headshot' },
+        { text: t('aiHeadshots.items.styledSuccess'), href: '/headshot-packs/styled-for-success-headshot' },
+        { text: t('aiHeadshots.items.stylishLawyer'), href: '/headshot-packs/stylishlawyers-headshot' }
       ]
     },
     {
-      title: 'AI Photos',
+      title: t('aiPhotos.title'),
       items: [
-        { text: 'Meirav Class Headshots', href: '/photoshoot-packs/meiravclass-headshot' },
-
-        { text: 'Professional Tattoos Portraits', href: '/photoshoot-packs/professional-tattoos-portraits' },
-        { text: 'Annie Headshot', href: '/photoshoot-packs/annie-headshot' },
-        { text: 'Barbie Headshot', href: '/photoshoot-packs/barbie-headshot' },
-        { text: 'Viking Portraits', href: '/photoshoot-packs/viking-portraits' },
-        { text: 'Dreamland Kids Photos', href: '/photoshoot-packs/4dreamland-kids-photos' },
-        { text: 'Baby Doodles Photos', href: '/photoshoot-packs/baby-doodles-photos' },
-        { text: 'Birthday Magic Photos', href: '/photoshoot-packs/birthday-magic-photos' },
-        { text: 'Branding Photography', href: '/photoshoot-packs/branding-photography' },
-        { text: 'Casual Photos', href: '/photoshoot-packs/casual-photos' },
-        { text: 'Casual Collection Photos', href: '/photoshoot-packs/casualcollection-photos' },
-        { text: 'Cat Magic Photos', href: '/photoshoot-packs/catmeowgic-photos' },
-        { text: 'Christmas Elf Photos', href: '/photoshoot-packs/christmas-elf-photos' },
-        { text: 'Christmas Sweater Photos', href: '/photoshoot-packs/christmas-sweater-photos' },
-        { text: 'Family Christmas Photos', href: '/photoshoot-packs/cool-family-christmas-photos' },
-        { text: 'Cyberpunk Photos', href: '/photoshoot-packs/cyberpunk-photos' },
-        { text: 'Hanukkah Miracle Photos', href: '/photoshoot-packs/hanukka-miracle-photos' },
-        { text: 'Happy Kid Photos', href: '/photoshoot-packs/happy-kid-photos' },
-        { text: 'Influencer Photos', href: '/photoshoot-packs/influencer-photos' },
-        { text: 'Me Iconic Photos', href: '/photoshoot-packs/me-iconic-photos' },
-        { text: 'Merry Christmas Photos', href: '/photoshoot-packs/merry-christmas-photos' },
-        { text: 'Vintage Americana Photos', href: '/photoshoot-packs/vintage-americana-photos' },
-        { text: 'Onesie Portraits', href: '/photoshoot-packs/onesie-portraits' },
-        { text: 'Halloween Photos', href: '/photoshoot-packs/halloween-photos' },
-        { text: 'Actress Portraits', href: '/photoshoot-packs/actress-portraits' },
-        { text: 'Birthday Party Save The Date', href: '/photoshoot-packs/birthday-party-save-the-date-photoshoot' },
-        { text: 'Artistic Portraits', href: '/photoshoot-packs/artistic-portraits' },
-        { text: 'Wrestlemania Photos', href: '/photoshoot-packs/wrestlemania-photos' },
-        { text: 'Actor Red Carpet Photos', href: '/photoshoot-packs/actor-red-carpet-photos' },
-        { text: 'Game Of Thrones Portraits', href: '/photoshoot-packs/game-of-thrones-portraits' },
-        { text: 'Kids Birthday Portraits', href: '/photoshoot-packs/kids-birthday-portraits' },
-        { text: 'Mythical Creatures Portraits', href: '/photoshoot-packs/mythical-creatures-portaits' },
-        { text: 'Online Dating Profile Photos', href: '/photoshoot-packs/online-dating-profile-photos' },
-        { text: 'Pet Photography Dog', href: '/photoshoot-packs/pet-photography-dog' },
-        { text: 'Pop Color Photos', href: '/photoshoot-packs/pop-color-photos' },
-        { text: 'YouTube Thumbnail Photos', href: '/photoshoot-packs/youtube-thumbnail-photos' },
-        { text: 'Playful Casual Photos', href: '/photoshoot-packs/playful-casual-photos' },
-        { text: 'Podcaster Photos', href: '/photoshoot-packs/podcaster-photos' },
-        { text: 'Romantic Maternity Photos', href: '/photoshoot-packs/romantic-maternity-photos' },
-        { text: 'Social Media Photos', href: '/photoshoot-packs/social-media-photos' },
-        { text: 'Time Machine Photos', href: '/photoshoot-packs/time-machine-photos' },
-        { text: 'Timeless Studio Photos', href: '/photoshoot-packs/timeless-studio-photos' },
-        { text: 'TLV Fashion Photos', href: '/photoshoot-packs/TLV-fashion-photos' },
-        { text: 'Vintage Pack Photos', href: '/photoshoot-packs/vintage-pack-photos' },
-        { text: 'Wild Friends Photos', href: '/photoshoot-packs/wild-friends-photos' },
-        { text: 'Winter Wonderland Photos', href: '/photoshoot-packs/winter-wonderland-photos' },
-        { text: 'Work From Home Photos', href: '/photoshoot-packs/work-from-home-photos' }
+        { text: t('aiPhotos.items.meiravClass'), href: '/photoshoot-packs/meiravclass-headshot' },
+        { text: t('aiPhotos.items.tattoos'), href: '/photoshoot-packs/professional-tattoos-portraits' },
+        { text: t('aiPhotos.items.annie'), href: '/photoshoot-packs/annie-headshot' },
+        { text: t('aiPhotos.items.barbie'), href: '/photoshoot-packs/barbie-headshot' },
+        { text: t('aiPhotos.items.viking'), href: '/photoshoot-packs/viking-portraits' },
+        { text: t('aiPhotos.items.dreamland'), href: '/photoshoot-packs/4dreamland-kids-photos' },
+        { text: t('aiPhotos.items.babyDoodles'), href: '/photoshoot-packs/baby-doodles-photos' },
+        { text: t('aiPhotos.items.birthdayMagic'), href: '/photoshoot-packs/birthday-magic-photos' },
+        { text: t('aiPhotos.items.branding'), href: '/photoshoot-packs/branding-photography' },
+        { text: t('aiPhotos.items.casual'), href: '/photoshoot-packs/casual-photos' },
+        { text: t('aiPhotos.items.casualCollection'), href: '/photoshoot-packs/casualcollection-photos' },
+        { text: t('aiPhotos.items.catMagic'), href: '/photoshoot-packs/catmeowgic-photos' },
+        { text: t('aiPhotos.items.christmasElf'), href: '/photoshoot-packs/christmas-elf-photos' },
+        { text: t('aiPhotos.items.christmasSweater'), href: '/photoshoot-packs/christmas-sweater-photos' },
+        { text: t('aiPhotos.items.familyChristmas'), href: '/photoshoot-packs/cool-family-christmas-photos' },
+        { text: t('aiPhotos.items.cyberpunk'), href: '/photoshoot-packs/cyberpunk-photos' },
+        { text: t('aiPhotos.items.hanukkah'), href: '/photoshoot-packs/hanukka-miracle-photos' },
+        { text: t('aiPhotos.items.happyKid'), href: '/photoshoot-packs/happy-kid-photos' },
+        { text: t('aiPhotos.items.influencer'), href: '/photoshoot-packs/influencer-photos' },
+        { text: t('aiPhotos.items.iconic'), href: '/photoshoot-packs/me-iconic-photos' },
+        { text: t('aiPhotos.items.merryChristmas'), href: '/photoshoot-packs/merry-christmas-photos' },
+        { text: t('aiPhotos.items.vintageAmericana'), href: '/photoshoot-packs/vintage-americana-photos' },
+        { text: t('aiPhotos.items.onesie'), href: '/photoshoot-packs/onesie-portraits' },
+        { text: t('aiPhotos.items.halloween'), href: '/photoshoot-packs/halloween-photos' },
+        { text: t('aiPhotos.items.actress'), href: '/photoshoot-packs/actress-portraits' },
+        { text: t('aiPhotos.items.birthdayParty'), href: '/photoshoot-packs/birthday-party-save-the-date-photoshoot' },
+        { text: t('aiPhotos.items.artistic'), href: '/photoshoot-packs/artistic-portraits' },
+        { text: t('aiPhotos.items.wrestlemania'), href: '/photoshoot-packs/wrestlemania-photos' },
+        { text: t('aiPhotos.items.redCarpet'), href: '/photoshoot-packs/actor-red-carpet-photos' },
+        { text: t('aiPhotos.items.gameOfThrones'), href: '/photoshoot-packs/game-of-thrones-portraits' },
+        { text: t('aiPhotos.items.kidsBirthday'), href: '/photoshoot-packs/kids-birthday-portraits' },
+        { text: t('aiPhotos.items.mythical'), href: '/photoshoot-packs/mythical-creatures-portaits' },
+        { text: t('aiPhotos.items.dating'), href: '/photoshoot-packs/online-dating-profile-photos' },
+        { text: t('aiPhotos.items.petDog'), href: '/photoshoot-packs/pet-photography-dog' },
+        { text: t('aiPhotos.items.popColor'), href: '/photoshoot-packs/pop-color-photos' },
+        { text: t('aiPhotos.items.youtube'), href: '/photoshoot-packs/youtube-thumbnail-photos' },
+        { text: t('aiPhotos.items.playfulCasual'), href: '/photoshoot-packs/playful-casual-photos' },
+        { text: t('aiPhotos.items.podcaster'), href: '/photoshoot-packs/podcaster-photos' },
+        { text: t('aiPhotos.items.maternity'), href: '/photoshoot-packs/romantic-maternity-photos' },
+        { text: t('aiPhotos.items.socialMedia'), href: '/photoshoot-packs/social-media-photos' },
+        { text: t('aiPhotos.items.timeMachine'), href: '/photoshoot-packs/time-machine-photos' },
+        { text: t('aiPhotos.items.timelessStudio'), href: '/photoshoot-packs/timeless-studio-photos' },
+        { text: t('aiPhotos.items.tlvFashion'), href: '/photoshoot-packs/TLV-fashion-photos' },
+        { text: t('aiPhotos.items.vintagePack'), href: '/photoshoot-packs/vintage-pack-photos' },
+        { text: t('aiPhotos.items.wildFriends'), href: '/photoshoot-packs/wild-friends-photos' },
+        { text: t('aiPhotos.items.winterWonderland'), href: '/photoshoot-packs/winter-wonderland-photos' },
+        { text: t('aiPhotos.items.workFromHome'), href: '/photoshoot-packs/work-from-home-photos' }
       ]
     },
     {
-      title: 'Free Tools',
+      title: t('freeTools.title'),
       items: [
-        { text: 'Background Library', href: '/free-tools/background-library' },
-        { text: 'Background Remover', href: '/free-tools/background-remover' },
-        { text: 'Black Background', href: '/free-tools/black-background' },
-        { text: 'Grey Background', href: '/free-tools/grey-background' },
-        { text: 'Red Background', href: '/free-tools/red-background' },
-        { text: 'White Background', href: '/free-tools/white-background' },
-        { text: 'Abstract Background', href: '/free-tools/abstract-background' },
-        { text: 'Christmas Background', href: '/free-tools/christmas-background' },
-        { text: 'Halloween Background', href: '/free-tools/halloween-background' },
+        { text: t('freeTools.items.backgroundLibrary'), href: '/free-tools/background-library' },
+        { text: t('freeTools.items.backgroundRemover'), href: '/free-tools/background-remover' },
+        { text: t('freeTools.items.blackBg'), href: '/free-tools/black-background' },
+        { text: t('freeTools.items.greyBg'), href: '/free-tools/grey-background' },
+        { text: t('freeTools.items.redBg'), href: '/free-tools/red-background' },
+        { text: t('freeTools.items.whiteBg'), href: '/free-tools/white-background' },
+        { text: t('freeTools.items.abstractBg'), href: '/free-tools/abstract-background' },
+        { text: t('freeTools.items.christmasBg'), href: '/free-tools/christmas-background' },
+        { text: t('freeTools.items.halloweenBg'), href: '/free-tools/halloween-background' }
       ]
     },
     {
-      title: 'Company',
+      title: t('company.title'),
       items: [
-        { text: 'Testimonial', href: '/#testimonial' },
-        { text: 'Pricing', href: '/#pricing' },
-        { text: 'FAQ', href: '/#faq' },
-        { text: 'Privacy Policy', href: '/privacy-policy' },
-        { text: 'Terms of Service', href: '/terms-of-service' }
+        { text: t('company.items.testimonial'), href: '/#testimonial' },
+        { text: t('company.items.pricing'), href: '/#pricing' },
+        { text: t('company.items.faq'), href: '/#faq' },
+        { text: t('company.items.privacy'), href: '/privacy-policy' },
+        { text: t('company.items.terms'), href: '/terms-of-service' }
       ]
     }
   ];
@@ -149,7 +151,7 @@ const Footer: React.FC = () => {
               <div className="flex items-center mb-4">
                 <Image 
                   src={final_Logo} 
-                  alt="Studio.ai logo" 
+                  alt={t('logoAlt')} 
                   width={320} 
                   height={120} 
                   className="rounded-full" 
@@ -157,11 +159,11 @@ const Footer: React.FC = () => {
                 />
               </div>
               <p className="text-xs text-gray-500 max-w-xs leading-tight">
-                Professional Headshots at the comfort of your home.
+                {t('description.line1')}
                 <br />
-                Your Personal Branding done your way. 
+                {t('description.line2')}
                 <br/>
-                No photographer needed - create the perfect professional image that truly represents you, in minutes, starting at just $10.
+                {t('description.line3')}
               </p>
             </div>
             <div className="col-span-1 lg:col-span-3">
@@ -178,15 +180,15 @@ const Footer: React.FC = () => {
         <div className="border-t border-gray-200 py-8">
           <div className="flex flex-col sm:flex-row justify-between items-center">
             <p className="text-sm text-gray-600 mb-4 sm:mb-0">
-              Copyright© 2024 <Link href="/" className="text-blue-600 hover:underline">GoStudio.ai</Link>
+              {t('copyright')} <Link href="/" className="text-blue-600 hover:underline">GoStudio.ai</Link>
             </p>
             <div className="flex items-center">
-              <span className="text-sm text-gray-600 mr-4">Need help?</span>
+              <span className="text-sm text-gray-600 mr-4">{t('needHelp')}</span>
               <a 
                 href="mailto:hello@gostudio.ai" 
                 className="text-sm text-blue-600 hover:underline transition-colors duration-300"
               >
-                Contact Us
+                {t('contactUs')}
               </a>
             </div>
           </div>

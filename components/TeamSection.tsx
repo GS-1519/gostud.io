@@ -2,8 +2,8 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useTranslations, useLocale } from 'next-intl';
 
-// Add this interface above your component
 interface TeamPhoto {
   src: string;
   alt: string;
@@ -11,6 +11,10 @@ interface TeamPhoto {
 }
 
 const TeamSection = () => {
+  const t = useTranslations('TeamSection');
+  const locale = useLocale();
+  const isRTL = locale === 'ar';
+
   const teamPhotos: TeamPhoto[][] = [
     [
       { src: "/team/img1.1.png", alt: "Man in suit with beard" },
@@ -37,12 +41,12 @@ const TeamSection = () => {
       <div className="max-w-[1440px] mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="w-[304px] h-[48px] text-center mx-auto font-poppins font-medium text-[32px] leading-[48px]">
-            WHY <span>GOSTUDIO.AI?</span>
+          <h2 className="inline-flex items-center justify-center flex-wrap gap-2 text-center mx-auto font-poppins font-medium text-[24px] sm:text-[32px] leading-[36px] sm:leading-[48px] px-4">
+            <span>{t('title.why')}</span>
+            <span>{t('title.gostudio')}</span>
           </h2>
-          <p className="text-[16px] leading-[24px] text-[#161C2D]/60 max-w-[790px] mx-auto text-center">
-            Create a unified, professional look for your team with studio-quality headshots, effortlessly crafted by Aaria. We deliver 
-            polished portraits that reflect your company's values. No costly photo shoots—just seamless, high-quality results.
+          <p className="text-[16px] leading-[24px] text-[#161C2D]/60 max-w-[790px] mx-auto text-center px-4 mt-4">
+            {t('description')}
           </p>
         </div>
 
@@ -63,7 +67,7 @@ const TeamSection = () => {
                 gap: '10.25px'
               }}
             >
-              Team Headshots
+              {t('teamHeadshots')}
             </span>
             <svg 
               width="16" 
@@ -88,7 +92,7 @@ const TeamSection = () => {
                 {column.map((photo: TeamPhoto, photoIndex) => (
                   <div 
                     key={photoIndex} 
-                    className={`relative overflow-hidden mb-4`}
+                    className="relative overflow-hidden mb-4"
                     style={{
                       width: photo?.large 
                         ? 'min(242.66px, calc(100vw - 48px))' 
@@ -98,8 +102,7 @@ const TeamSection = () => {
                         : 'min(146.25px, calc(100vw - 48px))',
                       borderRadius: photo?.large ? '9.43px' : '13.5px',
                       padding: photo?.large ? '13.82px' : '0px',
-                      boxShadow: '0px 2.27px 59.08px -4.54px #0C0C0D26',
-                      transform: !photo?.large ? 'rotate(180deg)' : 'none'
+                      boxShadow: '0px 2.27px 59.08px -4.54px #0C0C0D26'
                     }}
                   >
                     <Image
@@ -108,9 +111,6 @@ const TeamSection = () => {
                       fill
                       className="object-cover"
                       sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      style={{
-                        transform: !photo.large ? 'rotate(180deg)' : 'none'
-                      }}
                     />
                   </div>
                 ))}
@@ -129,12 +129,12 @@ const TeamSection = () => {
                 padding: '12px 25px'
               }}
             >
-              Try Now
+              {t('tryNow')}
               <svg 
                 width="20" 
                 height="20" 
                 viewBox="0 0 20 20" 
-                fill="none" 
+                fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path 

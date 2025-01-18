@@ -9,6 +9,7 @@ import { useRouter } from 'next/navigation';
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
 import { toast } from 'react-hot-toast';
 import { User } from '@supabase/supabase-js';
+import { useTranslations } from 'next-intl';
 
 interface PriceCardsProps {
   frequency: IBillingFrequency;
@@ -39,6 +40,7 @@ export const PriceCards: React.FC<PriceCardsProps> = ({
     loading: true,
     error: null
   });
+  const t = useTranslations('Pricing');
 
   useEffect(() => {
     const checkAuth = async () => {
@@ -119,23 +121,22 @@ export const PriceCards: React.FC<PriceCardsProps> = ({
 
   return (
     <div className="bg-white w-full md:py-16">
-      {/* Heading Section - Updated for responsiveness */}
+      {/* Heading Section */}
       <div className="text-center mb-8 md:mb-16 px-4">
         <h2 className="font-poppins font-medium text-[24px] md:text-[32px] 
-                     leading-tight md:leading-[48px] tracking-[-0.04em] text-center
-                     text-[#161C2D] max-w-[1134px] mx-auto">
-          PREMIUM QUALITY AT 10 TIMES LESS PRICE
+                    leading-tight md:leading-[48px] tracking-[-0.04em] text-center
+                    text-[#161C2D] max-w-[1134px] mx-auto">
+          {t('title')}
         </h2>
         
         <p className="font-poppins font-[500] text-[16px] md:text-[18px]
-                    leading-relaxed md:leading-[27px] text-center
-                    text-[#161C2D]/70 max-w-[1077.84px] mx-auto mt-4">
-          No studio visits. No $200+ photoshoot fees. No waiting for appointments. Achieve stunning, professional-grade
-          headshots in just 30 minutes—all from the comfort of your home.
+                   leading-relaxed md:leading-[27px] text-center
+                   text-[#161C2D]/70 max-w-[1077.84px] mx-auto mt-4">
+          {t('description')}
         </p>
       </div>
 
-      {/* Pricing Cards Grid - Updated for responsiveness */}
+      {/* Pricing Cards Grid */}
       <div className="flex flex-col md:flex-row justify-center items-stretch gap-6 max-w-6xl mx-auto px-4">
         {PricingTier.map((tier) => {
           const isStandard = tier.name === 'STANDARD';
@@ -174,13 +175,13 @@ export const PriceCards: React.FC<PriceCardsProps> = ({
                         WebkitBackgroundClip: 'text',
                         WebkitTextFillColor: 'transparent'
                       }}>
-                        82% pick this plan
+                        {t(tier.badge!)}
                       </span>
                     </div>
                   ) : (
                     <div className="px-4 py-1.5 rounded-[20px] bg-transparent border-[1.5px] border-[#5B16FE]">
                       <span className="text-sm font-medium text-[#5B16FE]">
-                        Best Value
+                        {t(tier.badge!)}
                       </span>
                     </div>
                   )}
@@ -253,14 +254,14 @@ export const PriceCards: React.FC<PriceCardsProps> = ({
                         <feature.icon className={getIconStyle()} />
                       </div>
                       <span className="text-[15px] text-[#64748B]">
-                        {feature.text}
+                        {t(feature.textKey)}
                       </span>
                     </div>
                   );
                 })}
               </div>
 
-              {/* Button Section - Updated for responsiveness */}
+              {/* Button Section */}
               <div className="mt-auto">
                 <Button 
                   className={cn(
@@ -277,7 +278,7 @@ export const PriceCards: React.FC<PriceCardsProps> = ({
                   )}
                   onClick={() => handlePriceClick(tier.priceId)}
                 >
-                  Try Now
+                  {t('tryNow')}
                   <svg 
                     className={cn(
                       "w-5 h-5 transition-transform duration-300",
@@ -295,7 +296,7 @@ export const PriceCards: React.FC<PriceCardsProps> = ({
                 </Button>
                 
                 <p className="text-xs text-center text-gray-500 mt-4">
-                  No subscription required
+                  {t('noSubscription')}
                 </p>
               </div>
             </div>

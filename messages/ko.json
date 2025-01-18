@@ -1,0 +1,1259 @@
+{
+    "hero": {
+      "title": "셀카로 프로페셔널 프로필 사진 만들기",
+      "description": "LinkedIn, Twitter, 채용 담당자에게 돋보이세요. 셀카를 업로드하면 AI 포토그래퍼 \"아리아\"가 수백 장의 전문적인 프로필 사진을 만들어드립니다.",
+      "features": {
+        "styles": "150가지 이상의 스타일과 의상",
+        "delivery": "1시간 이내 결과물 전달",
+        "protection": "엄격한 데이터 보호",
+        "guarantee": "환불 보장"
+      },
+      "button": "지금 시작하기",
+      "tryNow": "지금 바로 시작하세요 →"
+    },
+    "ExplainerSection": {
+      "title": "스튜디오급 프로필을 만드는 3가지 쉬운 단계",
+      "step1": {
+        "title": "사진 몇 장 업로드하기",
+        "description": "AI가 당신을 학습할 수 있도록 몇 장의 사진을 업로드하세요."
+      },
+      "step2": {
+        "title": "AI 포토그래퍼 \"아리아\"가 작업을 시작합니다",
+        "description": "아리아는 당신만을 위한 개인 맞춤형 모델을 만들어 당신만의 스타일과 정체성을 반영하는 프로필 사진을 보장합니다."
+      },
+      "step3": {
+        "title": "마음에 드는 프로필 사진 다운로드",
+        "description": "다양한 스타일의 사진을 받아보실 수 있어 비즈니스 프로필을 한층 업그레이드할 수 있습니다."
+      },
+      "tryNow": "지금 시작하기"
+    },
+    "PhotographyGrid": {
+      "title": "우리의 패키지 - 원하시는 모든 것이 있습니다",
+      "description": "모든 스타일과 필요에 맞춰 제작된 완벽한 사진 패키지를 둘러보세요. 전문적인 포트레이트부터 창의적인 편집까지 모든 것을 커버합니다. 어떤 비전이든 우리의 AI 포토그래퍼가 쉽게 실현시켜 드립니다.",
+      "tryNow": "지금 시작하기",
+      "packs": {
+        "corporate": "기업용 프로필 사진",
+        "speaker": "연사 패키지",
+        "doctor": "의료 전문가",
+        "realtor": "부동산 에이전트",
+        "dating": "데이팅 프로필",
+        "redcarpet": "레드카펫",
+        "boldcolors": "볼드 컬러",
+        "tattoo": "타투 아티스트",
+        "glamour": "글래머 샷",
+        "barbie": "바비 스타일",
+        "halloween": "할로윈 테마",
+        "mythical": "신화적"
+      }
+    },
+    "Comparison": {
+      "title": "시간과 비용을 절약하세요",
+      "description": "아리아는 이력서부터 LinkedIn까지, 모든 전문적인 순간을 위한 완벽한 프로필 사진을 쉽게 만들어드립니다.",
+      "columns": {
+        "goStudio": "Go Studio.ai",
+        "studio": "스튜디오 촬영"
+      },
+      "items": {
+        "value": {
+          "label": "가성비",
+          "goStudio": "₩25,000",
+          "studio": "₩250,000"
+        },
+        "time": {
+          "label": "시간 절약",
+          "goStudio": "30분",
+          "studio": "2-3일"
+        },
+        "variety": {
+          "label": "다양성",
+          "goStudio": "30장의 프로필 사진",
+          "studio": "4-5장의 프로필 사진"
+        },
+        "choices": {
+          "label": "더 많은 선택",
+          "goStudio": "20가지 스타일",
+          "studio": "1가지 스타일"
+        }
+      },
+      "exploreMore": "더 알아보기"
+    },
+    "Why": {
+      "title": {
+        "why": "왜",
+        "gostudio": "GOSTUDIO.AI인가요?"
+      },
+      "description": "AI 기반 프로필 사진으로 전문적인 이미지를 변화시키세요. 몇 분 만에 LinkedIn, 이력서 등을 위한 스튜디오급 사진을 얻으세요.",
+      "features": {
+        "linkedin": {
+          "title": "LinkedIn에서 돋보이세요",
+          "description": "프로필 조회수와 신뢰도를 높이는 전문적인 프로필 사진으로 강력한 첫인상을 남기세요."
+        },
+        "resume": {
+          "title": "이력서를 빛나게 하세요",
+          "description": "개성과 전문성을 더하는 세련된 프로필 사진으로 구직 지원서를 한층 업그레이드하세요."
+        },
+        "events": {
+          "title": "이벤트 & 컨퍼런스",
+          "description": "전문적인 행사에서 최고의 모습을 보여주세요. 연사 프로필, 행사 디렉토리, 배지에 완벽합니다."
+        },
+        "business": {
+          "title": "명함 & 브랜딩",
+          "description": "고품질 프로필 사진으로 모든 비즈니스 자료에서 일관된 전문적인 이미지를 만드세요."
+        },
+        "online": {
+          "title": "디지털 프레즌스",
+          "description": "소셜 미디어부터 회사 웹사이트, 전문가 네트워크까지 모든 플랫폼에서 전문적으로 보이세요."
+        }
+      },
+      "tryNow": "지금 시작하기"
+    },
+    "HeadshotReview": {
+      "title": {
+        "part1": "이미 만족하신",
+        "part2": "고객들을 위해 제작된 사진"
+      },
+      "description": "스튜디오에서 찍은 것이 아닙니다. AI가 만든 것입니다. 우리의 말을 그대로 믿지 마세요. 우리의 AI는 일상적인 사진을 당신의 자신감과 신뢰성을 반영하는 전문적인 프로필 사진으로 변환합니다.",
+      "createButton": "프로필 사진 만들기",
+      "testimonials": {
+        "col1": {
+          "1": "결과물이 놀랍고 저에게 맞춤화되어 있어요. 이 AI 프로필 사진들은 차원이 다릅니다.",
+          "2": "다양한 제품 이미지로 플랫폼을 테스트해봤는데, 결과물에 매우 만족했습니다.",
+          "3": "지금까지 본 것 중 가장 놀라운 제품 사진 생성 사이트예요!"
+        },
+        "col2": {
+          "1": "온라인 소매업자로서 고품질 제품 이미지는 매우 중요합니다. 제 주얼리 사진 몇 장을 업로드했더니, AI가 제품을 아름답게 보여주는 여러 멋진 옵션을 생성했어요. 다양한 배경과 각도로 제품을 효과적으로 강조할 수 있었습니다.",
+          "2": "이커머스에 꼭 필요한 도구입니다!",
+          "3": "한 번 업로드로 선택할 수 있는 옵션이 정말 많아요."
+        },
+        "col3": {
+          "1": "뛰어난 품질과 다양성을 가진 사진들입니다.",
+          "2": "빠르고 사용하기 쉬운 인터페이스입니다. 이 플랫폼이 얼마나 사용하기 쉬운지 정말 좋아요.",
+          "3": "이 플랫폼이 얼마나 사용하기 쉬운지 정말 좋아요. 받은 옵션의 수에 감동했어요. 대부분은 훌륭했지만, 제품을 제가 원하는 대로 캡처하지 못한 것도 몇 개 있었어요. 하지만 최고의 것들을 필터링하고 찾기가 쉽습니다. 전반적으로 많은 노력을 절약해주는 환상적인 도구입니다!"
+        },
+        "col4": {
+          "1": "AI가 다양한 이미지를 생성하는 능력이 정말 놀랍습니다. 마치 작은 포토 스튜디오를 가진 것 같아요!",
+          "2": "한 장의 이미지를 업로드하고 여러 옵션을 제공받는 방식이 마음에 듭니다. 제 미적 감각에 맞는 스타일이나 배경을 고르기가 쉬워요. 여러 결과물을 받을 수 있는 편리함과 전반적인 품질이 정말 가치가 있습니다! 특히 소셜 미디어용 다양성이 필요할 때 시간을 정말 많이 절약할 수 있어요.",
+          "3": "빠른 서비스와 품질에 매우 만족합니다."
+        }
+      }
+    },
+    "Pricing": {
+      "title": "10배 저렴한 가격의 프리미엄 품질",
+      "description": "스튜디오 방문 없이. ₩250,000 이상의 촬영 비용 없이. 예약 대기 없이. 집에서 편하게 30분 만에 멋진 전문가급 프로필 사진을 얻으세요.",
+      "badges": {
+        "mostPopular": "82%가 선택한 플랜",
+        "bestValue": "최고의 가치"
+      },
+      "oneTimePayment": "일회성 결제",
+      "noSubscription": "구독 필요 없음",
+      "tryNow": "지금 시작하기",
+      "features": {
+        "headshots": {
+          "basic": "20장의 고품질 프로필 사진",
+          "standard": "60장의 고품질 프로필 사진",
+          "premium": "100장의 고품질 프로필 사진"
+        },
+        "processing": {
+          "basic": "2시간 처리 시간",
+          "standard": "1시간 처리 시간",
+          "premium": "30분 처리 시간"
+        },
+        "outfits": {
+          "basic": "5가지 의상과 배경",
+          "standard": "20가지 의상과 배경",
+          "premium": "40가지 의상과 배경"
+        },
+        "poses": {
+          "basic": "5가지 포즈",
+          "standard": "20가지 포즈",
+          "premium": "40가지 포즈"
+        }
+      }
+    },
+    "DataSecurity": {
+      "title": "데이터 프라이버시를 중요하게 생각합니다",
+      "subtitle": {
+        "line1": "포춘 500 리더와 최고 전문가들이 신뢰",
+        "line2": "유명 기업 조직과 팀들이 자신들의 데이터를 우리에게 맡깁니다"
+      },
+      "features": {
+        "noSelling": {
+          "title": "데이터 판매, 공유 없음",
+          "description": "귀하의 데이터를 제3자 웹사이트에 절대 판매하거나 공유하지 않습니다."
+        },
+        "control": {
+          "title": "당신의 사진, 당신의 통제",
+          "description": "귀하의 허락 없이 AI 학습에 사진을 사용하지 않습니다."
+        },
+        "autoDeletion": {
+          "title": "데이터 자동 삭제",
+          "description": "시스템이 90일 후 모든 이미지를 자동으로 삭제합니다. 원하시는 대로 설정을 변경하실 수 있습니다."
+        },
+        "security": {
+          "title": "최고 수준의 보안",
+          "description": "모든 민감한 사용자 데이터를 암호화합니다. 업계 최고의 신뢰받는 소프트웨어를 사용합니다."
+        }
+      },
+      "createButton": "프로필 사진 만들기"
+    },
+    "TeamSection": {
+      "title": {
+        "why": "왜",
+        "gostudio": "GOSTUDIO.AI인가요?"
+      },
+      "description": "아리아가 손쉽게 만들어내는 스튜디오급 프로필 사진으로 팀을 위한 통일된 전문적인 모습을 만드세요. 우리는 귀사의 가치를 반영하는 세련된 포트레이트를 제공합니다. 비용이 많이 드는 촬영 없이 완벽한 고품질 결과물을 얻으세요.",
+      "teamHeadshots": "팀 프로필 사진",
+      "tryNow": "지금 시작하기"
+    },
+    "CreationGallery": {
+      "title": "제 작품을 살짝 엿보세요",
+      "description": "제 작업을 여러분과 공유하게 되어 기쁩니다.",
+      "createButton": "프로필 사진 만들기"
+    },
+    "FAQ": {
+      "title": "자주 묻는 질문",
+      "questions": {
+        "whatIs": {
+          "question": "GoStudio.ai는 무엇이며 어떻게 작동하나요?",
+          "answer": "GoStudio.ai는 귀하의 사진을 사용하여 귀하의 외모를 표현하고 다양한 스타일과 의상으로 프로필 사진을 생성할 수 있는 맞춤형 AI 모델을 학습시킵니다. 생성된 프로필 사진의 품질은 업로드하신 사진에 따라 달라집니다. 얼굴, 눈, 다양한 각도의 모습이 담긴 사진을 준비하시는 것이 좋습니다. 각 사진은 귀하의 외모와 얼굴 특징의 새로운 면을 보여주어야 합니다."
+        },
+        "photoRequirements": {
+          "question": "어떤 종류의 사진을 업로드해야 하나요?",
+          "answer": "다양성을 우선시하세요. 다양한 표정과 배경, 하루 중 다른 시간대에 찍은 사진이 고품질 입력 사진의 핵심입니다. 그리고 화장과 액세서리는 최소한으로 해주세요!"
+        },
+        "ownership": {
+          "question": "생성된 사진의 권리는 누구에게 있나요?",
+          "answer": "업로드하신 사진과 AI가 생성한 이미지에 대한 모든 권리는 귀하에게 있습니다. 귀하의 사진은 개인 AI 모델 학습에만 사용되며 다른 사용자와 절대 공유되지 않습니다."
+        },
+        "timing": {
+          "question": "프로필 사진을 받기까지 얼마나 걸리나요?",
+          "answer": "일반적으로 업로드부터 첫 AI 생성 프로필 사진을 받기까지 약 15-20분이 소요됩니다. 이후 추가 변형은 즉시 생성할 수 있습니다."
+        },
+        "satisfaction": {
+          "question": "결과물이 마음에 들지 않으면 어떻게 하나요?",
+          "answer": "만족 보장을 제공합니다. 결과물에 만족하지 않으시면 개선을 위해 도와드리거나 전액 환불해 드립니다."
+        },
+        "linkedin": {
+          "question": "이 사진들을 LinkedIn과 다른 전문 플랫폼에서 사용할 수 있나요?",
+          "answer": "물론입니다! 우리의 AI 생성 프로필 사진은 LinkedIn, 회사 웹사이트, 명함 및 기타 전문적인 용도에 완벽합니다."
+        },
+        "whichAI": {
+          "question": "어떤 AI 기술을 사용하시나요?",
+          "answer": "전문 프로필 사진 생성에 특화된 최첨단 이미지 생성 모델을 포함한 독점 AI 기술을 사용합니다."
+        },
+        "dataSecurity": {
+          "question": "데이터 보안과 프라이버시는 어떻게 처리하나요?",
+          "answer": "귀하의 프라이버시를 매우 중요하게 생각합니다. 귀하의 사진은 암호화되어 안전하게 저장되며 개인 AI 모델에만 사용됩니다. 절대로 제3자와 데이터를 공유하지 않습니다."
+        }
+      }
+    },
+    "login": {
+      "title": "로그인 / 회원가입",
+      "emailLabel": "이메일",
+      "emailPlaceholder": "example@mybiz.com",
+      "emailRequired": "이메일이 필요합니다",
+      "emailInvalid": "잘못된 이메일 주소입니다",
+      "googleButton": "Google로 계속하기",
+      "mostUsed": "가장 많이 사용됨",
+      "orDivider": "또는 이메일로 계속하기",
+      "submitButton": "이메일로 코드 받기",
+      "infoText": "받은 편지함에서 일회용 코드를 받으실 수 있습니다.",
+      "termsText": "가입하시면 다음 사항에 동의하게 됩니다",
+      "termsLink": "이용약관",
+      "andText": "및",
+      "privacyLink": "개인정보 처리방침",
+      "errors": {
+        "loginFailed": "로그인 실패",
+        "invalidEmail": "잘못된 이메일 주소",
+        "googleSignInFailed": "Google 로그인 실패",
+        "tryAgain": "다시 시도해주세요. 문제가 지속되면 고객지원에 문의하세요."
+      },
+      "testimonial": "시도해본 일부 스튜디오보다 더 좋은 결과물이 나왔어요",
+      "testimonialAuthor": "사라 첸"
+    },
+    "waitingForMagicLink": {
+      "title": "계속하려면 이메일을 확인하세요",
+      "description": "계정 접근을 위한 매직 링크를 이메일로 보내드렸습니다.",
+      "hint": "힌트: 스팸 폴더를 확인해보세요.",
+      "backButton": "돌아가기"
+    },
+    "loginFail": {
+      "title": "로그인 오류",
+      "defaultError": "문제가 발생했습니다. 고객지원에 문의해주세요.",
+      "browserError": "죄송합니다! 다른 기기나 브라우저에서 매직 링크를 열려고 하신 것 같습니다.",
+      "hint": "힌트: 가입을 시도하신 것과 동일한 기기/브라우저에서 링크를 열어주세요.",
+      "loginLink": "로그인"
+    },
+    "navbar": {
+      "loginButton": "로그인 / 회원가입"
+    },
+    "userMenu": {
+      "credits": "크레딧",
+      "logout": "로그아웃"
+    },
+    "navigation": {
+      "headshotPacks": "프로필 사진 패키지",
+      "photoshootPacks": "촬영 패키지",
+      "freeTools": "무료 도구",
+      "backgroundLibrary": "배경 라이브러리",
+      "backgroundRemover": "배경 제거",
+      "testimonial": "후기",
+      "pricing": "가격",
+      "faq": "FAQ"
+    },
+    "sidebar": {
+      "dashboard": "대시보드",
+      "myHeadshots": "내 프로필 사진",
+      "photoEditorTools": "사진 편집 도구",
+      "aiImageGenerator": "AI 이미지 생성기",
+      "logout": "로그아웃",
+      "loggingOut": "로그아웃 중..."
+    },
+    "overview": {
+      "myHeadshots": "내 프로필 사진",
+      "generateImagesMessage": "이미지 생성을 시작하세요, 아리아가 여러분의 사진을 생성할 준비가 되어있습니다!",
+      "generateImages": "이미지 생성하기"
+    },
+    "packs": {
+      "title": "패키지",
+      "description": "이미지 생성을 시작하려면 패키지를 선택하세요.",
+      "selectPack": "01/ 패키지 선택",
+      "instructions": "02/ 안내사항",
+      "uploadPhotos": "03/ 사진 업로드",
+      "getCredits": "04/ 크레딧 받기",
+      "summary": "05/ 요약",
+      "errorFetching": "패키지 불러오기 오류",
+      "requestFailed": "상태 코드 404로 요청이 실패했습니다"
+    },
+    "packsGallery": {
+      "loading": "패키지 불러오는 중...",
+      "noPacks": "사용 가능한 패키지가 없습니다.",
+      "continueButton": "계속하기",
+      "errors": {
+        "fetchTitle": "패키지 불러오기 오류",
+        "unknownTitle": "알 수 없는 오류",
+        "unknownDescription": "알 수 없는 오류가 발생했습니다."
+      },
+      "categories": {
+        "adults": "전문가 & 라이프스타일 패키지",
+        "children": "어린이 패키지",
+        "pets": "반려동물 패키지",
+        "default": "{category} 패키지"
+      },
+      "packDetails": {
+        "close": "닫기",
+        "select": "패키지 선택",
+        "imagesIncluded": "포함된 이미지",
+        "price": "가격"
+      }
+    },
+    "photoGuide": {
+      "title": "이미지 가이드",
+      "subtitle": "품질 좋은 사진을 얻기 위한 가이드를 따르세요.",
+      "sections": {
+        "goodPhotos": "업로드하기 좋은 사진",
+        "photosToAvoid": "피해야 할 사진",
+        "refrainUsing": "사용을 자제해야 할 것"
+      },
+      "descriptions": {
+        "closeUpSelfie": "클로즈업 셀카",
+        "facingCamera": "카메라를 정면으로 보는 사진",
+        "halfBody": "상반신",
+        "onlyVisible": "본인만 보이는 사진",
+        "groupSelfies": "단체 셀카",
+        "withSomeone": "다른 사람과 함께 찍은 사진",
+        "hidingFace": "얼굴을 가린 사진",
+        "wearingGlasses": "안경 착용",
+        "onlyFace": "얼굴만 나온 사진",
+        "nudity": "노출이 있는 사진",
+        "blurredImage": "흐린 이미지",
+        "tooMuchShadow": "그림자가 너무 많은 사진"
+      },
+      "alt": {
+        "goodPhoto1": "좋은 사진 예시 1",
+        "goodPhoto2": "좋은 사진 예시 2",
+        "goodPhoto3": "좋은 사진 예시 3",
+        "goodPhoto4": "좋은 사진 예시 4",
+        "badPhoto1": "나쁜 사진 예시 1",
+        "badPhoto2": "나쁜 사진 예시 2",
+        "badPhoto3": "나쁜 사진 예시 3",
+        "badPhoto4": "나쁜 사진 예시 4"
+      }
+    },
+    "trainModel": {
+      "notEnoughInfo": "정보가 충분하지 않습니다",
+      "uploadRequirements": "최소 4장의 이미지를 업로드하고 모델 정보가 사용 가능한지 확인해주세요.",
+      "uploadingImages": "이미지 업로드 중...",
+      "pleaseWait": "사진을 처리하는 동안 기다려주세요",
+      "startUploading": "사진 업로드 시작하기",
+      "uploadFiles": "파일 업로드",
+      "dragDropHint": "클릭하여 업로드하거나 드래그 앤 드롭하세요",
+      "fileTypes": "120MB까지의 PNG, JPG, HEIC",
+      "goodPhotos": "좋은 사진",
+      "badPhotos": "나쁜 사진",
+      "continue": "계속하기",
+      "imageGuide": "이미지 가이드",
+      "followGuide": "품질 좋은 사진을 얻기 위한 가이드를 따르세요.",
+      "photoRequirements": "더 나은 사진 품질을 위해 아리아는 카메라를 정면으로 바라보는 1장의 상반신 사진과 7장의 클로즈업 사진이 필요합니다.",
+      "autoCropBanner": "이제 단체 셀카를 자동으로 자를 수 있습니다! 자르고 싶은 이미지를 탭하면 자동으로 처리해 드립니다."
+    },
+    "checkout": {
+      "title": "결제하기",
+      "subtitle": "사진 촬영에 비해 수백만원을 절약하세요. 수동 편집으로 AI 프로필 사진을 커스터마이즈하거나 초기 업로드가 잘못된 경우 다시 시도할 수 있습니다.",
+      "standardBadge": "82%가 선택하는 플랜",
+      "premiumBadge": "최고의 가치",
+      "subtotal": "소계",
+      "tax": "세금",
+      "totalDue": "오늘 결제할 금액",
+      "noSubscription": "구독 필요 없음",
+      "oneTimePayment": "일회성 결제",
+      "features": {
+        "headshots": {
+          "basic": "10장의 전문가급 AI 프로필 사진",
+          "standard": "30장의 전문가급 AI 프로필 사진",
+          "premium": "100장의 전문가급 AI 프로필 사진"
+        },
+        "processing": {
+          "basic": "24시간 처리 시간",
+          "standard": "12시간 처리 시간",
+          "premium": "6시간 처리 시간"
+        },
+        "outfits": {
+          "basic": "2가지 의상",
+          "standard": "4가지 의상",
+          "premium": "8가지 의상"
+        },
+        "poses": {
+          "basic": "2가지 포즈",
+          "standard": "4가지 포즈",
+          "premium": "8가지 포즈"
+        }
+      }
+    },
+    "summary": {
+      "detectedFeatures": "아리아가 감지한 특징입니다. 필요한 경우 수정하실 수 있습니다.",
+      "age": "나이",
+      "eyeColor": "눈동자 색",
+      "hairColor": "머리 색",
+      "gender": "성별",
+      "ethnicity": "인종",
+      "notSpecified": "지정되지 않음",
+      "enterEyeColor": "눈동자 색 입력",
+      "enterHairColor": "머리 색 입력",
+      "enterEthnicity": "인종 입력",
+      "save": "저장",
+      "male": "남성",
+      "orderSummary": "주문 요약",
+      "summaryDescription": "사진 촬영에 비해 수백만원을 절약하세요. 수동 편집으로 AI 프로필 사진을 커스터마이즈하거나 초기 업로드가 잘못된 경우 다시 시도할 수 있습니다.",
+      "uploadedPhotos": "업로드된 사진",
+      "processing": "처리 중...",
+      "startTraining": "학습 시작",
+      "noModelData": "모델 데이터 없음",
+      "noModelDataDesc": "모델 데이터를 찾을 수 없습니다. 돌아가서 먼저 모델을 만들어주세요.",
+      "generateHeadshots": "프로필 사진 생성",
+      "loading": "로딩 중..."
+    },
+    
+      "photoTypes": {
+        "title": "전문 AI 사진 스타일",
+        "subtitle": "AI 기반의 다양한 사진 스타일 중에서 선택하여 완벽한 전문 포트레이트를 만들어보세요.",
+        "showMore": "모든 스타일 보기",
+        "showLess": "간략히 보기",
+        "types": {
+          "vintageAmericana": {
+            "title": "빈티지 아메리카나 사진",
+            "description": "LinkedIn과 비즈니스 네트워킹에 이상적인 아메리카나 감성의 전문 헤드샷"
+          },
+          "onesiePortraits": {
+            "title": "아기 우주복 포트레이트",
+            "description": "아기와 유아를 위한 사랑스러운 포트레이트"
+          },
+          "halloweenPhotos": {
+            "title": "할로윈 사진",
+            "description": "할로윈 애호가를 위한 으스스하고 재미있는 포트레이트"
+          },
+          "birthdayParty": {
+            "title": "생일 파티 세이브 더 데이트",
+            "description": "자연스럽고 진정성 있는 데이팅 프로필용 포트레이트"
+          },
+          "artisticPortraits": {
+            "title": "예술적 포트레이트",
+            "description": "창의적이고 예술적인 포트레이트 사진"
+          },
+          "wrestlemaniaPhotos": {
+            "title": "레슬매니아 사진",
+            "description": "힘과 개성을 담아낸 레슬링 영감의 역동적인 포트레이트"
+          },
+          "redCarpet": {
+            "title": "배우 레드카펫 사진",
+            "description": "레드카펫에서 영감을 받은 매혹적이고 세련된 포트레이트"
+          },
+          "gameOfThrones": {
+            "title": "왕좌의 게임 포트레이트",
+            "description": "왕좌의 게임 스타일의 판타지 영감 포트레이트"
+          },
+          "kidsBirthday": {
+            "title": "어린이 생일 포트레이트",
+            "description": "아이들의 생일 특별한 순간을 담아내는 포트레이트"
+          },
+          "mythicalCreatures": {
+            "title": "신화 생물 포트레이트",
+            "description": "신화 속 생물을 특징으로 한 판타지 영감 포트레이트"
+          },
+          "onlineDating": {
+            "title": "온라인 데이팅 프로필 사진",
+            "description": "온라인 데이팅을 위한 완벽한 포트레이트"
+          },
+          "petPhotography": {
+            "title": "반려동물 사진",
+            "description": "반려동물을 위한 전문 포트레이트"
+          },
+          "popColor": {
+            "title": "팝 컬러 사진",
+            "description": "팝 아트의 영향을 받은 생동감 있는 포트레이트"
+          },
+          "youtubeThumbnails": {
+            "title": "유튜브 썸네일 사진",
+            "description": "유튜브 썸네일에 완벽한 시선을 사로잡는 포트레이트"
+          },
+          "actressPortraits": {
+            "title": "배우 포트레이트",
+            "description": "생동감 있고 상세한 식물과 꽃 사진"
+          },
+          "dreamlandKids": {
+            "title": "드림랜드 키즈 사진",
+            "description": "꿈같은 배경에서 아이들을 위한 마법같은 환상적인 포트레이트"
+          },
+          "babyDoodles": {
+            "title": "아기 낙서",
+            "description": "아기 사진을 사랑스러운 낙서 스타일 포트레이트로 변환. 아기방 장식과 출산 공지에 완벽"
+          },
+          "birthdayMagic": {
+            "title": "생일 매직",
+            "description": "축하, 초대장, 특별한 순간을 위한 매혹적인 생일 포트레이트"
+          },
+          "personalBrand": {
+            "title": "개인 브랜드 사진",
+            "description": "개인 브랜드를 높이고 일관된 시각적 존재감을 만들기 위한 전문 사진 솔루션"
+          },
+          "casualPhotography": {
+            "title": "캐주얼 사진",
+            "description": "소셜 미디어와 캐주얼한 전문적 needs에 완벽한 자연스럽고 편안한 포트레이트"
+          },
+          "casualCollection": {
+            "title": "캐주얼 컬렉션",
+            "description": "일관된 온라인 존재감을 위한 다양한 캐주얼 라이프스타일 포트레이트"
+          },
+          "catMagic": {
+            "title": "고양이 매직",
+            "description": "고양이의 독특한 개성과 매력을 담아내는 마법 같은 포트레이트"
+          },
+          "cyberpunk": {
+            "title": "사이버펑크",
+            "description": "미래적인 디지털 아트 스타일로 멋진 사이버펑크 캐릭터로 변신"
+          },
+          "hanukkahMiracle": {
+            "title": "하누카 기적",
+            "description": "빛의 축제의 마법을 담아낸 아름다운 하누카 테마 포트레이트"
+          },
+          "happyKid": {
+            "title": "해피 키즈",
+            "description": "아이들의 순수한 기쁨과 순진함을 담아낸 즐거운 포트레이트"
+          },
+          "influencer": {
+            "title": "인플루언서",
+            "description": "소셜 미디어와 콘텐츠 제작에 완벽한 멋진 인플루언서 스타일 포트레이트"
+          },
+          "meIconic": {
+            "title": "나만의 아이코닉",
+            "description": "군중 속에서 돋보이는 나만의 아이코닉한 포트레이트 스타일"
+          },
+          "merryChristmas": {
+            "title": "메리 크리스마스",
+            "description": "크리스마스 시즌의 기쁨과 따뜻함을 담은 마법 같은 크리스마스 포트레이트"
+          },
+          "playfulCasual": {
+            "title": "장난스러운 캐주얼",
+            "description": "당신의 장난스러운 면을 보여주는 재미있고 자연스러운 캐주얼 포트레이트"
+          },
+          "podcaster": {
+            "title": "팟캐스터",
+            "description": "오디오 브랜드 구축을 위한 전문적인 팟캐스터 포트레이트"
+          },
+          "romanticMaternity": {
+            "title": "로맨틱 임신",
+            "description": "임신의 마법을 기념하는 아름답고 로맨틱한 임신 포트레이트"
+          },
+          "socialMedia": {
+            "title": "소셜 미디어",
+            "description": "모든 소셜 미디어 플랫폼에 최적화된 멋진 포트레이트"
+          },
+          "timeMachine": {
+            "title": "타임머신",
+            "description": "시간을 넘나드는 멋진 역사적 포트레이트와 시대 테마 사진"
+          },
+          "timelessStudio": {
+            "title": "타임리스 스튜디오",
+            "description": "시대를 초월한 전문적인 매력을 가진 우아한 스튜디오 포트레이트"
+          },
+          "telAvivFashion": {
+            "title": "텔아비브 패션",
+            "description": "도시적인 스타일의 텔아비브 영감 패션 포트레이트"
+          },
+          "wildFriends": {
+            "title": "와일드 프렌즈",
+            "description": "반려동물과 동물 친구들과 함께하는 마법 같은 포트레이트"
+          },
+          "winterWonderland": {
+            "title": "겨울 원더랜드",
+            "description": "마법 같은 눈 속에서 촬영하는 매혹적인 겨울 원더랜드 포트레이트"
+          },
+          "workFromHome": {
+            "title": "재택근무",
+            "description": "재택근무를 위한 전문적인 포트레이트"
+          },
+          "vintagePack": {
+            "title": "빈티지 팩",
+            "description": "시대를 초월한 레트로 미학과 클래식한 매력을 가진 아름다운 빈티지 스타일 포트레이트"
+          },
+          "professionalTattoos": {
+            "title": "전문 타투 포트레이트",
+            "description": "당신의 타투 예술성을 돋보이게 하는 전문적인 포트레이트"
+          },
+          "annieLeibovitz": {
+            "title": "애니 레이보비츠 스타일",
+            "description": "애니 레이보비츠의 상징적인 사진 스타일에서 영감을 받은 드라마틱한 포트레이트"
+          },
+          "barbie": {
+            "title": "바비 스타일",
+            "description": "재미있고 스타일리시한 바비 영감 포트레이트 사진"
+          },
+          "vikingPortraits": {
+            "title": "바이킹 포트레이트",
+            "description": "역사적 테마와 판타지 촬영에 완벽한 강력한 바이킹 스타일 포트레이트"
+          },
+          "marvelClass": {
+            "title": "마블 클래스",
+            "description": "마블 작품에서 영감을 받은 영화적 품질의 다이내믹한 임팩트 있는 헤드샷"
+          }
+        }
+      },
+      
+        "headshots": {
+          "title": "전문가를 위한 AI 헤드샷",
+          "subtitle": "수많은 비즈니스 전문가들이 매일 HeadshotPro를 사용하여 업무에 활용할 수 있는 전문적인 헤드샷을 생성하고 있습니다.",
+          "showMore": "모든 스타일 보기",
+          "showLess": "접기",
+          "types": {
+            "doctor": {
+              "title": "의사 헤드샷",
+              "description": "의료 전문가, 의사, 의료기관을 위한 전문적인 의료 포트레이트"
+            },
+            "lawyer": {
+              "title": "변호사 헤드샷",
+              "description": "법률 전문가와 법률 사무소를 위한 전문적인 포트레이트"
+            },
+            "actor": {
+              "title": "배우 헤드샷",
+              "description": "패션, 뷰티, 전문 모델 포트폴리오에 완벽한 매력적인 글래머 포트레이트"
+            },
+            "realtor": {
+              "title": "부동산 전문가 스타일",
+              "description": "부동산 전문가를 위한 전문적인 포트레이트"
+            },
+            "tedSpeaker": {
+              "title": "TED 연사 스타일",
+              "description": "연사와 발표자를 위한 전문적인 포트레이트"
+            },
+            "businessCasual": {
+              "title": "비즈니스 캐주얼 헤드샷",
+              "description": "J.Crew의 미학에서 영감을 받은 클래식하고 세련된 포트레이트"
+            },
+            "model": {
+              "title": "모델 헤드샷",
+              "description": "헬무트 뉴턴의 스타일에서 영감을 받은 세련되고 매혹적인 포트레이트"
+            },
+            "styledSuccess": {
+              "title": "성공을 위한 스타일링",
+              "description": "세련된 스타일링으로 현대적이고 우아한 인상을 주는 전문 포트레이트"
+            },
+            "professional": {
+              "title": "프로페셔널 패키지",
+              "description": "기업과 비즈니스 요구에 완벽한 전문 헤드샷 패키지"
+            },
+            "partnersCollection": {
+              "title": "파트너스 컬렉션",
+              "description": "법률 사무소 파트너와 고위 임원을 위해 특별히 디자인된 프리미엄 헤드샷"
+            },
+            "lawyerBranded": {
+              "title": "법률가 브랜드",
+              "description": "법률 브랜드와 전문적 권위를 강화하는 전문 헤드샷"
+            },
+            "effortlessProfessionalism": {
+              "title": "자연스러운 전문성",
+              "description": "전문적인 존재감을 유지하면서도 자연스럽고 친근한 헤드샷"
+            }
+          }
+        },
+        
+  "common": {
+    "features": {
+      "styles": "150가지 이상의 스타일",
+      "delivery": "1시간 내 결과 제공",
+      "protection": "엄격한 데이터 보호",
+      "guarantee": "결과 보장"
+    }
+  },
+  "heroPages": {
+    "lawyer": {
+      "title": {
+        "part1": "전문적인",
+        "part2": "변호사 프로필 사진",
+        "part3": "AI로 제작",
+        "part4": "몇 분 만에 완성"
+      },
+      "description": "셀카를 고객과의 신뢰와 신용을 구축하는 전문적인 법률 프로필 사진으로 변환하세요.",
+      "button": "무료로 시작하기"
+    },
+    "doctor": {
+      "title": {
+        "part1": "전문적인",
+        "part2": "의료인 프로필 사진",
+        "part3": "AI로 제작",
+        "part4": "몇 분 만에 완성"
+      },
+      "description": "셀카를 환자와의 신뢰와 신용을 구축하는 전문적인 의료 프로필 사진으로 변환하세요.",
+      "button": "무료로 시작하기"
+    },
+    "dating": {
+      "title": {
+        "part1": "진정한 나를 표현하는",
+        "part2": "데이팅 프로필 사진",
+        "part3": "AI로 제작",
+        "part4": "진정한 인연 찾기"
+      },
+      "description": "사진을 업로드하고 다양한 결과물로 데이팅 프로필을 즉시 업그레이드하세요.",
+      "button": "무료로 시작하기"
+    },
+    "glamour": {
+      "title": {
+        "part1": "프로페셔널 포토 스튜디오",
+        "part2": "AI 기반"
+      },
+      "description": "일상적인 사진을 멋진 프로페셔널 포트레이트로 변환하세요. 소셜 미디어, 데이팅 프로필, 개인 브랜딩에 완벽합니다."
+    },
+    "realtor": {
+      "title": {
+        "part1": "전문적인",
+        "part2": "부동산 에이전트 사진",
+        "part3": "AI 기반"
+      },
+      "description": "셀카를 잠재 고객과의 신뢰와 신용을 구축하는 전문적인 부동산 프로필 사진으로 변환하세요.",
+      "button": "무료로 시작하기"
+    },
+    "speaker": {
+      "title": {
+        "part1": "전문 스피커와",
+        "part2": "TED 토크",
+        "part3": "스타일 사진",
+        "part4": "AI 기반"
+      },
+      "description": "셀카를 주목을 끌고 신뢰를 주는 강력한 스피커 포트레이트로 변환하세요. 키노트, 컨퍼런스, 전문 강연에 완벽합니다.",
+      "button": "무료로 시작하기"
+    },
+    "jcrew": {
+      "title": {
+        "part1": "비즈니스 캐주얼 헤캔프로필",
+        "part2": "AI 기반 사진"
+      },
+      "description": "친근함과 전문성이 조화를 이루는 비즈니스 캐주얼 프로필 사진으로 변환하세요. 현대적인 업무 환경과 창의적인 산업에 완벽합니다.",
+      "button": "시작하기"
+    },
+    "americana": {
+      "title": {
+        "part1": "빈티지 아메리카나 스타일",
+        "part2": "영혼이 담긴 초상화"
+      },
+      "description": "클래식 아메리카나의 향수어린 매력을 초상화에 담아보세요. 음악가, 예술가, 그리고 시대를 초월한 빈티지 매력을 추구하는 모든 분들에게 완벽합니다."
+    },
+    "onesie": {
+      "title": {
+        "part1": "안하고 재미있는 스타일",
+        "part2": "돋보이는 인물사진"
+      },
+      "description": "당신의 사진을 개성이 돋보이는 재미있고 편안한 인물사진으로 변신시켜보세요. 소셜 미디어, 콘텐츠 크리에이터, 스타일리시한 편안함을 추구하는 모든 분들에게 완벽합니다.",
+      "button": "지금 시작하기",
+      "imageAlt": "원피스 스타일 인물사진 예시"
+    },
+    "halloween": {
+      "title": {
+        "part1": "으스스한 할로윈 스타일",
+        "part2": "개성 넘치는 인물사진"
+      },
+      "description": "당신의 사진을 으스스한 할로윈 인물사진으로 변신시켜보세요. 소셜 미디어, 시즌 콘텐츠, 그리고 으스스한 시즌을 사랑하는 모든 분들에게 완벽합니다.",
+      "button": "지금 시작하기",
+      "imageAlt": "할로윈 인물사진 예시"
+    },
+    "date": {
+      "title": {
+        "part1": "세이브 더 데이트 스타일",
+        "part2": "잊지 못할 순간"
+      },
+      "description": "특별한 순간을 담아내는 아름다운 세이브 더 데이트 인물사진을 만들어보세요. 결혼식, 생일, 그리고 모든 기념일 안내에 완벽합니다.",
+      "button": "만들기 시작",
+      "imageAlt": "세이브 더 데이트 인물사진 예시"
+    },
+    "artistic": {
+      "title": {
+        "part1": "예술적 스타일",
+        "part2": "영혼이 담긴 인물사진"
+      },
+      "description": "당신의 사진을 본질을 담아낸 예술 작품으로 변신시켜보세요. 소셜 미디어, 창작 포트폴리오, 예술적 표현을 사랑하는 모든 분들에게 완벽합니다.",
+      "button": "작업 시작하기",
+      "imageAlt": "예술적 인물사진 예시"
+    },
+    "wrestlemania": {
+      "title": {
+        "part1": "레슬매니아 사진",
+        "part2": "강력한 인물사진"
+      },
+      "description": "당신의 사진을 서사시적인 레슬매니아 인물사진으로 변신시켜보세요. 팬, 소셜 미디어, 챔피언 정신을 담고 싶은 모든 분들에게 완벽합니다.",
+      "button": "시작하기",
+      "imageAlt": "레슬매니아 인물사진 예시"
+    },
+    "carpet": {
+      "title": {
+        "part1": "레드카펫 스타일",
+        "part2": "셀러브리티 인물사진"
+      },
+      "description": "당신의 사진을 화려한 레드카펫 인물사진으로 변신시켜보세요. 소셜 미디어, 특별한 이벤트, 스타가 되고 싶은 모든 분들에게 완벽합니다.",
+      "button": "지금 시작하기",
+      "imageAlt": "레드카펫 인물사진 예시"
+    },
+    "myth": {
+      "title": {
+        "part1": "신화로운 생물로",
+        "part2": "변신하세요",
+        "part3": "마법같은",
+        "part4": "AI로"
+      },
+      "description": "당신의 사진을 매혹적인 신화 속 생물의 초상화로 변신시켜보세요. 판타지 애호가, 창작 프로젝트, 마법 같은 변신을 꿈꾸는 모든 분들에게 완벽합니다.",
+      "button": "시작하기",
+      "imageAlt": "신화 생물 초상화 예시"
+    },
+    "birthday": {
+      "title": {
+        "part1": "마법 같은 생일",
+        "part2": "초상화 경험"
+      },
+      "description": "아이의 사진을 마법 같은 생일 초상화로 변신시켜보세요. 초대장, 추억 만들기, 특별한 생일 순간 창출에 완벽합니다.",
+      "button": "마법 만들기",
+      "imageAlt": "생일 초상화 예시"
+    },
+    "dog": {
+      "title": {
+        "part1": "예술적인 반려견",
+        "part2": "초상화 스튜디오"
+      },
+      "description": "반려견의 사진을 멋진 예술 초상화로 변신시켜보세요. 반려동물 애호가, 소셜 미디어, 털복숭이 친구를 기념하기에 완벽합니다.",
+      "button": "지금 시작하기",
+      "imageAlt": "반려견 초상화 예시"
+    },
+    "color": {
+      "title": {
+        "part1": "팝 컬러",
+        "part2": "AI 초상화 스튜디오"
+      },
+      "description": "당신의 사진을 생동감 넘치는 컬러풀한 초상화로 변신시켜보세요. 소셜 미디어, 개인 브랜딩, 창의적 표현에 완벽합니다.",
+      "button": "시작하기",
+      "imageAlt": "팝 컬러 초상화 예시"
+    },
+    "youtube": {
+      "title": {
+        "part1": "유튜브 썸네일",
+        "part2": "크리에이터 스튜디오"
+      },
+      "description": "조회수를 높이는 눈에 띄는 유튜브 썸네일을 만들어보세요. 콘텐츠 크리에이터와 채널 성장에 완벽합니다.",
+      "button": "지금 시작하기",
+      "imageAlt": "유튜브 썸네일 예시"
+    },
+    "botanical": {
+      "title": {
+        "part1": "자연의 아름다움 AI",
+        "part2": "보태니컬 일러스트와",
+        "part3": "함께하는 초상화"
+      },
+      "description": "섬세한 보태니컬 일러스트레이션 요소로 강화된 AI 생성 초상화로 자연의 우아함을 담아보세요.",
+      "button": "무료로 시작하기",
+      "imageAlt": "보태니컬 초상화 예시"
+    },
+    
+  "partner": {
+    "title": {
+      "part1": "법률 파트너를 위한",
+      "part2": "프로필 사진",
+      "part3": "AI 기반",
+      "part4": "탁월성"
+    },
+    "description": "시니어 파트너와 법률 임원을 위해 제작된 프로필 사진으로 귀사의 경영진 존재감을 높이세요. 귀하의 직위에 걸맞은 권위와 신뢰성을 반영합니다.",
+    "button": "존재감 높이기",
+    "imageAlt": "법률 파트너를 위한 전문 사진"
+  },
+  "stylishLawyer": {
+    "title": {
+      "part1": "법률적 존재감",
+      "part2": "높이기",
+      "part3": "전문 프로필 사진",
+      "part4": "몇 분 만에"
+    },
+    "description": "법률 전문가를 위해 맞춤화된 AI 생성 전문 프로필 사진으로 존경과 신뢰를 얻으세요. 로펌 웹사이트, LinkedIn 프로필, 전문가 디렉토리에 완벽합니다.",
+    "button": "이미지 변화하기",
+    "imageAlt": "세련된 변호사 프로필 사진"
+  },
+  "professionalism": {
+    "title": {
+      "part1": "비교할 수 없는",
+      "part2": "전문성",
+      "part3": "AI 기반",
+      "part4": "법률 탁월성"
+    },
+    "description": "탁월성, 신뢰성, 세련미를 구현하는 프로필 사진으로 귀하의 법률 전문성을 보여주세요. 최고 수준을 요구하는 변호사에게 이상적입니다.",
+    "button": "프로필 향상하기",
+    "imageAlt": "법률 전문 프로필 사진"
+  }
+
+  },
+  "heroFeatures": {
+    "styles": "150가지 이상의 스타일",
+    "delivery": "1시간 내 완성",
+    "protection": "엄격한 개인정보 보호",
+    "guarantee": "결과 보장"
+  },
+ 
+    
+      "heroPacks": {
+        "dreamlandKids": {
+          "gradientTitle": "아이들의 마법 사진",
+          "normalTitle": "꿈이 이루어지는 곳",
+          "description": "아이들의 사진을 꿈나라의 마법 같은 그림으로 변신시켜보세요. 환상적인 배경, 동화 테마, 즐거운 장면으로 마법 같은 추억을 만들어보세요.",
+          "buttonText": "마법 시작하기"
+        },
+        "babyDoodles": {
+          "gradientTitle": "아기 낙서",
+          "normalTitle": "귀여운 아기 사진",
+          "description": "아기를 위한 아름답고 재미있는 사진을 만들어보세요. 어린 시절의 행복한 순간과 가족의 추억을 완벽하게 담아냅니다.",
+          "buttonText": "순간 포착하기"
+        },
+        "brandingPhotography": {
+          "gradientTitle": "브랜딩 사진",
+          "normalTitle": "돋보이고 빛나다",
+          "description": "AI 기반 전문 사진으로 당신의 개인 브랜드를 높여보세요",
+          "buttonText": "브랜드 구축하기"
+        },
+        "workFromHome": {
+          "gradientTitle": "재택근무",
+          "normalTitle": "원격 전문가 사진",
+          "description": "재택근무를 위한 전문적인 사진을 만들어보세요. 원격 근무자와 화상 회의에 완벽합니다",
+          "buttonText": "스마트하게 일하기"
+        },
+        "vintagePack": {
+          "gradientTitle": "빈티지 팩",
+          "normalTitle": "레트로 스타일 사진",
+          "description": "아름다운 빈티지 스타일 초상화를 만들어보세요. 레트로 룩과 클래식한 사진에 완벽합니다",
+          "buttonText": "과거로 돌아가기"
+        },
+        "birthdayMagic": {
+          "gradientTitle": "생일 마법",
+          "normalTitle": "축하 사진",
+          "description": "당신의 생일을 위한 마법 같은 사진을 만들어보세요. 특별한 순간을 위해 완벽합니다",
+          "buttonText": "축하 시작하기"
+        },
+        "casualPhotos": {
+          "gradientTitle": "캐주얼 사진",
+          "normalTitle": "자연스럽고 친근하게",
+          "description": "당신의 진정한 개성을 보여주는 자연스러운 초상화를 만들어보세요. SNS와 개인 브랜딩에 완벽합니다",
+          "buttonText": "자연스러운 사진 얻기"
+        },
+        "casualCollection": {
+          "gradientTitle": "캐주얼 컬렉션",
+          "normalTitle": "자연스러운 순간",
+          "description": "당신의 진정한 개성을 반영하는 다양한 캐주얼 사진을 만들어보세요. SNS 콘텐츠와 프로필에 완벽합니다.",
+          "buttonText": "컬렉션 시작하기"
+        },
+        "catMagic": {
+          "gradientTitle": "고양이 마법",
+          "normalTitle": "특별한 순간",
+          "description": "당신의 고양이 사진을 개성 넘치는 마법 같은 이미지로 변신시켜보세요. 반려동물 애호가와 SNS에 완벽합니다.",
+          "buttonText": "마법 만들기"
+        },
+        "christmasElf": {
+          "gradientTitle": "크리스마스 엘프",
+          "normalTitle": "크리스마스 마법",
+          "description": "크리스마스 엘프 테마의 재미있는 사진을 만들어보세요. 크리스마스 카드와 가족 축하에 완벽합니다.",
+          "buttonText": "재미 시작하기"
+        },
+        "christmasSweater": {
+          "gradientTitle": "크리스마스 스웨터",
+          "normalTitle": "따뜻한 크리스마스 분위기",
+          "description": "크리스마스 스웨터 테마의 따뜻한 축하 사진을 만들어보세요. 크리스마스 카드와 사무실 파티에 완벽합니다.",
+          "buttonText": "축하 시작하기"
+        },
+        "familyChristmas": {
+          "gradientTitle": "가족 크리스마스",
+          "normalTitle": "마법 같은 가족 추억",
+          "description": "시즌의 마법을 담아낸 마법 같은 크리스마스 가족 사진을 만들어보세요. 크리스마스 카드와 소중한 가족 추억에 완벽합니다.",
+          "buttonText": "가족 마법 만들기"
+        },
+        "cyberpunk": {
+          "gradientTitle": "사이버펑크",
+          "normalTitle": "디지털 미래",
+          "description": "당신의 사진을 미래적인 사이버펑크 아트로 변신시켜보세요. SF 팬과 미래적 디자인에 완벽합니다.",
+          "buttonText": "미래로 들어가기"
+        },
+        "hanukkahMiracle": {
+          "gradientTitle": "하누카의 기적",
+          "normalTitle": "빛의 축제",
+          "description": "빛의 축제의 마법을 담아낸 아름다운 하누카 테마 사진을 만들어보세요. 축하 카드와 가족 축하에 완벽합니다.",
+          "buttonText": "빛 밝히기"
+        },
+        "happyKid": {
+          "gradientTitle": "행복한 아이",
+          "normalTitle": "기쁨의 순간",
+          "description": "아이들의 기쁨과 순수함을 담아낸 놀라운 사진을 만들어보세요. 가족 앨범과 소중한 추억에 완벽합니다.",
+          "buttonText": "기쁨 포착하기"
+        },
+        "influencer": {
+          "gradientTitle": "인플루언서",
+          "normalTitle": "소셜 샤인",
+          "description": "성공적인 인플루언서에 걸맞은 전문적인 사진을 만들어보세요. SNS와 개인 브랜드 구축에 완벽합니다.",
+          "buttonText": "영향력 시작하기"
+        },
+        "meIconic": {
+          "gradientTitle": "나의 아이코닉",
+          "normalTitle": "아이코닉 사진",
+          "description": "당신의 독특한 개성을 표현하는 아이코닉한 샷으로 사진을 변신시켜보세요. 자기표현과 개성 연출에 완벽합니다.",
+          "buttonText": "아이콘 되기"
+        },
+        "merryChristmas": {
+          "gradientTitle": "메리 크리스마스",
+          "normalTitle": "크리스마스의 기쁨",
+          "description": "크리스마스의 정신을 담은 사진을 만들어보세요. 인사 카드와 축하에 완벽합니다.",
+          "buttonText": "크리스마스 축하하기"
+        },
+        "playfulCasual": {
+          "gradientTitle": "장난스러운 캐주얼",
+          "normalTitle": "편안한 순간",
+          "description": "당신의 활기찬 정신을 반영하는 장난스럽고 캐주얼한 사진을 만들어보세요. 일상적인 순간과 SNS에 완벽합니다.",
+          "buttonText": "재미 시작하기"
+        },
+        "podcaster": {
+          "gradientTitle": "팟캐스터",
+          "normalTitle": "시각적 목소리",
+          "description": "전문 팟캐스터에 걸맞은 전문적인 사진을 만들어보세요. 홍보와 마케팅에 완벽합니다.",
+          "buttonText": "방송 시작하기"
+        },
+        "romanticMaternity": {
+          "gradientTitle": "로맨틱 임신",
+          "normalTitle": "임신의 순간",
+          "description": "아름다운 로맨틱한 사진으로 당신의 임신 여정을 기록해보세요. 가족 추억과 소중한 사람과의 공유에 완벽합니다.",
+          "buttonText": "순간 기록하기"
+        },
+        "socialMedia": {
+          "gradientTitle": "소셜 미디어",
+          "normalTitle": "디지털 샤인",
+          "description": "SNS를 위한 매력적인 사진을 만들어보세요. 디지털 콘텐츠와 온라인 존재감에 완벽합니다.",
+          "buttonText": "빛나기 시작하기"
+        },
+        "timeMachine": {
+          "gradientTitle": "타임머신",
+          "normalTitle": "시간 여행",
+          "description": "다양한 시대의 스타일을 가진 사진으로 시간 여행을 해보세요. 역사 애호가와 향수를 위해 완벽합니다.",
+          "buttonText": "여행 시작하기"
+        },
+        "timelessStudio": {
+          "gradientTitle": "타임리스 스튜디오",
+          "normalTitle": "영원한 아름다움",
+          "description": "전문 스튜디오에서 타임리스한 클래식 사진을 만들어보세요. 공식적이고 전문적인 사진에 완벽합니다.",
+          "buttonText": "촬영 시작하기"
+        },
+        "tlvFashion": {
+          "gradientTitle": "텔아비브 패션",
+          "normalTitle": "현대 패션",
+          "description": "텔아비브의 활기찬 정신을 담은 현대적인 패션 사진을 만들어보세요. 패션과 스타일 애호가에게 완벽합니다.",
+          "buttonText": "우아함 발견하기"
+        },
+        "wildFriends": {
+          "gradientTitle": "와일드 프렌즈",
+          "normalTitle": "자연의 모험",
+          "description": "와일드하고 자연스러운 터치의 사진을 만들어보세요. 자연 애호가와 모험가에게 완벽합니다.",
+          "buttonText": "모험 시작하기"
+        },
+        "winterWonderland": {
+          "gradientTitle": "겨울 원더랜드",
+          "normalTitle": "겨울의 마법",
+          "description": "동화 같은 겨울 장면에서 마법 같은 사진을 만들어보세요. 겨울 시즌과 휴가에 완벽합니다.",
+          "buttonText": "마법 발견하기"
+        },
+        
+          
+            "marvelClass": {
+              "gradientTitle": "프리미엄 클래스",
+              "normalTitle": "법률 전문가 초상화",
+              "description": "AI 헤드샷으로 전문 이미지의 정점을 경험하세요. 비교할 수 없는 세련됨과 스타일로 법률 전문성의 본질을 포착합니다.",
+              "button": "프리미엄 품질 체험하기",
+              "imageAlt": "전문 법률가 초상화"
+            },
+            "vikingsHero": {
+              "gradientTitle": "바이킹 초상화",
+              "normalTitle": "AI 매직 기술 적용",
+              "description": "북유럽 전사의 정신을 담아낸 전설적인 초상화로 사진을 변신시키세요. 게임 프로필, 창의적 콘텐츠, 독특한 개인 브랜딩에 완벽합니다.",
+              "button": "당신의 전설 만들기",
+              "imageAlt": "바이킹 스타일 초상화"
+            },
+            "barbieHero": {
+              "gradientTitle": "팝 컬처 초상화",
+              "normalTitle": "생동감 넘치는 개성과 함께",
+              "description": "대담한 색상과 유쾌한 스타일로 인상적인 초상화를 만드세요. 소셜 미디어 인플루언서와 창의적 콘텐츠 크리에이터에게 완벽합니다.",
+              "button": "에디토리얼 만들기",
+              "imageAlt": "바비 스타일 초상화"
+            },
+        "common": {
+  "features": {
+    "styles": "다양한 스타일",
+    "delivery": "빠른 배송",
+    "protection": "안전한 보호",
+    "guarantee": "만족 보증"
+  }
+}
+      },
+      
+        "footer": {
+          "logoAlt": "GoStudio",
+          "description": {
+            "line1": "GoStudio는 AI 기반 전문 사진 스튜디오입니다",
+            "line2": "고품질 전문 인물 사진을 제공합니다",
+            "line3": "비즈니스 및 전문가를 위한 전문 사진 촬영 전문"
+          },
+          "aiHeadshots": {
+            "title": "전문 프로필 사진",
+            "items": {
+              "doctor": "의사 프로필",
+              "lawyer": "변호사 프로필",
+              "actor": "배우 프로필",
+              "realtor": "부동산 중개사 프로필",
+              "tedSpeaker": "TED 연사 프로필",
+              "businessCasual": "비즈니스 캐주얼",
+              "effortlessPro": "내추럴 프로 사진",
+              "lawyerBranded": "변호사 브랜드 사진",
+              "partner": "파트너 프로필",
+              "proPack": "전문가 패키지",
+              "styledSuccess": "성공 스타일",
+              "stylishLawyer": "스타일리시 변호사"
+            }
+          },
+          "aiPhotos": {
+            "title": "특별 촬영 세션",
+            "items": {
+              "meiravClass": "메이라브 세션",
+              "tattoos": "타투 포트레이트",
+              "annie": "애니 세션",
+              "barbie": "바비 세션",
+              "viking": "바이킹 포트레이트",
+              "dreamland": "드림랜드 키즈",
+              "babyDoodles": "아기 낙서",
+              "birthdayMagic": "생일 매직",
+              "branding": "브랜딩 사진",
+              "casual": "캐주얼 사진",
+              "casualCollection": "캐주얼 컬렉션",
+              "catMagic": "고양이 매직",
+              "christmasElf": "크리스마스 엘프",
+              "christmasSweater": "크리스마스 스웨터",
+              "familyChristmas": "가족 크리스마스",
+              "cyberpunk": "사이버펑크",
+              "hanukkah": "하누카 사진",
+              "happyKid": "해피 키즈",
+              "influencer": "인플루언서",
+              "iconic": "아이코닉 사진",
+              "merryChristmas": "메리 크리스마스",
+              "vintageAmericana": "빈티지 아메리카나",
+              "onesie": "우주복 포트레이트",
+              "halloween": "할로윈 사진",
+              "actress": "여배우 프로필",
+              "birthdayParty": "생일 파티",
+              "artistic": "아티스틱 사진",
+              "wrestlemania": "레슬매니아",
+              "redCarpet": "레드카펫",
+              "gameOfThrones": "왕좌의 게임",
+              "kidsBirthday": "키즈 생일",
+              "mythical": "신화 속 생물",
+              "dating": "데이팅 프로필",
+              "petDog": "반려견 사진",
+              "popColor": "팝 컬러",
+              "youtube": "유튜브 썸네일",
+              "playfulCasual": "플레이풀 캐주얼",
+              "podcaster": "팟캐스터",
+              "maternity": "매터니티",
+              "socialMedia": "소셜 미디어",
+              "timeMachine": "타임머신",
+              "timelessStudio": "타임리스 스튜디오",
+              "tlvFashion": "TLV 패션",
+              "vintagePack": "빈티지 패키지",
+              "wildFriends": "야생 친구들",
+              "winterWonderland": "겨울 원더랜드",
+              "workFromHome": "재택근무"
+            }
+          },
+          "freeTools": {
+            "title": "무료 도구",
+            "items": {
+              "backgroundLibrary": "배경 라이브러리",
+              "backgroundRemover": "배경 제거",
+              "blackBg": "블랙 배경",
+              "greyBg": "그레이 배경",
+              "redBg": "레드 배경",
+              "whiteBg": "화이트 배경",
+              "abstractBg": "추상 배경",
+              "christmasBg": "크리스마스 배경",
+              "halloweenBg": "할로윈 배경"
+            }
+          },
+          "company": {
+            "title": "회사 소개",
+            "items": {
+              "testimonial": "고객 후기",
+              "pricing": "가격 안내",
+              "faq": "자주 묻는 질문",
+              "privacy": "개인정보처리방침",
+              "terms": "이용약관"
+            }
+          },
+          "needHelp": "도움이 필요하신가요?",
+          "contactUs": "문의하기",
+          "copyright": "© 2024 모든 권리 보유"
+        },
+
+        "ariaa": {
+      "bannerAlt": "배너 배경",
+      "photographerAlt": "AI 사진작가",
+      "heading": "셀카에서 놀라운 이미지를 만드는 전문 AI 사진작가를 만나보세요.",
+      "description": "안녕하세요! 저는 GoStudio.ai의 AI 사진작가 아리아입니다. 지금까지 21,000명 이상의 멋진 분들께 정말 특별한 인물사진과 프로필 사진을 만들어드렸습니다. LinkedIn 업데이트, 명함 디자인, 온라인 존재감 향상 등 어떤 것이든 도와드리겠습니다. 전문적인 결과물을 쉽게 얻으실 수 있도록 세세한 부분까지 제가 관리하겠습니다!",
+      "button": "지금 시작하기"
+    },
+    "banner": {
+      "bannerAlt": "배너 배경",
+      "heading": "전문 사진을 87% 할인된 가격으로. 언제 어디서나.",
+      "subheading": {
+        "line1": "다양한 의상과 배경으로 4K 스튜디오 품질의 사진을",
+        "line2": "1시간 이내에 받아보세요"
+      },
+      "button": "지금 시작하기"
+    }
+
+
+      
+    }
+      
+    
+  
+
+  
