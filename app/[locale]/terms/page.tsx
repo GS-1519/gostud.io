@@ -1,5 +1,6 @@
 import React from 'react';
 import type { Metadata } from 'next'
+import { useTranslations } from 'next-intl';
 
 export const metadata: Metadata = {
   title: 'Terms of Service | GoStudio.ai',
@@ -14,27 +15,23 @@ export const metadata: Metadata = {
 }
 
 const TermsOfService: React.FC = () => {
+  const t = useTranslations('terms');
+
   return (
     <div className="w-full bg-[#F4F7FA] min-h-screen font-poppins">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-[82px] py-8 sm:py-12">
         <div className="w-full max-w-[1276px] mx-auto bg-white rounded-[24px] p-6 sm:p-12">
-          <h1 className="text-3xl sm:text-4xl font-bold mb-8 font-jakarta">Terms of Service</h1>
+          <h1 className="text-3xl sm:text-4xl font-bold mb-8 font-jakarta">{t('title')}</h1>
 
           <section className="mb-8">
-            <h2 className="text-xl sm:text-2xl font-bold mb-4 font-jakarta">Acceptance of Terms of Service</h2>
-            <p className="text-gray-600 mb-4">
-              Welcome to GoStudio.ai ("we", "us", "our"). By using our website and the services provided through gostudio.ai (collectively, the "Service"), you agree to be bound by these Terms of Service ("Terms", "ToS"), including our Privacy Policy and any additional terms and conditions and policies referenced herein and/or available by hyperlink.
-            </p>
-            <p className="text-gray-600 mb-4">
-              Please read these Terms carefully before accessing or using our Service. By accessing or using any part of the Service, you agree to be bound by these Terms. If you do not agree to all the terms and conditions of this agreement, then you may not access the website or use any services.
-            </p>
+            <h2 className="text-xl sm:text-2xl font-bold mb-4 font-jakarta">{t('acceptance.title')}</h2>
+            <p className="text-gray-600 mb-4">{t('acceptance.paragraph1')}</p>
+            <p className="text-gray-600 mb-4">{t('acceptance.paragraph2')}</p>
           </section>
 
           <section className="mb-8">
-            <h2 className="text-xl sm:text-2xl font-bold mb-4 font-jakarta">Use of the Service</h2>
-            <p className="text-gray-600 mb-4">
-              GoStudio.ai allows users to upload photos and generate professional product photos and headshots. The Service is available to users who are at least 13 years of age, unless otherwise specified in your local jurisdiction.
-            </p>
+            <h2 className="text-xl sm:text-2xl font-bold mb-4 font-jakarta">{t('usage.title')}</h2>
+            <p className="text-gray-600 mb-4">{t('usage.description')}</p>
           </section>
 
           <section className="mb-8">
@@ -119,7 +116,7 @@ const TermsOfService: React.FC = () => {
           </section>
 
           <div className="text-sm text-gray-500 mt-12">
-            Last Updated: February 2024
+            {t('lastUpdated')} {t('updateDate')}
           </div>
         </div>
       </div>
