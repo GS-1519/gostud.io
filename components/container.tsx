@@ -2,50 +2,61 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
-const SecurityFeature = ({ icon, title, description }: { icon: string, title: string, description: string }) => (
-  <div className="flex flex-row items-start gap-4 sm:gap-6 text-left">
-    <div className="w-[80px] h-[80px] sm:w-[107.81px] sm:h-[107.81px] flex items-center justify-center flex-shrink-0">
-      <Image 
-        src={icon}
-        alt={title}
-        width={107}
-        height={107}
-        className="w-full h-full"
-      />
+const SecurityFeature = ({ icon, titleKey, descriptionKey }: { 
+  icon: string, 
+  titleKey: string, 
+  descriptionKey: string 
+}) => {
+  const t = useTranslations('DataSecurity');
+  
+  return (
+    <div className="flex flex-row items-start gap-4 sm:gap-6 text-left">
+      <div className="w-[80px] h-[80px] sm:w-[107.81px] sm:h-[107.81px] flex items-center justify-center flex-shrink-0">
+        <Image 
+          src={icon}
+          alt={t(titleKey)}
+          width={107}
+          height={107}
+          className="w-full h-full"
+        />
+      </div>
+      <div className="flex-1">
+        <h3 className="font-poppins font-bold text-[18px] sm:text-[20px] leading-[28px]">
+          {t(titleKey)}
+        </h3>
+        <p className="font-poppins font-normal text-[14px] sm:text-[16px] leading-[21px] sm:leading-[24px] text-[#161C2D]/60">
+          {t(descriptionKey)}
+        </p>
+      </div>
     </div>
-    <div className="flex-1">
-      <h3 className="font-poppins font-bold text-[18px] sm:text-[20px] leading-[28px]">
-        {title}
-      </h3>
-      <p className="font-poppins font-normal text-[14px] sm:text-[16px] leading-[21px] sm:leading-[24px] text-[#161C2D]/60">
-        {description}
-      </p>
-    </div>
-  </div>
-);
+  );
+};
 
 const DataSecuritySection = () => {
+  const t = useTranslations('DataSecurity');
+
   const features = [
     {
       icon: '/logos/Border.png',
-      title: "NO DATA SELLING, NO SHARING",
-      description: "We will never sell your data or share with the third party websites."
+      titleKey: 'features.noSelling.title',
+      descriptionKey: 'features.noSelling.description'
     },
     {
       icon: '/logos/lock.png',
-      title: "YOUR PHOTOS, YOUR CONTROL",
-      description: "We won't use your photos to train AI without your permissions."
+      titleKey: 'features.control.title',
+      descriptionKey: 'features.control.description'
     },
     {
       icon: '/logos/text.png',
-      title: "AUTO DELETION OF DATA",
-      description: "The system automatically deletes all your images after 90 days. You choose to keep the setting your way."
+      titleKey: 'features.autoDeletion.title',
+      descriptionKey: 'features.autoDeletion.description'
     },
     {
       icon: '/logos/Group.png',
-      title: "TOP-NOTCH SECURITY",
-      description: "We encrypt all sensitive user data. We use industry's best trusted software for your data."
+      titleKey: 'features.security.title',
+      descriptionKey: 'features.security.description'
     }
   ];
 
@@ -55,16 +66,16 @@ const DataSecuritySection = () => {
         {/* Header */}
         <div className="text-center mb-8 sm:mb-14">
           <h2 className="text-[24px] sm:text-[32px] leading-[36px] sm:leading-[48px] font-poppins font-medium mb-3 sm:mb-4">
-            WE VALUE DATA PRIVACY
+            {t('title')}
           </h2>
           <p className="text-[14px] sm:text-[16px] leading-[21px] sm:leading-[24px] font-poppins font-normal text-[#161C2D]/60">
-            Trusted by Fortune 500 Leaders and Top professionals
+            {t('subtitle.line1')}
             <br />
-            Reputed enterprise organizations and teams trust us with their data
+            {t('subtitle.line2')}
           </p>
         </div>
 
-        {/* Features Grid - Single column on mobile */}
+        {/* Features Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-x-20 sm:gap-y-12 mb-8 sm:mb-12">
           {features.map((feature, index) => (
             <SecurityFeature
@@ -83,7 +94,7 @@ const DataSecuritySection = () => {
                 background: 'linear-gradient(90deg, #8371FF -39.48%, #A077FE 15.54%, #01C7E4 100%)'
               }}
             >
-              <span>Create Your Headshot</span>
+              <span>{t('createButton')}</span>
               <svg className="w-3 sm:w-5 h-3 sm:h-5" viewBox="0 0 20 20" fill="none">
                 <path 
                   d="M4.16666 10H15.8333M15.8333 10L10 4.16669M15.8333 10L10 15.8334" 

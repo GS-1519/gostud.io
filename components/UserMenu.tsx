@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 import { useRouter } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 
 interface UserMenuProps {
   user: {
@@ -16,6 +17,7 @@ export default function UserMenu({ user, credits }: UserMenuProps) {
   const menuRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
   const supabase = createClientComponentClient();
+  const t = useTranslations('userMenu');
 
   // Handle click outside
   useEffect(() => {
@@ -64,7 +66,7 @@ export default function UserMenu({ user, credits }: UserMenuProps) {
             fill="currentColor"
           />
         </svg>
-        <span className="font-poppins">{credits} Credits</span>
+        <span className="font-poppins">{credits} {t('credits')}</span>
       </button>
 
       <div className="relative" ref={menuRef}>
@@ -94,7 +96,7 @@ export default function UserMenu({ user, credits }: UserMenuProps) {
               onClick={handleLogout}
               className="block w-full text-left px-4 py-3 text-sm text-red-600 hover:bg-gray-100 font-jakarta transition-colors duration-200"
             >
-              Logout
+              {t('logout')}
             </button>
           </div>
         )}

@@ -1,0 +1,20 @@
+{
+  "heroFeatures": {
+    "styles": "Pick from 150+ styles",
+    "delivery": "Results in under 1 hour",
+    "protection": "Strict data protection",
+    "guarantee": "Moneyback Guarantee"
+  },
+  "heroPages": {
+    "lawyer": {
+      "title": {
+        "part1": "Professional",
+        "part2": "Lawyer Headshots",
+        "part3": "AI-Generated",
+        "part4": "in Minutes"
+      },
+      "description": "Transform your selfies into professional legal portraits that build trust and credibility with clients.",
+      "button": "Start Free"
+    }
+  }
+} 

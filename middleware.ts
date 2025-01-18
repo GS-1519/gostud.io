@@ -1,11 +1,27 @@
 // middleware.ts
+import createIntlMiddleware from 'next-intl/middleware';
 import { createMiddlewareClient } from '@supabase/auth-helpers-nextjs';
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
+// List of paths that don't need locale prefix
+const publicPaths = [
+  '/api', 
+  '/_next', 
+  '/fonts', 
+  '/examples',
+  '/astria'  // Add this to skip middleware for astria routes
+];
+
+// Create the intl middleware
+const intlMiddleware = createIntlMiddleware({
+  locales: ['en', 'fr', 'ar', 'cn', 'de', 'ja', 'ko', 'es', 'it', 'th', 'tr', 'br', 'ru', 'vi', 'id'],
+  defaultLocale: 'en',
+  localePrefix: 'always'
+});
+
 export async function middleware(request: NextRequest) {
-  // Skip middleware for certain paths
-  const publicPaths = ['/api', '/_next', '/fonts', '/examples'];
+  // Skip middleware for static files and API routes
   if (publicPaths.some(path => request.nextUrl.pathname.startsWith(path))) {
     return NextResponse.next();
   }
@@ -15,34 +31,43 @@ export async function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
-  const res = NextResponse.next();
-  const supabase = createMiddlewareClient({ req: request, res });
+  // First apply the intl middleware
+  const response = intlMiddleware(request);
+  const supabase = createMiddlewareClient({ req: request, res: response });
 
   try {
     const { data: { user }, error } = await supabase.auth.getUser();
+    
+    // Get the current locale from the URL or default to 'en'
+    const locale = request.nextUrl.pathname.split('/')[1] || 'en';
+    
+    // Handle login page access
+    if (request.nextUrl.pathname.includes('/login')) {
+      if (user) {
+        // If user is authenticated, redirect to overview
+        return NextResponse.redirect(new URL(`/${locale}/overview`, request.url));
+      }
+      return response;
+    }
 
     // Protected routes that require authentication
     const protectedRoutes = ['/summary', '/overview'];
     
-    // If there's an auth error or no user and we're trying to access protected routes
-    if ((error || !user) && protectedRoutes.includes(request.nextUrl.pathname)) {
-      const returnTo = encodeURIComponent(request.nextUrl.pathname);
-      return NextResponse.redirect(new URL(`/login?returnTo=${returnTo}`, request.url));
+    // Check if current path is protected
+    const isProtectedRoute = protectedRoutes.some(route => 
+      request.nextUrl.pathname.includes(route)
+    );
+
+    if (isProtectedRoute && (!user || error)) {
+      // Redirect to login while preserving the locale
+      return NextResponse.redirect(new URL(`/${locale}/login`, request.url));
     }
 
-    // If user is authenticated and tries to access login
-    if (user && request.nextUrl.pathname === '/login') {
-      return NextResponse.redirect(new URL('/overview', request.url));
-    }
+    return response;
 
-    return res;
   } catch (error) {
     console.error('Middleware error:', error);
-    // In case of error on protected routes, redirect to login
-    if (request.nextUrl.pathname === '/summary') {
-      return NextResponse.redirect(new URL('/login', request.url));
-    }
-    return res;
+    return response;
   }
 }
 
@@ -50,5 +75,6 @@ export const config = {
   matcher: [
     // Match all paths except static files and API routes
     '/((?!api|_next|fonts|examples|[\\w-]+\\.\\w+).*)',
-  ],
+    '/(ar|en|fr|de|zh)/:path*'
+  ]
 };

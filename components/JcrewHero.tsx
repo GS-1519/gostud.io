@@ -5,19 +5,19 @@ import lock from "@/public/logo/lock.svg"
 import circul from "@/public/logo/circul.svg"
 import mdi from "@/public/logo/mdi.svg"
 import tick from "@/public/logo/tick.svg"
+import { useTranslations } from 'next-intl'
 
 const JcrewHero = () => {
   const router = useRouter();
+  const t = useTranslations('heroPages.jcrew')
+  const heroFeaturesT = useTranslations('heroFeatures')
 
   const handleGetStarted = () => {
-    // Store the pack info in localStorage before redirecting
     localStorage.setItem('intendedPack', JSON.stringify({
       type: 'jcrew',
       path: '/headshot-packs/business-casual-headshots',
       redirect: true
     }));
-    
-    // Redirect to login
     router.push('/login');
   };
 
@@ -30,18 +30,18 @@ const JcrewHero = () => {
               <h1 className="text-[24px] sm:text-[28px] md:text-[36px] lg:text-[40px] font-bold leading-tight flex flex-col gap-1">
                 <div className="flex flex-wrap justify-center lg:justify-start items-center">
                   <span className="bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4] bg-clip-text text-transparent">
-                    Professional Portraits
+                    {t('title.part1')}
                   </span>
                 </div>
                 <div className="flex flex-wrap justify-center lg:justify-start">
                   <span className="text-[#111827]">
-                    With Timeless Elegance
+                    {t('title.part2')}
                   </span>
                 </div>
               </h1>
 
               <p className="mt-2 sm:mt-4 text-base sm:text-lg text-[#4B5563] max-w-[600px] mx-auto lg:mx-0">
-                Elevate your professional image with sophisticated portraits that blend classic style with modern polish. Perfect for business professionals and personal branding.
+                {t('description')}
               </p>
 
               <div className="mt-4 sm:mt-6 grid grid-cols-2 gap-2 max-w-[600px] mx-auto lg:mx-0">
@@ -49,25 +49,25 @@ const JcrewHero = () => {
                   <div className="rounded-full p-1 sm:p-1.5 flex-shrink-0">
                     <Image src={mdi} alt="styles" width={20} height={20} className="w-6 h-6 sm:w-7 sm:h-7" />
                   </div>
-                  <span className="text-[#4B5563] text-xs sm:text-sm">150+ Classic Styles</span>
+                  <span className="text-[#4B5563] text-xs sm:text-sm">{heroFeaturesT('styles')}</span>
                 </div>
                 <div className="flex items-center gap-1.5">
                   <div className="rounded-full p-1 sm:p-1.5 flex-shrink-0">
                     <Image src={circul} alt="clock" width={20} height={20} className="w-6 h-6 sm:w-7 sm:h-7" />
                   </div>
-                  <span className="text-[#4B5563] text-xs sm:text-sm">Ready in 60 Minutes</span>
+                  <span className="text-[#4B5563] text-xs sm:text-sm">{heroFeaturesT('delivery')}</span>
                 </div>
                 <div className="flex items-center gap-1.5">
                   <div className="rounded-full p-1 sm:p-1.5 flex-shrink-0">
                     <Image src={lock} alt="security" width={20} height={20} className="w-6 h-6 sm:w-7 sm:h-7" />
                   </div>
-                  <span className="text-[#4B5563] text-xs sm:text-sm whitespace-nowrap">100% Private & Secure</span>
+                  <span className="text-[#4B5563] text-xs sm:text-sm whitespace-nowrap">{heroFeaturesT('protection')}</span>
                 </div>
                 <div className="flex items-center gap-1.5">
                   <div className="rounded-full p-1 sm:p-1.5 flex-shrink-0">
                     <Image src={tick} alt="guarantee" width={20} height={20} className="w-6 h-6 sm:w-7 sm:h-7" />
                   </div>
-                  <span className="text-[#4B5563] text-xs sm:text-sm">Love It or Full Refund</span>
+                  <span className="text-[#4B5563] text-xs sm:text-sm">{heroFeaturesT('guarantee')}</span>
                 </div>
               </div>
 
@@ -76,7 +76,7 @@ const JcrewHero = () => {
                   onClick={handleGetStarted}
                   className="w-fit rounded-full bg-[#5B16FE] px-2.5 py-1.5 sm:px-4 sm:py-2.5 lg:px-6 lg:py-3 text-xs sm:text-sm lg:text-base text-white flex items-center justify-center sm:inline-flex gap-2 hover:bg-opacity-90 transition-all"
                 >
-                  Create Your Portrait
+                  {t('button')}
                   <span className="ml-1 sm:ml-2">→</span>
                 </button>
               </div>
@@ -87,7 +87,7 @@ const JcrewHero = () => {
             <div className="absolute w-full h-full lg:translate-x-[10%]">
               <Image
                 src="/Jcrew.svg"
-                alt="Professional classic style portraits"
+                alt={t('imageAlt')}
                 fill
                 className="object-contain lg:object-right"
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"

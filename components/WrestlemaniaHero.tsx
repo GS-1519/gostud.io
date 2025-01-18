@@ -1,24 +1,23 @@
 'use client'
 import { useRouter } from 'next/navigation'
 import Image from 'next/image'
-import Link from 'next/link'
 import lock from "@/public/logo/lock.svg"
 import circul from "@/public/logo/circul.svg"
 import mdi from "@/public/logo/mdi.svg"
 import tick from "@/public/logo/tick.svg"
+import { useTranslations } from 'next-intl'
 
 const WrestlemaniaHero = () => {
   const router = useRouter();
+  const t = useTranslations('heroPages.wrestlemania')
+  const heroFeaturesT = useTranslations('heroFeatures')
 
   const handleGetStarted = () => {
-    // Store the pack info in localStorage before redirecting
     localStorage.setItem('intendedPack', JSON.stringify({
       type: 'wrestlemania',
       path: '/photoshoot-packs/wrestlemania-photos',
       redirect: true
     }));
-    
-    // Redirect to login
     router.push('/login');
   };
 
@@ -31,16 +30,16 @@ const WrestlemaniaHero = () => {
               <h1 className="text-[24px] sm:text-[28px] md:text-[36px] lg:text-[40px] font-bold leading-tight flex flex-col gap-1">
                 <div className="flex flex-wrap justify-center lg:justify-start items-center">
                   <span className="bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4] bg-clip-text text-transparent">
-                    Champion Portraits
+                    {t('title.part1')}
                   </span>
                 </div>
                 <div className="flex flex-wrap justify-center lg:justify-start">
-                  <span className="text-[#161C2D]">With Wrestling Spirit</span>
+                  <span className="text-[#161C2D]">{t('title.part2')}</span>
                 </div>
               </h1>
 
               <p className="mt-2 sm:mt-4 text-base sm:text-lg text-[#4B5563] max-w-[600px] mx-auto lg:mx-0">
-                Transform into a wrestling legend with portraits that capture strength and charisma. Perfect for fans, athletes, and anyone who wants to showcase their inner champion.
+                {t('description')}
               </p>
 
               <div className="mt-4 sm:mt-6 grid grid-cols-2 gap-2 max-w-[600px] mx-auto lg:mx-0">
@@ -48,25 +47,25 @@ const WrestlemaniaHero = () => {
                   <div className="rounded-full p-1 sm:p-1.5 flex-shrink-0">
                     <Image src={mdi} alt="mdi" width={20} height={20} className="w-6 h-6 sm:w-7 sm:h-7" />
                   </div>
-                  <span className="text-[#4B5563] text-xs sm:text-sm">Pick from 150+ styles</span>
+                  <span className="text-[#4B5563] text-xs sm:text-sm">{heroFeaturesT('styles')}</span>
                 </div>
                 <div className="flex items-center gap-1.5">
                   <div className="rounded-full p-1 sm:p-1.5 flex-shrink-0">
                     <Image src={circul} alt="clock" width={20} height={20} className="w-6 h-6 sm:w-7 sm:h-7" />
                   </div>
-                  <span className="text-[#4B5563] text-xs sm:text-sm">Done in less than 1hr</span>
+                  <span className="text-[#4B5563] text-xs sm:text-sm">{heroFeaturesT('delivery')}</span>
                 </div>
                 <div className="flex items-center gap-1.5">
                   <div className="rounded-full p-1 sm:p-1.5 flex-shrink-0">
                     <Image src={lock} alt="lock" width={20} height={20} className="w-6 h-6 sm:w-7 sm:h-7" />
                   </div>
-                  <span className="text-[#4B5563] text-xs sm:text-sm whitespace-nowrap">Strict data protection</span>
+                  <span className="text-[#4B5563] text-xs sm:text-sm whitespace-nowrap">{heroFeaturesT('protection')}</span>
                 </div>
                 <div className="flex items-center gap-1.5">
                   <div className="rounded-full p-1 sm:p-1.5 flex-shrink-0">
                     <Image src={tick} alt="tick" width={20} height={20} className="w-6 h-6 sm:w-7 sm:h-7" />
                   </div>
-                  <span className="text-[#4B5563] text-xs sm:text-sm">Guaranteed results</span>
+                  <span className="text-[#4B5563] text-xs sm:text-sm">{heroFeaturesT('guarantee')}</span>
                 </div>
               </div>
 
@@ -75,7 +74,7 @@ const WrestlemaniaHero = () => {
                   onClick={handleGetStarted}
                   className="w-fit rounded-full bg-[#5B16FE] px-2.5 py-1.5 sm:px-4 sm:py-2.5 lg:px-6 lg:py-3 text-xs sm:text-sm lg:text-base text-white flex items-center justify-center sm:inline-flex gap-2 hover:bg-opacity-90 transition-all"
                 >
-                  Become a Legend
+                  {t('button')}
                   <span className="ml-1 sm:ml-2">→</span>
                 </button>
               </div>
@@ -86,7 +85,7 @@ const WrestlemaniaHero = () => {
             <div className="absolute w-full h-full lg:translate-x-[10%]">
               <Image
                 src="/wrestlemania.png"
-                alt="Wrestlemania portraits"
+                alt={t('imageAlt')}
                 fill
                 className="object-contain lg:object-right"
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"

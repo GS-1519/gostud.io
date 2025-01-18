@@ -9,6 +9,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { PackDetailsOverlay } from './PackDetailsOverlay';
 import { Button } from '@/components/ui/button';
 import { packImages } from '@/utils/packImages';
+import { useTranslations } from 'next-intl';
 
 interface Cost {
   cost: number;
@@ -75,6 +76,7 @@ export default function PacksGalleryZone() {
     pets: true
   });
   const [selectedPack, setSelectedPack] = useState<Pack | null>(null);
+  const t = useTranslations('packsGallery');
 
   const fetchPacks = async (): Promise<void> => {
     try {
@@ -84,14 +86,14 @@ export default function PacksGalleryZone() {
     } catch (err: unknown) {
       if (err instanceof Error) {
         toast({
-          title: "Error fetching packs",
+          title: t('errors.fetchTitle'),
           description: err.message,
           duration: 5000,
         });
       } else {
         toast({
-          title: "Unknown error",
-          description: "An unknown error occurred.",
+          title: t('errors.unknownTitle'),
+          description: t('errors.unknownDescription'),
           duration: 5000,
         });
       }
@@ -244,7 +246,7 @@ export default function PacksGalleryZone() {
     return (
       <div className="flex flex-col items-center justify-center h-64">
         <Loader2 className="w-8 h-8 animate-spin mb-4" />
-        <p className="mt-4 text-sm text-gray-500">Loading packs...</p>
+        <p className="mt-4 text-sm text-gray-500">{t('loading')}</p>
       </div>
     );
   }
@@ -252,7 +254,7 @@ export default function PacksGalleryZone() {
   if (packs.length === 0) {
     return (
       <div className="text-center py-8">
-        <p className="text-lg text-gray-500">No packs available.</p>
+        <p className="text-lg text-gray-500">{t('noPacks')}</p>
       </div>
     );
   }
@@ -260,13 +262,13 @@ export default function PacksGalleryZone() {
   const getCategoryTitle = (category: string) => {
     switch (category) {
       case 'adults':
-        return 'Professional & Lifestyle Packs';
+        return t('categories.adults');
       case 'children':
-        return 'Children Packs';
+        return t('categories.children');
       case 'pets':
-        return 'Pet Packs';
+        return t('categories.pets');
       default:
-        return `${category} Packs`;
+        return t('categories.default', { category });
     }
   };
 
@@ -341,7 +343,7 @@ export default function PacksGalleryZone() {
             gap: '10px'
           }}
         >
-          Continue
+          {t('continueButton')}
         </Button>
       </div>
     </div>

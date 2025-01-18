@@ -1,0 +1,1259 @@
+{
+  "hero": {
+    "title": "Fotos Profesionales a partir de tus Selfies",
+    "description": "Destaca en LinkedIn, Twitter y con reclutadores. Sube tus selfies y recibe cientos de fotos profesionales de nuestra fotógrafa IA favorita \"Aaria\".",
+    "features": {
+      "styles": "Más de 150 estilos y vestuarios",
+      "delivery": "Resultados en menos de una hora",
+      "protection": "Protección estricta de datos",
+      "guarantee": "Garantía de devolución"
+    },
+    "button": "Probar ahora",
+    "tryNow": "Comenzar ahora →"
+  },
+  "ExplainerSection": {
+    "title": "3 PASOS SENCILLOS PARA OBTENER TU PERFIL DE CALIDAD PROFESIONAL",
+    "step1": {
+      "title": "Sube algunas fotos",
+      "description": "Sube algunas fotos tuyas para que la IA aprenda sobre ti."
+    },
+    "step2": {
+      "title": "Nuestra fotógrafa IA \"Aaria\" se pone a trabajar",
+      "description": "Aaria crea un modelo personalizado y privado solo para ti, asegurando fotos que reflejen tu estilo e identidad únicos."
+    },
+    "step3": {
+      "title": "Descarga tus fotos favoritas",
+      "description": "Recibirás una variedad de estilos, dándote las fotos perfectas para mejorar tu perfil profesional."
+    },
+    "tryNow": "Probar ahora"
+  },
+  "PhotographyGrid": {
+    "title": "NUESTROS PAQUETES - TÚ LO NOMBRAS, NOSOTROS LO TENEMOS",
+    "description": "Explora nuestra gama completa de paquetes fotográficos, diseñados para adaptarse a todos los estilos y necesidades. Desde retratos profesionales hasta ediciones creativas, lo tenemos todo cubierto. Cualquiera que sea tu visión, nuestra fotógrafa IA la hace realidad sin esfuerzo.",
+    "tryNow": "Probar ahora",
+    "packs": {
+      "corporate": "Fotos Corporativas",
+      "speaker": "Paquete Conferenciante",
+      "doctor": "Profesional Médico",
+      "realtor": "Agente Inmobiliario",
+      "dating": "Perfil de Citas",
+      "redcarpet": "Alfombra Roja",
+      "boldcolors": "Colores Vivos",
+      "tattoo": "Artista del Tatuaje",
+      "glamour": "Foto Glamour",
+      "barbie": "Estilo Barbie",
+      "halloween": "Tema Halloween",
+      "mythical": "Mítico"
+    }
+  },
+  "Comparison": {
+    "title": "AHORRA TIEMPO Y DINERO",
+    "description": "Aaria te asegura estar listo para cada momento profesional. Desde currículums hasta LinkedIn, hacemos que tus fotos brillen sin esfuerzo.",
+    "columns": {
+      "goStudio": "Go Studio.ai",
+      "studio": "Sesión de Fotos en Estudio"
+    },
+    "items": {
+      "value": {
+        "label": "Relación calidad-precio",
+        "goStudio": "19€",
+        "studio": "200€"
+      },
+      "time": {
+        "label": "Ahorro de tiempo",
+        "goStudio": "30 minutos",
+        "studio": "2-3 días"
+      },
+      "variety": {
+        "label": "Variedad",
+        "goStudio": "30 fotos",
+        "studio": "4-5 fotos"
+      },
+      "choices": {
+        "label": "Más opciones",
+        "goStudio": "20 estilos",
+        "studio": "1 estilo"
+      }
+    },
+    "exploreMore": "Explorar más"
+  },
+  "Why": {
+    "title": {
+      "why": "¿POR QUÉ",
+      "gostudio": "GOSTUDIO.AI?"
+    },
+    "description": "Transforma tu imagen profesional con fotos generadas por IA. Obtén fotos de calidad de estudio para LinkedIn, currículum y más en minutos.",
+    "features": {
+      "linkedin": {
+        "title": "Destaca en LinkedIn",
+        "description": "Causa una primera impresión impactante con una foto profesional que aumenta las vistas de tu perfil y credibilidad."
+      },
+      "resume": {
+        "title": "Haz brillar tu currículum",
+        "description": "Mejora tus solicitudes de empleo con una foto pulida que añade un toque personal y profesionalismo."
+      },
+      "events": {
+        "title": "Eventos y Conferencias",
+        "description": "Muestra tu mejor imagen en eventos profesionales. Perfecto para perfiles de ponentes, directorios de eventos y credenciales."
+      },
+      "business": {
+        "title": "Tarjetas de Visita y Marca",
+        "description": "Crea una imagen profesional consistente en todos tus materiales con fotos de alta calidad."
+      },
+      "online": {
+        "title": "Presencia Digital",
+        "description": "Luce profesional en todas las plataformas - desde redes sociales hasta sitios web empresariales y redes profesionales."
+      }
+    },
+    "tryNow": "Probar ahora"
+  },
+  "HeadshotReview": {
+    "title": {
+      "part1": "FOTOS YA CREADAS PARA",
+      "part2": "CLIENTES SATISFECHOS"
+    },
+    "description": "No tomadas en estudio. Creadas por IA. No solo confíes en nuestra palabra. Nuestra IA transforma tus fotos cotidianas en fotos profesionales que reflejan tu confianza y credibilidad.",
+    "createButton": "Crear tu foto",
+    "testimonials": {
+      "col1": {
+        "1": "Los resultados son impresionantes y personalizados para mí. Estas fotos de IA son de otro nivel.",
+        "2": "Probé la plataforma con varias imágenes y quedé encantado con los resultados.",
+        "3": "¡El mejor generador de fotos que he usado jamás!"
+      },
+      "col2": {
+        "1": "Como profesional, las fotos de alta calidad son cruciales. La IA generó varias opciones magníficas que me representan perfectamente.",
+        "2": "¡Una herramienta imprescindible para profesionales!",
+        "3": "Una sola carga y obtienes tantas opciones para elegir."
+      },
+      "col3": {
+        "1": "Excelente calidad y diversidad en las fotos.",
+        "2": "Interfaz rápida y amigable. Aprecio la facilidad de uso de esta plataforma.",
+        "3": "La calidad de las fotos es notable. Aunque la mayoría son excelentes, el proceso de selección es simple y eficiente."
+      },
+      "col4": {
+        "1": "La IA es increíblemente inteligente para generar imágenes diversas. ¡Es como tener un mini estudio fotográfico!",
+        "2": "Me encanta cómo la plataforma ofrece múltiples opciones después de subir una sola imagen. ¡La conveniencia de resultados múltiples realmente vale la pena!",
+        "3": "Muy satisfecho con el servicio rápido y la calidad."
+      }
+    }
+  },
+  "FAQ": {
+    "title": "Preguntas Frecuentes",
+    "questions": {
+      "whatIs": {
+        "question": "¿Qué es GoStudio.ai? ¿Cómo funciona?",
+        "answer": "GoStudio.ai utiliza tus propias fotos para entrenar un modelo de IA personalizado que representa tu apariencia y puede generar tus fotos en diferentes estilos y atuendos. La calidad de las fotos generadas depende de las fotos que subas. Deberías intentar tener diferentes perspectivas de tu rostro, ojos y varios ángulos. Cada foto debería representar algo nuevo sobre tu apariencia y rasgos faciales."
+      },
+      "photoRequirements": {
+        "question": "¿Qué tipo de fotos debo subir?",
+        "answer": "Prioriza la variedad. Expresiones faciales variadas y fondos diversos, tomados en diferentes momentos del día, son las claves para fotos de entrada de alta calidad. ¡Ah, y mínimo maquillaje y accesorios, por favor!"
+      },
+      "ownership": {
+        "question": "¿Quién posee los derechos de las fotos generadas?",
+        "answer": "Mantienes la propiedad total de las fotos que subes y las imágenes generadas por IA. Tus fotos se utilizan solo para entrenar tu modelo de IA personal y nunca se comparten con otros usuarios."
+      },
+      "timing": {
+        "question": "¿Cuánto tiempo tarda en obtener mis fotos?",
+        "answer": "El proceso generalmente toma alrededor de 15-20 minutos entre la carga y la recepción de tu primer conjunto de fotos generadas por IA. Luego puedes generar variaciones adicionales instantáneamente."
+      },
+      "satisfaction": {
+        "question": "¿Qué pasa si no estoy satisfecho con los resultados?",
+        "answer": "Ofrecemos una garantía de satisfacción. Si no estás satisfecho con tus resultados, trabajaremos contigo para mejorarlos o te proporcionaremos un reembolso completo."
+      },
+      "linkedin": {
+        "question": "¿Puedo usar estas fotos en LinkedIn y otras plataformas profesionales?",
+        "answer": "¡Absolutamente! Nuestras fotos generadas por IA son perfectas para LinkedIn, sitios web empresariales, tarjetas de visita y otros usos profesionales."
+      },
+      "whichAI": {
+        "question": "¿Qué tecnología de IA utilizan?",
+        "answer": "Utilizamos una mezcla propietaria de tecnologías de IA avanzadas, incluyendo modelos de generación de imágenes de última generación, específicamente optimizados para crear fotos profesionales."
+      },
+      "dataSecurity": {
+        "question": "¿Cómo manejan la seguridad y privacidad de los datos?",
+        "answer": "Nos tomamos tu privacidad muy en serio. Tus fotos están encriptadas, almacenadas de forma segura y se utilizan solo para tu modelo de IA personal. Nunca compartimos tus datos con terceros."
+      }
+    }
+  },
+  "login": {
+    "title": "Iniciar sesión / Registrarse",
+    "emailLabel": "Correo electrónico",
+    "emailPlaceholder": "ejemplo@miempresa.com",
+    "emailRequired": "El correo electrónico es obligatorio",
+    "emailInvalid": "Dirección de correo electrónico inválida",
+    "googleButton": "Continuar con Google",
+    "mostUsed": "Más utilizado",
+    "orDivider": "O continuar con correo electrónico",
+    "submitButton": "Recibir código por correo",
+    "infoText": "Recibirás un código único en tu bandeja de entrada.",
+    "termsText": "Al registrarte, aceptas nuestros",
+    "termsLink": "Términos y Condiciones",
+    "andText": "y",
+    "privacyLink": "Política de Privacidad",
+    "errors": {
+      "loginFailed": "Error al iniciar sesión",
+      "invalidEmail": "Dirección de correo electrónico inválida",
+      "googleSignInFailed": "Error al iniciar sesión con Google",
+      "tryAgain": "Por favor, inténtalo de nuevo. Si el problema persiste, contacta con soporte."
+    },
+    "testimonial": "Las fotos salieron mejor que en algunos estudios que he probado",
+    "testimonialAuthor": "Sara Chen"
+  },
+  "waitingForMagicLink": {
+    "title": "Revisa tu correo para continuar",
+    "description": "Te hemos enviado un enlace mágico para acceder a tu cuenta.",
+    "hint": "Consejo: podría estar en tu carpeta de spam.",
+    "backButton": "Volver"
+  },
+  "loginFail": {
+    "title": "Error de inicio de sesión",
+    "defaultError": "Algo salió mal, por favor contacta con soporte.",
+    "browserError": "¡Ups! Parece que intentaste abrir tu enlace mágico desde otro dispositivo o navegador.",
+    "hint": "Consejo: Asegúrate de abrir el enlace en el mismo dispositivo/navegador desde el que intentaste registrarte.",
+    "loginLink": "Iniciar sesión"
+  },
+  "navbar": {
+    "loginButton": "Iniciar sesión / Registrarse"
+  },
+  "userMenu": {
+    "credits": "Créditos",
+    "logout": "Cerrar sesión"
+  },
+  "navigation": {
+    "headshotPacks": "Paquetes de Retratos",
+    "photoshootPacks": "Paquetes de Sesiones",
+    "freeTools": "Herramientas Gratuitas",
+    "backgroundLibrary": "Biblioteca de Fondos",
+    "backgroundRemover": "Eliminador de Fondos",
+    "testimonial": "Testimonios",
+    "pricing": "Precios",
+    "faq": "Preguntas Frecuentes"
+  },
+  "sidebar": {
+    "dashboard": "Panel Principal",
+    "myHeadshots": "Mis Retratos",
+    "photoEditorTools": "Herramientas de Edición",
+    "aiImageGenerator": "Generador de Imágenes IA",
+    "logout": "Cerrar Sesión",
+    "loggingOut": "Cerrando sesión..."
+  },
+  "overview": {
+    "myHeadshots": "Mis Retratos",
+    "generateImagesMessage": "¡Comienza a generar imágenes, Aaria está aquí para generar tus fotos!",
+    "generateImages": "Generar Imágenes"
+  },
+  "packs": {
+    "title": "Paquetes",
+    "description": "Elige un paquete para comenzar a generar imágenes.",
+    "selectPack": "01/ Seleccionar Paquete",
+    "instructions": "02/ Instrucciones",
+    "uploadPhotos": "03/ Subir Fotos",
+    "getCredits": "04/ Obtener Créditos",
+    "summary": "05/ Resumen",
+    "errorFetching": "Error al cargar paquetes",
+    "requestFailed": "La solicitud falló con código de estado 404"
+  },
+  "Pricing": {
+    "title": "CALIDAD PREMIUM A UN PRECIO 10 VECES MENOR",
+    "description": "Sin visitas al estudio. Sin tarifas de sesión de 200€+. Sin esperar citas. Consigue fotos profesionales impresionantes en solo 30 minutos, todo desde la comodidad de tu hogar.",
+    "badges": {
+      "mostPopular": "82% eligen este plan",
+      "bestValue": "Mejor Valor"
+    },
+    "oneTimePayment": "Pago Único",
+    "noSubscription": "Sin suscripción requerida",
+    "tryNow": "Probar Ahora",
+    "features": {
+      "headshots": {
+        "basic": "20 fotos de alta calidad",
+        "standard": "60 fotos de alta calidad",
+        "premium": "100 fotos de alta calidad"
+      },
+      "processing": {
+        "basic": "2 horas de procesamiento",
+        "standard": "1 hora de procesamiento",
+        "premium": "30 minutos de procesamiento"
+      },
+      "outfits": {
+        "basic": "5 vestuarios y fondos",
+        "standard": "20 vestuarios y fondos",
+        "premium": "40 vestuarios y fondos"
+      },
+      "poses": {
+        "basic": "5 poses",
+        "standard": "20 poses",
+        "premium": "40 poses"
+      }
+    }
+  },
+  "DataSecurity": {
+    "title": "VALORAMOS LA PRIVACIDAD DE LOS DATOS",
+    "subtitle": {
+      "line1": "De confianza para Líderes Fortune 500 y Profesionales Top",
+      "line2": "Organizaciones empresariales reconocidas y equipos confían en nosotros con sus datos"
+    },
+    "features": {
+      "noSelling": {
+        "title": "SIN VENTA NI COMPARTICIÓN DE DATOS",
+        "description": "Nunca venderemos tus datos ni los compartiremos con sitios web de terceros."
+      },
+      "control": {
+        "title": "TUS FOTOS, TU CONTROL",
+        "description": "No usaremos tus fotos para entrenar IA sin tu permiso."
+      },
+      "autoDeletion": {
+        "title": "ELIMINACIÓN AUTOMÁTICA DE DATOS",
+        "description": "El sistema elimina automáticamente todas tus imágenes después de 90 días. Tú eliges mantener la configuración a tu manera."
+      },
+      "security": {
+        "title": "SEGURIDAD DE PRIMER NIVEL",
+        "description": "Encriptamos todos los datos sensibles de usuarios. Utilizamos el mejor software de confianza de la industria para tus datos."
+      }
+    },
+    "createButton": "Crear Tu Foto"
+  },
+  "TeamSection": {
+    "title": {
+      "why": "¿POR QUÉ",
+      "gostudio": "GOSTUDIO.AI?"
+    },
+    "description": "Crea una apariencia profesional unificada para tu equipo con fotos de calidad de estudio, elaboradas sin esfuerzo por Aaria. Entregamos retratos pulidos que reflejan los valores de tu empresa. Sin costosas sesiones fotográficas, solo resultados perfectos y de alta calidad.",
+    "teamHeadshots": "Fotos de Equipo",
+    "tryNow": "Probar Ahora"
+  },
+  "CreationGallery": {
+    "title": "ECHA UN VISTAZO A MIS CREACIONES",
+    "description": "Me emociona compartir una muestra de mi trabajo contigo.",
+    "createButton": "Crear Tu Foto"
+  },
+  "packsGallery": {
+    "loading": "Cargando paquetes...",
+    "noPacks": "No hay paquetes disponibles.",
+    "continueButton": "Continuar",
+    "errors": {
+      "fetchTitle": "Error al cargar los paquetes",
+      "unknownTitle": "Error desconocido",
+      "unknownDescription": "Ha ocurrido un error desconocido."
+    },
+    "categories": {
+      "adults": "Paquetes Profesionales y Estilo de Vida",
+      "children": "Paquetes para Niños",
+      "pets": "Paquetes para Mascotas",
+      "default": "Paquetes de {category}"
+    },
+    "packDetails": {
+      "close": "Cerrar",
+      "select": "Seleccionar Paquete",
+      "imagesIncluded": "Imágenes incluidas",
+      "price": "Precio"
+    }
+  },
+  "headshots": {
+    "title": "Fotos IA para Profesionales",
+    "subtitle": "Cientos de profesionales de negocios de todo tipo usan HeadshotPro cada día para generar fotos profesionales que pueden usar en el trabajo.",
+    "showMore": "Ver Todos los Estilos",
+    "showLess": "Mostrar Menos",
+    "types": {
+      "doctor": {
+        "title": "Fotos para Médicos",
+        "description": "Retratos médicos profesionales para profesionales de la salud, médicos y consultorios médicos."
+      },
+      "lawyer": {
+        "title": "Fotos para Abogados",
+        "description": "Retratos profesionales para profesionales legales y bufetes de abogados."
+      },
+      "actor": {
+        "title": "Fotos para Actores",
+        "description": "Crea impresionantes retratos glamurosos perfectos para portfolios de moda, belleza y modelaje profesional."
+      },
+      "realtor": {
+        "title": "Estilo Agente Inmobiliario",
+        "description": "Retratos profesionales para profesionales inmobiliarios."
+      },
+      "tedSpeaker": {
+        "title": "Estilo Conferenciante TED",
+        "description": "Retratos profesionales para oradores y presentadores."
+      },
+      "businessCasual": {
+        "title": "Fotos Business Casual",
+        "description": "Retratos clásicos y elegantes inspirados en la estética de J.Crew"
+      },
+      "model": {
+        "title": "Fotos de Modelo",
+        "description": "Retratos elegantes y provocativos inspirados en el estilo de Helmut Newton"
+      },
+      "styledSuccess": {
+        "title": "Estilizado para el Éxito",
+        "description": "Retratos profesionales con estilismo sofisticado para una imagen contemporánea y pulida."
+      },
+      "professional": {
+        "title": "Paquete Profesional",
+        "description": "Paquete completo de fotos profesionales perfecto para necesidades corporativas y empresariales."
+      },
+      "partnersCollection": {
+        "title": "Colección para Socios",
+        "description": "Fotos premium diseñadas específicamente para socios de bufetes y ejecutivos senior."
+      },
+      "lawyerBranded": {
+        "title": "Marca de Abogado",
+        "description": "Fotos especializadas que refuerzan tu marca legal y autoridad profesional."
+      },
+      "effortlessProfessionalism": {
+        "title": "Profesionalismo Sin Esfuerzo",
+        "description": "Fotos naturales y accesibles que mantienen una fuerte presencia profesional."
+      }
+    }
+  },
+  "photoGuide": {
+    "title": "Guía de Imágenes",
+    "subtitle": "Sigue la guía para obtener fotos de calidad.",
+    "sections": {
+      "goodPhotos": "Buenas Fotos para Subir",
+      "photosToAvoid": "Fotos que debes evitar",
+      "refrainUsing": "Evita usar"
+    },
+    "descriptions": {
+      "closeUpSelfie": "Selfie de primer plano",
+      "facingCamera": "Mirando a la cámara",
+      "halfBody": "Medio cuerpo",
+      "onlyVisible": "Solo tú eres visible",
+      "groupSelfies": "Selfies grupales",
+      "withSomeone": "Con otra persona",
+      "hidingFace": "Cubriendo el rostro",
+      "wearingGlasses": "Usando gafas",
+      "onlyFace": "Solo rostro",
+      "nudity": "Desnudez",
+      "blurredImage": "Imagen borrosa",
+      "tooMuchShadow": "Demasiada sombra"
+    },
+    "alt": {
+      "goodPhoto1": "Ejemplo de buena foto 1",
+      "goodPhoto2": "Ejemplo de buena foto 2",
+      "goodPhoto3": "Ejemplo de buena foto 3",
+      "goodPhoto4": "Ejemplo de buena foto 4",
+      "badPhoto1": "Ejemplo de mala foto 1",
+      "badPhoto2": "Ejemplo de mala foto 2",
+      "badPhoto3": "Ejemplo de mala foto 3",
+      "badPhoto4": "Ejemplo de mala foto 4"
+    }
+  },
+  "trainModel": {
+    "title": "Entrenando tu Modelo IA",
+    "description": "Estamos procesando tus fotos y creando un modelo personalizado. Esto tomará unos minutos.",
+  
+    "uploadRequirements": "Por favor, sube al menos 4 imágenes y asegúrate de que la información del modelo esté disponible.",
+    "uploadingImages": "Subiendo imágenes...",
+    "pleaseWait": "Por favor, espera mientras procesamos tus fotos",
+    "startUploading": "Comenzar a subir fotos",
+    "uploadFiles": "Subir archivos",
+    "dragDropHint": "Haz clic para subir o arrastra y suelta",
+    "fileTypes": "PNG, JPG, HEIC hasta 120MB",
+    "goodPhotos": "Buenas Fotos",
+    "badPhotos": "Malas Fotos",
+    "continue": "Continuar",
+    "imageGuide": "Guía de Imágenes",
+    "followGuide": "Sigue la guía para obtener fotos de calidad.",
+    "photoRequirements": "Para garantizar una mejor calidad de foto, Aaria requiere 1 foto de medio cuerpo y 7 primeros planos tuyos mirando a la cámara.",
+    "autoCropBanner": "¡Ahora puedes recortar automáticamente tus selfies grupales! Simplemente toca la imagen que deseas recortar y nosotros nos encargaremos del resto."
+  },
+  "checkout": {
+    "title": "PAGO",
+    "subtitle": "Ahorra cientos en comparación con una sesión fotográfica. Personaliza tu foto profesional con IA mediante ediciones manuales u obtén una nueva toma si las cargas iniciales no fueron correctas.",
+    "standardBadge": "82% elige este plan",
+    "premiumBadge": "Mejor Valor",
+    "subtotal": "Subtotal",
+    "tax": "Impuestos",
+    "totalDue": "Total a pagar hoy",
+    "noSubscription": "Sin suscripción requerida",
+    "oneTimePayment": "Pago Único",
+    "features": {
+      "headshots": {
+        "basic": "10 Fotos Profesionales con IA",
+        "standard": "30 Fotos Profesionales con IA",
+        "premium": "100 Fotos Profesionales con IA"
+      },
+      "processing": {
+        "basic": "Tiempo de procesamiento de 24 horas",
+        "standard": "Tiempo de procesamiento de 12 horas",
+        "premium": "Tiempo de procesamiento de 6 horas"
+      },
+      "outfits": {
+        "basic": "2 Vestuarios",
+        "standard": "4 Vestuarios",
+        "premium": "8 Vestuarios"
+      },
+      "poses": {
+        "basic": "2 Poses",
+        "standard": "4 Poses",
+        "premium": "8 Poses"
+      }
+    }
+  },
+  "summary": {
+    "detectedFeatures": "Estas son las características que Aaria ha detectado. También puedes editarlas si es necesario.",
+    "age": "EDAD",
+    "eyeColor": "COLOR DE OJOS",
+    "hairColor": "COLOR DE PELO",
+    "gender": "GÉNERO",
+    "ethnicity": "ETNIA",
+    "notSpecified": "No especificado",
+    "enterEyeColor": "Ingresa el color de ojos",
+    "enterHairColor": "Ingresa el color de pelo",
+    "enterEthnicity": "Ingresa la etnia",
+    "save": "Guardar",
+    "male": "Masculino",
+    "orderSummary": "Resumen del Pedido",
+    "summaryDescription": "Ahorra cientos en comparación con una sesión fotográfica. Personaliza tu foto profesional con IA mediante ediciones manuales u obtén una nueva toma si las cargas iniciales no fueron correctas.",
+    "uploadedPhotos": "FOTOS SUBIDAS",
+    "processing": "Procesando...",
+    "startTraining": "Comenzar Entrenamiento",
+    "noModelData": "Sin Datos del Modelo",
+    "noModelDataDesc": "No se encontraron datos del modelo. Por favor, regresa y crea un modelo primero.",
+    "generateHeadshots": "Generar Fotos",
+    "loading": "Cargando..."
+  },
+  "photoTypes": {
+    "title": "Estilos de Fotos Profesionales con IA",
+    "subtitle": "Elige entre nuestra diversa colección de estilos fotográficos impulsados por IA para crear tu retrato profesional perfecto.",
+    "showMore": "Ver Todos los Estilos",
+    "showLess": "Mostrar Menos",
+    "types": {
+      "vintageAmericana": {
+        "title": "Fotos Vintage Americana",
+        "description": "Retratos profesionales con un toque americano clásico, ideales para LinkedIn y networking empresarial"
+      },
+      "onesiePortraits": {
+        "title": "Retratos en Pijama",
+        "description": "Adorables retratos para bebés y niños pequeños"
+      },
+      "halloweenPhotos": {
+        "title": "Fotos de Halloween",
+        "description": "Retratos divertidos y espeluznantes para entusiastas de Halloween"
+      },
+      "birthdayParty": {
+        "title": "Reserva la Fecha de Cumpleaños",
+        "description": "Retratos naturales y auténticos para perfiles de citas"
+      },
+      "artisticPortraits": {
+        "title": "Retratos Artísticos",
+        "description": "Fotografía de retrato creativa y artística"
+      },
+      "wrestlemaniaPhotos": {
+        "title": "Fotos Estilo Lucha Libre",
+        "description": "Retratos dinámicos inspirados en la lucha libre que capturan fuerza y carácter"
+      },
+      "redCarpet": {
+        "title": "Fotos de Alfombra Roja",
+        "description": "Retratos glamurosos y sofisticados inspirados en la alfombra roja"
+      },
+      "gameOfThrones": {
+        "title": "Retratos Juego de Tronos",
+        "description": "Retratos inspirados en la fantasía de Juego de Tronos"
+      },
+      "kidsBirthday": {
+        "title": "Retratos de Cumpleaños Infantil",
+        "description": "Capturando momentos especiales para cumpleaños de niños"
+      },
+      "mythicalCreatures": {
+        "title": "Retratos de Criaturas Míticas",
+        "description": "Retratos inspirados en la fantasía con criaturas míticas"
+      },
+      "onlineDating": {
+        "title": "Fotos para Perfiles de Citas",
+        "description": "Retratos perfectos para perfiles de citas en línea"
+      },
+      "petPhotography": {
+        "title": "Fotografía de Mascotas",
+        "description": "Retratos profesionales para mascotas"
+      },
+      "popColor": {
+        "title": "Fotos Pop Color",
+        "description": "Retratos vibrantes con influencia del arte pop"
+      },
+      "youtubeThumbnails": {
+        "title": "Miniaturas para YouTube",
+        "description": "Retratos llamativos perfectos para miniaturas de YouTube"
+      },
+      "actressPortraits": {
+        "title": "Retratos de Actriz",
+        "description": "Fotografías vibrantes y detalladas con estilo cinematográfico"
+      },
+      "dreamlandKids": {
+        "title": "Fotos Infantiles Mágicas",
+        "description": "Retratos mágicos y fantásticos para niños en escenarios de ensueño"
+      },
+      "babyDoodles": {
+        "title": "Garabatos de Bebé",
+        "description": "Transforma las fotos de tu bebé en adorables retratos estilo dibujo. Perfectos para decoración de guardería y anuncios de nacimiento."
+      },
+      "birthdayMagic": {
+        "title": "Magia de Cumpleaños",
+        "description": "Crea retratos encantadores perfectos para celebraciones, invitaciones y ocasiones especiales."
+      },
+      "personalBrand": {
+        "title": "Fotografía de Marca Personal",
+        "description": "Soluciones fotográficas profesionales diseñadas para elevar tu marca personal y crear una presencia visual consistente."
+      },
+      "casualPhotography": {
+        "title": "Fotografía Casual",
+        "description": "Retratos naturales y relajados perfectos para redes sociales y necesidades profesionales informales."
+      },
+      "casualCollection": {
+        "title": "Colección Casual",
+        "description": "Crea una serie diversa de retratos casuales y de estilo de vida perfectos para mantener una presencia en línea consistente."
+      },
+      "catMagic": {
+        "title": "Magia Felina",
+        "description": "Transforma las fotos de tu gato en retratos mágicos que capturan su personalidad única y encanto."
+      },
+      "cyberpunk": {
+        "title": "Cyberpunk",
+        "description": "Transfórmate en un impresionante personaje cyberpunk con estilos de arte digital futurista."
+      },
+      "hanukkahMiracle": {
+        "title": "Milagro de Hanukkah",
+        "description": "Crea hermosos retratos temáticos de Hanukkah que capturan la magia del Festival de las Luces."
+      },
+      "happyKid": {
+        "title": "Niño Feliz",
+        "description": "Crea encantadores retratos de niños felices que capturan su alegría e inocencia pura."
+      },
+      "influencer": {
+        "title": "Influencer",
+        "description": "Crea impresionantes retratos estilo influencer perfectos para redes sociales y creación de contenido."
+      },
+      "meIconic": {
+        "title": "Mi Estilo Icónico",
+        "description": "Crea tu propio estilo de retrato icónico que te hace destacar entre la multitud."
+      },
+      "merryChristmas": {
+        "title": "Feliz Navidad",
+        "description": "Crea retratos navideños mágicos que capturan la alegría y calidez de la temporada festiva."
+      },
+      "playfulCasual": {
+        "title": "Casual Divertido",
+        "description": "Crea retratos casuales divertidos y naturales que muestran tu lado más alegre."
+      },
+      "podcaster": {
+        "title": "Podcaster",
+        "description": "Crea retratos profesionales de podcaster que ayudan a construir tu marca de audio."
+      },
+      "romanticMaternity": {
+        "title": "Maternidad Romántica",
+        "description": "Crea hermosos y románticos retratos de maternidad que celebran la magia del embarazo."
+      },
+      "socialMedia": {
+        "title": "Redes Sociales",
+        "description": "Crea impresionantes retratos optimizados para todas las plataformas de redes sociales."
+      },
+      "timeMachine": {
+        "title": "Máquina del Tiempo",
+        "description": "Viaja a través del tiempo con impresionantes retratos históricos y fotos temáticas de época."
+      },
+      "timelessStudio": {
+        "title": "Estudio Atemporal",
+        "description": "Crea elegantes retratos de estudio con un atractivo profesional atemporal."
+      },
+      "telAvivFashion": {
+        "title": "Moda Tel Aviv",
+        "description": "Crea impresionantes retratos de moda inspirados en Tel Aviv con estilo urbano."
+      },
+      "wildFriends": {
+        "title": "Amigos Salvajes",
+        "description": "Crea retratos mágicos con tus mascotas y compañeros animales."
+      },
+      "winterWonderland": {
+        "title": "País de las Maravillas Invernal",
+        "description": "Crea encantadores retratos invernales en mágicas escenas nevadas."
+      },
+      "workFromHome": {
+        "title": "Trabajo desde Casa",
+        "description": "Crea retratos profesionales para trabajo remoto."
+      },
+      "vintagePack": {
+        "title": "Paquete Vintage",
+        "description": "Crea hermosos retratos de estilo vintage con estética retro atemporal y encanto clásico."
+      },
+      "professionalTattoos": {
+        "title": "Retratos Profesionales con Tatuajes",
+        "description": "Muestra tus tatuajes con retratos profesionales que resaltan tu expresión artística."
+      },
+      "annieLeibovitz": {
+        "title": "Estilo Annie Leibovitz",
+        "description": "Retratos dramáticos inspirados en el icónico estilo fotográfico de Annie Leibovitz."
+      },
+      "barbie": {
+        "title": "Estilo Barbie",
+        "description": "Fotografía de retratos divertida y elegante inspirada en Barbie."
+      },
+      "vikingPortraits": {
+        "title": "Retratos Vikingos",
+        "description": "Poderosos retratos inspirados en vikingos perfectos para temas históricos y sesiones de fantasía."
+      },
+      "marvelClass": {
+        "title": "Clase Marvel",
+        "description": "Retratos dinámicos de alto impacto con calidad cinematográfica inspirada en las producciones Marvel."
+      }
+    }
+  },
+  
+  "common": {
+    "features": {
+      "styles": "Elige entre más de 150 estilos",
+      "delivery": "Resultados en 1 hora",
+      "protection": "Protección estricta de datos",
+      "guarantee": "Garantía de devolución"
+    }
+  },
+  "heroPages": {
+    "lawyer": {
+      "title": {
+        "part1": "Fotografías",
+        "part2": "Profesionales para Abogados",
+        "part3": "Creadas por IA",
+        "part4": "en Minutos"
+      },
+      "description": "Transforma tus selfies en retratos profesionales legales que generan confianza y credibilidad con los clientes.",
+      "button": "Comenzar Gratis"
+    },
+    "doctor": {
+      "title": {
+        "part1": "Fotografías",
+        "part2": "Médicas Profesionales",
+        "part3": "Generadas por IA",
+        "part4": "en Minutos"
+      },
+      "description": "Transforma tus selfies en retratos médicos profesionales que generan confianza y credibilidad con los pacientes.",
+      "button": "Empezar Gratis"
+    },
+    "dating": {
+      "title": {
+        "part1": "Muestra tu Verdadero Yo",
+        "part2": "Fotos para Citas",
+        "part3": "Generadas por IA",
+        "part4": "Que Crean Conexiones Genuinas"
+      },
+      "description": "Sube tu foto y mejora instantáneamente tu perfil de citas con nuestra amplia variedad de resultados.",
+      "button": "Empezar Gratis"
+    },
+    "glamour": {
+      "title": {
+        "part1": "Estudio de Retratos",
+        "part2": "Profesionales con IA"
+      },
+      "description": "Transforma tus fotos cotidianas en impresionantes retratos profesionales. Perfecto para redes sociales, perfiles de citas y marca personal."
+    },
+    "realtor": {
+      "title": {
+        "part1": "Fotos Profesionales",
+        "part2": "para Agentes Inmobiliarios",
+        "part3": "Impulsadas por IA"
+      },
+      "description": "Transforma tus selfies en retratos inmobiliarios profesionales que construyen confianza y credibilidad con clientes potenciales.",
+      "button": "Empezar Gratis"
+    },
+    "speaker": {
+      "title": {
+        "part1": "Fotos Profesionales",
+        "part2": "para Conferenciantes",
+        "part3": "y Charlas TED",
+        "part4": "Impulsadas por IA"
+      },
+      "description": "Transforma tus selfies en poderosos retratos de orador que captan la atención e inspiran confianza. Perfecto para keynotes, conferencias y presentaciones profesionales.",
+      "button": "Empezar Gratis"
+    },
+    "jcrew": {
+      "title": {
+        "part1": "Fotos Profesionales Casuales",
+        "part2": "Impulsadas por IA"
+      },
+      "description": "Transforma tus fotos en retratos profesionales casuales que combinan amabilidad y profesionalismo. Perfecto para entornos laborales modernos e industrias creativas.",
+      "button": "Empezar ahora"
+    },
+    "americana": {
+      "title": {
+        "part1": "Estilo Retro Americana",
+        "part2": "Retratos con Alma"
+      },
+      "description": "Captura el encanto nostálgico de la clásica Americana en tus retratos. Perfecto para músicos, artistas y cualquiera que busque ese atractivo vintage atemporal."
+    },
+    "onesie": {
+      "title": {
+        "part1": "Estilo Cómodo y Divertido",
+        "part2": "Retratos que Destacan"
+      },
+      "description": "Transforma tus fotos en retratos acogedores y divertidos que muestran tu personalidad. Perfecto para redes sociales, creadores de contenido y cualquiera que ame la comodidad con estilo.",
+      "button": "Comienza Ahora",
+      "imageAlt": "Ejemplos de retratos estilo onesie"
+    },
+    "halloween": {
+      "title": {
+        "part1": "Estilo Halloween Espeluznante",
+        "part2": "Retratos con Carácter"
+      },
+      "description": "Transforma tus fotos en retratos espeluznantes de Halloween. Perfecto para redes sociales, contenido de temporada y cualquiera que ame la temporada de terror.",
+      "button": "Empieza Ahora",
+      "imageAlt": "Ejemplos de retratos de Halloween"
+    },
+    "date": {
+      "title": {
+        "part1": "Estilo Save the Date",
+        "part2": "Momentos Memorables"
+      },
+      "description": "Crea impresionantes retratos save-the-date que capturen tus momentos especiales. Perfecto para bodas, cumpleaños y todos tus anuncios de celebración.",
+      "button": "Empezar a Crear",
+      "imageAlt": "Ejemplos de retratos save the date"
+    },
+    "artistic": {
+      "title": {
+        "part1": "Estilo Artístico",
+        "part2": "Retratos con Alma"
+      },
+      "description": "Transforma tus fotos en obras maestras artísticas que capturan tu esencia. Perfecto para redes sociales, portafolios creativos y cualquiera que ame la expresión artística.",
+      "button": "Empezar a Crear",
+      "imageAlt": "Ejemplos de retratos artísticos"
+    },
+    "wrestlemania": {
+      "title": {
+        "part1": "Estilo Campeón de Lucha Libre",
+        "part2": "Retratos Poderosos"
+      },
+      "description": "Transforma tus fotos en épicos retratos de campeón de lucha libre. Perfecto para fans, redes sociales y cualquiera que quiera capturar el espíritu de campeón.",
+      "button": "Comenzar",
+      "imageAlt": "Ejemplos de retratos de campeón de lucha libre"
+    },
+    "carpet": {
+      "title": {
+        "part1": "Estilo Alfombra Roja",
+        "part2": "Retratos de Celebridad"
+      },
+      "description": "Transforma tus fotos en glamurosos retratos de alfombra roja. Perfecto para redes sociales, eventos especiales y cualquiera que quiera sentirse como una estrella.",
+      "button": "Empezar Ahora",
+      "imageAlt": "Ejemplos de retratos de alfombra roja"
+    },
+    "myth": {
+      "title": {
+        "part1": "Transfórmate en",
+        "part2": "Criaturas Míticas",
+        "part3": "con mágica",
+        "part4": "IA"
+      },
+      "description": "Convierte tus fotos en encantadores retratos de criaturas míticas. Perfecto para amantes de la fantasía, proyectos creativos y cualquiera que sueñe con transformaciones mágicas.",
+      "button": "Empezar a Crear",
+      "imageAlt": "Ejemplos de retratos de criaturas míticas"
+    },
+    "birthday": {
+      "title": {
+        "part1": "Experiencia Mágica",
+        "part2": "de Retratos de Cumpleaños"
+      },
+      "description": "Transforma las fotos de tu hijo en mágicos retratos de cumpleaños. Perfecto para invitaciones, recuerdos y crear momentos especiales.",
+      "button": "Crear Magia",
+      "imageAlt": "Ejemplos de retratos de cumpleaños"
+    },
+    "dog": {
+      "title": {
+        "part1": "Estudio de Retratos",
+        "part2": "Artísticos para Perros"
+      },
+      "description": "Transforma las fotos de tu perro en impresionantes retratos artísticos. Perfecto para amantes de las mascotas, redes sociales y celebrar a tu amigo peludo.",
+      "button": "Comenzar Ahora",
+      "imageAlt": "Ejemplos de retratos de perros"
+    },
+    "color": {
+      "title": {
+        "part1": "Estudio de Retratos",
+        "part2": "Pop Color con IA"
+      },
+      "description": "Transforma tus fotos en retratos vibrantes y coloridos. Perfecto para redes sociales, marca personal y expresión creativa.",
+      "button": "Empezar a Crear",
+      "imageAlt": "Ejemplos de retratos pop color"
+    },
+    "youtube": {
+      "title": {
+        "part1": "Estudio de Creación de",
+        "part2": "Miniaturas de YouTube"
+      },
+      "description": "Crea miniaturas llamativas para YouTube que aumenten tus visualizaciones. Perfecto para creadores de contenido y crecimiento del canal.",
+      "button": "Comenzar Ahora",
+      "imageAlt": "Ejemplos de miniaturas de YouTube"
+    },
+    "botanical": {
+      "title": {
+        "part1": "IA de Belleza Natural",
+        "part2": "Retratos con",
+        "part3": "Ilustraciones Botánicas"
+      },
+      "description": "Abraza la elegancia de la naturaleza con retratos generados por IA mejorados con delicados elementos de ilustración botánica.",
+      "button": "Empezar Gratis",
+      "imageAlt": "Ejemplos de retratos botánicos"
+    },
+    
+  "partner": {
+    "title": {
+      "part1": "Retratos",
+      "part2": "para Socios Legales",
+      "part3": "Excelencia",
+      "part4": "Impulsada por IA"
+    },
+    "description": "Eleve la presencia ejecutiva de su firma con retratos diseñados para socios senior y abogados ejecutivos. Refleje la autoridad y credibilidad que su posición merece.",
+    "button": "Eleve su Presencia",
+    "imageAlt": "Retratos profesionales para socios legales"
+  },
+  "stylishLawyer": {
+    "title": {
+      "part1": "Eleve su",
+      "part2": "Presencia Legal",
+      "part3": "Retratos Profesionales",
+      "part4": "en Minutos"
+    },
+    "description": "Gane respeto y confianza con retratos profesionales generados por IA, personalizados para profesionales legales. Perfecto para sitios web de bufetes, perfiles de LinkedIn y directorios profesionales.",
+    "button": "Transforme su Imagen",
+    "imageAlt": "Retratos elegantes para abogados"
+  },
+  "professionalism": {
+    "title": {
+      "part1": "Profesionalismo",
+      "part2": "Sin Igual",
+      "part3": "Excelencia Legal",
+      "part4": "con IA"
+    },
+    "description": "Muestre su experiencia legal con retratos que encarnan excelencia, credibilidad y sofisticación. Ideal para abogados que exigen los más altos estándares.",
+    "button": "Eleve su Perfil",
+    "imageAlt": "Retratos profesionales legales"
+  }
+
+  },
+  "heroFeatures": {
+    "styles": "Más de 150 estilos",
+    "delivery": "Listo en menos de 1 hora",
+    "protection": "Protección estricta de privacidad",
+    "guarantee": "Resultados garantizados"
+  },
+  
+    
+      "heroPacks": {
+        "dreamlandKids": {
+          "gradientTitle": "Fotos Mágicas Infantiles",
+          "normalTitle": "Donde los Sueños se Hacen Realidad",
+          "description": "Transforma las fotos de tus hijos en pinturas mágicas en un mundo de ensueño. Fondos fantásticos, temas de cuentos de hadas y escenas divertidas para crear recuerdos mágicos.",
+          "buttonText": "Comenzar la Magia"
+        },
+        "babyDoodles": {
+          "gradientTitle": "Garabatos de Bebé",
+          "normalTitle": "Fotos Adorables de Bebés",
+          "description": "Crea fotos hermosas y divertidas para bebés. Perfectas para capturar momentos felices de la infancia y recuerdos familiares.",
+          "buttonText": "Capturar Momentos"
+        },
+        "brandingPhotography": {
+          "gradientTitle": "Fotografía de Marca",
+          "normalTitle": "Destaca y Brilla",
+          "description": "Eleva tu marca personal con fotografía profesional impulsada por IA",
+          "buttonText": "Construir tu Marca"
+        },
+        "workFromHome": {
+          "gradientTitle": "Trabajo desde Casa",
+          "normalTitle": "Fotos Profesionales Remotas",
+          "description": "Crea fotos profesionales para el trabajo remoto. Perfectas para trabajadores remotos y reuniones virtuales",
+          "buttonText": "Trabajar Inteligente"
+        },
+        "vintagePack": {
+          "gradientTitle": "Paquete Vintage",
+          "normalTitle": "Fotos Estilo Retro",
+          "description": "Crea hermosos retratos de estilo vintage. Perfectos para looks retro y fotos clásicas",
+          "buttonText": "Volver al Pasado"
+        },
+        "birthdayMagic": {
+          "gradientTitle": "Magia de Cumpleaños",
+          "normalTitle": "Fotos Festivas",
+          "description": "Crea fotos mágicas para tu cumpleaños. Perfectas para ocasiones especiales",
+          "buttonText": "Empezar a Celebrar"
+        },
+        "casualPhotos": {
+          "gradientTitle": "Fotos Casuales",
+          "normalTitle": "Natural y Amigable",
+          "description": "Crea retratos naturales que muestren tu verdadera personalidad. Perfectos para redes sociales y marca personal",
+          "buttonText": "Obtener Fotos Naturales"
+        },
+        "casualCollection": {
+          "gradientTitle": "Colección Casual",
+          "normalTitle": "Momentos Naturales",
+          "description": "Crea una variedad de fotos casuales que reflejen tu verdadera personalidad. Perfectas para contenido social y perfil.",
+          "buttonText": "Iniciar Colección"
+        },
+        "catMagic": {
+          "gradientTitle": "Magia Felina",
+          "normalTitle": "Momentos Especiales",
+          "description": "Transforma las fotos de tu gato en imágenes mágicas llenas de personalidad. Perfectas para amantes de las mascotas y redes sociales.",
+          "buttonText": "Crear Magia"
+        },
+        "christmasElf": {
+          "gradientTitle": "Duende Navideño",
+          "normalTitle": "Magia Navideña",
+          "description": "Crea fotos divertidas con tema de duende navideño. Perfectas para tarjetas navideñas y celebraciones familiares.",
+          "buttonText": "Comenzar Diversión"
+        },
+        "christmasSweater": {
+          "gradientTitle": "Suéter Navideño",
+          "normalTitle": "Ambiente Acogedor Navideño",
+          "description": "Crea fotos festivas y acogedoras con tema de suéter navideño. Perfectas para tarjetas navideñas y fiestas de oficina.",
+          "buttonText": "Empezar Celebración"
+        },
+        "familyChristmas": {
+          "gradientTitle": "Navidad Familiar",
+          "normalTitle": "Recuerdos Familiares Mágicos",
+          "description": "Crea fotos familiares mágicas navideñas que capturen la magia de la temporada. Perfectas para tarjetas navideñas y preciosos recuerdos familiares.",
+          "buttonText": "Crear Magia Familiar"
+        },
+        "cyberpunk": {
+          "gradientTitle": "Cyberpunk",
+          "normalTitle": "Futuro Digital",
+          "description": "Transforma tus fotos en arte cyberpunk futurista. Perfecto para fans de la ciencia ficción y diseño futurista.",
+          "buttonText": "Entrar al Futuro"
+        },
+        "hanukkahMiracle": {
+          "gradientTitle": "Milagro de Hanukkah",
+          "normalTitle": "Festival de las Luces",
+          "description": "Crea hermosas fotos con tema de Hanukkah que capturen la magia del Festival de las Luces. Perfectas para tarjetas festivas y celebraciones familiares.",
+          "buttonText": "Encender las Luces"
+        },
+        "happyKid": {
+          "gradientTitle": "Niño Feliz",
+          "normalTitle": "Momentos de Alegría",
+          "description": "Crea fotos increíbles de niños que capturen su alegría e inocencia. Perfectas para álbumes familiares y recuerdos preciosos.",
+          "buttonText": "Capturar Alegría"
+        },
+        "influencer": {
+          "gradientTitle": "Influencer",
+          "normalTitle": "Brillo Social",
+          "description": "Crea fotos profesionales dignas de un influencer exitoso. Perfectas para redes sociales y construcción de marca personal.",
+          "buttonText": "Empezar a Influir"
+        },
+        "meIconic": {
+          "gradientTitle": "Mi Icónico",
+          "normalTitle": "Fotos Icónicas",
+          "description": "Transforma tus fotos en tomas icónicas que expresen tu personalidad única. Perfectas para expresión personal y destacar.",
+          "buttonText": "Ser Icónico"
+        },
+        "merryChristmas": {
+          "gradientTitle": "Feliz Navidad",
+          "normalTitle": "Alegría Navideña",
+          "description": "Crea fotos que transmitan el espíritu navideño. Perfectas para tarjetas y celebraciones.",
+          "buttonText": "Celebrar Navidad"
+        },
+        "playfulCasual": {
+          "gradientTitle": "Casual Divertido",
+          "normalTitle": "Momentos Relajados",
+          "description": "Crea fotos casuales y divertidas que reflejen tu espíritu alegre. Perfectas para momentos cotidianos y redes sociales.",
+          "buttonText": "Comenzar Diversión"
+        },
+        "podcaster": {
+          "gradientTitle": "Podcaster",
+          "normalTitle": "Voz Visual",
+          "description": "Crea fotos profesionales dignas de un podcaster profesional. Perfectas para promoción y marketing.",
+          "buttonText": "Empezar a Transmitir"
+        },
+        "romanticMaternity": {
+          "gradientTitle": "Maternidad Romántica",
+          "normalTitle": "Momentos de Embarazo",
+          "description": "Documenta tu viaje de embarazo con hermosas fotos románticas. Perfectas para recuerdos familiares y compartir con seres queridos.",
+          "buttonText": "Registrar Momentos"
+        },
+        "socialMedia": {
+          "gradientTitle": "Redes Sociales",
+          "normalTitle": "Brillo Digital",
+          "description": "Crea fotos atractivas para redes sociales. Perfectas para contenido digital y presencia en línea.",
+          "buttonText": "Empezar a Brillar"
+        },
+        "timeMachine": {
+          "gradientTitle": "Máquina del Tiempo",
+          "normalTitle": "Viaje en el Tiempo",
+          "description": "Viaja en el tiempo con fotos que llevan el estilo de diferentes épocas. Perfectas para amantes de la historia y la nostalgia.",
+          "buttonText": "Iniciar Viaje"
+        },
+        "timelessStudio": {
+          "gradientTitle": "Estudio Atemporal",
+          "normalTitle": "Belleza Eterna",
+          "description": "Crea fotos clásicas atemporales en un estudio profesional. Perfectas para fotos formales y profesionales.",
+          "buttonText": "Comenzar Sesión"
+        },
+        "tlvFashion": {
+          "gradientTitle": "Moda Tel Aviv",
+          "normalTitle": "Moda Contemporánea",
+          "description": "Crea fotos de moda contemporánea con el espíritu vibrante de Tel Aviv. Perfectas para amantes de la moda y el estilo.",
+          "buttonText": "Descubrir Elegancia"
+        },
+        "wildFriends": {
+          "gradientTitle": "Amigos Salvajes",
+          "normalTitle": "Aventuras Naturales",
+          "description": "Crea fotos con un toque salvaje y natural. Perfectas para amantes de la naturaleza y aventureros.",
+          "buttonText": "Iniciar Aventura"
+        },
+        "winterWonderland": {
+          "gradientTitle": "País de las Maravillas Invernal",
+          "normalTitle": "Magia Invernal",
+          "description": "Crea fotos mágicas en escenarios invernales de cuento de hadas. Perfectas para la temporada invernal y festividades.",
+          "buttonText": "Descubrir Magia"
+        },
+        "common": {
+  "features": {
+    "styles": "Múltiples estilos",
+    "delivery": "Entrega rápida",
+    "protection": "Protección segura",
+    "guarantee": "Garantía de satisfacción"
+  }
+},
+    "marvelClass": {
+      "gradientTitle": "Clase Premium",
+      "normalTitle": "Retratos Legales",
+      "description": "Experimente la cumbre de la fotografía profesional con nuestras fotos de IA. Diseñadas para capturar la esencia de la excelencia legal con sofisticación y estilo incomparables.",
+      "button": "Experimente la Calidad Premium",
+      "imageAlt": "Retratos legales profesionales"
+    },
+    "vikingsHero": {
+      "gradientTitle": "Retratos Vikingos",
+      "normalTitle": "Impulsado por Magia IA",
+      "description": "Transforme sus fotos en retratos legendarios que capturan el espíritu de los guerreros nórdicos. Perfecto para perfiles de juegos, contenido creativo y marca personal única.",
+      "button": "Cree Su Leyenda",
+      "imageAlt": "Retratos estilo vikingo"
+    },
+    "barbieHero": {
+      "gradientTitle": "Retratos Pop Culture",
+      "normalTitle": "Con Personalidad Vibrante",
+      "description": "Cree retratos llamativos con colores audaces y estilo juguetón. Perfecto para influencers de redes sociales y creadores de contenido creativo.",
+      "button": "Cree Su Editorial",
+      "imageAlt": "Retratos estilo Barbie"
+    }
+  },
+  
+    "footer": {
+      "logoAlt": "GoStudio",
+      "description": {
+        "line1": "GoStudio es un estudio fotográfico profesional impulsado por IA",
+        "line2": "Ofrecemos fotos de retrato profesionales de alta calidad",
+        "line3": "Especializados en fotografía profesional para negocios y profesionales"
+      },
+      "aiHeadshots": {
+        "title": "Retratos Profesionales",
+        "items": {
+          "doctor": "Fotos para Médicos",
+          "lawyer": "Fotos para Abogados",
+          "actor": "Fotos para Actores",
+          "realtor": "Fotos para Agentes Inmobiliarios",
+          "tedSpeaker": "Fotos para Oradores TED",
+          "businessCasual": "Fotos Business Casual",
+          "effortlessPro": "Fotos Profesionales Naturales",
+          "lawyerBranded": "Fotos de Marca para Abogados",
+          "partner": "Fotos para Socios",
+          "proPack": "Paquete Profesional",
+          "styledSuccess": "Fotos Estilo Éxito",
+          "stylishLawyer": "Fotos Abogados con Estilo"
+        }
+      },
+      "aiPhotos": {
+        "title": "Sesiones Especiales",
+        "items": {
+          "meiravClass": "Sesión Meirav",
+          "tattoos": "Retratos con Tatuajes",
+          "annie": "Sesión Annie",
+          "barbie": "Sesión Barbie",
+          "viking": "Retratos Vikingos",
+          "dreamland": "Fotos Infantiles Dreamland",
+          "babyDoodles": "Garabatos de Bebé",
+          "birthdayMagic": "Magia de Cumpleaños",
+          "branding": "Fotografía de Marca",
+          "casual": "Fotos Casuales",
+          "casualCollection": "Colección Casual",
+          "catMagic": "Magia Felina",
+          "christmasElf": "Duende Navideño",
+          "christmasSweater": "Suéter Navideño",
+          "familyChristmas": "Navidad en Familia",
+          "cyberpunk": "Fotos Cyberpunk",
+          "hanukkah": "Fotos Hanukkah",
+          "happyKid": "Niño Feliz",
+          "influencer": "Fotos Influencer",
+          "iconic": "Fotos Icónicas",
+          "merryChristmas": "Feliz Navidad",
+          "vintageAmericana": "Americana Vintage",
+          "onesie": "Retratos Pijama",
+          "halloween": "Fotos Halloween",
+          "actress": "Fotos para Actrices",
+          "birthdayParty": "Fiesta de Cumpleaños",
+          "artistic": "Fotos Artísticas",
+          "wrestlemania": "Fotos Wrestlemania",
+          "redCarpet": "Alfombra Roja",
+          "gameOfThrones": "Juego de Tronos",
+          "kidsBirthday": "Cumpleaños Infantil",
+          "mythical": "Criaturas Míticas",
+          "dating": "Fotos para Citas",
+          "petDog": "Fotografía de Perros",
+          "popColor": "Fotos Pop Color",
+          "youtube": "Fotos YouTube",
+          "playfulCasual": "Casual Divertido",
+          "podcaster": "Fotos Podcaster",
+          "maternity": "Fotos de Maternidad",
+          "socialMedia": "Redes Sociales",
+          "timeMachine": "Máquina del Tiempo",
+          "timelessStudio": "Estudio Atemporal",
+          "tlvFashion": "Moda TLV",
+          "vintagePack": "Paquete Vintage",
+          "wildFriends": "Amigos Salvajes",
+          "winterWonderland": "Maravillas de Invierno",
+          "workFromHome": "Trabajo desde Casa"
+        }
+      },
+      "freeTools": {
+        "title": "Herramientas Gratuitas",
+        "items": {
+          "backgroundLibrary": "Biblioteca de Fondos",
+          "backgroundRemover": "Eliminador de Fondos",
+          "blackBg": "Fondo Negro",
+          "greyBg": "Fondo Gris",
+          "redBg": "Fondo Rojo",
+          "whiteBg": "Fondo Blanco",
+          "abstractBg": "Fondo Abstracto",
+          "christmasBg": "Fondo Navideño",
+          "halloweenBg": "Fondo Halloween"
+        }
+      },
+      "company": {
+        "title": "Empresa",
+        "items": {
+          "testimonial": "Testimonios",
+          "pricing": "Precios",
+          "faq": "Preguntas Frecuentes",
+          "privacy": "Política de Privacidad",
+          "terms": "Términos de Servicio"
+        }
+      },
+      "needHelp": "¿Necesitas ayuda?",
+      "contactUs": "Contáctanos",
+      "copyright": "© 2024 Todos los derechos reservados"
+    },
+
+    
+      "ariaa": {
+        "bannerAlt": "Imagen de fondo del banner",
+        "photographerAlt": "Fotógrafa de IA",
+        "heading": "Conoce a tu fotógrafa de IA especializada en crear fotos increíbles a partir de tus selfies.",
+        "description": "¡Hola! Soy Aria, tu fotógrafa de IA en GoStudio.ai. He ayudado a más de 21,000 personas increíbles como tú a crear retratos y fotos profesionales verdaderamente excepcionales. Ya sea que quieras actualizar tu LinkedIn, diseñar una tarjeta de presentación o mejorar tu presencia en línea, estoy aquí para ayudar. ¡Déjame ocuparme de los detalles para que brilles con resultados profesionales sin esfuerzo!",
+        "button": "Empezar Ahora"
+      },
+      "banner": {
+        "bannerAlt": "Imagen de fondo del banner",
+        "heading": "Ahorra {discount}87% en tus fotos profesionales. En cualquier momento, en cualquier lugar.",
+        "subheading": {
+          "line1": "Obtén fotos con calidad de estudio en 4K con varios atuendos",
+          "line2": "y fondos en menos de una hora"
+        },
+        "button": "Empezar Ahora"
+      }
+    
+  
+
+
+      }
+    
+  
+
+
+  

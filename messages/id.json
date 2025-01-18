@@ -1,0 +1,1236 @@
+{
+  "hero": {
+    "title": "Foto Headshot Profesional dari Selfie Anda",
+    "description": "Tampil menonjol di LinkedIn, Twitter, dan di mata rekruter. Unggah selfie Anda dan dapatkan ratusan foto headshot profesional dari fotografer AI favorit Anda \"Aaria\".",
+    "features": {
+      "styles": "150+ gaya dan pakaian",
+      "delivery": "Hasil dalam 1 jam",
+      "protection": "Perlindungan Data Ketat",
+      "guarantee": "Jaminan Uang Kembali"
+    },
+    "button": "Coba Sekarang",
+    "tryNow": "Mulai Sekarang →"
+  },
+  "ExplainerSection": {
+    "title": "3 LANGKAH MUDAH MENDAPATKAN PROFIL KUALITAS STUDIO.",
+    "step1": {
+      "title": "Unggah beberapa foto",
+      "description": "Unggah beberapa foto diri Anda agar AI dapat mempelajari tentang Anda."
+    },
+    "step2": {
+      "title": "Fotografer AI kami \"Aaria\" mulai bekerja",
+      "description": "Aaria membuat model pribadi dan personal khusus untuk Anda—memastikan foto headshot yang mencerminkan gaya dan identitas unik Anda."
+    },
+    "step3": {
+      "title": "Unduh Headshot favorit",
+      "description": "Anda akan menerima berbagai gaya, memberikan Anda Headshot sempurna untuk meningkatkan profil profesional bisnis Anda."
+    },
+    "tryNow": "Coba Sekarang"
+  },
+  "PhotographyGrid": {
+    "title": "PAKET KAMI-APAPUN YANG ANDA INGINKAN, KAMI PUNYA.",
+    "description": "Jelajahi rangkaian lengkap paket fotografi kami, dirancang untuk memenuhi setiap gaya dan kebutuhan. Dari potret profesional hingga edit kreatif, kami memiliki semuanya. Apapun visi Anda, fotografer AI kami mewujudkannya dengan mudah.",
+    "tryNow": "Coba Sekarang",
+    "packs": {
+      "corporate": "Headshot Korporat",
+      "speaker": "Paket Pembicara",
+      "doctor": "Profesional Medis",
+      "realtor": "Agen Real Estate",
+      "dating": "Profil Kencan",
+      "redcarpet": "Karpet Merah",
+      "boldcolors": "Warna Berani",
+      "tattoo": "Seniman Tato",
+      "glamour": "Foto Glamor",
+      "barbie": "Gaya Barbie",
+      "halloween": "Tema Halloween",
+      "mythical": "Mitologis"
+    }
+  },
+  "Comparison": {
+    "title": "HEMAT UANG DAN WAKTU",
+    "description": "Aaria memastikan Anda siap untuk setiap momen profesional. Dari resume hingga LinkedIn, kami membuat foto headshot Anda bersinar dengan mudah.",
+    "columns": {
+      "goStudio": "Go Studio.ai",
+      "studio": "Pemotretan Studio"
+    },
+    "items": {
+      "value": {
+        "label": "Nilai untuk uang",
+        "goStudio": "$19",
+        "studio": "$200"
+      },
+      "time": {
+        "label": "Hemat waktu",
+        "goStudio": "30 menit",
+        "studio": "2-3 hari"
+      },
+      "variety": {
+        "label": "Variasi",
+        "goStudio": "30 headshot",
+        "studio": "4-5 headshot"
+      },
+      "choices": {
+        "label": "Lebih banyak pilihan",
+        "goStudio": "20 gaya",
+        "studio": "1 gaya"
+      }
+    },
+    "exploreMore": "Jelajahi Lebih Lanjut"
+  },
+  "Why": {
+    "title": {
+      "why": "MENGAPA",
+      "gostudio": "GOSTUDIO.AI?"
+    },
+    "description": "Ubah citra profesional Anda dengan headshot bertenaga AI. Dapatkan foto kualitas studio untuk LinkedIn, resume, dan lainnya dalam hitungan menit.",
+    "features": {
+      "linkedin": {
+        "title": "Tampil Menonjol di LinkedIn",
+        "description": "Buat kesan pertama yang kuat dengan headshot profesional yang meningkatkan tampilan profil dan kredibilitas Anda."
+      },
+      "resume": {
+        "title": "Buat Resume Anda Bersinar",
+        "description": "Tingkatkan lamaran kerja Anda dengan headshot yang rapi yang menambahkan sentuhan personal dan profesionalisme."
+      },
+      "events": {
+        "title": "Acara & Konferensi",
+        "description": "Tampilkan diri terbaik Anda di acara profesional. Sempurna untuk profil pembicara, direktori acara, dan lencana."
+      },
+      "business": {
+        "title": "Kartu Nama & Branding",
+        "description": "Ciptakan citra profesional yang konsisten di semua materi bisnis Anda dengan headshot berkualitas tinggi."
+      },
+      "online": {
+        "title": "Kehadiran Digital",
+        "description": "Tampil profesional di semua platform - dari media sosial hingga situs web perusahaan dan jaringan profesional."
+      }
+    },
+    "tryNow": "Coba Sekarang"
+  },
+  "HeadshotReview": {
+    "title": {
+      "part1": "FOTO YANG SUDAH DIBUAT UNTUK",
+      "part2": "PELANGGAN YANG PUAS"
+    },
+    "description": "Bukan dibuat di studio. Dibuat oleh AI. Jangan hanya percaya kata-kata kami. AI kami mengubah foto sehari-hari menjadi headshot profesional, yang mencerminkan kepercayaan diri & kredibilitas Anda.",
+    "createButton": "Buat Headshot Anda",
+    "testimonials": {
+      "col1": {
+        "1": "Hasilnya menakjubkan dan disesuaikan dengan saya. Headshot AI ini benar-benar level berikutnya.",
+        "2": "Saya menguji platform ini dengan berbagai gambar produk, dan saya puas dengan hasilnya.",
+        "3": "Situs generator Foto Produk terbaik yang pernah ada!"
+      },
+      "col2": {
+        "1": "Sebagai penjual online, gambar produk berkualitas tinggi sangat penting. Saya mengunggah beberapa foto perhiasan saya, dan AI menghasilkan berbagai pilihan menakjubkan yang memamerkan perhiasan dengan indah. Variasinya memungkinkan saya memilih latar belakang dan sudut berbeda untuk menyoroti produk saya secara efektif.",
+        "2": "Alat yang wajib dimiliki untuk e-commerce!",
+        "3": "Unggah sekali, dan Anda mendapatkan banyak pilihan untuk dipilih."
+      },
+      "col3": {
+        "1": "Kualitas dan keragaman foto yang sangat baik.",
+        "2": "Antarmuka cepat dan ramah pengguna. Saya menghargai betapa mudahnya platform ini digunakan.",
+        "3": "Saya menghargai betapa mudahnya platform ini digunakan. Saya terkesan dengan berapa banyak pilihan yang saya terima. Meskipun sebagian besar bagus, ada beberapa yang tidak sepenuhnya menangkap produk seperti yang saya harapkan. Namun, mudah untuk menyaring dan menemukan yang terbaik. Secara keseluruhan, alat fantastis yang menghemat banyak usaha saya!"
+      },
+      "col4": {
+        "1": "AI sangat pintar dalam menghasilkan gambar yang beragam. Seperti memiliki studio foto mini!",
+        "2": "Saya suka bagaimana platform ini memberikan beberapa pilihan setelah mengunggah satu gambar. Mudah untuk memilih gaya atau latar belakang yang cocok dengan estetika saya. Namun, kenyamanan hasil yang beragam dan kualitas keseluruhan sangat berharga! Ini menghemat waktu, terutama jika Anda membutuhkan variasi untuk media sosial.",
+        "3": "Sangat puas dengan layanan cepat dan kualitas."
+      }
+    }
+  },
+  "Pricing": {
+    "title": "KUALITAS PREMIUM DENGAN HARGA 10 KALI LEBIH MURAH",
+    "description": "Tanpa kunjungan studio. Tanpa biaya pemotretan $200+. Tanpa menunggu janji temu. Dapatkan headshot memukau berkualitas profesional dalam 30 menit saja—semua dari kenyamanan rumah Anda.",
+    "badges": {
+      "mostPopular": "82% memilih paket ini",
+      "bestValue": "Nilai Terbaik"
+    },
+    "oneTimePayment": "Pembayaran Satu Kali",
+    "noSubscription": "Tidak perlu berlangganan",
+    "tryNow": "Coba Sekarang",
+    "features": {
+      "headshots": {
+        "basic": "20 headshot berkualitas tinggi",
+        "standard": "60 headshot berkualitas tinggi",
+        "premium": "100 headshot berkualitas tinggi"
+      },
+      "processing": {
+        "basic": "Waktu pemrosesan 2 jam",
+        "standard": "Waktu pemrosesan 1 jam",
+        "premium": "Waktu pemrosesan 30 menit"
+      },
+      "outfits": {
+        "basic": "5 pakaian dan latar belakang",
+        "standard": "20 pakaian dan latar belakang",
+        "premium": "40 pakaian dan latar belakang"
+      },
+      "poses": {
+        "basic": "5 pose",
+        "standard": "20 pose",
+        "premium": "40 pose"
+      }
+    }
+  },
+  "DataSecurity": {
+    "title": "KAMI MENGHARGAI PRIVASI DATA",
+    "subtitle": {
+      "line1": "Dipercaya oleh Pemimpin Fortune 500 dan Profesional Terkemuka",
+      "line2": "Organisasi dan tim perusahaan terkemuka mempercayakan data mereka kepada kami"
+    },
+    "features": {
+      "noSelling": {
+        "title": "TIDAK ADA PENJUALAN DATA, TIDAK ADA BERBAGI",
+        "description": "Kami tidak akan pernah menjual data Anda atau membagikannya dengan situs web pihak ketiga."
+      },
+      "control": {
+        "title": "FOTO ANDA, KENDALI ANDA",
+        "description": "Kami tidak akan menggunakan foto Anda untuk melatih AI tanpa izin Anda."
+      },
+      "autoDeletion": {
+        "title": "PENGHAPUSAN DATA OTOMATIS",
+        "description": "Sistem secara otomatis menghapus semua gambar Anda setelah 90 hari. Anda dapat memilih untuk menyimpan pengaturan sesuai keinginan Anda."
+      },
+      "security": {
+        "title": "KEAMANAN TERBAIK",
+        "description": "Kami mengenkripsi semua data pengguna yang sensitif. Kami menggunakan perangkat lunak terpercaya terbaik di industri untuk data Anda."
+      }
+    },
+    "createButton": "Buat Headshot Anda"
+  },
+  "TeamSection": {
+    "title": {
+      "why": "MENGAPA",
+      "gostudio": "GOSTUDIO.AI?"
+    },
+    "description": "Ciptakan tampilan profesional yang seragam untuk tim Anda dengan headshot berkualitas studio, dibuat dengan mudah oleh Aaria. Kami menghasilkan potret yang rapi yang mencerminkan nilai-nilai perusahaan Anda. Tanpa pemotretan mahal—hanya hasil berkualitas tinggi yang mulus.",
+    "teamHeadshots": "Headshot Tim",
+    "tryNow": "Coba Sekarang"
+  },
+  "CreationGallery": {
+    "title": "LIHAT SEKILAS HASIL KARYA SAYA",
+    "description": "Saya senang berbagi sekilas hasil karya saya dengan Anda.",
+    "createButton": "Buat Headshot Anda"
+  },
+  "FAQ": {
+    "title": "Pertanyaan yang Sering Diajukan",
+    "questions": {
+      "whatIs": {
+        "question": "Apa itu GoStudio.ai? Bagaimana cara kerjanya?",
+        "answer": "GoStudio.ai menggunakan foto Anda sendiri untuk melatih model AI khusus yang merepresentasikan penampilan Anda dan dapat menghasilkan headshot Anda dalam berbagai gaya dan pakaian. Kualitas headshot yang dihasilkan tergantung pada foto yang Anda unggah. Anda harus mencoba memiliki perspektif yang berbeda dari wajah, mata, dan berbagai sudut Anda. Setiap gambar harus menunjukkan sesuatu yang baru tentang penampilan dan fitur wajah Anda."
+      },
+      "photoRequirements": {
+        "question": "Foto seperti apa yang perlu saya unggah?",
+        "answer": "Jadikan variasi sebagai prioritas. Ekspresi wajah yang bervariasi dan latar belakang yang bervariasi, diambil pada berbagai waktu dalam sehari, adalah kunci foto input berkualitas tinggi. Oh, dan minimal makeup dan aksesori, ya!"
+      },
+      "ownership": {
+        "question": "Siapa yang memiliki hak atas foto yang dihasilkan?",
+        "answer": "Anda mempertahankan kepemilikan penuh atas foto yang Anda unggah dan gambar yang dihasilkan AI. Foto Anda hanya digunakan untuk melatih model AI pribadi Anda dan tidak pernah dibagikan dengan pengguna lain."
+      },
+      "timing": {
+        "question": "Berapa lama waktu yang dibutuhkan untuk mendapatkan headshot saya?",
+        "answer": "Prosesnya biasanya memakan waktu sekitar 15-20 menit dari unggah hingga menerima set pertama headshot yang dihasilkan AI. Anda kemudian dapat menghasilkan variasi tambahan secara instan."
+      },
+      "satisfaction": {
+        "question": "Bagaimana jika saya tidak puas dengan hasilnya?",
+        "answer": "Kami menawarkan jaminan kepuasan. Jika Anda tidak puas dengan hasil Anda, kami akan bekerja sama dengan Anda untuk memperbaikinya atau memberikan pengembalian dana penuh."
+      },
+      "linkedin": {
+        "question": "Bisakah saya menggunakan foto ini di LinkedIn dan platform profesional lainnya?",
+        "answer": "Tentu saja! Headshot yang dihasilkan AI kami sangat cocok untuk LinkedIn, situs web perusahaan, kartu nama, dan penggunaan profesional lainnya."
+      },
+      "whichAI": {
+        "question": "Teknologi AI apa yang Anda gunakan?",
+        "answer": "Kami menggunakan campuran teknologi AI canggih yang dipatenkan, termasuk model pembuatan gambar mutakhir, yang dioptimalkan khusus untuk membuat headshot profesional."
+      },
+      "dataSecurity": {
+        "question": "Bagaimana Anda menangani keamanan dan privasi data?",
+        "answer": "Kami menganggap serius privasi Anda. Foto Anda dienkripsi, disimpan dengan aman, dan hanya digunakan untuk model AI pribadi Anda. Kami tidak pernah membagikan data Anda dengan pihak ketiga."
+      }
+    }
+  },
+  "login": {
+    "title": "Masuk / Daftar",
+    "emailLabel": "Email",
+    "emailPlaceholder": "contoh@mybiz.com",
+    "emailRequired": "Email diperlukan",
+    "emailInvalid": "Alamat email tidak valid",
+    "googleButton": "Lanjutkan dengan Google",
+    "mostUsed": "Paling Sering Digunakan",
+    "orDivider": "Atau lanjutkan dengan email",
+    "submitButton": "Dapatkan kode di E-mail",
+    "infoText": "Anda akan menerima kode sekali pakai di kotak masuk Anda.",
+    "termsText": "Dengan mendaftar, Anda menerima",
+    "termsLink": "Syarat & Ketentuan",
+    "andText": "dan",
+    "privacyLink": "Kebijakan Privasi",
+    "errors": {
+      "loginFailed": "Gagal masuk",
+      "invalidEmail": "Alamat Email tidak valid",
+      "googleSignInFailed": "Gagal masuk dengan Google",
+      "tryAgain": "Silakan coba lagi. Jika masalah berlanjut, hubungi dukungan."
+    },
+    "testimonial": "Foto yang dihasilkan lebih bagus dari beberapa studio yang pernah saya coba",
+    "testimonialAuthor": "Sarah Chen"
+  },
+  "waitingForMagicLink": {
+    "title": "Periksa email Anda untuk melanjutkan",
+    "description": "Kami telah mengirimkan tautan ajaib ke email Anda untuk mengakses akun Anda.",
+    "hint": "Petunjuk: mungkin ada di folder spam Anda.",
+    "backButton": "Kembali"
+  },
+  "loginFail": {
+    "title": "Kesalahan Login",
+    "defaultError": "Terjadi kesalahan, silakan hubungi dukungan.",
+    "browserError": "Ups! Sepertinya Anda mencoba membuka tautan ajaib dari perangkat atau browser lain.",
+    "hint": "Petunjuk: Pastikan Anda membuka tautan di perangkat / browser yang sama dari tempat Anda mencoba mendaftar.",
+    "loginLink": "Masuk"
+  },
+  "navbar": {
+    "loginButton": "Masuk / Daftar"
+  },
+  "userMenu": {
+    "credits": "Kredit",
+    "logout": "Keluar"
+  },
+  "navigation": {
+    "headshotPacks": "Paket Headshot",
+    "photoshootPacks": "Paket Pemotretan",
+    "freeTools": "Alat Gratis",
+    "backgroundLibrary": "Perpustakaan Latar Belakang",
+    "backgroundRemover": "Penghapus Latar Belakang",
+    "testimonial": "Testimoni",
+    "pricing": "Harga",
+    "faq": "FAQ"
+  },
+  "sidebar": {
+    "dashboard": "Dasbor",
+    "myHeadshots": "Headshot Saya",
+    "photoEditorTools": "Alat Pengedit Foto",
+    "aiImageGenerator": "Generator Gambar AI",
+    "logout": "Keluar",
+    "loggingOut": "Sedang keluar..."
+  },
+  "overview": {
+    "myHeadshots": "Headshot Saya",
+    "generateImagesMessage": "Mulai menghasilkan gambar, Aaria siap menghasilkan foto Anda!",
+    "generateImages": "Hasilkan Gambar"
+  },
+  "packs": {
+    "title": "Paket",
+    "description": "Pilih paket untuk mulai menghasilkan gambar.",
+    "selectPack": "01/ Pilih Paket",
+    "instructions": "02/ Instruksi",
+    "uploadPhotos": "03/ Unggah Foto",
+    "getCredits": "04/ Dapatkan Kredit",
+    "summary": "05/ Ringkasan",
+    "errorFetching": "Gagal mengambil paket",
+    "requestFailed": "Permintaan gagal dengan kode status 404"
+  },
+  "packsGallery": {
+    "loading": "Memuat paket...",
+    "noPacks": "Tidak ada paket tersedia.",
+    "continueButton": "Lanjutkan",
+    "errors": {
+      "fetchTitle": "Gagal mengambil paket",
+      "unknownTitle": "Kesalahan tidak dikenal",
+      "unknownDescription": "Terjadi kesalahan yang tidak dikenal."
+    },
+    "categories": {
+      "adults": "Paket Profesional & Gaya Hidup",
+      "children": "Paket Anak-anak",
+      "pets": "Paket Hewan Peliharaan",
+      "default": "Paket {category}"
+    },
+    "packDetails": {
+      "close": "Tutup",
+      "select": "Pilih Paket",
+      "imagesIncluded": "Gambar termasuk",
+      "price": "Harga"
+    }
+  },
+  "photoGuide": {
+    "title": "Panduan Gambar",
+    "subtitle": "Ikuti panduan untuk mendapatkan foto berkualitas.",
+    "sections": {
+      "goodPhotos": "Foto yang Baik untuk Diunggah",
+      "photosToAvoid": "Foto yang Harus Dihindari",
+      "refrainUsing": "Hindari menggunakan"
+    },
+    "descriptions": {
+      "closeUpSelfie": "Selfie jarak dekat",
+      "facingCamera": "Anda menghadap kamera",
+      "halfBody": "Setengah Badan",
+      "onlyVisible": "Hanya Anda yang terlihat",
+      "groupSelfies": "Selfie grup",
+      "withSomeone": "Dengan orang lain",
+      "hidingFace": "Menyembunyikan wajah",
+      "wearingGlasses": "Memakai Kacamata",
+      "onlyFace": "Hanya Wajah",
+      "nudity": "Ketelanjangan",
+      "blurredImage": "Gambar Buram",
+      "tooMuchShadow": "Terlalu banyak bayangan"
+    },
+    "alt": {
+      "goodPhoto1": "Contoh foto baik 1",
+      "goodPhoto2": "Contoh foto baik 2",
+      "goodPhoto3": "Contoh foto baik 3",
+      "goodPhoto4": "Contoh foto baik 4",
+      "badPhoto1": "Contoh foto buruk 1",
+      "badPhoto2": "Contoh foto buruk 2",
+      "badPhoto3": "Contoh foto buruk 3",
+      "badPhoto4": "Contoh foto buruk 4"
+    }
+  },
+  "trainModel": {
+    "notEnoughInfo": "Informasi tidak cukup",
+    "uploadRequirements": "Harap unggah minimal 4 gambar dan pastikan informasi model tersedia.",
+    "uploadingImages": "Mengunggah gambar...",
+    "pleaseWait": "Mohon tunggu sementara kami memproses foto Anda",
+    "startUploading": "Mulai Mengunggah foto",
+    "uploadFiles": "Unggah berkas",
+    "dragDropHint": "Klik untuk mengunggah atau seret dan lepas",
+    "fileTypes": "PNG, JPG, HEIC hingga 120MB",
+    "goodPhotos": "Foto Baik",
+    "badPhotos": "Foto Buruk",
+    "continue": "Lanjutkan",
+    "imageGuide": "Panduan Gambar",
+    "followGuide": "Ikuti panduan untuk mendapatkan foto berkualitas.",
+    "photoRequirements": "Untuk memastikan kualitas foto yang lebih baik, Aaria membutuhkan 1 foto setengah badan dan 7 foto close-up Anda menghadap kamera.",
+    "autoCropBanner": "Sekarang Anda dapat memotong otomatis selfie grup Anda! Cukup ketuk gambar yang ingin Anda potong, dan kami akan mengurusnya untuk Anda."
+  },
+  "checkout": {
+    "title": "PEMBAYARAN",
+    "subtitle": "Hemat ratusan dibandingkan dengan pemotretan. Sesuaikan headshot profesional AI Anda dengan edit manual atau dapatkan pengulangan jika unggahan awal salah.",
+    "standardBadge": "82% memilih paket ini",
+    "premiumBadge": "Nilai Terbaik",
+    "subtotal": "Subtotal",
+    "tax": "Pajak",
+    "totalDue": "Total yang harus dibayar hari ini",
+    "noSubscription": "Tidak perlu berlangganan",
+    "oneTimePayment": "Pembayaran Satu Kali",
+    "features": {
+      "headshots": {
+        "basic": "10 Headshot AI Profesional",
+        "standard": "30 Headshot AI Profesional",
+        "premium": "100 Headshot AI Profesional"
+      },
+      "processing": {
+        "basic": "Waktu pemrosesan 24 jam",
+        "standard": "Waktu pemrosesan 12 jam",
+        "premium": "Waktu pemrosesan 6 jam"
+      },
+      "outfits": {
+        "basic": "2 Pakaian",
+        "standard": "4 Pakaian",
+        "premium": "8 Pakaian"
+      },
+      "poses": {
+        "basic": "2 Pose",
+        "standard": "4 Pose",
+        "premium": "8 Pose"
+      }
+    }
+  },
+  "summary": {
+    "detectedFeatures": "Ini adalah fitur yang terdeteksi oleh Aaria. Anda juga dapat mengedit jika perlu.",
+    "age": "USIA",
+    "eyeColor": "WARNA MATA",
+    "hairColor": "WARNA RAMBUT",
+    "gender": "JENIS KELAMIN",
+    "ethnicity": "ETNIS",
+    "notSpecified": "Belum ditentukan",
+    "enterEyeColor": "Masukkan warna mata",
+    "enterHairColor": "Masukkan warna rambut",
+    "enterEthnicity": "Masukkan etnis",
+    "save": "Simpan",
+    "male": "Pria",
+    "orderSummary": "Ringkasan Pesanan",
+    "summaryDescription": "Hemat ratusan dibandingkan dengan pemotretan. Sesuaikan headshot profesional AI Anda dengan edit manual atau dapatkan pengulangan jika unggahan awal salah.",
+    "uploadedPhotos": "FOTO YANG DIUNGGAH",
+    "processing": "Memproses...",
+    "startTraining": "Mulai Pelatihan",
+    "noModelData": "Tidak Ada Data Model",
+    "noModelDataDesc": "Tidak ditemukan data model. Silakan kembali dan buat model terlebih dahulu.",
+    "generateHeadshots": "Hasilkan Headshot",
+    "loading": "Memuat..."
+  },
+  "photoTypes": {
+    "title": "Gaya Foto AI Profesional",
+    "subtitle": "Pilih dari koleksi beragam gaya foto bertenaga AI kami untuk membuat potret profesional sempurna Anda.",
+    "showMore": "Lihat Semua Gaya",
+    "showLess": "Tampilkan Lebih Sedikit",
+    "types": {
+      "vintageAmericana": {
+        "title": "Foto Vintage Amerika",
+        "description": "Headshot profesional dengan sentuhan Amerika, ideal untuk LinkedIn dan jaringan bisnis"
+      },
+      "onesiePortraits": {
+        "title": "Potret Baju Terusan",
+        "description": "Potret menggemaskan untuk bayi dan balita"
+      },
+      "halloweenPhotos": {
+        "title": "Foto Halloween",
+        "description": "Potret seram dan menyenangkan untuk penggemar Halloween"
+      },
+      "birthdayParty": {
+        "title": "Save The Date Pesta Ulang Tahun",
+        "description": "Potret natural dan otentik untuk profil kencan"
+      },
+      "artisticPortraits": {
+        "title": "Potret Artistik",
+        "description": "Fotografi potret kreatif dan artistik"
+      },
+      "wrestlemaniaPhotos": {
+        "title": "Foto Wrestlemania",
+        "description": "Potret dinamis terinspirasi gulat yang menangkap kekuatan dan karakter"
+      },
+      "redCarpet": {
+        "title": "Foto Karpet Merah Aktor",
+        "description": "Potret glamor dan canggih terinspirasi dari karpet merah"
+      },
+      "gameOfThrones": {
+        "title": "Potret Game of Thrones",
+        "description": "Potret terinspirasi fantasi dalam gaya Game of Thrones"
+      },
+      "kidsBirthday": {
+        "title": "Potret Ulang Tahun Anak",
+        "description": "Menangkap momen spesial untuk ulang tahun anak-anak"
+      },
+      "mythicalCreatures": {
+        "title": "Potret Makhluk Mitologi",
+        "description": "Potret terinspirasi fantasi dengan makhluk mitologi"
+      },
+      "onlineDating": {
+        "title": "Foto Profil Kencan Online",
+        "description": "Potret sempurna untuk profil kencan online"
+      },
+      "petPhotography": {
+        "title": "Fotografi Hewan Peliharaan",
+        "description": "Potret profesional untuk hewan peliharaan"
+      },
+      "popColor": {
+        "title": "Foto Pop Color",
+        "description": "Potret cerah dengan pengaruh pop art"
+      },
+      "youtubeThumbnails": {
+        "title": "Foto Thumbnail YouTube",
+        "description": "Potret menarik perhatian sempurna untuk thumbnail YouTube"
+      },
+      "actressPortraits": {
+        "title": "Potret Aktris",
+        "description": "Foto tanaman dan bunga yang cerah dan detail"
+      },
+      "dreamlandKids": {
+        "title": "Foto Anak-anak Dreamland",
+        "description": "Potret magis dan ajaib untuk anak-anak dalam latar seperti mimpi"
+      },
+      "babyDoodles": {
+        "title": "Coretan Bayi",
+        "description": "Ubah foto bayi Anda menjadi potret gaya coretan yang menggemaskan. Sempurna untuk seni kamar bayi dan pengumuman kelahiran."
+      },
+      "birthdayMagic": {
+        "title": "Keajaiban Ulang Tahun",
+        "description": "Buat potret ulang tahun memukau sempurna untuk perayaan, undangan, dan acara spesial."
+      },
+      "personalBrand": {
+        "title": "Fotografi Brand Personal",
+        "description": "Solusi fotografi profesional dirancang untuk meningkatkan brand personal Anda dan menciptakan kehadiran visual yang konsisten."
+      },
+      "casualPhotography": {
+        "title": "Fotografi Kasual",
+        "description": "Potret natural dan santai sempurna untuk media sosial dan kebutuhan profesional kasual."
+      },
+      "casualCollection": {
+        "title": "Koleksi Kasual",
+        "description": "Buat seri beragam potret kasual dan gaya hidup sempurna untuk menjaga kehadiran online yang konsisten."
+      },
+      "catMagic": {
+        "title": "Keajaiban Kucing",
+        "description": "Ubah foto kucing Anda menjadi potret ajaib yang menangkap kepribadian dan pesona unik mereka."
+      },
+      "cyberpunk": {
+        "title": "Cyberpunk",
+        "description": "Berubah menjadi karakter cyberpunk memukau dengan gaya seni digital futuristik."
+      },
+      "hanukkahMiracle": {
+        "title": "Keajaiban Hanukkah",
+        "description": "Buat potret bertema Hanukkah indah yang menangkap keajaiban Festival Cahaya."
+      },
+      "happyKid": {
+        "title": "Anak Bahagia",
+        "description": "Buat potret menyenangkan anak-anak bahagia yang menangkap kegembiraan dan kepolosan murni mereka."
+      },
+      "influencer": {
+        "title": "Influencer",
+        "description": "Buat potret gaya influencer memukau sempurna untuk media sosial dan pembuatan konten."
+      },
+      "meIconic": {
+        "title": "Saya Ikonik",
+        "description": "Buat gaya potret ikonik Anda sendiri yang membuat Anda menonjol dari keramaian."
+      },
+      "merryChristmas": {
+        "title": "Selamat Natal",
+        "description": "Buat potret Natal ajaib yang menangkap kegembiraan dan kehangatan musim liburan."
+      },
+      "playfulCasual": {
+        "title": "Kasual Ceria",
+        "description": "Buat potret kasual yang menyenangkan dan natural yang menunjukkan sisi ceria Anda."
+      },
+      "podcaster": {
+        "title": "Podcaster",
+        "description": "Buat potret podcaster profesional yang membantu membangun brand audio Anda."
+      },
+      "romanticMaternity": {
+        "title": "Kehamilan Romantis",
+        "description": "Buat potret kehamilan indah dan romantis yang merayakan keajaiban kehamilan."
+      },
+      "socialMedia": {
+        "title": "Media Sosial",
+        "description": "Buat potret memukau yang dioptimalkan untuk semua platform media sosial."
+      },
+      "timeMachine": {
+        "title": "Mesin Waktu",
+        "description": "Jelajahi waktu dengan potret sejarah memukau dan foto bertema periode."
+      },
+      "timelessStudio": {
+        "title": "Studio Abadi",
+        "description": "Buat potret studio elegan dengan daya tarik profesional yang abadi."
+      },
+      "telAvivFashion": {
+        "title": "Mode Tel Aviv",
+        "description": "Buat potret mode memukau terinspirasi Tel Aviv dengan gaya urban."
+      },
+      "wildFriends": {
+        "title": "Teman Liar",
+        "description": "Buat potret ajaib dengan hewan peliharaan dan teman hewan Anda."
+      },
+      "winterWonderland": {
+        "title": "Negeri Salju Ajaib",
+        "description": "Buat potret negeri salju memukau dalam pemandangan salju ajaib."
+      },
+      "workFromHome": {
+        "title": "Kerja Dari Rumah",
+        "description": "Buat potret profesional kerja dari rumah untuk pekerjaan jarak jauh."
+      },
+      "vintagePack": {
+        "title": "Paket Vintage",
+        "description": "Buat potret gaya vintage indah dengan estetika retro abadi dan daya tarik klasik."
+      },
+      "professionalTattoos": {
+        "title": "Potret Tato Profesional",
+        "description": "Tampilkan tato Anda dengan potret profesional yang menyoroti ekspresi artistik Anda."
+      },
+      "annieLeibovitz": {
+        "title": "Gaya Annie Leibovitz",
+        "description": "Potret dramatis terinspirasi dari gaya fotografi ikonik Annie Leibovitz."
+      },
+      "barbie": {
+        "title": "Gaya Barbie",
+        "description": "Fotografi potret menyenangkan dan bergaya terinspirasi Barbie."
+      },
+      "vikingPortraits": {
+        "title": "Potret Viking",
+        "description": "Potret kuat terinspirasi Viking sempurna untuk tema sejarah dan pemotretan fantasi."
+      },
+      "marvelClass": {
+        "title": "Kelas Marvel",
+        "description": "Headshot dinamis, berdampak tinggi dengan kualitas sinematik terinspirasi dari produksi Marvel."
+      }
+    }
+  },
+  "headshots": {
+    "title": "Headshot AI untuk Profesional",
+    "subtitle": "Ratusan profesional bisnis dari berbagai bidang menggunakan HeadshotPro setiap hari untuk menghasilkan headshot profesional yang dapat mereka gunakan di tempat kerja.",
+    "showMore": "Lihat Semua Gaya",
+    "showLess": "Tampilkan Lebih Sedikit",
+    "types": {
+      "doctor": {
+        "title": "Headshot Dokter",
+        "description": "Potret medis profesional untuk tenaga kesehatan, dokter, dan praktik medis."
+      },
+      "lawyer": {
+        "title": "Headshot Pengacara",
+        "description": "Potret profesional untuk profesional hukum dan firma hukum."
+      },
+      "actor": {
+        "title": "Headshot Aktor",
+        "description": "Buat potret glamor memukau sempurna untuk portofolio fashion, kecantikan, dan modeling profesional."
+      },
+      "realtor": {
+        "title": "Gaya Agen Properti",
+        "description": "Potret profesional untuk profesional real estate."
+      },
+      "tedSpeaker": {
+        "title": "Gaya Pembicara TED",
+        "description": "Potret profesional untuk pembicara dan presenter."
+      },
+      "businessCasual": {
+        "title": "Headshot Bisnis Kasual",
+        "description": "Potret klasik dan bergaya terinspirasi dari estetika J.Crew"
+      },
+      "model": {
+        "title": "Headshot Model",
+        "description": "Potret elegan dan provokatif terinspirasi dari gaya Helmut Newton"
+      },
+      "styledSuccess": {
+        "title": "Bergaya untuk Sukses",
+        "description": "Potret profesional dengan penataan canggih untuk tampilan modern yang rapi."
+      },
+      "professional": {
+        "title": "Paket Profesional",
+        "description": "Paket headshot profesional lengkap sempurna untuk kebutuhan korporat dan bisnis."
+      },
+      "partnersCollection": {
+        "title": "Koleksi Partner",
+        "description": "Headshot premium yang dirancang khusus untuk partner firma hukum dan eksekutif senior."
+      },
+      "lawyerBranded": {
+        "title": "Branding Pengacara",
+        "description": "Headshot khusus yang memperkuat brand hukum dan otoritas profesional Anda."
+      },
+      "effortlessProfessionalism": {
+        "title": "Profesionalisme Tanpa Usaha",
+        "description": "Headshot natural dan mudah didekati yang mempertahankan kehadiran profesional yang kuat."
+      }
+    }
+  },
+  "heroPages": {
+    "lawyer": {
+      "title": {
+        "part1": "Profesional",
+        "part2": "Foto Profil Pengacara",
+        "part3": "Dibuat oleh AI",
+        "part4": "dalam Hitungan Menit"
+      },
+      "description": "Ubah foto selfie Anda menjadi potret hukum profesional yang membangun kepercayaan dan kredibilitas dengan klien.",
+      "button": "Mulai Gratis"
+    },
+    "doctor": {
+      "title": {
+        "part1": "Profesional",
+        "part2": "Foto Profil Medis",
+        "part3": "Dibuat oleh AI",
+        "part4": "dalam Hitungan Menit"
+      },
+      "description": "Ubah foto selfie Anda menjadi potret medis profesional yang membangun kepercayaan dan kredibilitas dengan pasien.",
+      "button": "Mulai Gratis"
+    },
+    "dating": {
+      "title": {
+        "part1": "Tangkap Diri Anda yang Sesungguhnya",
+        "part2": "Foto Profil Kencan",
+        "part3": "Dibuat oleh AI",
+        "part4": "yang Memicu Koneksi Tulus"
+      },
+      "description": "Unggah Foto Anda dan langsung tingkatkan profil kencan Anda dengan berbagai hasil kami.",
+      "button": "Mulai Gratis"
+    },
+    "glamour": {
+      "title": {
+        "part1": "Studio Foto Profesional",
+        "part2": "Didukung oleh AI"
+      },
+      "description": "Ubah foto sehari-hari Anda menjadi potret profesional yang memukau. Sempurna untuk media sosial, profil kencan, dan branding pribadi."
+    },
+    "realtor": {
+      "title": {
+        "part1": "Foto Profesional",
+        "part2": "Agen Properti",
+        "part3": "Didukung oleh AI"
+      },
+      "description": "Ubah foto selfie Anda menjadi potret properti profesional yang membangun kepercayaan dan kredibilitas dengan calon klien.",
+      "button": "Mulai Gratis"
+    },
+    "speaker": {
+      "title": {
+        "part1": "Foto Profesional",
+        "part2": "Pembicara dan",
+        "part3": "Gaya TED Talk",
+        "part4": "Didukung oleh AI"
+      },
+      "description": "Ubah foto selfie Anda menjadi potret pembicara yang menarik perhatian dan menginspirasi kepercayaan. Sempurna untuk keynote, konferensi, dan presentasi profesional.",
+      "button": "Mulai Gratis"
+    },
+    "jcrew": {
+      "title": {
+        "part1": "Foto Profesional Kasual",
+        "part2": "Didukung AI"
+      },
+      "description": "Ubah foto Anda menjadi potret profesional kasual yang memadukan keramahan dan profesionalisme. Sempurna untuk lingkungan kerja modern dan industri kreatif.",
+      "button": "Mulai Sekarang"
+    },
+    "onesie": {
+      "title": {
+        "part1": "Gaya Nyaman yang Menyenangkan",
+        "part2": "Foto Potret yang Menonjol"
+      },
+      "description": "Ubah foto Anda menjadi potret yang menyenangkan dan nyaman yang menampilkan kepribadian Anda. Sempurna untuk media sosial, kreator konten, dan siapa saja yang menyukai kenyamanan dengan gaya.",
+      "button": "Mulai Sekarang",
+      "imageAlt": "Contoh foto potret onesie"
+    },
+    "halloween": {
+      "title": {
+        "part1": "Gaya Halloween Menyeramkan",
+        "part2": "Potret dengan Karakter"
+      },
+      "description": "Ubah foto Anda menjadi potret Halloween yang menyeramkan. Sempurna untuk media sosial, konten musiman, dan siapa saja yang menyukai musim menyeramkan.",
+      "button": "Mulai Sekarang",
+      "imageAlt": "Contoh potret Halloween"
+    },
+    "date": {
+      "title": {
+        "part1": "Gaya Save the Date",
+        "part2": "Momen Berkesan"
+      },
+      "description": "Buat potret save-the-date yang menakjubkan yang menangkap momen spesial Anda. Sempurna untuk pernikahan, ulang tahun, dan semua pengumuman perayaan Anda.",
+      "button": "Mulai Membuat",
+      "imageAlt": "Contoh potret save the date"
+    },
+    "artistic": {
+      "title": {
+        "part1": "Gaya Artistik",
+        "part2": "Potret dengan Jiwa"
+      },
+      "description": "Ubah foto Anda menjadi karya seni yang menangkap esensi Anda. Sempurna untuk media sosial, portofolio kreatif, dan siapa saja yang menyukai ekspresi seni.",
+      "button": "Mulai Berkreasi",
+      "imageAlt": "Contoh potret artistik"
+    },
+    "wrestlemania": {
+      "title": {
+        "part1": "Gaya Juara Gulat",
+        "part2": "Potret Penuh Kekuatan"
+      },
+      "description": "Ubah foto Anda menjadi potret juara gulat yang epik. Sempurna untuk penggemar, media sosial, dan siapa saja yang ingin menangkap semangat juara.",
+      "button": "Mulai Sekarang",
+      "imageAlt": "Contoh potret juara gulat"
+    },
+    "carpet": {
+      "title": {
+        "part1": "Gaya Karpet Merah",
+        "part2": "Potret Selebriti"
+      },
+      "description": "Ubah foto Anda menjadi potret glamor karpet merah. Sempurna untuk media sosial, acara spesial, dan siapa saja yang ingin merasa seperti bintang.",
+      "button": "Mulai",
+      "imageAlt": "Contoh potret karpet merah"
+    },
+    "myth": {
+      "title": {
+        "part1": "Berubah Menjadi",
+        "part2": "Makhluk Mitologi",
+        "part3": "dengan AI",
+        "part4": "Ajaib"
+      },
+      "description": "Ubah foto Anda menjadi potret makhluk mitologi yang memukau. Sempurna untuk penggemar fantasi, proyek kreatif, dan siapa saja yang memimpikan transformasi ajaib.",
+      "button": "Mulai Berkreasi",
+      "imageAlt": "Contoh potret makhluk mitologi"
+    },
+    "birthday": {
+      "title": {
+        "part1": "Pengalaman Potret",
+        "part2": "Ulang Tahun Ajaib"
+      },
+      "description": "Ubah foto anak Anda menjadi potret ulang tahun yang ajaib. Sempurna untuk undangan, kenangan, dan menciptakan momen spesial.",
+      "button": "Buat Keajaiban",
+      "imageAlt": "Contoh potret ulang tahun"
+    },
+    "dog": {
+      "title": {
+        "part1": "Studio Potret",
+        "part2": "Artistik Anjing"
+      },
+      "description": "Ubah foto anjing Anda menjadi potret artistik yang menakjubkan. Sempurna untuk pecinta hewan peliharaan, media sosial, dan merayakan teman berbulu Anda.",
+      "button": "Mulai Sekarang",
+      "imageAlt": "Contoh potret anjing"
+    },
+    "color": {
+      "title": {
+        "part1": "Studio Potret",
+        "part2": "Pop Color dengan AI"
+      },
+      "description": "Ubah foto Anda menjadi potret yang hidup dan penuh warna. Sempurna untuk media sosial, branding pribadi, dan ekspresi kreatif.",
+      "button": "Mulai Berkreasi",
+      "imageAlt": "Contoh potret pop color"
+    },
+    "youtube": {
+      "title": {
+        "part1": "Studio Pembuat",
+        "part2": "Thumbnail YouTube"
+      },
+      "description": "Buat thumbnail YouTube yang menarik perhatian untuk meningkatkan penayangan. Sempurna untuk kreator konten dan pertumbuhan kanal.",
+      "button": "Mulai Sekarang",
+      "imageAlt": "Contoh thumbnail YouTube"
+    },
+    "botanical": {
+      "title": {
+        "part1": "AI Keindahan Alam",
+        "part2": "Potret dengan",
+        "part3": "Ilustrasi Botani"
+      },
+      "description": "Nikmati keanggunan alam dengan potret yang dihasilkan AI yang diperkaya dengan elemen ilustrasi botani yang lembut.",
+      "button": "Mulai Gratis",
+      "imageAlt": "Contoh potret botani"
+    },
+  
+  "partner": {
+    "title": {
+      "part1": "Foto Profil",
+      "part2": "untuk Partner Hukum",
+      "part3": "Keunggulan",
+      "part4": "Berbasis AI"
+    },
+    "description": "Tingkatkan kehadiran eksekutif firma Anda dengan foto profil yang dirancang untuk partner senior dan pengacara eksekutif. Cerminkan otoritas dan kredibilitas yang sesuai dengan posisi Anda.",
+    "button": "Tingkatkan Kehadiran Anda",
+    "imageAlt": "Foto profil profesional untuk partner hukum"
+  },
+  "stylishLawyer": {
+    "title": {
+      "part1": "Tingkatkan",
+      "part2": "Kehadiran Legal Anda",
+      "part3": "Foto Profil Profesional",
+      "part4": "dalam Hitungan Menit"
+    },
+    "description": "Dapatkan rasa hormat dan kepercayaan dengan foto profil profesional yang dihasilkan AI, disesuaikan untuk profesional hukum. Sempurna untuk situs web firma hukum, profil LinkedIn, dan direktori profesional.",
+    "button": "Transformasi Citra Anda",
+    "imageAlt": "Foto profil bergaya untuk pengacara"
+  },
+  "professionalism": {
+    "title": {
+      "part1": "Profesionalisme",
+      "part2": "Tak Tertandingi",
+      "part3": "Keunggulan Hukum",
+      "part4": "dengan AI"
+    },
+    "description": "Tampilkan keahlian hukum Anda dengan foto profil yang mencerminkan keunggulan, kredibilitas, dan kecanggihan. Ideal untuk pengacara yang menuntut standar tertinggi.",
+    "button": "Tingkatkan Profil Anda",
+    "imageAlt": "Foto profil profesional hukum"
+  }
+
+  },
+  "heroFeatures": {
+    "styles": "Lebih dari 150 gaya",
+    "delivery": "Siap dalam 1 jam",
+    "protection": "Perlindungan ketat",
+    "guarantee": "Jaminan uang kembali"
+  },
+ 
+    
+      "heroPacks": {
+        "dreamlandKids": {
+          "gradientTitle": "Foto Ajaib Anak-anak",
+          "normalTitle": "Di Mana Mimpi Menjadi Nyata",
+          "description": "Ubah foto anak-anak Anda menjadi lukisan ajaib di dunia mimpi. Latar belakang fantastis, tema dongeng, dan adegan menyenangkan untuk menciptakan kenangan magis.",
+          "buttonText": "Mulai Keajaiban"
+        },
+        "babyDoodles": {
+          "gradientTitle": "Coretan Bayi",
+          "normalTitle": "Foto Bayi yang Menggemaskan",
+          "description": "Buat foto yang indah dan menyenangkan untuk bayi. Sempurna untuk mengabadikan momen bahagia masa kecil dan kenangan keluarga.",
+          "buttonText": "Abadikan Momen"
+        },
+        "brandingPhotography": {
+          "gradientTitle": "Foto Branding",
+          "normalTitle": "Tampil Beda dan Bersinar",
+          "description": "Tingkatkan personal branding Anda dengan fotografi profesional berbasis AI",
+          "buttonText": "Bangun Brand Anda"
+        },
+        "workFromHome": {
+          "gradientTitle": "Kerja dari Rumah",
+          "normalTitle": "Foto Profesional Jarak Jauh",
+          "description": "Buat foto profesional untuk kerja jarak jauh. Sempurna untuk pekerja remote dan rapat virtual",
+          "buttonText": "Kerja Pintar"
+        },
+        "vintagePack": {
+          "gradientTitle": "Paket Vintage",
+          "normalTitle": "Foto Gaya Retro",
+          "description": "Buat potret bergaya vintage yang indah. Sempurna untuk tampilan retro dan foto klasik",
+          "buttonText": "Kembali ke Masa Lalu"
+        },
+        "birthdayMagic": {
+          "gradientTitle": "Keajaiban Ulang Tahun",
+          "normalTitle": "Foto Perayaan",
+          "description": "Buat foto ajaib untuk ulang tahun Anda. Sempurna untuk momen spesial",
+          "buttonText": "Mulai Merayakan"
+        },
+        "casualPhotos": {
+          "gradientTitle": "Foto Kasual",
+          "normalTitle": "Natural dan Ramah",
+          "description": "Buat potret natural yang menunjukkan kepribadian asli Anda. Sempurna untuk media sosial dan personal branding",
+          "buttonText": "Dapatkan Foto Natural"
+        },
+        "casualCollection": {
+          "gradientTitle": "Koleksi Kasual",
+          "normalTitle": "Momen Natural",
+          "description": "Buat berbagai foto kasual yang mencerminkan kepribadian asli Anda. Sempurna untuk konten sosial dan profil.",
+          "buttonText": "Mulai Koleksi"
+        },
+        "catMagic": {
+          "gradientTitle": "Sihir Kucing",
+          "normalTitle": "Momen Istimewa",
+          "description": "Ubah foto kucing Anda menjadi gambar ajaib penuh kepribadian. Sempurna untuk pecinta hewan peliharaan dan media sosial.",
+          "buttonText": "Ciptakan Keajaiban"
+        },
+        "christmasElf": {
+          "gradientTitle": "Peri Natal",
+          "normalTitle": "Keajaiban Natal",
+          "description": "Buat foto menyenangkan bertema peri Natal. Sempurna untuk kartu Natal dan perayaan keluarga.",
+          "buttonText": "Mulai Keseruan"
+        },
+        "christmasSweater": {
+          "gradientTitle": "Sweater Natal",
+          "normalTitle": "Suasana Natal yang Hangat",
+          "description": "Buat foto perayaan yang hangat bertema sweater Natal. Sempurna untuk kartu Natal dan pesta kantor.",
+          "buttonText": "Mulai Perayaan"
+        },
+        "familyChristmas": {
+          "gradientTitle": "Natal Keluarga",
+          "normalTitle": "Kenangan Keluarga Ajaib",
+          "description": "Buat foto keluarga Natal yang ajaib yang menangkap keajaiban musim ini. Sempurna untuk kartu Natal dan kenangan keluarga berharga.",
+          "buttonText": "Ciptakan Keajaiban Keluarga"
+        },
+        "cyberpunk": {
+          "gradientTitle": "Cyberpunk",
+          "normalTitle": "Masa Depan Digital",
+          "description": "Ubah foto Anda menjadi karya seni cyberpunk futuristik. Sempurna untuk penggemar fiksi ilmiah dan desain futuristik.",
+          "buttonText": "Masuk ke Masa Depan"
+        },
+        "hanukkahMiracle": {
+          "gradientTitle": "Keajaiban Hanukkah",
+          "normalTitle": "Festival Cahaya",
+          "description": "Buat foto indah bertema Hanukkah yang menangkap keajaiban Festival Cahaya. Sempurna untuk kartu perayaan dan perayaan keluarga.",
+          "buttonText": "Nyalakan Cahaya"
+        },
+        "happyKid": {
+          "gradientTitle": "Anak Bahagia",
+          "normalTitle": "Momen Kegembiraan",
+          "description": "Buat foto anak-anak yang luar biasa yang menangkap kegembiraan dan kepolosan mereka. Sempurna untuk album keluarga dan kenangan berharga.",
+          "buttonText": "Tangkap Kebahagiaan"
+        },
+        "influencer": {
+          "gradientTitle": "Influencer",
+          "normalTitle": "Bersinar di Sosial Media",
+          "description": "Buat foto profesional layaknya influencer sukses. Sempurna untuk media sosial dan membangun personal brand.",
+          "buttonText": "Mulai Memengaruhi"
+        },
+        "meIconic": {
+          "gradientTitle": "Ikonik Saya",
+          "normalTitle": "Foto Ikonik",
+          "description": "Ubah foto Anda menjadi jepretan ikonik yang mengekspresikan kepribadian unik Anda. Sempurna untuk ekspresi diri dan tampil beda.",
+          "buttonText": "Jadi Ikonik"
+        },
+        "merryChristmas": {
+          "gradientTitle": "Selamat Natal",
+          "normalTitle": "Kegembiraan Natal",
+          "description": "Buat foto yang membawa semangat Natal. Sempurna untuk kartu ucapan dan perayaan.",
+          "buttonText": "Rayakan Natal"
+        },
+        "playfulCasual": {
+          "gradientTitle": "Kasual Ceria",
+          "normalTitle": "Momen Santai",
+          "description": "Buat foto kasual dan ceria yang mencerminkan semangat riang Anda. Sempurna untuk momen sehari-hari dan media sosial.",
+          "buttonText": "Mulai Bersenang-senang"
+        },
+        "podcaster": {
+          "gradientTitle": "Podcaster",
+          "normalTitle": "Suara Visual",
+          "description": "Buat foto profesional layaknya podcaster profesional. Sempurna untuk promosi dan pemasaran.",
+          "buttonText": "Mulai Siaran"
+        },
+        "romanticMaternity": {
+          "gradientTitle": "Kehamilan Romantis",
+          "normalTitle": "Momen Kehamilan",
+          "description": "Dokumentasikan perjalanan kehamilan Anda dengan foto romantis yang indah. Sempurna untuk kenangan keluarga dan berbagi dengan orang tersayang.",
+          "buttonText": "Abadikan Momen"
+        },
+        "socialMedia": {
+          "gradientTitle": "Media Sosial",
+          "normalTitle": "Pesona Digital",
+          "description": "Buat foto menarik untuk media sosial. Sempurna untuk konten digital dan kehadiran online.",
+          "buttonText": "Mulai Bersinar"
+        },
+        "timeMachine": {
+          "gradientTitle": "Mesin Waktu",
+          "normalTitle": "Perjalanan Waktu",
+          "description": "Jelajahi waktu dengan foto bergaya era berbeda. Sempurna untuk pecinta sejarah dan nostalgia.",
+          "buttonText": "Mulai Perjalanan"
+        },
+        "timelessStudio": {
+          "gradientTitle": "Studio Abadi",
+          "normalTitle": "Kecantikan Abadi",
+          "description": "Buat foto klasik abadi di studio profesional. Sempurna untuk foto formal dan profesional.",
+          "buttonText": "Mulai Pemotretan"
+        },
+        "tlvFashion": {
+          "gradientTitle": "Mode Tel Aviv",
+          "normalTitle": "Mode Kontemporer",
+          "description": "Buat foto mode kontemporer dengan semangat Tel Aviv yang hidup. Sempurna untuk pecinta mode dan gaya.",
+          "buttonText": "Temukan Keanggunan"
+        },
+        "wildFriends": {
+          "gradientTitle": "Teman Liar",
+          "normalTitle": "Petualangan Alam",
+          "description": "Buat foto dengan sentuhan liar dan alami. Sempurna untuk pecinta alam dan petualang.",
+          "buttonText": "Mulai Petualangan"
+        },
+        "winterWonderland": {
+          "gradientTitle": "Negeri Dongeng Musim Dingin",
+          "normalTitle": "Keajaiban Musim Dingin",
+          "description": "Buat foto ajaib dalam latar musim dingin yang seperti dongeng. Sempurna untuk musim dingin dan liburan.",
+          "buttonText": "Temukan Keajaiban"
+        },
+        
+         
+            "marvelClass": {
+              "gradientTitle": "Kelas Premium",
+              "normalTitle": "Potret Hukum",
+              "description": "Rasakan puncak pencitraan profesional dengan foto AI kami. Dirancang untuk menangkap esensi keunggulan hukum dengan kecanggihan dan gaya yang tak tertandingi.",
+              "button": "Rasakan Kualitas Premium",
+              "imageAlt": "Potret hukum profesional"
+            },
+            "vikingsHero": {
+              "gradientTitle": "Potret Viking",
+              "normalTitle": "Didukung Sihir AI",
+              "description": "Ubah foto Anda menjadi potret legendaris yang menangkap semangat pejuang Norse. Sempurna untuk profil game, konten kreatif, dan branding pribadi yang unik.",
+              "button": "Ciptakan Legenda Anda",
+              "imageAlt": "Potret gaya Viking"
+            },
+            "barbieHero": {
+              "gradientTitle": "Potret Pop Culture",
+              "normalTitle": "Dengan Kepribadian Dinamis",
+              "description": "Buat potret menakjubkan dengan warna berani dan gaya yang menyenangkan. Sempurna untuk influencer media sosial dan kreator konten kreatif.",
+              "button": "Buat Editorial Anda",
+              "imageAlt": "Potret gaya Barbie"
+            },
+
+        "common": {
+  "features": {
+    "styles": "Beragam gaya",
+    "delivery": "Pengiriman cepat",
+    "protection": "Perlindungan aman",
+    "guarantee": "Jaminan kepuasan"
+  }
+}
+      },
+      
+        "footer": {
+          "logoAlt": "GoStudio",
+          "description": {
+            "line1": "GoStudio adalah studio foto profesional berbasis AI",
+            "line2": "Kami menyediakan foto potret profesional berkualitas tinggi",
+            "line3": "Spesialis fotografi profesional untuk bisnis dan profesional"
+          },
+          "aiHeadshots": {
+            "title": "Foto Profil Profesional",
+            "items": {
+              "doctor": "Foto untuk Dokter",
+              "lawyer": "Foto untuk Pengacara",
+              "actor": "Foto untuk Aktor",
+              "realtor": "Foto untuk Agen Properti",
+              "tedSpeaker": "Foto untuk Pembicara TED",
+              "businessCasual": "Foto Business Casual",
+              "effortlessPro": "Foto Profesional Santai",
+              "lawyerBranded": "Foto Branding Pengacara",
+              "partner": "Foto untuk Mitra",
+              "proPack": "Paket Profesional",
+              "styledSuccess": "Foto Gaya Sukses",
+              "stylishLawyer": "Foto Pengacara Bergaya"
+            }
+          },
+          "aiPhotos": {
+            "title": "Sesi Foto Khusus",
+            "items": {
+              "meiravClass": "Sesi Meirav",
+              "tattoos": "Potret dengan Tato",
+              "annie": "Sesi Annie",
+              "barbie": "Sesi Barbie",
+              "viking": "Potret Viking",
+              "dreamland": "Foto Anak Dreamland",
+              "babyDoodles": "Coretan Bayi",
+              "birthdayMagic": "Sihir Ulang Tahun",
+              "branding": "Foto Branding",
+              "casual": "Foto Kasual",
+              "casualCollection": "Koleksi Kasual",
+              "catMagic": "Sihir Kucing",
+              "christmasElf": "Peri Natal",
+              "christmasSweater": "Sweater Natal",
+              "familyChristmas": "Natal Keluarga",
+              "cyberpunk": "Foto Cyberpunk",
+              "hanukkah": "Foto Hanukkah",
+              "happyKid": "Anak Bahagia",
+              "influencer": "Foto Influencer",
+              "iconic": "Foto Ikonik",
+              "merryChristmas": "Selamat Natal",
+              "vintageAmericana": "Americana Vintage",
+              "onesie": "Potret Onesie",
+              "halloween": "Foto Halloween",
+              "actress": "Foto untuk Aktris",
+              "birthdayParty": "Pesta Ulang Tahun",
+              "artistic": "Foto Artistik",
+              "wrestlemania": "Foto Wrestlemania",
+              "redCarpet": "Karpet Merah",
+              "gameOfThrones": "Game of Thrones",
+              "kidsBirthday": "Ulang Tahun Anak",
+              "mythical": "Makhluk Mitos",
+              "dating": "Foto Kencan",
+              "petDog": "Foto Anjing Peliharaan",
+              "popColor": "Foto Pop Color",
+              "youtube": "Foto YouTube",
+              "playfulCasual": "Kasual Ceria",
+              "podcaster": "Foto Podcaster",
+              "maternity": "Foto Kehamilan",
+              "socialMedia": "Media Sosial",
+              "timeMachine": "Mesin Waktu",
+              "timelessStudio": "Studio Abadi",
+              "tlvFashion": "Mode TLV",
+              "vintagePack": "Paket Vintage",
+              "wildFriends": "Teman Liar",
+              "winterWonderland": "Negeri Dongeng Musim Dingin",
+              "workFromHome": "Kerja dari Rumah"
+            }
+          },
+          "freeTools": {
+            "title": "Alat Gratis",
+            "items": {
+              "backgroundLibrary": "Pustaka Latar Belakang",
+              "backgroundRemover": "Penghapus Latar Belakang",
+              "blackBg": "Latar Belakang Hitam",
+              "greyBg": "Latar Belakang Abu-abu",
+              "redBg": "Latar Belakang Merah",
+              "whiteBg": "Latar Belakang Putih",
+              "abstractBg": "Latar Belakang Abstrak",
+              "christmasBg": "Latar Belakang Natal",
+              "halloweenBg": "Latar Belakang Halloween"
+            }
+          },
+          "company": {
+            "title": "Perusahaan",
+            "items": {
+              "testimonial": "Testimoni",
+              "pricing": "Harga",
+              "faq": "FAQ",
+              "privacy": "Kebijakan Privasi",
+              "terms": "Syarat Layanan"
+            }
+          },
+          "needHelp": "Butuh bantuan?",
+          "contactUs": "Hubungi Kami",
+          "copyright": "© 2024 Hak Cipta Dilindungi"
+        },
+
+        "ariaa": {
+      "bannerAlt": "Latar belakang banner",
+      "photographerAlt": "Fotografer AI",
+      "heading": "Temui fotografer AI Anda yang ahli dalam menciptakan gambar menakjubkan dari selfie Anda.",
+      "description": "Halo! Saya Aria, fotografer AI Anda di GoStudio.ai. Saya telah membantu lebih dari 21.000 orang luar biasa seperti Anda menciptakan potret dan foto profil yang benar-benar luar biasa. Baik Anda ingin memperbarui LinkedIn Anda, mendesain kartu nama, atau meningkatkan kehadiran online Anda, saya di sini untuk membantu. Biarkan saya mengurus detailnya agar Anda bersinar dengan hasil profesional dengan mudah!",
+      "button": "Mulai Sekarang"
+    },
+    "banner": {
+      "bannerAlt": "Latar belakang banner",
+      "heading": "Hemat 87% untuk foto profesional Anda. Kapan saja, di mana saja.",
+      "subheading": {
+        "line1": "Dapatkan foto kualitas studio dalam 4K dengan berbagai pakaian",
+        "line2": "dan latar belakang dalam waktu kurang dari satu jam"
+      },
+      "button": "Mulai Sekarang"
+    }
+      
+  
+  }

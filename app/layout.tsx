@@ -11,16 +11,38 @@ import ClarityScript from "@/components/ClarityScript";
 import GoogleTagManager from "@/components/GoogleTagManager";
 import 'react-tabs/style/react-tabs.css';
 import { StepBar } from "@/components/ui/step-bar";
+import { NextIntlClientProvider } from 'next-intl';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.gostudio.ai'),
   title: "Headshots AI",
   description: "Generate awesome headshots in minutes using AI",
 };
+
 export const dynamic = 'force-dynamic'
-export default function RootLayout({ children }: any) {
+
+async function getMessages(locale: string) {
+  try {
+    return (await import(`@/messages/${locale}.json`)).default;
+  } catch (error) {
+    // Fallback to English instead of using notFound()
+    return (await import(`@/messages/en.json`)).default;
+  }
+}
+
+export default async function RootLayout({
+  children,
+  params
+}: {
+  children: React.ReactNode;
+  params: { locale?: string };
+}) {
+  // Get locale from params or default to 'en'
+  const locale = params?.locale || 'en';
+  const messages = await getMessages(locale);
+
   return (
-    <html lang="en">
+    <html lang={locale}>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -36,14 +58,16 @@ export default function RootLayout({ children }: any) {
       <body className="flex flex-col bg-[#F4F7FA] min-h-screen font-[Poppins]">
         <GoogleTagManager />
         <ClarityScript />
-        <Navbar />
-        <CSPostHogProvider>
-          <main className="flex-1 flex flex-col pt-16">
-            <StepBar />
-            {children}
-          </main>
-        </CSPostHogProvider>
-        <FooterWrapper />
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <Navbar />
+          <CSPostHogProvider>
+            <main className="flex-1 flex flex-col pt-16">
+              <StepBar />
+              {children}
+            </main>
+          </CSPostHogProvider>
+          <FooterWrapper />
+        </NextIntlClientProvider>
         <Toaster />
         <Analytics />    
         <SpeedInsights />    

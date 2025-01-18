@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
 import { User } from '@supabase/auth-helpers-nextjs';
+import { useTranslations } from 'next-intl';
+import { useParams } from 'next/navigation';
 
 interface NavItemsProps {
   isMobile?: boolean;
@@ -10,6 +12,9 @@ interface NavItemsProps {
 }
 
 export default function NavItems({ isMobile = false, user }: NavItemsProps) {
+  const t = useTranslations('navigation');
+  const params = useParams();
+  const locale = params?.locale || 'en';
   const [isToolsOpen, setIsToolsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const timeoutRef = useRef<NodeJS.Timeout>();
@@ -56,17 +61,17 @@ export default function NavItems({ isMobile = false, user }: NavItemsProps) {
   const loggedInNavItems = (
     <>
       <Link 
-        href="/headshot-packs" 
+        href={`/${locale}/headshot-packs`}
         className={`text-gray-700 font-semibold text-sm px-3 font-jakarta hover:text-purple-600 transition duration-300 ${isMobile ? 'block py-2' : ''}`}
       >
-        Headshot Packs
+        {t('headshotPacks')}
       </Link>
       
       <Link 
-        href="/photoshoot-packs" 
+        href={`/${locale}/photoshoot-packs`}
         className={`text-gray-700 font-semibold text-sm px-3 font-jakarta hover:text-purple-600 transition duration-300 ${isMobile ? 'block py-2' : ''}`}
       >
-        Photoshoot Packs
+        {t('photoshootPacks')}
       </Link>
 
       <div 
@@ -79,11 +84,11 @@ export default function NavItems({ isMobile = false, user }: NavItemsProps) {
           className={`text-gray-700 font-semibold text-sm px-3 font-jakarta hover:text-purple-600 transition duration-300 ${isMobile ? 'block py-2 w-full text-left' : ''}`}
           onClick={handleToolsClick}
         >
-          Free Tools
+          {t('freeTools')}
         </button>
         <div 
           className={`
-            ${isMobile ? 'relative mt-1 ml-4' : 'absolute left-0 mt-0.5 w-48'}
+            ${isMobile ? 'relative mt-2 ml-4 space-y-1 border-l-2 border-gray-100 pl-4' : 'absolute left-0 mt-0.5 w-48'}
             ${isToolsOpen ? 'block' : 'hidden'}
           `}
           onMouseEnter={handleMouseEnter}
@@ -93,24 +98,24 @@ export default function NavItems({ isMobile = false, user }: NavItemsProps) {
             ${!isMobile ? 'pt-2 pb-2 bg-white rounded-lg shadow-lg' : ''}
           `}>
             <Link 
-              href="/free-tools/background-library" 
+              href={`/${locale}/free-tools/background-library`}
               className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors duration-200"
               onClick={(e) => {
                 e.stopPropagation();
                 if (isMobile) setIsToolsOpen(false);
               }}
             >
-              Background Library
+              {t('backgroundLibrary')}
             </Link>
             <Link 
-              href="/free-tools/background-remover" 
+              href={`/${locale}/free-tools/background-remover`}
               className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors duration-200"
               onClick={(e) => {
                 e.stopPropagation();
                 if (isMobile) setIsToolsOpen(false);
               }}
             >
-              Background Remover
+              {t('backgroundRemover')}
             </Link>
           </div>
         </div>
@@ -122,32 +127,36 @@ export default function NavItems({ isMobile = false, user }: NavItemsProps) {
   const nonLoggedInItems = (
     <>
       <Link 
-        href="/#testimonial" 
+        href={`/${locale}/#testimonial`}
         className={`text-gray-700 font-semibold text-sm px-3 font-jakarta hover:text-purple-600 transition duration-300 ${isMobile ? 'block py-2' : ''}`}
       >
-        Testimonial
+        {t('testimonial')}
       </Link>
 
       <Link 
-        href="/#pricing" 
+        href={`/${locale}/#pricing`}
         className={`text-gray-700 font-semibold text-sm px-3 font-jakarta hover:text-purple-600 transition duration-300 ${isMobile ? 'block py-2' : ''}`}
       >
-        Pricing
+        {t('pricing')}
       </Link>
 
       <Link 
-        href="/#faq" 
+        href={`/${locale}/#faq`}
         className={`text-gray-700 font-semibold text-sm px-3 font-jakarta hover:text-purple-600 transition duration-300 ${isMobile ? 'block py-2' : ''}`}
       >
-        FAQ
+        {t('faq')}
       </Link>
     </>
   );
 
   return (
-    <nav className={`${isMobile ? 'flex flex-col space-y-1' : 'flex items-center gap-8'}`}>
+    <nav className={`${isMobile ? 'flex flex-col space-y-2' : 'flex items-center gap-8'}`}>
       {loggedInNavItems}
-      {!user && nonLoggedInItems}
+      {!user && (
+        <div className={`${isMobile ? 'space-y-2' : 'flex items-center gap-8'}`}>
+          {nonLoggedInItems}
+        </div>
+      )}
     </nav>
   );
 }

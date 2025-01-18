@@ -3,277 +3,276 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import { useTranslations } from 'next-intl';
 
 const PhotosHero = () => {
+  const t = useTranslations('photoTypes');
+
   const photos = [
     {
-      title: 'Vintage Americana Photos',
-      description: 'Professional headshots with an Americana twist, ideal for LinkedIn and business networking',
+      title: t('types.vintageAmericana.title'),
+      description: t('types.vintageAmericana.description'),
       image: '/Packs/Types/americana.jpg',
       link: '/photoshoot-packs/vintage-americana-photos'
     },
     {
-      title: 'Onesie Portraits',
-      description: 'Adorable portraits for babies and toddlers',
+      title: t('types.onesiePortraits.title'),
+      description: t('types.onesiePortraits.description'),
       image: '/Packs/Types/onesis.jpg',
       link: '/photoshoot-packs/onesie-portraits'
     },
     {
-      title: 'Halloween Photos',
-      description: 'Spooky and fun portraits for Halloween enthusiasts',
+      title: t('types.halloweenPhotos.title'),
+      description: t('types.halloweenPhotos.description'),
       image: '/Packs/Types/halloween.jpg',
       link: '/photoshoot-packs/halloween-photos'
     },
-   
     {
-      title: 'Birthday Party Save The Date',
-      description: 'Natural, authentic portraits for dating profiles',
+      title: t('types.birthdayParty.title'),
+      description: t('types.birthdayParty.description'),
       image: '/Packs/Types/save.jpg',
       link: '/photoshoot-packs/birthday-party-save-the-date-photoshoot'
     },
     {
-      title: 'Artistic Portraits',
-      description: 'Creative and artistic portrait photography',
+      title: t('types.artisticPortraits.title'),
+      description: t('types.artisticPortraits.description'),
       image: '/Packs/Types/articis.jpg',
       link: '/photoshoot-packs/artistic-portraits'
     },
     {
-      title: 'Wrestlemania Photos',
-      description: 'Dynamic wrestling-inspired portraits capturing strength and character',
+      title: t('types.wrestlemaniaPhotos.title'),
+      description: t('types.wrestlemaniaPhotos.description'),
       image: '/Packs/Types/wresmania.jpg',
       link: '/photoshoot-packs/wrestlemania-photos'
     },
     {
-      title: 'Actor Red Carpet Photos',
-      description: 'Glamorous and sophisticated portraits inspired by the red carpet',
+      title: t('types.redCarpet.title'),
+      description: t('types.redCarpet.description'),
       image: '/Packs/Types/red-carpet.jpg',
       link: '/photoshoot-packs/actor-red-carpet-photos'
     },
     {
-      title: 'Game of Thrones Portraits',
-      description: 'Fantasy-inspired portraits in the style of Game of Thrones',
+      title: t('types.gameOfThrones.title'),
+      description: t('types.gameOfThrones.description'),
       image: '/Packs/Types/game-of-thoran.jpg',
       link: '/photoshoot-packs/game-of-thrones-portraits'
     },
     {
-      title: 'Kids Birthday Portraits',
-      description: 'Capturing special moments for children\'s birthdays',
+      title: t('types.kidsBirthday.title'),
+      description: t('types.kidsBirthday.description'),
       image: '/Packs/Types/birthday.jpg',
       link: '/photoshoot-packs/kids-birthday-portraits'
     },
     {
-      title: 'Mythical Creatures Portraits',
-      description: 'Fantasy-inspired portraits featuring mythical creatures',
+      title: t('types.mythicalCreatures.title'),
+      description: t('types.mythicalCreatures.description'),
       image: '/Packs/Types/myth.jpg',
       link: '/photoshoot-packs/mythical-creatures-portaits'
     },
     {
-      title: 'Online Dating Profile Photos',
-      description: 'Perfect portraits for online dating profiles',
+      title: t('types.onlineDating.title'),
+      description: t('types.onlineDating.description'),
       image: '/Packs/Types/dating.jpg',
       link: '/photoshoot-packs/online-dating-profile-photos'
     },
     {
-      title: 'Pet Photography',
-      description: 'Professional portraits for pets',
+      title: t('types.petPhotography.title'),
+      description: t('types.petPhotography.description'),
       image: '/Packs/Types/dog.jpg',
       link: '/photoshoot-packs/pet-photography-dog'
     },
     {
-      title: 'Pop Color Photos',
-      description: 'Vibrant portraits with pop art influence',
+      title: t('types.popColor.title'),
+      description: t('types.popColor.description'),
       image: '/Packs/Types/bold.jpg',
       link: '/photoshoot-packs/pop-color-photos'
     },
     {
-      title: 'YouTube Thumbnail Photos',
-      description: 'Eye-catching portraits perfect for YouTube thumbnails',
+      title: t('types.youtubeThumbnails.title'),
+      description: t('types.youtubeThumbnails.description'),
       image: '/Packs/Types/youtube.jpg',
       link: '/photoshoot-packs/youtube-thumbnail-photos'
     },
-   {
-    title: 'Actress Portraits',
-    description: 'Vibrant and detailed photographs of plants and flowers',
-    image: '/Packs/Types/botnical.jpg',
-    link: '/photoshoot-packs/botanical-photos'
-  },
-  {
-    title: 'Dreamland Kids Photos',
-    description: 'Magical and whimsical portraits for children in dreamlike settings',
-    image: '/Packs/Types/dreamland.jpg',
-    link: '/photoshoot-packs/4dreamland-kids-photos'
-  },
-  {
-    title: 'Baby Doodles',
-    description: 'Transform your baby photos into adorable doodle-style portraits. Perfect for nursery art and birth announcements.',
-    image: '/Packs/Types/doll.jpg',
-    link: '/photoshoot-packs/baby-doodles-photos'
-  },
-  {
-    title: 'Birthday Magic',
-    description: 'Create enchanting birthday portraits perfect for celebrations, invitations, and special occasions.',
-    image: '/Packs/Types/magic.jpg',
-    link: '/photoshoot-packs/birthday-magic-photos'
-  },
-  {
-    title: 'Personal Brand Photography',
-    description: 'Professional photography solutions designed to elevate your personal brand and create a consistent visual presence.',
-    image: '/Packs/Types/branded.jpg',
-    link: '/photoshoot-packs/branding-photography'
-  },
-  {
-    title: 'Casual Photography',
-    description: 'Natural and relaxed portraits perfect for social media and casual professional needs.',
-    image: '/Packs/Types/casual.jpg',
-    link: '/photoshoot-packs/casual-photos'
-  },
-  {
-    title: 'Casual Collection',
-    description: 'Create a diverse series of casual, lifestyle portraits perfect for maintaining a consistent online presence.',
-    image: '/Packs/Types/CC.jpg',
-    link: '/photoshoot-packs/casualcollection-photos'
-  },
-  {
-    title: 'Cat Magic',
-    description: 'Transform your cat photos into magical portraits that capture their unique personality and charm.',
-    image: '/Packs/Types/cat.jpg',
-    link: '/photoshoot-packs/catmeowgic-photos'
-  },
-
-{
-  title: 'Cyberpunk',
-  description: 'Transform into a stunning cyberpunk character with futuristic digital art styles.',
-  image: '/Packs/Types/cyber.jpg',
-  link: '/photoshoot-packs/cyberpunk-photos'
-},
-{
-  title: 'Hanukkah Miracle',
-  description: 'Create beautiful Hanukkah-themed portraits that capture the magic of the Festival of Lights.',
-  image: '/Packs/Types/hakkuka.jpg',
-  link: '/photoshoot-packs/hanukka-miracle-photos'
-},
-{
-  title: 'Happy Kid',
-  description: 'Create delightful portraits of happy children that capture their pure joy and innocence.',
-  image: '/Packs/Types/happy.jpg',
-  link: '/photoshoot-packs/happy-kid-photos'
-},
-{
-  title: 'Influencer',
-  description: 'Create stunning influencer-style portraits perfect for social media and content creation.',
-  image: '/Packs/Types/infulencer.jpg',
-  link: '/photoshoot-packs/influencer-photos'
-},
-{
-  title: 'Me Iconic',
-  description: 'Create your own iconic portrait style that makes you stand out from the crowd.',
-  image: '/Packs/Types/me.jpg',
-  link: '/photoshoot-packs/me-iconic-photos'
-},
-// Add these to your headshots array
-{
-  title: 'Merry Christmas',
-  description: 'Create magical Christmas portraits that capture the joy and warmth of the holiday season.',
-  image: '/Packs/Types/merry.jpg',
-  link: '/photoshoot-packs/merry-christmas-photos'
-},
-{
-  title: 'Playful Casual',
-  description: 'Create fun and natural casual portraits that show your playful side.',
-  image: '/Packs/Types/playful.jpg',
-  link: '/photoshoot-packs/playful-casual-photos'
-},
-{
-  title: 'Podcaster',
-  description: 'Create professional podcaster portraits that help build your audio brand.',
-  image: '/Packs/Types/podcast.jpg',
-  link: '/photoshoot-packs/podcaster-photos'
-},
-{
-  title: 'Romantic Maternity',
-  description: 'Create beautiful and romantic maternity portraits that celebrate the magic of pregnancy.',
-  image: '/Packs/Types/maternity.jpg',
-  link: '/photoshoot-packs/romantic-maternity-photos'
-},
-{
-  title: 'Social Media',
-  description: 'Create stunning portraits optimized for all social media platforms.',
-  image: '/Packs/Types/social-media.jpg',
-  link: '/photoshoot-packs/social-media-photos'
-},
-// Add these to your headshots array
-{
-  title: 'Time Machine',
-  description: 'Travel through time with stunning historical portraits and period-themed photos.',
-  image: '/Packs/Types/machin.jpg',
-  link: '/photoshoot-packs/time-machine-photos'
-},
-{
-  title: 'Timeless Studio',
-  description: 'Create elegant studio portraits with a timeless, professional appeal.',
-  image: '/Packs/Types/timeless.jpg',
-  link: '/photoshoot-packs/timeless-studio-photos'
-},
-{
-  title: 'Tel Aviv Fashion',
-  description: 'Create stunning Tel Aviv-inspired fashion portraits with urban style.',
-  image: '/Packs/Types/tlv.jpg',
-  link: '/photoshoot-packs/TLV-fashion-photos'
-},
-{
-  title: 'Wild Friends',
-  description: 'Create magical portraits with your pets and animal companions.',
-  image: '/Packs/Types/wild.jpg',
-  link: '/photoshoot-packs/wild-friends-photos'
-},
-{
-  title: 'Winter Wonderland',
-  description: 'Create enchanting winter wonderland portraits in magical snow scenes.',
-  image: '/Packs/Types/wonder.jpg',
-  link: '/photoshoot-packs/winter-wonderland-photos'
-},
-{
-  title: 'Work From Home',
-  description: 'Create professional work-from-home portraits for remote work.',
-  image: '/Packs/Types/WHF.jpg',
-  link: '/photoshoot-packs/work-from-home-photos'
-},
-{
-  title: 'Vintage Pack',
-  description: 'Create beautiful vintage-style portraits with timeless retro aesthetics and classic throwback appeal.',
-  image: '/Packs/Types/vintage.jpg',
-  link: '/photoshoot-packs/vintage-pack-photos'
-},
-{
-  title: 'Professional Tattoo Portraits',
-  description: 'Showcase your tattoos with professional portraits that highlight your artistic expression.',
-  image: '/Packs/Types/tattos.jpg',
-  link: '/photoshoot-packs/professional-tattoos-portraits'
-},
-{
-  title: 'Annie Leibovitz Style',
-  description: 'Dramatic portraits inspired by Annie Leibovitz\'s iconic photography style.',
-  image: '/Packs/Types/annie.jpg',
-  link: '/photoshoot-packs/annie-headshot'
-},
-{
-  title: 'Barbie Style',
-  description: 'Fun and stylish Barbie-inspired portrait photography.',
-  image: '/Packs/Types/barbie.jpg',
-  link: '/photoshoot-packs/barbie-headshot'
-},
-{
-  title: 'Viking Portraits',
-  description: 'Powerful Viking-inspired portraits perfect for historical themes and fantasy shoots.',
-  image: '/Packs/Types/vings.jpg',
-  link: '/photoshoot-packs/viking-portraits'
-},
-{
-  title: 'Marvel Class',
-  description: 'Dynamic, high-impact headshots with a cinematic quality inspired by Marvel productions.',
-  image: '/Packs/Types/miarval.jpg',
-  link: '/photoshoot-packs/meiravclass-headshot'
-},
+    {
+      title: t('types.actressPortraits.title'),
+      description: t('types.actressPortraits.description'),
+      image: '/Packs/Types/botnical.jpg',
+      link: '/photoshoot-packs/botanical-photos'
+    },
+    {
+      title: t('types.dreamlandKids.title'),
+      description: t('types.dreamlandKids.description'),
+      image: '/Packs/Types/dreamland.jpg',
+      link: '/photoshoot-packs/4dreamland-kids-photos'
+    },
+    {
+      title: t('types.babyDoodles.title'),
+      description: t('types.babyDoodles.description'),
+      image: '/Packs/Types/doll.jpg',
+      link: '/photoshoot-packs/baby-doodles-photos'
+    },
+    {
+      title: t('types.birthdayMagic.title'),
+      description: t('types.birthdayMagic.description'),
+      image: '/Packs/Types/magic.jpg',
+      link: '/photoshoot-packs/birthday-magic-photos'
+    },
+    {
+      title: t('types.personalBrand.title'),
+      description: t('types.personalBrand.description'),
+      image: '/Packs/Types/branded.jpg',
+      link: '/photoshoot-packs/branding-photography'
+    },
+    {
+      title: t('types.casualPhotography.title'),
+      description: t('types.casualPhotography.description'),
+      image: '/Packs/Types/casual.jpg',
+      link: '/photoshoot-packs/casual-photos'
+    },
+    {
+      title: t('types.casualCollection.title'),
+      description: t('types.casualCollection.description'),
+      image: '/Packs/Types/CC.jpg',
+      link: '/photoshoot-packs/casualcollection-photos'
+    },
+    {
+      title: t('types.catMagic.title'),
+      description: t('types.catMagic.description'),
+      image: '/Packs/Types/cat.jpg',
+      link: '/photoshoot-packs/catmeowgic-photos'
+    },
+    {
+      title: t('types.cyberpunk.title'),
+      description: t('types.cyberpunk.description'),
+      image: '/Packs/Types/cyber.jpg',
+      link: '/photoshoot-packs/cyberpunk-photos'
+    },
+    {
+      title: t('types.hanukkahMiracle.title'),
+      description: t('types.hanukkahMiracle.description'),
+      image: '/Packs/Types/hakkuka.jpg',
+      link: '/photoshoot-packs/hanukka-miracle-photos'
+    },
+    {
+      title: t('types.happyKid.title'),
+      description: t('types.happyKid.description'),
+      image: '/Packs/Types/happy.jpg',
+      link: '/photoshoot-packs/happy-kid-photos'
+    },
+    {
+      title: t('types.influencer.title'),
+      description: t('types.influencer.description'),
+      image: '/Packs/Types/infulencer.jpg',
+      link: '/photoshoot-packs/influencer-photos'
+    },
+    {
+      title: t('types.meIconic.title'),
+      description: t('types.meIconic.description'),
+      image: '/Packs/Types/me.jpg',
+      link: '/photoshoot-packs/me-iconic-photos'
+    },
+    {
+      title: t('types.merryChristmas.title'),
+      description: t('types.merryChristmas.description'),
+      image: '/Packs/Types/merry.jpg',
+      link: '/photoshoot-packs/merry-christmas-photos'
+    },
+    {
+      title: t('types.playfulCasual.title'),
+      description: t('types.playfulCasual.description'),
+      image: '/Packs/Types/playful.jpg',
+      link: '/photoshoot-packs/playful-casual-photos'
+    },
+    {
+      title: t('types.podcaster.title'),
+      description: t('types.podcaster.description'),
+      image: '/Packs/Types/podcast.jpg',
+      link: '/photoshoot-packs/podcaster-photos'
+    },
+    {
+      title: t('types.romanticMaternity.title'),
+      description: t('types.romanticMaternity.description'),
+      image: '/Packs/Types/maternity.jpg',
+      link: '/photoshoot-packs/romantic-maternity-photos'
+    },
+    {
+      title: t('types.socialMedia.title'),
+      description: t('types.socialMedia.description'),
+      image: '/Packs/Types/social-media.jpg',
+      link: '/photoshoot-packs/social-media-photos'
+    },
+    {
+      title: t('types.timeMachine.title'),
+      description: t('types.timeMachine.description'),
+      image: '/Packs/Types/machin.jpg',
+      link: '/photoshoot-packs/time-machine-photos'
+    },
+    {
+      title: t('types.timelessStudio.title'),
+      description: t('types.timelessStudio.description'),
+      image: '/Packs/Types/timeless.jpg',
+      link: '/photoshoot-packs/timeless-studio-photos'
+    },
+    {
+      title: t('types.telAvivFashion.title'),
+      description: t('types.telAvivFashion.description'),
+      image: '/Packs/Types/tlv.jpg',
+      link: '/photoshoot-packs/TLV-fashion-photos'
+    },
+    {
+      title: t('types.wildFriends.title'),
+      description: t('types.wildFriends.description'),
+      image: '/Packs/Types/wild.jpg',
+      link: '/photoshoot-packs/wild-friends-photos'
+    },
+    {
+      title: t('types.winterWonderland.title'),
+      description: t('types.winterWonderland.description'),
+      image: '/Packs/Types/wonder.jpg',
+      link: '/photoshoot-packs/winter-wonderland-photos'
+    },
+    {
+      title: t('types.workFromHome.title'),
+      description: t('types.workFromHome.description'),
+      image: '/Packs/Types/WHF.jpg',
+      link: '/photoshoot-packs/work-from-home-photos'
+    },
+    {
+      title: t('types.vintagePack.title'),
+      description: t('types.vintagePack.description'),
+      image: '/Packs/Types/vintage.jpg',
+      link: '/photoshoot-packs/vintage-pack-photos'
+    },
+    {
+      title: t('types.professionalTattoos.title'),
+      description: t('types.professionalTattoos.description'),
+      image: '/Packs/Types/tattos.jpg',
+      link: '/photoshoot-packs/professional-tattoos-portraits'
+    },
+    {
+      title: t('types.annieLeibovitz.title'),
+      description: t('types.annieLeibovitz.description'),
+      image: '/Packs/Types/annie.jpg',
+      link: '/photoshoot-packs/annie-headshot'
+    },
+    {
+      title: t('types.barbie.title'),
+      description: t('types.barbie.description'),
+      image: '/Packs/Types/barbie.jpg',
+      link: '/photoshoot-packs/barbie-headshot'
+    },
+    {
+      title: t('types.vikingPortraits.title'),
+      description: t('types.vikingPortraits.description'),
+      image: '/Packs/Types/vings.jpg',
+      link: '/photoshoot-packs/viking-portraits'
+    },
+    {
+      title: t('types.marvelClass.title'),
+      description: t('types.marvelClass.description'),
+      image: '/Packs/Types/miarval.jpg',
+      link: '/photoshoot-packs/meiravclass-headshot'
+    },
   ];
 
   const [showAll, setShowAll] = useState(false);
@@ -285,10 +284,10 @@ const PhotosHero = () => {
     <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-24">
       <div className="text-center mb-16">
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4]">
-          Professional AI Photo Styles
+          {t('title')}
         </h1>
         <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-          Choose from our diverse collection of AI-powered photo styles to create your perfect professional portrait.
+          {t('subtitle')}
         </p>
       </div>
 
@@ -330,7 +329,7 @@ const PhotosHero = () => {
           onClick={() => setShowAll(!showAll)}
           className="bg-gradient-to-r from-[#8371FF] via-[#A077FE] to-[#01C7E4] text-white px-10 py-4 rounded-full font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105"
         >
-          {showAll ? 'Show Less' : 'See All Styles'}
+          {showAll ? t('showLess') : t('showMore')}
         </button>
       </div>
     </div>
