@@ -697,13 +697,13 @@
           }
         },
         
-  "common": {
-    "features": {
-      "styles": "150以上のスタイルから選択",
-      "delivery": "1時間以内に結果提供",
-      "protection": "厳格なデータ保護",
-      "guarantee": "返金保証付き"
-    }
+        "common": {
+          "features": {
+            "styles": "150以上のスタイルから選択",
+            "delivery": "1時間以内に結果提供",
+            "protection": "厳格なデータ保護",
+            "guarantee": "返金保証付き"
+          }
   },
   "heroPages": {
     "color": {
@@ -733,8 +733,53 @@
       "description": "繊細なボタニカルイラストの要素で彩られたAI生成ポートレートで、自然の優雅さを表現します。",
       "button": "無料で始める",
       "imageAlt": "ボタニカルポートレートの例"
-    }
+    },
+   
+  "partner": {
+    "title": {
+      "part1": "法律パートナー向け",
+      "part2": "プロフィール写真",
+      "part3": "AI駆動の",
+      "part4": "卓越性"
+    },
+    "description": "シニアパートナーや執行役員弁護士のために作られたプロフィール写真で、貴所の経営陣の存在感を高めます。あなたの地位にふさわしい権威と信頼性を反映させます。",
+    "button": "存在感を高める",
+    "imageAlt": "法律パートナー向けプロフェッショナル写真"
   },
+  "stylishLawyer": {
+    "title": {
+      "part1": "法的プレゼンスを",
+      "part2": "向上させる",
+      "part3": "プロフェッショナル写真を",
+      "part4": "数分で"
+    },
+    "description": "法律専門家のためにカスタマイズされたAI生成のプロフェッショナル写真で、尊敬と信頼を獲得。法律事務所のウェブサイト、LinkedIn、専門家ディレクトリに最適です。",
+    "button": "イメージを変革する",
+    "imageAlt": "スタイリッシュな弁護士写真"
+  },
+  "professionalism": {
+    "title": {
+      "part1": "比類なき",
+      "part2": "プロフェッショナリズム",
+      "part3": "AI搭載",
+      "part4": "法的卓越性"
+    },
+    "description": "卓越性、信頼性、洗練さを体現するプロフィール写真で、あなたの法的専門知識を示します。最高水準を求める弁護士に最適です。",
+    "button": "プロフィールを向上",
+    "imageAlt": "法的プロフェッショナル写真"
+  },
+  "common": {
+    "features": {
+      "styles": "150以上のスタイルから選択",
+      "delivery": "1時間以内に結果提供",
+      "protection": "厳格なデータ保護",
+      "guarantee": "返金保証付き"
+    }
+  }
+
+  },
+  
+  
  
     
       "heroPacks": {
@@ -930,7 +975,114 @@
     "guarantee": "満足保証"
   }
 }
-      }
+      },
+
+      
+        "footer": {
+          "logoAlt": "GoStudio",
+          "description": {
+            "line1": "GoStudioはAI搭載のプロフェッショナル写真スタジオです",
+            "line2": "高品質なプロフェッショナルポートレート写真を提供しています",
+            "line3": "ビジネスやプロフェッショナル向けの専門写真撮影を行っています"
+          },
+          "aiHeadshots": {
+            "title": "プロフェッショナルポートレート",
+            "items": {
+              "doctor": "医師向け写真",
+              "lawyer": "弁護士向け写真",
+              "actor": "俳優向け写真",
+              "realtor": "不動産業者向け写真",
+              "tedSpeaker": "TEDスピーカー向け写真",
+              "businessCasual": "ビジネスカジュアル写真",
+              "effortlessPro": "ナチュラルプロ写真",
+              "lawyerBranded": "弁護士ブランド写真",
+              "partner": "パートナー向け写真",
+              "proPack": "プロパッケージ",
+              "styledSuccess": "成功スタイル写真",
+              "stylishLawyer": "スタイリッシュ弁護士写真"
+            }
+          },
+          "aiPhotos": {
+            "title": "特別撮影セッション",
+            "items": {
+              "meiravClass": "メイラヴセッション",
+              "tattoos": "タトゥーポートレート",
+              "annie": "アニーセッション",
+              "barbie": "バービーセッション",
+              "viking": "バイキングポートレート",
+              "dreamland": "ドリームランドキッズフォト",
+              "babyDoodles": "ベビー落書き",
+              "birthdayMagic": "バースデーマジック",
+              "branding": "ブランディング撮影",
+              "casual": "カジュアル写真",
+              "casualCollection": "カジュアルコレクション",
+              "catMagic": "キャットマジック",
+              "christmasElf": "クリスマスエルフ",
+              "christmasSweater": "クリスマスセーター",
+              "familyChristmas": "ファミリークリスマス",
+              "cyberpunk": "サイバーパンク写真",
+              "hanukkah": "ハヌカー写真",
+              "happyKid": "ハッピーキッズ",
+              "influencer": "インフルエンサー写真",
+              "iconic": "アイコニック写真",
+              "merryChristmas": "メリークリスマス",
+              "vintageAmericana": "ビンテージアメリカーナ",
+              "onesie": "着ぐるみポートレート",
+              "halloween": "ハロウィン写真",
+              "actress": "女優向け写真",
+              "birthdayParty": "バースデーパーティー",
+              "artistic": "アート写真",
+              "wrestlemania": "レッスルマニア写真",
+              "redCarpet": "レッドカーペット",
+              "gameOfThrones": "ゲーム・オブ・スローンズ",
+              "kidsBirthday": "キッズバースデー",
+              "mythical": "神話の生き物",
+              "dating": "デーティング写真",
+              "petDog": "ペット犬撮影",
+              "popColor": "ポップカラー写真",
+              "youtube": "YouTube用写真",
+              "playfulCasual": "プレイフルカジュアル",
+              "podcaster": "ポッドキャスター写真",
+              "maternity": "マタニティフォト",
+              "socialMedia": "ソーシャルメディア",
+              "timeMachine": "タイムマシン",
+              "timelessStudio": "タイムレススタジオ",
+              "tlvFashion": "TLVファッション",
+              "vintagePack": "ビンテージパック",
+              "wildFriends": "ワイルドフレンズ",
+              "winterWonderland": "ウィンターワンダーランド",
+              "workFromHome": "在宅ワーク"
+            }
+          },
+          "freeTools": {
+            "title": "無料ツール",
+            "items": {
+              "backgroundLibrary": "背景ライブラリ",
+              "backgroundRemover": "背景削除",
+              "blackBg": "黒背景",
+              "greyBg": "グレー背景",
+              "redBg": "赤背景",
+              "whiteBg": "白背景",
+              "abstractBg": "抽象背景",
+              "christmasBg": "クリスマス背景",
+              "halloweenBg": "ハロウィン背景"
+            }
+          },
+          "company": {
+            "title": "会社情報",
+            "items": {
+              "testimonial": "お客様の声",
+              "pricing": "料金",
+              "faq": "よくある質問",
+              "privacy": "プライバシーポリシー",
+              "terms": "利用規約"
+            }
+          },
+          "needHelp": "お困りですか？",
+          "contactUs": "お問い合わせ",
+          "copyright": "© 2024 All Rights Reserved"
+        }
+      
     
   }
 

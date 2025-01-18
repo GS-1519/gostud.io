@@ -886,7 +886,42 @@
       "description": "Abraza la elegancia de la naturaleza con retratos generados por IA mejorados con delicados elementos de ilustración botánica.",
       "button": "Empezar Gratis",
       "imageAlt": "Ejemplos de retratos botánicos"
-    }
+    },
+    
+  "partner": {
+    "title": {
+      "part1": "Retratos",
+      "part2": "para Socios Legales",
+      "part3": "Excelencia",
+      "part4": "Impulsada por IA"
+    },
+    "description": "Eleve la presencia ejecutiva de su firma con retratos diseñados para socios senior y abogados ejecutivos. Refleje la autoridad y credibilidad que su posición merece.",
+    "button": "Eleve su Presencia",
+    "imageAlt": "Retratos profesionales para socios legales"
+  },
+  "stylishLawyer": {
+    "title": {
+      "part1": "Eleve su",
+      "part2": "Presencia Legal",
+      "part3": "Retratos Profesionales",
+      "part4": "en Minutos"
+    },
+    "description": "Gane respeto y confianza con retratos profesionales generados por IA, personalizados para profesionales legales. Perfecto para sitios web de bufetes, perfiles de LinkedIn y directorios profesionales.",
+    "button": "Transforme su Imagen",
+    "imageAlt": "Retratos elegantes para abogados"
+  },
+  "professionalism": {
+    "title": {
+      "part1": "Profesionalismo",
+      "part2": "Sin Igual",
+      "part3": "Excelencia Legal",
+      "part4": "con IA"
+    },
+    "description": "Muestre su experiencia legal con retratos que encarnan excelencia, credibilidad y sofisticación. Ideal para abogados que exigen los más altos estándares.",
+    "button": "Eleve su Perfil",
+    "imageAlt": "Retratos profesionales legales"
+  }
+
   },
   "heroFeatures": {
     "styles": "Más de 150 estilos",
@@ -1088,7 +1123,113 @@
       "button": "Cree Su Editorial",
       "imageAlt": "Retratos estilo Barbie"
     }
-  }
+  },
+  
+    "footer": {
+      "logoAlt": "GoStudio",
+      "description": {
+        "line1": "GoStudio es un estudio fotográfico profesional impulsado por IA",
+        "line2": "Ofrecemos fotos de retrato profesionales de alta calidad",
+        "line3": "Especializados en fotografía profesional para negocios y profesionales"
+      },
+      "aiHeadshots": {
+        "title": "Retratos Profesionales",
+        "items": {
+          "doctor": "Fotos para Médicos",
+          "lawyer": "Fotos para Abogados",
+          "actor": "Fotos para Actores",
+          "realtor": "Fotos para Agentes Inmobiliarios",
+          "tedSpeaker": "Fotos para Oradores TED",
+          "businessCasual": "Fotos Business Casual",
+          "effortlessPro": "Fotos Profesionales Naturales",
+          "lawyerBranded": "Fotos de Marca para Abogados",
+          "partner": "Fotos para Socios",
+          "proPack": "Paquete Profesional",
+          "styledSuccess": "Fotos Estilo Éxito",
+          "stylishLawyer": "Fotos Abogados con Estilo"
+        }
+      },
+      "aiPhotos": {
+        "title": "Sesiones Especiales",
+        "items": {
+          "meiravClass": "Sesión Meirav",
+          "tattoos": "Retratos con Tatuajes",
+          "annie": "Sesión Annie",
+          "barbie": "Sesión Barbie",
+          "viking": "Retratos Vikingos",
+          "dreamland": "Fotos Infantiles Dreamland",
+          "babyDoodles": "Garabatos de Bebé",
+          "birthdayMagic": "Magia de Cumpleaños",
+          "branding": "Fotografía de Marca",
+          "casual": "Fotos Casuales",
+          "casualCollection": "Colección Casual",
+          "catMagic": "Magia Felina",
+          "christmasElf": "Duende Navideño",
+          "christmasSweater": "Suéter Navideño",
+          "familyChristmas": "Navidad en Familia",
+          "cyberpunk": "Fotos Cyberpunk",
+          "hanukkah": "Fotos Hanukkah",
+          "happyKid": "Niño Feliz",
+          "influencer": "Fotos Influencer",
+          "iconic": "Fotos Icónicas",
+          "merryChristmas": "Feliz Navidad",
+          "vintageAmericana": "Americana Vintage",
+          "onesie": "Retratos Pijama",
+          "halloween": "Fotos Halloween",
+          "actress": "Fotos para Actrices",
+          "birthdayParty": "Fiesta de Cumpleaños",
+          "artistic": "Fotos Artísticas",
+          "wrestlemania": "Fotos Wrestlemania",
+          "redCarpet": "Alfombra Roja",
+          "gameOfThrones": "Juego de Tronos",
+          "kidsBirthday": "Cumpleaños Infantil",
+          "mythical": "Criaturas Míticas",
+          "dating": "Fotos para Citas",
+          "petDog": "Fotografía de Perros",
+          "popColor": "Fotos Pop Color",
+          "youtube": "Fotos YouTube",
+          "playfulCasual": "Casual Divertido",
+          "podcaster": "Fotos Podcaster",
+          "maternity": "Fotos de Maternidad",
+          "socialMedia": "Redes Sociales",
+          "timeMachine": "Máquina del Tiempo",
+          "timelessStudio": "Estudio Atemporal",
+          "tlvFashion": "Moda TLV",
+          "vintagePack": "Paquete Vintage",
+          "wildFriends": "Amigos Salvajes",
+          "winterWonderland": "Maravillas de Invierno",
+          "workFromHome": "Trabajo desde Casa"
+        }
+      },
+      "freeTools": {
+        "title": "Herramientas Gratuitas",
+        "items": {
+          "backgroundLibrary": "Biblioteca de Fondos",
+          "backgroundRemover": "Eliminador de Fondos",
+          "blackBg": "Fondo Negro",
+          "greyBg": "Fondo Gris",
+          "redBg": "Fondo Rojo",
+          "whiteBg": "Fondo Blanco",
+          "abstractBg": "Fondo Abstracto",
+          "christmasBg": "Fondo Navideño",
+          "halloweenBg": "Fondo Halloween"
+        }
+      },
+      "company": {
+        "title": "Empresa",
+        "items": {
+          "testimonial": "Testimonios",
+          "pricing": "Precios",
+          "faq": "Preguntas Frecuentes",
+          "privacy": "Política de Privacidad",
+          "terms": "Términos de Servicio"
+        }
+      },
+      "needHelp": "¿Necesitas ayuda?",
+      "contactUs": "Contáctanos",
+      "copyright": "© 2024 Todos los derechos reservados"
+    }
+  
 
 
       }

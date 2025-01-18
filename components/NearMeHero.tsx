@@ -165,7 +165,7 @@ const countries: Country[] = [
     name: "Switzerland",
     image: "/locations/che.jpg",
     description: "Precision and elegance amid stunning Alpine backdrops",
-    cities: "Zurich • Geneva • Basel • Bern",
+    cities: "Zurich • Geneva • Basel • Bernl",
     link: "/near-me/switzerland"
   }
 ]

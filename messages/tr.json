@@ -883,7 +883,42 @@
       "description": "Zarif botanik illüstrasyon öğeleriyle zenginleştirilmiş AI tarafından oluşturulan portrelerle doğanın zarafetini kucaklayın.",
       "button": "Ücretsiz Başla",
       "imageAlt": "Botanik portre örnekleri"
-    }
+    },
+    
+  "partner": {
+    "title": {
+      "part1": "Hukuk Ortakları için",
+      "part2": "Profesyonel Fotoğraflar",
+      "part3": "Yapay Zeka ile",
+      "part4": "Mükemmellik"
+    },
+    "description": "Kıdemli ortaklar ve yönetici avukatlar için tasarlanmış fotoğraflarla firmanızın yönetici varlığını yükseltin. Pozisyonunuzun hak ettiği otoriteyi ve güvenilirliği yansıtın.",
+    "button": "Varlığınızı Yükseltin",
+    "imageAlt": "Hukuk ortakları için profesyonel fotoğraflar"
+  },
+  "stylishLawyer": {
+    "title": {
+      "part1": "Hukuki Varlığınızı",
+      "part2": "Yükseltin",
+      "part3": "Profesyonel Fotoğraflar",
+      "part4": "Dakikalar İçinde"
+    },
+    "description": "Hukuk profesyonelleri için özel olarak tasarlanmış yapay zeka üretimli profesyonel fotoğraflarla saygı ve güven kazanın. Hukuk firması web siteleri, LinkedIn profilleri ve profesyonel dizinler için mükemmel.",
+    "button": "İmajınızı Dönüştürün",
+    "imageAlt": "Şık avukat fotoğrafları"
+  },
+  "professionalism": {
+    "title": {
+      "part1": "Benzersiz",
+      "part2": "Profesyonellik",
+      "part3": "Yapay Zeka ile",
+      "part4": "Hukuki Mükemmellik"
+    },
+    "description": "Mükemmelliği, güvenilirliği ve zarafeti yansıtan fotoğraflarla hukuki uzmanlığınızı sergileyin. En yüksek standartları talep eden avukatlar için ideal.",
+    "button": "Profilinizi Yükseltin",
+    "imageAlt": "Profesyonel hukuki fotoğraflar"
+  }
+
   },
   "heroFeatures": {
     "styles": "150'den fazla stil",
@@ -1087,7 +1122,115 @@
     "guarantee": "Memnuniyet garantisi"
   }
 }
-      }
+      },
+
+      
+        "footer": {
+          "logoAlt": "GoStudio",
+          "description": {
+            "line1": "GoStudio, yapay zeka destekli profesyonel bir fotoğraf stüdyosudur",
+            "line2": "Yüksek kaliteli profesyonel portre fotoğrafları sunuyoruz",
+            "line3": "İşletmeler ve profesyoneller için profesyonel fotoğrafçılık konusunda uzmanız"
+          },
+          "aiHeadshots": {
+            "title": "Profesyonel Portreler",
+            "items": {
+              "doctor": "Doktorlar için Fotoğraflar",
+              "lawyer": "Avukatlar için Fotoğraflar",
+              "actor": "Oyuncular için Fotoğraflar",
+              "realtor": "Emlakçılar için Fotoğraflar",
+              "tedSpeaker": "TED Konuşmacıları için Fotoğraflar",
+              "businessCasual": "İş Casual Fotoğrafları",
+              "effortlessPro": "Doğal Profesyonel Fotoğraflar",
+              "lawyerBranded": "Avukat Marka Fotoğrafları",
+              "partner": "Ortaklar için Fotoğraflar",
+              "proPack": "Profesyonel Paket",
+              "styledSuccess": "Başarı Tarzı Fotoğraflar",
+              "stylishLawyer": "Şık Avukat Fotoğrafları"
+            }
+          },
+          "aiPhotos": {
+            "title": "Özel Çekimler",
+            "items": {
+              "meiravClass": "Meirav Seansı",
+              "tattoos": "Dövmeli Portreler",
+              "annie": "Annie Seansı",
+              "barbie": "Barbie Seansı",
+              "viking": "Viking Portreleri",
+              "dreamland": "Dreamland Çocuk Fotoğrafları",
+              "babyDoodles": "Bebek Karalamalar",
+              "birthdayMagic": "Doğum Günü Sihri",
+              "branding": "Marka Fotoğrafçılığı",
+              "casual": "Günlük Fotoğraflar",
+              "casualCollection": "Günlük Koleksiyonu",
+              "catMagic": "Kedi Sihri",
+              "christmasElf": "Noel Cini",
+              "christmasSweater": "Noel Kazağı",
+              "familyChristmas": "Aile Noeli",
+              "cyberpunk": "Cyberpunk Fotoğrafları",
+              "hanukkah": "Hanuka Fotoğrafları",
+              "happyKid": "Mutlu Çocuk",
+              "influencer": "Influencer Fotoğrafları",
+              "iconic": "İkonik Fotoğraflar",
+              "merryChristmas": "Mutlu Noeller",
+              "vintageAmericana": "Vintage Americana",
+              "onesie": "Tulum Portreleri",
+              "halloween": "Cadılar Bayramı Fotoğrafları",
+              "actress": "Aktris Fotoğrafları",
+              "birthdayParty": "Doğum Günü Partisi",
+              "artistic": "Sanatsal Fotoğraflar",
+              "wrestlemania": "Wrestlemania Fotoğrafları",
+              "redCarpet": "Kırmızı Halı",
+              "gameOfThrones": "Game of Thrones",
+              "kidsBirthday": "Çocuk Doğum Günü",
+              "mythical": "Mitolojik Yaratıklar",
+              "dating": "Tanışma Fotoğrafları",
+              "petDog": "Köpek Fotoğrafçılığı",
+              "popColor": "Pop Renk Fotoğrafları",
+              "youtube": "YouTube Fotoğrafları",
+              "playfulCasual": "Eğlenceli Günlük",
+              "podcaster": "Podcaster Fotoğrafları",
+              "maternity": "Hamilelik Fotoğrafları",
+              "socialMedia": "Sosyal Medya",
+              "timeMachine": "Zaman Makinesi",
+              "timelessStudio": "Zamansız Stüdyo",
+              "tlvFashion": "TLV Moda",
+              "vintagePack": "Vintage Paketi",
+              "wildFriends": "Vahşi Dostlar",
+              "winterWonderland": "Kış Harikalar Diyarı",
+              "workFromHome": "Evden Çalışma"
+            }
+          },
+          "freeTools": {
+            "title": "Ücretsiz Araçlar",
+            "items": {
+              "backgroundLibrary": "Arka Plan Kütüphanesi",
+              "backgroundRemover": "Arka Plan Silici",
+              "blackBg": "Siyah Arka Plan",
+              "greyBg": "Gri Arka Plan",
+              "redBg": "Kırmızı Arka Plan",
+              "whiteBg": "Beyaz Arka Plan",
+              "abstractBg": "Soyut Arka Plan",
+              "christmasBg": "Noel Arka Planı",
+              "halloweenBg": "Cadılar Bayramı Arka Planı"
+            }
+          },
+          "company": {
+            "title": "Şirket",
+            "items": {
+              "testimonial": "Müşteri Yorumları",
+              "pricing": "Fiyatlandırma",
+              "faq": "SSS",
+              "privacy": "Gizlilik Politikası",
+              "terms": "Kullanım Şartları"
+            }
+          },
+          "needHelp": "Yardıma mı ihtiyacınız var?",
+          "contactUs": "Bize Ulaşın",
+          "copyright": "© 2024 Tüm hakları saklıdır"
+        }
+      
+
     
   }
 

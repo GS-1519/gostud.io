@@ -905,7 +905,42 @@
       "description": "Embrace the elegance of nature with AI-generated portraits enhanced by delicate, botanical illustration elements.",
       "button": "Get Started For Free",
       "imageAlt": "Botanical portrait examples"
-    }
+    },
+    
+  "partner": {
+    "title": {
+      "part1": "Headshots",
+      "part2": "for Legal Partners",
+      "part3": "AI-Powered",
+      "part4": "Excellence"
+    },
+    "description": "Elevate your firm's executive presence with headshots crafted for senior partners and executive lawyers. Reflect the authority and credibility your position deserves.",
+    "button": "Elevate Your Presence",
+    "imageAlt": "Professional legal partner headshots"
+  },
+  "stylishLawyer": {
+    "title": {
+      "part1": "Elevate Your",
+      "part2": "Legal Presence",
+      "part3": "Professional Headshots",
+      "part4": "in Minutes"
+    },
+    "description": "Gain respect and trust with AI-generated professional headshots tailored for legal professionals. Perfect for law firm websites, LinkedIn profiles, and professional directories.",
+    "button": "Transform Your Image",
+    "imageAlt": "Stylish lawyer headshots"
+  },
+  "professionalism": {
+    "title": {
+      "part1": "Unmatched",
+      "part2": "Professionalism",
+      "part3": "AI-Powered",
+      "part4": "Legal Excellence"
+    },
+    "description": "Showcase your legal expertise with headshots that embody excellence, credibility, and sophistication. Ideal for lawyers who demand the highest standards.",
+    "button": "Elevate Your Profile",
+    "imageAlt": "Professional legal headshots"
+  }
+
   },
   "heroFeatures": {
     "styles": "Over 150 styles",

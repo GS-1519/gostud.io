@@ -869,7 +869,42 @@
       "description": "Embrassez l'élégance de la nature avec des portraits générés par IA enrichis d'éléments délicats d'illustration botanique.",
       "button": "Commencer Gratuitement",
       "imageAlt": "Exemples de portraits botaniques"
-    }
+    },
+   
+  "partner": {
+    "title": {
+      "part1": "Portraits",
+      "part2": "pour Associés Juridiques",
+      "part3": "Excellence",
+      "part4": "Propulsée par l'IA"
+    },
+    "description": "Élevez la présence exécutive de votre cabinet avec des portraits conçus pour les associés seniors et les avocats dirigeants. Reflétez l'autorité et la crédibilité que mérite votre position.",
+    "button": "Élevez Votre Présence",
+    "imageAlt": "Portraits professionnels pour associés juridiques"
+  },
+  "stylishLawyer": {
+    "title": {
+      "part1": "Élevez Votre",
+      "part2": "Présence Juridique",
+      "part3": "Portraits Professionnels",
+      "part4": "en Minutes"
+    },
+    "description": "Gagnez en respect et en confiance avec des portraits professionnels générés par l'IA, adaptés aux professionnels du droit. Parfait pour les sites web de cabinets, LinkedIn et les annuaires professionnels.",
+    "button": "Transformez Votre Image",
+    "imageAlt": "Portraits élégants d'avocats"
+  },
+  "professionalism": {
+    "title": {
+      "part1": "Professionnalisme",
+      "part2": "Inégalé",
+      "part3": "Excellence Juridique",
+      "part4": "par l'IA"
+    },
+    "description": "Mettez en valeur votre expertise juridique avec des portraits qui incarnent l'excellence, la crédibilité et la sophistication. Idéal pour les avocats qui exigent les plus hauts standards.",
+    "button": "Élevez Votre Profil",
+    "imageAlt": "Portraits professionnels juridiques"
+  }
+
   },
  
   
@@ -1068,7 +1103,113 @@
           "button": "Créez Votre Éditorial",
           "imageAlt": "Portraits style Barbie"
         }
-      }
+      },
+      
+        "footer": {
+          "logoAlt": "GoStudio",
+          "description": {
+            "line1": "GoStudio est un studio photo professionnel alimenté par l'IA",
+            "line2": "Nous proposons des photos de portrait professionnelles de haute qualité",
+            "line3": "Spécialisé dans la photographie professionnelle pour entreprises et professionnels"
+          },
+          "aiHeadshots": {
+            "title": "Portraits Professionnels",
+            "items": {
+              "doctor": "Photos pour Médecins",
+              "lawyer": "Photos pour Avocats",
+              "actor": "Photos pour Acteurs",
+              "realtor": "Photos pour Agents Immobiliers",
+              "tedSpeaker": "Photos pour Conférenciers TED",
+              "businessCasual": "Photos Business Casual",
+              "effortlessPro": "Photos Pro Décontractées",
+              "lawyerBranded": "Photos Marque Avocat",
+              "partner": "Photos pour Partenaires",
+              "proPack": "Pack Professionnel",
+              "styledSuccess": "Photos Style Succès",
+              "stylishLawyer": "Photos Avocats Stylés"
+            }
+          },
+          "aiPhotos": {
+            "title": "Séances Spéciales",
+            "items": {
+              "meiravClass": "Séance Meirav",
+              "tattoos": "Portraits avec Tatouages",
+              "annie": "Séance Annie",
+              "barbie": "Séance Barbie",
+              "viking": "Portraits Vikings",
+              "dreamland": "Photos Enfants Dreamland",
+              "babyDoodles": "Gribouillis Bébé",
+              "birthdayMagic": "Magie d'Anniversaire",
+              "branding": "Photos de Marque",
+              "casual": "Photos Décontractées",
+              "casualCollection": "Collection Décontractée",
+              "catMagic": "Magie Féline",
+              "christmasElf": "Lutin de Noël",
+              "christmasSweater": "Pull de Noël",
+              "familyChristmas": "Noël en Famille",
+              "cyberpunk": "Photos Cyberpunk",
+              "hanukkah": "Photos Hanukkah",
+              "happyKid": "Enfant Heureux",
+              "influencer": "Photos Influenceur",
+              "iconic": "Photos Iconiques",
+              "merryChristmas": "Joyeux Noël",
+              "vintageAmericana": "Americana Vintage",
+              "onesie": "Portraits Pyjama",
+              "halloween": "Photos Halloween",
+              "actress": "Photos pour Actrices",
+              "birthdayParty": "Fête d'Anniversaire",
+              "artistic": "Photos Artistiques",
+              "wrestlemania": "Photos Wrestlemania",
+              "redCarpet": "Tapis Rouge",
+              "gameOfThrones": "Game of Thrones",
+              "kidsBirthday": "Anniversaire Enfants",
+              "mythical": "Créatures Mythiques",
+              "dating": "Photos pour Rencontres",
+              "petDog": "Photos Chiens",
+              "popColor": "Photos Pop Color",
+              "youtube": "Photos YouTube",
+              "playfulCasual": "Décontracté Ludique",
+              "podcaster": "Photos Podcasteur",
+              "maternity": "Photos Maternité",
+              "socialMedia": "Réseaux Sociaux",
+              "timeMachine": "Machine à Remonter le Temps",
+              "timelessStudio": "Studio Intemporel",
+              "tlvFashion": "Mode TLV",
+              "vintagePack": "Pack Vintage",
+              "wildFriends": "Amis Sauvages",
+              "winterWonderland": "Pays des Merveilles d'Hiver",
+              "workFromHome": "Travail à Domicile"
+            }
+          },
+          "freeTools": {
+            "title": "Outils Gratuits",
+            "items": {
+              "backgroundLibrary": "Bibliothèque de Fonds",
+              "backgroundRemover": "Suppression de Fond",
+              "blackBg": "Fond Noir",
+              "greyBg": "Fond Gris",
+              "redBg": "Fond Rouge",
+              "whiteBg": "Fond Blanc",
+              "abstractBg": "Fond Abstrait",
+              "christmasBg": "Fond de Noël",
+              "halloweenBg": "Fond Halloween"
+            }
+          },
+          "company": {
+            "title": "Entreprise",
+            "items": {
+              "testimonial": "Témoignages",
+              "pricing": "Tarifs",
+              "faq": "FAQ",
+              "privacy": "Politique de Confidentialité",
+              "terms": "Conditions d'Utilisation"
+            }
+          },
+          "needHelp": "Besoin d'aide ?",
+          "contactUs": "Contactez-nous",
+          "copyright": "© 2024 Tous droits réservés"
+        }
+      
     
   
    

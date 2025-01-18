@@ -877,7 +877,42 @@
       "description": "Abbraccia l'eleganza della natura con ritratti generati dall'IA arricchiti da delicati elementi di illustrazione botanica.",
       "button": "Inizia Gratuitamente",
       "imageAlt": "Esempi di ritratti botanici"
-    }
+    },
+    
+  "partner": {
+    "title": {
+      "part1": "Ritratti",
+      "part2": "per Partner Legali",
+      "part3": "Eccellenza",
+      "part4": "Guidata dall'IA"
+    },
+    "description": "Eleva la presenza esecutiva del tuo studio con ritratti creati per partner senior e avvocati dirigenti. Rifletti l'autorità e la credibilità che la tua posizione merita.",
+    "button": "Eleva la Tua Presenza",
+    "imageAlt": "Ritratti professionali per partner legali"
+  },
+  "stylishLawyer": {
+    "title": {
+      "part1": "Eleva la Tua",
+      "part2": "Presenza Legale",
+      "part3": "Ritratti Professionali",
+      "part4": "in Minuti"
+    },
+    "description": "Guadagna rispetto e fiducia con ritratti professionali generati dall'IA, personalizzati per professionisti legali. Perfetti per siti web di studi legali, profili LinkedIn e directory professionali.",
+    "button": "Trasforma la Tua Immagine",
+    "imageAlt": "Ritratti eleganti per avvocati"
+  },
+  "professionalism": {
+    "title": {
+      "part1": "Professionalità",
+      "part2": "Impareggiabile",
+      "part3": "Eccellenza Legale",
+      "part4": "con l'IA"
+    },
+    "description": "Metti in mostra la tua competenza legale con ritratti che incarnano eccellenza, credibilità e raffinatezza. Ideale per avvocati che esigono i più alti standard.",
+    "button": "Eleva il Tuo Profilo",
+    "imageAlt": "Ritratti professionali legali"
+  }
+
   },
   "heroFeatures": {
     "styles": "Oltre 150 stili",
@@ -1081,6 +1116,112 @@
     "guarantee": "Garanzia soddisfazione"
   }
 }
-      }
+      },
+      
+        "footer": {
+          "logoAlt": "GoStudio",
+          "description": {
+            "line1": "GoStudio è uno studio fotografico professionale basato su IA",
+            "line2": "Offriamo foto ritratto professionali di alta qualità",
+            "line3": "Specializzati in fotografia professionale per aziende e professionisti"
+          },
+          "aiHeadshots": {
+            "title": "Ritratti Professionali",
+            "items": {
+              "doctor": "Foto per Medici",
+              "lawyer": "Foto per Avvocati",
+              "actor": "Foto per Attori",
+              "realtor": "Foto per Agenti Immobiliari",
+              "tedSpeaker": "Foto per Relatori TED",
+              "businessCasual": "Foto Business Casual",
+              "effortlessPro": "Foto Pro Naturali",
+              "lawyerBranded": "Foto Brand Avvocati",
+              "partner": "Foto per Partner",
+              "proPack": "Pacchetto Professionale",
+              "styledSuccess": "Foto Stile Successo",
+              "stylishLawyer": "Foto Avvocati Eleganti"
+            }
+          },
+          "aiPhotos": {
+            "title": "Sessioni Speciali",
+            "items": {
+              "meiravClass": "Sessione Meirav",
+              "tattoos": "Ritratti con Tatuaggi",
+              "annie": "Sessione Annie",
+              "barbie": "Sessione Barbie",
+              "viking": "Ritratti Vichinghi",
+              "dreamland": "Foto Bambini Dreamland",
+              "babyDoodles": "Scarabocchi Bebè",
+              "birthdayMagic": "Magia del Compleanno",
+              "branding": "Foto Branding",
+              "casual": "Foto Casual",
+              "casualCollection": "Collezione Casual",
+              "catMagic": "Magia Felina",
+              "christmasElf": "Elfo di Natale",
+              "christmasSweater": "Maglione Natalizio",
+              "familyChristmas": "Natale in Famiglia",
+              "cyberpunk": "Foto Cyberpunk",
+              "hanukkah": "Foto Hanukkah",
+              "happyKid": "Bambino Felice",
+              "influencer": "Foto Influencer",
+              "iconic": "Foto Iconiche",
+              "merryChristmas": "Buon Natale",
+              "vintageAmericana": "Americana Vintage",
+              "onesie": "Ritratti Pigiamone",
+              "halloween": "Foto Halloween",
+              "actress": "Foto per Attrici",
+              "birthdayParty": "Festa di Compleanno",
+              "artistic": "Foto Artistiche",
+              "wrestlemania": "Foto Wrestlemania",
+              "redCarpet": "Red Carpet",
+              "gameOfThrones": "Game of Thrones",
+              "kidsBirthday": "Compleanno Bambini",
+              "mythical": "Creature Mitiche",
+              "dating": "Foto per Dating",
+              "petDog": "Foto Cani",
+              "popColor": "Foto Pop Color",
+              "youtube": "Foto YouTube",
+              "playfulCasual": "Casual Giocoso",
+              "podcaster": "Foto Podcaster",
+              "maternity": "Foto Maternità",
+              "socialMedia": "Social Media",
+              "timeMachine": "Macchina del Tempo",
+              "timelessStudio": "Studio Senza Tempo",
+              "tlvFashion": "Moda TLV",
+              "vintagePack": "Pacchetto Vintage",
+              "wildFriends": "Amici Selvaggi",
+              "winterWonderland": "Meraviglie Invernali",
+              "workFromHome": "Lavoro da Casa"
+            }
+          },
+          "freeTools": {
+            "title": "Strumenti Gratuiti",
+            "items": {
+              "backgroundLibrary": "Libreria Sfondi",
+              "backgroundRemover": "Rimozione Sfondo",
+              "blackBg": "Sfondo Nero",
+              "greyBg": "Sfondo Grigio",
+              "redBg": "Sfondo Rosso",
+              "whiteBg": "Sfondo Bianco",
+              "abstractBg": "Sfondo Astratto",
+              "christmasBg": "Sfondo Natalizio",
+              "halloweenBg": "Sfondo Halloween"
+            }
+          },
+          "company": {
+            "title": "Azienda",
+            "items": {
+              "testimonial": "Testimonianze",
+              "pricing": "Prezzi",
+              "faq": "FAQ",
+              "privacy": "Privacy",
+              "terms": "Termini di Servizio"
+            }
+          },
+          "needHelp": "Serve aiuto?",
+          "contactUs": "Contattaci",
+          "copyright": "© 2024 Tutti i diritti riservati"
+        }
+      
     
   }

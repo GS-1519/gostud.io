@@ -876,9 +876,43 @@
       "description": "Abrace a elegância da natureza com retratos gerados por IA aprimorados com elementos delicados de ilustração botânica.",
       "button": "Comece Gratuitamente",
       "imageAlt": "Exemplos de retratos botânicos"
-    }
+    },
+    
+  "partner": {
+    "title": {
+      "part1": "Fotos de Perfil",
+      "part2": "para Sócios Jurídicos",
+      "part3": "Excelência em IA",
+      "part4": "para Parceiros"
+    },
+    "description": "Eleve a presença executiva da sua empresa com fotos profissionais feitas para sócios seniores e advogados executivos. Reflita a autoridade e credibilidade que sua posição merece.",
+    "button": "Eleve sua Presença",
+    "imageAlt": "Fotos profissionais para sócios jurídicos"
   },
-  "heroFeatures": {
+  "stylishLawyer": {
+    "title": {
+      "part1": "Eleve sua",
+      "part2": "Presença Legal",
+      "part3": "Fotos Profissionais",
+      "part4": "em Minutos"
+    },
+    "description": "Ganhe respeito e confiança com fotos profissionais geradas por IA, personalizadas para profissionais jurídicos. Perfeito para sites de escritórios de advocacia, LinkedIn e diretórios profissionais.",
+    "button": "Transforme sua Imagem",
+    "imageAlt": "Fotos profissionais elegantes para advogados"
+  },
+  "professionalism": {
+    "title": {
+      "part1": "Profissionalismo",
+      "part2": "Incomparável",
+      "part3": "Excelência",
+      "part4": "Jurídica em IA"
+    },
+    "description": "Demonstre sua expertise jurídica com fotos profissionais que incorporam excelência, credibilidade e sofisticação. Ideal para advogados que buscam os mais altos padrões.",
+    "button": "Eleve seu Perfil",
+    "imageAlt": "Fotos profissionais jurídicas"
+  }
+},
+"heroFeatures": {
     "styles": "Mais de 150 estilos",
     "delivery": "Pronto em uma hora",
     "protection": "Proteção rigorosa",
@@ -1076,5 +1110,111 @@
       "button": "Crie Seu Editorial",
       "imageAlt": "Retratos estilo Barbie"
     }
-  }
+  },
+  
+    "footer": {
+      "logoAlt": "GoStudio",
+      "description": {
+        "line1": "GoStudio é um estúdio fotográfico profissional com IA",
+        "line2": "Oferecemos fotos profissionais de alta qualidade",
+        "line3": "Especialistas em fotografia profissional para negócios e profissionais"
+      },
+      "aiHeadshots": {
+        "title": "Fotos Profissionais",
+        "items": {
+          "doctor": "Fotos para Médicos",
+          "lawyer": "Fotos para Advogados",
+          "actor": "Fotos para Atores",
+          "realtor": "Fotos para Corretores",
+          "tedSpeaker": "Fotos para Palestrantes TED",
+          "businessCasual": "Fotos Casual Business",
+          "effortlessPro": "Fotos Profissionais Naturais",
+          "lawyerBranded": "Fotos para Advogados com Marca",
+          "partner": "Fotos para Parceiros",
+          "proPack": "Pacote Profissional",
+          "styledSuccess": "Fotos Estilo Sucesso",
+          "stylishLawyer": "Fotos Advogados Estilosos"
+        }
+      },
+      "aiPhotos": {
+        "title": "Sessões Especiais",
+        "items": {
+          "meiravClass": "Sessão Meirav",
+          "tattoos": "Retratos com Tatuagens",
+          "annie": "Sessão Annie",
+          "barbie": "Sessão Barbie",
+          "viking": "Retratos Viking",
+          "dreamland": "Fotos Infantis Dreamland",
+          "babyDoodles": "Desenhos de Bebê",
+          "birthdayMagic": "Magia de Aniversário",
+          "branding": "Fotos para Marca",
+          "casual": "Fotos Casuais",
+          "casualCollection": "Coleção Casual",
+          "catMagic": "Magia Felina",
+          "christmasElf": "Duende de Natal",
+          "christmasSweater": "Suéter de Natal",
+          "familyChristmas": "Natal em Família",
+          "cyberpunk": "Fotos Cyberpunk",
+          "hanukkah": "Fotos Hanukkah",
+          "happyKid": "Criança Feliz",
+          "influencer": "Fotos Influencer",
+          "iconic": "Fotos Icônicas",
+          "merryChristmas": "Feliz Natal",
+          "vintageAmericana": "Americana Vintage",
+          "onesie": "Retratos Pijama",
+          "halloween": "Fotos Halloween",
+          "actress": "Fotos para Atrizes",
+          "birthdayParty": "Festa de Aniversário",
+          "artistic": "Fotos Artísticas",
+          "wrestlemania": "Fotos Wrestlemania",
+          "redCarpet": "Tapete Vermelho",
+          "gameOfThrones": "Game of Thrones",
+          "kidsBirthday": "Aniversário Infantil",
+          "mythical": "Criaturas Míticas",
+          "dating": "Fotos para Dating",
+          "petDog": "Fotos Pet Cachorro",
+          "popColor": "Fotos Pop Color",
+          "youtube": "Fotos YouTube",
+          "playfulCasual": "Casual Divertido",
+          "podcaster": "Fotos Podcaster",
+          "maternity": "Fotos Gestante",
+          "socialMedia": "Redes Sociais",
+          "timeMachine": "Máquina do Tempo",
+          "timelessStudio": "Estúdio Atemporal",
+          "tlvFashion": "Moda TLV",
+          "vintagePack": "Pacote Vintage",
+          "wildFriends": "Amigos Selvagens",
+          "winterWonderland": "Maravilhas do Inverno",
+          "workFromHome": "Home Office"
+        }
+      },
+      "freeTools": {
+        "title": "Ferramentas Gratuitas",
+        "items": {
+          "backgroundLibrary": "Biblioteca de Fundos",
+          "backgroundRemover": "Removedor de Fundo",
+          "blackBg": "Fundo Preto",
+          "greyBg": "Fundo Cinza",
+          "redBg": "Fundo Vermelho",
+          "whiteBg": "Fundo Branco",
+          "abstractBg": "Fundo Abstrato",
+          "christmasBg": "Fundo Natalino",
+          "halloweenBg": "Fundo Halloween"
+        }
+      },
+      "company": {
+        "title": "Empresa",
+        "items": {
+          "testimonial": "Depoimentos",
+          "pricing": "Preços",
+          "faq": "Dúvidas Frequentes",
+          "privacy": "Política de Privacidade",
+          "terms": "Termos de Serviço"
+        }
+      },
+      "needHelp": "Precisa de ajuda?",
+      "contactUs": "Fale Conosco",
+      "copyright": "© 2024 Todos os direitos reservados"
+    }
+  
 } 

@@ -886,7 +886,42 @@
       "description": "섬세한 보태니컬 일러스트레이션 요소로 강화된 AI 생성 초상화로 자연의 우아함을 담아보세요.",
       "button": "무료로 시작하기",
       "imageAlt": "보태니컬 초상화 예시"
-    }
+    },
+    
+  "partner": {
+    "title": {
+      "part1": "법률 파트너를 위한",
+      "part2": "프로필 사진",
+      "part3": "AI 기반",
+      "part4": "탁월성"
+    },
+    "description": "시니어 파트너와 법률 임원을 위해 제작된 프로필 사진으로 귀사의 경영진 존재감을 높이세요. 귀하의 직위에 걸맞은 권위와 신뢰성을 반영합니다.",
+    "button": "존재감 높이기",
+    "imageAlt": "법률 파트너를 위한 전문 사진"
+  },
+  "stylishLawyer": {
+    "title": {
+      "part1": "법률적 존재감",
+      "part2": "높이기",
+      "part3": "전문 프로필 사진",
+      "part4": "몇 분 만에"
+    },
+    "description": "법률 전문가를 위해 맞춤화된 AI 생성 전문 프로필 사진으로 존경과 신뢰를 얻으세요. 로펌 웹사이트, LinkedIn 프로필, 전문가 디렉토리에 완벽합니다.",
+    "button": "이미지 변화하기",
+    "imageAlt": "세련된 변호사 프로필 사진"
+  },
+  "professionalism": {
+    "title": {
+      "part1": "비교할 수 없는",
+      "part2": "전문성",
+      "part3": "AI 기반",
+      "part4": "법률 탁월성"
+    },
+    "description": "탁월성, 신뢰성, 세련미를 구현하는 프로필 사진으로 귀하의 법률 전문성을 보여주세요. 최고 수준을 요구하는 변호사에게 이상적입니다.",
+    "button": "프로필 향상하기",
+    "imageAlt": "법률 전문 프로필 사진"
+  }
+
   },
   "heroFeatures": {
     "styles": "150가지 이상의 스타일",
@@ -1090,7 +1125,113 @@
     "guarantee": "만족 보증"
   }
 }
-      }
+      },
+      
+        "footer": {
+          "logoAlt": "GoStudio",
+          "description": {
+            "line1": "GoStudio는 AI 기반 전문 사진 스튜디오입니다",
+            "line2": "고품질 전문 인물 사진을 제공합니다",
+            "line3": "비즈니스 및 전문가를 위한 전문 사진 촬영 전문"
+          },
+          "aiHeadshots": {
+            "title": "전문 프로필 사진",
+            "items": {
+              "doctor": "의사 프로필",
+              "lawyer": "변호사 프로필",
+              "actor": "배우 프로필",
+              "realtor": "부동산 중개사 프로필",
+              "tedSpeaker": "TED 연사 프로필",
+              "businessCasual": "비즈니스 캐주얼",
+              "effortlessPro": "내추럴 프로 사진",
+              "lawyerBranded": "변호사 브랜드 사진",
+              "partner": "파트너 프로필",
+              "proPack": "전문가 패키지",
+              "styledSuccess": "성공 스타일",
+              "stylishLawyer": "스타일리시 변호사"
+            }
+          },
+          "aiPhotos": {
+            "title": "특별 촬영 세션",
+            "items": {
+              "meiravClass": "메이라브 세션",
+              "tattoos": "타투 포트레이트",
+              "annie": "애니 세션",
+              "barbie": "바비 세션",
+              "viking": "바이킹 포트레이트",
+              "dreamland": "드림랜드 키즈",
+              "babyDoodles": "아기 낙서",
+              "birthdayMagic": "생일 매직",
+              "branding": "브랜딩 사진",
+              "casual": "캐주얼 사진",
+              "casualCollection": "캐주얼 컬렉션",
+              "catMagic": "고양이 매직",
+              "christmasElf": "크리스마스 엘프",
+              "christmasSweater": "크리스마스 스웨터",
+              "familyChristmas": "가족 크리스마스",
+              "cyberpunk": "사이버펑크",
+              "hanukkah": "하누카 사진",
+              "happyKid": "해피 키즈",
+              "influencer": "인플루언서",
+              "iconic": "아이코닉 사진",
+              "merryChristmas": "메리 크리스마스",
+              "vintageAmericana": "빈티지 아메리카나",
+              "onesie": "우주복 포트레이트",
+              "halloween": "할로윈 사진",
+              "actress": "여배우 프로필",
+              "birthdayParty": "생일 파티",
+              "artistic": "아티스틱 사진",
+              "wrestlemania": "레슬매니아",
+              "redCarpet": "레드카펫",
+              "gameOfThrones": "왕좌의 게임",
+              "kidsBirthday": "키즈 생일",
+              "mythical": "신화 속 생물",
+              "dating": "데이팅 프로필",
+              "petDog": "반려견 사진",
+              "popColor": "팝 컬러",
+              "youtube": "유튜브 썸네일",
+              "playfulCasual": "플레이풀 캐주얼",
+              "podcaster": "팟캐스터",
+              "maternity": "매터니티",
+              "socialMedia": "소셜 미디어",
+              "timeMachine": "타임머신",
+              "timelessStudio": "타임리스 스튜디오",
+              "tlvFashion": "TLV 패션",
+              "vintagePack": "빈티지 패키지",
+              "wildFriends": "야생 친구들",
+              "winterWonderland": "겨울 원더랜드",
+              "workFromHome": "재택근무"
+            }
+          },
+          "freeTools": {
+            "title": "무료 도구",
+            "items": {
+              "backgroundLibrary": "배경 라이브러리",
+              "backgroundRemover": "배경 제거",
+              "blackBg": "블랙 배경",
+              "greyBg": "그레이 배경",
+              "redBg": "레드 배경",
+              "whiteBg": "화이트 배경",
+              "abstractBg": "추상 배경",
+              "christmasBg": "크리스마스 배경",
+              "halloweenBg": "할로윈 배경"
+            }
+          },
+          "company": {
+            "title": "회사 소개",
+            "items": {
+              "testimonial": "고객 후기",
+              "pricing": "가격 안내",
+              "faq": "자주 묻는 질문",
+              "privacy": "개인정보처리방침",
+              "terms": "이용약관"
+            }
+          },
+          "needHelp": "도움이 필요하신가요?",
+          "contactUs": "문의하기",
+          "copyright": "© 2024 모든 권리 보유"
+        }
+      
     }
       
     

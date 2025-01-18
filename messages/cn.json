@@ -691,7 +691,40 @@
       },
       "description": "将您的照片转换为专业的商务休闲肖像，融合友好和专业特质。完美适合现代工作环境和创意产业。",
       "button": "立即开始"
-    }
+    },
+    "partner": {
+      "title": {
+        "part1": "法律合伙人",
+        "part2": "专业形象照",
+        "part3": "人工智能驱动",
+        "part4": "精英品质"
+      },
+      "description": "为高级合伙人和执行律师打造的专业形象照，提升您公司的领导形象。展现与您职位相称的权威性和可信度。",
+      "button": "提升您的形象",
+      "imageAlt": "法律合伙人专业形象照"
+    },
+    "stylishLawyer": {
+    "title": {
+      "part1": "提升您的",
+      "part2": "法律形象",
+      "part3": "专业照片",
+      "part4": "即刻完成"
+    },
+    "description": "通过AI生成的专业形象照赢得尊重和信任，专为法律专业人士定制。完美适用于律师事务所网站、领英档案和专业目录。",
+    "button": "改变您的形象",
+    "imageAlt": "时尚法律专业形象照"
+  },
+  "professionalism": {
+    "title": {
+      "part1": "无与伦比的",
+      "part2": "专业形象",
+      "part3": "AI驱动的",
+      "part4": "法律精英照"
+    },
+    "description": "通过体现卓越、可信度和精致的专业形象照展示您的法律专长。为追求最高标准的律师量身打造。",
+    "button": "提升您的档次",
+    "imageAlt": "法律专业形象照"
+  }
   },
   "heroFeatures": {
     "styles": "超过150种风格",
@@ -896,7 +929,113 @@
                 "guarantee": "满意保证"
               }
             }
-          }
+          },
+          
+            "footer": {
+              "logoAlt": "GoStudio",
+              "description": {
+                "line1": "GoStudio 是一家人工智能驱动的专业摄影工作室",
+                "line2": "我们提供高品质的专业肖像照片",
+                "line3": "专注于商业和专业人士的专业摄影"
+              },
+              "aiHeadshots": {
+                "title": "专业证件照",
+                "items": {
+                  "doctor": "医生形象照",
+                  "lawyer": "律师形象照",
+                  "actor": "演员形象照",
+                  "realtor": "房地产经纪人照片",
+                  "tedSpeaker": "TED演讲者照片",
+                  "businessCasual": "商务休闲照",
+                  "effortlessPro": "自然专业照",
+                  "lawyerBranded": "律师品牌照",
+                  "partner": "合作伙伴照片",
+                  "proPack": "专业套餐",
+                  "styledSuccess": "成功风格照",
+                  "stylishLawyer": "时尚律师照"
+                }
+              },
+              "aiPhotos": {
+                "title": "特色拍摄",
+                "items": {
+                  "meiravClass": "Meirav风格",
+                  "tattoos": "纹身艺术照",
+                  "annie": "Annie风格",
+                  "barbie": "芭比风格",
+                  "viking": "维京风格",
+                  "dreamland": "梦幻儿童照",
+                  "babyDoodles": "婴儿涂鸦",
+                  "birthdayMagic": "生日魔法",
+                  "branding": "品牌摄影",
+                  "casual": "休闲照片",
+                  "casualCollection": "休闲系列",
+                  "catMagic": "猫咪魔法",
+                  "christmasElf": "圣诞精灵",
+                  "christmasSweater": "圣诞毛衣",
+                  "familyChristmas": "家庭圣诞照",
+                  "cyberpunk": "赛博朋克",
+                  "hanukkah": "光明节",
+                  "happyKid": "快乐儿童",
+                  "influencer": "网红照片",
+                  "iconic": "标志性照片",
+                  "merryChristmas": "圣诞快乐",
+                  "vintageAmericana": "美式复古",
+                  "onesie": "连体睡衣照",
+                  "halloween": "万圣节照片",
+                  "actress": "女演员照片",
+                  "birthdayParty": "生日派对",
+                  "artistic": "艺术照片",
+                  "wrestlemania": "摔跤照片",
+                  "redCarpet": "红毯照片",
+                  "gameOfThrones": "权力的游戏",
+                  "kidsBirthday": "儿童生日",
+                  "mythical": "神话生物",
+                  "dating": "约会照片",
+                  "petDog": "宠物狗摄影",
+                  "popColor": "流行色彩",
+                  "youtube": "YouTube封面",
+                  "playfulCasual": "趣味休闲",
+                  "podcaster": "播客主持",
+                  "maternity": "浪漫孕照",
+                  "socialMedia": "社交媒体",
+                  "timeMachine": "时光机",
+                  "timelessStudio": "永恒工作室",
+                  "tlvFashion": "特拉维夫时尚",
+                  "vintagePack": "复古套餐",
+                  "wildFriends": "野生朋友",
+                  "winterWonderland": "冬日仙境",
+                  "workFromHome": "居家办公"
+                }
+              },
+              "freeTools": {
+                "title": "免费工具",
+                "items": {
+                  "backgroundLibrary": "背景库",
+                  "backgroundRemover": "背景移除",
+                  "blackBg": "黑色背景",
+                  "greyBg": "灰色背景",
+                  "redBg": "红色背景",
+                  "whiteBg": "白色背景",
+                  "abstractBg": "抽象背景",
+                  "christmasBg": "圣诞背景",
+                  "halloweenBg": "万圣节背景"
+                }
+              },
+              "company": {
+                "title": "公司",
+                "items": {
+                  "testimonial": "客户评价",
+                  "pricing": "价格",
+                  "faq": "常见问题",
+                  "privacy": "隐私政策",
+                  "terms": "服务条款"
+                }
+              },
+              "needHelp": "需要帮助？",
+              "contactUs": "联系我们",
+              "copyright": "© 2024 版权所有"
+            }
+          
         }
       
     

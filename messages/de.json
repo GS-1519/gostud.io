@@ -906,7 +906,42 @@
       "description": "Erlebe die Eleganz der Natur mit KI-generierten Porträts, verfeinert durch zarte botanische Illustrationselemente.",
       "button": "Kostenlos Starten",
       "imageAlt": "Botanische Porträtbeispiele"
-    }
+    },
+  
+  "partner": {
+    "title": {
+      "part1": "Profilfotos",
+      "part2": "für Rechtspartner",
+      "part3": "KI-gestützte",
+      "part4": "Exzellenz"
+    },
+    "description": "Steigern Sie die Führungspräsenz Ihrer Kanzlei mit Profilfotos, die für Senior-Partner und Führungsjuristen entwickelt wurden. Reflektieren Sie die Autorität und Glaubwürdigkeit, die Ihre Position verdient.",
+    "button": "Präsenz steigern",
+    "imageAlt": "Professionelle Fotos für Rechtspartner"
+  },
+  "stylishLawyer": {
+    "title": {
+      "part1": "Steigern Sie Ihre",
+      "part2": "Rechtspräsenz",
+      "part3": "Profifotos",
+      "part4": "in Minuten"
+    },
+    "description": "Gewinnen Sie Respekt und Vertrauen mit KI-generierten Profilfotos, maßgeschneidert für Rechtsprofis. Perfekt für Kanzlei-Websites, LinkedIn und Branchenverzeichnisse.",
+    "button": "Image transformieren",
+    "imageAlt": "Stilvolle Anwaltsfotos"
+  },
+  "professionalism": {
+    "title": {
+      "part1": "Unvergleichlicher",
+      "part2": "Professionalismus",
+      "part3": "KI-gestützte",
+      "part4": "Rechtsexzellenz"
+    },
+    "description": "Präsentieren Sie Ihre juristische Expertise mit Profilfotos, die Exzellenz, Glaubwürdigkeit und Raffinesse verkörpern. Ideal für Anwälte, die höchste Standards anstreben.",
+    "button": "Profil aufwerten",
+    "imageAlt": "Juristische Profilfotos"
+  }
+
   },
   
     
@@ -1102,7 +1137,113 @@
                 "guarantee": "Zufriedenheitsgarantie"
               }
             }
-          }
+          },
+          
+            "footer": {
+              "logoAlt": "GoStudio",
+              "description": {
+                "line1": "GoStudio ist ein KI-gestütztes professionelles Fotostudio",
+                "line2": "Wir bieten hochwertige professionelle Porträtfotos",
+                "line3": "Spezialisiert auf professionelle Fotografie für Unternehmen und Fachleute"
+              },
+              "aiHeadshots": {
+                "title": "Professionelle Porträts",
+                "items": {
+                  "doctor": "Arzt-Porträts",
+                  "lawyer": "Anwalt-Porträts",
+                  "actor": "Schauspieler-Porträts",
+                  "realtor": "Makler-Porträts",
+                  "tedSpeaker": "TED-Sprecher Porträts",
+                  "businessCasual": "Business-Casual Fotos",
+                  "effortlessPro": "Mühelose Profi-Fotos",
+                  "lawyerBranded": "Anwalt-Branding Fotos",
+                  "partner": "Partner-Porträts",
+                  "proPack": "Profi-Paket",
+                  "styledSuccess": "Erfolgs-Style Fotos",
+                  "stylishLawyer": "Stilvolle Anwaltsfotos"
+                }
+              },
+              "aiPhotos": {
+                "title": "Spezielle Fotoshootings",
+                "items": {
+                  "meiravClass": "Meirav-Shooting",
+                  "tattoos": "Tattoo-Porträts",
+                  "annie": "Annie-Shooting",
+                  "barbie": "Barbie-Shooting",
+                  "viking": "Wikinger-Porträts",
+                  "dreamland": "Traumland-Kinderfotos",
+                  "babyDoodles": "Baby-Kritzeleien",
+                  "birthdayMagic": "Geburtstagszauber",
+                  "branding": "Branding-Fotografie",
+                  "casual": "Casual-Fotos",
+                  "casualCollection": "Casual-Kollektion",
+                  "catMagic": "Katzenzauber",
+                  "christmasElf": "Weihnachtself",
+                  "christmasSweater": "Weihnachtspullover",
+                  "familyChristmas": "Familien-Weihnachten",
+                  "cyberpunk": "Cyberpunk-Fotos",
+                  "hanukkah": "Chanukka-Fotos",
+                  "happyKid": "Glückliches Kind",
+                  "influencer": "Influencer-Fotos",
+                  "iconic": "Ikonische Fotos",
+                  "merryChristmas": "Frohe Weihnachten",
+                  "vintageAmericana": "Vintage Americana",
+                  "onesie": "Onesie-Porträts",
+                  "halloween": "Halloween-Fotos",
+                  "actress": "Schauspielerin-Porträts",
+                  "birthdayParty": "Geburtstagsparty",
+                  "artistic": "Künstlerische Fotos",
+                  "wrestlemania": "Wrestlemania-Fotos",
+                  "redCarpet": "Roter Teppich",
+                  "gameOfThrones": "Game of Thrones",
+                  "kidsBirthday": "Kindergeburtstag",
+                  "mythical": "Mythische Wesen",
+                  "dating": "Dating-Fotos",
+                  "petDog": "Hundefotografie",
+                  "popColor": "Pop-Farben",
+                  "youtube": "YouTube-Fotos",
+                  "playfulCasual": "Verspielt-Casual",
+                  "podcaster": "Podcaster-Fotos",
+                  "maternity": "Schwangerschaftsfotos",
+                  "socialMedia": "Social Media",
+                  "timeMachine": "Zeitmaschine",
+                  "timelessStudio": "Zeitloses Studio",
+                  "tlvFashion": "TLV-Mode",
+                  "vintagePack": "Vintage-Paket",
+                  "wildFriends": "Wilde Freunde",
+                  "winterWonderland": "Winterwunderland",
+                  "workFromHome": "Home-Office"
+                }
+              },
+              "freeTools": {
+                "title": "Kostenlose Tools",
+                "items": {
+                  "backgroundLibrary": "Hintergrund-Bibliothek",
+                  "backgroundRemover": "Hintergrund-Entfernung",
+                  "blackBg": "Schwarzer Hintergrund",
+                  "greyBg": "Grauer Hintergrund",
+                  "redBg": "Roter Hintergrund",
+                  "whiteBg": "Weißer Hintergrund",
+                  "abstractBg": "Abstrakter Hintergrund",
+                  "christmasBg": "Weihnachts-Hintergrund",
+                  "halloweenBg": "Halloween-Hintergrund"
+                }
+              },
+              "company": {
+                "title": "Unternehmen",
+                "items": {
+                  "testimonial": "Referenzen",
+                  "pricing": "Preise",
+                  "faq": "FAQ",
+                  "privacy": "Datenschutz",
+                  "terms": "AGB"
+                }
+              },
+              "needHelp": "Hilfe benötigt?",
+              "contactUs": "Kontaktieren Sie uns",
+              "copyright": "© 2024 Alle Rechte vorbehalten"
+            }
+          
         }
       
     

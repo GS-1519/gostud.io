@@ -45,24 +45,14 @@ const TypesHero = () => {
       image: '/Packs/Types/Jcrew.jpg',
       link: '/headshot-packs/business-casual-headshots'
     },
-    {
-      title: t('types.model.title'),
-      description: t('types.model.description'),
-      image: '/Packs/Types/helmut.jpg',
-      link: '/headshot-packs/model-headshots'
-    },
+
     {
       title: t('types.styledSuccess.title'),
       description: t('types.styledSuccess.description'),
       image: '/Packs/Types/sucess.jpg',
       link: '/headshot-packs/stylishlawyers-headshot'
     },
-    {
-      title: t('types.professional.title'),
-      description: t('types.professional.description'),
-      image: '/Packs/Types/professinal.jpg',
-      link: '/headshot-packs/professional-tattoos-portraits'
-    },
+  
     {
       title: t('types.partnersCollection.title'),
       description: t('types.partnersCollection.description'),

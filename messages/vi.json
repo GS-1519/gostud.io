@@ -729,7 +729,42 @@
       "description": "Tận hưởng vẻ đẹp tinh tế của thiên nhiên với những bức chân dung được tạo bởi AI, được tô điểm bởi các yếu tố minh họa thực vật tinh tế.",
       "button": "Bắt Đầu Miễn Phí",
       "imageAlt": "Ví dụ về chân dung thực vật"
-    }
+    },
+   
+  "partner": {
+    "title": {
+      "part1": "Ảnh Chuyên Nghiệp",
+      "part2": "cho Đối Tác Pháp Lý",
+      "part3": "Sự Xuất Sắc",
+      "part4": "từ AI"
+    },
+    "description": "Nâng cao sự hiện diện của công ty với ảnh được thiết kế cho các đối tác cấp cao và luật sư điều hành. Phản ánh thẩm quyền và uy tín xứng đáng với vị trí của bạn.",
+    "button": "Nâng Cao Sự Hiện Diện",
+    "imageAlt": "Ảnh chuyên nghiệp cho đối tác pháp lý"
+  },
+  "stylishLawyer": {
+    "title": {
+      "part1": "Nâng Cao",
+      "part2": "Sự Hiện Diện Pháp Lý",
+      "part3": "Ảnh Chuyên Nghiệp",
+      "part4": "trong Vài Phút"
+    },
+    "description": "Tạo sự tôn trọng và tin tưởng với ảnh chuyên nghiệp được tạo bởi AI, được thiết kế riêng cho các chuyên gia pháp lý. Hoàn hảo cho trang web công ty luật, hồ sơ LinkedIn và danh bạ chuyên nghiệp.",
+    "button": "Thay Đổi Hình Ảnh",
+    "imageAlt": "Ảnh luật sư phong cách"
+  },
+  "professionalism": {
+    "title": {
+      "part1": "Tính Chuyên Nghiệp",
+      "part2": "Không Gì Sánh Được",
+      "part3": "Sự Xuất Sắc Pháp Lý",
+      "part4": "từ AI"
+    },
+    "description": "Thể hiện chuyên môn pháp lý của bạn với ảnh thể hiện sự xuất sắc, uy tín và tinh tế. Lý tưởng cho các luật sư đòi hỏi tiêu chuẩn cao nhất.",
+    "button": "Nâng Cao Hồ Sơ",
+    "imageAlt": "Ảnh chuyên nghiệp pháp lý"
+  }
+
   },
   "heroFeatures": {
     "styles": "Hơn 150 kiểu",
@@ -932,8 +967,115 @@
                 "guarantee": "Đảm bảo hài lòng"
               }
             }
-          }
+          },
+
+
      
+  "footer": {
+    "logoAlt": "GoStudio",
+    "description": {
+      "line1": "GoStudio là studio chụp ảnh chuyên nghiệp được hỗ trợ bởi AI",
+      "line2": "Chúng tôi cung cấp ảnh chân dung chuyên nghiệp chất lượng cao",
+      "line3": "Chuyên về nhiếp ảnh chuyên nghiệp cho doanh nghiệp và chuyên gia"
+    },
+    "aiHeadshots": {
+      "title": "Ảnh Chân Dung Chuyên Nghiệp",
+      "items": {
+        "doctor": "Ảnh cho Bác Sĩ",
+        "lawyer": "Ảnh cho Luật Sư",
+        "actor": "Ảnh cho Diễn Viên",
+        "realtor": "Ảnh cho Môi Giới Bất Động Sản",
+        "tedSpeaker": "Ảnh cho Diễn Giả TED",
+        "businessCasual": "Ảnh Business Casual",
+        "effortlessPro": "Ảnh Chuyên Nghiệp Tự Nhiên",
+        "lawyerBranded": "Ảnh Thương Hiệu Luật Sư",
+        "partner": "Ảnh cho Đối Tác",
+        "proPack": "Gói Chuyên Nghiệp",
+        "styledSuccess": "Ảnh Phong Cách Thành Công",
+        "stylishLawyer": "Ảnh Luật Sư Thời Trang"
+      }
+    },
+    "aiPhotos": {
+      "title": "Buổi Chụp Đặc Biệt",
+      "items": {
+        "meiravClass": "Buổi Chụp Meirav",
+        "tattoos": "Chân Dung Hình Xăm",
+        "annie": "Buổi Chụp Annie",
+        "barbie": "Buổi Chụp Barbie",
+        "viking": "Chân Dung Viking",
+        "dreamland": "Ảnh Trẻ Em Dreamland",
+        "babyDoodles": "Ảnh Vẽ Em Bé",
+        "birthdayMagic": "Ma Thuật Sinh Nhật",
+        "branding": "Ảnh Thương Hiệu",
+        "casual": "Ảnh Thường Ngày",
+        "casualCollection": "Bộ Sưu Tập Casual",
+        "catMagic": "Ma Thuật Mèo",
+        "christmasElf": "Người Lùn Giáng Sinh",
+        "christmasSweater": "Áo Len Giáng Sinh",
+        "familyChristmas": "Giáng Sinh Gia Đình",
+        "cyberpunk": "Ảnh Cyberpunk",
+        "hanukkah": "Ảnh Hanukkah",
+        "happyKid": "Trẻ Em Hạnh Phúc",
+        "influencer": "Ảnh Influencer",
+        "iconic": "Ảnh Biểu Tượng",
+        "merryChristmas": "Giáng Sinh Vui Vẻ",
+        "vintageAmericana": "Vintage Americana",
+        "onesie": "Chân Dung Onesie",
+        "halloween": "Ảnh Halloween",
+        "actress": "Ảnh Nữ Diễn Viên",
+        "birthdayParty": "Tiệc Sinh Nhật",
+        "artistic": "Ảnh Nghệ Thuật",
+        "wrestlemania": "Ảnh Wrestlemania",
+        "redCarpet": "Thảm Đỏ",
+        "gameOfThrones": "Trò Chơi Vương Quyền",
+        "kidsBirthday": "Sinh Nhật Trẻ Em",
+        "mythical": "Sinh Vật Thần Thoại",
+        "dating": "Ảnh Hẹn Hò",
+        "petDog": "Ảnh Thú Cưng Chó",
+        "popColor": "Ảnh Màu Pop",
+        "youtube": "Ảnh YouTube",
+        "playfulCasual": "Casual Vui Nhộn",
+        "podcaster": "Ảnh Podcaster",
+        "maternity": "Ảnh Bầu",
+        "socialMedia": "Mạng Xã Hội",
+        "timeMachine": "Máy Thời Gian",
+        "timelessStudio": "Studio Vĩnh Cửu",
+        "tlvFashion": "Thời Trang TLV",
+        "vintagePack": "Gói Vintage",
+        "wildFriends": "Bạn Hoang Dã",
+        "winterWonderland": "Xứ Sở Thần Tiên Mùa Đông",
+        "workFromHome": "Làm Việc Tại Nhà"
+      }
+    },
+    "freeTools": {
+      "title": "Công Cụ Miễn Phí",
+      "items": {
+        "backgroundLibrary": "Thư Viện Phông Nền",
+        "backgroundRemover": "Xóa Phông Nền",
+        "blackBg": "Phông Nền Đen",
+        "greyBg": "Phông Nền Xám",
+        "redBg": "Phông Nền Đỏ",
+        "whiteBg": "Phông Nền Trắng",
+        "abstractBg": "Phông Nền Trừu Tượng",
+        "christmasBg": "Phông Nền Giáng Sinh",
+        "halloweenBg": "Phông Nền Halloween"
+      }
+    },
+    "company": {
+      "title": "Công Ty",
+      "items": {
+        "testimonial": "Đánh Giá",
+        "pricing": "Bảng Giá",
+        "faq": "Câu Hỏi Thường Gặp",
+        "privacy": "Chính Sách Bảo Mật",
+        "terms": "Điều Khoản Sử Dụng"
+      }
+    },
+    "needHelp": "Cần giúp đỡ?",
+    "contactUs": "Liên Hệ",
+    "copyright": "© 2024 Bản quyền đã được bảo hộ"
+  }
+
       }
     
 

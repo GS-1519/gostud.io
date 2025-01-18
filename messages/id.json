@@ -868,7 +868,42 @@
       "description": "Nikmati keanggunan alam dengan potret yang dihasilkan AI yang diperkaya dengan elemen ilustrasi botani yang lembut.",
       "button": "Mulai Gratis",
       "imageAlt": "Contoh potret botani"
-    }
+    },
+  
+  "partner": {
+    "title": {
+      "part1": "Foto Profil",
+      "part2": "untuk Partner Hukum",
+      "part3": "Keunggulan",
+      "part4": "Berbasis AI"
+    },
+    "description": "Tingkatkan kehadiran eksekutif firma Anda dengan foto profil yang dirancang untuk partner senior dan pengacara eksekutif. Cerminkan otoritas dan kredibilitas yang sesuai dengan posisi Anda.",
+    "button": "Tingkatkan Kehadiran Anda",
+    "imageAlt": "Foto profil profesional untuk partner hukum"
+  },
+  "stylishLawyer": {
+    "title": {
+      "part1": "Tingkatkan",
+      "part2": "Kehadiran Legal Anda",
+      "part3": "Foto Profil Profesional",
+      "part4": "dalam Hitungan Menit"
+    },
+    "description": "Dapatkan rasa hormat dan kepercayaan dengan foto profil profesional yang dihasilkan AI, disesuaikan untuk profesional hukum. Sempurna untuk situs web firma hukum, profil LinkedIn, dan direktori profesional.",
+    "button": "Transformasi Citra Anda",
+    "imageAlt": "Foto profil bergaya untuk pengacara"
+  },
+  "professionalism": {
+    "title": {
+      "part1": "Profesionalisme",
+      "part2": "Tak Tertandingi",
+      "part3": "Keunggulan Hukum",
+      "part4": "dengan AI"
+    },
+    "description": "Tampilkan keahlian hukum Anda dengan foto profil yang mencerminkan keunggulan, kredibilitas, dan kecanggihan. Ideal untuk pengacara yang menuntut standar tertinggi.",
+    "button": "Tingkatkan Profil Anda",
+    "imageAlt": "Foto profil profesional hukum"
+  }
+
   },
   "heroFeatures": {
     "styles": "Lebih dari 150 gaya",
@@ -1073,6 +1108,112 @@
     "guarantee": "Jaminan kepuasan"
   }
 }
-      }
+      },
+      
+        "footer": {
+          "logoAlt": "GoStudio",
+          "description": {
+            "line1": "GoStudio adalah studio foto profesional berbasis AI",
+            "line2": "Kami menyediakan foto potret profesional berkualitas tinggi",
+            "line3": "Spesialis fotografi profesional untuk bisnis dan profesional"
+          },
+          "aiHeadshots": {
+            "title": "Foto Profil Profesional",
+            "items": {
+              "doctor": "Foto untuk Dokter",
+              "lawyer": "Foto untuk Pengacara",
+              "actor": "Foto untuk Aktor",
+              "realtor": "Foto untuk Agen Properti",
+              "tedSpeaker": "Foto untuk Pembicara TED",
+              "businessCasual": "Foto Business Casual",
+              "effortlessPro": "Foto Profesional Santai",
+              "lawyerBranded": "Foto Branding Pengacara",
+              "partner": "Foto untuk Mitra",
+              "proPack": "Paket Profesional",
+              "styledSuccess": "Foto Gaya Sukses",
+              "stylishLawyer": "Foto Pengacara Bergaya"
+            }
+          },
+          "aiPhotos": {
+            "title": "Sesi Foto Khusus",
+            "items": {
+              "meiravClass": "Sesi Meirav",
+              "tattoos": "Potret dengan Tato",
+              "annie": "Sesi Annie",
+              "barbie": "Sesi Barbie",
+              "viking": "Potret Viking",
+              "dreamland": "Foto Anak Dreamland",
+              "babyDoodles": "Coretan Bayi",
+              "birthdayMagic": "Sihir Ulang Tahun",
+              "branding": "Foto Branding",
+              "casual": "Foto Kasual",
+              "casualCollection": "Koleksi Kasual",
+              "catMagic": "Sihir Kucing",
+              "christmasElf": "Peri Natal",
+              "christmasSweater": "Sweater Natal",
+              "familyChristmas": "Natal Keluarga",
+              "cyberpunk": "Foto Cyberpunk",
+              "hanukkah": "Foto Hanukkah",
+              "happyKid": "Anak Bahagia",
+              "influencer": "Foto Influencer",
+              "iconic": "Foto Ikonik",
+              "merryChristmas": "Selamat Natal",
+              "vintageAmericana": "Americana Vintage",
+              "onesie": "Potret Onesie",
+              "halloween": "Foto Halloween",
+              "actress": "Foto untuk Aktris",
+              "birthdayParty": "Pesta Ulang Tahun",
+              "artistic": "Foto Artistik",
+              "wrestlemania": "Foto Wrestlemania",
+              "redCarpet": "Karpet Merah",
+              "gameOfThrones": "Game of Thrones",
+              "kidsBirthday": "Ulang Tahun Anak",
+              "mythical": "Makhluk Mitos",
+              "dating": "Foto Kencan",
+              "petDog": "Foto Anjing Peliharaan",
+              "popColor": "Foto Pop Color",
+              "youtube": "Foto YouTube",
+              "playfulCasual": "Kasual Ceria",
+              "podcaster": "Foto Podcaster",
+              "maternity": "Foto Kehamilan",
+              "socialMedia": "Media Sosial",
+              "timeMachine": "Mesin Waktu",
+              "timelessStudio": "Studio Abadi",
+              "tlvFashion": "Mode TLV",
+              "vintagePack": "Paket Vintage",
+              "wildFriends": "Teman Liar",
+              "winterWonderland": "Negeri Dongeng Musim Dingin",
+              "workFromHome": "Kerja dari Rumah"
+            }
+          },
+          "freeTools": {
+            "title": "Alat Gratis",
+            "items": {
+              "backgroundLibrary": "Pustaka Latar Belakang",
+              "backgroundRemover": "Penghapus Latar Belakang",
+              "blackBg": "Latar Belakang Hitam",
+              "greyBg": "Latar Belakang Abu-abu",
+              "redBg": "Latar Belakang Merah",
+              "whiteBg": "Latar Belakang Putih",
+              "abstractBg": "Latar Belakang Abstrak",
+              "christmasBg": "Latar Belakang Natal",
+              "halloweenBg": "Latar Belakang Halloween"
+            }
+          },
+          "company": {
+            "title": "Perusahaan",
+            "items": {
+              "testimonial": "Testimoni",
+              "pricing": "Harga",
+              "faq": "FAQ",
+              "privacy": "Kebijakan Privasi",
+              "terms": "Syarat Layanan"
+            }
+          },
+          "needHelp": "Butuh bantuan?",
+          "contactUs": "Hubungi Kami",
+          "copyright": "© 2024 Hak Cipta Dilindungi"
+        }
+      
   
   }
