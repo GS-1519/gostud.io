@@ -1222,11 +1222,12 @@
                   "contactUs": "Contact Us",
                   "copyright": "© 2024 All Rights Reserved"
                 },
-                  "aria": {
+                
+                  "ariaa": {
                     "bannerAlt": "Banner Background",
                     "photographerAlt": "AI Photographer",
                     "heading": "Meet your AI photographer specialized in creating stunning photos from your selfies.",
-                    "description": "Hi! I'm Aria, your AI photographer at GoStudio.ai. I've helped over 21,000 amazing people like you create truly outstanding portraits and headshots. Whether you want to update your LinkedIn photo, design a business card, or enhance your online presence, I'm here to help. Let me take care of the details so you can shine with professional results effortlessly!",
+                    "description": "Hi! I'm Aria, your AI photographer at GoStudio.ai. I've helped over 21,000 amazing people like you create truly outstanding portraits and headshots. Whether you want to update your LinkedIn photo, design a business card, or enhance your online presence, I'm here to help. Let me handle the details so you can shine with professional results effortlessly!",
                     "button": "Start Now"
                   },
                   "banner": {
