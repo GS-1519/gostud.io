@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { ModelTypeSelector } from '@/components/ModelTypeSelector';
 import TrainModelZone from '@/components/TrainModelZone';
-import GetCreditsPage from '@/app/get-credits/page';
+import GetCreditsPage from '@/app/[locale]/get-credits/page';
 
 interface TrainModelSectionProps {
   packSlug: string;
