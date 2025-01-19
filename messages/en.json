@@ -242,7 +242,7 @@
             "answer": "We use a proprietary mix of advanced AI technologies, including sophisticated image generation models, specifically optimized for creating professional headshots."
           },
           "dataSecurity": {
-            "question": "How do you handle data security and privacy?",
+            "question":"How do you handle data security and privacy?",
             "answer": "We take your privacy seriously. Your photos are encrypted, securely stored, and used only for your AI model. We never share your data with third parties."
           }
         }
