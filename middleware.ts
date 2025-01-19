@@ -1,76 +1,80 @@
 // middleware.ts
-import createMiddleware from 'next-intl/middleware';
+import createIntlMiddleware from 'next-intl/middleware';
 import { createMiddlewareClient } from '@supabase/auth-helpers-nextjs';
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
-// Define locales
-const locales = ['en', 'fr', 'ar', 'cn', 'de', 'ja', 'ko', 'es', 'it', 'th', 'tr', 'br', 'ru', 'vi', 'id'];
+// List of paths that don't need locale prefix
+const publicPaths = [
+  '/api', 
+  '/_next', 
+  '/fonts', 
+  '/examples',
+  '/astria'  // Add this to skip middleware for astria routes
+];
 
 // Create the intl middleware
-const intlMiddleware = createMiddleware({
-  locales,
+const intlMiddleware = createIntlMiddleware({
+  locales: ['en', 'fr', 'ar', 'cn', 'de', 'ja', 'ko', 'es', 'it', 'th', 'tr', 'br', 'ru', 'vi', 'id'],
   defaultLocale: 'en',
   localePrefix: 'always'
 });
 
-// Define public paths that don't need locale prefix
-const publicPaths = [
-  '/api',
-  '/_next',
-  '/fonts',
-  '/examples',
-  '/astria',
-  '/images',
-  '/favicon.ico',
-  '/robots.txt',
-  '/sitemap.xml'
-];
-
 export async function middleware(request: NextRequest) {
-  // Check if the path is a public path
+  // Skip middleware for static files and API routes
   if (publicPaths.some(path => request.nextUrl.pathname.startsWith(path))) {
     return NextResponse.next();
   }
 
-  // Apply the intl middleware first
-  const response = intlMiddleware(request);
+  // Skip middleware for public files
+  if (/\.[\w-]+$/.test(request.nextUrl.pathname)) {
+    return NextResponse.next();
+  }
 
-  // Initialize Supabase client
+  // First apply the intl middleware
+  const response = intlMiddleware(request);
   const supabase = createMiddlewareClient({ req: request, res: response });
 
   try {
     const { data: { user }, error } = await supabase.auth.getUser();
     
-    // Get the current locale from the URL
+    // Get the current locale from the URL or default to 'en'
     const locale = request.nextUrl.pathname.split('/')[1] || 'en';
     
-    // Handle authentication redirects
-    if (request.nextUrl.pathname.includes('/login') && user) {
-      return NextResponse.redirect(new URL(`/${locale}/overview`, request.url));
+    // Handle login page access
+    if (request.nextUrl.pathname.includes('/login')) {
+      if (user) {
+        // If user is authenticated, redirect to overview
+        return NextResponse.redirect(new URL(`/${locale}/overview`, request.url));
+      }
+      return response;
     }
 
     // Protected routes that require authentication
     const protectedRoutes = ['/summary', '/overview'];
-    if (protectedRoutes.some(route => request.nextUrl.pathname.includes(route))) {
-      if (!user || error) {
-        return NextResponse.redirect(new URL(`/${locale}/login`, request.url));
-      }
+    
+    // Check if current path is protected
+    const isProtectedRoute = protectedRoutes.some(route => 
+      request.nextUrl.pathname.includes(route)
+    );
+
+    if (isProtectedRoute && (!user || error)) {
+      // Redirect to login while preserving the locale
+      return NextResponse.redirect(new URL(`/${locale}/login`, request.url));
     }
 
     return response;
+
   } catch (error) {
     console.error('Middleware error:', error);
     return response;
   }
 }
 
-// Update the matcher configuration
 export const config = {
   matcher: [
-    // Match all pathnames except static files
-    '/((?!_next/static|_next/image|favicon.ico).*)',
-    // Optional: Also match API routes
-    '/api/:path*'
+    // Match all paths except static files and API routes
+    '/((?!api|_next|fonts|examples|[\\w-]+\\.\\w+).*)',
+    '/(ar|en|fr|de|zh)/:path*'
   ]
 };
