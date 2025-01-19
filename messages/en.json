@@ -251,7 +251,7 @@
         "login": {
           "title": "Login / Register",
           "emailLabel": "Email",
-          "emailPlaceholder": "example@mybiz.com",
+          "emailPlaceholder":  "example@mybiz.com",
           "emailRequired": "Email is required",
           "emailInvalid": "Invalid email address",
           "googleButton": "Continue with Google",
