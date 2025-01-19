@@ -3,7 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
-import { useRouter } from 'next/navigation';
+import { useParams } from 'next/navigation';
 
 // Curved Arrow Component
 const CurvedArrow = ({ rotation, style }: { rotation: number; style: React.CSSProperties }) => {
@@ -42,7 +42,8 @@ const CurvedArrow = ({ rotation, style }: { rotation: number; style: React.CSSPr
 
 const HeadshotSteps = () => {
   const t = useTranslations('ExplainerSection');
-  const { locale } = useRouter();
+  const params = useParams();
+  const locale = params?.locale as string;
   const isRTL = locale === 'ar';
   const imageBoxStyle = "w-[90px] h-[90px] rounded-[16px] border border-gray-100 overflow-hidden flex items-center justify-center bg-white shadow-sm relative";
 
