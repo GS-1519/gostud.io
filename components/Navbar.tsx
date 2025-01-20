@@ -118,27 +118,6 @@ const Navbar: React.FC = () => {
                     user={userMenuProps.user}
                     credits={userMenuProps.credits}
                   />
-                  <select 
-                    value={locale}
-                    onChange={(e) => switchLanguage(e.target.value)}
-                    className="hidden sm:block p-2 rounded-md bg-white text-gray-700 border border-gray-300 text-sm"
-                  >
-                    <option value="en">English</option>
-                    <option value="ar">العربية</option>
-                    <option value="fr">Français</option>
-                    <option value="de">Deutsch</option>
-                    <option value="cn">中文</option>
-                    <option value="ja">Japanese</option>
-                    <option value="ko">Korean</option>
-                    <option value="es">Spanish</option>
-                    <option value="it">Italian</option>
-                    <option value="th">IThai</option>
-                    <option value="tr">Turkish</option>
-                    <option value="br">Brazilian</option>
-                    <option value="ru">Russian</option>
-                    <option value="vi">Vietnamese</option>
-                    <option value="id">Indonesian</option>
-                  </select>
                 </div>
               ) : (
                 <div className="flex items-center gap-2 sm:gap-3 lg:gap-4">
@@ -147,28 +126,6 @@ const Navbar: React.FC = () => {
                       {t('loginButton')}
                     </button>
                   </Link>
-                  
-                  <select 
-                    value={locale}
-                    onChange={(e) => switchLanguage(e.target.value)}
-                    className="hidden sm:block p-2 rounded-md bg-white text-gray-700 border border-gray-300 text-sm"
-                  >
-                    <option value="en">English</option>
-                    <option value="ar">العربية</option>
-                    <option value="fr">Français</option>
-                    <option value="de">Deutsch</option>
-                    <option value="cn">中文</option>
-                    <option value="ja">Japanese</option>
-                    <option value="ko">Korean</option>
-                    <option value="es">Spanish</option>
-                    <option value="it">Italian</option>
-                    <option value="th">IThai</option>
-                    <option value="tr">Turkish</option>
-                    <option value="br">Brazilian</option>
-                    <option value="ru">Russian</option>
-                    <option value="vi">Vietnamese</option>
-                    <option value="id">Indonesian</option>
-                  </select>
                   
                   {/* Mobile Menu Button */}
                   <button
@@ -198,30 +155,6 @@ const Navbar: React.FC = () => {
           <div className="lg:hidden fixed top-16 left-0 right-0 w-full bg-white shadow-lg border-b border-gray-100 py-2 max-h-[calc(100vh-64px)] overflow-y-auto z-35">
             <div className="px-4 py-2">
               <NavItems isMobile user={user} />
-              {/* Mobile Language Selector */}
-              <div className="mt-4 border-t pt-4">
-                <select 
-                  value={locale}
-                  onChange={(e) => switchLanguage(e.target.value)}
-                  className="w-full p-2 rounded-md bg-white text-gray-700 border border-gray-300 text-sm"
-                >
-                  <option value="en">English</option>
-                  <option value="ar">العربية</option>
-                  <option value="fr">Français</option>
-                  <option value="de">Deutsch</option>
-                  <option value="cn">中文</option>
-                  <option value="ja">Japanese</option>
-                  <option value="ko">Korean</option>
-                  <option value="es">Spanish</option>
-                  <option value="it">Italian</option>
-                  <option value="th">IThai</option>
-                  <option value="tr">Turkish</option>
-                  <option value="br">Brazilian</option>
-                  <option value="ru">Russian</option>
-                  <option value="vi">Vietnamese</option>
-                  <option value="id">Indonesian</option>
-                </select>
-              </div>
             </div>
           </div>
         )}

@@ -11,6 +11,8 @@ import GoogleTagManager from "@/components/GoogleTagManager";
 import 'react-tabs/style/react-tabs.css';
 import { StepBar } from "@/components/ui/step-bar";
 import { NextIntlClientProvider } from 'next-intl';
+import { notFound } from 'next/navigation';
+import { ErrorBoundary } from '../../components/ErrorBoundary';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.gostudio.ai'),
@@ -38,39 +40,46 @@ export default async function RootLayout({
 }) {
   // Get locale from params or default to 'en'
   const locale = params?.locale || 'en';
-  const messages = await getMessages(locale);
+  let messages;
+  try {
+    messages = (await import(`../../messages/${locale}.json`)).default;
+  } catch (error) {
+    notFound();
+  }
 
   return (
-    <html lang={locale}>
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Plus+Jakarta+Sans:wght@400;700&display=swap" rel="stylesheet" />
-        <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link rel="shortcut icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <meta name="apple-mobile-web-app-title" content="GoStudio" />
-        <link rel="manifest" href="/site.webmanifest" />
-        <meta name="msvalidate.01" content="1EBFA7B1A8C0B11490CBE5476B33271C" />
-      </head>
-      <body className="flex flex-col bg-[#F4F7FA] min-h-screen font-[Poppins]">
-        <GoogleTagManager />
-        <ClarityScript />
-        <NextIntlClientProvider locale={locale} messages={messages}>
-          <Navbar />
-          
-            <main className="flex-1 flex flex-col pt-16">
-              <StepBar />
-              {children}
-            </main>
-          
-          <FooterWrapper />
-        </NextIntlClientProvider>
-        <Toaster />
-        <Analytics />    
-        <SpeedInsights />    
-      </body>
-    </html>
+    <ErrorBoundary>
+      <html lang={locale}>
+        <head>
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+          <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Plus+Jakarta+Sans:wght@400;700&display=swap" rel="stylesheet" />
+          <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+          <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+          <link rel="shortcut icon" href="/favicon.ico" />
+          <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+          <meta name="apple-mobile-web-app-title" content="GoStudio" />
+          <link rel="manifest" href="/site.webmanifest" />
+          <meta name="msvalidate.01" content="1EBFA7B1A8C0B11490CBE5476B33271C" />
+        </head>
+        <body className="flex flex-col bg-[#F4F7FA] min-h-screen font-[Poppins]">
+          <GoogleTagManager />
+          <ClarityScript />
+          <NextIntlClientProvider locale={locale} messages={messages}>
+            <Navbar />
+            
+              <main className="flex-1 flex flex-col pt-16">
+                <StepBar />
+                {children}
+              </main>
+            
+            <FooterWrapper />
+          </NextIntlClientProvider>
+          <Toaster />
+          <Analytics />    
+          <SpeedInsights />    
+        </body>
+      </html>
+    </ErrorBoundary>
   );
 }

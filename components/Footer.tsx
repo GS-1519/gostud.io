@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import final_Logo from '@/public/final_Logo.svg';
 import { useTranslations } from 'use-intl';
+import { useRouter, useParams, usePathname } from "next/navigation";
 
 interface FooterColumnProps {
   title: string;
@@ -43,8 +44,92 @@ const FooterColumn: React.FC<FooterColumnProps> = ({ title, items }) => (
   </div>
 );
 
+// Add this new interface for language options
+interface LanguageOption {
+  code: string;
+  name: string;
+  localName: string;
+}
+
+// Add this new component for the language modal
+const LanguageModal: React.FC<{
+  isOpen: boolean;
+  onClose: () => void;
+  onSelectLanguage: (code: string) => void;
+  currentLocale: string;
+}> = ({ isOpen, onClose, onSelectLanguage, currentLocale }) => {
+  const languages: LanguageOption[] = [
+    { code: 'en', name: 'English', localName: 'English' },
+    { code: 'de', name: 'German', localName: 'Deutsch' },
+    { code: 'es', name: 'Spanish', localName: 'Español' },
+    { code: 'fr', name: 'French', localName: 'Français' },
+    { code: 'id', name: 'Indonesian', localName: 'Bahasa Indonesia' },
+    { code: 'it', name: 'Italian', localName: 'Italiano' },
+    { code: 'ja', name: 'Japanese', localName: '日本語' },
+    { code: 'ko', name: 'Korean', localName: '한국어' },
+    { code: 'br', name: 'Brazilian Portuguese', localName: 'Português (BR)' },
+    { code: 'tr', name: 'Turkish', localName: 'Türkçe' },
+    { code: 'th', name: 'Thai', localName: 'ภาษาไทย' },
+    { code: 'vi', name: 'Vietnamese', localName: 'Tiếng Việt' },
+    { code: 'cn', name: 'Chinese', localName: '中文' },
+    { code: 'ru', name: 'Russian', localName: 'Русский' },
+    { code: 'ar', name: 'Arabic', localName: 'العربية' },
+  ];
+
+  if (!isOpen) return null;
+
+  return (
+    <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+      <div className="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+        <div className="p-6">
+          <div className="flex justify-between items-center mb-6">
+            <h2 className="text-xl font-semibold">Choose your language</h2>
+            <button
+              onClick={onClose}
+              className="p-2 hover:bg-gray-100 rounded-full"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            {languages.map((lang) => (
+              <button
+                key={lang.code}
+                onClick={() => {
+                  onSelectLanguage(lang.code);
+                  onClose();
+                }}
+                className={`p-4 rounded-lg text-left hover:bg-gray-50 transition-colors ${
+                  currentLocale === lang.code ? 'ring-2 ring-blue-500' : ''
+                }`}
+              >
+                <div className="font-semibold">{lang.name}</div>
+                <div className="text-gray-500 text-sm">{lang.localName}</div>
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const Footer: React.FC = () => {
+  const router = useRouter();
+  const pathname = usePathname();
+  const params = useParams();
+  const locale = (params?.locale || 'en') as string;
   const t = useTranslations('footer');
+  const [isLanguageModalOpen, setIsLanguageModalOpen] = React.useState(false);
+
+  const switchLanguage = (locale: string) => {
+    const currentPath = pathname;
+    if (currentPath) {
+      router.push(currentPath.replace(/^\/[a-z]{2}/, `/${locale}`));
+    }
+  };
 
   const columns: FooterColumnProps[] = [
     {
@@ -178,22 +263,42 @@ const Footer: React.FC = () => {
           </div>
         </div>
         <div className="border-t border-gray-200 py-8">
-          <div className="flex flex-col sm:flex-row justify-between items-center">
-            <p className="text-sm text-gray-600 mb-4 sm:mb-0">
-              {t('copyright')} <Link href="/" className="text-blue-600 hover:underline">GoStudio.ai</Link>
-            </p>
-            <div className="flex items-center">
-              <span className="text-sm text-gray-600 mr-4">{t('needHelp')}</span>
-              <a 
-                href="mailto:hello@gostudio.ai" 
-                className="text-sm text-blue-600 hover:underline transition-colors duration-300"
+          <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+            <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-8">
+              <p className="text-sm text-gray-600">
+                {t('copyright')} <Link href="/" className="text-blue-600 hover:underline">GoStudio.ai</Link>
+              </p>
+              <div className="flex items-center space-x-4">
+                <span className="text-sm text-gray-600">{t('needHelp')}</span>
+                <a href="mailto:hello@gostudio.ai" className="text-sm text-blue-600 hover:underline transition-colors duration-300">
+                  {t('contactUs')}
+                </a>
+              </div>
+            </div>
+
+            <div className="flex items-center space-x-2">
+              <button
+                onClick={() => setIsLanguageModalOpen(true)}
+                className="flex items-center space-x-2 px-4 py-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors"
               >
-                {t('contactUs')}
-              </a>
+                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.6 9h16.8M3.6 15h16.8" />
+                </svg>
+                <span>{(locale as string).toUpperCase()}</span>
+              </button>
             </div>
           </div>
         </div>
       </div>
+
+      {/* Add the LanguageModal component */}
+      <LanguageModal
+        isOpen={isLanguageModalOpen}
+        onClose={() => setIsLanguageModalOpen(false)}
+        onSelectLanguage={switchLanguage}
+        currentLocale={locale}
+      />
     </footer>
   );
 };

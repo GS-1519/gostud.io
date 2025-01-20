@@ -4,7 +4,6 @@ import { Component, ReactNode } from 'react';
 
 interface Props {
   children: ReactNode;
-  fallback?: ReactNode;
 }
 
 interface State {
@@ -22,18 +21,15 @@ export class ErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error) {
-    console.error('Error caught by boundary:', error);
+    console.error('ErrorBoundary caught an error:', error);
   }
 
   render() {
     if (this.state.hasError) {
       return (
-        <div className="p-4">
-          <h2>Something went wrong.</h2>
-          <button 
-            onClick={() => this.setState({ hasError: false })}
-            className="mt-2 px-4 py-2 bg-purple-600 text-white rounded"
-          >
+        <div className="error-container">
+          <h2>Something went wrong</h2>
+          <button onClick={() => this.setState({ hasError: false })}>
             Try again
           </button>
         </div>

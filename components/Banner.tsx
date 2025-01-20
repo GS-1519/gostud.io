@@ -11,14 +11,7 @@ const Banner = () => {
 
   return (
     <div className="relative w-full min-h-[50vh] bg-[#1F2937] flex flex-col items-center justify-center text-center px-4">
-      <Image
-        src="/banner-bg.png"
-        alt={t('bannerAlt')}
-        fill
-        className="object-cover object-center opacity-10"
-        sizes="60vw"
-        priority
-      />
+     
 
       <div className="relative z-10 max-w-5xl mx-auto">
         <h4 className="text-2xl md:text-4xl font-md text-white leading-tight">

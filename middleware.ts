@@ -4,13 +4,16 @@ import { createMiddlewareClient } from '@supabase/auth-helpers-nextjs';
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
-// List of paths that don't need locale prefix
+// Update public paths to be more comprehensive
 const publicPaths = [
   '/api', 
   '/_next', 
   '/fonts', 
   '/examples',
-  '/astria'  // Add this to skip middleware for astria routes
+  '/astria',
+  '/favicon.ico',
+  '/robots.txt',
+  '/sitemap.xml'
 ];
 
 // Create the intl middleware
@@ -21,22 +24,35 @@ const intlMiddleware = createIntlMiddleware({
 });
 
 export async function middleware(request: NextRequest) {
-  // Skip middleware for static files and API routes
-  if (publicPaths.some(path => request.nextUrl.pathname.startsWith(path))) {
-    return NextResponse.next();
-  }
-
-  // Skip middleware for public files
-  if (/\.[\w-]+$/.test(request.nextUrl.pathname)) {
-    return NextResponse.next();
-  }
-
-  // First apply the intl middleware
-  const response = intlMiddleware(request);
-  const supabase = createMiddlewareClient({ req: request, res: response });
-
   try {
-    const { data: { user }, error } = await supabase.auth.getUser();
+    // Skip middleware for static files
+    if (request.nextUrl.pathname.match(/\.(ico|png|jpg|jpeg|svg|webmanifest)$/)) {
+      return NextResponse.next();
+    }
+
+    // Skip middleware for static files and API routes with more robust check
+    if (publicPaths.some(path => request.nextUrl.pathname.startsWith(path))) {
+      return NextResponse.next();
+    }
+
+    // Improved static file check
+    if (/\.(ico|jpg|jpeg|png|gif|svg|css|js|woff|woff2|ttf)$/i.test(request.nextUrl.pathname)) {
+      return NextResponse.next();
+    }
+
+    // First apply the intl middleware
+    const response = intlMiddleware(request);
+    const supabase = createMiddlewareClient({ req: request, res: response });
+
+    // Add timeout to prevent hanging
+    const timeoutPromise = new Promise((_, reject) => {
+      setTimeout(() => reject(new Error('Auth timeout')), 3000);
+    });
+
+    const { data: { user }, error } = await Promise.race([
+      supabase.auth.getUser(),
+      timeoutPromise
+    ]) as { data: { user: any }, error: any };
     
     // Get the current locale from the URL or default to 'en'
     const locale = request.nextUrl.pathname.split('/')[1] || 'en';
@@ -67,14 +83,17 @@ export async function middleware(request: NextRequest) {
 
   } catch (error) {
     console.error('Middleware error:', error);
-    return response;
+    // Return a next response instead of potentially undefined response
+    return NextResponse.next();
   }
 }
 
+// Update matcher configuration to be more precise
 export const config = {
   matcher: [
     // Match all paths except static files and API routes
-    '/((?!api|_next|fonts|examples|[\\w-]+\\.\\w+).*)',
-    '/(ar|en|fr|de|zh)/:path*'
+    '/((?!api|_next/static|_next/image|fonts|examples|astria|favicon.ico).*)',
+    // Match all locale paths
+    '/(ar|en|fr|cn|de|ja|ko|es|it|th|tr|br|ru|vi|id)/:path*'
   ]
 };

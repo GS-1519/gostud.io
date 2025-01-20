@@ -21,6 +21,7 @@ import { Pricing } from "@/components/home/pricing/pricing";
 import ClientRedirect from "@/components/ClientRedirect"; 
 import { NextIntlClientProvider } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
+import Footer from "@/components/Footer";
 
 export const dynamic = "force-dynamic";
 
@@ -108,7 +109,9 @@ export default async function Home({ params }: { params: { locale: string } }) {
               <FAQSection />
             </div>
             <HeadshotContainer />
+            <Footer />
           </div>
+          
         </div>
       </div>
     </NextIntlClientProvider>
