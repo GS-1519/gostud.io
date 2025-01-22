@@ -4,10 +4,10 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://www.gostudio.ai/')
 }
 
-export default function ToolsLayout({
+export default function FreeToolsLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
-  return <>{children}</>
+  return <section>{children}</section>
 } 

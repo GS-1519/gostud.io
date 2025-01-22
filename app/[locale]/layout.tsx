@@ -11,7 +11,6 @@ import GoogleTagManager from "@/components/GoogleTagManager";
 import 'react-tabs/style/react-tabs.css';
 import { StepBar } from "@/components/ui/step-bar";
 import { NextIntlClientProvider } from 'next-intl';
-import { notFound } from 'next/navigation';
 import { ErrorBoundary } from '../../components/ErrorBoundary';
 
 export const metadata: Metadata = {
@@ -22,29 +21,19 @@ export const metadata: Metadata = {
 
 export const dynamic = 'force-dynamic'
 
-async function getMessages(locale: string) {
-  try {
-    return (await import(`@/messages/${locale}.json`)).default;
-  } catch (error) {
-    // Fallback to English instead of using notFound()
-    return (await import(`@/messages/en.json`)).default;
-  }
-}
-
 export default async function RootLayout({
   children,
   params
 }: {
   children: React.ReactNode;
-  params: { locale?: string };
+  params: { locale: string };
 }) {
-  // Get locale from params or default to 'en'
   const locale = params?.locale || 'en';
   let messages;
   try {
     messages = (await import(`../../messages/${locale}.json`)).default;
   } catch (error) {
-    notFound();
+    messages = (await import(`../../messages/en.json`)).default;
   }
 
   return (
@@ -65,7 +54,7 @@ export default async function RootLayout({
         <body className="flex flex-col bg-[#F4F7FA] min-h-screen font-[Poppins]">
           <GoogleTagManager />
           <ClarityScript />
-          <NextIntlClientProvider locale={locale} messages={messages}>
+          <NextIntlClientProvider messages={messages} locale={locale}>
             <Navbar />
             
               <main className="flex-1 flex flex-col pt-16">
