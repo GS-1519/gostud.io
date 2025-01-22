@@ -1,7 +1,15 @@
+import { ReactNode } from 'react'
+
 export default function StateLayout({
   children,
+  params,
 }: {
-  children: React.ReactNode
+  children: ReactNode
+  params?: { country: string; state: string }
 }) {
-  return <section>{children}</section>
+  return (
+    <div className="container mx-auto py-8">
+      {children}
+    </div>
+  )
 } 
