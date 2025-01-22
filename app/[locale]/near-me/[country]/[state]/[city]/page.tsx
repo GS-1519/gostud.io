@@ -12,6 +12,18 @@ interface Props {
   }
 }
 
+interface Studio {
+  name: string;
+  rating: number;
+  reviews: number;
+  price: string;
+  image: string;
+  features: string[];
+  specialties: string[];
+  location: string;
+  description: string;
+}
+
 const cityData: { [key: string]: any } = {
   "new-york-city": {
     title: "Top 10 New York City Best Professional Headshot Studios",
@@ -3292,28 +3304,7 @@ const cityData: { [key: string]: any } = {
       }
     ]
   },
-  "springfield": {
-    title: "Top 10 Springfield Best Professional Headshot Studios",
-    description: "Find the best headshot photographers in Springfield, Massachusetts",
-    studios: [
-      {
-        name: "Metro Center Studio",
-        rating: 4.7,
-        reviews: 178,
-        price: "$139",
-        image: "/studios/springfield-ma/metro.jpg",
-        features: [
-          "Downtown Location",
-          "Professional Lighting",
-          "Business Rates",
-          "Team Photos"
-        ],
-        specialties: ["Corporate Headshots", "Team Photography"],
-        location: "Metro Center",
-        description: "Professional photography studio serving Springfield's business community with quality headshot services."
-      }
-    ]
-  },
+  
   "cambridge": {
     title: "Top 10 Cambridge Best Professional Headshot Studios",
     description: "Professional headshot photographers in Cambridge",
@@ -3516,28 +3507,7 @@ const cityData: { [key: string]: any } = {
       }
     ]
   },
-  "rochester": {
-    title: "Top 10 Rochester Best Professional Headshot Studios",
-    description: "Find the best headshot photographers in Rochester, Minnesota",
-    studios: [
-      {
-        name: "Mayo Clinic District Studio",
-        rating: 4.8,
-        reviews: 245,
-        price: "$159",
-        image: "/studios/rochester-mn/mayo.jpg",
-        features: [
-          "Medical District",
-          "Professional Experience",
-          "Healthcare Focus",
-          "Quick Service"
-        ],
-        specialties: ["Medical Professionals", "Clinical Staff"],
-        location: "Mayo Clinic District",
-        description: "Specialized studio serving Rochester's medical community with professional headshot photography."
-      }
-    ]
-  },
+ 
   "duluth": {
     title: "Top 10 Duluth Best Professional Headshot Studios",
     description: "Professional headshot photographers in Duluth",
@@ -4530,7 +4500,7 @@ export default function CityPage({ params }: Props) {
 
       {/* Studio Listings */}
       <div className="space-y-8">
-        {data.studios.map((studio, index) => (
+        {data.studios.map((studio: Studio, index: number) => (
           <div key={studio.name} className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all p-6">
             <div className="flex flex-col gap-6">
               {/* Title and Rating */}
@@ -4578,7 +4548,7 @@ export default function CityPage({ params }: Props) {
                   <div className="space-y-2">
                     <h3 className="font-medium">Features:</h3>
                     <ul className="list-disc pl-5 text-gray-700">
-                      {studio.features.map((feature) => (
+                      {studio.features.map((feature: string) => (
                         <li key={feature}>{feature}</li>
                       ))}
                     </ul>
@@ -4587,7 +4557,7 @@ export default function CityPage({ params }: Props) {
                   <div className="space-y-2">
                     <h3 className="font-medium">Specialties:</h3>
                     <div className="flex gap-2">
-                      {studio.specialties.map((specialty) => (
+                      {studio.specialties.map((specialty: string) => (
                         <span 
                           key={specialty}
                           className="bg-purple-50 text-purple-700 px-3 py-1 rounded-full text-sm"
