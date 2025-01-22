@@ -1,6 +1,4 @@
-import { ReactNode } from 'react'
-
-export default function NearMeLayout({
+export default function StateLayout({
   children,
 }: {
   children: React.ReactNode
